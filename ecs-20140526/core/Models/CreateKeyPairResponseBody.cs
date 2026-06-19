@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The fingerprint of the key pair. The message-digest algorithm 5 (MD5) is used based on the public key fingerprint format defined in RFC 4716. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</para>
+        /// <para>The fingerprint of the key pair. The public key fingerprint format is defined by RFC 4716 and uses the MD5 message digest algorithm. For more information, see <a href="https://tools.ietf.org/html/rfc4716">RFC 4716</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89:f0:ba:62:ac:b8:aa:e1:61:5e:fd:81:69:86:6d:6b:f0:c0:5a:**</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KeyPairFingerPrint { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key pair.</para>
+        /// <para>The ID of the SSH key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ssh-bp67acfmxazb4p****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The private key of the key pair. The private key is encoded with PEM in the PKCS#8 format.</para>
+        /// <para>The private key of the key pair. The private key is PEM-encoded in PKCS#8 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</para>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceNetworkSpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to assign a public IP address. Valid values:</para>
+        /// <para>Specifies whether to allocate a public IP address.</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: allocates a public IP address.</description></item>
+        /// <item><description>false: does not allocate a public IP address.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,12 +25,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AllocatePublicIp { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+        /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: After you modify the bandwidth configurations, the payment is automatically completed. Make sure that your account balance is sufficient before you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</para>
-        /// </description></item>
-        /// <item><description><para>false: After you modify the bandwidth configurations, an order is generated but the payment is not automatically completed. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</para>
-        /// </description></item>
+        /// <item><description>true: After the bandwidth configuration is modified, the payment is automatically deducted. When you set AutoPay to true, make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order will be generated. This order cannot be paid through the ECS console and can only be voided.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>false: After the bandwidth configuration is modified, only an order is generated but not paid. If your payment method balance is insufficient, you can set AutoPay to false to cancel automatic payment. In this case, an unpaid order is generated when you call this operation. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>false: After the bandwidth configuration is modified, only an order is generated but not paid. If your payment method balance is insufficient, you can set AutoPay to false to cancel automatic payment. In this case, an unpaid order is generated when you call this operation. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <b>The token can contain only ASCII characters and cannot exceed 64 characters in length.</b> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -54,9 +57,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The end time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThhZ format. The time must be in UTC and accurate to <b>hours</b> (hh).</para>
+        /// <para>The end time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in UTC+0 time in the format of yyyy-MM-ddTHHZ. The precision is down to <b>hours</b> (HH).</para>
         /// <remarks>
-        /// <para>The interval between the end time and start time of temporary bandwidth upgrade must be greater than or equal to 3 hours.</para>
+        /// <para>The interval between the end time and the start time of the temporary bandwidth upgrade must be greater than or equal to 3 hours.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not yet publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ISP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance for which you want to modify network configurations.</para>
+        /// <para>The ID of the instance for which you want to modify the network configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,12 +93,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum inbound bandwidth from the Internet. Unit: Mbit/s. Valid values:</para>
+        /// <para>The maximum inbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</para>
-        /// </description></item>
-        /// <item><description><para>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <c>InternetMaxBandwidthOut</c> value and the default value is the <c>InternetMaxBandwidthOut</c> value.</para>
-        /// </description></item>
+        /// <item><description>When the purchased maximum outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</description></item>
+        /// <item><description>When the purchased maximum outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <c>InternetMaxBandwidthOut</c>. Default value: the value of <c>InternetMaxBandwidthOut</c>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,21 +107,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthIn { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values:</para>
+        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values when the pay-by-traffic billing method for network usage is used: 0 to 100.</para>
+        /// <item><description><para>Pay-by-traffic: 0 to 100.</para>
         /// </description></item>
-        /// <item><description><para>Valid values when the pay-by-bandwidth billing method for network usage is used:</para>
+        /// <item><description><para>Pay-by-bandwidth:</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for subscription instances: 0 to 200.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values for pay-as-you-go instances: 0 to 100.</para>
-        /// </description></item>
+        /// <item><description>Subscription instances: 0 to 200.</description></item>
+        /// <item><description>Pay-as-you-go instances: 0 to 100.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The maximum outbound bandwidth of a single instance is also limited by the <b>network baseline bandwidth (Gbit/s) and network burst bandwidth (Gbit/s)</b> of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para>The maximum outbound bandwidth for a single instance is also limited by the <b>Network bandwidth baseline/burst (Gbit/s)</b> metric of the ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -131,15 +130,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>The billing method for network usage. Valid values:</para>
+        /// <para>The network billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PayByBandwidth</para>
-        /// </description></item>
-        /// <item><description><para>PayByTraffic</para>
-        /// </description></item>
+        /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
+        /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When the <b>pay-by-traffic</b> billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as the upper limits of bandwidths instead of guaranteed values. In scenarios where demand outstrips resource supplies, these maximum bandwidths may be limited. If you want guaranteed bandwidths for your instance, use the <b>pay-by-bandwidth</b> billing method for network usage.</para>
+        /// <para>In <b>pay-by-traffic</b> mode, the inbound and outbound bandwidth peak values are both bandwidth upper limits and are not guaranteed as committed service metrics. When resource contention occurs, the bandwidth peak values may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -166,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThh:mmZ format. The time must be in UTC and accurate to <b>minutes (mm)</b>.</para>
+        /// <para>The start time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in UTC+0 time in the format of yyyy-MM-ddTHH:mmZ. The precision is down to <b>minutes</b> (mm).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-05T22:40Z</para>

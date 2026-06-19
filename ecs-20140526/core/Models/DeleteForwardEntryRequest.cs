@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteForwardEntryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the DNAT entry to delete.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ForwardEntryId")]
@@ -18,7 +17,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ForwardEntryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DNAT table to which the DNAT entry belongs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ForwardTableId")]
@@ -34,10 +32,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC is located.\
-        /// \
-        /// To obtain the latest list of regions, call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation.\
-        /// \</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]

@@ -9,15 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssociateHaVipRequest : TeaModel {
-        /// <summary>
-        /// <para>A client-generated token that ensures request idempotency. This token must be unique across requests and can contain only ASCII characters.</para>
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HaVip.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HaVipId")]
@@ -25,7 +21,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HaVipId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS instance to associate with the HaVip.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
@@ -41,7 +36,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the HaVip is located. To obtain the latest list of regions, call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]

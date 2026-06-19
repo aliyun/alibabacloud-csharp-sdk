@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfacePermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The network interface ID. You must specify either <c>NetworkInterfaceId</c> or <c>NetworkInterfacePermissionId.N</c> to determine the query scope.</para>
+        /// <para>The ID of the network interface controller (NIC). You must specify NetworkInterfaceId or NetworkInterfacePermissionId.N to determine the query scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp17pdijfczax****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>An array of network interface permission IDs. The array can contain 1 to 100 IDs.</para>
+        /// <para>The list of network interface controller (NIC) permission IDs. Number of elements in the list: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-perm-bp1cs4lwn56lfb****</para>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
-        /// <para>Starting value: 1</para>
-        /// <para>Default value: 1</para>
+        /// <para>The page number of the network interface controller (NIC) permission list.</para>
+        /// <para>Minimum value: 1</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <para>Maximum value: 100</para>
-        /// <para>Default value: 10</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region for the network interface permission. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to obtain the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region of the network interface controller (NIC) permissions. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

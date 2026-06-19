@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The returned pagination token which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>

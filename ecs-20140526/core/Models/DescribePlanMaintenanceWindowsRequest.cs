@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePlanMaintenanceWindowsRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the maintenance window is enabled.</para>
+        /// <para>Specifies whether the window is enabled or disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the last query as the value of NextToken.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the maintenance window.</para>
+        /// <para>The ID of the O&amp;M window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pw-bp1jarob1aup7yvlrdt6</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowId { get; set; }
 
         /// <summary>
-        /// <para>The name of the maintenance window.</para>
+        /// <para>The name of the O&amp;M window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WIndowName</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the ECS instance is located. You can call the DescribeRegions operation to query the latest list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the maintenance window applies.</para>
+        /// <para>The ID of the resource group to which the O&amp;M window applies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-d85g5yocioezmdrll</para>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resources to which the maintenance window applies.</para>
+        /// <para>The tags to which the O&amp;M window applies.</para>
         /// </summary>
         [NameInMap("TargetResourceTags")]
         [Validation(Required=false)]
         public DescribePlanMaintenanceWindowsRequestTargetResourceTags TargetResourceTags { get; set; }
         public class DescribePlanMaintenanceWindowsRequestTargetResourceTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The key of the tag to which the window applies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagKey</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The value of the tag to which the window applies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagValue</para>

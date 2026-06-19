@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPlanMaintenanceWindowRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the maintenance window. If this parameter is not specified, the enabled status remains unchanged.</para>
+        /// <para>Specifies whether to enable or disable the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinMaintenanceInterval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the maintenance window to modify.</para>
+        /// <para>The ID of the O&amp;M window to modify. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the maintenance window. If this parameter is not specified, the name remains unchanged.</para>
+        /// <para>The name of the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WIndowName</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PlanWindowName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located. You can call the DescribeRegions operation to query the most recent list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the instance. You can call DescribeRegions to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The maintenance action for the maintenance window. If this parameter is not specified, the action remains unchanged.</para>
+        /// <para>The supported O&amp;M actions. Leave this parameter empty if no modification is needed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Reboot</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SupportMaintenanceAction { get; set; }
 
         /// <summary>
-        /// <para>The resources to which the maintenance window applies. If this parameter is not specified, the target resources remain unchanged.</para>
+        /// <para>The resource to which the O&amp;M window applies. Leave this parameter empty if no modification is needed.</para>
         /// </summary>
         [NameInMap("TargetResource")]
         [Validation(Required=false)]
         public ModifyPlanMaintenanceWindowRequestTargetResource TargetResource { get; set; }
         public class ModifyPlanMaintenanceWindowRequestTargetResource : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource group. This parameter is required when <c>Scope</c> is set to <c>ResourceGroup</c>.</para>
+            /// <para>The ID of the resource group to which the O&amp;M window applies. This parameter is required only when Scope is set to ResourceGroup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmy4cc27vsvia</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The method for specifying the target resources.</para>
+            /// <para>The resource type for the O&amp;M window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tag</para>
@@ -93,14 +93,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The resource tags. This parameter is required when <c>Scope</c> is set to <c>Tag</c>.</para>
+            /// <para>The tags to which the O&amp;M window applies. This parameter is required only when Scope is set to Tag.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ModifyPlanMaintenanceWindowRequestTargetResourceTags> Tags { get; set; }
             public class ModifyPlanMaintenanceWindowRequestTargetResourceTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The key of the tag to which the O&amp;M window applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tagKey</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The value of the tag to which the O&amp;M window applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tagValue</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The recurrence schedule for the maintenance window. If this parameter is not specified, the schedule remains unchanged.</para>
+        /// <para>The recurring cycle of the O&amp;M window. Leave this parameter empty if no modification is needed.</para>
         /// </summary>
         [NameInMap("TimePeriod")]
         [Validation(Required=false)]
         public ModifyPlanMaintenanceWindowRequestTimePeriod TimePeriod { get; set; }
         public class ModifyPlanMaintenanceWindowRequestTimePeriod : TeaModel {
             /// <summary>
-            /// <para>The unit of the recurrence cycle. Valid values: <c>Daily</c> and <c>Weekly</c>.</para>
+            /// <para>The cycle type. Valid values: Daily and Weekly.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Year</para>
@@ -141,21 +141,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The time ranges within the recurrence cycle. Times are specified in UTC.</para>
+            /// <para>The time ranges of the recurring O&amp;M window cycle (UTC time zone).</para>
             /// </summary>
             [NameInMap("RangeList")]
             [Validation(Required=false)]
             public List<ModifyPlanMaintenanceWindowRequestTimePeriodRangeList> RangeList { get; set; }
             public class ModifyPlanMaintenanceWindowRequestTimePeriodRangeList : TeaModel {
                 /// <summary>
-                /// <para>The end time of the maintenance window.</para>
+                /// <para>The end time of the O&amp;M window.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Weekly</c>, the format is <c>Day,HH:mm</c>. Valid values for <c>Day</c>: <c>Monday</c>, <c>Tuesday</c>, <c>Wednesday</c>, <c>Thursday</c>, <c>Friday</c>, <c>Saturday</c>, and <c>Sunday</c>.</para>
-                /// </description></item>
-                /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Daily</c>, the format is <c>HH:mm</c>.</para>
-                /// </description></item>
-                /// <item><description><para>In the time format, <c>HH</c> represents the hour (00-23) and <c>mm</c> must be <c>00</c>.</para>
-                /// </description></item>
+                /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
+                /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
+                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minutes, which currently supports only 00.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -166,14 +163,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the maintenance window.</para>
+                /// <para>The start time of the O&amp;M window.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Weekly</c>, the format is <c>Day,HH:mm</c>. Valid values for <c>Day</c>: <c>Monday</c>, <c>Tuesday</c>, <c>Wednesday</c>, <c>Thursday</c>, <c>Friday</c>, <c>Saturday</c>, and <c>Sunday</c>.</para>
-                /// </description></item>
-                /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Daily</c>, the format is <c>HH:mm</c>.</para>
-                /// </description></item>
-                /// <item><description><para>In the time format, <c>HH</c> represents the hour (00-23) and <c>mm</c> must be <c>00</c>.</para>
-                /// </description></item>
+                /// <item><description>If PeriodUnit is set to Weekly, the format is Monday,22:00. Monday can be replaced with Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.</description></item>
+                /// <item><description>If PeriodUnit is set to Daily, the format is 22:00.</description></item>
+                /// <item><description>The comma delimiter separates two parts. The first part represents the hour, with valid values from 00 to 23. The second part represents the minutes, which currently supports only 00.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

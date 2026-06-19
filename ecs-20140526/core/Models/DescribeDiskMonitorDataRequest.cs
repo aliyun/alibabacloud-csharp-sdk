@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeDiskMonitorDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk that you want to query.</para>
+        /// <para>The ID of the disk to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
+        /// <para>The end time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the end time is automatically set to the beginning of the next minute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,18 +40,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</para>
+        /// <para>The granularity of the data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>60</para>
+        /// <item><description><ol start="60">
+        /// <item><description></description></item>
+        /// </ol>
         /// </description></item>
-        /// <item><description><para>600</para>
+        /// <item><description><ol start="600">
+        /// <item><description></description></item>
+        /// </ol>
         /// </description></item>
-        /// <item><description><para>3600</para>
+        /// <item><description><ol start="3600">
+        /// <item><description></description></item>
+        /// </ol>
         /// </description></item>
         /// </list>
         /// <para>Default value: 60.</para>
         /// <remarks>
-        /// <para>Up to 400 monitoring data entries can be returned at a time. Make sure that the TotalCount value does not exceed 400. The value is calculated by using the following formula: TotalCount = (EndTime - StartTime)/Period.</para>
+        /// <para>The value of (EndTime – StartTime) / Period must be less than or equal to 400. A maximum of 400 data entries can be returned at a time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,9 +76,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
+        /// <para>The start time of the data. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the start time is automatically set to the beginning of the next minute.</para>
         /// <remarks>
-        /// <para>You can query the monitoring data in the last 30 days. If the value of <c>StartTime</c> is more than 30 days earlier than the current time, an error is returned.</para>
+        /// <para>You can query the monitoring information of up to the last 30 days. The <c>StartTime</c> parameter cannot be more than 30 days earlier than the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePlanMaintenanceWindowsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return per page. The default value is 10, and the maximum value is 100. If you omit this parameter or specify a value less than 10, the default value is used. If you specify a value greater than 100, the maximum value is used.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: If the value is not specified or is less than 10, the default value is 10. If the value is greater than 100, the default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The query token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>A list of maintenance windows.</para>
+        /// <para>The creation time.</para>
         /// </summary>
         [NameInMap("PlanMaintenanceWindowList")]
         [Validation(Required=false)]
         public List<DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowList> PlanMaintenanceWindowList { get; set; }
         public class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowList : TeaModel {
             /// <summary>
-            /// <para>The creation time of the maintenance window.</para>
-            /// <para>The time is in UTC and follows the ISO 8601 standard, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The time when the O&amp;M window was created.</para>
+            /// <para>The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-11T02:20:41Z</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the maintenance window is enabled.</para>
+            /// <para>Indicates whether the O&amp;M window is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -62,8 +62,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? MinMaintenanceInterval { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the maintenance window.</para>
-            /// <para>The time is in UTC and follows the ISO 8601 standard, formatted as yyyy-MM-ddTHH:mm:ssZ.</para>
+            /// <para>The time when the O&amp;M window was last modified.</para>
+            /// <para>The time follows the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-02-22 10:14:28 +0800</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the maintenance window.</para>
+            /// <para>The ID of the O&amp;M window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pw-bp1bqkbjb7h4j8zqzwvp</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PlanWindowId { get; set; }
 
             /// <summary>
-            /// <para>The name of the maintenance window.</para>
+            /// <para>The name of the O&amp;M window.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WindowName</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PlanWindowName { get; set; }
 
             /// <summary>
-            /// <para>The supported maintenance action.</para>
+            /// <para>The supported maintenance actions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reboot</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string SupportMaintenanceAction { get; set; }
 
             /// <summary>
-            /// <para>The resources targeted by the maintenance window.</para>
+            /// <para>The resources to which the O&amp;M window applies.</para>
             /// </summary>
             [NameInMap("TargetResource")]
             [Validation(Required=false)]
             public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTargetResource TargetResource { get; set; }
             public class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTargetResource : TeaModel {
                 /// <summary>
-                /// <para>The ID of the target resource group.</para>
+                /// <para>The ID of the resource group to which the O&amp;M window applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-aek2qxeteo7fr6y</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The scope of the target resources. Valid values: Tag, ResourceGroup, Instance, and AliUid.</para>
+                /// <para>The type of resources for which the O&amp;M window is configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Tag</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// <para>The target tags.</para>
+                /// <para>The tags to which the O&amp;M window applies.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -161,14 +161,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>The recurrence schedule of the maintenance window.</para>
+            /// <para>The recurrence cycle of the window.</para>
             /// </summary>
             [NameInMap("TimePeriod")]
             [Validation(Required=false)]
             public DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod TimePeriod { get; set; }
             public class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriod : TeaModel {
                 /// <summary>
-                /// <para>The recurrence frequency. Valid values: Daily and Weekly.</para>
+                /// <para>The type of the recurrence cycle. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Daily: daily recurrence.</description></item>
+                /// <item><description>Weekly: weekly recurrence.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Year</para>
@@ -178,14 +182,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public string PeriodUnit { get; set; }
 
                 /// <summary>
-                /// <para>The recurring UTC time ranges for the maintenance window.</para>
+                /// <para>The time ranges within the recurrence cycle of the O&amp;M window (in UTC).</para>
                 /// </summary>
                 [NameInMap("RangeList")]
                 [Validation(Required=false)]
                 public List<DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriodRangeList> RangeList { get; set; }
                 public class DescribePlanMaintenanceWindowsResponseBodyPlanMaintenanceWindowListTimePeriodRangeList : TeaModel {
                     /// <summary>
-                    /// <para>The end time of the time range.</para>
+                    /// <para>The end time of the maintenance time window.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Monday,22:00</para>
@@ -195,7 +199,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The start time of the time range.</para>
+                    /// <para>The start time of the maintenance time window.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Monday,22:00</para>
@@ -221,7 +225,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the query. This parameter is optional and not returned by default.</para>
+        /// <para>The total number of entries returned under the current query conditions. This parameter is optional and may not be returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

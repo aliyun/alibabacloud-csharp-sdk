@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRenewalPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The unified expiration day. If you specify this parameter, the system queries the price for renewing the instance until the unified expiration day. Valid values: 1 to 28.</para>
-        /// <para>For more information about the unified expiration day feature, see <a href="https://help.aliyun.com/document_detail/108486.html">Unify Instance Expiration Dates</a>.</para>
+        /// <para>The unified expiration date. After you specify this parameter, the price for renewing the instance to the unified expiration date is returned. Valid values: 1 to 28.</para>
+        /// <para>For more information about the unified expiration date feature, see <a href="https://help.aliyun.com/document_detail/108486.html">Settings for instance expires</a>.</para>
         /// <remarks>
-        /// <para>You cannot specify both the renewal duration parameters (<c>Period</c> and <c>PeriodUnit</c>) and the unified expiration day parameter (<c>ExpectedRenewDay</c>) at the same time.</para>
+        /// <para>The renewal duration parameters (<c>Period</c> and <c>PeriodUnit</c>) and the unified expiration date parameter (<c>ExpectedRenewDay</c>) cannot be set at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,16 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the renewal duration. Valid values:</para>
+        /// <para>The renewal duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>When the <c>PriceUnit</c> parameter is set to <c>Month</c>: 1 to 9.</para>
-        /// </description></item>
-        /// <item><description><para>When the <c>PriceUnit</c> parameter is set to <c>Year</c>: 1 to 3.</para>
-        /// </description></item>
+        /// <item><description>When <c>PriceUnit</c> is set to <c>Month</c>: 1 to 9.</description></item>
+        /// <item><description>When <c>PriceUnit</c> is set to <c>Year</c>: 1 to 3.</description></item>
         /// </list>
-        /// <para>Default Value: 1.</para>
+        /// <para>Default value: 1.</para>
         /// <remarks>
-        /// <para>You cannot specify both the renewal duration parameters (<c>Period</c> and <c>PeriodUnit</c>) and the unified expiration day parameter (<c>ExpectedRenewDay</c>) at the same time.</para>
+        /// <para>The renewal duration parameters (<c>Period</c> and <c>PeriodUnit</c>) and the unified expiration date parameter (<c>ExpectedRenewDay</c>) cannot be set at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,14 +50,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>Specifies the renewal period. Valid values:</para>
+        /// <para>The unit of the renewal duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Month: The renewal period is one month.</para>
-        /// </description></item>
-        /// <item><description><para>Year: The renewal period is one year.</para>
-        /// </description></item>
+        /// <item><description>Month: the renewal duration is measured in months.</description></item>
+        /// <item><description>Year: the renewal duration is measured in years.</description></item>
         /// </list>
-        /// <para>Default Value: Month.</para>
+        /// <para>Default value: Month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -69,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PriceUnit { get; set; }
 
         /// <summary>
-        /// <para>The Region ID of the instance. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud Regions.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID for which to query the renewal price. When the parameter <c>ResourceType</c> is set to <c>instance</c>, <c>ResourceId</c> can be interpreted as <c>InstanceId</c>.</para>
+        /// <para>The ID of the resource whose renewal price you want to query. When <c>ResourceType</c> is set to <c>instance</c>, <c>ResourceId</c> is equivalent to <c>InstanceId</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,8 +95,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type for which to query the renewal price. Valid value: instance.</para>
-        /// <para>Default Value: instance.</para>
+        /// <para>The type of the resource whose renewal price you want to query. Valid values: instance.</para>
+        /// <para>Default value: instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>

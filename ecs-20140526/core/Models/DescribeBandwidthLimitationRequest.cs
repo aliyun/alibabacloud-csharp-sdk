@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PrePaid: subscription</para>
-        /// </description></item>
-        /// <item><description><para>PostPaid: pay-as-you-go</para>
-        /// </description></item>
+        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description>PostPaid: pay-as-you-go.</description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. For information about the values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</para>
+        /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,14 +36,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the operation for which to query the maximum public bandwidth. Valid values:</para>
+        /// <para>The operation type for querying public bandwidth limits. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Upgrade: upgrades the public bandwidth.</para>
-        /// </description></item>
-        /// <item><description><para>Downgrade: downgrades the public bandwidth.</para>
-        /// </description></item>
-        /// <item><description><para>Create: creates an ECS instance.</para>
-        /// </description></item>
+        /// <item><description>Upgrade: upgrades the public bandwidth.</description></item>
+        /// <item><description>Downgrade: downgrades the public bandwidth.</description></item>
+        /// <item><description>Create: creates an ECS instance.</description></item>
         /// </list>
         /// <para>Default value: Create.</para>
         /// 
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the target region. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The resource ID.</para>
         /// <remarks>
-        /// <para>This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.</para>
+        /// <para>When you set the OperationType parameter to Upgrade or Downgrade, the ResourceId parameter is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,14 +92,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The bidding policy for the pay-as-you-go instance. Valid values:</para>
+        /// <para>The bidding strategy for pay-as-you-go instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>NoSpot: The instance is a pay-as-you-go instance.</para>
-        /// </description></item>
-        /// <item><description><para>SpotWithPriceLimit: The instance is a spot instance for which you can specify the maximum hourly price.</para>
-        /// </description></item>
-        /// <item><description><para>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</para>
-        /// </description></item>
+        /// <item><description>NoSpot: a regular pay-as-you-go instance.</description></item>
+        /// <item><description>SpotWithPriceLimit: a preemptible instance with a user-defined maximum hourly price.</description></item>
+        /// <item><description>SpotAsPriceGo: a preemptible instance priced at the market price at the time of purchase.</description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>
         /// <remarks>

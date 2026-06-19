@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DeleteLaunchTemplateResponseBody : TeaModel {
         /// <summary>
         /// <para>The ID of the launch template. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</para>
-        /// <para>You must specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template.</para>
+        /// <para>When you use a launch template to create an instance, you must specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to determine the launch template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-bp1apo0bbbkuy0rj****</para>

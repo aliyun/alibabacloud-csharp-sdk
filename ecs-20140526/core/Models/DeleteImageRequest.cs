@@ -14,12 +14,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully delete the custom image. Valid values:</para>
+        /// <para>Specifies whether to forcibly delete the custom image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Forcefully deletes the custom image, regardless of whether it is used by any instances.</para>
-        /// </description></item>
-        /// <item><description><para>false: Performs a standard deletion. Before the deletion, the system checks whether the image is used by any instances.</para>
-        /// </description></item>
+        /// <item><description>true: Forcibly deletes the custom image, ignoring whether the image is currently used by other instances.</description></item>
+        /// <item><description>false: Normally deletes the custom image. Before deletion, the system checks whether the image is currently used by other instances.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -31,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom image to delete. If the image does not exist, the request is ignored.</para>
+        /// <para>The image ID. If the specified custom image does not exist, the request will be ignored.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of regions.</para>
+        /// <para>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

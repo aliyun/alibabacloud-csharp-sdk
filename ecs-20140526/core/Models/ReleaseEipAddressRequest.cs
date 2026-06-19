@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReleaseEipAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The allocation ID of the EIP to release.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AllocationId")]
@@ -25,9 +24,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the region where the EIP is located. You can call the <c>DescribeRegions</c> operation to get the latest list of regions.</para>
-        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }

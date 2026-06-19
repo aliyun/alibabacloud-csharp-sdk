@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiskRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hide</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Arn")]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class CreateDiskRequestArn : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not yet available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not yet available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not yet available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -67,15 +67,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable performance bursting. Valid values:</para>
+        /// <para>Specifies whether to enable burst (performance bursting). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: enables burst.</description></item>
+        /// <item><description>false: disables burst.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is available only for ESSD AutoPL disks (<c>cloud_auto</c>). For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para>This parameter is supported only when <c>DiskCategory</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>A client-generated, unique, case-sensitive token that you can use to ensure the idempotency of the request. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. <b>ClientToken</b> only supports ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the disk. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The disk description. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
@@ -109,26 +107,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the data disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cloud</c>: basic disk</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_efficiency</c>: ultra disk</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_ssd</c>: standard SSD</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_essd</c>: ESSD</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_auto</c>: ESSD AutoPL disk</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_essd_entry</c>: ESSD Entry disk</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_regional_disk_auto</c>: ESSD zone-redundant disk</para>
-        /// </description></item>
-        /// <item><description><para><c>elastic_ephemeral_disk_standard</c>: Elastic Ephemeral Disk - Standard</para>
-        /// </description></item>
-        /// <item><description><para><c>elastic_ephemeral_disk_premium</c>: Elastic Ephemeral Disk - Premium</para>
-        /// </description></item>
+        /// <item><description>cloud: basic disk.</description></item>
+        /// <item><description>cloud_efficiency: ultra disk.</description></item>
+        /// <item><description>cloud_ssd: standard SSD.</description></item>
+        /// <item><description>cloud_essd: ESSD.</description></item>
+        /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
+        /// <item><description>cloud_essd_entry: ESSD Entry disk.</description></item>
+        /// <item><description>cloud_regional_disk_auto: ESSD zone-redundant disk.</description></item>
+        /// <item><description>elastic_ephemeral_disk_standard: elastic ephemeral disk - standard.</description></item>
+        /// <item><description>elastic_ephemeral_disk_premium: elastic ephemeral disk - premium.</description></item>
         /// </list>
-        /// <para>Default value: <c>cloud</c>.</para>
+        /// <para>Default value: cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -138,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter as defined by Unicode and can contain letters (including English and Chinese characters), digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The disk name. The name must be 2 to 128 characters in length and can contain Unicode letters (including English and Chinese characters) and ASCII digits (0-9). It can contain colons (:), underscores (_), periods (.), or hyphens (-). It must start with a Unicode letter.</para>
         /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
@@ -149,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not yet available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hide</para>
@@ -161,10 +150,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to encrypt the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: encrypts the disk.</description></item>
+        /// <item><description>false: does not encrypt the disk.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -176,14 +163,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>Creates a subscription disk and automatically attaches it to the specified subscription instance.</para>
+        /// <para>Creates a subscription disk and automatically attaches it to the specified subscription instance (InstanceId).</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set this parameter, the <c>ResourceGroupId</c>, <c>Tag.N.Key</c>, <c>Tag.N.Value</c>, <c>ClientToken</c>, and <c>KMSKeyId</c> parameters are ignored.</para>
-        /// </description></item>
-        /// <item><description><para>You cannot specify both <c>ZoneId</c> and <c>InstanceId</c>.</para>
-        /// </description></item>
+        /// <item><description>After you set the instance ID, the ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId parameters that you set are ignored.</description></item>
+        /// <item><description>You cannot specify both ZoneId and InstanceId.</description></item>
         /// </list>
-        /// <para>Default value: empty. An empty value indicates that you are creating a pay-as-you-go disk. The disk\&quot;s location is determined by <c>RegionId</c> and <c>ZoneId</c>.</para>
+        /// <para>Default value: empty, which means a pay-as-you-go disk is created. The location of the disk is determined by RegionId and ZoneId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp18pnlg1ds9rky4****</para>
@@ -193,24 +178,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the KMS key to use for the disk.</para>
+        /// <para>The KMS key ID used by the disk.</para>
         /// <remarks>
-        /// <para>If <c>Encrypted</c> is set to true and you do not specify <c>KMSKeyId</c>, a default key is used for encryption. The <c>KMSKeyId</c> is returned in the response after the instance is created.</para>
+        /// <para>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is successfully created.</para>
         /// <list type="bullet">
         /// <item><description><list type="bullet">
-        /// <item><description>If the disk is created from an unshared encrypted snapshot, the encryption key used by that snapshot is used by default.</description></item>
+        /// <item><description>Disk created from a non-shared encrypted snapshot: The encryption key used by the snapshot is used by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>If the disk is created from a shared encrypted snapshot, the service key is used by default.</description></item>
+        /// <item><description>Disk created from a shared encrypted snapshot: The service key is used by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>If the disk is created in a region with account-level default encryption enabled, the specified account-level key is used by default.</description></item>
+        /// <item><description>Disk created in a region where account-level default encryption for block storage is enabled: The specified account-level key is used by default.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>In other cases, the service key is used by default.</description></item>
+        /// <item><description>Other cases: The service key is used by default.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -226,14 +211,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable the multi-attach feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Disabled: The feature is disabled.</para>
-        /// </description></item>
-        /// <item><description><para>Enabled: The feature is enabled. Currently, only ESSDs support setting this parameter to <c>Enabled</c>.</para>
-        /// </description></item>
+        /// <item><description>Disabled: disables the feature.</description></item>
+        /// <item><description>Enabled: enables the feature. Currently, only ESSDs support setting this to <c>Enabled</c>.</description></item>
         /// </list>
         /// <para>Default value: Disabled.</para>
         /// <remarks>
-        /// <para>Disks with the multi-attach feature enabled can only be billed on a pay-as-you-go basis. Therefore, you cannot set the <c>InstanceId</c> parameter when <c>MultiAttach</c> is <c>Enabled</c>. After you create the disk, you can call <a href="https://help.aliyun.com/document_detail/25515.html">AttachDisk</a> to attach it. Note that a multi-attach disk can be attached only as a data disk.</para>
+        /// <para>Disks with the multi-attach feature enabled only support the pay-as-you-go billing method. Therefore, when <c>MultiAttach=Enabled</c>, you cannot set the <c>InstanceId</c> parameter. You can call <a href="https://help.aliyun.com/document_detail/25515.html">AttachDisk</a> to attach the disk after creation, but note that disks with multi-attach enabled can only be attached as data disks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -252,19 +235,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the ESSD. Valid values:</para>
+        /// <para>Sets the performance level of the disk when creating an ESSD. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</para>
-        /// </description></item>
-        /// <item><description><para>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</para>
-        /// </description></item>
-        /// <item><description><para>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</para>
-        /// </description></item>
-        /// <item><description><para>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</para>
-        /// </description></item>
+        /// <item><description>PL0: maximum random read/write IOPS of 10,000 per disk.</description></item>
+        /// <item><description>PL1: maximum random read/write IOPS of 50,000 per disk.</description></item>
+        /// <item><description>PL2: maximum random read/write IOPS of 100,000 per disk.</description></item>
+        /// <item><description>PL3: maximum random read/write IOPS of 1,000,000 per disk.</description></item>
         /// </list>
         /// <para>Default value: PL1.</para>
-        /// <para>For more information about how to choose an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+        /// <para>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -274,16 +253,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The provisioned read/write IOPS of a single ESSD AutoPL disk. Valid values:</para>
+        /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk (per disk). Possible values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Capacity &lt;= 3 GiB: You cannot set provisioned performance.</para>
+        /// <item><description><para>Capacity (GiB) &lt;= 3: provisioned performance cannot be set.</para>
         /// </description></item>
-        /// <item><description><para>Capacity &gt;= 4 GiB: 0 to min(1,000 IOPS/GiB × Capacity - Baseline IOPS, 50,000).</para>
+        /// <item><description><para>Capacity (GiB) &gt;= 4: [0, min{(1,000</para>
         /// </description></item>
         /// </list>
-        /// <para>Baseline IOPS = max(min(1,800 + 50 × Capacity, 50,000), 3,000).</para>
+        /// <para> IOPS/GiB * capacity - baseline IOPS), 50,000}]</para>
+        /// <para>Baseline performance = max{min{1,800 + 50 * capacity, 50,000}, 3,000}.</para>
         /// <remarks>
-        /// <para>This parameter is available only for ESSD AutoPL disks (<c>cloud_auto</c>). For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+        /// <para>This parameter is supported only when <c>DiskCategory</c> = <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -294,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ProvisionedIops { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the disk. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -305,7 +285,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the disk belongs.</para>
+        /// <para>The ID of the enterprise resource group to which the disk belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -323,43 +303,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the disk, in GiB. You must specify a value for this parameter. Value range:</para>
+        /// <para>The capacity size. Unit: GiB. You must specify a value for this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cloud</c>: 5 to 2,000</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_efficiency</c>: 20 to 32,768</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_ssd</c>: 20 to 32,768</para>
-        /// </description></item>
-        /// <item><description><para><c>PerformanceLevel</c></para>
-        /// <list type="bullet">
-        /// <item><description><para>PL0: 1 to 65,536</para>
-        /// </description></item>
-        /// <item><description><para>PL1: 20 to 65,536</para>
-        /// </description></item>
-        /// <item><description><para>PL2: 461 to 65,536</para>
-        /// </description></item>
-        /// <item><description><para>PL3: 1,261 to 65,536</para>
-        /// </description></item>
+        /// <item><description>cloud: 5 to 2,000.</description></item>
+        /// <item><description>cloud_efficiency: 20 to 32,768.</description></item>
+        /// <item><description>cloud_ssd: 20 to 32,768.</description></item>
+        /// <item><description>cloud_essd: The valid value range depends on the value of <c>PerformanceLevel</c>.<list type="bullet">
+        /// <item><description>PL0: 1 to 65,536.</description></item>
+        /// <item><description>PL1: 20 to 65,536.</description></item>
+        /// <item><description>PL2: 461 to 65,536.</description></item>
+        /// <item><description>PL3: 1,261 to 65,536.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><c>cloud_auto</c>: 1 to 65,536</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_essd_entry</c>: 10 to 32,768</para>
-        /// </description></item>
-        /// <item><description><para><c>cloud_regional_disk_auto</c>: 10 to 65,536</para>
-        /// </description></item>
-        /// <item><description><para><c>elastic_ephemeral_disk_standard</c>: 64 to 8,192</para>
-        /// </description></item>
-        /// <item><description><para><c>elastic_ephemeral_disk_premium</c>: 64 to 8,192</para>
-        /// </description></item>
+        /// <item><description>cloud_auto: 1 to 65,536.</description></item>
+        /// <item><description>cloud_essd_entry: 10 to 32,768.</description></item>
+        /// <item><description>cloud_regional_disk_auto: 10 to 65,536.</description></item>
+        /// <item><description>elastic_ephemeral_disk_standard: 64 to 8,192.</description></item>
+        /// <item><description>elastic_ephemeral_disk_premium: 64 to 8,192.</description></item>
         /// </list>
-        /// <para>If you specify <c>SnapshotId</c>, the following limits apply to <c>SnapshotId</c> and <c>Size</c>:</para>
+        /// <para>If you specify the <c>SnapshotId</c> parameter, the <c>SnapshotId</c> and <c>Size</c> parameters have the following restrictions:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the snapshot capacity is greater than the specified <c>Size</c>, the actual disk size is the snapshot capacity.</para>
-        /// </description></item>
-        /// <item><description><para>If the snapshot capacity is smaller than the specified <c>Size</c>, the actual disk size is the specified <c>Size</c>.</para>
-        /// </description></item>
+        /// <item><description>If the snapshot capacity corresponding to the <c>SnapshotId</c> parameter is greater than the specified <c>Size</c> parameter value, the actual size of the created disk equals the size of the specified snapshot.</description></item>
+        /// <item><description>If the snapshot capacity corresponding to the <c>SnapshotId</c> parameter is less than the specified <c>Size</c> parameter value, the actual size of the created disk equals the specified <c>Size</c> parameter value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -370,15 +335,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot used to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</para>
-        /// <para>The <c>SnapshotId</c> and <c>Size</c> parameters have the following limits:</para>
+        /// <para>The snapshot ID used to create the disk. Snapshots created on or before July 15, 2013 cannot be used to create disks.</para>
+        /// <para>The <c>SnapshotId</c> and <c>Size</c> parameters have the following restrictions:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the snapshot capacity is greater than the specified <c>Size</c>, the actual disk size is the snapshot capacity.</para>
-        /// </description></item>
-        /// <item><description><para>If the snapshot capacity is smaller than the specified <c>Size</c>, the actual disk size is the specified <c>Size</c>.</para>
-        /// </description></item>
-        /// <item><description><para>You cannot use snapshots to create Elastic Ephemeral Disks.</para>
-        /// </description></item>
+        /// <item><description>If the snapshot capacity corresponding to the <c>SnapshotId</c> parameter is greater than the specified <c>Size</c> parameter value, the actual size of the created disk equals the size of the specified snapshot.</description></item>
+        /// <item><description>If the snapshot capacity corresponding to the <c>SnapshotId</c> parameter is less than the specified <c>Size</c> parameter value, the actual size of the created disk equals the specified <c>Size</c> parameter value.</description></item>
+        /// <item><description>Creating elastic ephemeral disks from snapshots is not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -389,9 +351,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated block storage cluster. If you need to create a disk in a specific dedicated block storage cluster, specify this parameter.</para>
+        /// <para>The dedicated block storage cluster ID. If you need to create a disk in a specified dedicated block storage cluster, specify this parameter.</para>
         /// <remarks>
-        /// <para>You can specify either storage set parameters (<c>StorageSetId</c> and <c>StorageSetPartitionNumber</c>) or the dedicated block storage cluster parameter (<c>StorageClusterId</c>), but not both. The request fails if you specify parameters for both.</para>
+        /// <para>Storage set parameters (<c>StorageSetId</c>, <c>StorageSetPartitionNumber</c>) and dedicated block storage cluster parameter (<c>StorageClusterId</c>) are mutually exclusive. If both are set, the API call will fail.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -402,9 +364,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StorageClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the storage set.</para>
+        /// <para>The storage set ID.</para>
         /// <remarks>
-        /// <para>You can specify either storage set parameters (<c>StorageSetId</c> and <c>StorageSetPartitionNumber</c>) or the dedicated block storage cluster parameter (<c>StorageClusterId</c>), but not both. The request fails if you specify parameters for both.</para>
+        /// <para>Storage set parameters (<c>StorageSetId</c>, <c>StorageSetPartitionNumber</c>) and dedicated block storage cluster parameter (<c>StorageClusterId</c>) are mutually exclusive. If both are set, the API call will fail.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -415,7 +377,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StorageSetId { get; set; }
 
         /// <summary>
-        /// <para>The number of partitions in the storage set. The value must be greater than or equal to 2 and cannot exceed the quota returned by the <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a> operation.</para>
+        /// <para>The number of storage set partitions. Valid values: greater than or equal to 2, and cannot exceed the quota limit displayed after calling <a href="https://help.aliyun.com/document_detail/73772.html">DescribeAccountAttributes</a>.</para>
         /// <para>Default value: 2.</para>
         /// 
         /// <b>Example:</b>
@@ -426,17 +388,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? StorageSetPartitionNumber { get; set; }
 
         /// <summary>
-        /// <para>A list of tags for the disk.</para>
+        /// <para>The list of tag information for the disk.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDiskRequestTag> Tag { get; set; }
         public class CreateDiskRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the disk.</para>
-            /// <remarks>
-            /// <para>For better code compatibility, we recommend that you use the <c>Tag.N.Key</c> parameter.</para>
-            /// </remarks>
+            /// <para>The tag key of the disk. Valid values of N: 1 to 20. Once a Tag.N.Key value is specified, it cannot be an empty string. It supports up to 128 characters and cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -446,7 +405,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the disk. The value of N ranges from 1 to 20. If you specify <c>Tag.N.Value</c>, the value can be an empty string. The value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the disk. Valid values of N: 1 to 20. Once a Tag.N.Value value is specified, it can be an empty string. It supports up to 128 characters and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -458,15 +417,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the zone in which to create the pay-as-you-go disk.</para>
+        /// <para>Creates a pay-as-you-go disk in the specified zone.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not set <c>InstanceId</c>, this parameter is required.</para>
-        /// </description></item>
-        /// <item><description><para>You cannot specify both <c>ZoneId</c> and <c>InstanceId</c>.</para>
-        /// </description></item>
+        /// <item><description>If you do not set InstanceId, ZoneId is required.</description></item>
+        /// <item><description>You cannot specify both ZoneId and InstanceId.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>ESSD zone-redundant disks (<c>cloud_regional_disk_auto</c>) do not require a zone ID.</para>
+        /// <para>Disks of the <c>cloud_regional_disk_auto</c> type do not require ZoneId to be set.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

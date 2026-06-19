@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ReInitDiskRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically start the instance after the disk is re-initialized. Valid values:</para>
+        /// <para>Specifies whether to automatically start the instance after the disk is reinitialized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: automatically starts the instance.</description></item>
+        /// <item><description>false: does not automatically start the instance.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoStartInstance { get; set; }
 
         /// <summary>
-        /// <para>The ID of the disk.</para>
+        /// <para>The ID of the disk to be reinitialized.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,9 +36,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair. This parameter is empty by default.</para>
+        /// <para>The name of the key pair.</para>
         /// <remarks>
-        /// <para>The parameter is applicable only to Linux instances. You can bind an SSH key pair to an instance as the logon credential when you re-initialize the system disk of the instance. After the SSH key pair is bound, the username and password-based logon method is disabled for the instance.</para>
+        /// <para>This parameter is applicable only to Linux instances. When the system disk is reinitialized, you can attach an SSH key pair to the ECS instance as the logon credential. After you use an SSH key pair, the username and password logon method is disabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,12 +57,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to reset the password of the instance when you re-initialize its system disk. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include:</para>
+        /// <para>Specifies whether to reset the username and password of the ECS instance when the system disk is reinitialized. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
         /// <pre><c>()`~!@#$%^&amp;*-_+=|{}[]:;\\&quot;&lt;&gt;,.?/
         /// </c></pre>
-        /// <para>For Windows instances, passwords cannot start with a forward slash (/).</para>
+        /// <para>For Windows instances, the password cannot start with a forward slash (/).</para>
         /// <remarks>
-        /// <para>If the <c>Password</c> parameter is specified, we recommend that you send requests over HTTPS to prevent password leaks.</para>
+        /// <para>If you specify the <c>Password</c> parameter, use HTTPS to send the request to avoid password leaks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,11 +81,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use Security Center free of charge after the system disk is re-initialized. Valid values:</para>
+        /// <para>Specifies whether to use the free Security Center service after the system disk is reinitialized. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Active: uses Security Center free of charge after the system disk is re-initialized. This value is applicable to only public images.</para>
+        /// <item><description><para>Active: uses the Security Center service. This value is applicable only to public images.  </para>
         /// </description></item>
-        /// <item><description><para>Deactive: does not use Security Center free of charge after the system disk is re-initialized. This value is applicable to all images.</para>
+        /// <item><description><para>Deactive: does not use the Security Center service. This value is applicable to all images.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Deactive.</para>

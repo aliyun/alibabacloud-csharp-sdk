@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to forcefully stop the instance that is in the Running state.</para>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>A forced stop is equivalent to a power outage and can result in loss of data that is not written to storage devices. We recommend that you redeploy instances when they are in the Stopped state.</para>
+        /// <para>A forced stop is equivalent to a typical server power-off. Data in the instance operating system that has not been written to storage devices is lost. We recommend that you redeploy instances that are already stopped.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ForceStop { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID of the instance that is in the Running or Stopped state.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

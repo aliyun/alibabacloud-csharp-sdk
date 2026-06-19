@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The ID of the redeployment task.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the redeployment result.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25622.html">DescribeTasks</a> operation to query the migration result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-bp10e8orkp8x****</para>

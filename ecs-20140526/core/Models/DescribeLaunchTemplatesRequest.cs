@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeLaunchTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of launch templates.</para>
+        /// <para>An array of one or more launch template IDs.</para>
         /// <list type="bullet">
-        /// <item><description><para>You can query up to 100 launch templates.</para>
+        /// <item><description><para>You can query up to 100 launch templates at a time.</para>
         /// </description></item>
-        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</para>
+        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,11 +26,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The names of launch templates.</para>
+        /// <para>An array of one or more launch template names.</para>
         /// <list type="bullet">
-        /// <item><description><para>You can query up to 100 launch templates.</para>
+        /// <item><description><para>You can query up to 100 launch templates at a time.</para>
         /// </description></item>
-        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</para>
+        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to determine the templates.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Page starts from page 1.</para>
+        /// <para>The page number of the launch template list. Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paginated query.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</para>
+        /// <para>The ID of the resource group to which the launch template belongs. When you use this parameter to filter resources, the number of resources cannot exceed 1000.</para>
         /// <remarks>
-        /// <para>The default resource group is not supported.</para>
+        /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -104,9 +104,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TemplateResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the launch template.</para>
+        /// <para>The list of tag key-value pairs of the launch template.</para>
         /// <remarks>
-        /// <para>You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</para>
+        /// <para>Currently, you can create and query launch template tags only by calling API operations. The console does not support creating or viewing launch template tags.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TemplateTag")]
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeLaunchTemplatesRequestTemplateTag> TemplateTag { get; set; }
         public class DescribeLaunchTemplatesRequestTemplateTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the launch template. Valid values of N: 1 to 20.</para>
-            /// <para>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>The tag key of the launch template. Valid values of N: 1 to 20.</para>
+            /// <para>If you use a single tag to filter resources, the number of resources with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the number of resources that are bound with all the specified tags cannot exceed 1000. If the number of resources exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query them.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the launch template. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value of the launch template. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

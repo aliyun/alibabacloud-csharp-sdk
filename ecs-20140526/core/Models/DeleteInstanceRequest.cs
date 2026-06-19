@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false (default): performs a dry run and performs the actual request. If the request passes the dry run, the instance is released.</para>
-        /// </description></item>
+        /// <item><description>true: Sends a check request without releasing the instance. The system checks whether the required parameters are specified, the request format is valid, business requirements are met, and ECS resources are sufficient. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the request passes the check, the instance is directly deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,16 +24,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully release the ECS instance in the <b>Running</b> (<c>Running</c>) state. Valid values:</para>
+        /// <para>Specifies whether to forcefully release a <b>running</b> (<c>Running</c>) instance.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: forcefully releases the ECS instance in the <b>Running</b> (<c>Running</c>) state.</para>
-        /// </description></item>
-        /// <item><description><para>false: normally releases the ECS instance. This value is valid only if the instance is in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
-        /// </description></item>
+        /// <item><description>true: Forcefully releases a <b>running</b> (<c>Running</c>) instance.</description></item>
+        /// <item><description>false: Releases the instance in the normal way. The instance must be in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Warning</b> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// <remarks>
+        /// <para>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,14 +42,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully stop the ECS instance in the <b>Running</b> (<c>Running</c>) state before the instance is released. This parameter takes effect only when <c>Force</c> is set to true. Valid values:</para>
+        /// <para>Specifies whether to use the forced shutdown policy when releasing a <b>running</b> (<c>Running</c>) instance. This parameter takes effect only when <c>Force=true</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Warning</b> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// <item><description>true: Forcefully shuts down and releases the instance. This is equivalent to a typical power-off operation. The instance directly enters the resource release process.<remarks>
+        /// <para>Warning: A forceful release is equivalent to a power-off. Temporary data in the instance memory and storage is erased and cannot be recovered.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</para>
-        /// </description></item>
+        /// <item><description>false: Before the instance is released, the system preferentially performs a standard shutdown process. This mode causes the instance release to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ForceStop { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,12 +87,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the expired subscription instance. Valid values:</para>
+        /// <para>Specifies whether to release an expired subscription instance.</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: Releases the instance.</description></item>
+        /// <item><description>false: Does not release the instance.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. For information about how to use the returned value, see the &quot;Usage notes&quot; section of this topic.</para>
+        /// <para>The pagination token returned in this call. For more information about how to use it, refer to the operation description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>

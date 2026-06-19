@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scenario in which the image is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>CreateEcs (default): instance creation</para>
-        /// </description></item>
-        /// <item><description><para>ChangeOS: replacement of the system disk or operating system</para>
-        /// </description></item>
+        /// <item><description>CreateEcs (default): instance creation.</description></item>
+        /// <item><description>ChangeOS: replacement of the system disk or operating system.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +24,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs of the instance type.</para>
+        /// <para>The list of filter conditions for querying resources.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeImageSupportInstanceTypesRequestFilter> Filter { get; set; }
         public class DescribeImageSupportInstanceTypesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>Filter N used to filter instance types.</para>
+            /// <para>The filter condition key. Currently, only filtering by image ID is supported. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>imageId: filters by image ID.</description></item>
+            /// <item><description>filter: filters by image ID.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is not effective and will be deprecated soon.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>imageId</para>
@@ -43,7 +48,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The filter condition value.</para>
+            /// <remarks>
+            /// <para>This parameter is not effective and will be deprecated soon.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>m-o6w3gy99qf89rkga****</para>
@@ -55,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-o6w3gy99qf89rkga****</para>
@@ -69,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Details about the instance types that are supported by the image.</para>
+        /// <para>The region ID of the image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

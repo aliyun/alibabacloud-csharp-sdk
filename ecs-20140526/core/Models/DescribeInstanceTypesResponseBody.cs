@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceTypesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>A collection of instance types.</para>
-        /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public DescribeInstanceTypesResponseBodyInstanceTypes InstanceTypes { get; set; }
@@ -331,7 +328,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The token used to retrieve the next page of results.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>

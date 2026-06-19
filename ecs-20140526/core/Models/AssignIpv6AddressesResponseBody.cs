@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ENI ID.</para>
+        /// <para>The ID of the ENI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-bp1iqejowblx6h8j****</para>

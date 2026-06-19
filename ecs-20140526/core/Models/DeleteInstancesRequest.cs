@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. <b>The token can contain only ASCII characters and cannot exceed 64 characters in length.</b> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DRYRUN.SUCCESS error code is returned.</para>
-        /// </description></item>
-        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
-        /// </description></item>
+        /// <item><description>true: sends a check request without querying resource status. The check items include whether your AccessKey pair is valid, whether Resource Access Management (RAM) user authorization is granted, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DRYRUN.SUCCESS error code is returned.</description></item>
+        /// <item><description>false: sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the resource status is queried directly.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -37,16 +35,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully release the ECS instance in the <b>Running</b> (<c>Running</c>) state. Valid values:</para>
+        /// <para>Specifies whether to forcefully release an instance that is in the <b>Running</b> (<c>Running</c>) state.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: forcefully releases the ECS instance in the <b>Running</b> (<c>Running</c>) state.</para>
-        /// </description></item>
-        /// <item><description><para>false: normally releases the ECS instance. This value is valid only if the instance is in the <b>Stopped</b> (<c>Stopped</c>) state.</para>
-        /// </description></item>
+        /// <item><description>true: forcefully releases ECS instance that is in the <b>Running</b> (<c>Running</c>) state.</description></item>
+        /// <item><description>false: releases ECS instance only when it is in the <b>Stopped</b> (<c>Stopped</c>) state.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Warning</b> When Force is set to true, this operation is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// <remarks>
+        /// <para>Warning: Forceful release is equivalent to powering off ECS instance. All in-memory data and temporary data in the storage are erased and cannot be recovered..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -56,14 +53,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully stop the ECS instance in the <b>Running</b> (<c>Running</c>) state before the instance is released. This parameter takes effect only when <c>Force</c> is set to true. Valid values:</para>
+        /// <para>Specifies whether to forcefully shut down the instance before release when the instance is in the <b>Running</b> (<c>Running</c>) state. This parameter takes effect only when <c>Force=true</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: forcefully stops and releases the ECS instance. In this case, this operation is equivalent to a power-off operation. The instance directly enters the resource release process.</para>
-        /// <para>\<em>\</em></para>
-        /// <para><b>Warning</b> A forceful stop and release is equivalent to a power-off operation. Temporary data in the memory and storage of the instance is erased and cannot be restored.</para>
+        /// <item><description>true: forcefully shuts down and releases the instance. This is equivalent to a power-off operation. The instance directly enters the resource release process.<remarks>
+        /// <para>Warning: Forceful release is equivalent to powering off the instance. All in-memory data and temporary data in the storage are erased and cannot be recovered.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>false: stops the ECS instance in the normal stop process and then releases the instance. In this case, the release process takes several minutes to complete. You can configure business drainage actions to reduce the noise of the business system on operating system shutdown.</para>
-        /// </description></item>
+        /// <item><description>false: performs a standard shutdown before releasing the instance. This mode causes the release process to take several minutes. You can configure service draining actions during the operating system shutdown to reduce noise in your business systems.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -75,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? ForceStop { get; set; }
 
         /// <summary>
-        /// <para>The IDs of ECS instances. You can specify 1 to 100 ECS instances.</para>
+        /// <para>The instance ID array. Array length: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instances. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,12 +109,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the expired subscription instance.</para>
+        /// <para>Specifies whether to release an expired subscription instance.</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: releases the instance.</description></item>
+        /// <item><description>false: does not release the instance.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

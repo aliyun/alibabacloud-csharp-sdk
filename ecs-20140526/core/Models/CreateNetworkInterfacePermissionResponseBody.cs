@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the network interface permission.</para>
+        /// <para>The information about the ENI permission.</para>
         /// </summary>
         [NameInMap("NetworkInterfacePermission")]
         [Validation(Required=false)]
         public CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission NetworkInterfacePermission { get; set; }
         public class CreateNetworkInterfacePermissionResponseBodyNetworkInterfacePermission : TeaModel {
             /// <summary>
-            /// <para>The account ID of the Alibaba Cloud Partner (certified ISV).</para>
+            /// <para>The ID of the Alibaba Cloud partner (certified ISV) account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>The elastic network interface ID.</para>
+            /// <para>The ENI ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp14v2sdd3v8htln****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The network interface permission ID.</para>
+            /// <para>The ENI permission ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-perm-bp1cs4lwn56lfb****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfacePermissionId { get; set; }
 
             /// <summary>
-            /// <para>The permission for the elastic network interface.</para>
+            /// <para>The ENI permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InstanceAttach</para>
@@ -57,16 +57,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The state of the network interface permission. Possible values:</para>
+            /// <para>The ENI permission state. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Pending: The permission is being granted.</para>
-            /// </description></item>
-            /// <item><description><para>Granted: The permission is granted.</para>
-            /// </description></item>
-            /// <item><description><para>Revoking: The permission is being revoked.</para>
-            /// </description></item>
-            /// <item><description><para>Revoked: The permission is revoked.</para>
-            /// </description></item>
+            /// <item><description>Pending: The permission is being granted.</description></item>
+            /// <item><description>Granted: The permission has been granted.</description></item>
+            /// <item><description>Revoking: The permission is being revoked.</description></item>
+            /// <item><description>Revoked: The permission has been revoked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string PermissionState { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud service that is granted the permission.</para>
+            /// <para>The Alibaba Cloud service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Elastic Compute Service</para>

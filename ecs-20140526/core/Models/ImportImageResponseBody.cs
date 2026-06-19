@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The image import task ID.</para>
+        /// <para>The ID of the image import task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-bp67acfmxazb4p****</para>

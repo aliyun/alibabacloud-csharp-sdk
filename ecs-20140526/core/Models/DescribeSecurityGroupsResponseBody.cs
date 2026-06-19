@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSecurityGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. If the return value of this parameter is empty when MaxResults and NextToken are used for a paged query, no next page exists.</para>
+        /// <para>The query token returned in this call. When you use the MaxResults and NextToken method for paged queries and this return value is empty, no more data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// <remarks>
-        /// <para>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <remarks>
-        /// <para>This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to be deprecated. We recommend that you use NextToken and MaxResults for paged queries.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of security groups returned. If <c>MaxResults</c> and <c>NextToken</c> are specified in the request, the value of this parameter is not returned.</para>
+        /// <para>The total number of security groups. This parameter value is not returned when you use the <c>MaxResults</c> and <c>NextToken</c> parameters for queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

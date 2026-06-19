@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the session.</para>
+        /// <para>The ID of the region where the session resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

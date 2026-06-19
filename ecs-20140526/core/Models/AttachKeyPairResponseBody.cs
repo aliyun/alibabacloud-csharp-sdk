@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AttachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of instances to which the SSH key pair fails to be bound.</para>
+        /// <para>The number of instances to which the key pair failed to be bound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string FailCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSH key pair.</para>
+        /// <para>The name of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testKeyPairName</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of instances to which the SSH key pair is bound.</para>
+        /// <para>The total number of instances to which the key pair is bound.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreatePlanMaintenanceWindowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the maintenance window.</para>
+        /// <para>The ID of the created O&amp;M window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pw-bp1a9yavgq3dgttvowun</para>

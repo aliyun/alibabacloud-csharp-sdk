@@ -18,7 +18,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> RemoveGroup { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom image.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ImageId")]
@@ -34,7 +33,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <c>DescribeRegions</c> operation to query the latest region list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http\:// or https\://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the key pair. The name must be unique. The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It cannot start with http:// or https://. The name can contain characters that are categorized as letter in Unicode, including letters, Chinese characters, and digits. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PublicKeyBody { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the key pair.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ImportKeyPairRequestTag> Tag { get; set; }
         public class ImportKeyPairRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The key of tag N of the key pair. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <a href="http://https://%E3%80%82">http:// or https://</a>. The tag value cannot start with acs:.</para>
+            /// <para>The value of tag N of the key pair. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot contain http:// or https://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

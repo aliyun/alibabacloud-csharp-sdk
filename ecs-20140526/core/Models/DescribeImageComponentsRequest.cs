@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeImageComponentsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the image component.</para>
+        /// <para>The component type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Build</para>
-        /// </description></item>
-        /// <item><description><para>Test</para>
-        /// </description></item>
+        /// <item><description>Build</description></item>
+        /// <item><description>Test.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,9 +25,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ComponentType { get; set; }
 
         /// <summary>
-        /// <para>The version number of the image component in the \<major>.\<minor>.\<patch> format. You can set \<major>, \<minor>, and \<patch> to non-negative integers, or set one of \<major>, \<minor>, and \<patch> to the wildcard (\*) and the other two to non-negative integers.</para>
+        /// <para>The component version number in the format of major.minor.patch. All values are non-negative integers. You can also use the wildcard character (*) to replace one of the values for fuzzy matching.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only if you specify Name.</para>
+        /// <para>This parameter takes effect only when Name is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ComponentVersion { get; set; }
 
         /// <summary>
-        /// <para>The IDs of image components. Valid values of N: 1 to 20.</para>
+        /// <para>The ID of the image component to query. Valid values of N: 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ic-bp67acfmxazb4p****</para>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> ImageComponentId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 500.</para>
+        /// <para>The maximum number of entries per page for paging. Valid values: 1 to 500.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the image component. You must specify an exact name to search for the image component.</para>
+        /// <para>The image component name. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testComponent</para>
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -81,12 +79,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the image component. Valid values:</para>
+        /// <para>The image component type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SELF: the custom component that you created.</para>
-        /// </description></item>
-        /// <item><description><para>ALIYUN: the system component provided by Alibaba Cloud.</para>
-        /// </description></item>
+        /// <item><description>SELF: custom image components that you created.</description></item>
+        /// <item><description>ALIYUN: system components provided by Alibaba Cloud.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the image component. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,9 +112,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
+        /// <para>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
         /// <remarks>
-        /// <para>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
+        /// <para>Filtering by the default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -137,13 +133,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the operating system supported by the image component.</para>
+        /// <para>The operating system supported by the component.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Linux</para>
-        /// </description></item>
-        /// <item><description><para>Windows</para>
-        /// </description></item>
+        /// <item><description>Linux</description></item>
+        /// <item><description>Windows.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,14 +148,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SystemType { get; set; }
 
         /// <summary>
-        /// <para>The tags of the image component.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeImageComponentsRequestTag> Tag { get; set; }
         public class DescribeImageComponentsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N. Valid values of N: 1 to 20.</para>
+            /// <para>The tag key. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -171,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N. Valid values of N: 1 to 20.</para>
+            /// <para>The tag value. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

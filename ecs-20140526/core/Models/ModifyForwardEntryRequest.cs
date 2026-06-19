@@ -9,22 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyForwardEntryRequest : TeaModel {
-        /// <summary>
-        /// <para>The public IP address for the forward entry.</para>
-        /// </summary>
         [NameInMap("ExternalIp")]
         [Validation(Required=false)]
         public string ExternalIp { get; set; }
 
-        /// <summary>
-        /// <para>The external port for the forward entry.</para>
-        /// </summary>
         [NameInMap("ExternalPort")]
         [Validation(Required=false)]
         public string ExternalPort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forward entry that you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ForwardEntryId")]
@@ -32,30 +25,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ForwardEntryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forward table.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ForwardTableId")]
         [Validation(Required=false)]
         public string ForwardTableId { get; set; }
 
-        /// <summary>
-        /// <para>The internal IP address for the forward entry.</para>
-        /// </summary>
         [NameInMap("InternalIp")]
         [Validation(Required=false)]
         public string InternalIp { get; set; }
 
-        /// <summary>
-        /// <para>The internal port for the forward entry.</para>
-        /// </summary>
         [NameInMap("InternalPort")]
         [Validation(Required=false)]
         public string InternalPort { get; set; }
 
-        /// <summary>
-        /// <para>The IP protocol. Valid values are tcp, udp, and any.</para>
-        /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]
         public string IpProtocol { get; set; }
@@ -69,7 +52,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the forward table is located.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]

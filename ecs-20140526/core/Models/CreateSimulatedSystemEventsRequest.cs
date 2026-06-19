@@ -12,20 +12,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the system event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</para>
-        /// </description></item>
-        /// <item><description><para>SystemFailure.Reboot: The instance is restarted due to a system error.</para>
-        /// </description></item>
-        /// <item><description><para>InstanceFailure.Reboot: The instance is restarted due to an instance error.</para>
-        /// </description></item>
-        /// <item><description><para>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</para>
-        /// </description></item>
-        /// <item><description><para>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</para>
-        /// </description></item>
-        /// <item><description><para>SystemFailure.Redeploy: The instance is redeployed due to a system error.</para>
-        /// </description></item>
-        /// <item><description><para>SystemFailure.Stop: The instance is stopped due to a system error.</para>
-        /// </description></item>
+        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
+        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
+        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
+        /// <item><description>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</description></item>
+        /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
+        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system error.</description></item>
+        /// <item><description>SystemFailure.Stop: The instance is stopped due to a system error.</description></item>
+        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances. You can specify up to 100 instance IDs.</para>
+        /// <para>The list of ECS instance IDs. You can specify up to 100 instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scheduled start time of the event. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para>For events that occur due to system errors or instance errors, the simulated events of such events enter the <c>Executing</c> state when the simulated events are created. The value of <c>NotBefore</c> is the time when the simulated events enter the <c>Executed</c> state.</para>
+        /// <para>For unexpected events caused by system errors or instance errors, after the event is created, the event enters the Executing state. In this case, the NotBefore parameter specifies the time when the event enters the Executed state.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the task.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of completed tasks.</para>
+        /// <para>The number of successful tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -114,12 +114,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SuccessCount { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task can be canceled by calling the <a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a> operation. Valid values:</para>
+        /// <para>Indicates whether the task can be canceled (<a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a>). Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The task can be canceled. </description></item>
+        /// <item><description>false: The task cannot be canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SupportCancel { get; set; }
 
         /// <summary>
-        /// <para>The name of the operation that generated the task.</para>
+        /// <para>The name of the API operation associated with the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExportImage</para>
@@ -140,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskAction { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-ce946ntx4wr****</para>
@@ -150,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The progress of the task.</para>
+        /// <para>The task progress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100%</para>
@@ -160,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskProcess { get; set; }
 
         /// <summary>
-        /// <para>The status of the task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Finished</para>

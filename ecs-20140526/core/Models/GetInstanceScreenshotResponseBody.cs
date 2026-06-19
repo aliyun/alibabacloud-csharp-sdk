@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded instance screenshot in the JPG format.</para>
+        /// <para>The instance screenshot in JPG image format, returned as a Base64-encoded image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iVBORw0KGgoA...AAABJRU5ErkJggg==</para>

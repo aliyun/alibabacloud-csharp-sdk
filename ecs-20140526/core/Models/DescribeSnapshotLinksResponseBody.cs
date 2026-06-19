@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotLinksResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the snapshot chain list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page as specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshot chains.</para>
         /// <remarks>
-        /// <para>When using the <c>MaxResults</c> and <c>NextToken</c> parameters for a paginated query, the returned <c>TotalCount</c> parameter value is invalid.</para>
+        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for a paged query, the returned <c>TotalCount</c> value is invalid. For paging, use <c>MaxResults</c> and <c>NextToken</c> instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

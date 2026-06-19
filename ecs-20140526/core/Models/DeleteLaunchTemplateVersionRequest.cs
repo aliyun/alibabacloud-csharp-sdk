@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteLaunchTemplateVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The version numbers of the launch template.</para>
+        /// <para>The version numbers of the launch template to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<long?> DeleteVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the launch template. For more information, call the <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a> operation.</para>
+        /// <para>The ID of the launch template to delete. For more information, see <a href="https://help.aliyun.com/document_detail/73759.html">DescribeLaunchTemplates</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-bp1apo0bbbkuy0rj****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the launch template. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list of Alibaba Cloud.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyLaunchTemplateDefaultVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The default version number of the instance launch template.</para>
+        /// <para>The version number of the launch template to be set as the default version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? DefaultVersionNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the launch template. You must specify the LaunchTemplateId or LaunchTemplateName parameter to determine an instance launch template.</para>
+        /// <para>The ID of the launch template. You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lt-s-bp177juajht6****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LaunchTemplateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance launch template. You must specify the LaunchTemplateId or LaunchTemplateName parameter to determine an instance launch template.</para>
+        /// <para>The name of the launch template. You must specify LaunchTemplateId or LaunchTemplateName to determine the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testLaunchTemplateName</para>
