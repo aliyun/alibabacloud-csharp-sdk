@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class File : TeaModel {
         /// <summary>
-        /// <para>The origin allowed in cross-origin requests.</para>
+        /// <para>The allowed origins for cross-origin requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://aliyundoc.com">https://aliyundoc.com</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AccessControlAllowOrigin { get; set; }
 
         /// <summary>
-        /// <para>The method to be used in the actual cross-origin request.</para>
+        /// <para>The allowed methods for the cross-origin request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUT</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AccessControlRequestMethod { get; set; }
 
         /// <summary>
-        /// <para>The addresses.</para>
+        /// <para>The address information.</para>
         /// </summary>
         [NameInMap("Addresses")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Album { get; set; }
 
         /// <summary>
-        /// <para>The singer.</para>
+        /// <para>The album artist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Jane</para>
@@ -67,21 +67,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Artist { get; set; }
 
         /// <summary>
-        /// <para>The audio covers.</para>
+        /// <para>The cover images for the audio.</para>
         /// </summary>
         [NameInMap("AudioCovers")]
         [Validation(Required=false)]
         public List<Image> AudioCovers { get; set; }
 
         /// <summary>
-        /// <para>The list of audio streams.</para>
+        /// <para>A list of audio streams.</para>
         /// </summary>
         [NameInMap("AudioStreams")]
         [Validation(Required=false)]
         public List<AudioStream> AudioStreams { get; set; }
 
         /// <summary>
-        /// <para>The bitrate. Unit: bit/s.</para>
+        /// <para>The bitrate, in bit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13091201</para>
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Bitrate { get; set; }
 
         /// <summary>
-        /// <para>The caching behavior of the web page when the object is downloaded.</para>
-        /// <para>This parameter corresponds to the Cache-Control HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
+        /// <para>The web cache behavior that the browser should use when the object is downloaded.</para>
+        /// <para>This parameter is returned only if the Cache-Control HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no-cache</para>
@@ -112,8 +112,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Composer { get; set; }
 
         /// <summary>
-        /// <para>The name of the object during the download.</para>
-        /// <para>This parameter corresponds to the Content-Disposition HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
+        /// <para>The name of the object when it is downloaded.</para>
+        /// <para>This parameter is returned only if the Content-Disposition HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>attachment; filename =test.jpg</para>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ContentDisposition { get; set; }
 
         /// <summary>
-        /// <para>The content encoding format of the object when the object is downloaded.</para>
-        /// <para>This parameter corresponds to the Content-Encoding HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
+        /// <para>The content encoding format of the object when it is downloaded.</para>
+        /// <para>This parameter is returned only if the Content-Encoding HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UTF-8</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The language of the object content.</para>
-        /// <para>This parameter corresponds to the Content-Language HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
+        /// <para>This parameter is returned only if the Content-Language HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ContentLanguage { get; set; }
 
         /// <summary>
-        /// <para>The MD5 value.</para>
+        /// <para>The MD5 hash of the object content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HZwoCnxPZ/fvhz4oRJ2+Fw==</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ContentMd5 { get; set; }
 
         /// <summary>
-        /// <para>The Multipurpose Internet Mail Extensions (MIME) type of the file.</para>
+        /// <para>The content type of the file (MIME type).</para>
         /// 
         /// <b>Example:</b>
         /// <para>image/jpeg</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The RFC3339Nano timestamp when the metadata was created.</para>
+        /// <para>The time when the metadata was created. The time is in the RFC3339Nano format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The cropping suggestions for the image.</para>
         /// <remarks>
-        /// <para>Not supported.</para>
+        /// <para>This feature is not supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CroppingSuggestions")]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<CroppingSuggestion> CroppingSuggestions { get; set; }
 
         /// <summary>
-        /// <para>The custom ID of the file. When the cluster is indexed into the dataset, the custom ID is stored as the data attribute. You can map the custom ID to other data in your business system. Configure this parameter based on your business requirements. For example, you can associate a URI with an ID in your system. We recommend that you set this parameter to a globally unique value.</para>
+        /// <para>The custom ID of the file, which you can use to associate the file with an ID in your business system. When the file is indexed into a dataset, this ID is stored as a metadata attribute. We recommend using a globally unique value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>member-image-id-0001</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CustomId { get; set; }
 
         /// <summary>
-        /// <para>The custom labels of the file. This parameter is optional. The parameter stores custom key-value labels, which can be used to filter data.</para>
+        /// <para>Custom key-value labels for the file. This parameter is optional and can be used to store business-specific data and to filter queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, object> CustomLabels { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset. You can obtain the name of the dataset from the response of the <a href="https://help.aliyun.com/document_detail/478160.html">CreateDataset</a> operation.</para>
+        /// <para>The dataset name. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-dataset</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The total duration of the video. Unit: seconds.</para>
+        /// <para>The total duration of the video, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15.263000</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public double? Duration { get; set; }
 
         /// <summary>
-        /// <para>The ETag of the object. ETags are used to identify the content of objects.</para>
+        /// <para>An ETag is generated when an object is created. The ETag identifies the content of an object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;1D9C280A7C4F67F7EF873E28449****&quot;</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ETag { get; set; }
 
         /// <summary>
-        /// <para>The original EXIF information about the image. The EXIF information is stored in the serialized JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/44975.html">Query image information</a>.</para>
+        /// <para>The original EXIF information of the image, stored as a serialized JSON object. For more information, see <a href="https://help.aliyun.com/document_detail/44975.html">Obtain image information</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Compression&quot;:{&quot;value&quot;:&quot;6&quot;},&quot;DateTime&quot;:{&quot;value&quot;:&quot;2020:08:19 17:11:11&quot;}}</para>
@@ -249,14 +249,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EXIF { get; set; }
 
         /// <summary>
-        /// <para>The document elements that match the current query content when you call the SemanticQuery operation for semantic search.</para>
+        /// <para>A list of document fragments that match the current search content when you use the SemanticQuery API to perform a semantic search.</para>
         /// </summary>
         [NameInMap("Elements")]
         [Validation(Required=false)]
         public List<Element> Elements { get; set; }
 
         /// <summary>
-        /// <para>The number of persons.</para>
+        /// <para>The number of figures.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -266,14 +266,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? FigureCount { get; set; }
 
         /// <summary>
-        /// <para>The list of persons. The persons are detected via AI models.</para>
+        /// <para>A list of figures detected by the AI model.</para>
         /// </summary>
         [NameInMap("Figures")]
         [Validation(Required=false)]
         public List<Figure> Figures { get; set; }
 
         /// <summary>
-        /// <para>The RFC3339Nano timestamp when the file was accessed.</para>
+        /// <para>The time when the file was last accessed. The time is in the RFC3339Nano format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FileAccessTime { get; set; }
 
         /// <summary>
-        /// <para>The RFC3339Nano timestamp when the file was created.</para>
+        /// <para>The time when the file was created. The time is in the RFC3339Nano format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FileCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The hash value of the file.</para>
+        /// <para>The hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1d9c280a7c4f67f7ef873e28449dbe17</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FileHash { get; set; }
 
         /// <summary>
-        /// <para>The RFC3339Nano timestamp when the file was last modified.</para>
+        /// <para>The time when the file was last modified. The time is in the RFC3339Nano format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FileModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the object. For an OSS object, the value of this parameter is the object name.</para>
+        /// <para>The name of the file. For an OSS object, this parameter is the ObjectKey.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sampleobject.jpg</para>
@@ -343,7 +343,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FormatName { get; set; }
 
         /// <summary>
-        /// <para>The height of the image. Unit: pixels.</para>
+        /// <para>The height of the image, in pixels (px).</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -353,14 +353,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? ImageHeight { get; set; }
 
         /// <summary>
-        /// <para>The score of the image. The score is calculated by using AI models.</para>
+        /// <para>The image score information, detected by an AI model.</para>
         /// </summary>
         [NameInMap("ImageScore")]
         [Validation(Required=false)]
         public ImageScore ImageScore { get; set; }
 
         /// <summary>
-        /// <para>The width of the image. Unit: pixels.</para>
+        /// <para>The width of the image, in pixels (px).</para>
         /// 
         /// <b>Example:</b>
         /// <para>270</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>Summary and description of the file.</para>
         /// <remarks>
-        /// <para>Not supported.</para>
+        /// <para>Currently not supported</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -383,14 +383,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Insights Insights { get; set; }
 
         /// <summary>
-        /// <para>The labels of the file. The labels are detected via AI models.</para>
+        /// <para>A list of AI-detected labels for the file.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The language specified by using a BCP 47 language tag.</para>
+        /// <para>The language in BCP 47 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eng</para>
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The latitude and longitude.</para>
+        /// <para>The GPS latitude and longitude.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30.134390,120.074997</para>
@@ -411,15 +411,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The media type of the file.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>other</description></item>
-        /// <item><description>document</description></item>
-        /// <item><description>archive</description></item>
-        /// <item><description>audio</description></item>
-        /// <item><description>video</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>
@@ -429,9 +420,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string MediaType { get; set; }
 
         /// <summary>
-        /// <para>The Optical Character Recognition (OCR) results.</para>
+        /// <para>The OCR results.</para>
         /// <remarks>
-        /// <para>Not supported.</para>
+        /// <para>This feature is not supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("OCRContents")]
@@ -442,14 +433,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The text detected in the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud IMM</para>
+        /// <para>阿里云IMM</para>
         /// </summary>
         [NameInMap("OCRTexts")]
         [Validation(Required=false)]
         public string OCRTexts { get; set; }
 
         /// <summary>
-        /// <para>The CRC64 value.</para>
+        /// <para>The CRC-64 value of the object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>559890638950338001</para>
@@ -459,7 +450,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OSSCRC64 { get; set; }
 
         /// <summary>
-        /// <para>The delete marker of the object.</para>
+        /// <para>The OSS delete marker.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAEQMhiBgIDXiaaB0BYiIGQzYmRkZGUxMTM1ZDRjOTZhNjk4YjRjMTAyZjhl****</para>
@@ -470,7 +461,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The expiration time of the OSS object.</para>
-        /// <para>This parameter corresponds to the Expires HTTP header of the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
+        /// <para>This parameter is returned only if the Expires HTTP header is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2120-01-01T12:00:00.000Z</para>
@@ -480,7 +471,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OSSExpiration { get; set; }
 
         /// <summary>
-        /// <para>The type of the OSS object. Set the value to <c>Normal</c>.</para>
+        /// <para>The type of the OSS object. A common value is <c>Normal</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -490,7 +481,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OSSObjectType { get; set; }
 
         /// <summary>
-        /// <para>The storage class of the OSS bucket.</para>
+        /// <para>The storage class of the OSS object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -500,8 +491,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OSSStorageClass { get; set; }
 
         /// <summary>
-        /// <para>The tag of the object.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Add tags to an object</a>.</para>
+        /// <para>The tags of the OSS object.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Object tagging</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;: &quot;val&quot;}</para>
@@ -511,8 +502,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, object> OSSTagging { get; set; }
 
         /// <summary>
-        /// <para>The number of OSS object tags.</para>
-        /// <para>This parameter is available only if tags are added to the corresponding OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Add tags to an object</a>.</para>
+        /// <para>The number of tags on the OSS object.</para>
+        /// <para>This parameter is returned only if tags are set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/106678.html">Object tagging</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -522,7 +513,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? OSSTaggingCount { get; set; }
 
         /// <summary>
-        /// <para>The URI of the OSS object. This parameter is available only if the value of the URI parameter is the URI of a file in Photo and Drive Service.</para>
+        /// <para>The URI of the OSS file. This parameter is returned only if the URI is a PDS address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://examplebucket/sampleobject.jpg</para>
@@ -532,8 +523,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OSSURI { get; set; }
 
         /// <summary>
-        /// <para>The user metadata of the OSS object.</para>
-        /// <para>This parameter is available only if user metadata is configured for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
+        /// <para>The user-defined metadata of the OSS object.</para>
+        /// <para>This parameter is returned only if user-defined metadata is set for the OSS object. For more information, see <a href="https://help.aliyun.com/document_detail/31859.html">Manage object metadata</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;: &quot;val&quot;}</para>
@@ -543,8 +534,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, object> OSSUserMeta { get; set; }
 
         /// <summary>
-        /// <para>The version of the object.</para>
-        /// <para>This parameter is available only if versioning is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/109695.html">Overview</a>.</para>
+        /// <para>The version ID of the OSS object.</para>
+        /// <para>This parameter is returned only if versioning is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/109695.html">Overview of versioning</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAEQNhiBgMDJgZCA0BYiIDc4MGZjZGI2OTBjOTRmNTE5NmU5NmFhZjhjYmY0****</para>
@@ -574,7 +565,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>The status of the object.</para>
+        /// <para>File index status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Indexed</para>
@@ -584,7 +575,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the object. Set the value to <b>file</b>.</para>
+        /// <para>The type of the object. The value is always <b>file</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>file</para>
@@ -594,8 +585,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>The image rotation angle. You can obtain the value from the exchangeable image file format (EXIF).</para>
-        /// <para>If the EXIF metadata does not contain the image rotation angle, this parameter is not included in the response.</para>
+        /// <para>The rotation value of the image, read from its EXIF data.</para>
+        /// <para>This parameter is returned only if this value is available in the EXIF data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -617,7 +608,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The number of pages.</para>
         /// <remarks>
-        /// <para>Not supported.</para>
+        /// <para>This feature is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -638,7 +629,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Performer { get; set; }
 
         /// <summary>
-        /// <para>The time when the image was taken.</para>
+        /// <para>The time when the photo was taken.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -658,7 +649,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? ProgramCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-project</para>
@@ -668,7 +659,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The reason why the file failed to run the index.</para>
+        /// <para>The reason the file failed to be indexed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[InternalError] The request has been failed due to some unknown error. status: 500, requestId: CC5ACFBD-BB7A-496D-A9D6-****</para>
@@ -678,22 +669,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The elements in the video segment, which are scene elements that you can extract from the video by using an AI model.</para>
+        /// <para>A list of scene elements extracted from the video by the AI model during analysis.</para>
         /// </summary>
         [NameInMap("SceneElements")]
         [Validation(Required=false)]
         public List<SceneElement> SceneElements { get; set; }
 
         /// <summary>
-        /// <para>The reasons for which the current file is included in the search results when you call the SemanticQuery operation for semantic search.</para>
+        /// <para>Indicates why this file was returned when you use the SemanticQuery API to perform a semantic search.</para>
         /// </summary>
         [NameInMap("SemanticTypes")]
         [Validation(Required=false)]
         public List<string> SemanticTypes { get; set; }
 
         /// <summary>
-        /// <para>The encryption method of the object.</para>
-        /// <para>This parameter is available only if server encryption is configured for the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</para>
+        /// <para>The encryption algorithm of the object.</para>
+        /// <para>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SM4</para>
@@ -703,8 +694,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ServerSideDataEncryption { get; set; }
 
         /// <summary>
-        /// <para>The encryption method on the server side.</para>
-        /// <para>This parameter is available only if server encryption is configured for the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</para>
+        /// <para>The server-side encryption method.</para>
+        /// <para>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AES256</para>
@@ -714,7 +705,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ServerSideEncryption { get; set; }
 
         /// <summary>
-        /// <para>The algorithm that is used to encrypt the file on the server side.</para>
+        /// <para>The encryption algorithm used for server-side encryption with customer-provided keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SM4</para>
@@ -724,8 +715,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ServerSideEncryptionCustomerAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>The ID of the customer master key (CMK) managed by Key Management Service (KMS).</para>
-        /// <para>This parameter is available only if server encryption is configured for the OSS bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</para>
+        /// <para>The ID of the customer master key (CMK) that is managed by KMS.</para>
+        /// <para>This parameter is returned only if server-side encryption is enabled for the bucket. For more information, see <a href="https://help.aliyun.com/document_detail/31871.html">Server-side encryption</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9468da86-3509-4f8d-a61e-6eab1eac****</para>
@@ -735,7 +726,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ServerSideEncryptionKeyId { get; set; }
 
         /// <summary>
-        /// <para>The size of the object. Unit: bytes.</para>
+        /// <para>The size of the file, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -745,7 +736,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The time of the first frame. Unit: seconds.</para>
+        /// <para>The start time of the first frame, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.000000</para>
@@ -765,16 +756,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? StreamCount { get; set; }
 
         /// <summary>
-        /// <para>The list of subtitle streams.</para>
+        /// <para>A list of subtitle streams.</para>
         /// </summary>
         [NameInMap("Subtitles")]
         [Validation(Required=false)]
         public List<SubtitleStream> Subtitles { get; set; }
 
         /// <summary>
-        /// <para>The time zone.</para>
+        /// <para>The timezone.</para>
         /// <remarks>
-        /// <para> Not supported.</para>
+        /// <para>This feature is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -797,7 +788,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>A reserved parameter.</para>
         /// <remarks>
-        /// <para>Not supported.</para>
+        /// <para>This feature is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -810,19 +801,19 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TravelClusterId { get; set; }
 
         /// <summary>
-        /// <para>The URI of the file.</para>
-        /// <para>The URI of an OSS object follows the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
-        /// <para>The URI of a file in Photo and Drive Service follows the pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</para>
+        /// <para>The address of the file.</para>
+        /// <para>An OSS URI must be in the <c>oss://${Bucket}/${Object}</c> format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the full path to the object, including the file extension.</para>
+        /// <para>A PDS URI must be in the <c>pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}</c> format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://examplebucket/sampleobject.jpg</para>
+        /// <para>oss://test-bucket/test-object.jpg</para>
         /// </summary>
         [NameInMap("URI")]
         [Validation(Required=false)]
         public string URI { get; set; }
 
         /// <summary>
-        /// <para>The RFC3339Nano timestamp when the metadata was modified.</para>
+        /// <para>The time when the metadata was last updated. The time is in the RFC3339Nano format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -832,7 +823,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The height of the video. Unit: pixels.</para>
+        /// <para>The height of the video, in pixels (px).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1920</para>
@@ -842,14 +833,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? VideoHeight { get; set; }
 
         /// <summary>
-        /// <para>The list of video streams.</para>
+        /// <para>A list of video streams.</para>
         /// </summary>
         [NameInMap("VideoStreams")]
         [Validation(Required=false)]
         public List<VideoStream> VideoStreams { get; set; }
 
         /// <summary>
-        /// <para>The width of the video. Unit: pixels.</para>
+        /// <para>The width of the video, in pixels (px).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1080</para>

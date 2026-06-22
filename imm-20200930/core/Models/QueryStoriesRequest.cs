@@ -77,8 +77,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: in ascending order.</description></item>
-        /// <item><description>desc: in descending order.</description></item>
+        /// <item><description><para>asc: in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>desc: in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,10 +104,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime: sorts by story creation time.</description></item>
-        /// <item><description>StoryName: sorts by story name.</description></item>
-        /// <item><description>StoryStartTime: sorts by story start time.</description></item>
-        /// <item><description>StoryEndTime: sorts by story end time.</description></item>
+        /// <item><description><para>CreateTime: sorts by story creation time.</para>
+        /// </description></item>
+        /// <item><description><para>StoryName: sorts by story name.</para>
+        /// </description></item>
+        /// <item><description><para>StoryStartTime: sorts by story start time.</para>
+        /// </description></item>
+        /// <item><description><para>StoryEndTime: sorts by story end time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,8 +168,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>Specifies whether to return empty stories. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (The default value)</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true (The default value)</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

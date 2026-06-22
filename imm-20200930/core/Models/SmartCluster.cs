@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-14T10:17:18.102700407+08:00</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset.</para>
+        /// <para>The dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyDataset</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The group description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySmartCluster1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The smart cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SmartCluster-12cd1645-deae-4b5e-9434-613747b75f6d</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>The status of the cluster.</para>
+        /// <para>The group status. Valid values are <c>Succeeded</c>, <c>Failed</c>, and <c>Running</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster.</para>
+        /// <para>The group type. The value is always <c>smart-cluster</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>smart-cluster</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyProject</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<SmartClusterRule> Rules { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-14T10:17:18.102700407+08:00</para>

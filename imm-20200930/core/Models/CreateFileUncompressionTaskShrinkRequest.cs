@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateFileUncompressionTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
-        /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>Leave this parameter empty unless you have specific requirements.</b></para>
+        /// <para>The chained authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access other entity resources</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The message notification configuration. For details, click Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// <remarks>
-        /// <para> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</para>
+        /// <para>Intelligent Media Management API callbacks do not support custom webhook addresses. Use MNS instead.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Notification")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The password that protects the package.</para>
+        /// <para>The password for the encrypted compressed package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -38,38 +38,38 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The files to extract. If you do not specify this parameter, the entire package is decompressed.</para>
+        /// <para>The list of files to decompress. If this parameter is empty, the entire compressed package is decompressed. The default value is empty.</para>
         /// </summary>
         [NameInMap("SelectedFiles")]
         [Validation(Required=false)]
         public string SelectedFilesShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the package.</para>
-        /// <para>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
+        /// <para>The Object Storage Service (OSS) address where the compressed file is stored.</para>
+        /// <para>The OSS address must be in the \<c>oss\\://${Bucket}/${Object}\\</c> format. \<c>${Bucket}\\</c> is the name of the OSS bucket in the same region as the current project. \<c>${Object}\\</c> is the full path of the file, including the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://imm-apitest-fxf2/name.zip</para>
+        /// <para>oss://test-bucket/test-object.zip</para>
         /// </summary>
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI to which you want to extract files from the package or decompress the entire package.</para>
-        /// <para>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
+        /// <para>The destination OSS address for the decompressed files. The selected files or the entire compressed package are decompressed to this address.</para>
+        /// <para>The OSS address must be in the \<c>oss\\://${Bucket}/${Object}\\</c> format. \<c>${Bucket}\\</c> is the name of the OSS bucket in the same region as the current project. \<c>${Object}\\</c> is the full path of the file, including the file name extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket/test-dir/</para>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetURI { get; set; }
 
         /// <summary>
-        /// <para>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</para>
+        /// <para>Custom user information. It is returned in the asynchronous notification message to help you associate the notification with your system. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>
+        /// <para>test-data</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateFacesSearchingTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The number of the most similar faces that you want to return. Valid values: 1 to 100. Default value: 5.</para>
+        /// <para>The number of most similar faces to return. Valid values: 0 to 100. Default value: 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxResult { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The notification configuration. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The images.</para>
+        /// <para>A list of images.</para>
         /// </summary>
         [NameInMap("Sources")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public class CreateFacesSearchingTaskRequestSources : TeaModel {
             /// <summary>
             /// <para>The OSS URI of the image.</para>
-            /// <para>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
+            /// <para>The OSS URI must follow the format oss\://${Bucket}/${Object}. <c>${Bucket}</c> is the name of the OSS bucket in the same region as the current project. <c>${Object}</c> is the full path of the file, including the file name extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://test-bucket/test-object</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</para>
+        /// <para>Custom user information. This information is returned in the asynchronous notification message to help you associate the message with your system. The maximum length is 2048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></para>

@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>Specifies whether to enable real-time retrieval of file statistics. Default value: false.</para>
         /// <list type="bullet">
-        /// <item><description>If you set the value to true, FileCount and TotalFileSize in the response return true and valid values.</description></item>
-        /// <item><description>If you set the value to false, FileCount and TotalFileSize in the response return invalid values or 0.</description></item>
+        /// <item><description><para>If you set the value to true, FileCount and TotalFileSize in the response return true and valid values.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the value to false, FileCount and TotalFileSize in the response return invalid values or 0.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

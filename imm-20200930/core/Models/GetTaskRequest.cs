@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return original request parameters specified to create the task.</para>
+        /// <para>Specifies whether to return the original request parameters used to create the task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false (default)</description></item>
         /// </list>
-        /// <para>This parameter applies only to the following tasks:</para>
+        /// <para>This parameter takes effect only for the following task types:</para>
         /// <list type="bullet">
         /// <item><description>MediaConvert</description></item>
         /// <item><description>VideoLabelClassification</description></item>
@@ -39,33 +39,33 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <item><description>StoryCreation</description></item>
         /// <item><description>LocationDateClustering</description></item>
         /// <item><description>ImageSplicing</description></item>
-        /// <item><description>FacesSearching</description></item>
+        /// <item><description>FacesSearching.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("RequestDefinition")]
         [Validation(Required=false)]
         public bool? RequestDefinition { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task. You can obtain the ID of a task after you create the task.</para>
+        /// <para>The ID of the task that you want to query. This value is returned when you create the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c2b277b9-0d30-4882-ad6d-ad661382****</para>
+        /// <para>FileCompression-2f157087-91df-4fda-8c3e-232407ec*****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. For information about valid values, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task types</a>.</para>
+        /// <para>The type of the task. For valid values, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task type list</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VideoLabelClassification</para>
+        /// <para>FileCompression</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]

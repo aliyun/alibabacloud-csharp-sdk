@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class ContextualMessage : TeaModel {
         /// <summary>
         /// <para>The message content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>你好</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The full Optical Character Recognition (OCR) text, which is spliced by using the content of OCRContents.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Intelligent Media Management.</para>
         /// </summary>
         [NameInMap("OCRTexts")]
         [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The compression level. Valid values: 0 to 10. A greater value specifies a higher compression ratio and ensures better detail effects.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("CompressionLevel")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The number of bits for quantization. Valid values: 0 to 31. A greater value ensures that more details are retained. A value of 0 specifies that vertex compression is not performed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("QuantizationBits")]
         [Validation(Required=false)]

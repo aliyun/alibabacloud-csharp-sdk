@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListBindingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bindings between the dataset and OSS buckets.</para>
+        /// <para>The list of binding information between datasets and OSS buckets.</para>
         /// </summary>
         [NameInMap("Bindings")]
         [Validation(Required=false)]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</description></item>
-        /// <item><description>The next request returns remaining results starting from the position marked by the NextToken parameter value.</description></item>
-        /// <item><description>This parameter has a non-empty value only when not all bindings are returned.</description></item>
+        /// <item><description>The pagination token that is used when the total number of bindings exceeds the MaxResults value.</description></item>
+        /// <item><description>Use this value as the NextToken in the next request to return the remaining results.</description></item>
+        /// <item><description>This parameter has a value only when not all bindings are returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

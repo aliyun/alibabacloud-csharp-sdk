@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>ASC</para>
+        /// <para>asc</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]

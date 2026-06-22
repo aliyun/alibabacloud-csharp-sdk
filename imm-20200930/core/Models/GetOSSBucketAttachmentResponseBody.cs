@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetOSSBucketAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the dataset was created.</para>
+        /// <para>The time when the dataset was created. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;2023-12-19T17:29:34.790931971+08:00&quot;</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the dataset.</para>
+        /// <para>The dataset description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;Dataset&quot;</para>
+        /// <para>&quot;数据集&quot;</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The name of the bound project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the dataset was last updated.</para>
+        /// <para>The time when the dataset was last updated. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;2023-12-19T17:29:34.790931971+08:00&quot;</para>

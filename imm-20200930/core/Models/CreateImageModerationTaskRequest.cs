@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateImageModerationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para>The chained authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
         /// <summary>
-        /// <para>The time interval between two consecutive frames in a GIF or long image. Default value: 1.</para>
+        /// <para>The frame capture frequency. This parameter is used for GIF and long image detection. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Interval { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of frames that can be captured in a GIF or long image. Default value: 1.</para>
+        /// <para>The maximum number of frames to capture. This parameter is used for GIF and long image detection. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,33 +37,33 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxFrames { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The notification configuration. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The scenarios in which you want to apply the image moderation task.</para>
+        /// <para>The image detection scenarios.</para>
         /// </summary>
         [NameInMap("Scenes")]
         [Validation(Required=false)]
         public List<string> Scenes { get; set; }
 
         /// <summary>
-        /// <para>The URI of the Object Storage Service (OSS) bucket in which you store the image.</para>
-        /// <para>Specify the value in the <c>oss://&lt;Bucket&gt;/&lt;Object&gt;</c> format. <c>&lt;Bucket&gt;</c> specifies the name of the OSS bucket that resides in the same region as the current project. <c>&lt;Object&gt;</c> specifies the complete path to the image file that has an extension.</para>
+        /// <para>The OSS URI of the image.</para>
+        /// <para>The URI must follow the <c>oss://&lt;Bucket&gt;/&lt;Object&gt;</c> format. <c>&lt;Bucket&gt;</c> is the name of the OSS bucket that is in the same region as the project. <c>&lt;Object&gt;</c> is the full path of the file, including the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,20 +74,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The custom tags. You can search for or filter asynchronous tasks by custom tag.</para>
+        /// <para>The custom tags. You can use tags to search for and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;test&quot;: &quot;val1&quot;}</para>
+        /// <para>{
+        ///       &quot;User&quot;: &quot;Jane&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// <para>The user data, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the user data is 2,048 bytes.</para>
+        /// <para>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your system. The value can be up to 2,048 bytes long.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>
+        /// <para>test-data</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateArchiveFileInspectionTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
-        /// <para>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>Leave this parameter empty if you do not have special requirements.</b></para>
+        /// <para>The configuration for chained authorization. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// <remarks>
-        /// <para> The IMM operation does not support a callback URL. We recommend that you use Simple Message Queue (SMQ) to receive notifications.</para>
+        /// <para>Currently, API callbacks in IMM do not support custom webhook addresses. Use MNS instead.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Notification")]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The password that protects the package. If the package is password-protected, you must provide the password to view the contents of the package.</para>
+        /// <para>The password of the compressed file. If the file is encrypted, provide the password to inspect its contents.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -38,32 +38,32 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The URI of the package.</para>
-        /// <para>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
+        /// <para>The location of the compressed file.</para>
+        /// <para>The Object Storage Service (OSS) URI must be in the oss\://${Bucket}/${Object} format. In this format, <c>${Bucket}</c> is the name of the OSS bucket that is in the same region as the current project, and <c>${Object}</c> is the full path of the file, including the file name extension.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://imm-apitest-fxf2/name.zip</para>
+        /// <para>oss://bucket/test-object.zip</para>
         /// </summary>
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</para>
+        /// <para>Custom information that is returned in the asynchronous notification message. You can use this information to associate the notification message with your services. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>
+        /// <para>test-data</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

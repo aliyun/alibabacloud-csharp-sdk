@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The element type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>title; image; table; narrative-text</para>
+        /// <para>title - 标题； image - 图片 ； table - 表格 ； narrative-text - 正文</para>
         /// </summary>
         [NameInMap("ElementType")]
         [Validation(Required=false)]

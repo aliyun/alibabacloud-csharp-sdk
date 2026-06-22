@@ -21,7 +21,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The custom labels. You can specify labels to help you identify and retrieve the story.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</para>
+        /// <para>{
+        ///       &quot;MyStoryLabel&quot;: &quot;HolidayStory&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("CustomLabels")]
         [Validation(Required=false)]

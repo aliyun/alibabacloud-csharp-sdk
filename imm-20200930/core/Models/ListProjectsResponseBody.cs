@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListProjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The credential for querying subsequent pages when the total number of expected projects exceeds the specified MaxResults value. This parameter has a value only when not all projects are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg6aW1tdGVzdDAx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The projects.</para>
+        /// <para>The array of projects. Returns information about the projects.</para>
         /// </summary>
         [NameInMap("Projects")]
         [Validation(Required=false)]

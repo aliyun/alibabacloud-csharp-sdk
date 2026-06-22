@@ -20,7 +20,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>{
+        ///   &quot;Statement&quot;: [
+        ///     {
+        ///       &quot;Action&quot;: &quot;oss:<em>&quot;,
+        ///       &quot;Effect&quot;: &quot;Allow&quot;,
+        ///       &quot;Resource&quot;: &quot;</em>&quot;
+        ///     }
+        ///   ],
+        ///   &quot;Version&quot;: &quot;1&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]

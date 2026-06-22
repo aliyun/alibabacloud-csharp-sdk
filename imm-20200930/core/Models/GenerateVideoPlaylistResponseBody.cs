@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GenerateVideoPlaylistResponseBody : TeaModel {
         /// <summary>
-        /// <para>The audio media playlist files.</para>
+        /// <para>The list of audio Media Playlist files.</para>
         /// </summary>
         [NameInMap("AudioPlaylist")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public int? Channels { get; set; }
 
             /// <summary>
-            /// <para>The token of the audio media playlist. You can use this parameter to generate the path of a TS file.</para>
+            /// <para>The token generated for the audio Media Playlist. You can use this parameter to construct the URI of the generated TS file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>affe0c6042f09722fec95a21b8b******</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>The OSS path of the audio media playlist.</para>
+            /// <para>The OSS URI of the audio Media Playlist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://imm-test/testcases/video.m3u8</para>
+            /// <para>oss://test-bucket/test-object/output-audio.m3u8</para>
             /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The total duration of the generated video.</para>
+        /// <para>The total duration of the output video.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1082</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? Duration { get; set; }
 
         /// <summary>
-        /// <para>The OSS path of the master playlist.</para>
+        /// <para>The OSS URI of the Master Playlist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket/test-object/master.m3u8</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The subtitle media playlist files.</para>
+        /// <para>The list of subtitle Media Playlist files.</para>
         /// </summary>
         [NameInMap("SubtitlePlaylist")]
         [Validation(Required=false)]
         public List<GenerateVideoPlaylistResponseBodySubtitlePlaylist> SubtitlePlaylist { get; set; }
         public class GenerateVideoPlaylistResponseBodySubtitlePlaylist : TeaModel {
             /// <summary>
-            /// <para>The serial number of the subtitle stream. The value starts from 0.</para>
+            /// <para>The sequence number of the subtitle stream, starting from 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -98,20 +98,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <summary>
             /// <para>The language of the subtitle stream.</para>
             /// <remarks>
-            /// <para> The language is derived from the subtitle stream information in the OSS path specified by the SourceURI parameter for a source video. If no language information exists in the source video, null is returned.</para>
+            /// <para>The language is obtained from the subtitle stream information of the source video specified by SourceURI. If the source video does not contain language information, this parameter is empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>en</para>
+            /// <para>eng</para>
             /// </summary>
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The token of the subtitle media playlist. You can use this parameter to generate the path of a subtitle file.</para>
+            /// <para>The token generated for the subtitle Media Playlist. You can use this parameter to construct the URI of the generated subtitle file.</para>
             /// <remarks>
-            /// <para> You can generate the path of a transcoded subtitle file based on the returned token value. The path must be in the oss://${Bucket}/${Object}-${Token}_${Index}.ts format. oss://${Bucket}/${Object} specifies the URI specified by input parameters for output files. ${Token} specifies the returned token value, and ${Index} specifies the serial number of a subtitle file.</para>
+            /// <para>You can use the returned token value to construct the URI of the transcoded subtitle file. The format is oss\://${Bucket}/${Object}-${Token}_${Index}.ts. oss\://${Bucket}/${Object} is the subtitle URI specified in the request parameters. ${Token} is the returned parameter. ${Index} is the sequence number of the subtitle.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -122,10 +122,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>The OSS path of the subtitle media playlist.</para>
+            /// <para>The OSS URI of the subtitle Media Playlist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://imm-test/testcases/vide_0.m3u8</para>
+            /// <para>oss://test-bucket/test-object/output-subtitle.m3u8</para>
             /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The token of the master playlist.</para>
+        /// <para>The token of the Master Playlist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>92376fbb-171f-4259-913f-705f7ee0****</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>The video media playlist files.</para>
+        /// <para>The list of video Media Playlist files.</para>
         /// </summary>
         [NameInMap("VideoPlaylist")]
         [Validation(Required=false)]
@@ -171,9 +171,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Resolution { get; set; }
 
             /// <summary>
-            /// <para>The token of the video media playlist. You can use this parameter to generate the path of a TS file.</para>
+            /// <para>The token generated for the video Media Playlist. You can use this parameter to construct the URI of the generated TS file.</para>
             /// <remarks>
-            /// <para> You can generate the path of a transcoded TS file based on the value of this parameter. The path must be in the oss://${Bucket}/${Object}-${Token}-${Index}.ts format. oss://${Bucket}/${Object} specifies the URI specified by input parameters for output files. ${Token} specifies the returned token, and ${Index} specifies the serial number of a TS file.</para>
+            /// <para>You can use the returned token value to construct the URI of the transcoded TS file. The format is oss\://${Bucket}/${Object}-${Token}-${Index}.ts. oss\://${Bucket}/${Object} is the target URI specified in the request parameters. ${Token} is the returned parameter. ${Index} is the sequence number of the TS file.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -184,10 +184,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>The OSS path of the video media playlist.</para>
+            /// <para>The OSS URI of the video Media Playlist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://imm-test/testcases/video.m3u8</para>
+            /// <para>oss://test-bucket/test-object/output-video.m3u8</para>
             /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]

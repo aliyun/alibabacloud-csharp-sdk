@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class UpdateDatasetRequest : TeaModel {
+        /// <summary>
+        /// <para>The dataset configuration.</para>
+        /// </summary>
         [NameInMap("DatasetConfig")]
         [Validation(Required=false)]
         public DatasetConfig DatasetConfig { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of bindings per dataset. The value range is from 1 to 10.</para>
+        /// <para>The maximum number of bindings for the dataset. Valid values: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -24,9 +27,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxBindCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata entities (including data files, file relationships, clustering groups, etc.) per dataset, with a maximum value of 2^63-1.</para>
+        /// <para>The maximum number of metadata entities, such as data files, file relationships, and cluster groups, in the dataset. The maximum value is 2^63 - 1.</para>
         /// <remarks>
-        /// <para>Reserved parameter, no actual restriction in use.</para>
+        /// <para>This parameter is reserved and not enforced in practice.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxEntityCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files per dataset. The value range is from 1 to 100000000.</para>
+        /// <para>The maximum number of files in the dataset. Valid values: 1 to 100000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000</para>
@@ -47,9 +50,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata relationships per dataset, with a maximum value of 2^63-1.</para>
+        /// <para>The maximum number of metadata relationships in the dataset. The maximum value is 2^63 - 1.</para>
         /// <remarks>
-        /// <para>Reserved parameter, no actual restriction in use.</para>
+        /// <para>This parameter is reserved and not enforced in practice.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxRelationCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum total size of files in each dataset. Once the limit is exceeded, no more indexes can be added. The maximum value is 2^63-1, measured in bytes.</para>
+        /// <para>The maximum total size of all files in the dataset, in bytes. If this limit is exceeded, you can no longer add new index entries. The maximum value is 2^63 - 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90000000000000000</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxTotalFileSize { get; set; }
 
         /// <summary>
-        /// <para>Dataset name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478160.html">Create Dataset</a>.</para>
+        /// <para>The dataset name. For information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>Description of the dataset.</para>
+        /// <para>The dataset description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Project name, for how to obtain it, please refer to <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>Workflow template ID. For more information, please refer to <a href="https://help.aliyun.com/document_detail/466304.html">Workflow Templates and Operators</a>.</para>
+        /// <para>The workflow template ID. For more information, see <a href="https://help.aliyun.com/document_detail/466304.html">Workflow templates and operators</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Official:ImageManagement</para>
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>Invalid parameter.</para>
+        /// <para>This parameter is invalid.</para>
         /// </summary>
         [NameInMap("WorkflowParameters")]
         [Validation(Required=false)]

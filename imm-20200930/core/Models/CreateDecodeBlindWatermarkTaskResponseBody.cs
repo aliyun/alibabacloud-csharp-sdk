@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4A7A2D0E-D8B8-4DA0-8127-EB32C6600ADE</para>

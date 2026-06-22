@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GenerateWebofficeTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>Weboffice access token.</para>
+        /// <para>The Weboffice access credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2d73dd5d87524c5e8a194c3eb5********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// <para>Expiration time of the access token. The expiration time is 30 minutes.</para>
+        /// <para>The expiration time of the access credential. The credential expires in 30 minutes. Format: YYYY-MM-DDTHH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-30T13:13:11.347146982Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AccessTokenExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Weboffice refresh token.</para>
+        /// <para>The Weboffice refresh credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e374995ec532432bb678074d36********</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RefreshToken { get; set; }
 
         /// <summary>
-        /// <para>Expiration time of the refresh token. The expiration time is 1 day.</para>
+        /// <para>The expiration time of the refresh credential. The credential expires in 1 day. Format: YYYY-MM-DDTHH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-31T12:43:11.347146982Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RefreshTokenExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1759315A-CB33-0A75-A72B-62D7********</para>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Weboffice entry URL. Used for online preview or editing of documents.</para>
+        /// <para>The Weboffice entry URL for previewing or editing documents online.</para>
         /// <remarks>
-        /// <para>Cannot be opened directly in a browser; it needs to be used with the Weboffice JS-SDK and access token (AccessToken) to preview or edit documents. For more information, see <a href="https://help.aliyun.com/document_detail/468066.html">Getting Started</a>.</para>
+        /// <para>This URL cannot be opened directly in a browser. You must use it together with the Weboffice JS-SDK and the access credential (AccessToken) to preview or edit documents. For more information, see <a href="https://help.aliyun.com/document_detail/468066.html">Getting Started</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

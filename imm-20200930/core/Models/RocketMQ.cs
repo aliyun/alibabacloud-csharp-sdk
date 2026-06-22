@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class RocketMQ : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for RocketMQ instance. If you want to use ApsaraMQ for RocketMQ for notifications, you must specify this parameter.</para>
+        /// <para>The RocketMQ instance ID. Required for RocketMQ message notifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MQ_INST_11111111111_BYcNy2Nc</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the topic in ApsaraMQ for RocketMQ. If you want to use ApsaraMQ for RocketMQ for notifications, you must specify this parameter.</para>
+        /// <para>The name of the RocketMQ topic. Required for RocketMQ message notifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic1</para>

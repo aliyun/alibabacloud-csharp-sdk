@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<string> BaseURIs { get; set; }
 
         /// <summary>
-        /// <para>Keywords</para>
+        /// <para>An array of keywords for clustering.</para>
         /// </summary>
         [NameInMap("Keywords")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>Sensitivity</para>
+        /// <para>The sensitivity for clustering, ranging from 0.0 to 1.0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.5</para>

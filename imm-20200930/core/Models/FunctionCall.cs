@@ -11,6 +11,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class FunctionCall : TeaModel {
         /// <summary>
         /// <para>The parameters detected by the large language model.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///                     &quot;type&quot;: &quot;object&quot;,
+        ///                         &quot;name&quot;: {
+        ///                             &quot;type&quot;: &quot;string&quot;, 
+        ///                             &quot;description&quot;: &quot;需要检索的文件的文件名。可以为空 null&quot;
+        ///                         }, 
+        ///                     &quot;required&quot;: [
+        ///                         &quot;category&quot;
+        ///                     ]
+        /// }</para>
         /// </summary>
         [NameInMap("Arguments")]
         [Validation(Required=false)]

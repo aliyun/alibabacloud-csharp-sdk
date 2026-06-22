@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The answer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello</para>
+        /// <para>你好</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

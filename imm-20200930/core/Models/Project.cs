@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Project : TeaModel {
         /// <summary>
-        /// <para>The timestamp when the project was created. The timestamp is in the RFC3339Nano format.</para>
+        /// <para>The timestamp when the project was created, in RFC3339Nano format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-29T14:50:13.011643661+08:00</para>
@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
+
+        [NameInMap("DatasetConfig")]
+        [Validation(Required=false)]
+        public DatasetConfig DatasetConfig { get; set; }
 
         /// <summary>
         /// <para>The current number of datasets in the project.</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of bindings that a dataset can have. Valid values: 1 to 10. Default value: 10.</para>
+        /// <para>The maximum number of bindings per dataset. Valid values: 1 to 10. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,9 +44,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxBindCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata entities in a dataset. Default value: 10000000000.</para>
+        /// <para>The maximum number of metadata entities per dataset. Default value: 10000000000.</para>
         /// <remarks>
-        /// <para> This parameter is reserved and does not actually apply a limit.</para>
+        /// <para>This field is reserved for future use and is not enforced.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxEntityCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files in a dataset. Valid values: 1 to 100000000. Default value: 100000000.</para>
+        /// <para>The maximum number of files per dataset. Valid values: 1 to 100000000. Default value: 100000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000000</para>
@@ -63,9 +67,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of metadata relationships in a dataset. Default value: 100000000000.</para>
+        /// <para>The maximum number of metadata relationships per dataset. Default value: 100000000000.</para>
         /// <remarks>
-        /// <para> This parameter is reserved and does not actually apply a limit.</para>
+        /// <para>This field is reserved for future use and is not enforced.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? DatasetMaxRelationCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum total file size for a dataset. If the total file size exceeds this limit, indexes can no longer be added. Default value: 90000000000000000. Unit: bytes.</para>
+        /// <para>The maximum total file size per dataset, in bytes. After this limit is exceeded, no more indexes can be added. Default value: 90000000000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90000000000000000</para>
@@ -87,16 +91,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The project description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test project</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of tasks that the project can process per second. This corresponds to the maximum number of operators that can run in parallel in the project. Default value: 100.</para>
+        /// <para>The maximum number of tasks that the project can process per second. This specifies the maximum number of operators that can run in parallel at the same time across the project. Default value: 100.</para>
         /// <list type="bullet">
-        /// <item><description>If the number of synchronous tasks that run in parallel exceeds this limit, the task execution time will be extended until a timeout occurs.</description></item>
-        /// <item><description>If the number of asynchronous tasks that run in parallel exceeds this limit, the tasks will be queued. This causes delayed task completion. If a task remains in the queue for longer than the specified time limit (usually dozens of seconds), the task will fail.</description></item>
+        /// <item><description><para>Synchronous tasks: if the number of concurrent tasks exceeds this limit, task execution time increases until a timeout occurs.</para>
+        /// </description></item>
+        /// <item><description><para>Asynchronous tasks: if the number of concurrent tasks exceeds this limit, tasks are queued for a period of time, which delays task completion. If the queuing time also exceeds the limit (typically tens of minutes), the task returns a failure.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +126,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? FileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of datasets that a project can contain. Valid values: 1 to 1000000000. Default value: 1000000000.</para>
+        /// <para>The maximum number of datasets in the project. Valid values: 1 to 1000000000. Default value: 1000000000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000000</para>
@@ -127,7 +136,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? ProjectMaxDatasetCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -137,7 +146,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of requests that can be processed by the project per second. This corresponds to the maximum number of API operations that can be called in the project per second. Default value: 100.</para>
+        /// <para>The maximum number of requests that the project can process per second. This specifies the maximum number of API calls allowed per second for all APIs in the project. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -157,14 +166,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ServiceRole { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ProjectTags> Tags { get; set; }
         public class ProjectTags : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>标签键。</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -174,7 +183,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>标签值。</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -186,17 +195,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the workflow template.</para>
+        /// <para>The workflow template ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DefaultId</para>
+        /// <para>Official:ImageManagement</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The current total size of files in the project. Unit: bytes.</para>
+        /// <para>The current total file size in the project, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000</para>
@@ -206,9 +215,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? TotalFileSize { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the project was last modified. The timestamp is in the RFC3339Nano format.</para>
+        /// <para>The timestamp when the project was last modified, in RFC3339Nano format.</para>
         /// <remarks>
-        /// <para> If a project is not modified after it is created, the timestamp when the project was created is the same as the timestamp when the project was last modified.</para>
+        /// <para>If the project has not been updated since creation, this timestamp is the same as the creation timestamp.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

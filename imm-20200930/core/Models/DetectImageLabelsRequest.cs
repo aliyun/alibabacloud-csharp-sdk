@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immimagetest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The URI of the Object Storage Service (OSS) bucket in which you store the image.</para>
-        /// <para>Specify the value in the oss://${Bucket}/${Object} format. <c>${Bucket}</c> specifies the name of the OSS bucket that resides in the same region as the current project. <c>${Object}</c> specifies the complete path to the image file that has an extension.</para>
+        /// <para>Specify the value in the oss\://${Bucket}/${Object} format. <c>${Bucket}</c> specifies the name of the OSS bucket that resides in the same region as the current project. <c>${Object}</c> specifies the complete path to the image file that has an extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://imm-test/testcases/facetest.jpg</para>
+        /// <para>oss://test-bucket/test-object.jpg</para>
         /// </summary>
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The threshold of the label confidence. Labels whose confidence is lower than the specified threshold are not returned in the response. Valid values: 0 to 1. If you leave this parameter empty, the algorithm provides a default threshold.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0.7</para>
         /// </summary>
         [NameInMap("Threshold")]
         [Validation(Required=false)]

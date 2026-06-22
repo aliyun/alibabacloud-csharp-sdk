@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class BatchIndexFileMetaShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The dataset name. For more information about how to obtain the dataset name, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The objects in Object Storage Service (OSS). Specify OSS objects by using a JSON array. You can specify up to 100 objects in an array.</para>
+        /// <para>A list of OSS files. This is an array in JSON format that can contain up to 100 files.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Files")]
@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string FilesShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see the metadata indexing section in <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message formats</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The user-defined data that you want to return in asynchronous messages. This parameter takes effect only when you specify the MNS settings in the Notification parameter. The maximum information length is 2,048 bytes.</para>
+        /// <para>Custom user data. This parameter takes effect only when you specify an MNS configuration for the Notification parameter. The data is returned in the asynchronous notification message, which you can use to associate the message with your services. The maximum length is 2048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

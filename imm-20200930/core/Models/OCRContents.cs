@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>欢迎使用智能媒体管理</para>
         /// </summary>
         [NameInMap("Contents")]
         [Validation(Required=false)]

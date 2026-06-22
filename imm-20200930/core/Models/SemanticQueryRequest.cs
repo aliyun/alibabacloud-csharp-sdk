@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immDatatest</para>
+        /// <para>test-dataset</para>
         /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The maximum number of entries to return. Valid values: 1 to 1000.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>This parameter is no longer available.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpwZw==</para>
+        /// <para>Reserved. Not supported yet.</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>Either this parameter or the Query parameter must be specified. This parameter is valid only for image searches on datasets configured with a search-by-image workflow.</para>
         /// </remarks>
         /// <para>URI of the source data for retrieval.
-        /// The URI must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</para>
+        /// The URI must be in the oss\://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</para>
         /// <para>Contact us if you need to configure a workflow template.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> Either this parameter or the SourceURI parameter must be specified.</para>
+        /// <para>Either this parameter or the SourceURI parameter must be specified.</para>
         /// </remarks>
         /// <para>The content of the query that you input.</para>
         /// </summary>

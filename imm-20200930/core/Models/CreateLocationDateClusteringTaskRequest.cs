@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateLocationDateClusteringTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The dataset name. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The date configurations for clustering.</para>
+        /// <para>The date clustering settings.</para>
         /// <remarks>
-        /// <para> Adjusting these configurations affects existing spatiotemporal clusters for the dataset.</para>
+        /// <para>Notice: Modifying this setting also affects existing spatio-temporal clusters in your <c>Dataset</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public CreateLocationDateClusteringTaskRequestDateOptions DateOptions { get; set; }
         public class CreateLocationDateClusteringTaskRequestDateOptions : TeaModel {
             /// <summary>
-            /// <para>The maximum number of days allowed in a gap for a single spatiotemporal cluster. Valid values: 0 to 99999.</para>
-            /// <para>For example, if travel photos were produced on March 4, 5, and 7, 2024, but not on Marh 6, 2024, and you set the parameter to 1, IMM considers the travel spanning the date range from March 4, 2024 to March 7, 2024 and includes photos within the data range in the same cluster.````</para>
-            /// <para>We recommend that you set the parameter to a value within the range from 0 to 3.</para>
+            /// <para>The maximum number of gap days allowed in a single spatio-temporal group. The value must be in the range of 0 to 99,999.</para>
+            /// <para>For example, a user has photos from March 4–5 and March 7, but not from March 6. If you assume that the photos from March 4–7 belong to the same trip, set this parameter to <c>1 day</c>. This allows the gap of <c>1 day</c> on March 6 to be included in the same spatio-temporal cluster.</para>
+            /// <para>Set this parameter to a value from 0 to 3.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public long? GapDays { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of days that a single spatiotemporal cluster can span. Valid values: 1 to 99999. IMM does not create a cluster that spans more than the maximum number of days.</para>
-            /// <para>For example, if you want to create travel photo clusters, you may want to exclude photos that were taken within 15 consecutive days in the same city, because it is likely that these photos were not taken during a travel. In this case, you can set the parameter to 15 to exclude this time range and location from the clustering task.</para>
+            /// <para>The maximum number of days in a single spatio-temporal group. The value must be in the range of 1 to 99,999. Clusters with more days than this value are not detected or stored.</para>
+            /// <para>For example, if a user takes photos in the same location for more than 15 consecutive days, this location might be their residence rather than a travel destination. If you want to exclude this time period and location from the spatio-temporal clusters, set this parameter to 15.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public long? MaxDays { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of days that a single spatiotemporal cluster can span. Valid values: 1 to 99999. IMM does not create a cluster that spans less than the minimum number of days.</para>
-            /// <para>For example, if you do not want a one-day tour cluster, you can set the parameter to 2.</para>
+            /// <para>The minimum number of days in a single spatio-temporal group. The value must be in the range of 1 to 99,999. Clusters with fewer days than this value are not detected or stored.</para>
+            /// <para>For example, if you do not want to include one-day trips in the generated groups, set this parameter to 2.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -71,9 +71,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The geolocation configurations for clustering.</para>
+        /// <para>The location clustering settings.</para>
         /// <remarks>
-        /// <para> Adjusting these configurations affects existing spatiotemporal clusters for the dataset.</para>
+        /// <para>Notice: Modifying this setting also affects existing spatio-temporal clusters in your <c>Dataset</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -82,12 +82,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public CreateLocationDateClusteringTaskRequestLocationOptions LocationOptions { get; set; }
         public class CreateLocationDateClusteringTaskRequestLocationOptions : TeaModel {
             /// <summary>
-            /// <para>The administrative division levels. You can specify multiple administrative division levels.</para>
-            /// <para>For example, you uploaded photos that were taken from March 3, 2024 to March 5, 2024 in Hangzhou and photos that were taken from March 6, 2024 to March 8, 2024 in Jiaxing. When you call the operation and set the parameter to <c>[&quot;city&quot;, &quot;province&quot;]</c>, the following spatiotemporal clusters are created from these photos:</para>
+            /// <para>A list of administrative levels for grouping. You can select multiple levels.</para>
+            /// <para>For example, a user uploads photos taken in Hangzhou from March 3 to March 5 and photos taken in Jiaxing from March 6 to March 8. If you set this parameter to <c>[&quot;city&quot;, &quot;province&quot;]</c>, the following spatio-temporal clusters are generated:</para>
             /// <list type="bullet">
-            /// <item><description>March 3, 2024 to March 5, 2024, Hangzhou</description></item>
-            /// <item><description>March 6, 2024 to March 8, 2024, Jiaxing</description></item>
-            /// <item><description>March 3, 2024 to March 8, 2024, Zhejiang</description></item>
+            /// <item><description><para>March 3 to March 5, Hangzhou</para>
+            /// </description></item>
+            /// <item><description><para>March 6 to March 8, Jiaxing</para>
+            /// </description></item>
+            /// <item><description><para>March 3 to March 8, Zhejiang</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -98,14 +101,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The message notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +119,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The custom tags. You can search for or filter asynchronous tasks by custom tag.</para>
+        /// <para>Custom tags used to search for and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -128,7 +131,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// <para>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</para>
+        /// <para>Custom information that is returned in the asynchronous notification message. This helps you associate the notification message with your system. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-data</para>

@@ -66,6 +66,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The name of the cluster. The name can be used to search for the cluster. The value can be up to 1,024 bytes in size.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>One-day trip in Hangzhou</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

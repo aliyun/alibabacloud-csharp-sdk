@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source group. You must specify either From or Froms, but not both.</para>
+        /// <para>The ID of the source clustering group. You must specify a value for either \<c>From\\</c> or \<c>Froms\\</c>. You cannot specify values for both parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Cluster-2ab85905-23ba-4632-b2d8-1c21cfe****</para>
@@ -31,21 +31,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The IDs of source clustering groups. You must specify either From or Froms, but not both. You can specify up to 100 task IDs.</para>
+        /// <para>A list of the IDs of the source clustering groups. You must specify a value for either \<c>From\\</c> or \<c>Froms\\</c>. You cannot specify values for both parameters. The list can contain up to 100 IDs.</para>
         /// </summary>
         [NameInMap("Froms")]
         [Validation(Required=false)]
         public List<string> Froms { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The configuration of the notification message. For more information, click Notification. For more information about the format of an asynchronous notification message, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification messages</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a>.</para>
+        /// <para>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The custom tags, which can be used to search for and filter asynchronous tasks.</para>
+        /// <para>The custom tags. You can use custom tags to search for and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;val&quot;}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string To { get; set; }
 
         /// <summary>
-        /// <para>The custom data, which is returned in an asynchronous notification and facilitates notification management. The maximum length is 2,048 bytes.</para>
+        /// <para>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your system. The value can be up to 2,048 bytes in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>

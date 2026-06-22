@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateDecodeBlindWatermarkTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The quality of the output image. This parameter is also available in the earlier DecodeBlindWatermark operation.</para>
-        /// <para>Higher image quality indicates a larger image size and higher watermark resolution quality.</para>
+        /// <para>A parameter from the earlier DecodeBlindWatermark API. It specifies the quality of the output image. The default value is 90. The value must be in the range of 70 to 100.</para>
+        /// <para>A higher quality results in a larger image size and better watermark parsing quality.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public int? ImageQuality { get; set; }
 
         /// <summary>
-        /// <para>The watermark algorithm model. This parameter is also available in the earlier DecodeBlindWatermark operation. Valid values: FFT, FFT_FULL, DWT, and DWT_IBG. Default value: FFT.</para>
-        /// <para>If this parameter is left empty, the CreateDecodeBlindWatermarkTask operation is called. Otherwise, the earlier DecodeBlindWatermark operation is called.</para>
+        /// <para>A parameter from the earlier DecodeBlindWatermark API. It specifies the watermark algorithm model. Valid values include FFT, FFT_FULL, DWT, and DWT_IBG. The default value is FFT.</para>
+        /// <para>If this parameter is left empty, the new version of the blind watermarking feature is used. Otherwise, the earlier version is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFT</para>
@@ -32,16 +32,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The notification configuration. For more information, click Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the image before the blind watermark is added. This parameter is also available in the earlier DecodeBlindWatermark operation.</para>
-        /// <para>Do not specify this parameter when you set the Model parameter to DWT or DWT_IBG.</para>
-        /// <para>Specify the OSS URI in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format, where <c>&lt;bucket&gt;</c> is the name of the bucket in the same region as the current project and <c>&lt;object&gt;</c> is the path of the object with the extension included.</para>
+        /// <para>A parameter from the earlier DecodeBlindWatermark API. It specifies the OSS URI of the image before the blind watermark was added.</para>
+        /// <para>This parameter is not required when Model is set to DWT or DWT_IBG.</para>
+        /// <para>The OSS URI must be in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format. <c>&lt;bucket&gt;</c> is the name of the OSS bucket that is in the same region as the current project. <c>&lt;object&gt;</c> is the full path of the file, including the file name extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://imm-test/testcases/watermarktestbefore.jpg</para>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OriginalImageURI { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <remarks>
-        /// <para> The project specified in the request must match the one in the EncodeBlindWatermark request to encode the blind watermark.</para>
+        /// <para>Notice: The project name must be the same as the one used to add the blind watermark with the <a href="https://help.aliyun.com/document_detail/2743655.html">EncodeBlindWatermark</a> operation. Otherwise, the watermark cannot be extracted.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,8 +65,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the image.</para>
-        /// <para>Specify the OSS URI in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format, where <c>&lt;bucket&gt;</c> is the name of the bucket in the same region as the current project and <c>&lt;object&gt;</c> is the path of the object with the extension included.</para>
+        /// <para>The Object Storage Service (OSS) URI of the image.</para>
+        /// <para>The OSS URI must be in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format. <c>&lt;bucket&gt;</c> is the name of the OSS bucket that is in the same region as the current project. <c>&lt;object&gt;</c> is the full path of the file, including the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,11 +77,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The level of watermark extraction. A higher level indicates a longer time and a higher quality. Valid values:</para>
+        /// <para>The watermark extraction level, which controls the extraction precision. A higher level indicates a longer processing time and a better extraction effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>low</description></item>
-        /// <item><description>medium</description></item>
-        /// <item><description>high</description></item>
+        /// <item><description><para>low</para>
+        /// </description></item>
+        /// <item><description><para>medium</para>
+        /// </description></item>
+        /// <item><description><para>high</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,8 +95,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string StrengthLevel { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the output image. This parameter is also available in the earlier DecodeBlindWatermark operation.</para>
-        /// <para>Specify the OSS URI in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format, where <c>&lt;bucket&gt;</c> is the name of the bucket in the same region as the current project and <c>&lt;object&gt;</c> is the path of the object with the extension included.</para>
+        /// <para>A parameter from the earlier DecodeBlindWatermark API. It specifies the OSS URI where the image is saved after the blind watermark is parsed.</para>
+        /// <para>The OSS URI must be in the <c>oss://&lt;bucket&gt;/&lt;object&gt;</c> format. <c>&lt;bucket&gt;</c> is the name of the OSS bucket that is in the same region as the current project. <c>&lt;object&gt;</c> is the full path of the file, including the file name extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://target/targetobject.jpg</para>
@@ -103,8 +106,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetURI { get; set; }
 
         /// <summary>
-        /// <para>The type of the watermark. Valid value: text.</para>
-        /// <para>No image watermarks are supported.</para>
+        /// <para>The type of the embedded watermark. Valid value: text</para>
+        /// <para>(Image watermarks are not supported. Therefore, this parameter can only be set to text.)</para>
         /// 
         /// <b>Example:</b>
         /// <para>text</para>

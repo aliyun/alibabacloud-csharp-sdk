@@ -10,39 +10,41 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GenerateVideoPlaylistShrinkRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
-        /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
+        /// <para>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS path of the master playlist.</para>
-        /// <para>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that is suffixed with .m3u8.</para>
+        /// <para>The OSS URI of the Master Playlist.</para>
+        /// <para>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file with the .m3u8 file name extension.</para>
         /// <remarks>
-        /// <para> If a playlist contains subtitles or multiple outputs, the MasterURI parameter is required and the URI of subtitle files or outputs must be in the directory specified by the MasterURI parameter or its subdirectory.</para>
+        /// <para>If the playlist has subtitle inputs or multiple target outputs, MasterURI is required. The subtitle URI or target URI must be in the same directory as or a subdirectory of the directory specified by MasterURI.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://bucket/object/master.m3u8</para>
+        /// <para>oss://test-bucket/test-object/master.m3u8</para>
         /// </summary>
         [NameInMap("MasterURI")]
         [Validation(Required=false)]
         public string MasterURI { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The message notification configuration. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The overwrite policy when the media playlist exists. Valid values:</para>
+        /// <para>The policy to overwrite an existing Media Playlist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>overwrite (default): overwrites an existing media playlist.</description></item>
-        /// <item><description>skip-existing: skips generation and retains the existing media playlist.</description></item>
+        /// <item><description><para>overwrite (default): Overwrites the existing Media Playlist.</para>
+        /// </description></item>
+        /// <item><description><para>skip-existing: Skips the generation and retains the existing Media Playlist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OverwritePolicy { get; set; }
 
         /// <summary>
-        /// <para>The project name.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,13 +66,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The period of time during which the playlist is generated. Unit: seconds.</para>
+        /// <para>The duration for which the playlist is generated. Unit: seconds (s). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to 0 (default) or leave this parameter empty, a playlist is generated until the end time of the source video.</description></item>
-        /// <item><description>If you set this parameter to a value greater than 0, a playlist is generated for the specified period of time from the start time that you specify.</description></item>
+        /// <item><description><para>0 (default) or empty: continues to the end of the source video.</para>
+        /// </description></item>
+        /// <item><description><para>Greater than 0: lasts for the specified duration from the start time.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set this parameter to a value that exceeds the end time of a source video, use the default value.</para>
+        /// <para>If the specified duration extends beyond the end of the source video, the default value is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,13 +85,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? SourceDuration { get; set; }
 
         /// <summary>
-        /// <para>The time when the playlist starts to generate. Unit: seconds.</para>
+        /// <para>The start time for generating the playlist. Unit: seconds (s). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to 0 (default) or leave this parameter empty, the start time of the source video is used as the time when a playlist starts to generate.</description></item>
-        /// <item><description>If you set this parameter to a value greater than 0, the time when a playlist starts to generate is the specified point in time.</description></item>
+        /// <item><description><para>0 (default) or empty: starts from the beginning of the source video.</para>
+        /// </description></item>
+        /// <item><description><para>Greater than 0: starts from the specified time point in the source video.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you use this parameter together with the <b>SourceDuration</b> parameter, a playlist can be generated based on the partial content of a source video.</para>
+        /// <para>You can set this parameter together with the <b>SourceDuration</b> parameter to generate a playlist for a specific part of the source video.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,29 +104,29 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public float? SourceStartTime { get; set; }
 
         /// <summary>
-        /// <para>The subtitle files. By default, this parameter is left empty. Up to two subtitle files are supported.</para>
+        /// <para>The list of subtitles to add. The default value is empty. You can add up to two subtitles.</para>
         /// </summary>
         [NameInMap("SourceSubtitles")]
         [Validation(Required=false)]
         public string SourceSubtitlesShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS path of the video file.</para>
-        /// <para>The OSS path must be in the oss://${Bucket}/${Object} format. ${Bucket} specifies the name of the OSS bucket that is in the same region as the current project. ${Object} specifies the full path of the file that contains the file name extension.</para>
+        /// <para>The OSS URI of the video.</para>
+        /// <para>The OSS URI must be in the format of oss\://${Bucket}/${Object}. ${Bucket} is the name of the OSS bucket that is in the same region as the current project. ${Object} is the full path of the file, including the file name extension.</para>
         /// <remarks>
-        /// <para> Only OSS buckets of the Standard storage class are supported. OSS buckets for which hotlink protection whitelists are configured are not supported.</para>
+        /// <para>Only OSS Standard storage buckets are supported. Buckets with hotlink protection whitelists are not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://imm-test/testcases/video.mp4</para>
+        /// <para>oss://test-bucket/test-source-object/video.mp4</para>
         /// </summary>
         [NameInMap("SourceURI")]
         [Validation(Required=false)]
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> that you want to add to a TS file in OSS. You can use tags to manage the lifecycles of TS files in OSS.</para>
+        /// <para>Adds OSS object <a href="https://help.aliyun.com/document_detail/106678.html">tags</a> to the generated TS files. You can use tags to control the lifecycle of OSS files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key1&quot;: &quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
@@ -130,9 +136,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The array of live transcoding playlists. The maximum length of the array is 6. Each element corresponds to at most one video media playlist and one or more subtitle media playlists.</para>
+        /// <para>An array of live transcoding playlists. The maximum array length is 6. Each target corresponds to a maximum of one video Media Playlist and one or more subtitle Media Playlists.</para>
         /// <remarks>
-        /// <para> If the array contains more than one element, the <b>MasterURI</b> parameter cannot be left empty.</para>
+        /// <para>If you configure more than one target, the <b>MasterURI</b> parameter must not be empty.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetsShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom user information, which is returned in asynchronous notifications to help you handle the notifications in the system. The maximum length of a notification is 2048 bytes.</para>
+        /// <para>The custom information. This information is returned in the asynchronous notification message to help you associate the message with your services. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>

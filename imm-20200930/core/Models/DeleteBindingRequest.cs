@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The name of the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dataset001</para>
+        /// <para>test-dataset</para>
         /// </summary>
         [NameInMap("DatasetName")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The URI of the OSS bucket to which the dataset is bound.</para>
-        /// <para>Specify the value in the oss://${Bucket} format. <c>${Bucket}</c> specifies the name of the OSS bucket that resides in the same region as the current project.</para>
+        /// <para>Specify the value in the oss\://${Bucket} format. <c>${Bucket}</c> specifies the name of the OSS bucket that resides in the same region as the current project.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://examplebucket</para>
+        /// <para>oss://test-bucket</para>
         /// </summary>
         [NameInMap("URI")]
         [Validation(Required=false)]

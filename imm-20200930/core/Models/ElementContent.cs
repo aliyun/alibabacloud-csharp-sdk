@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>If the value of the Type parameter is image or link, this parameter indicates the placeholder text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Text</para>
+        /// <para>文本片段</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateImageSplicingTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The width or height with which the input images must align. Valid values: 1 to 4096. Unit: px.</para>
+        /// <para>The alignment value, in pixels, for the width or height of the images to be stitched. The value can range from 1 to 4096.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>Direction</b> to <c>vertical</c>, this parameter specifies the width with which the input images must align.</description></item>
-        /// <item><description>If you set <b>Direction</b> to <c>horizontal</c>, this parameter specifies the height with which the input images must align.</description></item>
+        /// <item><description><para>If you set <b>Direction</b> to <c>vertical</c>, this parameter specifies the width alignment.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>Direction</b> to <c>horizontal</c>, this parameter specifies the height alignment.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the width or height of the first input image is used.</para>
+        /// <para>If you do not specify this parameter, the width or height of the first image is used for alignment by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Align { get; set; }
 
         /// <summary>
-        /// <para>The padding color of the spaces specified by <c>Padding</c> and <c>Margin</c>. Colors encoded in the <c>#FFFFFF</c> format and colors that are related to preset keywords such as <c>red</c> and <c>alpha</c> are supported.</para>
+        /// <para>The fill color for the areas specified by <c>Padding</c> and <c>Margin</c>. The value can be in the <c>#FFFFFF</c> format or a keyword such as <c>red</c> or <c>alpha</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>red</para>
@@ -37,17 +39,19 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string BackgroundColor { get; set; }
 
         /// <summary>
-        /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para>The chained authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The splicing method. Valid values:</para>
+        /// <para>The image stitching method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>vertical (default): All input images are vertically aligned and have the same width.</description></item>
-        /// <item><description>horizontal: All input images are horizontally aligned and have the same height.</description></item>
+        /// <item><description><para>vertical (default): Stitches images vertically. The widths of all images must be the same.</para>
+        /// </description></item>
+        /// <item><description><para>horizontal: Stitches images horizontally. The heights of all images must be the same.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,9 +64,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The compression format of the output image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>jpg (default)</description></item>
-        /// <item><description>png</description></item>
-        /// <item><description>webp</description></item>
+        /// <item><description><para>jpg (default)</para>
+        /// </description></item>
+        /// <item><description><para>png</para>
+        /// </description></item>
+        /// <item><description><para>webp</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +80,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ImageFormat { get; set; }
 
         /// <summary>
-        /// <para>The empty space or border around the edges of the output image. Default value: 0. Unit: px.</para>
+        /// <para>The blank margin, in pixels, of the stitched image. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -83,14 +90,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Margin { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The message notification configuration. For information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The space between component images in the output image. Default value: 0. Unit: px.</para>
+        /// <para>The space, in pixels, between sub-images in the stitched image. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -100,7 +107,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Padding { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +118,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The compression quality of the output image. This parameter takes effect only for JPG and WebP images. Valid values: 0 to 100. Default value: 80.</para>
+        /// <para>The compression quality of the output image. This parameter is valid only for JPG and WebP images. The value range is 0 to 100. The default value is 80.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -121,12 +128,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Quality { get; set; }
 
         /// <summary>
-        /// <para>The scaling mode of the input images that are vertically or horizontally aligned. Valid values:</para>
+        /// <para>The scaling method used when the width or height of an image is aligned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>fit (default): Input images are scaled proportionally, and black edges are not retained.</description></item>
-        /// <item><description>stretch: Input images are stretched to fill the space.</description></item>
-        /// <item><description>horizon: Input images are horizontally stretched.</description></item>
-        /// <item><description>vertical: Input images are vertically stretched.</description></item>
+        /// <item><description><para>fit (default): Scales the image without adding black bars. Only proportional scaling is supported.</para>
+        /// </description></item>
+        /// <item><description><para>stretch: Stretches the image to fill the space.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +144,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ScaleType { get; set; }
 
         /// <summary>
-        /// <para>The input images. The images are sliced in the order of the input image URIs.</para>
+        /// <para>The list of input images. The images are stitched in the order of their URIs in the list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Sources")]
@@ -145,7 +152,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourcesShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom tags. You can search for or filter asynchronous tasks by custom tag.</para>
+        /// <para>Custom tags used to search for and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -157,8 +164,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket in which you want to store the output image.</para>
-        /// <para>Specify the value in the oss://${bucketname}/${objectname} format. ${bucketname} specifies the name of the OSS bucket that resides in the same region as the current project. ${objectname} specifies the path to the output image.</para>
+        /// <para>The OSS URI where the output image is stored.</para>
+        /// <para>The URI must be in the oss\://${bucketname}/${objectname} format. ${bucketname} is the name of the OSS bucket that is in the same region as the project. ${objectname} is the path of the file, including the file name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -169,7 +176,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetURI { get; set; }
 
         /// <summary>
-        /// <para>The user data, which is returned as asynchronous notifications to help manage notifications within your system. The maximum length of the user data is 2,048 bytes.</para>
+        /// <para>The custom information. This information is returned in the asynchronous notification message. Use this information to associate the notification message with your system. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-data</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Input : TeaModel {
         /// <summary>
-        /// <para>The input data source from Object Storage Service (OSS).</para>
+        /// <para>The OSS data source.</para>
         /// </summary>
         [NameInMap("OSS")]
         [Validation(Required=false)]

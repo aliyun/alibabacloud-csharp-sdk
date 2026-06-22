@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetVideoLabelClassificationResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code of the task.</para>
+        /// <para>The task error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ResourceNotFound</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The end time of the task.</para>
+        /// <para>The time when the task ended. The time is in the ISO 8601 UTC timestamp format with millisecond-level precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-24T03:00:42.134971294Z</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The labels.</para>
+        /// <para>The list of labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The error message of the task.</para>
+        /// <para>The task error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified resource project is not found.</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the task.</para>
+        /// <para>The time when the task started. The time is in the ISO 8601 UTC timestamp format with millisecond-level precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-24T03:00:38.892462383Z</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VideoLabelClassification</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The custom information.</para>
+        /// <para>The user-defined information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateMediaConvertTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Event ID.</para>
+        /// <para>The ID of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ED-1Bz8z71k5TtsUejT4UJ16Es****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CA995EFD-083D-4F40-BE8A-BDF75FFFE0B6</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MediaConvert-adb1ee28-c4c9-42a7-9f54-3b8eadcb****</para>

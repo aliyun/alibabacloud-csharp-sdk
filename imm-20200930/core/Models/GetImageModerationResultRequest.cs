@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetImageModerationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The task type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

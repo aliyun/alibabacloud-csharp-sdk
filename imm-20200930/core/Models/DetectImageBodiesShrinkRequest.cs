@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>Specify the value in the oss://${Bucket}/${Object} format. <c>${Bucket}</c> specifies the name of the OSS bucket that resides in the same region as the current project. <c>${Object}</c> specifies the complete path to the file that has an extension.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://test-bucket/test-object</para>
+        /// <para>oss://test-bucket/test-object.jpg</para>
         /// </summary>
         [NameInMap("SourceURI")]
         [Validation(Required=false)]

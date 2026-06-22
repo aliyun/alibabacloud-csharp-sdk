@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateLocationDateClusteringTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the dataset.<a href="~~478160~~"></a></para>
+        /// <para>The dataset name. For more information, see <a href="https://help.aliyun.com/document_detail/478160.html">Create a dataset</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>The date configurations for clustering.</para>
+        /// <para>The date clustering settings.</para>
         /// <remarks>
-        /// <para> Adjusting these configurations affects existing spatiotemporal clusters for the dataset.</para>
+        /// <para>Notice: Modifying this setting also affects existing spatio-temporal clusters in your <c>Dataset</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DateOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The geolocation configurations for clustering.</para>
+        /// <para>The location clustering settings.</para>
         /// <remarks>
-        /// <para> Adjusting these configurations affects existing spatiotemporal clusters for the dataset.</para>
+        /// <para>Notice: Modifying this setting also affects existing spatio-temporal clusters in your <c>Dataset</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string LocationOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The message notification configuration. For more information, see Notification. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The custom tags. You can search for or filter asynchronous tasks by custom tag.</para>
+        /// <para>Custom tags used to search for and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</para>
+        /// <para>Custom information that is returned in the asynchronous notification message. This helps you associate the notification message with your system. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-data</para>

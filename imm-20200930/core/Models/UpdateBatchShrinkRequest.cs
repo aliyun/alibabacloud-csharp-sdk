@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class UpdateBatchShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The processing templates.</para>
+        /// <para>A list of data processing templates.</para>
         /// </summary>
         [NameInMap("Actions")]
         [Validation(Required=false)]
         public string ActionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch processing task. You can obtain the ID of the batch processing task from the response of the <a href="https://help.aliyun.com/document_detail/606694.html">CreateBatch</a> operation.</para>
+        /// <para>The ID of the batch processing task. For more information, see <a href="https://help.aliyun.com/document_detail/606694.html">Create a batch processing task</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The input data source.</para>
+        /// <para>The data source configuration.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public string InputShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. You can obtain the name of the project from the response of the <a href="https://help.aliyun.com/document_detail/478153.html">CreateProject</a> operation.</para>
+        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The custom tags. You can search for or filter asynchronous tasks by custom tag.</para>
+        /// <para>Custom tags used to search for and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;val&quot;}</para>

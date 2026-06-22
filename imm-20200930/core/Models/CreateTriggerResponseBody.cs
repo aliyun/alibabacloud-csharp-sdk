@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateTriggerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the trigger.</para>
+        /// <para>The data ingestion ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trigger-9f72636a-0f0c-4baf-ae78-38b27b******</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class ListProjectsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: 0 to 200. Default value: 100.</para>
+        /// <para>The maximum number of projects to return. Valid values: 0 to 200. If you do not set this parameter or set it to 0, the default value 100 is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. The operation returns the projects in lexicographical order starting from the location specified by NextToken.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call. Project information is returned in alphabetical order starting from the NextToken position. Leave this parameter empty for the first call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg6aW1tdGVzdDAx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The prefix used by the projects that you want to query. The prefix must be up to 128 characters in length.</para>
+        /// <para>The prefix used to list projects. The value can be 0 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>immtest</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Prefix { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

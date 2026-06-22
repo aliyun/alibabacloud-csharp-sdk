@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The subtitle content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>欢迎</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

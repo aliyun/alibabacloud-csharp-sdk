@@ -10,52 +10,64 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class Label : TeaModel {
         /// <summary>
-        /// <para>The central value of the label. This value indicates the confidence that the label is the majority component of the image. Valid values: 0 to 1. A higher value indicates greater confidence.</para>
+        /// <para>The centric score of the tag. This indicates whether the tag is the main subject in the image. The value ranges from 0 to 1. A higher value indicates higher confidence that the tag is the main subject of the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0.7319999933242798</para>
+        /// <para>0.877</para>
         /// </summary>
         [NameInMap("CentricScore")]
         [Validation(Required=false)]
         public float? CentricScore { get; set; }
 
+        /// <summary>
+        /// <para>Event clips.</para>
+        /// </summary>
         [NameInMap("Clips")]
         [Validation(Required=false)]
         public List<Clip> Clips { get; set; }
 
+        /// <summary>
+        /// <para>The tag alias.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>座椅</para>
+        /// </summary>
         [NameInMap("LabelAlias")]
         [Validation(Required=false)]
         public string LabelAlias { get; set; }
 
         /// <summary>
-        /// <para>The confidence level of the label. Valid values: 0 to 1. A higher value indicates greater confidence.</para>
+        /// <para>The tag confidence level. The value ranges from 0 (lowest confidence) to 1 (highest confidence).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0.9891784601980591</para>
+        /// <para>0.95</para>
         /// </summary>
         [NameInMap("LabelConfidence")]
         [Validation(Required=false)]
         public float? LabelConfidence { get; set; }
 
         /// <summary>
-        /// <para>The label level. Valid values: 1, 2, and 3.</para>
+        /// <para>The tag level. Valid values are 1, 2, and 3, representing first-level, second-level, and third-level tags, respectively.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("LabelLevel")]
         [Validation(Required=false)]
         public long? LabelLevel { get; set; }
 
         /// <summary>
-        /// <para>The label name.</para>
+        /// <para>The tag name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>椅子</para>
         /// </summary>
         [NameInMap("LabelName")]
         [Validation(Required=false)]
         public string LabelName { get; set; }
 
         /// <summary>
-        /// <para>The label language, which is represented as a BCP 47 language tag.</para>
+        /// <para>The tag language, in BCP 47 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-Hans</para>
@@ -65,7 +77,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The name of the parent label.</para>
+        /// <para>The parent tag name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>家具</para>
         /// </summary>
         [NameInMap("ParentLabelName")]
         [Validation(Required=false)]

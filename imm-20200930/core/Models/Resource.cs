@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The GPU.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string	NVIDIA_P4</para>
+        /// <para>NVIDIA_P4</para>
         /// </summary>
         [NameInMap("GPUModel")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The displayed name of the resource.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string	ecs.gn5i-c2g1.large-2vCPU-8GB-1*NVIDIA_P4</para>
+        /// <para>ecs.gn5i-c2g1.large-2vCPU-8GB-1*NVIDIA_P4</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

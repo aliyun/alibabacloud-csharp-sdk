@@ -10,25 +10,25 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateOfficeConversionTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
-        /// <para>The authorization chain settings. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
+        /// <para>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The ending page for document conversion. The default value is -1, which converts the file until the last page of the file.</para>
+        /// <para>The end page for the document conversion. The default value is -1, which indicates that all pages from the start page to the last page are converted.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If the source is a spreadsheet file, specify the index number of the corresponding sheet instead.</para>
+        /// <item><description><para>If the source file is a spreadsheet, you must specify the worksheet number (\<c>SheetIndex\\</c>).</para>
         /// </description></item>
-        /// <item><description><para>If you convert a large number of pages within the document, we recommend that you split the pages into several document conversion tasks to prevent conversion timeouts.</para>
+        /// <item><description><para>If the document has many pages, we recommend that you convert them in batches. Otherwise, the conversion may time out.</para>
         /// </description></item>
-        /// <item><description><para>This parameter takes effect only when you convert the file into an image. It does not take effect when you convert the file into a PDF or TXT file.</para>
+        /// <item><description><para>This parameter takes effect only when you convert the document to images. It does not take effect when you convert the document to a PDF file or a text file.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>-1</para>
@@ -38,13 +38,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? EndPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only the first resulting image when you convert a spreadsheet document to images. The number of rows and the number of columns in the first image are determined by the automatic splitting process. Valid values:</para>
+        /// <para>When you convert a spreadsheet document to images, specifies whether to return only the first image of the conversion result. The number of rows and columns in the image is the result of automatic splitting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not return only the first resulting image. All the resulting images are returned.</description></item>
-        /// <item><description>true: returns only the first resulting image. A thumbnail is generated.</description></item>
+        /// <item><description><para>false (default): No. All images are returned.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. Only the first image is returned. This is used to extract a thumbnail.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>LongPicture</b> parameter is set to <c>true</c>.</para>
+        /// <para>This parameter takes effect only if you set the <b>LongPicture</b> parameter to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,10 +57,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? FirstPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to convert all rows of a spreadsheet document to one single image or a single-page PDF document when you convert the table document to an image or a PDF document. Valid values:</para>
+        /// <para>When you convert a spreadsheet document to images or a PDF file, specifies whether to render all rows on a single image or PDF page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): converts all rows of the document to multiple images or a multi-page PDF document. This is the default value.</description></item>
-        /// <item><description>true: converts all rows of the document to one single image or a single-page PDF document.</description></item>
+        /// <item><description><para>false (default): No. The content is rendered on multiple images or PDF pages.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. The content is rendered on a single image or PDF page.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,10 +73,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? FitToHeight { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to convert all columns of a spreadsheet document to one single image or a single-page PDF document when you convert the spreadsheet file to an image or a PDF document. Valid values:</para>
+        /// <para>When you convert a spreadsheet document to images or a PDF file, specifies whether to render all columns on a single image or PDF page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): converts all columns of the document to multiple images or a multi-page PDF document.</description></item>
-        /// <item><description>true: converts all columns of the document to one single image or a single-page PDF document.</description></item>
+        /// <item><description><para>false (default): No. The content is rendered on multiple images or PDF pages.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. The content is rendered on a single image or PDF page.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,10 +89,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? FitToWidth { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain line feeds in the output file when a document is converted to a text file. Valid values:</para>
+        /// <para>When you convert a document to text, specifies whether to keep the line feeds in the document. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not retain the line feeds.</description></item>
-        /// <item><description>true: retains the line feeds.</description></item>
+        /// <item><description><para>false (default): No. Line feeds are not kept.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. Line feeds are kept.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? HoldLineFeed { get; set; }
 
         /// <summary>
-        /// <para>The dots per inch (DPI) of output images. Valid values: 96 to 600. Default value: 96.</para>
+        /// <para>The DPI of the output image. Valid values: 96 to 600. The default value is 96.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96</para>
@@ -107,13 +115,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? ImageDPI { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to convert the document to a long image. Valid values:</para>
+        /// <para>When you convert a document to images, specifies whether to convert it into a long image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not convert the document to a long image.</description></item>
-        /// <item><description>true: converts the document to a long image.</description></item>
+        /// <item><description><para>false (default): No. The document is converted into multiple images.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. The document is converted into a long image.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can convert up to 20 pages of a document into a long image. If you convert more than 20 pages to a long image, an error may occur.</para>
+        /// <para>You can combine a maximum of 20 pages into a long image. If the number of pages exceeds this limit, the conversion task may fail.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -124,10 +134,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? LongPicture { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to convert the document to a long text file. Valid values:</para>
+        /// <para>When you convert a document to text, specifies whether to convert it into a long text file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not convert the document to a long text file. Each page of the document is converted to a text file.</description></item>
-        /// <item><description>true: converts the entire document to a long text file.</description></item>
+        /// <item><description><para>false (default): No. Each page of the document is converted into a separate text file.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. All content is placed in a single text file.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,9 +150,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? LongText { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of spreadsheet columns to be converted to an image. By default, all columns within the spreadsheet file are converted.</para>
+        /// <para>The maximum number of columns to convert when you convert a spreadsheet document to images. By default, all columns are converted.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>LongPicture</b> parameter is set to <c>true</c>.</para>
+        /// <para>This parameter takes effect only when you set <b>LongPicture</b> to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,9 +163,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxSheetColumn { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of spreadsheet rows to be converted to an image. By default, all rows within the spreadsheet file are converted.</para>
+        /// <para>The maximum number of rows to convert when you convert a spreadsheet document to images. By default, all rows are converted.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>LongPicture</b> parameter is set to <c>true</c>.</para>
+        /// <para>This parameter takes effect only when you set <b>LongPicture</b> to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -164,17 +176,19 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxSheetRow { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The message notification configuration. For more information, click Notification. For more information about the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The numbers of pages to be converted. This parameter takes precedence over the StartPage and EndPage parameters. The value of this parameter can be in different formats:</para>
+        /// <para>The page numbers to convert. This parameter has a higher priority than the \<c>StartPage\\</c> and \<c>EndPage\\</c> parameters. The format is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If you specify pages separately by page number, separate page numbers with commas (,). Example: 1,2</description></item>
-        /// <item><description>If you specify consecutive pages by using a page range, connect the starting and ending page numbers with a hyphen (-). Example: 1,2-4,7</description></item>
+        /// <item><description><para>Separate multiple page numbers with commas (,), for example, 1,2.</para>
+        /// </description></item>
+        /// <item><description><para>Specify a range of consecutive pages with a hyphen (-), for example, 1,2-4,7.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -185,10 +199,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Pages { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to place sheets of paper horizontally for converting a spreadsheet document to images. Conversion to images is similar to printing the content on a sheet of paper. Valid values:</para>
+        /// <para>When you convert a spreadsheet document to images, specifies whether to place the paper horizontally. The output image is similar to a printed page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not place sheets of paper horizontally. Paper sheets are placed vertically.</description></item>
-        /// <item><description>true: places sheets of paper horizontally.</description></item>
+        /// <item><description><para>false (default): No. The paper is placed vertically.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. The paper is placed horizontally.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,14 +215,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? PaperHorizontal { get; set; }
 
         /// <summary>
-        /// <para>The paper size for converting a spreadsheet document to images. Conversion to images is similar to printing the content on a sheet of paper. Valid values:</para>
+        /// <para>The paper size for converting a spreadsheet document to images. The output image is similar to a printed page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>A0</description></item>
-        /// <item><description>A2</description></item>
-        /// <item><description>A4 (default)</description></item>
+        /// <item><description><para>A0</para>
+        /// </description></item>
+        /// <item><description><para>A2</para>
+        /// </description></item>
+        /// <item><description><para>A4 (default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>FitToHeight</b> and <b>FitToWidth</b> parameters are specified.</para>
+        /// <para>This parameter takes effect only when you use it with the <b>FitToHeight</b> and <b>FitToWidth</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -217,28 +236,28 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string PaperSize { get; set; }
 
         /// <summary>
-        /// <para>The password that protects the source document. To convert a password-protected document, specify this parameter.</para>
+        /// <para>The password to open the document. Set this parameter if you want to convert a password-protected document.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The quality of the output file. Valid values: 0 to 100. A smaller value indicates lower quality and better conversion performance. By default, the system specifies an appropriate value that provides an optimal balance between the quality and conversion performance based on the document content.</para>
+        /// <para>The quality of the converted file. Valid values: 0 to 100. A value of 0 indicates the lowest quality and the best performance. A value of 100 indicates the highest quality and the poorest performance. By default, the system sets an appropriate value based on the document content to balance quality and performance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -248,9 +267,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? Quality { get; set; }
 
         /// <summary>
-        /// <para>The percentage scale relative to the source document. Valid values: 20 to 199. The default value is 100, which indicates that the document is not scaled.</para>
+        /// <para>The scaling ratio of the document. Valid values: 20 to 199. The default value is 100, which indicates that the document is not scaled.</para>
         /// <remarks>
-        /// <para>A value that is less than 100 indicates a size reduction. A value that is greater than 100 indicates an enlargement.</para>
+        /// <para>A value less than 100 indicates that the document is scaled down. A value greater than 100 indicates that the document is scaled up.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -261,7 +280,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? ScalePercentage { get; set; }
 
         /// <summary>
-        /// <para>The number of sheets to be converted to an image. By default, all sheets within the spreadsheet file are converted.</para>
+        /// <para>The number of worksheets to convert to images in the spreadsheet document. By default, all worksheets are converted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -271,7 +290,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? SheetCount { get; set; }
 
         /// <summary>
-        /// <para>The index number of the sheet to be converted to an image. The value ranges from 1 to the index number of the last sheet. By default, the conversion starts from the first sheet.</para>
+        /// <para>The number of the worksheet to convert to images in the spreadsheet document. Valid values: 1 to the number of the last worksheet. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -281,10 +300,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? SheetIndex { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display comments in resulting images when a text document is converted to images. Valid values:</para>
+        /// <para>When you convert a word processor document to images, specifies whether to show comments. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not display comments in resulting images.</description></item>
-        /// <item><description>true: displays comments in resulting images.</description></item>
+        /// <item><description><para>false (default): No. Comments are not shown.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes. Comments are shown.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -295,12 +316,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public bool? ShowComments { get; set; }
 
         /// <summary>
-        /// <para>The name extension of the source file. By default, the type of the source file is determined based on the name extension of the source object in OSS. If the object in OSS does not have a name extension, you can specify this parameter. Valid values:</para>
+        /// <para>The extension type of the source data. By default, the type of the source data is determined by the extension of the OSS object. If the OSS object does not have an extension, you can set this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Text documents: doc, docx, wps, wpss, docm, dotm, dot, dotx, and html</description></item>
-        /// <item><description>Presentation documents: pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</description></item>
-        /// <item><description>Spreadsheet documents: xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</description></item>
-        /// <item><description>PDF documents: pdf</description></item>
+        /// <item><description><para>Word processor documents (Word): doc, docx, wps, wpss, docm, dotm, dot, and dotx</para>
+        /// </description></item>
+        /// <item><description><para>Presentation documents (PowerPoint): pptx, ppt, pot, potx, pps, ppsx, dps, dpt, pptm, potm, ppsm, and dpss</para>
+        /// </description></item>
+        /// <item><description><para>Spreadsheet documents (Excel): xls, xlt, et, ett, xlsx, xltx, csv, xlsb, xlsm, xltm, and ets</para>
+        /// </description></item>
+        /// <item><description><para>PDF documents: pdf</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -311,8 +336,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The URI of the source file.</para>
-        /// <para>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
+        /// <para>The storage address of the source data.</para>
+        /// <para>The OSS address must be in the oss\://${Bucket}/${Object} format. \<c>${Bucket}\\</c> is the name of the OSS bucket that is in the same region as the current project. \<c>${Object}\\</c> is the full path of the file, including the file name extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket/test-object</para>
@@ -322,7 +347,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceURI { get; set; }
 
         /// <summary>
-        /// <para>The list of images. The sequence of image URIs in the list determines the order in which they are converted. (<b>This parameter is not officially available and is not recommended.</b>)</para>
+        /// <para>A list of input images. The images are converted in the order of their URIs in the list. (<b>This parameter is not yet published. Do not use it.</b>)</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://imm-test/test.pptx</para>
@@ -332,15 +357,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourcesShrink { get; set; }
 
         /// <summary>
-        /// <para>The starting page for document conversion. Default value: 1.</para>
+        /// <para>The start page for the document conversion. The default value is 1.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If the document is a spreadsheet file, specify the index number of the corresponding sheet instead.</para>
+        /// <item><description><para>If the source file is a spreadsheet, you must specify the worksheet number.</para>
         /// </description></item>
-        /// <item><description><para>This parameter takes effect only when you convert the file to an image format. It does not take effect when you convert the file into a PDF or TXT file.</para>
+        /// <item><description><para>This parameter takes effect only when you convert the document to images. It does not take effect when you convert the document to a PDF file or a text file.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -350,22 +375,28 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? StartPage { get; set; }
 
         /// <summary>
-        /// <para>The custom tags in dictionary format. You can use the custom tags to search for the task.</para>
+        /// <para>The custom tags. The value is a dictionary. You can use tags to search for tasks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;test&quot;:&quot;val1&quot;}</para>
+        /// <para>{
+        ///       &quot;key&quot;: &quot;value&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The format of the output file. Valid values:</para>
+        /// <para>The type of the output file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>png: a PNG image.</description></item>
-        /// <item><description>jpg: a JPG image.</description></item>
-        /// <item><description>pdf: a PDF file.</description></item>
-        /// <item><description>txt: a TXT file. You can specify this value to extract the text content of the source document. Only presentation, text, or spreadsheet documents can be converted to a TXT file. If the source document is a spreadsheet, only one TXT is created and sheet-related parameters do not take effect.</description></item>
+        /// <item><description><para>png: Converts the document to PNG images.</para>
+        /// </description></item>
+        /// <item><description><para>jpg: Converts the document to JPG images.</para>
+        /// </description></item>
+        /// <item><description><para>pdf: Converts the document to a PDF file.</para>
+        /// </description></item>
+        /// <item><description><para>txt: Converts the document to a text-only file. This is mainly used to extract text content from the file. This option is supported only for presentation documents, word processor documents, and spreadsheet documents. When you convert a spreadsheet document, a single txt file is generated, and settings for sheet-related variables do not take effect.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -377,45 +408,48 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The address template of the output file.</para>
-        /// <para>Specify the value in the <c>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</c> format. For more information, see <a href="https://help.aliyun.com/document_detail/465762.html">TargetURI template</a>.</para>
+        /// <para>The template for the output address of the converted document.</para>
+        /// <para>The address must be in the <c>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</c> format. For more information, see <a href="https://help.aliyun.com/document_detail/465762.html">TargetURI templates</a>.</para>
         /// <remarks>
-        /// <para> Specify at least one of the TargetURI and TargetURIPrefix parameters.</para>
+        /// <para>Specify either this parameter or \<c>TargetURIPrefix\\</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://{bucket}/{tags.custom}/{dirname}/{barename}.{autoext}</para>
+        /// <para>oss://examplebucket/outputDocument.pdf</para>
         /// </summary>
         [NameInMap("TargetURI")]
         [Validation(Required=false)]
         public string TargetURI { get; set; }
 
         /// <summary>
-        /// <para>The prefix of the storage address of the output file.</para>
-        /// <para>Specify the prefix in the <c>oss://${Bucket}/${Prefix}/</c> format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Prefix}</c> is the prefix of the output file.</para>
+        /// <para>The prefix of the storage address for the output file after document conversion.</para>
+        /// <para>The prefix must be in the <c>oss://${Bucket}/${Prefix}/</c> format. \<c>${Bucket}\\</c> is the name of the OSS bucket that is in the same region as the current project. \<c>${Prefix}\\</c> is the prefix of the storage address for the output file.</para>
         /// <remarks>
-        /// <para> Specify at least one of the TargetURI and TargetURIPrefix parameters.</para>
+        /// <para>Specify either this parameter or \<c>TargetURI\\</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://bucket1/</para>
+        /// <para>oss://examplebucket/outputprefix/</para>
         /// </summary>
         [NameInMap("TargetURIPrefix")]
         [Validation(Required=false)]
         public string TargetURIPrefix { get; set; }
 
         /// <summary>
-        /// <para>The trim policy for converting a spreadsheet file. Empty rows and columns may generate blank spaces in the output file if no appropriate trim policy is specified.</para>
+        /// <para>The trimming policy for spreadsheet conversion. For example, if a spreadsheet contains many empty rows and columns, a large amount of white space may be generated if no trimming policy is specified.</para>
         /// </summary>
         [NameInMap("TrimPolicy")]
         [Validation(Required=false)]
         public string TrimPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum information length is 2,048 bytes.</para>
+        /// <para>The custom information. This information is returned in the asynchronous notification message to help you associate the notification with your services. The value can be up to 2,048 bytes in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;file_id&quot;: &quot;abc&quot;}</para>
+        /// <para>{
+        ///       &quot;id&quot;: &quot;test-id&quot;,
+        ///       &quot;name&quot;: &quot;test-name&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

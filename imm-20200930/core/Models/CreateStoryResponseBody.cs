@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateStoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event ID.</para>
+        /// <para>The ID of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>392-1CqzvESGTEeNZ2OWFbRKIM****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1B3D5E0A-D8B8-4DA0-8127-ED32C851****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateStory-4ef6ff43-edf3-4612-9cc4-0c7f9e19****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class RefreshWebofficeTokenShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Weboffice access token. Obtain it through the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> interfaces.</para>
+        /// <para>The Weboffice access token. You can obtain the token by calling the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// <para><b>If there are no special requirements, leave it blank.</b></para>
-        /// <para>Chained authorization configuration, optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Access Other Entity Resources Using Chained Authorization</a>.</para>
+        /// <para><b>Leave this parameter empty unless you have special requirements.</b></para>
+        /// <para>The China authorization configuration. This parameter is optional. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>Project name. For more information on how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Create Project</a>.</para>
+        /// <para>The project name. For information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>Weboffice refresh token. Obtain it through the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> interfaces.</para>
+        /// <para>The Weboffice refresh token. You can obtain the token by calling the <a href="https://help.aliyun.com/document_detail/478226.html">GenerateWebofficeToken</a> or <a href="https://help.aliyun.com/document_detail/478227.html">RefreshWebofficeToken</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class GetVideoModerationResultRequest : TeaModel {
         /// <summary>
-        /// <para>The project name.<a href="~~478153~~"></a></para>
+        /// <para>The project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

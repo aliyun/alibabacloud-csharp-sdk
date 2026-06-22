@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class RefreshWebofficeTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>Weboffice access token.</para>
+        /// <para>The Weboffice access token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4996466c690a4902846ce00f96********</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AccessToken { get; set; }
 
         /// <summary>
-        /// <para>Expiration time of the access token. The expiration period is 30 minutes.</para>
+        /// <para>The expiration time of the access token. The access token expires in 30 minutes. Format: ISO 8601 UTC timestamp with millisecond precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-08-31T13:07:28.950065359Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string AccessTokenExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Weboffice refresh token.</para>
+        /// <para>The Weboffice refresh token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>72a52ab3702a4123ab5594671a********</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RefreshToken { get; set; }
 
         /// <summary>
-        /// <para>Expiration time of the refresh token. The expiration period is 1 day.</para>
+        /// <para>The expiration time of the refresh token. The refresh token expires in 1 day. Format: ISO 8601 UTC timestamp with millisecond precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-09-01T12:37:28.950065359Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RefreshTokenExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>501339F9-4B70-0CE2-AB8C-866C********</para>

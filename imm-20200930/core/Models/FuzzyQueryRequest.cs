@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order.</description></item>
-        /// <item><description>desc (default): descending order.</description></item>
+        /// <item><description><para>asc: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>desc (default): descending order.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
@@ -81,6 +83,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The query content. The value can be up to 1 MB in size.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>阿里云</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
@@ -89,9 +94,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The sort fields. For more information, see <a href="https://help.aliyun.com/document_detail/2743991.html">Supported fields and operators</a>.</para>
         /// <list type="bullet">
-        /// <item><description>Separate multiple sort fields with commas (,). Example: <c>Size,Filename</c>.</description></item>
-        /// <item><description>You can specify up to five sort fields.</description></item>
-        /// <item><description>The priority order of sorting is determined based on the order of the sort fields.</description></item>
+        /// <item><description><para>Separate multiple sort fields with commas (,). Example: <c>Size,Filename</c>.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify up to five sort fields.</para>
+        /// </description></item>
+        /// <item><description><para>The priority order of sorting is determined based on the order of the sort fields.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

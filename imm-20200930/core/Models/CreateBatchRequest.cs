@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateBatchRequest : TeaModel {
         /// <summary>
-        /// <para>The templates.</para>
+        /// <para>A list of processing templates.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Actions")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<CreateBatchRequestActions> Actions { get; set; }
         public class CreateBatchRequestActions : TeaModel {
             /// <summary>
-            /// <para>The policy configurations for handling failures.</para>
+            /// <para>The fast-fail policy configuration.</para>
             /// </summary>
             [NameInMap("FastFailPolicy")]
             [Validation(Required=false)]
             public FastFailPolicy FastFailPolicy { get; set; }
 
             /// <summary>
-            /// <para>The name of the template.</para>
+            /// <para>The template name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The template parameters.</para>
+            /// <para>A list of template parameters.</para>
             /// </summary>
             [NameInMap("Parameters")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The data source configurations.</para>
+        /// <para>The input data source configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Input")]
@@ -53,15 +53,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Input Input { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. The operation supports multiple messaging middleware options. For more information about notification messages, see Asynchronous message examples. You can use one of the following methods to receive notification messages:</para>
-        /// <para>In the region in which the IMM project is located, use EventBridge to receive task notifications. For more information, see IMM events. In the region in which the IMM project is located, configure a Simple Message Queue (SMQ) subscription to receive task notifications.</para>
+        /// <para>The notification recipient. Multiple middleware services are supported. For details about the message format, see Asynchronous notification message. Select one of the following methods to receive messages:</para>
+        /// <para>Activate and access EventBridge in the same region as Intelligent Media Management (IMM) to promptly receive task notifications. For more information, see IMM events.
+        /// Activate MNS in the same region as IMM and configure a subscription.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public CreateBatchRequestNotification Notification { get; set; }
         public class CreateBatchRequestNotification : TeaModel {
             /// <summary>
-            /// <para>The SMQ notification settings.</para>
+            /// <para>The parameters for MNS notifications.</para>
             /// </summary>
             [NameInMap("MNS")]
             [Validation(Required=false)]
@@ -70,7 +71,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The project name. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,19 +82,19 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The service role. IMM assumes the service role so that it can access resources in other cloud services, such as OSS. Default value: AliyunIMMBatchTriggerRole.</para>
-        /// <para>You can also create a custom service role in the RAM console and grant the required permissions to the role based on your business requirements. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a regular service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a role</a>.</para>
+        /// <para>The service role that grants IMM the permissions to access other cloud resources, such as OSS. The default value is AliyunIMMBatchTriggerRole.</para>
+        /// <para>To use a custom service role, create a service role and grant permissions to the role in the RAM console. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a service role</a> and <a href="https://help.aliyun.com/document_detail/116147.html">Grant permissions to a RAM role</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AliyunIMMDefaultRole</para>
+        /// <para>AliyunIMMBatchTriggerRole</para>
         /// </summary>
         [NameInMap("ServiceRole")]
         [Validation(Required=false)]
         public string ServiceRole { get; set; }
 
         /// <summary>
-        /// <para>The custom tags. You can search for or filter asynchronous tasks by custom tag.</para>
+        /// <para>Custom tags used to search and filter asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;: &quot;val&quot;}</para>

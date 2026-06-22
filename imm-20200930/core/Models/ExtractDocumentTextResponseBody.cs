@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The text content of the document.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试内容。</para>
+        /// <para>Test content.</para>
         /// </summary>
         [NameInMap("DocumentText")]
         [Validation(Required=false)]

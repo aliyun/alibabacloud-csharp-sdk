@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DocumentParseNarratorOption : TeaModel {
+        /// <summary>
+        /// <para>The summary of the document.</para>
+        /// </summary>
         [NameInMap("Narrate")]
         [Validation(Required=false)]
         public bool? Narrate { get; set; }

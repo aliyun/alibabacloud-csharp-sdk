@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The license plate number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>鲁A8***8</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

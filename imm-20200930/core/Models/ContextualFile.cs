@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>Name of the dataset</para>
+        /// <para>The dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-dataset</para>
@@ -30,23 +30,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string DatasetName { get; set; }
 
         /// <summary>
-        /// <para>Elements</para>
+        /// <para>Elements.</para>
         /// </summary>
         [NameInMap("Elements")]
         [Validation(Required=false)]
         public List<Element> Elements { get; set; }
 
         /// <summary>
-        /// <para>Media type of the current file</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>other</description></item>
-        /// <item><description>document</description></item>
-        /// <item><description>archive</description></item>
-        /// <item><description>audio</description></item>
-        /// <item><description>video</description></item>
-        /// </list>
+        /// <para>The media type of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>document</para>
@@ -56,7 +47,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string MediaType { get; set; }
 
         /// <summary>
-        /// <para>The URI of the OSS object. This parameter is available only if the value of the URI parameter is the URI of a file in Photo and Drive Service.</para>
+        /// <para>The URI path of the OSS file. This parameter is used only when the URI is a PDS address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket/test-object.jpg</para>
@@ -66,7 +57,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OSSURI { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the corresponding file that exists in the dataset.</para>
+        /// <para>The identifier of the file in the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0939d7ed-73fa-4009-bbe6-fbbe07b92b2e</para>
@@ -76,7 +67,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>User ID</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1482910009923706</para>
@@ -86,7 +77,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Name of the project</para>
+        /// <para>The project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-project</para>
@@ -96,7 +87,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>URI of the file. Specify the OSS URI in the oss://${bucketname}/${objectname} format, where ${bucketname} is the name of the bucket in the same region as the current project and ${objectname} is the path of the object. The URI of a file in Photo and Drive Service follows the pds://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision} format.</para>
+        /// <para>The URI of the file.
+        /// The format of an OSS URI is oss\://${bucketname}/${objectname}. ${bucketname} is the name of an OSS bucket in the same region as the current project. ${objectname} is the file path.
+        /// The format of a PDS URI is pds\://domains/${domain}/drives/${drive}/files/${file}/revisions/${revision}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://test-bucket</para>

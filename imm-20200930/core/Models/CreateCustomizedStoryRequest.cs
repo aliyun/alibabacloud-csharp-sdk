@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>oss://bucket1/cover</para>
+            /// <para>oss://test-bucket/test-object.jpg</para>
             /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
@@ -34,7 +34,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The custom labels. You can specify labels to help you identify and retrieve the story.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Bucket&quot;: &quot;examplebucket&quot;}</para>
+        /// <para>{
+        ///       &quot;MyStoryLabel&quot;: &quot;HolidayStory&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("CustomLabels")]
         [Validation(Required=false)]
@@ -64,7 +66,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;URI&quot;:&quot;oss://bucket1/file1&quot;}]</para>
+            /// <para>[
+            ///       {
+            ///             &quot;URI&quot;: &quot;oss://test-bucket/test-object_1.jpg&quot;
+            ///       },
+            /// {
+            ///             &quot;URI&quot;: &quot;oss://test-bucket/test-object_2.jpg&quot;
+            ///       }
+            /// ]</para>
             /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]

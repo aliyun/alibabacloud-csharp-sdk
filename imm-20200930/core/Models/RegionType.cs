@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class RegionType : TeaModel {
         /// <summary>
         /// <para>The name of the region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>华北2（北京）</para>
         /// </summary>
         [NameInMap("LocalName")]
         [Validation(Required=false)]

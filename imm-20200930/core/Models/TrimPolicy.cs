@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DisableDeleteUnusedPicture")]
         [Validation(Required=false)]

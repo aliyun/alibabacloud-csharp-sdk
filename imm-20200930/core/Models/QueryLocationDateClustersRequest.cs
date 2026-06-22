@@ -140,6 +140,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The characters that are included in the titles of spatiotemporal clusters to be queried. Matches are found by using fuzzy matching.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

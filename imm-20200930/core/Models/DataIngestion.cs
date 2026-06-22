@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DataIngestion : TeaModel {
         /// <summary>
-        /// <para>The templates.</para>
+        /// <para>A list of processing templates.</para>
         /// </summary>
         [NameInMap("Actions")]
         [Validation(Required=false)]
         public List<DataIngestionActions> Actions { get; set; }
         public class DataIngestionActions : TeaModel {
             /// <summary>
-            /// <para>The on-error policy that is used to quickly troubleshoot an error.</para>
+            /// <para>The configuration of the fast-fail policy for data processing.</para>
             /// </summary>
             [NameInMap("FastFailPolicy")]
             [Validation(Required=false)]
             public FastFailPolicy FastFailPolicy { get; set; }
 
             /// <summary>
-            /// <para>The name of the template.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>doc/convert</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The information about the data source.</para>
+        /// <para>The data source information.</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
         public Input Input { get; set; }
 
         /// <summary>
-        /// <para>The task execution location.</para>
+        /// <para>The task execution position.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNDU2Nzg6aW1tdGVzdDpleGFtcGxlYnVja2V0OmRhdGFzZXQwMDE6b3NzOi8vZXhhbXBsZWJ1Y2tldC9zYW1wbGVvYmplY3QxLmpw****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public DataIngestionNotification Notification { get; set; }
         public class DataIngestionNotification : TeaModel {
             /// <summary>
-            /// <para>The Simple Message Queue (SMQ) endpoint.</para>
+            /// <para>The MNS Endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://1111111111.mns.cn-hangzhou.aliyuncs.com">http://1111111111.mns.cn-hangzhou.aliyuncs.com</a></para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public RocketMQ RocketMQ { get; set; }
 
             /// <summary>
-            /// <para>The SMQ topic.</para>
+            /// <para>The MNS topic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>topic1</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The service-linked role.</para>
+        /// <para>The service authorization role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunIMMBatchTriggerRole</para>
@@ -153,13 +153,18 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ServiceRole { get; set; }
 
         /// <summary>
-        /// <para>The status of the batch processing task.</para>
+        /// <para>The state of the batch processing task:</para>
         /// <list type="bullet">
-        /// <item><description>Ready: The task is created.</description></item>
-        /// <item><description>Running: The task is running.</description></item>
-        /// <item><description>Failed: The task fails and cannot be automatically recovered.</description></item>
-        /// <item><description>Suspended: The task is suspended.</description></item>
-        /// <item><description>Succeeded: The task is successful.</description></item>
+        /// <item><description><para>Ready: The task is ready. A newly created task is in the Ready state.</para>
+        /// </description></item>
+        /// <item><description><para>Running: The task is running. This is the state of a task that is executing normally.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The task failed. An error occurred during task execution, and the task cannot be automatically recovered.</para>
+        /// </description></item>
+        /// <item><description><para>Suspended: The task is paused.</para>
+        /// </description></item>
+        /// <item><description><para>Succeeded: The task is complete.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -170,14 +175,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The statistical information.</para>
+        /// <para>The statistics information.</para>
         /// </summary>
         [NameInMap("Statistic")]
         [Validation(Required=false)]
         public DataIngestionStatistic Statistic { get; set; }
         public class DataIngestionStatistic : TeaModel {
             /// <summary>
-            /// <para>The number of files that are skipped.</para>
+            /// <para>The number of skipped files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -187,7 +192,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public long? SkipFiles { get; set; }
 
             /// <summary>
-            /// <para>The number of files that fail to be submitted.</para>
+            /// <para>The number of failed submissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -197,7 +202,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public long? SubmitFailure { get; set; }
 
             /// <summary>
-            /// <para>The number of files that are submitted.</para>
+            /// <para>The number of successful submissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -216,7 +221,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public Dictionary<string, object> Tags { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was updated.</para>
+        /// <para>The time when the task was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-18T07:40:29Z</para>

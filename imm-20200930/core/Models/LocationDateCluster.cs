@@ -98,6 +98,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The custom title.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>杭州一日游</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateFileCompressionTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The format of the output file.</para>
+        /// <para>The compression format for file packaging.</para>
         /// <remarks>
-        /// <para>Only the ZIP format is supported.</para>
+        /// <para>Currently, only the zip format is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,36 +23,43 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string CompressedFormat { get; set; }
 
         /// <summary>
-        /// <para><b>If you have no special requirements, leave this parameter empty.</b></para>
-        /// <para>The configurations of authorization chains. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use authorization chains to access resources of other entities</a>.</para>
+        /// <para><b>If you do not have special requirements, leave this parameter empty.</b></para>
+        /// <para>The chained authorization configuration. This parameter is not required. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public string CredentialConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The notification settings. For information about the asynchronous notification format, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous message examples</a>.</para>
+        /// <para>The message notification configuration. For more information, see the Notification data type. For the format of asynchronous notification messages, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification message format</a>.</para>
+        /// <remarks>
+        /// <para>IMM API callbacks do not currently support specifying a webhook address. Use MNS instead.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public string NotificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.<a href="~~478153~~"></a></para>
+        /// <para>The name of the project. For more information, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the inventory object that contains the objects to compress. The inventory object stores the objects to compress by using the same data structure of the Sources parameter in the JSON format. This parameter is suitable for specifying a large number of objects to compress.</para>
+        /// <para>The address where the file manifest is stored. The file manifest stores the \<c>Sources\\</c> structure in JSON format on OSS. This is suitable for scenarios with many files to package.</para>
         /// <remarks>
-        /// <para> You must specify this parameter or the <c>Sources</c> parameter. The <c>URI</c> parameter is required and the <c>Alias</c> parameter is optional. You can specify up to 80,000 compression rule by using SourceManifestURI in one single call to the operation. The following line provides an example of the content within an inventory object.</para>
+        /// <para>Specify either this parameter or <c>Sources</c>. In the manifest file, the <c>URI</c> parameter is required and the <c>Alias</c> parameter is optional. \<c>SourceManifestURI\\</c> supports up to 80,000 packaging rules.</para>
+        /// <remarks>
+        /// <para>Warning: When you save the content to OSS, specify the OSS address of the file for this parameter.</para>
         /// </remarks>
+        /// </remarks>
+        /// <para>The following is an example of the file structure:</para>
         /// <pre><c>[{&quot;URI&quot;:&quot;oss://&lt;bucket&gt;/&lt;object&gt;&quot;, &quot;Alias&quot;:&quot;/new-dir/new-name&quot;}]
         /// </c></pre>
         /// 
@@ -64,9 +71,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourceManifestURI { get; set; }
 
         /// <summary>
-        /// <para>The objects to be packed and packing rules.</para>
+        /// <para>A list of files to package and their packaging rules.</para>
         /// <remarks>
-        /// <para> You must specify this parameter or the SourceManifestURI parameter. The Sources parameter can hold up to 100 packing rules. If you want to include more than 100 packing rules, use the SourceManifestURI parameter.</para>
+        /// <para>Specify either this parameter or \<c>SourceManifestURI\\</c>. \<c>Sources\\</c> supports a maximum of 100 packaging rules.</para>
+        /// <remarks>
+        /// <para>Warning: If you have more than 100 packaging rules, use the \<c>SourceManifestURI\\</c> parameter.</para>
+        /// </remarks>
         /// </remarks>
         /// </summary>
         [NameInMap("Sources")]
@@ -74,8 +84,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string SourcesShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS URI of the package. The object name part in the URI is used as the name of the package. Example: <c>name.zip</c>.</para>
-        /// <para>Specify the OSS URI in the oss://${Bucket}/${Object} format, where <c>${Bucket}</c> is the name of the bucket in the same region as the current project and <c>${Object}</c> is the path of the object with the extension included.</para>
+        /// <para>The OSS address of the output file. The compressed file is named after the file name in this path, such as <c>name.zip</c>.</para>
+        /// <para>The OSS address must be in the \<c>oss\\://${Bucket}/${Object}\\</c> format. \<c>${Bucket}\\</c> is the name of the OSS bucket that is in the same region as the current project. \<c>${Object}\\</c> is the full path of the file, including the file name extension.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,10 +96,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TargetURI { get; set; }
 
         /// <summary>
-        /// <para>The custom information, which is returned in an asynchronous notification and facilitates notification management. The maximum length of the value is 2,048 bytes.</para>
+        /// <para>Custom user data. This data is returned in the asynchronous notification message, which helps you associate the notification with your internal system. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></para>
+        /// <para>test-data</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]

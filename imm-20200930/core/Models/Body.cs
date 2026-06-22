@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The confidence level of the result. A higher value indicates greater confidence. Specifically, a value exceeding 0.8 signifies a high degree of confidence in the result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0.75</para>
+        /// <para>0.82</para>
         /// </summary>
         [NameInMap("Confidence")]
         [Validation(Required=false)]

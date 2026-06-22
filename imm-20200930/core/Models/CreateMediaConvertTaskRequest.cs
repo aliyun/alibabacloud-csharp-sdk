@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateMediaConvertTaskRequest : TeaModel {
         /// <summary>
-        /// <para>When performing media concatenation, the index of the primary media file (which provides the default transcoding parameters for <c>Video</c> and <c>Audio</c>, including resolution, frame rate, etc.) in the concatenation list. The default value is 0 (aligning with the first media file in the concatenation list).</para>
+        /// <para>When concatenating media files, this specifies the index of the primary file in the Sources list. The default transcoding parameters (such as resolution and frame rate from the <c>Video</c> and <c>Audio</c> objects) are taken from this primary file. The default index is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,22 +20,22 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public int? AlignmentIndex { get; set; }
 
         /// <summary>
-        /// <para><b>If there are no special requirements, please leave this blank.</b></para>
-        /// <para>Chain authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Using Chain Authorization to Access Other Entity Resources</a>.</para>
+        /// <para><b>You can leave this parameter empty if you do not have special requirements.</b></para>
+        /// <para>The chained authorization configuration. For more information, see <a href="https://help.aliyun.com/document_detail/465340.html">Use chained authorization to access resources of other entities</a>.</para>
         /// </summary>
         [NameInMap("CredentialConfig")]
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
         /// <summary>
-        /// <para>Notification configuration. For details, click Notification. The format of asynchronous notification messages can be found in <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous Notification Message Format</a>.</para>
+        /// <para>The message notification settings. For more information, click Notification. For information about the format of asynchronous notifications, see <a href="https://help.aliyun.com/document_detail/2743997.html">Asynchronous notification format</a>.</para>
         /// </summary>
         [NameInMap("Notification")]
         [Validation(Required=false)]
         public Notification Notification { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. For how to obtain it, see <a href="https://help.aliyun.com/document_detail/478153.html">Creating a Project</a>.</para>
+        /// <para>The name of the project. For more information about how to obtain the project name, see <a href="https://help.aliyun.com/document_detail/478153.html">Create a project</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>A list of media files. If the list contains more than one element, it indicates that the Concat (concatenation) function is enabled. The Concat order follows the sequence of the input video file URIs.</para>
+        /// <para>A list of media files. If you provide more than one file, they are concatenated in the order of their URIs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Sources")]
@@ -54,17 +54,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public List<CreateMediaConvertTaskRequestSources> Sources { get; set; }
         public class CreateMediaConvertTaskRequestSources : TeaModel {
             /// <summary>
-            /// <para>The alignment strategy for adding audio and video streams, with the following value range:</para>
+            /// <para>The alignment mode for the added audio and video streams. Valid values include:</para>
             /// <list type="bullet">
-            /// <item><description>false (default): No alignment.</description></item>
-            /// <item><description>loop: Loop the audio and video content to align.</description></item>
-            /// <item><description>pad: Align by padding silent frames and black video frames.<remarks>
-            /// <list type="bullet">
-            /// <item><description>Only valid when the Attached parameter is true.</description></item>
-            /// </list>
-            /// </remarks>
+            /// <item><description><para>false (default): No alignment is performed.</para>
+            /// </description></item>
+            /// <item><description><para>loop: Aligns content by looping the audio or video.</para>
+            /// </description></item>
+            /// <item><description><para>pad: Aligns content by padding with silent frames or black frames.</para>
             /// </description></item>
             /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>This parameter only takes effect if Attached is set to true.</description></item>
+            /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -74,10 +77,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string AlignMode { get; set; }
 
             /// <summary>
-            /// <para>Add the current source media file as a synchronized audio or video stream to the output media file, with a default value of false.</para>
+            /// <para>If true, adds the current source media file to the output as a synchronized audio stream or video stream. The default is false.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>The AlignmentIndex parameter pointing to the Attached parameter of the Source cannot be true.</description></item>
+            /// <item><description>You cannot set Attached to true for the source media file referenced by AlignmentIndex.</description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -89,10 +92,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public bool? Attached { get; set; }
 
             /// <summary>
-            /// <para>Whether to disable the audio in the source media file. The value range is as follows:</para>
+            /// <para>Specifies whether to disable the audio from the source media file. Valid values include:</para>
             /// <list type="bullet">
-            /// <item><description>true: Disable.</description></item>
-            /// <item><description>false (default): Do not disable.</description></item>
+            /// <item><description><para>true: Disables the audio.</para>
+            /// </description></item>
+            /// <item><description><para>false (default): Includes the audio.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,10 +108,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public bool? DisableAudio { get; set; }
 
             /// <summary>
-            /// <para>Whether to disable the video in the source media file. The value range is as follows:</para>
+            /// <para>Specifies whether to disable the video from the source media file. Valid values include:</para>
             /// <list type="bullet">
-            /// <item><description>true: Disable.</description></item>
-            /// <item><description>false (default): Do not disable.</description></item>
+            /// <item><description><para>true: Disables the video.</para>
+            /// </description></item>
+            /// <item><description><para>false (default): Includes the video.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,7 +124,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public bool? DisableVideo { get; set; }
 
             /// <summary>
-            /// <para>The duration of media transcoding, in seconds. The default value is 0, indicating until the end of the video.</para>
+            /// <para>The duration of media transcoding in seconds. The default value, 0, transcodes the media until its end.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -127,10 +134,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public double? Duration { get; set; }
 
             /// <summary>
-            /// <para>The start time for media transcoding, in seconds. The value range is as follows:</para>
+            /// <para>The start time of media transcoding, in seconds. Valid values include:</para>
             /// <list type="bullet">
-            /// <item><description>0 (default): Start transcoding from the beginning of the media.</description></item>
-            /// <item><description>n (greater than 0): Start transcoding n seconds after the beginning of the media.</description></item>
+            /// <item><description><para>0 (default): Transcoding starts from the beginning of the media file.</para>
+            /// </description></item>
+            /// <item><description><para>n (a value greater than 0): Transcoding starts n seconds into the media file.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,14 +150,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public double? StartTime { get; set; }
 
             /// <summary>
-            /// <para>A list of subtitles to add, which is empty by default.</para>
+            /// <para>A list of subtitles to add.</para>
             /// </summary>
             [NameInMap("Subtitles")]
             [Validation(Required=false)]
             public List<CreateMediaConvertTaskRequestSourcesSubtitles> Subtitles { get; set; }
             public class CreateMediaConvertTaskRequestSourcesSubtitles : TeaModel {
                 /// <summary>
-                /// <para>The language of the subtitle, referenced by ISO 639-2, with a default value of empty.</para>
+                /// <para>The language of the subtitle. The value must comply with the ISO 639-2 standard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eng</para>
@@ -158,7 +167,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>The subtitle delay time, in seconds, with a default value of 0.</para>
+                /// <para>The subtitle delay, in seconds. The default value is 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.5</para>
@@ -168,8 +177,8 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 public double? TimeOffset { get; set; }
 
                 /// <summary>
-                /// <para>The OSS address rule is <c>oss://${Bucket}/${Object}</c>, where <c>${Bucket}</c> is the name of the OSS Bucket in the same region (Region) as the current project, and <c>${Object}</c> is the complete path of the file including the file extension.
-                /// Supported subtitle formats include: srt, vtt, mov_text, ass, dvd_sub, pgs.</para>
+                /// <para>The OSS URI of the object. The URI must use the <c>oss://${Bucket}/${Object}</c> format, where <c>${Bucket}</c> is the name of an OSS bucket in the same region as the project, and <c>${Object}</c> is the full path to the object, including its file extension.
+                /// Supported subtitle formats include: srt, vtt, mov_text, ass, dvd_sub, and pgs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss://test-bucket/test-object</para>
@@ -181,7 +190,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             }
 
             /// <summary>
-            /// <para>The OSS address rule is <c>oss://${Bucket}/${Object}</c>, where <c>${Bucket}</c> is the name of the OSS Bucket in the same region (Region) as the current project, and <c>${Object}</c> is the complete path of the file including the file extension.</para>
+            /// <para>The OSS URI of the object. The URI must use the <c>oss://${Bucket}/${Object}</c> format, where <c>${Bucket}</c> is the name of an OSS bucket in the same region as the project, and <c>${Object}</c> is the full path to the object, including its file extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://test-bucket/test-object</para>
@@ -193,7 +202,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>Custom tags used for searching and filtering asynchronous tasks.</para>
+        /// <para>Custom tags for searching and filtering asynchronous tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;:&quot;val1&quot;}</para>
@@ -202,62 +211,140 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Tags { get; set; }
 
+        /// <summary>
+        /// <para>A list of media packaging tasks to convert and package the input media into HLS outputs. Each TargetGroup corresponds to one HLS master playlist.</para>
+        /// </summary>
         [NameInMap("TargetGroups")]
         [Validation(Required=false)]
         public List<CreateMediaConvertTaskRequestTargetGroups> TargetGroups { get; set; }
         public class CreateMediaConvertTaskRequestTargetGroups : TeaModel {
+            /// <summary>
+            /// <para>A list of media packaging subtasks. Each <c>Target</c> corresponds to a variant stream (<c>#EXT-X-STREAM-INF</c>) in the HLS master playlist and generates a corresponding HLS media playlist.</para>
+            /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
             public List<CreateMediaConvertTaskRequestTargetGroupsTargets> Targets { get; set; }
             public class CreateMediaConvertTaskRequestTargetGroupsTargets : TeaModel {
+                /// <summary>
+                /// <para>The audio processing parameters.</para>
+                /// <remarks>
+                /// <para>Notice: If this parameter is left empty, the first audio stream, if it exists, is copied directly to the output file.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Audio")]
                 [Validation(Required=false)]
                 public TargetAudio Audio { get; set; }
 
+                /// <summary>
+                /// <para>The packaging container type. Only <c>mp4</c> and <c>ts</c> are supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>mp4</para>
+                /// </summary>
                 [NameInMap("Container")]
                 [Validation(Required=false)]
                 public string Container { get; set; }
 
+                /// <summary>
+                /// <para>The media packaging settings.</para>
+                /// </summary>
                 [NameInMap("Segment")]
                 [Validation(Required=false)]
                 public CreateMediaConvertTaskRequestTargetGroupsTargetsSegment Segment { get; set; }
                 public class CreateMediaConvertTaskRequestTargetGroupsTargetsSegment : TeaModel {
+                    /// <summary>
+                    /// <para>The duration of each segment, in seconds.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>30</para>
+                    /// </summary>
                     [NameInMap("Duration")]
                     [Validation(Required=false)]
                     public double? Duration { get; set; }
 
+                    /// <summary>
+                    /// <para>The media packaging format. Only <c>hls</c> is supported.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>hls</para>
+                    /// </summary>
                     [NameInMap("Format")]
                     [Validation(Required=false)]
                     public string Format { get; set; }
 
+                    /// <summary>
+                    /// <para>The starting sequence number for segments. The default is 0.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
                     [NameInMap("StartNumber")]
                     [Validation(Required=false)]
                     public int? StartNumber { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The playback speed of the output media. The value must be between 0.5 and 1.0, inclusive. The default value is 1.0.</para>
+                /// <remarks>
+                /// <para>This parameter specifies the default playback speed of the output file as a ratio of the source file\&quot;s speed. It does not perform speed-up transcoding.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1.0</para>
+                /// </summary>
                 [NameInMap("Speed")]
                 [Validation(Required=false)]
                 public float? Speed { get; set; }
 
+                /// <summary>
+                /// <para>If true, removes metadata from the output file. The default is false.</para>
+                /// </summary>
                 [NameInMap("StripMetadata")]
                 [Validation(Required=false)]
                 public bool? StripMetadata { get; set; }
 
+                /// <summary>
+                /// <para>The subtitle processing parameters.</para>
+                /// <remarks>
+                /// <para>Notice: You must use the <c>Subtitle.ExtractSubtitle</c> parameter to package subtitle streams. The <c>URI</c> in <c>Subtitle.ExtractSubtitle</c> must be in the same directory as or a subdirectory of <c>TargetGroups.URI</c>. The <c>Format</c> in <c>Subtitle.ExtractSubtitle</c> must be <c>vtt</c>. You only need to configure this parameter in one <c>Target</c> to package all subtitle streams.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Subtitle")]
                 [Validation(Required=false)]
                 public TargetSubtitle Subtitle { get; set; }
 
+                /// <summary>
+                /// <para>The OSS URI of the output HLS media playlist file for the subtask.</para>
+                /// <remarks>
+                /// <para>Notice: This URI must be in the same directory as or a subdirectory of <c>TargetGroups.URI</c>.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>oss://test-bucket/test-target-object.mp4</para>
+                /// </summary>
                 [NameInMap("URI")]
                 [Validation(Required=false)]
                 public string URI { get; set; }
 
+                /// <summary>
+                /// <para>The video processing parameters.</para>
+                /// <remarks>
+                /// <para>Notice: If this parameter is left empty, the first video stream, if it exists, is copied directly to the output file.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Video")]
                 [Validation(Required=false)]
                 public TargetVideo Video { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The OSS URI of the output HLS master playlist file for the packaging task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>oss://test-bucket/test-object/master.m3u8</para>
+            /// </summary>
             [NameInMap("URI")]
             [Validation(Required=false)]
             public string URI { get; set; }
@@ -265,16 +352,31 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>List of media processing tasks, supporting multiple task configurations.</para>
+        /// <para>A list of media processing tasks.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<CreateMediaConvertTaskRequestTargets> Targets { get; set; }
         public class CreateMediaConvertTaskRequestTargets : TeaModel {
+            /// <summary>
+            /// <para>Settings for retaining attached pictures.</para>
+            /// <remarks>
+            /// <para>Notice: Retaining attached pictures is supported only when the <c>Container</c> parameter is set to <c>mp4</c> or <c>mkv</c>.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("AttachedPicture")]
             [Validation(Required=false)]
             public CreateMediaConvertTaskRequestTargetsAttachedPicture AttachedPicture { get; set; }
             public class CreateMediaConvertTaskRequestTargetsAttachedPicture : TeaModel {
+                /// <summary>
+                /// <para>A list of indexes of the attached pictures in the source file to process. An empty list (default) indicates that no attached pictures are retained. An index of -1 indicates that all attached pictures are retained.</para>
+                /// <list type="bullet">
+                /// <item><description>Example: <c>[0,1]</c> processes the attached pictures with index 0 and 1; <c>[1]</c> processes the attached picture with index 1; <c>[-1]</c> processes all attached pictures.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>If a specified index does not correspond to an existing attached picture, it is ignored.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Stream")]
                 [Validation(Required=false)]
                 public List<int?> Stream { get; set; }
@@ -282,9 +384,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             }
 
             /// <summary>
-            /// <para>Audio processing parameter configuration.</para>
+            /// <para>The audio processing parameters.</para>
             /// <remarks>
-            /// <para>Notice: If Audio is null, the first audio stream (if present) will be directly copied to the output file.</notice></para>
+            /// <para>Notice: If this parameter is left empty, the first audio stream, if it exists, is copied directly to the output file.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Audio")]
@@ -292,12 +394,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public TargetAudio Audio { get; set; }
 
             /// <summary>
-            /// <para>Media container type. Available container types are as follows:</para>
+            /// <para>The media container type. Valid container types include:</para>
             /// <list type="bullet">
-            /// <item><description>Audio and video containers: mp4, mkv, mov, asf, avi, mxf, ts, flv</description></item>
-            /// <item><description>Audio containers: mp3, aac, flac, oga, ac3, opus<remarks>
-            /// <para>Notice: Both Container and URI parameters need to be set. If only subtitle extraction, frame capture, sprite image capture, or media-to-gif conversion is performed, both Container and URI should be set to null, making the Segment, Video, Audio, and Speed parameters meaningless.</notice></para>
+            /// <item><description><para>Audio/video containers: mp4, mkv, mov, asf, avi, mxf, ts, flv</para>
+            /// </description></item>
+            /// <item><description><para>Audio-only containers: mp3, aac, flac, oga, ac3, opus</para>
+            /// <remarks>
+            /// <para>Notice: </para>
             /// </remarks>
+            /// <para>The <c>Container</c> and <c>URI</c> parameters must be set together. To perform only subtitle extraction, frame capture, sprite generation, or animated image generation, leave both <c>Container</c> and <c>URI</c> empty. In this case, parameters such as <c>Segment</c>, <c>Video</c>, <c>Audio</c>, and <c>Speed</c> are ignored.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -308,10 +413,25 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             [Validation(Required=false)]
             public string Container { get; set; }
 
+            /// <summary>
+            /// <para>Settings for retaining data streams.</para>
+            /// <remarks>
+            /// <para>Notice: Retaining data streams is supported only when the <c>Container</c> parameter is set to <c>mp4</c>.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public CreateMediaConvertTaskRequestTargetsData Data { get; set; }
             public class CreateMediaConvertTaskRequestTargetsData : TeaModel {
+                /// <summary>
+                /// <para>A list of indexes of the data streams in the source file to process. An empty list (default) indicates that no data streams are retained. An index of -1 indicates that all data streams are retained.</para>
+                /// <list type="bullet">
+                /// <item><description>Example: <c>[0,1]</c> processes the data streams with index 0 and 1; <c>[1]</c> processes the data stream with index 1; <c>[-1]</c> processes all data streams.</description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>If a specified index does not correspond to an existing data stream, it is ignored.</para>
+                /// </remarks>
+                /// </summary>
                 [NameInMap("Stream")]
                 [Validation(Required=false)]
                 public List<int?> Stream { get; set; }
@@ -319,21 +439,21 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             }
 
             /// <summary>
-            /// <para>Configuration for frame capture, sprite image capture, and media to animated image conversion.</para>
+            /// <para>The parameters for frame capture, sprite generation, and animated image generation.</para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public TargetImage Image { get; set; }
 
             /// <summary>
-            /// <para>Media segment settings, no segmentation by default.</para>
+            /// <para>Settings for media segmentation.</para>
             /// </summary>
             [NameInMap("Segment")]
             [Validation(Required=false)]
             public CreateMediaConvertTaskRequestTargetsSegment Segment { get; set; }
             public class CreateMediaConvertTaskRequestTargetsSegment : TeaModel {
                 /// <summary>
-                /// <para>Segment length. Unit: seconds.</para>
+                /// <para>The duration of each segment, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -343,10 +463,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 public double? Duration { get; set; }
 
                 /// <summary>
-                /// <para>Media slicing method. The value range is as follows:</para>
+                /// <para>The segmentation method. Valid values include:</para>
                 /// <list type="bullet">
-                /// <item><description>hls</description></item>
-                /// <item><description>dash</description></item>
+                /// <item><description><para>hls</para>
+                /// </description></item>
+                /// <item><description><para>dash</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -357,7 +479,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
                 public string Format { get; set; }
 
                 /// <summary>
-                /// <para>Starting sequence number, supported only for hls, default is 0.</para>
+                /// <para>The starting sequence number. This parameter is supported only for HLS. The default value is 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -369,9 +491,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             }
 
             /// <summary>
-            /// <para>Media playback speed setting, with a value range of [0.5,1.0], default is 1.0.</para>
+            /// <para>The playback speed of the output media. The value must be between 0.5 and 1.0, inclusive. The default value is 1.0.</para>
             /// <remarks>
-            /// <para>The ratio of the playback speed of the transcoded media file to the original media file, not a speed-up transcoding.</para>
+            /// <para>This parameter specifies the default playback speed of the output file as a ratio of the source file\&quot;s speed. It does not perform speed-up transcoding.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -382,16 +504,16 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public float? Speed { get; set; }
 
             /// <summary>
-            /// <para>Removes metadata from the media file, such as <c>title</c>, <c>album</c>, etc. The default value is false.</para>
+            /// <para>If true, removes metadata such as <c>title</c> and <c>album</c> from the media file. The default is false.</para>
             /// </summary>
             [NameInMap("StripMetadata")]
             [Validation(Required=false)]
             public bool? StripMetadata { get; set; }
 
             /// <summary>
-            /// <para>Subtitle processing parameter configuration.</para>
+            /// <para>The subtitle processing parameters.</para>
             /// <remarks>
-            /// <para>Notice: If Subtitle is null, the first subtitle stream (if present) will be directly copied to the output file.</notice></para>
+            /// <para>Notice: If this parameter is left empty, the first subtitle stream, if it exists, is copied directly to the output file.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Subtitle")]
@@ -399,13 +521,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public TargetSubtitle Subtitle { get; set; }
 
             /// <summary>
-            /// <para>OSS address for the output file of media transcoding.</para>
-            /// <para>The OSS address rule is <c>oss://${Bucket}/${Object}</c>, where <c>${Bucket}</c> is the name of the OSS Bucket in the same region (Region) as the current project, and <c>${Object}</c> is the complete path of the file including the file extension.</para>
+            /// <para>The OSS URI of the output file for media transcoding.</para>
+            /// <para>The URI must be in the <c>oss://${Bucket}/${Object}</c> format. In this format, <c>${Bucket}</c> is the name of the OSS bucket, which must be in the same region as the project, and <c>${Object}</c> is the full path to the object, including the file extension.</para>
             /// <list type="bullet">
-            /// <item><description>When <b>URI</b> has an extension, the OSS address for the transcoded media file will be <b>URI</b>. If there are multiple output files, they may overwrite each other.</description></item>
-            /// <item><description>When <b>URI</b> does not have an extension, the OSS address for the transcoded media file is determined by the <b>URI</b>, <b>Container</b>, and <b>Segment</b> parameters. For example, if <b>URI</b> is <c>oss://examplebucket/outputVideo</c>:<list type="bullet">
-            /// <item><description>When <b>Container</b> is <c>mp4</c> and <b>Segment</b> is empty, the generated media file\&quot;s OSS address will be <c>oss://examplebucket/outputVideo.mp4</c>.</description></item>
-            /// <item><description>When <b>Container</b> is <c>ts</c> and <b>Segment</b>\&quot;s <b>Format</b> is <c>hls</c>, it will generate an m3u8 file with the OSS address <c>oss://examplebucket/outputVideo.m3u8</c> and multiple ts files with the prefix <c>oss://examplebucket/outputVideo</c>.</description></item>
+            /// <item><description><para>If the <b>URI</b> has a file extension, all output media files are saved to this <b>URI</b>. If multiple files are generated, they will overwrite each other.</para>
+            /// </description></item>
+            /// <item><description><para>If the <b>URI</b> does not have a file extension, the final output URI is generated based on the <b>URI</b>, <b>Container</b>, and <b>Segment</b> parameters. For example, if the <b>URI</b> is <c>oss://examplebucket/outputVideo</c>:</para>
+            /// <list type="bullet">
+            /// <item><description><para>If <b>Container</b> is <c>mp4</c> and <b>Segment</b> is empty, the OSS URI of the generated media file is <c>oss://examplebucket/outputVideo.mp4</c>.</para>
+            /// </description></item>
+            /// <item><description><para>If <b>Container</b> is <c>ts</c> and <b>Format</b> in <b>Segment</b> is <c>hls</c>, the process generates an m3u8 file with the OSS URI <c>oss://examplebucket/outputVideo.m3u8</c> and multiple TS files prefixed with <c>oss://examplebucket/outputVideo</c>.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -418,9 +544,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
             public string URI { get; set; }
 
             /// <summary>
-            /// <para>Video processing parameter configuration.</para>
+            /// <para>The video processing parameters.</para>
             /// <remarks>
-            /// <para>Notice: If Video is null, the first video stream (if present) will be directly copied to the output file.</notice></para>
+            /// <para>Notice: If this parameter is left empty, the first video stream, if it exists, is copied directly to the output file.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Video")]
@@ -430,7 +556,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         }
 
         /// <summary>
-        /// <para>User-defined information that will be returned in asynchronous message notifications, used for convenient association and processing within your system. The maximum length is 2048 bytes.</para>
+        /// <para>The custom user data. This data is returned in the asynchronous notification, allowing you to associate the notification with your internal system. The maximum length is 2,048 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;testuid&quot;,&quot;Name&quot;: &quot;test-user&quot;,&quot;Avatar&quot;: &quot;<a href="http://test.com/testuid%22%7D">http://test.com/testuid&quot;}</a></para>

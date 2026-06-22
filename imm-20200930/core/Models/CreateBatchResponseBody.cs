@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateBatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the batch processing task.</para>
+        /// <para>The batch processing task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>batch-4eb9223f-3e88-42d3-a578-3f2852******</para>

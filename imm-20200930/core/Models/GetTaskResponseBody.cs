@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The end time of the task.</para>
+        /// <para>The time when the task ended. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-24T03:01:49.480109219Z</para>
@@ -50,9 +50,12 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The task progress. Valid values: 0 to 100. Unit: %.</para>
+        /// <para>The task progress. Valid values: 0 to 100. Unit: percent (%).</para>
         /// <remarks>
-        /// <para> This parameter is valid only if the task is in the <c>Running</c> state.``</para>
+        /// <list type="bullet">
+        /// <item><description>The GetTask operation does not support this parameter.</description></item>
+        /// <item><description>This parameter is meaningful only when the task status <c>State</c> is <c>Running</c>.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The project name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>immtest</para>
+        /// <para>test-project</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the task.</para>
+        /// <para>The time when the task started. The value is a UTC timestamp in ISO 8601 format with millisecond precision.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-24T03:01:41.662060377Z</para>
@@ -93,11 +96,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The running status of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RUNNING: The task is running.</description></item>
-        /// <item><description>Succeeded: The task is successful.</description></item>
-        /// <item><description>Failed: The task failed.</description></item>
+        /// <item><description><para>Running: The task is running.</para>
+        /// </description></item>
+        /// <item><description><para>Succeeded: The task is completed.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The task failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags. This parameter is returned only if you specified Tags when you created the task.</para>
+        /// <para>The task tags. These are the tags that the user passed in when creating the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;test&quot;: &quot;val1&quot;}</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The initial request parameters used to create the task.</para>
+        /// <para>The original request parameters used to create the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -143,17 +149,17 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string TaskRequestDefinition { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. For more information, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task types</a>.</para>
+        /// <para>The type of the task. For valid values, see <a href="https://help.aliyun.com/document_detail/2743993.html">Task type list</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VideoLabelClassification</para>
+        /// <para>FileCompression</para>
         /// </summary>
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The user data of the task.</para>
+        /// <para>The custom information specified by the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ID&quot;: &quot;user1&quot;,&quot;Name&quot;: &quot;test-user1&quot;,&quot;Avatar&quot;: &quot;<a href="http://example.com?id=user1%22%7D">http://example.com?id=user1&quot;}</a></para>

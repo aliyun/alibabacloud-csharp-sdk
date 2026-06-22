@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class DetectImageCroppingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The image cropping suggestions.</para>
+        /// <para>The array of image cropping information.</para>
         /// </summary>
         [NameInMap("Croppings")]
         [Validation(Required=false)]
         public List<CroppingSuggestion> Croppings { get; set; }
 
+        /// <summary>
+        /// <para>The list of objects included in the cropping region, corresponding to the InclusionHints input parameter. This field is empty if no objects are included.</para>
+        /// </summary>
         [NameInMap("MatchedInclusionHints")]
         [Validation(Required=false)]
         public List<string> MatchedInclusionHints { get; set; }

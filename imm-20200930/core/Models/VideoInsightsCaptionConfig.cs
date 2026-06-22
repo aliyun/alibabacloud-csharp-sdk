@@ -9,9 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class VideoInsightsCaptionConfig : TeaModel {
+        [NameInMap("Enable")]
+        [Validation(Required=false)]
+        public bool? Enable { get; set; }
+
         [NameInMap("PersonReference")]
         [Validation(Required=false)]
         public PersonReferenceConfig PersonReference { get; set; }
+
+        [NameInMap("Prompt")]
+        [Validation(Required=false)]
+        public string Prompt { get; set; }
 
     }
 

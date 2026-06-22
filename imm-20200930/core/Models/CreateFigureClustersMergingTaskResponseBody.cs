@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class CreateFigureClustersMergingTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event ID.</para>
+        /// <para>The ID of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ED-1Bz8z71k5TtsUejT4UJ16E****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string EventId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CA995EFD-083D-4F40-BE8A-BDF75FF****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>92376fbb-171f-4259-913f-705f7ee0****</para>

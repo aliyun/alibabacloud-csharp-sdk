@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>The watermark content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Copyright Alibaba Cloud</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

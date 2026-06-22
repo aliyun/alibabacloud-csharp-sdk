@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The content of the question.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello, which park is closest to me?</para>
+        /// <para>你好，哪个公园距离我最近？</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The answer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello, I\&quot;m your assistant.</para>
+        /// <para>你好，我是你的助手</para>
         /// </summary>
         [NameInMap("Reply")]
         [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The topic in the question.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The value varies based on the value of the AssistantType parameter.</para>
+        /// <para>根据 AssistantType 不同具体含义不同。</para>
         /// </summary>
         [NameInMap("Topic")]
         [Validation(Required=false)]

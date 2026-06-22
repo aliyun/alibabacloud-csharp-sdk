@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://examplebucket/exampleobject.txt</para>
+        /// <para>oss://test-bucket/test-object</para>
         /// </summary>
         [NameInMap("URI")]
         [Validation(Required=false)]

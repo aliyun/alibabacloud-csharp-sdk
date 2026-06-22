@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
     public class App : TeaModel {
         /// <summary>
         /// <para>AppDescription</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>中国最大的电商购物商城</para>
         /// </summary>
         [NameInMap("AppDescription")]
         [Validation(Required=false)]
@@ -38,6 +41,9 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
 
         /// <summary>
         /// <para>AppName</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>淘宝</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]

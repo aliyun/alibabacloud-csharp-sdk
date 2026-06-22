@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>CAESEgoQCg4KCkltYWdlQ291bnQQARgBIr0ECgkABAAAAAAAAAAKrwQDKgIAADFTMzEzMDMyMzMzMjMxMzAzMDMyMzQzNjM3MzczOTMzMzQzYTY5NmQ2ZDJkNjk2ZDYxNjc2NTJkNzQ2NTczNzQyZDY4N2E2NDY1NzYyZDMyMzUzMjM0MzIzOTMzMzczMTJkMzY1NDZhNzk3MzU2Njk3MjM0M2E2OTZkNmQyZDc0NjU3Mzc0MmQ3MzY1NzQyZDYzMzYzNjY0MzY2NjYxMzQyZDM1MzMzODM3MmQzMTMxNjU2NjJkNjI2NTM5MzYyZDM5MzgzMDMzMzk2MjMwMzE2NDYzNjMzMjNhNjY2OTY3NzU3MjY1MmQ2MzZjNzU3Mzc0NjU3MjNhNDM2Yzc1NzM3NDY1NzIyZDYxNjUzOTY0MzQzMzMxNjEyZDM3MzQ2NTY2MmQzNDM5Mzc2MjJkMzg2MjMxMzUyZDM0MzUzOTM1MzYzNzYxMzQ2NDM2MzE2Ni5TMzEzMDMyMzMzMjMxMzAzMDMyMzQzNjM3MzczOTMzMzQzYTY5NmQ2ZDJkNjk2ZDYxNjc2NTJkNzQ2NTczNzQyZDY4N2E2NDY1NzYyZDMyMzUzMjM0MzIzOTMzMzczMTJkMzY1NDZhNzk3MzU2Njk3MjM0M2E2OTZkNmQyZDc0NjU3Mzc0MmQ3MzY1NzQyZDYzMzYzNjY0MzY2NjYxMzQyZDM1MzMzODM3MmQzMTMxNjU2NjJkNjI2NTM5MzYyZDM5MzgzMDMzMzk2MjMwMzE2NDYzNjM*****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -61,8 +61,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The sort order. Default value: asc.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: ascending order.</description></item>
-        /// <item><description>desc: descending order.</description></item>
+        /// <item><description><para>asc: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>desc: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,15 +89,24 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <para>The sort field. If you leave this parameter empty, the group ID is used as the sort field.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ImageCount: the number of images.</description></item>
-        /// <item><description>VideoCount: the number of videos.</description></item>
-        /// <item><description>ProjectName: the name of the project.</description></item>
-        /// <item><description>DatasetName: the name of the dataset.</description></item>
-        /// <item><description>CreateTime: the point in time when the group is created.</description></item>
-        /// <item><description>UpdateTime: the most recent point in time when the group is updated.</description></item>
-        /// <item><description>Gender: the gender.</description></item>
-        /// <item><description>FaceCount: the number of faces.</description></item>
-        /// <item><description>GroupName: the name of the group.</description></item>
+        /// <item><description><para>ImageCount: the number of images.</para>
+        /// </description></item>
+        /// <item><description><para>VideoCount: the number of videos.</para>
+        /// </description></item>
+        /// <item><description><para>ProjectName: the name of the project.</para>
+        /// </description></item>
+        /// <item><description><para>DatasetName: the name of the dataset.</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime: the point in time when the group is created.</para>
+        /// </description></item>
+        /// <item><description><para>UpdateTime: the most recent point in time when the group is updated.</para>
+        /// </description></item>
+        /// <item><description><para>Gender: the gender.</para>
+        /// </description></item>
+        /// <item><description><para>FaceCount: the number of faces.</para>
+        /// </description></item>
+        /// <item><description><para>GroupName: the name of the group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
