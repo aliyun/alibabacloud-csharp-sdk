@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteNatFirewallControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31306819-C4BC-56F3-BBE6-*****</para>

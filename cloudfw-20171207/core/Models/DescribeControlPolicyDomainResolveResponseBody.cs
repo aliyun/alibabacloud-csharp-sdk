@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The domain resolution results.</para>
+        /// <para>The domain name resolution results.</para>
         /// </summary>
         [NameInMap("ResolveResult")]
         [Validation(Required=false)]
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The list of ip addresses.</para>
+            /// <para>The IP address list.</para>
             /// </summary>
             [NameInMap("IpAddrList")]
             [Validation(Required=false)]
             public List<string> IpAddrList { get; set; }
 
             /// <summary>
-            /// <para>The supported ip version.</para>
+            /// <para>The supported IP address version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The update time, provided as a unix timestamp in seconds.</para>
+            /// <para>The update time. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1579091739</para>

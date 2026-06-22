@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The type of the Cloud Firewall.</para>
+        /// <para>The Cloud Firewall type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internet</para>

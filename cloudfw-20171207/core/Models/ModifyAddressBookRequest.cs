@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyAddressBookRequest : TeaModel {
         /// <summary>
-        /// <para>A list of ACK cluster pod labels.</para>
+        /// <para>The list of ACK cluster pod labels.</para>
         /// <remarks>
-        /// <para>Up to 10 labels are allowed.</para>
+        /// <para>Maximum of 10 entries.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AckLabels")]
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>A list of ACK cluster pod namespaces.</para>
+        /// <para>The list of ACK cluster pod namespaces.</para>
         /// <remarks>
-        /// <para>Up to 10 namespaces are allowed.</para>
+        /// <para>Maximum of 10 entries.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AckNamespaces")]
@@ -52,13 +52,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> AckNamespaces { get; set; }
 
         /// <summary>
-        /// <para>A list of addresses in the address book. Separate multiple addresses with commas. Within each address element, separate the address and its description with a space. You must specify this parameter when GroupType is <b>ip</b>, <b>port</b>, or <b>domain</b>.</para>
+        /// <para>The list of addresses in the address book. Multiple addresses are separated by commas, and each address element uses a space to separate the address from its description. You must configure this parameter when GroupType is <b>ip</b>, <b>port</b>, or <b>domain</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>When GroupType is <b>ip</b>, specify IP addresses. Example: 1.2.XX.XX/32 development CIDR block, 10.0.0.X/24,1.2.XX.XX/24 test CIDR block.</para>
+        /// <item><description><para>When GroupType is <b>ip</b>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development network segment, 10.0.0.X/24,1.2.XX.XX/24 Test network segment.</para>
         /// </description></item>
-        /// <item><description><para>When GroupType is <b>port</b>, specify ports or port ranges. Example: 80/80 HTTP port, 100/200,3306 database port.</para>
+        /// <item><description><para>When GroupType is <b>port</b>, enter ports or port ranges in the address list. Example: 80/80 HTTP port, 100/200,3306 Database port.</para>
         /// </description></item>
-        /// <item><description><para>When GroupType is <b>domain</b>, specify domain names. Example: demo1.aliyun.com test domain, demo2.aliyun.com,www\.aliyun.com Alibaba Cloud official website.</para>
+        /// <item><description><para>When GroupType is <b>domain</b>, enter domain names in the address list. Example: demo1.aliyun.com Test domain, demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AddressList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically add public IP addresses of new ECS instances that match the specified tags to the address book.</para>
+        /// <para>Specifies whether to automatically add the public IP addresses of ECS instances that match new tags to the address book.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The unique ID of the address book.</para>
         /// <remarks>
-        /// <para>Obtain this value from <a href="~~DescribeAddressBook~~">DescribeAddressBook</a>.</para>
+        /// <para>Value source: <a href="~~DescribeAddressBook~~">Query Address Book List</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -126,12 +126,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The modification mode.</para>
+        /// <para>The modification method.</para>
         /// <remarks>
-        /// <para>When GroupType is <b>ip</b>, <b>ipv6</b>, <b>port</b>, or <b>domain</b>, the default mode is <b>Cover</b> if this parameter is not specified.</para>
-        /// <remarks>
-        /// <para>Notice: When GroupType is <b>tag</b>, this parameter must be empty.</para>
-        /// </remarks>
+        /// <para>When GroupType is <b>ip</b>, <b>ipv6</b>, <b>port</b>, or <b>domain</b>, and this parameter is not configured, the address book is modified using the <b>Cover</b> method by default.
+        /// Notice: When GroupType is <b>tag</b>, this parameter must be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -155,14 +153,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>A list of ECS tags.</para>
+        /// <para>The list of ECS tags.</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
         public List<ModifyAddressBookRequestTagList> TagList { get; set; }
         public class ModifyAddressBookRequestTagList : TeaModel {
             /// <summary>
-            /// <para>The tag key of the ECS instance.</para>
+            /// <para>The key of the ECS tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TXY</para>
@@ -172,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the ECS instance.</para>
+            /// <para>The value of the ECS tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -184,7 +182,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The relationship between multiple ECS tags.</para>
+        /// <para>The logical relationship among multiple ECS tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>

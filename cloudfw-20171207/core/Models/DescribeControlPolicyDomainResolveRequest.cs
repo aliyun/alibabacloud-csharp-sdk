@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The type of the Cloud Firewall instance.</para>
+        /// <para>The Cloud Firewall type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internet</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The supported ip version.</para>
+        /// <para>The supported IP address version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -40,7 +40,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response.</para>
+        /// <para>The language type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

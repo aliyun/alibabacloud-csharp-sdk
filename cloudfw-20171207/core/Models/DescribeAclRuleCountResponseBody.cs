@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAclRuleCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of inbound access control policies on the Internet border.</para>
+        /// <para>The number of inbound access control policies for the Internet firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -29,18 +29,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? InternetOutAclCount { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The number of inbound access control policies on the NAT boundary.&gt;Notice:  This field is deprecated.</para>
+        /// <para>The number of inbound access control policies for the NAT firewall.&gt;Notice: This field is deprecated..</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
         [NameInMap("NatInAclCount")]
         [Validation(Required=false)]
+        [Obsolete]
         public int? NatInAclCount { get; set; }
 
         /// <summary>
-        /// <para>The number of outbound access control policies on the NAT boundary.</para>
+        /// <para>The number of internal-to-external access control policies for the NAT firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? NatOutAclCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27936D6C-1B7A-5A5A-B9E4-FBEBBDAA****</para>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of policies.</para>
+        /// <para>The total number of access control policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalAclCount { get; set; }
 
         /// <summary>
-        /// <para>The number of access control policies on the VPC border.</para>
+        /// <para>The number of access control policies for the VPC firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePageDocumentsRequest : TeaModel {
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +24,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page name.</para>
+        /// <para>The page name. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>overview</b>: overview page</description></item>
+        /// <item><description><b>access</b>: access control page</description></item>
+        /// <item><description><b>switch</b>: firewall page.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageName { get; set; }
 
         /// <summary>
-        /// <para>The tracing code for the source.</para>
+        /// <para>The tracing code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceCode { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223.167.221.XXX</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddPrivateDnsDomainNameRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the private DNS instance.</para>
+        /// <para>The ID of the private DNS resolution instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> DomainNameList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located.</para>
+        /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// <para>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

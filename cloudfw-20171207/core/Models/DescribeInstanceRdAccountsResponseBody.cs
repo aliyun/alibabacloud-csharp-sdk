@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRdAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the accounts.</para>
+        /// <para>The account information.</para>
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public List<DescribeInstanceRdAccountsResponseBodyAccounts> Accounts { get; set; }
         public class DescribeInstanceRdAccountsResponseBodyAccounts : TeaModel {
             /// <summary>
-            /// <para>The ID of the member account.</para>
+            /// <para>The ID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>171054237268****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The display name of the member.</para>
+            /// <para>The name of the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06D1EC07-C9EB-58AC-A750-C87C9A0****</para>

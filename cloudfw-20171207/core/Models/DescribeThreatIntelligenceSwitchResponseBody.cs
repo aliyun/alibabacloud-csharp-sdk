@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public class DescribeThreatIntelligenceSwitchResponseBodyCategoryList : TeaModel {
             /// <summary>
             /// <para>The action of the rule. Valid values:</para>
-            /// <para><b>alert</b>: Monitor.</para>
-            /// <para><b>drop</b>: Block.</para>
+            /// <para> <b>alert</b>: monitor mode.</para>
+            /// <para> <b>drop</b>: Block Mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alert</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The description of the category.</para>
+            /// <para>The category description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tor Export Malicious IP</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the category.</para>
+            /// <para>The category name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tor Export Malicious IP</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CategoryParentId { get; set; }
 
             /// <summary>
-            /// <para>The status of the switch. Valid values:</para>
-            /// <para><b>1</b>: enabled.</para>
-            /// <para><b>0</b>: disabled.</para>
+            /// <para>The enabling status. Valid values:</para>
+            /// <para> <b>1</b>: enabled.</para>
+            /// <para> <b>0</b>: disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6B8E0379-2629-59A1-B811-96F3E****</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24</para>

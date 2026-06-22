@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language of the received messages.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b>: Chinese (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b>: (default) Chinese</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskData { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. For a list of valid values, see the API for querying file download task types.</para>
+        /// <para>The task type. For valid values, call the API operation that queries file download task types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternetFirewallAsset</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The time zone of the time information in the downloaded file. The value is an IANA time zone identifier. The default value is Asia/Shanghai, which corresponds to UTC+8.</para>
+        /// <para>The time zone for time information in the downloaded file. The value is an IANA time zone identifier. Default value: Asia/Shanghai (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Shanghai</para>

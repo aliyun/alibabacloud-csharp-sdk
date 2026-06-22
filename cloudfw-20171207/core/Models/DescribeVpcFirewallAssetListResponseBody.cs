@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAssetListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The number of intrusion prevention system (IPS) hits.</para>
+            /// <para>The number of IPS hits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The threat level.</para>
+            /// <para>The risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The reason for the threat.</para>
+            /// <para>The risk reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>924A6CCC-4EAD-5554-8AD0-45F5ED56****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

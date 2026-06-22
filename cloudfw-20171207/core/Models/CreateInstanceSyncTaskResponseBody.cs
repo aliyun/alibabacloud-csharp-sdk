@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Module { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D19D8F70-D64B-5A95-905A-6073BF4A****</para>

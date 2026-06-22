@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
     public class DeleteNatFirewallControlPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The unique ID of the access control policy.</para>
-        /// <para>To delete an access control policy, provide its unique ID. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</para>
+        /// <para>To delete a security access control policy, you must provide the unique ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The traffic direction that the access control policy manages.</para>
-        /// <para>Valid value:</para>
+        /// <para>The direction of traffic that the access control policy controls.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>out</b>: outbound traffic.</description></item>
         /// </list>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language type of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -212,14 +212,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
+        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -305,14 +305,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
+        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -398,14 +398,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
+        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -423,14 +423,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
+        /// <para>Create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates an address book. You can create an IPv4 address book, an ECS tag-based address book, an IPv6 address book, a domain name address book, or an ACK address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This operation has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>This API operation is used to create an address book, including IPv4 address book, ECS tag address book, IPv6 address book, domain address book, and ACK address book.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -453,9 +453,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this API to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This API has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, your API calls are throttled. This throttling may affect your business. Call this API at a reasonable rate.</para>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -598,9 +598,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this API to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This API has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, your API calls are throttled. This throttling may affect your business. Call this API at a reasonable rate.</para>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -743,9 +743,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this API to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This API has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, your API calls are throttled. This throttling may affect your business. Call this API at a reasonable rate.</para>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -768,9 +768,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can use this API to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>This API has a queries per second (QPS) limit of 10 for each user. If you exceed this limit, your API calls are throttled. This throttling may affect your business. Call this API at a reasonable rate.</para>
+        /// <para>You can call this operation to create a policy that allows, denies, or monitors traffic that passes through Cloud Firewall.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls per second exceeds the limit, throttling is triggered. Throttling may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1305,9 +1305,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the DNS resolution results for a domain name. The domain name that you query must use Alibaba Cloud DNS because this operation can retrieve results only from Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS before you can obtain its resolution results.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, your API calls are throttled, which may affect your business. Call this operation at a reasonable frequency to prevent throttling.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1362,9 +1362,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the DNS resolution results for a domain name. The domain name that you query must use Alibaba Cloud DNS because this operation can retrieve results only from Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS before you can obtain its resolution results.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, your API calls are throttled, which may affect your business. Call this operation at a reasonable frequency to prevent throttling.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1419,9 +1419,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the DNS resolution results for a domain name. The domain name that you query must use Alibaba Cloud DNS because this operation can retrieve results only from Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS before you can obtain its resolution results.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, your API calls are throttled, which may affect your business. Call this operation at a reasonable frequency to prevent throttling.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1444,9 +1444,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the DNS resolution results for a domain name. The domain name that you query must use Alibaba Cloud DNS because this operation can retrieve results only from Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS before you can obtain its resolution results.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, your API calls are throttled, which may affect your business. Call this operation at a reasonable frequency to prevent throttling.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1468,17 +1468,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.</para>
+        /// <para>Copies all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.
-        /// Back up your policies before you run this operation. For more information about policy backups, see <a href="https://help.aliyun.com/document_detail/170363.html">Policy backup</a>.
-        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced by the policies from the source VPC firewall policy group.
-        /// The source and destination VPC firewall policy groups must belong to the same Alibaba Cloud account.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the number of calls to the API exceeds this limit, your calls are throttled. This may affect your business. Ensure that you call this API within the limit.</para>
+        /// <para>This operation is used to copy all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.
+        /// Before performing this operation, back up your policies. For more information, see <a href="https://help.aliyun.com/document_detail/170363.html">policy backup</a>.
+        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced with the policies from the source VPC firewall policy group.
+        /// The source VPC firewall policy group and the destination VPC firewall policy group must belong to the same Alibaba Cloud account.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1538,17 +1538,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.</para>
+        /// <para>Copies all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.
-        /// Back up your policies before you run this operation. For more information about policy backups, see <a href="https://help.aliyun.com/document_detail/170363.html">Policy backup</a>.
-        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced by the policies from the source VPC firewall policy group.
-        /// The source and destination VPC firewall policy groups must belong to the same Alibaba Cloud account.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the number of calls to the API exceeds this limit, your calls are throttled. This may affect your business. Ensure that you call this API within the limit.</para>
+        /// <para>This operation is used to copy all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.
+        /// Before performing this operation, back up your policies. For more information, see <a href="https://help.aliyun.com/document_detail/170363.html">policy backup</a>.
+        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced with the policies from the source VPC firewall policy group.
+        /// The source VPC firewall policy group and the destination VPC firewall policy group must belong to the same Alibaba Cloud account.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1608,17 +1608,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.</para>
+        /// <para>Copies all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.
-        /// Back up your policies before you run this operation. For more information about policy backups, see <a href="https://help.aliyun.com/document_detail/170363.html">Policy backup</a>.
-        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced by the policies from the source VPC firewall policy group.
-        /// The source and destination VPC firewall policy groups must belong to the same Alibaba Cloud account.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the number of calls to the API exceeds this limit, your calls are throttled. This may affect your business. Ensure that you call this API within the limit.</para>
+        /// <para>This operation is used to copy all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.
+        /// Before performing this operation, back up your policies. For more information, see <a href="https://help.aliyun.com/document_detail/170363.html">policy backup</a>.
+        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced with the policies from the source VPC firewall policy group.
+        /// The source VPC firewall policy group and the destination VPC firewall policy group must belong to the same Alibaba Cloud account.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1642,17 +1642,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.</para>
+        /// <para>Copies all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API copies all policies from a source VPC firewall policy group to a destination VPC firewall policy group.
-        /// Back up your policies before you run this operation. For more information about policy backups, see <a href="https://help.aliyun.com/document_detail/170363.html">Policy backup</a>.
-        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced by the policies from the source VPC firewall policy group.
-        /// The source and destination VPC firewall policy groups must belong to the same Alibaba Cloud account.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the number of calls to the API exceeds this limit, your calls are throttled. This may affect your business. Ensure that you call this API within the limit.</para>
+        /// <para>This operation is used to copy all policies from a source virtual private cloud (VPC) firewall policy group to a destination VPC firewall policy group.
+        /// Before performing this operation, back up your policies. For more information, see <a href="https://help.aliyun.com/document_detail/170363.html">policy backup</a>.
+        /// After this operation is complete, the policies in the destination VPC firewall policy group are completely replaced with the policies from the source VPC firewall policy group.
+        /// The source VPC firewall policy group and the destination VPC firewall policy group must belong to the same Alibaba Cloud account.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1672,7 +1672,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes access control policies for a VPC firewall in a batch.</para>
+        /// <para>Batch deletes access control policies of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1718,7 +1718,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes access control policies for a VPC firewall in a batch.</para>
+        /// <para>Batch deletes access control policies of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1764,7 +1764,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes access control policies for a VPC firewall in a batch.</para>
+        /// <para>Batch deletes access control policies of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1782,7 +1782,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes access control policies for a VPC firewall in a batch.</para>
+        /// <para>Batch deletes access control policies of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1800,7 +1800,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the storage for firewall logs.</para>
+        /// <para>Clears firewall audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1842,7 +1842,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the storage for firewall logs.</para>
+        /// <para>Clears firewall audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1884,7 +1884,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the storage for firewall logs.</para>
+        /// <para>Clears firewall audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1902,7 +1902,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the storage for firewall logs.</para>
+        /// <para>Clears firewall audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1925,8 +1925,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>Each user is limited to 10 queries per second (QPS) for this API. If this limit is exceeded, API calls are throttled. To avoid service disruptions, plan your calls accordingly.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2005,8 +2005,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>Each user is limited to 10 queries per second (QPS) for this API. If this limit is exceeded, API calls are throttled. To avoid service disruptions, plan your calls accordingly.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2085,8 +2085,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>Each user is limited to 10 queries per second (QPS) for this API. If this limit is exceeded, API calls are throttled. To avoid service disruptions, plan your calls accordingly.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2109,8 +2109,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limits</h2>
-        /// <para>Each user is limited to 10 queries per second (QPS) for this API. If this limit is exceeded, API calls are throttled. To avoid service disruptions, plan your calls accordingly.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2128,7 +2128,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) check.</para>
+        /// <para>Creates an ACL check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2178,7 +2178,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) check.</para>
+        /// <para>Creates an ACL check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2228,7 +2228,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) check.</para>
+        /// <para>Creates an ACL check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2246,7 +2246,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an access control list (ACL) check.</para>
+        /// <para>Creates an ACL check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2408,7 +2408,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for Internet assets.</para>
+        /// <para>Creates a synchronization task for Internet assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2454,7 +2454,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for Internet assets.</para>
+        /// <para>Creates a synchronization task for Internet assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2500,7 +2500,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for Internet assets.</para>
+        /// <para>Creates a synchronization task for Internet assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2518,7 +2518,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for Internet assets.</para>
+        /// <para>Creates a synchronization task for Internet assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2988,12 +2988,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck for NAT firewall creation.</para>
+        /// <para>Creates a dry run for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs a precheck to verify that a NAT firewall can be created.</para>
+        /// <para>Creates a policy that allows, denies, or monitors traffic that passes through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3049,12 +3049,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck for NAT firewall creation.</para>
+        /// <para>Creates a dry run for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs a precheck to verify that a NAT firewall can be created.</para>
+        /// <para>Creates a policy that allows, denies, or monitors traffic that passes through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3110,12 +3110,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck for NAT firewall creation.</para>
+        /// <para>Creates a dry run for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs a precheck to verify that a NAT firewall can be created.</para>
+        /// <para>Creates a policy that allows, denies, or monitors traffic that passes through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3133,12 +3133,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a precheck for NAT firewall creation.</para>
+        /// <para>Creates a dry run for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation runs a precheck to verify that a NAT firewall can be created.</para>
+        /// <para>Creates a policy that allows, denies, or monitors traffic that passes through a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3156,7 +3156,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for NAT firewall assets.</para>
+        /// <para>Creates an asset synchronization task for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3198,7 +3198,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for NAT firewall assets.</para>
+        /// <para>Creates an asset synchronization task for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3240,7 +3240,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for NAT firewall assets.</para>
+        /// <para>Creates an asset synchronization task for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3258,7 +3258,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a sync task for NAT firewall assets.</para>
+        /// <para>Creates an asset synchronization task for a NAT firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3276,12 +3276,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private DNS endpoint.</para>
+        /// <para>Create a private DNS endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreatePrivateDnsEndpoint operation to create a private Domain Name System (DNS) endpoint.</para>
+        /// <para>Creates a private DNS endpoint for traffic that passes through the NAT Firewall to allow, deny, or monitor the traffic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3375,12 +3375,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private DNS endpoint.</para>
+        /// <para>Create a private DNS endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreatePrivateDnsEndpoint operation to create a private Domain Name System (DNS) endpoint.</para>
+        /// <para>Creates a private DNS endpoint for traffic that passes through the NAT Firewall to allow, deny, or monitor the traffic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3474,12 +3474,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private DNS endpoint.</para>
+        /// <para>Create a private DNS endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreatePrivateDnsEndpoint operation to create a private Domain Name System (DNS) endpoint.</para>
+        /// <para>Creates a private DNS endpoint for traffic that passes through the NAT Firewall to allow, deny, or monitor the traffic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3497,12 +3497,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a private DNS endpoint.</para>
+        /// <para>Create a private DNS endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreatePrivateDnsEndpoint operation to create a private Domain Name System (DNS) endpoint.</para>
+        /// <para>Creates a private DNS endpoint for traffic that passes through the NAT Firewall to allow, deny, or monitor the traffic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3540,6 +3540,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
             {
                 query["FirewallSwitch"] = request.FirewallSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FwVswitchZoneId))
+            {
+                query["FwVswitchZoneId"] = request.FwVswitchZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -3622,6 +3626,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FirewallSwitch))
             {
                 query["FirewallSwitch"] = request.FirewallSwitch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FwVswitchZoneId))
+            {
+                query["FwVswitchZoneId"] = request.FwVswitchZoneId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -3720,7 +3728,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Cloud Firewall SLS Log Delivery</para>
+        /// <para>Creates a log delivery configuration for Cloud Firewall to Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3766,7 +3774,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Cloud Firewall SLS Log Delivery</para>
+        /// <para>Creates a log delivery configuration for Cloud Firewall to Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3812,7 +3820,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Cloud Firewall SLS Log Delivery</para>
+        /// <para>Creates a log delivery configuration for Cloud Firewall to Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3830,7 +3838,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Cloud Firewall SLS Log Delivery</para>
+        /// <para>Creates a log delivery configuration for Cloud Firewall to Simple Log Service (SLS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4080,7 +4088,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule for a VPC firewall for a transit router.</para>
+        /// <para>Create a TR firewall routing rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4156,7 +4164,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule for a VPC firewall for a transit router.</para>
+        /// <para>Create a TR firewall routing rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4232,7 +4240,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule for a VPC firewall for a transit router.</para>
+        /// <para>Create a TR firewall routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4250,7 +4258,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule for a VPC firewall for a transit router.</para>
+        /// <para>Create a TR firewall routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4268,14 +4276,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Creates a VPC border firewall (protects mutual access traffic between network instances within a Cloud Enterprise Network (CEN) and a specified VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall for a VPC that is connected to a Cloud Enterprise Network (CEN). The VPC firewall protects traffic between the VPC and other network instances in the CEN, such as virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. The VPC firewall does not protect traffic between VBRs, between CCNs, or between VBRs and CCNs. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
+        /// <para>This operation is generally used to create a VPC border firewall for VPC instances within a Cloud Enterprise Network (CEN). The VPC border firewall can protect mutual access traffic between network instances within the CEN (network instances include VPCs, VBRs, and CCNs) and a specified VPC. It does not support protecting mutual access traffic between VBR and VBR, CCN and CCN, or VBR and CCN. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC border firewall limits</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If you exceed this limit, your API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4361,14 +4369,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Creates a VPC border firewall (protects mutual access traffic between network instances within a Cloud Enterprise Network (CEN) and a specified VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall for a VPC that is connected to a Cloud Enterprise Network (CEN). The VPC firewall protects traffic between the VPC and other network instances in the CEN, such as virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. The VPC firewall does not protect traffic between VBRs, between CCNs, or between VBRs and CCNs. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
+        /// <para>This operation is generally used to create a VPC border firewall for VPC instances within a Cloud Enterprise Network (CEN). The VPC border firewall can protect mutual access traffic between network instances within the CEN (network instances include VPCs, VBRs, and CCNs) and a specified VPC. It does not support protecting mutual access traffic between VBR and VBR, CCN and CCN, or VBR and CCN. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC border firewall limits</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If you exceed this limit, your API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4454,14 +4462,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Creates a VPC border firewall (protects mutual access traffic between network instances within a Cloud Enterprise Network (CEN) and a specified VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall for a VPC that is connected to a Cloud Enterprise Network (CEN). The VPC firewall protects traffic between the VPC and other network instances in the CEN, such as virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. The VPC firewall does not protect traffic between VBRs, between CCNs, or between VBRs and CCNs. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
+        /// <para>This operation is generally used to create a VPC border firewall for VPC instances within a Cloud Enterprise Network (CEN). The VPC border firewall can protect mutual access traffic between network instances within the CEN (network instances include VPCs, VBRs, and CCNs) and a specified VPC. It does not support protecting mutual access traffic between VBR and VBR, CCN and CCN, or VBR and CCN. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC border firewall limits</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If you exceed this limit, your API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4479,14 +4487,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Creates a VPC border firewall (protects mutual access traffic between network instances within a Cloud Enterprise Network (CEN) and a specified VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall for a VPC that is connected to a Cloud Enterprise Network (CEN). The VPC firewall protects traffic between the VPC and other network instances in the CEN, such as virtual private clouds (VPCs), virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. The VPC firewall does not protect traffic between VBRs, between CCNs, or between VBRs and CCNs. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
+        /// <para>This operation is generally used to create a VPC border firewall for VPC instances within a Cloud Enterprise Network (CEN). The VPC border firewall can protect mutual access traffic between network instances within the CEN (network instances include VPCs, VBRs, and CCNs) and a specified VPC. It does not support protecting mutual access traffic between VBR and VBR, CCN and CCN, or VBR and CCN. For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC border firewall limits</a>.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second per user. If you exceed this limit, your API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4716,14 +4724,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between two VPCs that are connected using Express Connect.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. This VPC firewall does not protect cross-region traffic, cross-account traffic, or traffic between a VPC and a Virtual Border Router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>The limit on queries per second (QPS) for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call the operation at a reasonable rate.</para>
+        /// <para>This operation is used to create a VPC firewall. This virtual private cloud (VPC) firewall protects traffic between two VPCs connected through Express Connect. This VPC firewall does not support protection for cross-region traffic, cross-account traffic, or traffic between a VPC and a virtual border router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API invocations are throttled, which may affect your business. Manage your invocations appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4801,14 +4809,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between two VPCs that are connected using Express Connect.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. This VPC firewall does not protect cross-region traffic, cross-account traffic, or traffic between a VPC and a Virtual Border Router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>The limit on queries per second (QPS) for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call the operation at a reasonable rate.</para>
+        /// <para>This operation is used to create a VPC firewall. This virtual private cloud (VPC) firewall protects traffic between two VPCs connected through Express Connect. This VPC firewall does not support protection for cross-region traffic, cross-account traffic, or traffic between a VPC and a virtual border router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API invocations are throttled, which may affect your business. Manage your invocations appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4886,14 +4894,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between two VPCs that are connected using Express Connect.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. This VPC firewall does not protect cross-region traffic, cross-account traffic, or traffic between a VPC and a Virtual Border Router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>The limit on queries per second (QPS) for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call the operation at a reasonable rate.</para>
+        /// <para>This operation is used to create a VPC firewall. This virtual private cloud (VPC) firewall protects traffic between two VPCs connected through Express Connect. This VPC firewall does not support protection for cross-region traffic, cross-account traffic, or traffic between a VPC and a virtual border router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API invocations are throttled, which may affect your business. Manage your invocations appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4911,14 +4919,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a VPC firewall to protect traffic between two VPCs that are connected using Express Connect.</para>
+        /// <para>Creates a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. This VPC firewall does not protect cross-region traffic, cross-account traffic, or traffic between a VPC and a Virtual Border Router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">Limits on VPC firewalls</a>.</para>
-        /// <h3>QPS limits</h3>
-        /// <para>The limit on queries per second (QPS) for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call the operation at a reasonable rate.</para>
+        /// <para>This operation is used to create a VPC firewall. This virtual private cloud (VPC) firewall protects traffic between two VPCs connected through Express Connect. This VPC firewall does not support protection for cross-region traffic, cross-account traffic, or traffic between a VPC and a virtual border router (VBR). For more information, see <a href="https://help.aliyun.com/document_detail/172295.html">VPC firewall limits</a>.</para>
+        /// <h3>Rate limit</h3>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API invocations are throttled, which may affect your business. Manage your invocations appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4936,14 +4944,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an access control policy to a policy group for a specified VPC firewall.</para>
+        /// <para>Adds an access control policy to a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds an access control policy to a policy group for a specified VPC border firewall. A VPC border firewall uses access control policies to protect traffic between two VPCs that are connected through a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through Cloud Enterprise Network (CEN) or traffic between two VPCs connected through Express Connect.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5077,14 +5085,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an access control policy to a policy group for a specified VPC firewall.</para>
+        /// <para>Adds an access control policy to a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds an access control policy to a policy group for a specified VPC border firewall. A VPC border firewall uses access control policies to protect traffic between two VPCs that are connected through a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through Cloud Enterprise Network (CEN) or traffic between two VPCs connected through Express Connect.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5218,14 +5226,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an access control policy to a policy group for a specified VPC firewall.</para>
+        /// <para>Adds an access control policy to a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds an access control policy to a policy group for a specified VPC border firewall. A VPC border firewall uses access control policies to protect traffic between two VPCs that are connected through a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through Cloud Enterprise Network (CEN) or traffic between two VPCs connected through Express Connect.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5243,14 +5251,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an access control policy to a policy group for a specified VPC firewall.</para>
+        /// <para>Adds an access control policy to a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation adds an access control policy to a policy group for a specified VPC border firewall. A VPC border firewall uses access control policies to protect traffic between two VPCs that are connected through a Cloud Enterprise Network (CEN) instance or an Express Connect circuit.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to add an access control policy to a specified virtual private cloud (VPC) firewall policy group. Different access control policies are used when a VPC firewall protects traffic between two VPCs connected through Cloud Enterprise Network (CEN) or traffic between two VPCs connected through Express Connect.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Invoke this operation properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5634,7 +5642,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This can impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5682,7 +5690,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This can impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5730,7 +5738,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This can impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5754,7 +5762,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This can impact your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5941,9 +5949,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes an address book for access control.</para>
+        /// <para>This operation is used to delete an address book from access control.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed the limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5998,9 +6006,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes an address book for access control.</para>
+        /// <para>This operation is used to delete an address book from access control.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed the limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6055,9 +6063,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes an address book for access control.</para>
+        /// <para>This operation is used to delete an address book from access control.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed the limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6080,9 +6088,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes an address book for access control.</para>
+        /// <para>This operation is used to delete an address book from access control.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed the limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6105,9 +6113,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for inbound or outbound traffic.</para>
+        /// <para>This operation is used to delete an access control policy whose traffic direction is inbound or outbound.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled. This may affect your business operations. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6166,9 +6174,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for inbound or outbound traffic.</para>
+        /// <para>This operation is used to delete an access control policy whose traffic direction is inbound or outbound.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled. This may affect your business operations. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6227,9 +6235,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for inbound or outbound traffic.</para>
+        /// <para>This operation is used to delete an access control policy whose traffic direction is inbound or outbound.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled. This may affect your business operations. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6252,9 +6260,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for inbound or outbound traffic.</para>
+        /// <para>This operation is used to delete an access control policy whose traffic direction is inbound or outbound.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If you exceed this limit, API calls are throttled. This may affect your business operations. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, throttling is triggered, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6577,7 +6585,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a file download task and its corresponding file.&gt;Danger:  The deletion is immediate and permanent. <b>The file can no longer be downloaded using the existing download link. This operation is irreversible. Proceed with caution.</b></para>
+        /// <para>Calling this operation immediately deletes the file download task and the downloaded file.</para>
+        /// <remarks>
+        /// <para>Danger: The delete operation deletes the corresponding task and file. <b>The file can no longer be downloaded by using the existing download link. This operation is irreversible. Proceed with caution.</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -6628,7 +6639,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a file download task and its corresponding file.&gt;Danger:  The deletion is immediate and permanent. <b>The file can no longer be downloaded using the existing download link. This operation is irreversible. Proceed with caution.</b></para>
+        /// <para>Calling this operation immediately deletes the file download task and the downloaded file.</para>
+        /// <remarks>
+        /// <para>Danger: The delete operation deletes the corresponding task and file. <b>The file can no longer be downloaded by using the existing download link. This operation is irreversible. Proceed with caution.</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -6679,7 +6693,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a file download task and its corresponding file.&gt;Danger:  The deletion is immediate and permanent. <b>The file can no longer be downloaded using the existing download link. This operation is irreversible. Proceed with caution.</b></para>
+        /// <para>Calling this operation immediately deletes the file download task and the downloaded file.</para>
+        /// <remarks>
+        /// <para>Danger: The delete operation deletes the corresponding task and file. <b>The file can no longer be downloaded by using the existing download link. This operation is irreversible. Proceed with caution.</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -6702,7 +6719,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a file download task and its corresponding file.&gt;Danger:  The deletion is immediate and permanent. <b>The file can no longer be downloaded using the existing download link. This operation is irreversible. Proceed with caution.</b></para>
+        /// <para>Calling this operation immediately deletes the file download task and the downloaded file.</para>
+        /// <remarks>
+        /// <para>Danger: The delete operation deletes the corresponding task and file. <b>The file can no longer be downloaded by using the existing download link. This operation is irreversible. Proceed with caution.</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -7132,12 +7152,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy for a NAT firewall.</para>
+        /// <para>Deletes a NAT firewall access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for outbound traffic from a NAT firewall.</para>
+        /// <para>This operation is used to delete an access control policy for outbound traffic of a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7191,12 +7211,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy for a NAT firewall.</para>
+        /// <para>Deletes a NAT firewall access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for outbound traffic from a NAT firewall.</para>
+        /// <para>This operation is used to delete an access control policy for outbound traffic of a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7250,12 +7270,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy for a NAT firewall.</para>
+        /// <para>Deletes a NAT firewall access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for outbound traffic from a NAT firewall.</para>
+        /// <para>This operation is used to delete an access control policy for outbound traffic of a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7273,12 +7293,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy for a NAT firewall.</para>
+        /// <para>Deletes a NAT firewall access control policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes access control policies for outbound traffic from a NAT firewall.</para>
+        /// <para>This operation is used to delete an access control policy for outbound traffic of a NAT firewall.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7596,12 +7616,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes private DNS domain names.</para>
+        /// <para>Delete private DNS domain names</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes domain names that require private DNS resolution.</para>
+        /// <para>Deletes domain names that require private DNS resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7651,12 +7671,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes private DNS domain names.</para>
+        /// <para>Delete private DNS domain names</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes domain names that require private DNS resolution.</para>
+        /// <para>Deletes domain names that require private DNS resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7706,12 +7726,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes private DNS domain names.</para>
+        /// <para>Delete private DNS domain names</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes domain names that require private DNS resolution.</para>
+        /// <para>Deletes domain names that require private DNS resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7729,12 +7749,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes private DNS domain names.</para>
+        /// <para>Delete private DNS domain names</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes domain names that require private DNS resolution.</para>
+        /// <para>Deletes domain names that require private DNS resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8156,14 +8176,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Deletes a VPC firewall that protects traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a VPC firewall. The VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. Before you call this operation, you must create a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The limit for this operation is 10 queries per second (QPS) per Alibaba Cloud account. If you exceed this limit, your calls are throttled. This may impact your business. Plan your calls accordingly.</para>
+        /// <para>This operation deletes a VPC firewall. The VPC firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a Cloud Enterprise Network (CEN) and a specified VPC.
+        /// Before calling this operation, call <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> to create a VPC firewall.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8213,14 +8234,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Deletes a VPC firewall that protects traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a VPC firewall. The VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. Before you call this operation, you must create a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The limit for this operation is 10 queries per second (QPS) per Alibaba Cloud account. If you exceed this limit, your calls are throttled. This may impact your business. Plan your calls accordingly.</para>
+        /// <para>This operation deletes a VPC firewall. The VPC firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a Cloud Enterprise Network (CEN) and a specified VPC.
+        /// Before calling this operation, call <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> to create a VPC firewall.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8270,14 +8292,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Deletes a VPC firewall that protects traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a VPC firewall. The VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. Before you call this operation, you must create a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The limit for this operation is 10 queries per second (QPS) per Alibaba Cloud account. If you exceed this limit, your calls are throttled. This may impact your business. Plan your calls accordingly.</para>
+        /// <para>This operation deletes a VPC firewall. The VPC firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a Cloud Enterprise Network (CEN) and a specified VPC.
+        /// Before calling this operation, call <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> to create a VPC firewall.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8295,14 +8318,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
+        /// <para>Deletes a VPC firewall that protects traffic between network instances in a Cloud Enterprise Network (CEN) and a specified VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a VPC firewall. The VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC. Network instances include VPCs, virtual border routers (VBRs), and Cloud Connect Network (CCN) instances. Before you call this operation, you must create a VPC firewall by calling the <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> operation.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The limit for this operation is 10 queries per second (QPS) per Alibaba Cloud account. If you exceed this limit, your calls are throttled. This may impact your business. Plan your calls accordingly.</para>
+        /// <para>This operation deletes a VPC firewall. The VPC firewall protects traffic between network instances (including VPCs, virtual border routers (VBRs), and Cloud Connect Networks (CCNs)) in a Cloud Enterprise Network (CEN) and a specified VPC.
+        /// Before calling this operation, call <a href="https://help.aliyun.com/document_detail/345772.html">CreateVpcFirewallCenConfigure</a> to create a VPC firewall.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8320,14 +8344,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between two VPCs that are connected by an Express Connect circuit.</para>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC firewall.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If this limit is exceeded, the API call is throttled. This may affect your business. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
+        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8377,14 +8402,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between two VPCs that are connected by an Express Connect circuit.</para>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC firewall.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If this limit is exceeded, the API call is throttled. This may affect your business. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
+        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8434,14 +8460,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between two VPCs that are connected by an Express Connect circuit.</para>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC firewall.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If this limit is exceeded, the API call is throttled. This may affect your business. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
+        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8459,14 +8486,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC firewall that protects traffic between two VPCs that are connected by an Express Connect circuit.</para>
+        /// <para>Deletes a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes a VPC firewall that protects traffic between two VPCs connected by an Express Connect circuit. Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation to create a VPC firewall.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If this limit is exceeded, the API call is throttled. This may affect your business. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>This operation is used to delete a virtual private cloud (VPC) firewall that protects traffic between two VPCs connected through Express Connect.
+        /// Before you invoke this operation, you must have already created a VPC firewall by invoking the <a href="https://help.aliyun.com/document_detail/342893.html">CreateVpcFirewallConfigure</a> operation.</para>
+        /// <h2>Rate limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8484,14 +8512,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specific VPC firewall policy group.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete an access control policy from a specific VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances use different access control policies than those that protect Express Connect circuits.</para>
+        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. We recommend that you take this limit into consideration when you call this operation.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8541,14 +8569,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specific VPC firewall policy group.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete an access control policy from a specific VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances use different access control policies than those that protect Express Connect circuits.</para>
+        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. We recommend that you take this limit into consideration when you call this operation.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8598,14 +8626,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specific VPC firewall policy group.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete an access control policy from a specific VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances use different access control policies than those that protect Express Connect circuits.</para>
+        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. We recommend that you take this limit into consideration when you call this operation.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8623,14 +8651,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specific VPC firewall policy group.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete an access control policy from a specific VPC firewall policy group. VPC firewall instances that protect Cloud Enterprise Network (CEN) instances use different access control policies than those that protect Express Connect circuits.</para>
+        /// <para>This operation is used to delete an access control policy from a specified VPC firewall policy group. The VPC firewall instances that protect Cloud Enterprise Network (CEN) instances and the VPC firewall instances that protect Express Connect circuits use different access control policies.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. We recommend that you take this limit into consideration when you call this operation.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as appropriate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8648,7 +8676,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows the trend of traffic intercepted by internet access control.</para>
+        /// <para>Queries the trend chart of Internet access control interceptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8714,7 +8742,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows the trend of traffic intercepted by internet access control.</para>
+        /// <para>Queries the trend chart of Internet access control interceptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8780,7 +8808,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows the trend of traffic intercepted by internet access control.</para>
+        /// <para>Queries the trend chart of Internet access control interceptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8798,7 +8826,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shows the trend of traffic intercepted by internet access control.</para>
+        /// <para>Queries the trend chart of Internet access control interceptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8924,7 +8952,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that contain synchronization nodes.</para>
+        /// <para>Queries the list of regions for synchronization nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8962,7 +8990,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that contain synchronization nodes.</para>
+        /// <para>Queries the list of regions for synchronization nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9000,7 +9028,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that contain synchronization nodes.</para>
+        /// <para>Queries the list of regions for synchronization nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9018,7 +9046,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that contain synchronization nodes.</para>
+        /// <para>Queries the list of regions for synchronization nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9484,7 +9512,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified ACK cluster connector.</para>
+        /// <para>Queries the details of a specified ACK cluster connector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9530,7 +9558,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified ACK cluster connector.</para>
+        /// <para>Queries the details of a specified ACK cluster connector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9576,7 +9604,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified ACK cluster connector.</para>
+        /// <para>Queries the details of a specified ACK cluster connector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9594,7 +9622,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified ACK cluster connector.</para>
+        /// <para>Queries the details of a specified ACK cluster connector.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9618,7 +9646,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>This API has a per-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business, so pace your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9694,7 +9722,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>This API has a per-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business, so pace your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9770,7 +9798,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>This API has a per-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business, so pace your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9794,7 +9822,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>This API has a per-user limit of 10 queries per second (QPS). If you exceed this limit, API calls are rate-limited. This may affect your business, so pace your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls properly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10916,13 +10944,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total number of access control list (ACL) configurations.</para>
+        /// <para>Retrieves the total number of access control policy configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, your API calls are throttled. Throttling can affect your business. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10968,13 +10996,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total number of access control list (ACL) configurations.</para>
+        /// <para>Retrieves the total number of access control policy configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, your API calls are throttled. Throttling can affect your business. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11020,13 +11048,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total number of access control list (ACL) configurations.</para>
+        /// <para>Retrieves the total number of access control policy configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, your API calls are throttled. Throttling can affect your business. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11044,13 +11072,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total number of access control list (ACL) configurations.</para>
+        /// <para>Retrieves the total number of access control policy configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed this limit, your API calls are throttled. Throttling can affect your business. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11421,9 +11449,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query a paginated list of assets protected by Cloud Firewall.</para>
+        /// <para>This API is generally used to query information about assets protected by Cloud Firewall with pagination.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 calls per second for a single user. If you exceed this limit, API calls are throttled.</para>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11526,9 +11554,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query a paginated list of assets protected by Cloud Firewall.</para>
+        /// <para>This API is generally used to query information about assets protected by Cloud Firewall with pagination.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 calls per second for a single user. If you exceed this limit, API calls are throttled.</para>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11631,9 +11659,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query a paginated list of assets protected by Cloud Firewall.</para>
+        /// <para>This API is generally used to query information about assets protected by Cloud Firewall with pagination.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 calls per second for a single user. If you exceed this limit, API calls are throttled.</para>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11656,9 +11684,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this API to query a paginated list of assets protected by Cloud Firewall.</para>
+        /// <para>This API is generally used to query information about assets protected by Cloud Firewall with pagination.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 calls per second for a single user. If you exceed this limit, API calls are throttled.</para>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please make calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11820,7 +11848,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries performance statistics for assets protected by Cloud Firewall.</para>
+        /// <para>Queries the statistics information of assets protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11870,7 +11898,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries performance statistics for assets protected by Cloud Firewall.</para>
+        /// <para>Queries the statistics information of assets protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11920,7 +11948,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries performance statistics for assets protected by Cloud Firewall.</para>
+        /// <para>Queries the statistics information of assets protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11938,7 +11966,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries performance statistics for assets protected by Cloud Firewall.</para>
+        /// <para>Queries the statistics information of assets protected by Cloud Firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11956,14 +11984,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of attack categories.</para>
+        /// <para>Queries the list of attack categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to perform a paged query for a list of attack categories.</para>
+        /// <para>This operation is generally used for paging query of information about assets protected by Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed this limit, API calls are throttled. Throttling may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12005,14 +12033,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of attack categories.</para>
+        /// <para>Queries the list of attack categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to perform a paged query for a list of attack categories.</para>
+        /// <para>This operation is generally used for paging query of information about assets protected by Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed this limit, API calls are throttled. Throttling may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12054,14 +12082,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of attack categories.</para>
+        /// <para>Queries the list of attack categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to perform a paged query for a list of attack categories.</para>
+        /// <para>This operation is generally used for paging query of information about assets protected by Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed this limit, API calls are throttled. Throttling may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12079,14 +12107,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of attack categories.</para>
+        /// <para>Queries the list of attack categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to perform a paged query for a list of attack categories.</para>
+        /// <para>This operation is generally used for paging query of information about assets protected by Cloud Firewall.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed this limit, API calls are throttled. Throttling may affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13140,7 +13168,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the domain resolution results for an access control policy.</para>
+        /// <para>Queries the domain name resolution results of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13178,7 +13206,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the domain resolution results for an access control policy.</para>
+        /// <para>Queries the domain name resolution results of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13216,7 +13244,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the domain resolution results for an access control policy.</para>
+        /// <para>Queries the domain name resolution results of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13234,7 +13262,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the domain resolution results for an access control policy.</para>
+        /// <para>Queries the domain name resolution results of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15440,7 +15468,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the member accounts in a resource directory for a Cloud Firewall instance.</para>
+        /// <para>Retrieves the account in a resource directory for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15506,7 +15534,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the member accounts in a resource directory for a Cloud Firewall instance.</para>
+        /// <para>Retrieves the account in a resource directory for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15572,7 +15600,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the member accounts in a resource directory for a Cloud Firewall instance.</para>
+        /// <para>Retrieves the account in a resource directory for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15590,7 +15618,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the member accounts in a resource directory for a Cloud Firewall instance.</para>
+        /// <para>Retrieves the account in a resource directory for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23904,13 +23932,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the frequently asked questions (FAQ) for a page.</para>
+        /// <para>Queries the FAQ of a page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23978,13 +24006,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the frequently asked questions (FAQ) for a page.</para>
+        /// <para>Queries the FAQ of a page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24052,13 +24080,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the frequently asked questions (FAQ) for a page.</para>
+        /// <para>Queries the FAQ of a page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24082,13 +24110,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the frequently asked questions (FAQ) for a page.</para>
+        /// <para>Queries the FAQ of a page.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24444,6 +24472,186 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries pay-as-you-go 2.0 bills.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For pay-as-you-go users, the bill details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayBillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayBillResponse
+        /// </returns>
+        public DescribePostpayBillResponse DescribePostpayBillWithOptions(DescribePostpayBillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePostpayBill",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePostpayBillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pay-as-you-go 2.0 bills.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For pay-as-you-go users, the bill details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayBillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayBillResponse
+        /// </returns>
+        public async Task<DescribePostpayBillResponse> DescribePostpayBillWithOptionsAsync(DescribePostpayBillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePostpayBill",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePostpayBillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pay-as-you-go 2.0 bills.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For pay-as-you-go users, the bill details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayBillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayBillResponse
+        /// </returns>
+        public DescribePostpayBillResponse DescribePostpayBill(DescribePostpayBillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePostpayBillWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pay-as-you-go 2.0 bills.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For pay-as-you-go users, the bill details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePostpayBillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePostpayBillResponse
+        /// </returns>
+        public async Task<DescribePostpayBillResponse> DescribePostpayBillAsync(DescribePostpayBillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePostpayBillWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the status of pay-as-you-go protection.</para>
         /// </summary>
         /// 
@@ -24556,12 +24764,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic details for pay-as-you-go billing.</para>
+        /// <para>Queries the details of pay-as-you-go billing traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For pay-as-you-go users, details are provided at the instance level. For subscription users, only overall queries are supported.</para>
+        /// <para>For pay-as-you-go users, the details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24635,12 +24843,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic details for pay-as-you-go billing.</para>
+        /// <para>Queries the details of pay-as-you-go billing traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For pay-as-you-go users, details are provided at the instance level. For subscription users, only overall queries are supported.</para>
+        /// <para>For pay-as-you-go users, the details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24714,12 +24922,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic details for pay-as-you-go billing.</para>
+        /// <para>Queries the details of pay-as-you-go billing traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For pay-as-you-go users, details are provided at the instance level. For subscription users, only overall queries are supported.</para>
+        /// <para>For pay-as-you-go users, the details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24737,12 +24945,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic details for pay-as-you-go billing.</para>
+        /// <para>Queries the details of pay-as-you-go billing traffic.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For pay-as-you-go users, details are provided at the instance level. For subscription users, only overall queries are supported.</para>
+        /// <para>For pay-as-you-go users, the details are accurate to the specific resource instance level. For subscription users, only overall queries are supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25124,7 +25332,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC border firewall status for a pay-as-you-go user.</para>
+        /// <para>Queries the status of the virtual private cloud (VPC) firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25162,7 +25370,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC border firewall status for a pay-as-you-go user.</para>
+        /// <para>Queries the status of the virtual private cloud (VPC) firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25200,7 +25408,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC border firewall status for a pay-as-you-go user.</para>
+        /// <para>Queries the status of the virtual private cloud (VPC) firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25218,7 +25426,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the VPC border firewall status for a pay-as-you-go user.</para>
+        /// <para>Queries the status of the virtual private cloud (VPC) firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25348,12 +25556,192 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private DNS domain names.</para>
+        /// <para>查询包年包月2.0账单概览</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of domain names that use a private DNS endpoint for domain name resolution.</para>
+        /// <para>统计范围为该用户当前云防火墙实例，包括自购买之日起的所有数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrepayBillTotalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrepayBillTotalResponse
+        /// </returns>
+        public DescribePrepayBillTotalResponse DescribePrepayBillTotalWithOptions(DescribePrepayBillTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillType))
+            {
+                query["BillType"] = request.BillType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrepayBillTotal",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePrepayBillTotalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询包年包月2.0账单概览</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>统计范围为该用户当前云防火墙实例，包括自购买之日起的所有数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrepayBillTotalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrepayBillTotalResponse
+        /// </returns>
+        public async Task<DescribePrepayBillTotalResponse> DescribePrepayBillTotalWithOptionsAsync(DescribePrepayBillTotalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillType))
+            {
+                query["BillType"] = request.BillType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrepayBillTotal",
+                Version = "2017-12-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePrepayBillTotalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询包年包月2.0账单概览</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>统计范围为该用户当前云防火墙实例，包括自购买之日起的所有数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrepayBillTotalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrepayBillTotalResponse
+        /// </returns>
+        public DescribePrepayBillTotalResponse DescribePrepayBillTotal(DescribePrepayBillTotalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePrepayBillTotalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询包年包月2.0账单概览</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>统计范围为该用户当前云防火墙实例，包括自购买之日起的所有数据。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrepayBillTotalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrepayBillTotalResponse
+        /// </returns>
+        public async Task<DescribePrepayBillTotalResponse> DescribePrepayBillTotalAsync(DescribePrepayBillTotalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePrepayBillTotalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of private DNS domain names.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of domain names that require private DNS endpoints for domain name resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25391,12 +25779,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private DNS domain names.</para>
+        /// <para>Queries the list of private DNS domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of domain names that use a private DNS endpoint for domain name resolution.</para>
+        /// <para>Queries the list of domain names that require private DNS endpoints for domain name resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25434,12 +25822,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private DNS domain names.</para>
+        /// <para>Queries the list of private DNS domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of domain names that use a private DNS endpoint for domain name resolution.</para>
+        /// <para>Queries the list of domain names that require private DNS endpoints for domain name resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25457,12 +25845,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private DNS domain names.</para>
+        /// <para>Queries the list of private DNS domain names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of domain names that use a private DNS endpoint for domain name resolution.</para>
+        /// <para>Queries the list of domain names that require private DNS endpoints for domain name resolution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25852,13 +26240,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions.</para>
+        /// <para>Retrieves region information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25912,13 +26300,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions.</para>
+        /// <para>Retrieves region information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25972,13 +26360,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions.</para>
+        /// <para>Retrieves region information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25996,13 +26384,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about regions.</para>
+        /// <para>Retrieves region information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for this API is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this API at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26020,14 +26408,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic redirection settings for a region and resource type.</para>
+        /// <para>Queries the traffic redirection settings by region and asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves DNS resolution results for a domain name. It supports only Alibaba Cloud DNS. To obtain resolution results, the domain name must use Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to retrieve DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be retrieved.</para>
         /// <h2>QPS limit</h2>
-        /// <para>You can make up to 10 API calls per second. Exceeding this limit triggers throttling, which may affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26069,14 +26457,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic redirection settings for a region and resource type.</para>
+        /// <para>Queries the traffic redirection settings by region and asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves DNS resolution results for a domain name. It supports only Alibaba Cloud DNS. To obtain resolution results, the domain name must use Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to retrieve DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be retrieved.</para>
         /// <h2>QPS limit</h2>
-        /// <para>You can make up to 10 API calls per second. Exceeding this limit triggers throttling, which may affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26118,14 +26506,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic redirection settings for a region and resource type.</para>
+        /// <para>Queries the traffic redirection settings by region and asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves DNS resolution results for a domain name. It supports only Alibaba Cloud DNS. To obtain resolution results, the domain name must use Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to retrieve DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be retrieved.</para>
         /// <h2>QPS limit</h2>
-        /// <para>You can make up to 10 API calls per second. Exceeding this limit triggers throttling, which may affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26143,14 +26531,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic redirection settings for a region and resource type.</para>
+        /// <para>Queries the traffic redirection settings by region and asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves DNS resolution results for a domain name. It supports only Alibaba Cloud DNS. To obtain resolution results, the domain name must use Alibaba Cloud DNS.</para>
+        /// <para>This operation is used to retrieve DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be retrieved.</para>
         /// <h2>QPS limit</h2>
-        /// <para>You can make up to 10 API calls per second. Exceeding this limit triggers throttling, which may affect your business. Call this operation at a reasonable rate.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26168,14 +26556,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default traffic redirection settings for an asset type.</para>
+        /// <para>Queries the default traffic redirection for an asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain the DNS resolution result for a domain name. You can obtain resolution results only for domain names that use Alibaba Cloud DNS.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be obtained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a proper frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26217,14 +26605,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default traffic redirection settings for an asset type.</para>
+        /// <para>Queries the default traffic redirection for an asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain the DNS resolution result for a domain name. You can obtain resolution results only for domain names that use Alibaba Cloud DNS.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be obtained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a proper frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26266,14 +26654,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default traffic redirection settings for an asset type.</para>
+        /// <para>Queries the default traffic redirection for an asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain the DNS resolution result for a domain name. You can obtain resolution results only for domain names that use Alibaba Cloud DNS.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be obtained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a proper frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26291,14 +26679,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default traffic redirection settings for an asset type.</para>
+        /// <para>Queries the default traffic redirection for an asset type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to obtain the DNS resolution result for a domain name. You can obtain resolution results only for domain names that use Alibaba Cloud DNS.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The queries per second (QPS) limit for this operation is 10 for a single user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation at a reasonable rate.</para>
+        /// <para>This operation is used to obtain DNS resolution results for a domain name. Currently, only resolution results from Alibaba Cloud DNS are supported. The domain name that you want to query must use Alibaba Cloud DNS. Otherwise, the resolution results cannot be obtained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at a proper frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28152,7 +28540,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of sensitive data from a data breach.</para>
+        /// <para>Retrieves the list of sensitive data involved in data leaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28222,7 +28610,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of sensitive data from a data breach.</para>
+        /// <para>Retrieves the list of sensitive data involved in data leaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28292,7 +28680,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of sensitive data from a data breach.</para>
+        /// <para>Retrieves the list of sensitive data involved in data leaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28310,7 +28698,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of sensitive data from a data breach.</para>
+        /// <para>Retrieves the list of sensitive data involved in data leaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28760,7 +29148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of NAT firewalls.</para>
+        /// <para>Retrieves NAT firewall information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28848,7 +29236,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of NAT firewalls.</para>
+        /// <para>Retrieves NAT firewall information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28936,7 +29324,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of NAT firewalls.</para>
+        /// <para>Retrieves NAT firewall information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28960,7 +29348,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of NAT firewalls.</para>
+        /// <para>Retrieves NAT firewall information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29628,12 +30016,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about threat intelligence configurations.</para>
+        /// <para>Queries the threat intelligence configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries access control policies for NAT firewalls by page.</para>
+        /// <para>This operation is generally used to perform a paged query on the information about access control policies of NAT firewalls.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -29663,12 +30051,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about threat intelligence configurations.</para>
+        /// <para>Queries the threat intelligence configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries access control policies for NAT firewalls by page.</para>
+        /// <para>This operation is generally used to perform a paged query on the information about access control policies of NAT firewalls.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -29698,12 +30086,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about threat intelligence configurations.</para>
+        /// <para>Queries the threat intelligence configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries access control policies for NAT firewalls by page.</para>
+        /// <para>This operation is generally used to perform a paged query on the information about access control policies of NAT firewalls.</para>
         /// </description>
         /// 
         /// <returns>
@@ -29717,12 +30105,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about threat intelligence configurations.</para>
+        /// <para>Queries the threat intelligence configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries access control policies for NAT firewalls by page.</para>
+        /// <para>This operation is generally used to perform a paged query on the information about access control policies of NAT firewalls.</para>
         /// </description>
         /// 
         /// <returns>
@@ -30524,7 +30912,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about log traffic.</para>
+        /// <para>Queries log traffic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30730,7 +31118,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about log traffic.</para>
+        /// <para>Queries log traffic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30936,7 +31324,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about log traffic.</para>
+        /// <para>Queries log traffic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30954,7 +31342,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about log traffic.</para>
+        /// <para>Queries log traffic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31140,7 +31528,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trends of unprotected ports.</para>
+        /// <para>Queries the trend of unprotected ports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31198,7 +31586,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trends of unprotected ports.</para>
+        /// <para>Queries the trend of unprotected ports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31256,7 +31644,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trends of unprotected ports.</para>
+        /// <para>Queries the trend of unprotected ports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31274,7 +31662,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trends of unprotected ports.</para>
+        /// <para>Queries the trend of unprotected ports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32072,7 +32460,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the intrusion prevention system (IPS) configurations for VPC firewalls.</para>
+        /// <para>Queries the IPS configuration list of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32110,7 +32498,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the intrusion prevention system (IPS) configurations for VPC firewalls.</para>
+        /// <para>Queries the IPS configuration list of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32148,7 +32536,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the intrusion prevention system (IPS) configurations for VPC firewalls.</para>
+        /// <para>Queries the IPS configuration list of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32166,7 +32554,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the intrusion prevention system (IPS) configurations for VPC firewalls.</para>
+        /// <para>Queries the IPS configuration list of a virtual private cloud (VPC) firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32644,7 +33032,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets protected by the VPC firewall.</para>
+        /// <para>Queries the asset list of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32758,7 +33146,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets protected by the VPC firewall.</para>
+        /// <para>Queries the asset list of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32872,7 +33260,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets protected by the VPC firewall.</para>
+        /// <para>Queries the asset list of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32890,7 +33278,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the assets protected by the VPC firewall.</para>
+        /// <para>Queries the asset list of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32908,7 +33296,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of regions in which the VPC firewall is enabled.</para>
+        /// <para>Queries the regions where the VPC firewall is enabled for asset protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32946,7 +33334,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of regions in which the VPC firewall is enabled.</para>
+        /// <para>Queries the regions where the VPC firewall is enabled for asset protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32984,7 +33372,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of regions in which the VPC firewall is enabled.</para>
+        /// <para>Queries the regions where the VPC firewall is enabled for asset protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33002,7 +33390,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of regions in which the VPC firewall is enabled.</para>
+        /// <para>Queries the regions where the VPC firewall is enabled for asset protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34752,7 +35140,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the intrusion prevention system (IPS) whitelist for a VPC firewall.</para>
+        /// <para>Retrieves the IPS whitelist of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34802,7 +35190,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the intrusion prevention system (IPS) whitelist for a VPC firewall.</para>
+        /// <para>Retrieves the IPS whitelist of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34852,7 +35240,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the intrusion prevention system (IPS) whitelist for a VPC firewall.</para>
+        /// <para>Retrieves the IPS whitelist of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34870,7 +35258,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the intrusion prevention system (IPS) whitelist for a VPC firewall.</para>
+        /// <para>Retrieves the IPS whitelist of a VPC firewall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37260,14 +37648,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address book.</para>
+        /// <para>Modify an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your business. Call this API only as needed.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37353,14 +37741,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address book.</para>
+        /// <para>Modify an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your business. Call this API only as needed.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37446,14 +37834,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address book.</para>
+        /// <para>Modify an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your business. Call this API only as needed.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37471,14 +37859,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an address book.</para>
+        /// <para>Modify an address book.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>This API is used to modify an address book.</para>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for this API is 10 requests per second per user. Exceeding this limit triggers rate limiting, which can affect your business. Call this API only as needed.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 requests per second. Exceeding this limit will result in API throttling, which may affect your business. Please make calls responsibly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40456,7 +40844,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the sensitive data detection switch.</para>
+        /// <para>Modifies the sensitive data switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40506,7 +40894,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the sensitive data detection switch.</para>
+        /// <para>Modifies the sensitive data switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40556,7 +40944,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the sensitive data detection switch.</para>
+        /// <para>Modifies the sensitive data switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40574,7 +40962,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of the sensitive data detection switch.</para>
+        /// <para>Modifies the sensitive data switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45496,13 +45884,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an access control list (ACL) check detail.</para>
+        /// <para>Modify the status of ACL check details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. To avoid service disruptions from throttling, ensure your API calls do not exceed this limit.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45556,13 +45944,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an access control list (ACL) check detail.</para>
+        /// <para>Modify the status of ACL check details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. To avoid service disruptions from throttling, ensure your API calls do not exceed this limit.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45616,13 +46004,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an access control list (ACL) check detail.</para>
+        /// <para>Modify the status of ACL check details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. To avoid service disruptions from throttling, ensure your API calls do not exceed this limit.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45640,13 +46028,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of an access control list (ACL) check detail.</para>
+        /// <para>Modify the status of ACL check details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS limit</h2>
-        /// <para>The QPS limit for a single user is 10 requests per second. To avoid service disruptions from throttling, ensure your API calls do not exceed this limit.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45664,7 +46052,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Internet Border firewall status for a pay-as-you-go user.</para>
+        /// <para>Updates the status of the Internet Border firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45714,7 +46102,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Internet Border firewall status for a pay-as-you-go user.</para>
+        /// <para>Updates the status of the Internet Border firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45764,7 +46152,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Internet Border firewall status for a pay-as-you-go user.</para>
+        /// <para>Updates the status of the Internet Border firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45782,7 +46170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Internet Border firewall status for a pay-as-you-go user.</para>
+        /// <para>Updates the status of the Internet Border firewall switch module for a pay-as-you-go user.</para>
         /// </summary>
         /// 
         /// <param name="request">

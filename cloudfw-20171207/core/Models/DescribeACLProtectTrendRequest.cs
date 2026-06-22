@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeACLProtectTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value is a timestamp in seconds.</para>
+        /// <para>The end time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1670397599</para>
@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the firewall. Valid values:</para>
+        /// <para>The type of the firewall border. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>internet</b> (default): internet firewall</para>
-        /// </description></item>
-        /// <item><description><para><b>vpc</b>: VPC firewall</para>
-        /// </description></item>
-        /// <item><description><para><b>nat</b>: NAT firewall</para>
-        /// </description></item>
+        /// <item><description><b>internet</b> (default): Internet Border firewall, which detects and controls traffic between your assets and the Internet.</description></item>
+        /// <item><description><b>vpc</b>: virtual private cloud (VPC) firewalls, which detect and control traffic between VPCs.</description></item>
+        /// <item><description><b>nat</b>: NAT firewalls, which detect and control traffic from internal-facing assets to the Internet.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,16 +35,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>The time granularity for aggregating trend data, in seconds. Valid values:</para>
+        /// <para>The time aggregation granularity for trend data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>60</b>: 1 minute</para>
-        /// </description></item>
-        /// <item><description><para><b>1800</b>: 30 minutes</para>
-        /// </description></item>
-        /// <item><description><para><b>3600</b>: 1 hour</para>
-        /// </description></item>
-        /// <item><description><para><b>86400</b> (default): 1 day</para>
-        /// </description></item>
+        /// <item><description><b>60</b>: 1-minute granularity (uses the minute-level detail table).</description></item>
+        /// <item><description><b>1800</b>: 30-minute granularity.</description></item>
+        /// <item><description><b>3600</b>: 1-hour granularity.</description></item>
+        /// <item><description><b>86400</b> (default): 1-day granularity.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,6 +66,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>This parameter is deprecated.</para>
         /// 
@@ -81,10 +76,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
+        [Obsolete]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a timestamp in seconds.</para>
+        /// <para>The start time of the query. The value is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1677050306</para>

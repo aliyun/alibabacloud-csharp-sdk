@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePostpayTrafficDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return.
+        /// <para>The page number in a paged query.
         /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Set the end time for the query. Use the YYYYMMDD date format.</para>
+        /// <para>The end time of the query. Specify the value in the YYYYMMDD format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,12 +46,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting. Valid values:</para>
+        /// <para>The field by which to sort the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>resourceId</b>: resource ID.</para>
-        /// </description></item>
-        /// <item><description><para><b>trafficDay</b>: date.</para>
-        /// </description></item>
+        /// <item><description><b>resourceId</b>: resource ID.</description></item>
+        /// <item><description><b>trafficDay</b>: date.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 50.</para>
+        /// <para>The number of entries per page in a paged query. Default value: 10. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -94,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SearchItem { get; set; }
 
         /// <summary>
-        /// <para>Set the start time for the query. Use the YYYYMMDD date format.</para>
+        /// <para>The start time of the query. Specify the value in the YYYYMMDD format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,13 +101,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the firewall border for which to query traffic. This parameter is required. Valid values:</para>
+        /// <para>The type of traffic boundary for statistics. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>EIP_TRAFFIC</b>: traffic on the Internet border.</para>
+        /// <item><description><para><b>EIP_TRAFFIC</b>: Internet border traffic.</para>
         /// </description></item>
-        /// <item><description><para><b>NatGateway_TRAFFIC</b>: traffic on the NAT border.</para>
+        /// <item><description><para><b>NatGateway_TRAFFIC</b>: NAT border traffic.</para>
         /// </description></item>
-        /// <item><description><para><b>VPC_TRAFFIC</b>: traffic on the VPC border.</para>
+        /// <item><description><para><b>VPC_TRAFFIC</b>: VPC border traffic.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateSlsLogDispatchRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the Simple Log Service project.</para>
+        /// <para>The SLS region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SlsRegionId { get; set; }
 
         /// <summary>
-        /// <para>The log retention period. Unit: days.</para>
+        /// <para>The storage duration of logs. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

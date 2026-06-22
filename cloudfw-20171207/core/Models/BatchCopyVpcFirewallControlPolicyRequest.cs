@@ -39,15 +39,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy group for the source VPC firewall. Valid values:</para>
+        /// <para>The ID of the access control policy group for the source virtual private cloud (VPC) firewall of this operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC, use the ID of the CEN instance. The network instance can be a VPC, a Virtual Border Router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <item><description><para>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) instance (network instances include VPCs, VBRs, and CCNs) and a specified VPC, the policy group ID is the CEN instance ID.</para>
         /// </description></item>
-        /// <item><description><para>If the VPC firewall protects traffic between two VPCs connected by an Express Connect circuit, use the ID of the VPC firewall instance.</para>
+        /// <item><description><para>If the VPC firewall protects traffic between two VPCs that are connected through Express Connect, the policy group ID is the VPC firewall instance ID.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain this ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,15 +59,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceVpcFirewallId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy group for the destination VPC firewall. Valid values:</para>
+        /// <para>The ID of the access control policy group for the destination virtual private cloud (VPC) firewall of this operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC, use the ID of the CEN instance. The network instance can be a VPC, a Virtual Border Router (VBR), or a Cloud Connect Network (CCN) instance.</para>
+        /// <item><description><para>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) instance (network instances include VPCs, VBRs, and CCNs) and a specified VPC, the policy group ID is the CEN instance ID.</para>
         /// </description></item>
-        /// <item><description><para>If the VPC firewall protects traffic between two VPCs connected by an Express Connect circuit, use the ID of the VPC firewall instance.</para>
+        /// <item><description><para>If the VPC firewall protects traffic between two VPCs that are connected through Express Connect, the policy group ID is the VPC firewall instance ID.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain this ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

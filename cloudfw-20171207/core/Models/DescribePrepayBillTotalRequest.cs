@@ -8,24 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
-    public class DescribeUnprotectedPortTrendRequest : TeaModel {
+    public class DescribePrepayBillTotalRequest : TeaModel {
         /// <summary>
-        /// <para>The end time. Specify a UNIX timestamp in seconds.</para>
+        /// <b>Example:</b>
+        /// <para>sdl</para>
+        /// </summary>
+        [NameInMap("BillType")]
+        [Validation(Required=false)]
+        public string BillType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("CurrentPage")]
+        [Validation(Required=false)]
+        public long? CurrentPage { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1751210395</para>
+        /// <para>1646063922</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>en</b>: English</description></item>
-        /// <item><description><b>zh</b>: Chinese.</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -34,20 +44,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>61.155.60.XXX</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("SourceIp")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string SourceIp { get; set; }
+        public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify a UNIX timestamp in seconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1655778046</para>
+        /// <para>1656750960</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

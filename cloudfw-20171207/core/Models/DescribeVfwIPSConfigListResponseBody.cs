@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVfwIPSConfigListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3******</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of configurations.</para>
+        /// <para>The configuration list.</para>
         /// </summary>
         [NameInMap("VfwIpsSwitchConfigList")]
         [Validation(Required=false)]
         public List<DescribeVfwIPSConfigListResponseBodyVfwIpsSwitchConfigList> VfwIpsSwitchConfigList { get; set; }
         public class DescribeVfwIPSConfigListResponseBodyVfwIpsSwitchConfigList : TeaModel {
             /// <summary>
-            /// <para>The status of the basic policies.</para>
+            /// <para>The status of the Basic Policies switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? BasicRules { get; set; }
 
             /// <summary>
-            /// <para>The UID of the member account.</para>
+            /// <para>The UID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>134646920647****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The status of the virtual patching policies.</para>
+            /// <para>The status of the virtual patches switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? PatchRules { get; set; }
 
             /// <summary>
-            /// <para>The policy for the block mode.</para>
+            /// <para>The rule class for Block Mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RuleClass { get; set; }
 
             /// <summary>
-            /// <para>The protection mode.</para>
+            /// <para>The defense mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? RunMode { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the VPC firewall.</para>
+            /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-h678sl4wv3yd5v****</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcFirewallId { get; set; }
 
             /// <summary>
-            /// <para>The list of instance IDs of the VPC firewalls.</para>
+            /// <para>The list of instance IDs of virtual private cloud (VPC) firewalls.</para>
             /// </summary>
             [NameInMap("VpcFirewallIdList")]
             [Validation(Required=false)]
             public List<string> VpcFirewallIdList { get; set; }
 
             /// <summary>
-            /// <para>The instance name of the VPC firewall.</para>
+            /// <para>The instance name of the virtual private cloud (VPC) firewall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-test</para>

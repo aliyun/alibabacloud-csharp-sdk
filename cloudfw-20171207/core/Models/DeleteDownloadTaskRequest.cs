@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file download task.</para>
+        /// <para>The task ID of the file download task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4376</para>

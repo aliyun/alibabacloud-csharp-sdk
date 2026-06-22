@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSdlEventSdListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type of the received message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The unique ID.</para>
+        /// <para>The unique identifier ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aa58cdf6-6cf8-493c-912d-97619a24****</para>

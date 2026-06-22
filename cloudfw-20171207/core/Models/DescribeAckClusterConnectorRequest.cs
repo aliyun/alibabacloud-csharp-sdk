@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAckClusterConnectorRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACK cluster connector. You can obtain the ID by calling the <a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a> operation to query a list of ACK cluster connectors.</para>
+        /// <para>The ID of the ACK cluster connector. You can obtain the value from:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</description></item>
+        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
-        /// <para>The language of the error messages that are returned for the health check status of the ACK cluster connector.</para>
+        /// <para>The language in which the health status error reason of the ACK cluster connector is displayed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

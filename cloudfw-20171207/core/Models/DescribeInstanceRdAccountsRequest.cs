@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRdAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response.</para>
+        /// <para>The language type for the request and response messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The description of the member account.</para>
+        /// <para>The remarks of the Cloud Firewall member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>renewal</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberDesc { get; set; }
 
         /// <summary>
-        /// <para>The display name of the member account.</para>
+        /// <para>The name of the Cloud Firewall member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudfirewall_2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member accounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.170.XXX</para>

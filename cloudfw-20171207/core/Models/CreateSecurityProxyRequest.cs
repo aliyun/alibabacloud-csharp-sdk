@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The security protection switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>open</b>: on</para>
-        /// </description></item>
-        /// <item><description><para><b>close</b>: off</para>
-        /// </description></item>
+        /// <item><description><b>open</b>: enabled</description></item>
+        /// <item><description><b>close</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitch { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The zone of the firewall vSwitch.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing-b</para>
+        /// </summary>
+        [NameInMap("FwVswitchZoneId")]
+        [Validation(Required=false)]
+        public string FwVswitchZoneId { get; set; }
+
+        /// <summary>
+        /// <para>The language of the content within the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The list of routes of the NAT Gateway that you want to switch.</para>
+        /// <para>The list of routes to be switched for the NAT gateway.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NatRouteEntryList")]
@@ -72,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationCidr { get; set; }
 
             /// <summary>
-            /// <para>The next hop of the original NAT Gateway.</para>
+            /// <para>The next hop address of the original NAT gateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -83,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopId { get; set; }
 
             /// <summary>
-            /// <para>The network type of the next hop. Set the value to NatGateway.</para>
+            /// <para>The network type of the next hop. Valid values: NatGateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NextHopType { get; set; }
 
             /// <summary>
-            /// <para>The route table that contains the default route of the NAT Gateway.</para>
+            /// <para>The route table that contains the default route of the NAT gateway.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The name of the NAT firewall. The name must be 4 to 50 characters in length. It can contain letters, digits, Chinese characters, and underscores (<em>). The name cannot start with an underscore (</em>).</para>
+        /// <para>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The region ID of the VPC.</para>
         /// <remarks>
-        /// <para>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -134,10 +140,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to enable strict mode.</para>
         /// <list type="bullet">
-        /// <item><description><para>1: enables strict mode</para>
-        /// </description></item>
-        /// <item><description><para>0: disables strict mode</para>
-        /// </description></item>
+        /// <item><description>1: Enable strict mode.</description></item>
+        /// <item><description>0: Disable strict mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? StrictMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The instance ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,12 +163,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the automatic vSwitch selection feature. Valid values:</para>
+        /// <para>Specifies whether to use the automatic vSwitch mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: automatic mode</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: manual mode</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: automatic mode</description></item>
+        /// <item><description><b>false</b>: manual mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,7 +177,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VswitchAuto { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the vSwitch. This parameter is required if you use the automatic vSwitch selection feature.</para>
+        /// <para>The CIDR block of the vSwitch. This parameter is required when the vSwitch is in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -185,7 +187,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VswitchCidr { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. This parameter is required if you use the manual vSwitch selection feature.</para>
+        /// <para>The vSwitch ID. This parameter is required when the vSwitch is in manual mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1sqg9w******</para>

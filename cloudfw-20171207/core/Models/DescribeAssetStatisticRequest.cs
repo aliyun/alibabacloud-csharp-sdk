@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>Language for the request and response messages. Valid values:- <b>zh</b>: Chinese- <b>en</b>: English</para>
+        /// <para>The language of the request and response. Valid values:- <b>zh</b>: Chinese- <b>en</b>: English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Source IP address of the requester.</para>
+        /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>112.239.XX.XX</para>

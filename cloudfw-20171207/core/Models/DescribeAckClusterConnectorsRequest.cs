@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAckClusterConnectorsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACK cluster.</para>
+        /// <para>The ACK cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0E0C30C977463****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ConnectorName { get; set; }
 
         /// <summary>
-        /// <para>The language type for displaying the error reason for the ACK cluster connector\&quot;s health status.</para>
+        /// <para>The language in which the unhealthy reason of the ACK cluster connector health status is displayed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud UID to which the ACK cluster resource belongs.</para>
+        /// <para>The Alibaba Cloud UID of the account to which the ACK cluster resource belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
@@ -72,12 +72,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ACK cluster connector. Source of values:</para>
+        /// <para>The region ID of the ACK cluster connector. You can call the following operation to obtain the value:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Query the list of synchronization node regions.</description></item>
+        /// <item><description><a href="~~DescribeAccessInstanceRegionList~~">DescribeAccessInstanceRegionList</a>: Queries the list of synchronization node regions.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>For more information about the regions supported by Cloud Firewall for ACK cluster connectors, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK Cluster Synchronization Nodes</a>.</para>
+        /// <para>For more information about the regions supported by ACK cluster connectors in Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/2865120.html">ACK cluster synchronization nodes</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The VPC instance ID to which the ACK cluster belongs.</para>
+        /// <para>The instance ID of the VPC-connected instance to which the ACK cluster belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6b5lyul0x******</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAddressBookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the address book that is created.</para>
+        /// <para>The unique ID of the address book that is returned after the address book is successfully added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f04ac7ce-628b-4cb7-be61-310222b7****</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAddressBookRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ACK cluster connector. You can obtain this value from the following operation:</para>
+        /// <para>The ACK cluster connector ID. You can obtain the value from:</para>
         /// <list type="bullet">
-        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</description></item>
+        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: queries a list of ACK cluster connectors.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The list of ACK cluster pod labels.</para>
         /// <remarks>
-        /// <para>You can specify a maximum of 10 labels.</para>
+        /// <para>A maximum of 10 labels are supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AckLabels")]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The list of ACK cluster pod namespaces.</para>
         /// <remarks>
-        /// <para>You can specify a maximum of 10 namespaces.</para>
+        /// <para>A maximum of 10 namespaces are supported.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AckNamespaces")]
@@ -65,16 +65,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> AckNamespaces { get; set; }
 
         /// <summary>
-        /// <para>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address, separate the address and its description with a space.</para>
+        /// <para>The address list of the address book. Multiple addresses are separated by commas, and within each address element, the address and its description are separated by a space.</para>
         /// <remarks>
         /// <para>This parameter is required when GroupType is set to <c>ip</c>, <c>port</c>, or <c>domain</c>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you set GroupType to <c>ip</c>, enter IP addresses in the list. Example: 192.0.XX.XX/32 development segment,10.0.0.X/24,192.0.XX.XX/24 test segment.</para>
+        /// <item><description><para>When GroupType is set to <c>ip</c>, enter IP addresses in the address list. Example: 192.0.XX.XX/32 development network segment, 10.0.0.X/24,192.0.XX.XX/24 test network segment.</para>
         /// </description></item>
-        /// <item><description><para>If you set GroupType to <c>port</c>, enter ports or port ranges in the list. Example: 80 HTTP port,100/200,3306 database port.</para>
+        /// <item><description><para>When GroupType is set to <c>port</c>, enter ports or port ranges in the address list. Example: 80 HTTP port, 100/200,3306 database port.</para>
         /// </description></item>
-        /// <item><description><para>If you set GroupType to <c>domain</c>, enter domain names in the list. Example: example.com test domain name,aliyundoc.com,www\.aliyun.com Alibaba Cloud official website.</para>
+        /// <item><description><para>When GroupType is set to <c>domain</c>, enter domain names in the address list. Example: example.com test domain, aliyundoc.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AddressList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically add the public IP addresses of ECS instances that match the specified tags to the address book.</para>
+        /// <para>Specifies whether to automatically add the public IP addresses of ECS instances that match new tags to the address book.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>The language of the address book description.</para>
+        /// <para>The language type of the address book description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The source IP address of the requester.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The logical relationship between multiple ECS tags.</para>
+        /// <para>The logical relationship among multiple ECS tags to be matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>

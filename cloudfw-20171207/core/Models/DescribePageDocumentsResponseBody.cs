@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePageDocumentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of documents.</para>
+        /// <para>The document list.</para>
         /// </summary>
         [NameInMap("Docs")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The URL of the document.</para>
+            /// <para>The document path.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://notify-center-test.ybaobx.com/webhook/arms">https://notify-center-test.ybaobx.com/webhook/arms</a></para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The URL of the image.</para>
+        /// <para>The image URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png">https://img.alicdn.com/tfs/TB1E4FCAuT2gK0jSZFvXXXnFXXa-3399-662.png</a></para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Module { get; set; }
 
         /// <summary>
-        /// <para>Additional information.</para>
+        /// <para>The list of additional resources.</para>
         /// </summary>
         [NameInMap("More")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>The URL of the document.</para>
+            /// <para>The document path.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png">https://zjysfy.womanhospital.cn/pub/hos/0/noneBackGround.png</a></para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSecurityProxyRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the request and response. Valid values:</para>
+        /// <para>The language type for the request and response messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account within the current Alibaba Cloud account.</para>
+        /// <para>The UID of the member accounts of the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-zm0h3c1exm5bifuorg8c5</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. The maximum value is 50.</para>
+        /// <para>The maximum number of entries per page in a paged query. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the NAT firewall. The name must be 4 to 50 characters in length. It can contain letters, digits, underscores (<em>), and Chinese characters. It cannot start with an underscore (</em>).</para>
+        /// <para>The name of the NAT firewall. The name can contain uppercase and lowercase letters, Chinese characters, digits, and underscores (_). The name must be 4 to 50 characters in length and cannot start with an underscore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nat-idmp-fir</para>
@@ -96,22 +96,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The status of the Cloud Firewall. Valid values:</para>
+        /// <para>The status of Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>configuring</b>: The firewall is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>deleting</b>: The firewall is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>normal</b>: The firewall is running.</para>
-        /// </description></item>
-        /// <item><description><para><b>abnormal</b>: The firewall is not running as expected.</para>
-        /// </description></item>
-        /// <item><description><para><b>opening</b>: The firewall is being enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>closing</b>: The firewall is being disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>configuring</b>: Being created.</description></item>
+        /// <item><description><b>deleting</b>: Being deleted.</description></item>
+        /// <item><description><b>normal</b>: Normal.</description></item>
+        /// <item><description><b>abnormal</b>: Abnormal.</description></item>
+        /// <item><description><b>opening</b>: Being enabled.</description></item>
+        /// <item><description><b>closing</b>: Being disabled.</description></item>
+        /// <item><description><b>closed</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The VPC-connected instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-8vbwbo90rq0anm6t****</para>

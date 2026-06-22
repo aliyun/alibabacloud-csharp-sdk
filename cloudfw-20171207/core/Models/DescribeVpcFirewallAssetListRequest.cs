@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS instance.</para>
+        /// <para>The instance ID of the ECS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-hp3ez3rs9bxwt034****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IPProtocol { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to count only the traffic to AI services.</para>
+        /// <para>Specifies whether to collect statistics only on traffic that accesses AI services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IsAITraffic { get; set; }
 
         /// <summary>
-        /// <para>The language of the request and response.</para>
+        /// <para>The language type of the request and response messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the peer VPC instance.</para>
+        /// <para>The instance ID of the peer VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-90rq0anm6t8vbwbo****</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The threat level.</para>
+        /// <para>The risk level.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The sorting method.</para>
+        /// <para>The sort method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SessionCount</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The instance ID of the VPC-connected instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

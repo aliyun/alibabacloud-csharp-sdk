@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeUnprotectedPortTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of data.</para>
+        /// <para>The data list.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeUnprotectedPortTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeUnprotectedPortTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The number of blocks.</para>
+            /// <para>The number of blocked requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E599A84E-CD22-5E42-A2A9-01A254AC****</para>

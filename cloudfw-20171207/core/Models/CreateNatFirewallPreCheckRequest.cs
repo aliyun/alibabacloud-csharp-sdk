@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateNatFirewallPreCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response message. Valid values:</para>
+        /// <para>The language of the content within the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT Gateway.</para>
+        /// <para>The ID of the NAT gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,9 +35,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the NAT Gateway.</para>
+        /// <para>The region ID of the NAT gateway.</para>
         /// <remarks>
-        /// <para>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC instance.</para>
+        /// <para>The instance ID of the VPC-connected instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

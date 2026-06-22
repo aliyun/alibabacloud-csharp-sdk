@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSdlEventSdListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of sensitive data from the data breach.</para>
+        /// <para>The list of sensitive data involved in data leaks.</para>
         /// </summary>
         [NameInMap("SdlEventSensitiveDataList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SensitiveData { get; set; }
 
             /// <summary>
-            /// <para>The number of times the sensitive data appears.</para>
+            /// <para>The number of occurrences of the sensitive data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SensitiveDataCnt { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the data.</para>
+            /// <para>The level of the sensitive data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>S3</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SensitiveLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of sensitive data.</para>
+            /// <para>The type of the sensitive data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>id_card</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

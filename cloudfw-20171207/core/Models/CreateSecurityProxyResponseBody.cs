@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateSecurityProxyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the NAT firewall.</para>
+        /// <para>The NAT firewall ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxy-nat97a******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3******</para>

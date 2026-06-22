@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddControlPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the access control policy for the Internet firewall.</para>
+        /// <para>The unique identity ID of the access control policy for the Internet Border firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00281255-d220-4db1-8f4f-c4df221ad84c</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</para>

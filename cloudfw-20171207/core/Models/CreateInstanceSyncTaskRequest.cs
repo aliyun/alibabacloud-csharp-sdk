@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateInstanceSyncTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The language type.</para>
+        /// <para>The language type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the visitor.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60.182.79.XXX</para>

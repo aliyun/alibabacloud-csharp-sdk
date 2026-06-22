@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

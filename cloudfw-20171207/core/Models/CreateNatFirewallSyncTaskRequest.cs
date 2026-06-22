@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateNatFirewallSyncTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response message.</para>
+        /// <para>The language type of the response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

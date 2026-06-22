@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifySensitiveSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID of the returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6169C0A4-B91A-5D48-AE4D-B9432D15****</para>

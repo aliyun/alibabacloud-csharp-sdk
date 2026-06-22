@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member account.</para>
+        /// <para>The UID of the member account of the current Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The list of instance IDs of the VPC firewalls.</para>
+        /// <para>The instance IDs of VPC firewalls.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VpcFirewallIdList")]

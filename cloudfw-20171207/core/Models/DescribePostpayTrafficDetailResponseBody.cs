@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePostpayTrafficDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0525EADE-C112-5702-A5BC-0E2F6F94DB23</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The list of traffic statistics.</para>
+        /// <para>The traffic statistics list.</para>
         /// </summary>
         [NameInMap("TrafficList")]
         [Validation(Required=false)]
         public List<DescribePostpayTrafficDetailResponseBodyTrafficList> TrafficList { get; set; }
         public class DescribePostpayTrafficDetailResponseBodyTrafficList : TeaModel {
             /// <summary>
-            /// <para>The inbound network throughput, in bytes.</para>
+            /// <para>The inbound network throughput (total bytes). Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1115096939</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The asset type. This value is valid only for the Internet border.</para>
+            /// <para>The asset type. This value takes effect only for Internet border traffic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EcsPublicIP</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The outbound network throughput, in bytes.</para>
+            /// <para>The outbound network throughput (total bytes). Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The protection duration, in hours.</para>
+            /// <para>The protection duration. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ProtectionDuration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource. For Internet border traffic, this is the public IP address of the asset. For NAT border traffic, this is the instance ID of the firewall.</para>
+            /// <para>The resource ID. For Internet border traffic, this is the public IP address of the asset. For NAT border traffic, this is the firewall instance ID of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39.106.146.214</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The total network throughput for both inbound and outbound traffic, in bytes.</para>
+            /// <para>The total network throughput in both inbound and outbound directions (total bytes sent and received). Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1215096939</para>
@@ -127,13 +127,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficDay { get; set; }
 
             /// <summary>
-            /// <para>The type of the firewall border for which traffic is queried. Valid values:</para>
+            /// <para>The type of traffic boundary for statistics. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>EIP_TRAFFIC</b>: traffic on the Internet border.</para>
+            /// <item><description><para><b>EIP_TRAFFIC</b>: Internet border traffic.</para>
             /// </description></item>
-            /// <item><description><para><b>NatGateway_TRAFFIC</b>: traffic on the NAT border.</para>
+            /// <item><description><para><b>NatGateway_TRAFFIC</b>: NAT border traffic.</para>
             /// </description></item>
-            /// <item><description><para><b>VPC_TRAFFIC</b>: traffic on the VPC border.</para>
+            /// <item><description><para><b>VPC_TRAFFIC</b>: VPC border traffic.</para>
             /// </description></item>
             /// </list>
             /// 

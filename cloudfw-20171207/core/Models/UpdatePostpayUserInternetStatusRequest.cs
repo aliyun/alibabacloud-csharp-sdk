@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the response messages. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>zh</b> (default): Chinese</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English</para>
-        /// </description></item>
+        /// <item><description><b>zh</b> (default): Chinese</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of operation. Currently, only the \<c>open\\</c> operation is supported.</para>
+        /// <para>The operation type. Currently, only the activation operation is supported.</para>
         /// <list type="bullet">
-        /// <item><description>open: enables the firewall.</description></item>
+        /// <item><description>open: activation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

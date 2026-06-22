@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAttackAppCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the request and response messages. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The details of the exception.</para>
+            /// <para>The error details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>“”</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The UID of the Cloud Firewall member account.</para>
+            /// <para>The UID of the Cloud Firewall member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1797733170015112</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the NAT Gateway.</para>
+            /// <para>The ID of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ngw-2zex8sf4s5vus8rq3rjqo</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
-            /// <para>The name of the NAT Gateway.</para>
+            /// <para>The name of the NAT gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs-slb-eip-waf</para>
@@ -104,22 +104,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public List<string> SnatIpList { get; set; }
 
             /// <summary>
-            /// <para>The status of the Cloud Firewall. Valid values:</para>
+            /// <para>The status of Cloud Firewall. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>configuring</b>: The firewall is being created.</para>
-            /// </description></item>
-            /// <item><description><para><b>deleting</b>: The firewall is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para><b>normal</b>: The firewall is running.</para>
-            /// </description></item>
-            /// <item><description><para><b>abnormal</b>: The firewall is not running as expected.</para>
-            /// </description></item>
-            /// <item><description><para><b>opening</b>: The firewall is being enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>closing</b>: The firewall is being disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
-            /// </description></item>
+            /// <item><description><b>configuring</b>: Being created.</description></item>
+            /// <item><description><b>deleting</b>: Being deleted.</description></item>
+            /// <item><description><b>normal</b>: Normal.</description></item>
+            /// <item><description><b>abnormal</b>: Abnormal.</description></item>
+            /// <item><description><b>opening</b>: Being enabled.</description></item>
+            /// <item><description><b>closing</b>: Being disabled.</description></item>
+            /// <item><description><b>closed</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,7 +123,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the strict mode is enabled. 1: The strict mode is enabled. 0: The strict mode is disabled.</para>
+            /// <para>Indicates whether strict mode is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Strict mode is enabled.</description></item>
+            /// <item><description>0: Strict mode is disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -140,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? StrictMode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the Cloud Firewall instance belongs.</para>
+            /// <para>The ID of the vSwitch to which the Cloud Firewall interface belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-5gu2qqfmjmwl8ktzgfekl</para>
@@ -150,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC instance.</para>
+            /// <para>The VPC-connected instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz9xn35tq33hunzvpu0se</para>
@@ -160,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The instance name of the VPC.</para>
+            /// <para>The name of the VPC instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1kw9igsq0yyzeanqamx</para>
@@ -172,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>

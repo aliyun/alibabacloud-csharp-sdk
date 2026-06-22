@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> DomainNameList { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>822B9125-6E1A-551C-8EAF-6E7AE74****</para>

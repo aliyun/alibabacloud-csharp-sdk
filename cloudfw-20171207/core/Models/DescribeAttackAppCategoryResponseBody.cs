@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAttackAppCategoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of attack application categories.</para>
+        /// <para>The list of attack application categories.</para>
         /// </summary>
         [NameInMap("AppCategories")]
         [Validation(Required=false)]
         public List<DescribeAttackAppCategoryResponseBodyAppCategories> AppCategories { get; set; }
         public class DescribeAttackAppCategoryResponseBodyAppCategories : TeaModel {
             /// <summary>
-            /// <para>A list of attack applications.</para>
+            /// <para>The list of attack applications.</para>
             /// </summary>
             [NameInMap("AttackApps")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID of the returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B14757D0-4640-4B44-AC67-7F558FE****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateDownloadTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7F333E0-7B70-54DA-A307-4B2B49DEE923</para>
@@ -20,11 +20,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
-        /// <para>finish: The task is complete. You can query the task to get the file download link.</para>
-        /// <para>start: The task has started.</para>
-        /// <para>error: The task failed.</para>
-        /// <para>expire: The task expired. The task file is invalid and cannot be downloaded.</para>
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>finish: The task is complete. You can query the task to obtain the download URL of the task file.</para>
+        /// </description></item>
+        /// <item><description><para>start: The task has started.</para>
+        /// </description></item>
+        /// <item><description><para>error: The task failed.</para>
+        /// </description></item>
+        /// <item><description><para>expire: The task has expired. The task file is no longer valid and cannot be downloaded.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>start</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the task.</para>
+        /// <para>The task ID, which uniquely identifies the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>

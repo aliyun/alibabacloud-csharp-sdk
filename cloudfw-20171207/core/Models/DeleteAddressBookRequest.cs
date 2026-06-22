@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The unique ID of the address book.</para>
         /// <remarks>
-        /// <para>To obtain this ID, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</para>
+        /// <para>You can call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation to query the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupUuid { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese (default).</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

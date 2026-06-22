@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateVpcFirewallCenConfigureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>850A84D6-0DE4-4797-A1E8-00090125h4j6</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC firewall instance.</para>
+        /// <para>The instance ID of the VPC border firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-m5e7dbc4y****</para>

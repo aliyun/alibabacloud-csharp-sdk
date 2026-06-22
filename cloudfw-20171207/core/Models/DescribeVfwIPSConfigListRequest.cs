@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVfwIPSConfigListRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-m5e7dbc4y****</para>

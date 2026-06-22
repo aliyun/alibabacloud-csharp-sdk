@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the synchronization node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PrivateDns</b>: private DNS.</para>
+        /// <item><description><para><b>PrivateDns</b>: Private DNS resolution.</para>
         /// </description></item>
         /// <item><description><para><b>AckClusterConnector</b>: ACK cluster connector.</para>
         /// </description></item>
