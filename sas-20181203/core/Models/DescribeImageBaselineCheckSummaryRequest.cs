@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineCheckSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the specified container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The search condition for the image baseline.</para>
+        /// <para>The query condition of the baseline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unauthorized access</para>
@@ -33,10 +33,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The type of the search condition. Valid values:</para>
+        /// <para>The query type of the baselines to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BaselineNameAlias</b>: baseline name</description></item>
-        /// <item><description><b>BaselineClassAlias</b>: baseline category</description></item>
+        /// <item><description><para><b>BaselineNameAlias</b>: baseline name</para>
+        /// </description></item>
+        /// <item><description><para><b>BaselineClassAlias</b>: baseline category.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number to display from the returned results. Minimum value: <b>1</b>. Default value: <b>1</b>, which indicates that the first page is displayed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,10 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for requests and responses. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -81,11 +83,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The severity of the image baseline that you want to query. Separate multiple severities with commas (,). Valid values:</para>
+        /// <para>The risk level of the baselines to query. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><para><b>high</b>: high risk</para>
+        /// </description></item>
+        /// <item><description><para><b>medium</b>: medium risk</para>
+        /// </description></item>
+        /// <item><description><para><b>low</b>: low risk.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The types of the assets that you want to scan.</para>
+        /// <para>The collection of scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

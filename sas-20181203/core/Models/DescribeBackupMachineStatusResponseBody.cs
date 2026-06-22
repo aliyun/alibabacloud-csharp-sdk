@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeBackupMachineStatusResponseBodyBackupMachineStatus BackupMachineStatus { get; set; }
         public class DescribeBackupMachineStatusResponseBodyBackupMachineStatus : TeaModel {
             /// <summary>
-            /// <para>The ID of the anti-ransomware agent.</para>
+            /// <para>The ID of the anti-ransomware client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-000dbefaw9f7gnbw****</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The status of the anti-ransomware agent. Valid values:</para>
+            /// <para>The service status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ONLINE</b>: normal</description></item>
-            /// <item><description><b>CLIENT_CONNECTION_ERROR</b>: abnormal</description></item>
-            /// <item><description><b>UNINSTALLING</b>: being uninstalled</description></item>
-            /// <item><description><b>UNINSTALL_FAILED</b>: failed to be uninstalled</description></item>
-            /// <item><description><b>UPGRADING</b>: being upgraded</description></item>
-            /// <item><description><b>UPGRADE_FAILED</b>: failed to be upgraded</description></item>
+            /// <item><description><b>ONLINE</b>: Normal.</description></item>
+            /// <item><description><b>CLIENT_CONNECTION_ERROR</b>: Client connection exception.</description></item>
+            /// <item><description><b>UNINSTALLING</b>: Uninstalling.</description></item>
+            /// <item><description><b>UNINSTALL_FAILED</b>: Uninstall failed.</description></item>
+            /// <item><description><b>UPGRADING</b>: Upgrading.</description></item>
+            /// <item><description><b>UPGRADE_FAILED</b>: Upgrade failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientStatus { get; set; }
 
             /// <summary>
-            /// <para>The version of the anti-ransomware agent.</para>
+            /// <para>The version number of the anti-ransomware client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.11.0</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientVersion { get; set; }
 
             /// <summary>
-            /// <para>The error code returned.</para>
+            /// <para>The error code returned for an abnormal status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLIENT_CONNECTION_ERROR</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the error information reported by the backup server.</para>
+            /// <para>The list of error messages reported by the backup server.</para>
             /// </summary>
             [NameInMap("ErrorList")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The error message.</para>
+                /// <para>The error status information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FAILED</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The ID of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2zeaqkb80vloxjcj****</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the server resides.</para>
+            /// <para>The region ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of backup versions.</para>
+            /// <para>The number of restorable versions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -124,11 +124,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SavedBackupCount { get; set; }
 
             /// <summary>
-            /// <para>The status of the anti-ransomware service. Valid values:</para>
+            /// <para>The service status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SERVICE_EXCEPTION</b>: Service exception</description></item>
-            /// <item><description><b>RESTORING</b>: Restoring</description></item>
-            /// <item><description><b>BACKING_UP</b>: Backup in process</description></item>
+            /// <item><description><b>SERVICE_EXCEPTION</b>: Service exception.</description></item>
+            /// <item><description><b>RESTORING</b>: Restoring.</description></item>
+            /// <item><description><b>BACKING_UP</b>: Backing up.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,11 +139,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServiceStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the anti-ransomware agent. Valid values:</para>
+            /// <para>The status of the anti-ransomware client. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>NOT_INSTALLED</b>: not installed</description></item>
-            /// <item><description><b>CLIENT_CONNECTION_ERROR</b>: abnormal</description></item>
-            /// <item><description><b>ACTIVATED</b>: normal</description></item>
+            /// <item><description><b>CLIENT_CONNECTION_ERROR</b>: client status exception</description></item>
+            /// <item><description><b>ACTIVATED</b>: normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup vault in which the backup data is stored.</para>
+            /// <para>The ID of the backup vault where the backup data is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v-0005i2qh5fcr6seo****</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09969D2C-4FAD-429E-BFBF-9A60DEF8****</para>

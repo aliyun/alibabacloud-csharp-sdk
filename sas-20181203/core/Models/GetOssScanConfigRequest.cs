@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOssScanConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket.</para>
+        /// <para>The bucket name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iboxpublic****</para>

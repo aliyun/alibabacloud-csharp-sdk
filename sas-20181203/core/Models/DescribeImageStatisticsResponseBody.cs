@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of container images in your assets. Only Container Registry Enterprise Edition instances are counted.</para>
+        /// <para>The number of container images in your assets. Only container images in Enterprise instances of Container Registry are counted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? InstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of container images that have security risks. Only Container Registry Enterprise Edition instances are counted.</para>
+        /// <para>The number of container images that have security risks in your assets. Only container images in Enterprise instances of Container Registry are counted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSupportAttackPathAssetRequest : TeaModel {
         /// <summary>
-        /// <para>Node type, with values:</para>
+        /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>start</b>: Start point.</description></item>
-        /// <item><description><b>end</b>: End point.</description></item>
+        /// <item><description><b>start</b>: start node.</description></item>
+        /// <item><description><b>end</b>: end node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>Path name.</para>
+        /// <para>The path name.</para>
         /// <remarks>
-        /// <para>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path names.</para>
+        /// <para>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path names.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PathName { get; set; }
 
         /// <summary>
-        /// <para>Path type.</para>
+        /// <para>The path type.</para>
         /// <remarks>
-        /// <para>You can call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query the path types.</para>
+        /// <para>Call <a href="~~ListAvailableAttackPath~~">ListAvailableAttackPath</a> to query path types.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,11 +50,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PathType { get; set; }
 
         /// <summary>
-        /// <para>Support type, with values:</para>
+        /// <para>The support type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>event</b>: Attack path alert event.</description></item>
-        /// <item><description><b>whitelist</b>: Attack path whitelist.</description></item>
-        /// <item><description><b>sensitive</b>: Sensitive assets in the attack path.</description></item>
+        /// <item><description><b>event</b>: attack path alert event.</description></item>
+        /// <item><description><b>whitelist</b>: attack path whitelist.</description></item>
+        /// <item><description><b>sensitive</b>: attack path sensitive asset.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

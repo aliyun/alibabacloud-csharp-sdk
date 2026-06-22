@@ -195,8 +195,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Instance purchase type. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>：Self-purchased.</description></item>
-            /// <item><description><b>1</b>：Allocated.</description></item>
+            /// <item><description><para><b>0</b>:Self-purchased.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>:Allocated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -324,10 +326,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Administrator account instance status. Values: </para>
+            /// <para>Administrator account instance status. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Active.</description></item>
-            /// <item><description><b>2</b>: Inactive.</description></item>
+            /// <item><description><para><b>1</b>: Active.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Inactive.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -416,10 +420,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>User type. Values: </para>
+            /// <para>User type. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Administrator User</b>: 1</description></item>
-            /// <item><description><b>Regular User</b>: 2</description></item>
+            /// <item><description><para><b>Administrator User</b>: 1</para>
+            /// </description></item>
+            /// <item><description><para><b>Regular User</b>: 2</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -430,15 +436,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UserType { get; set; }
 
             /// <summary>
-            /// <para>Purchased version of Cloud Security Center. Values:  </para>
+            /// <para>Purchased version of Cloud Security Center. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：Free Edition </description></item>
-            /// <item><description><b>3</b>：Enterprise Edition</description></item>
-            /// <item><description><b>5</b>：Advanced Edition</description></item>
-            /// <item><description><b>6</b>：Anti-Virus Edition    </description></item>
-            /// <item><description><b>7</b>：Flagship Edition   </description></item>
-            /// <item><description><b>8</b>：Multiple Editions   </description></item>
-            /// <item><description><b>10</b>：Value-Added Services Only</description></item>
+            /// <item><description><para><b>1</b>:Free Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>:Enterprise Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>:Advanced Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>:Anti-Virus Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>:Flagship Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>8</b>:Multiple Editions</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>:Value-Added Services Only</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -456,11 +469,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<ListMultiUserInstancesResponseBodyDaInstanceVersionSummary> VersionSummary { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceVersionSummary : TeaModel {
                 /// <summary>
-                /// <para>The type of authorization consumed during binding. Values: </para>
+                /// <para>The type of authorization consumed during binding. Values:</para>
                 /// <list type="bullet">
-                /// <item><description>ASSET: consumes the number of authorized instances</description></item>
-                /// <item><description>CORE: consumes the number of authorized cores</description></item>
-                /// <item><description>ASSET_AND_CORE: consumes both the number of authorized instances and cores</description></item>
+                /// <item><description><para>ASSET: consumes the number of authorized instances</para>
+                /// </description></item>
+                /// <item><description><para>CORE: consumes the number of authorized cores</para>
+                /// </description></item>
+                /// <item><description><para>ASSET_AND_CORE: consumes both the number of authorized instances and cores</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -549,15 +565,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Purchased version of Cloud Security Center. Values:  </para>
+                /// <para>Purchased version of Cloud Security Center. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: Free Edition </description></item>
-                /// <item><description><b>3</b>: Enterprise Edition</description></item>
-                /// <item><description><b>5</b>: Advanced Edition</description></item>
-                /// <item><description><b>6</b>: Antivirus Edition    </description></item>
-                /// <item><description><b>7</b>: Flagship Edition   </description></item>
-                /// <item><description><b>8</b>: Multiple Editions   </description></item>
-                /// <item><description><b>10</b>: Only Value-Added Services Purchased</description></item>
+                /// <item><description><para><b>1</b>: Free Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: Enterprise Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: Advanced Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>6</b>: Antivirus Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>7</b>: Flagship Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>8</b>: Multiple Editions</para>
+                /// </description></item>
+                /// <item><description><para><b>10</b>: Only Value-Added Services Purchased</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -823,10 +846,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instance purchase type. Values: </para>
+            /// <para>Instance purchase type. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Self-purchased.</description></item>
-            /// <item><description><b>1</b>: Allocated.</description></item>
+            /// <item><description><para><b>0</b>: Self-purchased.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Allocated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -924,10 +949,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Status of the member account instance. Values: </para>
+            /// <para>Status of the member account instance. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Active.</description></item>
-            /// <item><description><b>2</b>: Inactive.</description></item>
+            /// <item><description><para><b>1</b>: Active.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Inactive.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -998,8 +1025,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>User type. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Administrator User</b>：1</description></item>
-            /// <item><description><b>Regular User</b>：2</description></item>
+            /// <item><description><para><b>Administrator User</b>:1</para>
+            /// </description></item>
+            /// <item><description><para><b>Regular User</b>:2</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1010,15 +1039,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UserType { get; set; }
 
             /// <summary>
-            /// <para>Version of the Cloud Security Center for the member account. Values:  </para>
+            /// <para>Version of the Cloud Security Center for the member account. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Free Edition </description></item>
-            /// <item><description><b>3</b>: Enterprise Edition</description></item>
-            /// <item><description><b>5</b>: Advanced Edition</description></item>
-            /// <item><description><b>6</b>: Anti-Virus Edition    </description></item>
-            /// <item><description><b>7</b>: Flagship Edition   </description></item>
-            /// <item><description><b>8</b>: Multiple Versions   </description></item>
-            /// <item><description><b>10</b>: Only Purchased Value-Added Services</description></item>
+            /// <item><description><para><b>1</b>: Free Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Enterprise Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: Advanced Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: Anti-Virus Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: Flagship Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>8</b>: Multiple Versions</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>: Only Purchased Value-Added Services</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1038,9 +1074,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>Authorization type consumed during binding, with values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ASSET</b>：Consumes the number of authorized instances</description></item>
-                /// <item><description><b>CORE</b>：Consumes the number of authorized cores</description></item>
-                /// <item><description><b>ASSET_AND_CORE</b>：Consumes both the number of authorized instances and cores.</description></item>
+                /// <item><description><para><b>ASSET</b>:Consumes the number of authorized instances</para>
+                /// </description></item>
+                /// <item><description><para><b>CORE</b>:Consumes the number of authorized cores</para>
+                /// </description></item>
+                /// <item><description><para><b>ASSET_AND_CORE</b>:Consumes both the number of authorized instances and cores.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -1129,15 +1168,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Version of the Cloud Security Center for the member account. Values:  </para>
+                /// <para>Version of the Cloud Security Center for the member account. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: Free Edition </description></item>
-                /// <item><description><b>3</b>: Enterprise Edition</description></item>
-                /// <item><description><b>5</b>: Advanced Edition</description></item>
-                /// <item><description><b>6</b>: Anti-Virus Edition    </description></item>
-                /// <item><description><b>7</b>: Flagship Edition   </description></item>
-                /// <item><description><b>8</b>: Multiple Versions   </description></item>
-                /// <item><description><b>10</b>: Value-Added Services Only</description></item>
+                /// <item><description><para><b>1</b>: Free Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: Enterprise Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: Advanced Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>6</b>: Anti-Virus Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>7</b>: Flagship Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>8</b>: Multiple Versions</para>
+                /// </description></item>
+                /// <item><description><para><b>10</b>: Value-Added Services Only</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

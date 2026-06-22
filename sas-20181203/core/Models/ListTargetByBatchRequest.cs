@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListTargetByBatchRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the release batch.</para>
+        /// <para>The publish batch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1371</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BatchId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paginated query.</para>
+        /// <para>The page number of the current page to display in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Asset selection dimension. Values:</para>
+        /// <para>The asset selection dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Machine instance</description></item>
-        /// <item><description><b>1</b>: Machine group</description></item>
-        /// <item><description><b>2</b>: VPC instance ID</description></item>
+        /// <item><description><b>0</b>: machine instance</description></item>
+        /// <item><description><b>1</b>: machine group</description></item>
+        /// <item><description><b>2</b>: VPC-connected instance ID</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? OperationBase { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of items to return per page in a paginated query.</para>
+        /// <para>The maximum number of entries to display per page in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class InstallCloudMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey ID.</para>
+        /// <para>The AccessKey required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to obtain this parameter.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</para>
+        /// <para>This parameter is required only when you install the CloudMonitor agent on a non-Alibaba Cloud server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AgentAccessKey { get; set; }
 
         /// <summary>
-        /// <para>The AccessKey secret that is required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to query the AccessKey secret.</para>
+        /// <para>The AccessSecret required to install the CloudMonitor agent. You can call the <a href="https://help.aliyun.com/document_detail/114948.html">DescribeMonitoringAgentAccessKey</a> operation to obtain this parameter.</para>
         /// <remarks>
-        /// <para>This parameter is required only when you install the CloudMonitor agent on servers that are not deployed on Alibaba Cloud.</para>
+        /// <para>This parameter is required only when you install the CloudMonitor agent on a non-Alibaba Cloud server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AgentSecretKey { get; set; }
 
         /// <summary>
-        /// <para>The version of the CloudMonitor agent that you want to install on the servers. For more information about the latest version of the CloudMonitor agent, see <a href="https://help.aliyun.com/document_detail/183431.html">Overview</a>.</para>
+        /// <para>The version of the CloudMonitor agent to install. You can obtain the latest CloudMonitor agent version from <a href="https://help.aliyun.com/document_detail/183431.html">Plugin overview</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ArgusVersion { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).</para>
+        /// <para>The list of instance IDs of the servers on which you want to install the CloudMonitor agent. Separate multiple IDs with commas (,).</para>
         /// </summary>
         [NameInMap("InstanceIdList")]
         [Validation(Required=false)]
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The list of UUIDs of the servers on which you want to install the CloudMonitor agent. Separate multiple UUIDs with commas (,).</para>
         /// </summary>
         [NameInMap("UuidList")]
         [Validation(Required=false)]

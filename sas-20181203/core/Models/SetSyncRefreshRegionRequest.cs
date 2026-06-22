@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The access type of the multi-cloud site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The current site is not the default site of multi-cloud site. You can specify the current site as the default site of the multi-cloud site.</description></item>
-        /// <item><description><b>1</b>: The current site is the default site of multi-cloud site.</description></item>
+        /// <item><description><b>0</b>: no default site is configured, and you can select regions as needed.</description></item>
+        /// <item><description><b>1</b>: the current site is already the default site.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,19 +24,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DefaultRegion { get; set; }
 
         /// <summary>
-        /// <para>The regions from which you want to synchronize assets at the current site.</para>
+        /// <para>The list of regions to be synchronized for the current site.</para>
         /// </summary>
         [NameInMap("RegionIds")]
         [Validation(Required=false)]
         public List<string> RegionIds { get; set; }
 
         /// <summary>
-        /// <para>The cloud service provider. Valid values:</para>
+        /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: Tencent Cloud</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
-        /// <item><description><b>Azure</b>: Microsoft Azure</description></item>
-        /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
+        /// <item><description><b>Tencent</b>: Tencent Cloud.</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
+        /// <item><description><b>Azure</b>: Azure.</description></item>
+        /// <item><description><b>AWS</b>: AWS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetDockerhubImageRiskRankInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30CBF632-109F-596F-97F2-451C8B2A****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public GetDockerhubImageRiskRankInfoResponseBodyRiskRankInfo RiskRankInfo { get; set; }
         public class GetDockerhubImageRiskRankInfoResponseBodyRiskRankInfo : TeaModel {
             /// <summary>
-            /// <para>The baseline risks.</para>
+            /// <para>The baseline risk information.</para>
             /// </summary>
             [NameInMap("Baseline")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Digest { get; set; }
 
                 /// <summary>
-                /// <para>The number of baseline risks detected on the image repository.</para>
+                /// <para>The number of baseline risks in the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? ImageSize { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Container Registry repository.</para>
+                /// <para>The name of the container image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>glz123</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace to which the repository belongs.</para>
+                /// <para>The repository namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>namespace-01</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RepoNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The risk statistics of all hosts, images, and containers.</para>
+                /// <para>The risk statistics information for all hosts, images, and containers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;account\&quot;:0,\&quot;agentlessAll\&quot;:0,\&quot;agentlessBaseline\&quot;:0,\&quot;agentlessMalicious\&quot;:0,\&quot;agentlessSensitiveFile\&quot;:0,\&quot;agentlessVulCve\&quot;:0,\&quot;agentlessVulSca\&quot;:0,\&quot;agentlessVulSys\&quot;:0,\&quot;appNum\&quot;:0,\&quot;asapVulCount\&quot;:0,\&quot;baselineHigh\&quot;:0,\&quot;baselineLow\&quot;:0,\&quot;baselineMedium\&quot;:0,\&quot;baselineNum\&quot;:0,\&quot;cmsNum\&quot;:0,\&quot;containerAsap\&quot;:0,\&quot;containerLater\&quot;:0,\&quot;containerNntf\&quot;:0,\&quot;containerRemind\&quot;:0,\&quot;containerSerious\&quot;:0,\&quot;containerSuspicious\&quot;:0,\&quot;cveNum\&quot;:0,\&quot;emgNum\&quot;:0,\&quot;health\&quot;:0,\&quot;imageBaselineHigh\&quot;:1,\&quot;imageBaselineLow\&quot;:0,\&quot;imageBaselineMedium\&quot;:0,\&quot;imageBaselineNum\&quot;:1,\&quot;imageMaliciousFileRemind\&quot;:0,\&quot;imageMaliciousFileSerious\&quot;:0,\&quot;imageMaliciousFileSuspicious\&quot;:0,\&quot;imageVulAsap\&quot;:0,\&quot;imageVulLater\&quot;:0,\&quot;imageVulNntf\&quot;:0,\&quot;laterVulCount\&quot;:0,\&quot;newSuspicious\&quot;:0,\&quot;nntfVulCount\&quot;:0,\&quot;remindNum\&quot;:0,\&quot;scaNum\&quot;:0,\&quot;seriousNum\&quot;:0,\&quot;suspNum\&quot;:0,\&quot;suspicious\&quot;:0,\&quot;sysNum\&quot;:0,\&quot;trojan\&quot;:0,\&quot;uuid\&quot;:\&quot;009635bf00c0585e3122ab92f5449919\&quot;,\&quot;vul\&quot;:0,\&quot;weakPWNum\&quot;:0}</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RiskLevelDetail { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the image.</para>
+                /// <para>The image tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>machineResource</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The UUID of the record.</para>
+                /// <para>The unique identifier of the record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5583aa03-922e-4709-a888-389f2489****</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The risk information of high-risk vulnerabilities.</para>
+            /// <para>The risk information about high-priority vulnerabilities.</para>
             /// </summary>
             [NameInMap("VulAsap")]
             [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Digest { get; set; }
 
                 /// <summary>
-                /// <para>The number of risks detected on the image repository.</para>
+                /// <para>The number of risks in the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace to which the image repository belongs.</para>
+                /// <para>The namespace of the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>namespace-01</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RepoNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The risk statistics of all hosts, images, and containers.</para>
+                /// <para>The risk statistics information for all hosts, images, and containers.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;account\&quot;:0,\&quot;agentlessAll\&quot;:0,\&quot;agentlessBaseline\&quot;:0,\&quot;agentlessMalicious\&quot;:0,\&quot;agentlessSensitiveFile\&quot;:0,\&quot;agentlessVulCve\&quot;:0,\&quot;agentlessVulSca\&quot;:0,\&quot;agentlessVulSys\&quot;:0,\&quot;appNum\&quot;:0,\&quot;asapVulCount\&quot;:0,\&quot;baselineHigh\&quot;:0,\&quot;baselineLow\&quot;:0,\&quot;baselineMedium\&quot;:0,\&quot;baselineNum\&quot;:0,\&quot;cmsNum\&quot;:0,\&quot;containerAsap\&quot;:0,\&quot;containerLater\&quot;:0,\&quot;containerNntf\&quot;:0,\&quot;containerRemind\&quot;:0,\&quot;containerSerious\&quot;:0,\&quot;containerSuspicious\&quot;:0,\&quot;cveNum\&quot;:513,\&quot;emgNum\&quot;:0,\&quot;health\&quot;:0,\&quot;imageBaselineHigh\&quot;:0,\&quot;imageBaselineLow\&quot;:0,\&quot;imageBaselineMedium\&quot;:0,\&quot;imageBaselineNum\&quot;:0,\&quot;imageMaliciousFileRemind\&quot;:0,\&quot;imageMaliciousFileSerious\&quot;:0,\&quot;imageMaliciousFileSuspicious\&quot;:0,\&quot;imageVulAsap\&quot;:3,\&quot;imageVulLater\&quot;:182,\&quot;imageVulNntf\&quot;:328,\&quot;laterVulCount\&quot;:0,\&quot;newSuspicious\&quot;:0,\&quot;nntfVulCount\&quot;:0,\&quot;remindNum\&quot;:0,\&quot;scaNum\&quot;:0,\&quot;seriousNum\&quot;:0,\&quot;suspNum\&quot;:0,\&quot;suspicious\&quot;:0,\&quot;sysNum\&quot;:0,\&quot;trojan\&quot;:0,\&quot;uuid\&quot;:\&quot;44ffb29d6f66d8509598bcdfa660a21d\&quot;,\&quot;vul\&quot;:513,\&quot;weakPWNum\&quot;:0}</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The UUID of the record.</para>
+                /// <para>The unique identifier of the record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6636c286-8063-4c97-8508-6aaf16a8****</para>

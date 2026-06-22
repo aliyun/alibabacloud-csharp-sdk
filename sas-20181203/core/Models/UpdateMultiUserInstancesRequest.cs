@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Charge type, values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PREPAID</b>: Prepaid.</description></item>
-            /// <item><description><b>POSTPAID</b> (default): Postpaid.</description></item>
+            /// <item><description><para><b>PREPAID</b>: Prepaid.</para>
+            /// </description></item>
+            /// <item><description><para><b>POSTPAID</b> (default): Postpaid.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,11 +93,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Operation type. Values:  </para>
+            /// <para>Operation type. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ADD</b>: Add </description></item>
-            /// <item><description><b>CHANGE</b>: Change</description></item>
-            /// <item><description><b>DEL</b>: Delete</description></item>
+            /// <item><description><para><b>ADD</b>: Add</para>
+            /// </description></item>
+            /// <item><description><para><b>CHANGE</b>: Change</para>
+            /// </description></item>
+            /// <item><description><para><b>DEL</b>: Delete</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,10 +141,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? SlsCapacity { get; set; }
 
             /// <summary>
-            /// <para>Status of the member account instance. Values: </para>
+            /// <para>Status of the member account instance. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Valid. </description></item>
-            /// <item><description><b>2</b>: Invalid.</description></item>
+            /// <item><description><para><b>1</b>: Valid.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Invalid.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,13 +177,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ThreatAnalysisFlow { get; set; }
 
             /// <summary>
-            /// <para>The version of Cloud Security Center protection to be bound. Values:  </para>
+            /// <para>The version of Cloud Security Center protection to be bound. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Free Edition </description></item>
-            /// <item><description><b>3</b>: Enterprise Edition</description></item>
-            /// <item><description><b>5</b>: Advanced Edition</description></item>
-            /// <item><description><b>6</b>: Antivirus Edition    </description></item>
-            /// <item><description><b>7</b>: Flagship Edition</description></item>
+            /// <item><description><para><b>1</b>: Free Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Enterprise Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: Advanced Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: Antivirus Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: Flagship Edition</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -214,15 +226,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? EcsCount { get; set; }
 
                 /// <summary>
-                /// <para>Version of the Cloud Security Center for the member account. Values:  </para>
+                /// <para>Version of the Cloud Security Center for the member account. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: Free Edition </description></item>
-                /// <item><description><b>3</b>: Enterprise Edition</description></item>
-                /// <item><description><b>5</b>: Advanced Edition</description></item>
-                /// <item><description><b>6</b>: Antivirus Edition    </description></item>
-                /// <item><description><b>7</b>: Flagship Edition   </description></item>
-                /// <item><description><b>8</b>: Multiple Versions   </description></item>
-                /// <item><description><b>10</b>: Only Purchase Value-Added Services</description></item>
+                /// <item><description><para><b>1</b>: Free Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: Enterprise Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: Advanced Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>6</b>: Antivirus Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>7</b>: Flagship Edition</para>
+                /// </description></item>
+                /// <item><description><para><b>8</b>: Multiple Versions</para>
+                /// </description></item>
+                /// <item><description><para><b>10</b>: Only Purchase Value-Added Services</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

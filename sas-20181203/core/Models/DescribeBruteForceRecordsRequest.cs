@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The ID of the server.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp1g6wxdwps7s9dz****</para>
+        /// <para>i-bp1fu4aqltf1huhc****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name or IP address of the server to query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.2.XX.XX</para>
+        /// <para>222.185.XX.XX</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

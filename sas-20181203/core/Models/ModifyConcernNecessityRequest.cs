@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyConcernNecessityRequest : TeaModel {
         /// <summary>
-        /// <para>The priorities to fix the vulnerabilities. Valid values:</para>
+        /// <para>The list of vulnerability fix necessity levels.</para>
         /// <list type="bullet">
-        /// <item><description>asap: high</description></item>
-        /// <item><description>later: medium</description></item>
-        /// <item><description>nntf: low</description></item>
+        /// <item><description><para>asap: High</para>
+        /// </description></item>
+        /// <item><description><para>later: Medium</para>
+        /// </description></item>
+        /// <item><description><para>nntf: Low</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

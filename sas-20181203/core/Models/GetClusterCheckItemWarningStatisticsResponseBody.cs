@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterCheckItemWarningStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics on risk items by risk level.</para>
+        /// <para>The baseline check statistics grouped by risk level (high, medium, and low).</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetClusterCheckItemWarningStatisticsResponseBodyData Data { get; set; }
         public class GetClusterCheckItemWarningStatisticsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of high-risk items.</para>
+            /// <para>The number of high-risk check items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighWarningCount { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk items.</para>
+            /// <para>The number of low-risk check items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? LowWarningCount { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk items.</para>
+            /// <para>The number of medium-risk check items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2B285A3-3493-5C5F-A224-4CCE4BFC****</para>

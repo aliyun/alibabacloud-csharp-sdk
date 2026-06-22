@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetUserLangResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23AD0BD2-8771-5647-819E-6BA51E21****</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The language settings.</para>
+        /// <para>The language settings data.</para>
         /// </summary>
         [NameInMap("SasUserLang")]
         [Validation(Required=false)]
         public GetUserLangResponseBodySasUserLang SasUserLang { get; set; }
         public class GetUserLangResponseBodySasUserLang : TeaModel {
             /// <summary>
-            /// <para>The language specified for log analysis. Valid values:</para>
+            /// <para>The language configured for log analysis. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>zh: Chinese</description></item>
-            /// <item><description>en: English</description></item>
+            /// <item><description>en: English.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

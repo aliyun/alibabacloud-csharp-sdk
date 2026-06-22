@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the image.</para>
+        /// <para>The image instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of instances.</para>
+        /// <para>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The region ID of the image.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of regions.</para>
+        /// <para>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the IDs of image repositories.</para>
+        /// <para>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageRepoId { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the image.</para>
+        /// <para>The image tag.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query tags.</para>
+        /// <para>You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -128,8 +128,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Source type of the security check item:</para>
             /// <list type="bullet">
-            /// <item><description><b>CUSTOM</b>：User-defined</description></item>
-            /// <item><description><b>SYSTEM</b>：Predefined by the Security Platform</description></item>
+            /// <item><description><para><b>CUSTOM</b>:User-defined</para>
+            /// </description></item>
+            /// <item><description><para><b>SYSTEM</b>:Predefined by the Security Platform</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,29 +144,43 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Subtype of the cloud product asset. Values:</para>
             /// <list type="bullet">
-            /// <item><description>When <b>InstanceType</b> is <b>ECS</b>, this parameter can take the following values:<list type="bullet">
-            /// <item><description><b>INSTANCE</b></description></item>
-            /// <item><description><b>DISK</b></description></item>
-            /// <item><description><b>SECURITY_GROUP</b></description></item>
+            /// <item><description><para>When <b>InstanceType</b> is <b>ECS</b>, this parameter can take the following values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>INSTANCE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>DISK</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SECURITY_GROUP</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>When <b>InstanceType</b> is <b>ACR</b>, this parameter can take the following values:<list type="bullet">
-            /// <item><description><b>REPOSITORY_ENTERPRISE</b></description></item>
-            /// <item><description><b>REPOSITORY_PERSON</b></description></item>
+            /// <item><description><para>When <b>InstanceType</b> is <b>ACR</b>, this parameter can take the following values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>REPOSITORY_ENTERPRISE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>REPOSITORY_PERSON</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>When <b>InstanceType</b> is <b>RAM</b>, this parameter can take the following values:<list type="bullet">
-            /// <item><description><b>ALIAS</b></description></item>
-            /// <item><description><b>USER</b></description></item>
-            /// <item><description><b>POLICY</b></description></item>
-            /// <item><description><b>GROUP</b></description></item>
+            /// <item><description><para>When <b>InstanceType</b> is <b>RAM</b>, this parameter can take the following values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>ALIAS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>USER</b></para>
+            /// </description></item>
+            /// <item><description><para><b>POLICY</b></para>
+            /// </description></item>
+            /// <item><description><para><b>GROUP</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>When <b>InstanceType</b> is <b>WAF</b>, this parameter can take the following values:<list type="bullet">
+            /// <item><description><para>When <b>InstanceType</b> is <b>WAF</b>, this parameter can take the following values:</para>
+            /// <list type="bullet">
             /// <item><description><b>DOMAIN</b></description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>For other <b>InstanceType</b> values, this parameter can take the following value:<list type="bullet">
+            /// <item><description><para>For other <b>InstanceType</b> values, this parameter can take the following value:</para>
+            /// <list type="bullet">
             /// <item><description><b>INSTANCE</b></description></item>
             /// </list>
             /// </description></item>
@@ -200,9 +216,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Risk level of the check item. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HIGH</b>：High</description></item>
-            /// <item><description><b>MEDIUM</b>：Medium</description></item>
-            /// <item><description><b>LOW</b>：Low</description></item>
+            /// <item><description><para><b>HIGH</b>:High</para>
+            /// </description></item>
+            /// <item><description><para><b>MEDIUM</b>:Medium</para>
+            /// </description></item>
+            /// <item><description><para><b>LOW</b>:Low</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -215,11 +234,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Status of the check item. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PASS</b>: Passed</description></item>
-            /// <item><description><b>NOT_PASS</b>: Not passed</description></item>
-            /// <item><description><b>CHECKING</b>: Checking</description></item>
-            /// <item><description><b>NOT_CHECK</b>: Not checked</description></item>
-            /// <item><description><b>WHITELIST</b>: Whitelisted</description></item>
+            /// <item><description><para><b>PASS</b>: Passed</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_PASS</b>: Not passed</para>
+            /// </description></item>
+            /// <item><description><para><b>CHECKING</b>: Checking</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_CHECK</b>: Not checked</para>
+            /// </description></item>
+            /// <item><description><para><b>WHITELIST</b>: Whitelisted</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -242,8 +266,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Whether the check item requires enabling data delivery of operation audit for more than 30 days to build a behavior baseline.</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：Required</description></item>
-            /// <item><description><b>0</b>：Not Required</description></item>
+            /// <item><description><para><b>1</b>:Required</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>:Not Required</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -255,11 +281,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>Vendor of the asset. Values:</para>
-            /// <para>0: Alibaba Cloud
-            /// 3: Other cloud
-            /// 4: Other cloud
-            /// 5: Other cloud
-            /// 7: Other cloud</para>
+            /// <para>0: Alibaba Cloud 3: Other cloud 4: Other cloud 5: Other cloud 7: Other cloud</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

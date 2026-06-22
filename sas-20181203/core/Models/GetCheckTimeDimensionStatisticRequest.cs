@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckTimeDimensionStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>End time, in timestamp format.</para>
+        /// <para>The end time in timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672285044000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTimeStamp { get; set; }
 
         /// <summary>
-        /// <para>Start time, in timestamp format.</para>
+        /// <para>The start time in timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672385044000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTimeStamp { get; set; }
 
         /// <summary>
-        /// <para>Type of statistical data. Values:</para>
+        /// <para>The type of data statistics. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>CheckPassRate</b>: Check item pass rate.</description></item>
         /// <item><description><b>AssetPassRate</b>: Asset pass rate.</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatisticType { get; set; }
 
         /// <summary>
-        /// <para>List of cloud vendors.</para>
+        /// <para>The list of cloud service providers.</para>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeLoginBaseConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>5</b>.</para>
+        /// <para>Settings for paged query. The number of logon configuration entries to display on each page when paging is used. Default value: <b>5</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,19 +30,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The selection mode for the assets on which the policy takes effect. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>Target</b>: the UUID or group ID of the server to add or delete.</description></item>
+        /// <item><description><b>Target</b>: The UUID of the server to add or delete, or the ID of the server group.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If targetType is set to uuid, the value of Target is the UUID of the server. If targetType is set to groupId, the value of Target is the group ID of the server. If targetType is set to global, the value of Target is a hyphen (-).</para>
+        /// <para>If the targetType parameter is set to uuid, this parameter specifies the UUID of the server. If the targetType parameter is set to groupId, this parameter specifies the ID of the server group. If the targetType parameter is set to global, set this parameter to a hyphen (-).</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para><b>targetType</b>: the type of the server to which the configuration is applied. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>uuid</b>: a server</description></item>
-        /// <item><description><b>groupId</b>: a server group</description></item>
-        /// <item><description><b>global</b>: all servers</description></item>
+        /// <item><description><b>targetType</b>: The selection mode for the assets on which the policy takes effect. Valid values:<list type="bullet">
+        /// <item><description><b>uuid</b>: queries by individual server.</description></item>
+        /// <item><description><b>groupId</b>: queries by server group.</description></item>
+        /// <item><description><b>global</b>: queries all servers.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -55,12 +54,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>The logon type of the configuration to query. Valid values:</para>
+        /// <para>The type of logon configuration to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>login_common_location</b>: common logon location</description></item>
-        /// <item><description><b>login_common_ip</b>: common logon IP address</description></item>
-        /// <item><description><b>login_common_time</b>: common logon time range</description></item>
-        /// <item><description><b>login_common_account</b>: common logon account</description></item>
+        /// <item><description><b>login_common_location</b>: common logon location.</description></item>
+        /// <item><description><b>login_common_ip</b>: common logon IP address.</description></item>
+        /// <item><description><b>login_common_time</b>: common logon time.</description></item>
+        /// <item><description><b>login_common_account</b>: common logon account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -57,10 +57,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Update status. Values:  </para>
+            /// <para>Update status. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：Success </description></item>
-            /// <item><description><b>2</b>：Failure</description></item>
+            /// <item><description><para><b>1</b>:Success</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>:Failure</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the file to export. Valid values:</para>
+        /// <para>The type of file to export. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>virusScanExport</b>: The details of the virus scan tasks are exported. This parameter is available and required when ExportType is set to virusScanExport.</description></item>
+        /// <item><description><b>virusScanExport</b>: Exports details of a virus scan task. This parameter is required when ExportType is set to virusScanExport.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,36 +23,72 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExportFileType { get; set; }
 
         /// <summary>
-        /// <para>The type of detection result list to be exported. Values:</para>
+        /// <para>The type of records to export. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>assetInstance</b>: List of servers in the asset center </description></item>
-        /// <item><description><b>user</b>: List of asset fingerprints for accounts </description></item>
-        /// <item><description><b>port</b>: List of asset fingerprints for ports </description></item>
-        /// <item><description><b>process</b>: List of asset fingerprints for processes </description></item>
-        /// <item><description><b>sca</b>: List of asset fingerprints for middleware </description></item>
-        /// <item><description><b>database</b>: List of asset fingerprints for databases </description></item>
-        /// <item><description><b>web</b>: List of asset fingerprints for web services </description></item>
-        /// <item><description><b>software</b>: List of asset fingerprints for software </description></item>
-        /// <item><description><b>cron</b>: List of asset fingerprints for scheduled tasks </description></item>
-        /// <item><description><b>autorun</b>: List of asset fingerprints for startup items </description></item>
-        /// <item><description><b>lkm</b>: List of asset fingerprints for kernel modules </description></item>
-        /// <item><description><b>webserver</b>: List of asset fingerprints for web sites </description></item>
-        /// <item><description><b>virusScanExport</b>: List of details for virus scan tasks </description></item>
-        /// <item><description><b>imageVulExport</b>: List of system vulnerabilities in images </description></item>
-        /// <item><description><b>imageBaseLineExport</b>: List of baseline check results in images </description></item>
-        /// <item><description><b>imageAffectedMaliciousExport</b>: List of malicious sample check results in images </description></item>
-        /// <item><description><b>baselineCspm</b>: List of detection results for cloud platform configuration checks </description></item>
-        /// <item><description><b>attack</b>: List of alert events for attack analysis </description></item>
-        /// <item><description><b>accessKey</b>: List of alert events for AK leak detection </description></item>
-        /// <item><description><b>exportObjectScanEvents</b>: List of alert events for malicious file detection </description></item>
-        /// <item><description><b>domainDetail</b>: Website assets </description></item>
-        /// <item><description><b>assetsPropertyScaProcessDetail</b>: RASP protection process for application protection </description></item>
-        /// <item><description><b>exportHcWarning</b>: List of system baseline risks </description></item>
-        /// <item><description><b>raspAttackAlert</b>: List of attack alerts for Application Protection</description></item>
-        /// <item><description><b>raspApplicationConfiguration</b>: List of application configurations for Application Protection</description></item>
-        /// <item><description><b>raspWeaknessDetection</b>: List of weakness detections for Application Protection</description></item>
-        /// <item><description><b>raspInMemoryWebshellDetection</b>: List of in-memory webshell detection alerts for Application Protection</description></item>
-        /// <item><description><b>raspInMemoryWebshellInsertion</b>: List of in-memory webshell insertion alerts for Application Protection</description></item>
+        /// <item><description><para><b>assetInstance</b>: The list of servers in Asset Center</para>
+        /// </description></item>
+        /// <item><description><para><b>user</b>: The list of account asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>port</b>: The list of port asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>process</b>: The list of process asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>sca</b>: The list of middleware asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>database</b>: The list of database asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>web</b>: The list of web service asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>software</b>: The list of software asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>cron</b>: The list of scheduled task (cron) asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>autorun</b>: The list of startup item asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>lkm</b>: The list of kernel module asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>webserver</b>: The list of website asset fingerprints</para>
+        /// </description></item>
+        /// <item><description><para><b>virusScanExport</b>: The list of virus scan task details</para>
+        /// </description></item>
+        /// <item><description><para><b>imageVulExport</b>: The list of system vulnerabilities in images</para>
+        /// </description></item>
+        /// <item><description><para>imageVulExport: The list of system vulnerabilities in images</para>
+        /// </description></item>
+        /// <item><description><para><b>imageBaseLineExport</b>: The list of image baseline check results</para>
+        /// </description></item>
+        /// <item><description><para><b>imageAffectedMaliciousExport</b>: The list of malicious sample check results for images</para>
+        /// </description></item>
+        /// <item><description><para><b>baselineCspm</b>: The list of cloud platform configuration check results</para>
+        /// </description></item>
+        /// <item><description><para><b>attack</b>: The list of attack analysis alerts</para>
+        /// </description></item>
+        /// <item><description><para><b>accessKey</b>: The list of AK leakage detection alerts</para>
+        /// </description></item>
+        /// <item><description><para><b>exportObjectScanEvents</b>: The list of malicious file detection alerts</para>
+        /// </description></item>
+        /// <item><description><para><b>domainDetail</b>: Website assets</para>
+        /// </description></item>
+        /// <item><description><para><b>assetsPropertyScaProcessDetail</b>: RASP-protected processes</para>
+        /// </description></item>
+        /// <item><description><para><b>exportHcWarning</b>: The list of system baseline risks</para>
+        /// </description></item>
+        /// <item><description><para><b>raspAttackAlert</b>: The list of RASP attack alerts</para>
+        /// </description></item>
+        /// <item><description><para><b>raspApplicationConfiguration</b>: The list of RASP application configurations</para>
+        /// </description></item>
+        /// <item><description><para><b>raspWeaknessDetection</b>: The list of RASP weakness detection results</para>
+        /// </description></item>
+        /// <item><description><para><b>raspInMemoryWebshellDetection</b>: The list of RASP alerts for in-memory webshell detection</para>
+        /// </description></item>
+        /// <item><description><para><b>raspInMemoryWebshellInsertion</b>: The list of RASP alerts for in-memory webshell insertion</para>
+        /// </description></item>
+        /// <item><description><para><b>listAgentExport</b>: The list of agents</para>
+        /// </description></item>
+        /// <item><description><para><b>listSkillExport</b>: The list of skills</para>
+        /// </description></item>
+        /// <item><description><para><b>listModelExport</b>: The list of models</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,10 +100,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExportType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content in the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,9 +116,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The conditions that are used to filter check results.</para>
+        /// <para>The filter conditions for the exported content.</para>
         /// <remarks>
-        /// <para>This operation is a common export operation for multiple features of Security Center. The available configuration fields of this parameter vary based on the features. We recommend that you do not specify this parameter when you call the operation. You can export an information list without specifying this parameter, and then filter data in the exported Excel file.</para>
+        /// <para>This is a general-purpose operation for exporting various detection lists from Cloud Security Center. As parameter configurations vary by feature, we recommend that you omit this parameter to export the complete list. You can then filter the data in the exported Excel file.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,9 +129,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the management account for a member in Resource Directory.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the ID.</para>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

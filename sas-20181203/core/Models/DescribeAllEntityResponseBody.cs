@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAllEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of servers.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("EntityList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the server.</para>
+            /// <para>The public IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.19.XX.XX</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the server.</para>
+            /// <para>The private IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.104.XX.XX</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The operating system of the server. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>linux</b></description></item>
-            /// <item><description><b>windows</b></description></item>
+            /// <item><description><b>windows</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>

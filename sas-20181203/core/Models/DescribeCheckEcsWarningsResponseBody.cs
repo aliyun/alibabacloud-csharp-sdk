@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckEcsWarningsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether you use the free trial of Security Center. Valid values:</para>
+        /// <para>Indicates whether the current Security Center edition is a trial version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: not a trial version</description></item>
+        /// <item><description><b>1</b>: a trial version.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CanTry { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</para>
@@ -34,15 +34,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The edition of Security Center that you use. Valid values:</para>
+        /// <para>The edition of Security Center that you purchased. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Basic edition</description></item>
-        /// <item><description><b>2</b> or <b>3</b>: Enterprise edition</description></item>
-        /// <item><description><b>5</b>: Advanced edition</description></item>
-        /// <item><description><b>6</b>: Anti-virus edition</description></item>
+        /// <item><description><b>1</b>: Free Edition</description></item>
+        /// <item><description><b>2</b> or <b>3</b>: Enterprise Edition  </description></item>
+        /// <item><description><b>5</b>: Premium Edition  </description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Both the value 2 and the value 3 indicate the Enterprise edition.</para>
+        /// <para>Both 2 and 3 correspond to Enterprise Edition. There is no difference between the two values.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SasVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of weak passwords that can cause high risks to your assets.</para>
+        /// <para>The number of high-risk weak password risks detected in your assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

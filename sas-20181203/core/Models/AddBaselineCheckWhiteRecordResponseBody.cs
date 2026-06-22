@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The reason why the check item is added to the whitelist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AutoTest</para>
+            /// <para>暂时忽略</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]

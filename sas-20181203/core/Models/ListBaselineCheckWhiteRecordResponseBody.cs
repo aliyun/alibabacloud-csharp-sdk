@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListBaselineCheckWhiteRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The whitelist rules.</para>
+        /// <para>The list of whitelist rules.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListBaselineCheckWhiteRecordResponseBodyList> List { get; set; }
         public class ListBaselineCheckWhiteRecordResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The ID of the check item.</para>
+            /// <para>The check item ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>696</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckItem { get; set; }
 
             /// <summary>
-            /// <para>The type of the check item.</para>
+            /// <para>The category of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Security audit</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckTypeDisName { get; set; }
 
             /// <summary>
-            /// <para>List of whitelisted container names in the check item.</para>
+            /// <para>The list of whitelisted container names in the check item.</para>
             /// </summary>
             [NameInMap("ContainerItems")]
             [Validation(Required=false)]
             public List<ListBaselineCheckWhiteRecordResponseBodyListContainerItems> ContainerItems { get; set; }
             public class ListBaselineCheckWhiteRecordResponseBodyListContainerItems : TeaModel {
                 /// <summary>
-                /// <para>Names of the whitelisted containers for the current asset, separated by English commas.</para>
+                /// <para>The whitelisted container names for the current asset, separated by commas.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;anythingllm,ChuanhuChat&quot;</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ContainerNames { get; set; }
 
                 /// <summary>
-                /// <para>Server UUID.</para>
+                /// <para>The UUID of the server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>beeea5c2-1857-4b2b-a794-7d21eae*****</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+            /// <para>The language type for requests and responses. Default value: <b>zh</b>. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>zh</b>: Chinese</description></item>
-            /// <item><description><b>en</b>: English</description></item>
+            /// <item><description><b>en</b>: English.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,17 +100,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Lang { get; set; }
 
             /// <summary>
-            /// <para>The reason why the check item is added to the whitelist.</para>
+            /// <para>The reason for adding to the whitelist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AutoTest</para>
+            /// <para>暂时忽略</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The ID of the whitelist rule.</para>
+            /// <para>The ID of the whitelist record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>79412</para>
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default</b>: server</description></item>
-            /// <item><description><b>agentless</b>: agentless detection</description></item>
+            /// <item><description><b>default</b>: host</description></item>
+            /// <item><description><b>agentless</b>: agentless.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The object that is added to the whitelist.</para>
+            /// <para>The whitelisted target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HOST_BASELINE_WHITE_LIST_21</para>
@@ -144,10 +144,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The type of the assets on which the whitelist rule takes effect. Valid values:</para>
+            /// <para>The type of the effective target. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>all_instance</b>: all servers</description></item>
-            /// <item><description><b>instance</b>: specific servers</description></item>
+            /// <item><description><b>all_instance</b>: all hosts</description></item>
+            /// <item><description><b>instance</b>: specific hosts.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListBaselineCheckWhiteRecordResponseBodyPageInfo PageInfo { get; set; }
         public class ListBaselineCheckWhiteRecordResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9F4E6157-9600-5588-86B9-38F09067****</para>

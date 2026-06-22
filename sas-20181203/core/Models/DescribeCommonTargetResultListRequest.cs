@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCommonTargetResultListRequest : TeaModel {
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113.57.XX.XX</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the configuration item. Valid values:</para>
+        /// <para>The configuration rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>webshell_timescan</b>: webshell detection and removal</description></item>
-        /// <item><description><b>aliscriptengine</b>: in-depth detection engine</description></item>
-        /// <item><description><b>alidetect</b>: installation scope of local file detection</description></item>
-        /// <item><description><b>alidetect-scan-enable</b>: detection scope of local file detection</description></item>
+        /// <item><description><b>webshell_timescan</b>: web shell scan.</description></item>
+        /// <item><description><b>aliscriptengine</b>: deep detection engine.</description></item>
+        /// <item><description><b>alidetect</b>: installation scope of the local file detection engine.</description></item>
+        /// <item><description><b>alidetect-scan-enable</b>: detection scope of the local file detection engine.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operations to obtain more types of custom and system configuration items.</para>
+        /// <para>You can call <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> and <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> to obtain more custom and system-configured rule types.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

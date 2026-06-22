@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVersionConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Number of agentless detections. </para>
+        /// <para>The number of agentless detection quotas.</para>
         /// <remarks>
-        /// <para>Agentless detection is not yet available for sale, so there\&quot;s no need to pay attention to this field at the moment.</para>
+        /// <para>Agentless detection is not available for purchase. You can ignore this field.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? AgentlessCapacity { get; set; }
 
         /// <summary>
-        /// <para>Whether to allow pay-as-you-go purchases.</para>
+        /// <para>Indicates whether pay-as-you-go purchasing is allowed.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not allowed </description></item>
-        /// <item><description><b>1</b>: Allowed</description></item>
+        /// <item><description><b>0</b>: not allowed</description></item>
+        /// <item><description><b>1</b>: allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AllowPartialBuy { get; set; }
 
         /// <summary>
-        /// <para>Ransomware protection backup capacity, in GB.</para>
+        /// <para>The anti-ransomware backup capacity. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>160</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AntiRansomwareCapacity { get; set; }
 
         /// <summary>
-        /// <para>Ransomware Guardian Service. Values:</para>
+        /// <para>The status of the anti-ransomware managed service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not activated</description></item>
-        /// <item><description><b>1</b>: Activated</description></item>
+        /// <item><description><b>0</b>: not activated</description></item>
+        /// <item><description><b>1</b>: activated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AntiRansomwareService { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the application whitelist. Values: </para>
+        /// <para>Indicates whether the application whitelist is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not enabled </description></item>
-        /// <item><description><b>2</b>: Enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>2</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,9 +75,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AppWhiteList { get; set; }
 
         /// <summary>
-        /// <para>Number of application whitelist authorizations. </para>
+        /// <para>The number of application whitelist authorizations.</para>
         /// <remarks>
-        /// <para>One authorization allows the application of a whitelist policy to one server. After enabling the application whitelist function, the account will have 20 authorizations by default.</para>
+        /// <para>One authorization allows you to apply an application whitelist policy to one server. After the application whitelist feature is enabled, the account has 20 authorizations by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? AppWhiteListAuthCount { get; set; }
 
         /// <summary>
-        /// <para>Number of purchased server licenses.</para>
+        /// <para>The number of purchased server authorization quotas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AssetLevel { get; set; }
 
         /// <summary>
-        /// <para>Whether it supports the activation of a post-paid trial package. Values: </para>
+        /// <para>Indicates whether the pay-as-you-go trial plan can be activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not supported</description></item>
-        /// <item><description><b>1</b>: Supported</description></item>
+        /// <item><description><b>0</b>: not supported</description></item>
+        /// <item><description><b>1</b>: supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CanTryPostPaidPackage { get; set; }
 
         /// <summary>
-        /// <para>Purchased cloud platform configuration check scan count. Unit: times/month.</para>
+        /// <para>The number of purchased Cloud Security Posture Management (CSPM) scans. Unit: times per month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -122,15 +122,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CspmCapacity { get; set; }
 
         /// <summary>
-        /// <para>Purchase the highest version of the Security Center. Values:</para>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("CspmInstanceCapacity")]
+        [Validation(Required=false)]
+        public int? CspmInstanceCapacity { get; set; }
+
+        /// <summary>
+        /// <para>The highest purchased edition of Security Center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Free Edition </description></item>
-        /// <item><description><b>3</b>: Enterprise Edition </description></item>
-        /// <item><description><b>5</b>: Advanced Edition </description></item>
-        /// <item><description><b>6</b>: Anti-Virus Edition</description></item>
-        /// <item><description><b>7</b>: Flagship Edition </description></item>
-        /// <item><description><b>10</b>: Purchase Additional Services Only <remarks>
-        /// <para>When purchasing a single version, it indicates the corresponding version. When purchasing multiple versions, this value represents the highest version among the purchased multi-versions of Cloud Security Center.</para>
+        /// <item><description><b>1</b>: Free Edition</description></item>
+        /// <item><description><b>3</b>: Enterprise Edition</description></item>
+        /// <item><description><b>5</b>: Pro Edition</description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+        /// <item><description><b>7</b>: Ultimate Edition</description></item>
+        /// <item><description><b>10</b>: Value-added services only<remarks>
+        /// <para>If a single edition is purchased, this value indicates the corresponding edition. If multiple editions are purchased, this value indicates the highest edition among the purchased editions.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -143,7 +151,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HighestVersion { get; set; }
 
         /// <summary>
-        /// <para>Number of purchased honeypot licenses.</para>
+        /// <para>The number of purchased honeypot authorization quotas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -153,7 +161,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? HoneypotCapacity { get; set; }
 
         /// <summary>
-        /// <para>Number of purchased image scanning authorizations.</para>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("HybridPaidModuleSwitchMap")]
+        [Validation(Required=false)]
+        public int? HybridPaidModuleSwitchMap { get; set; }
+
+        [NameInMap("HybridPaidStatus")]
+        [Validation(Required=false)]
+        public int? HybridPaidStatus { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("HybridSwitch")]
+        [Validation(Required=false)]
+        public int? HybridSwitch { get; set; }
+
+        /// <summary>
+        /// <para>The number of purchased image scan authorization quotas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8954</para>
@@ -163,10 +191,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ImageScanCapacity { get; set; }
 
         /// <summary>
-        /// <para>Instance purchase type. Values: </para>
+        /// <para>The instance purchase type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Self-purchased</description></item>
-        /// <item><description><b>1</b>: Allocated from multiple accounts</description></item>
+        /// <item><description><b>0</b>: self-purchased</description></item>
+        /// <item><description><b>1</b>: allocated from a multi-account setup.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -177,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? InstanceBuyType { get; set; }
 
         /// <summary>
-        /// <para>ID of the purchased Cloud Security Center instance.</para>
+        /// <para>The instance ID of the purchased Security Center instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas-vg6hafdsafs****</para>
@@ -187,7 +215,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>AI digital human analyzes traffic</para>
+        /// <para>The AI digital human analysis traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -197,10 +225,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IntelligentAnalysisFlow { get; set; }
 
         /// <summary>
-        /// <para>Whether it is the new flagship version.</para>
+        /// <para>Indicates whether the instance is the new Ultimate Edition.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: It is the latest version</description></item>
-        /// <item><description><b>false</b>: It is not the latest version</description></item>
+        /// <item><description><para><b>true</b>: The instance is the latest version.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The instance is not the latest version.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,10 +241,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsNewContainerVersion { get; set; }
 
         /// <summary>
-        /// <para>Whether it is the latest multi-version.</para>
+        /// <para>Indicates whether the instance is the new Multi-version Edition.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: It is the latest multi-version </description></item>
-        /// <item><description><b>false</b>: It is not the latest multi-version</description></item>
+        /// <item><description><para><b>true</b>: The instance is the latest multi-version.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The instance is not the latest multi-version.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -225,14 +257,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsNewMultiVersion { get; set; }
 
         /// <summary>
-        /// <para>Whether the number of existing servers exceeds the maximum authorized purchase quantity. Values: </para>
+        /// <para>Indicates whether the number of existing servers exceeds the maximum number of purchased authorizations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: Not exceeded </description></item>
-        /// <item><description><b>true</b>: Exceeded<remarks>
-        /// <para>Notice: This parameter is deprecated, and you do not need to pay attention to it.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description><b>false</b>: The number does not exceed the limit.</description></item>
+        /// <item><description><b>true</b>: The number exceeds the limit.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Notice: This parameter is deprecated. You can ignore it..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -242,10 +274,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsOverBalance { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable pay-as-you-go. Values: </para>
+        /// <para>Indicates whether pay-as-you-go billing is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: Not enabled </description></item>
-        /// <item><description><b>true</b>: Enabled</description></item>
+        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -256,10 +288,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsPostpay { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current Cloud Security Center version is a trial version. Values: </para>
+        /// <para>Indicates whether the current Security Center edition is a trial version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not a trial version </description></item>
-        /// <item><description><b>1</b>: Trial version</description></item>
+        /// <item><description><b>0</b>: not a trial version</description></item>
+        /// <item><description><b>1</b>: trial version.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -270,7 +302,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsTrialVersion { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of the last trial expiration for Cloud Security Center, in milliseconds.</para>
+        /// <para>The end timestamp of the last trial of Security Center. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1603934844000</para>
@@ -280,7 +312,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? LastTrailEndTime { get; set; }
 
         /// <summary>
-        /// <para>Total number of licenses when purchasing multiple versions.</para>
+        /// <para>The total number of authorizations when multiple editions are purchased.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -290,7 +322,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MVAuthCount { get; set; }
 
         /// <summary>
-        /// <para>Total remaining licenses when purchasing multiple versions.</para>
+        /// <para>The total number of remaining authorizations when multiple editions are purchased.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -300,13 +332,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MVUnusedAuthCount { get; set; }
 
         /// <summary>
-        /// <para>When both the annual/monthly and pay-as-you-go services for Cloud Security Center\&quot;s host and container security are activated, the higher protection version of the two is selected. Values: </para>
+        /// <para>The higher protection edition between the subscription and pay-as-you-go host and container security services of Security Center when both are activated. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition</description></item>
-        /// <item><description><b>6</b>: Anti-Virus Edition </description></item>
-        /// <item><description><b>5</b>: Advanced Edition </description></item>
-        /// <item><description><b>3</b>: Enterprise Edition </description></item>
-        /// <item><description><b>7</b>: Ultimate Edition</description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+        /// <item><description><b>5</b>: Premium Edition</description></item>
+        /// <item><description><b>3</b>: Enterprise Edition</description></item>
+        /// <item><description><b>7</b>: Ultimate Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -317,7 +349,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MergedVersion { get; set; }
 
         /// <summary>
-        /// <para>Usage of multiple version numbers and license counts</para>
+        /// <para>The multi-version edition numbers and authorization usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -327,10 +359,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MultiVersion { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the new version of Threat Analysis and Response service. The new version of Threat Analysis and Response service refers to the one that supports purchasing access traffic and log storage capacity. Values: </para>
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("NewPostPaidCspm")]
+        [Validation(Required=false)]
+        public int? NewPostPaidCspm { get; set; }
+
+        /// <summary>
+        /// <para>Indicates whether the new version of Cloud Threat Detection and Response (CTDR) is enabled. The new version supports purchasing ingestion traffic and log storage capacity for Cloud Threat Detection and Response (CTDR). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No </description></item>
-        /// <item><description><b>1</b>: Yes</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -341,7 +381,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? NewThreatAnalysis { get; set; }
 
         /// <summary>
-        /// <para>AI Digital Human Management Instance</para>
+        /// <para>The number of AI digital human managed instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -351,7 +391,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? OnboardedAssets { get; set; }
 
         /// <summary>
-        /// <para>Service activation timestamp, unit: milliseconds.</para>
+        /// <para>The timestamp when the service was activated. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1657244824669</para>
@@ -361,13 +401,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? OpenTime { get; set; }
 
         /// <summary>
-        /// <para>When activating the pay-as-you-go service for host and container security, it represents the highest protection version of the already bound assets. Values: </para>
+        /// <para>The highest protection edition for bound assets when the pay-as-you-go host and container security service is activated. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition</description></item>
         /// <item><description><b>3</b>: Enterprise Edition</description></item>
-        /// <item><description><b>5</b>: Advanced Edition</description></item>
-        /// <item><description><b>6</b>: Anti-Virus Edition </description></item>
-        /// <item><description><b>7</b>: Flagship Edition</description></item>
+        /// <item><description><b>5</b>: Pro Edition</description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+        /// <item><description><b>7</b>: Ultimate Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -378,7 +418,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PostPayHostVersion { get; set; }
 
         /// <summary>
-        /// <para>Pay-As-You-Go instance ID.</para>
+        /// <para>The instance ID of the pay-as-you-go instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>postpay-sas-**</para>
@@ -388,20 +428,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Pay-as-you-go module switch status, in the format of JsonString, with values as follows:</para>
+        /// <para>The status of pay-as-you-go module switches, in JSON string format. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Key:<list type="bullet">
-        /// <item><description><b>VUL</b>: Vulnerability Repair Module </description></item>
-        /// <item><description><b>CSPM</b>: Cloud Security Posture Management Module </description></item>
-        /// <item><description><b>AGENTLESS</b>: Agentless Detection Module </description></item>
-        /// <item><description><b>SERVERLESS</b>: Serverless Security Module </description></item>
-        /// <item><description><b>CTDR</b>: Threat Analysis and Response Module </description></item>
-        /// <item><description><b>POST_HOST</b>: Host and Container Security Module </description></item>
-        /// <item><description><b>SDK</b>: Malicious File Detection SDK Module </description></item>
-        /// <item><description><b>RASP</b>: Application Protection Module</description></item>
+        /// <item><description><b>VUL</b>: vulnerability fix module</description></item>
+        /// <item><description><b>CSPM</b>: Cloud Security Posture Management (CSPM) module</description></item>
+        /// <item><description><b>AGENTLESS</b>: agentless detection module</description></item>
+        /// <item><description><b>SERVERLESS</b>: serverless security module</description></item>
+        /// <item><description><b>CTDR</b>: threat detection and response module</description></item>
+        /// <item><description><b>POST_HOST</b>: host and container security module</description></item>
+        /// <item><description><b>SDK</b>: malicious file detection SDK module</description></item>
+        /// <item><description><b>RASP</b>: application protection module</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Value: 0 indicates off, 1 indicates on</description></item>
+        /// <item><description>Value: 0 indicates disabled, 1 indicates enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -412,7 +452,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PostPayModuleSwitch { get; set; }
 
         /// <summary>
-        /// <para>Pay-as-you-go activation time</para>
+        /// <para>The time when pay-as-you-go billing was activated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1698915219000</para>
@@ -422,10 +462,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PostPayOpenTime { get; set; }
 
         /// <summary>
-        /// <para>Pay-As-You-Go instance status. Values: </para>
+        /// <para>The instance status of the pay-as-you-go instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Normal </description></item>
-        /// <item><description><b>2</b>: Stopped due to unpaid bills</description></item>
+        /// <item><description><b>1</b>: Normal.</description></item>
+        /// <item><description><b>2</b>: Suspended due to overdue payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -436,7 +476,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PostPayStatus { get; set; }
 
         /// <summary>
-        /// <para>Number of purchased application protections. Unit: per month.</para>
+        /// <para>The number of purchased application protection quotas. Unit: per month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -446,9 +486,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RaspCapacity { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of when the Cloud Security Center instance will expire, in milliseconds.</para>
+        /// <para>The UNIX timestamp when the Security Center instance expires. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>If you do not renew the service within 7 days after it expires, your paid instance will be downgraded to a free version, and you will no longer be able to use the features of the paid version. Your previous Cloud Security Center configuration data and historical alert data (e.g., DDoS alerts) will become inaccessible. At this point, you can only re-enable the paid version of Cloud Security Center by repurchasing it. For more information, see <a href="https://help.aliyun.com/document_detail/42308.html">Purchasing Cloud Security Center</a>.</para>
+        /// <para>If you do not complete renewal within 7 days after the instance expires, your paid instance is downgraded to Free Edition. You can no longer use the features of the paid edition, and the Security Center configuration data and historical alerting data (such as DDoS alerts) become inaccessible. In this case, you must repurchase Security Center to enable the paid edition. For more information, see <a href="https://help.aliyun.com/document_detail/42308.html">Purchase Security Center</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -459,7 +499,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ReleaseTime { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier generated by Alibaba Cloud for this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C2DC96D2-DD2E-49D9-A28E-85590475DF55</para>
@@ -469,10 +509,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether log analysis has been purchased. Values: </para>
+        /// <para>Indicates whether log analysis is purchased. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not purchased </description></item>
-        /// <item><description><b>1</b>: Purchased</description></item>
+        /// <item><description><b>0</b>: not purchased</description></item>
+        /// <item><description><b>1</b>: purchased.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -483,10 +523,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SasLog { get; set; }
 
         /// <summary>
-        /// <para>Whether the security dashboard has been purchased. Values: </para>
+        /// <para>Indicates whether the security dashboard is purchased. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not purchased </description></item>
-        /// <item><description><b>1</b>: Purchased</description></item>
+        /// <item><description><b>0</b>: not purchased</description></item>
+        /// <item><description><b>1</b>: purchased.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -497,7 +537,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SasScreen { get; set; }
 
         /// <summary>
-        /// <para>Number of SDK authorizations for malicious file detection</para>
+        /// <para>The number of malicious file detection SDK authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -507,7 +547,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? SdkCapacity { get; set; }
 
         /// <summary>
-        /// <para>Purchased log storage capacity in GB. Range: 0 to 200000.</para>
+        /// <para>The purchased log storage capacity. Unit: GB. Valid values: 0 to 200000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10240</para>
@@ -517,7 +557,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? SlsCapacity { get; set; }
 
         /// <summary>
-        /// <para>Purchased threat analysis capacity. Unit: GB.</para>
+        /// <para>The purchased threat analysis capacity. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25</para>
@@ -527,7 +567,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ThreatAnalysisCapacity { get; set; }
 
         /// <summary>
-        /// <para>Purchased threat analysis and response log access traffic. Unit is GB/day.</para>
+        /// <para>The purchased log ingestion traffic for threat detection and response. Unit: GB per day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -537,10 +577,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ThreatAnalysisFlow { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the custom alarm function. Values:</para>
+        /// <para>Indicates whether the custom alerting feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not enabled </description></item>
-        /// <item><description><b>2</b>: Enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>2</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -551,15 +591,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? UserDefinedAlarms { get; set; }
 
         /// <summary>
-        /// <para>Purchased Cloud Security Center version. Values:   </para>
+        /// <para>The purchased edition of Security Center. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition </description></item>
-        /// <item><description><b>3</b>: Enterprise Edition </description></item>
-        /// <item><description><b>5</b>: Advanced Edition </description></item>
-        /// <item><description><b>6</b>: Anti-Virus Edition     </description></item>
-        /// <item><description><b>7</b>: Flagship Edition   </description></item>
-        /// <item><description><b>8</b>: Multi-Edition  </description></item>
-        /// <item><description><b>10</b>: Value-Added Services Only</description></item>
+        /// <item><description><b>3</b>: Enterprise Edition</description></item>
+        /// <item><description><b>5</b>: Pro Edition</description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition    </description></item>
+        /// <item><description><b>7</b>: Ultimate Edition   </description></item>
+        /// <item><description><b>8</b>: Multi-version Edition   </description></item>
+        /// <item><description><b>10</b>: Value-added services only.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -570,7 +610,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Version { get; set; }
 
         /// <summary>
-        /// <para>Number of authorized cores purchased.</para>
+        /// <para>The number of purchased authorized cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -580,7 +620,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VmCores { get; set; }
 
         /// <summary>
-        /// <para>Number of purchased vulnerability fixes. Unit: times/month.</para>
+        /// <para>The number of purchased vulnerability fixes. Unit: times per month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -590,10 +630,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? VulFixCapacity { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the web tamper-proof service is enabled. Values: </para>
+        /// <para>Indicates whether web tamper-proofing is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not enabled </description></item>
-        /// <item><description><b>1</b>: Enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -604,9 +644,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? WebLock { get; set; }
 
         /// <summary>
-        /// <para>The number of purchased web tamper-proof licenses. One license can enable web tamper protection for one server. Value range: 0~N.</para>
+        /// <para>The number of purchased web tamper-proofing authorizations. One authorization allows you to enable web tamper-proofing for one server. Valid values: 0 to N.</para>
         /// <remarks>
-        /// <para>N is the number of servers you have.</para>
+        /// <para>N is the number of servers that you own.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

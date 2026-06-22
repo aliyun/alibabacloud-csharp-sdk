@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUniBackupDatabaseRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <list type="bullet">
         /// <item><description><b>MYSQL</b></description></item>
         /// <item><description><b>MSSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><b>Oracle</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DatabaseType { get; set; }
 
         /// <summary>
-        /// <para>The name of the Elastic Compute Service (ECS) instance.</para>
+        /// <para>The name of the ECS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -45,9 +45,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The condition that is used to query the database. Valid values:</para>
+        /// <para>The query type for the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>create</b>: newly created</description></item>
-        /// <item><description><b>restore</b>: restored</description></item>
+        /// <item><description><b>create</b>: create</description></item>
+        /// <item><description><b>restore</b>: restore.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string QueryType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the server that hosts the database.</para>
+        /// <para>The region ID of the database server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hongkong</para>

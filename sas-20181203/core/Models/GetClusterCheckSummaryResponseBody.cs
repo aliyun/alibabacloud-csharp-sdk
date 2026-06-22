@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterCheckSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetClusterCheckSummaryResponseBodyData Data { get; set; }
         public class GetClusterCheckSummaryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Total number of items that failed the check.</para>
+            /// <para>The total number of check items that failed the check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassCount { get; set; }
 
             /// <summary>
-            /// <para>Number of high-risk inspection items that have not passed.</para>
+            /// <para>The number of check items with a high-risk level that failed the check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassHighCount { get; set; }
 
             /// <summary>
-            /// <para>Number of low-risk inspection items that have not passed.</para>
+            /// <para>The number of check items with a low-risk level that failed the check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassLowCount { get; set; }
 
             /// <summary>
-            /// <para>Number of medium-risk failed inspection items.</para>
+            /// <para>The number of check items with a medium-risk level that failed the check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListPrivateRegistryListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the image repositories.</para>
+        /// <para>An array of private image registries.</para>
         /// </summary>
         [NameInMap("ImageRegistryInfos")]
         [Validation(Required=false)]
         public List<ListPrivateRegistryListResponseBodyImageRegistryInfos> ImageRegistryInfos { get; set; }
         public class ListPrivateRegistryListResponseBodyImageRegistryInfos : TeaModel {
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1766185894******</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the image repository.</para>
+            /// <para>The domain name of the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image repository.</para>
+            /// <para>The unique ID of the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66485</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The information about the Jenkins environment.</para>
+            /// <para>The Jenkins environment information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>JenkinsInfo</para>
@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Internet</description></item>
-            /// <item><description><b>2</b>: VPC</description></item>
+            /// <item><description><para><b>1</b>: public network</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: VPC</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? NetType { get; set; }
 
             /// <summary>
-            /// <para>The password used to log on to the image repository.</para>
+            /// <para>The password for the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Harbor******</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The number of days during which assets can be retained.</para>
+            /// <para>The asset retention period in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -90,15 +92,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? PersistenceDay { get; set; }
 
+            /// <summary>
+            /// <para>The port number.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: HTTP</description></item>
-            /// <item><description><b>2</b>: HTTPS</description></item>
+            /// <item><description><para><b>1</b>: http</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: https</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the server.</para>
+            /// <para>The region ID of the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -119,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the image repository.</para>
+            /// <para>The IP address of the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114.55.XXX.XXX</para>
@@ -129,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegistryHostIp { get; set; }
 
             /// <summary>
-            /// <para>The alias of the image repository.</para>
+            /// <para>The alias of the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>
@@ -139,12 +149,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegistryName { get; set; }
 
             /// <summary>
-            /// <para>The type of the image repository. Valid values:</para>
+            /// <para>The image registry type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>acr</b>: Container Registry</description></item>
-            /// <item><description><b>harbor</b>: Harbor</description></item>
-            /// <item><description><b>quay</b>: Quay</description></item>
-            /// <item><description><b>CI/CD</b>: Jenkins</description></item>
+            /// <item><description><para><b>acr</b>: ACR</para>
+            /// </description></item>
+            /// <item><description><para><b>harbor</b>: Harbor</para>
+            /// </description></item>
+            /// <item><description><para><b>quay</b>: Quay</para>
+            /// </description></item>
+            /// <item><description><para><b>CI/CD</b>: a CI/CD registry</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,10 +169,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegistryType { get; set; }
 
             /// <summary>
-            /// <para>The version of the image repository. Valid values:</para>
+            /// <para>The version of the image registry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>V1</b>: V1.0</description></item>
-            /// <item><description><b>V2</b>: V2.0</description></item>
+            /// <item><description><para><b>V1</b>: Version 1.0</para>
+            /// </description></item>
+            /// <item><description><para><b>V2</b>: Version 2.0</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -169,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegistryVersion { get; set; }
 
             /// <summary>
-            /// <para>The authentication token of the user.</para>
+            /// <para>The user authentication token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0da12bce-cc36-4c48-b3e6-2215fc3a****</para>
@@ -179,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>The number of images that can be scanned per hour.</para>
+            /// <para>The number of scan tasks per hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -189,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TransPerHour { get; set; }
 
             /// <summary>
-            /// <para>The username used to log on to the image repository.</para>
+            /// <para>The username for the image registry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RegistryUser</para>
@@ -199,7 +215,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The ID of the VPC instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp12897gqrex01zn0****</para>
@@ -209,7 +225,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The whitelist of IP addresses.</para>
+            /// <para>The IP whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.104.XXX.XXX</para>
@@ -221,7 +237,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The unique ID generated by Alibaba Cloud for the request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578AB****</para>

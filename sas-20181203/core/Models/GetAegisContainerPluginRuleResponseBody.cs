@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAegisContainerPluginRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The action mode of the rule. Valid values:</para>
+            /// <para>The rule action mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: allows escape behavior.</description></item>
-            /// <item><description><b>1</b>: triggers alerts.</description></item>
-            /// <item><description><b>2</b>: blocks escape behavior.</description></item>
+            /// <item><description><b>0</b>: allow</description></item>
+            /// <item><description><b>1</b>: alert</description></item>
+            /// <item><description><b>2</b>: block</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Mode { get; set; }
 
             /// <summary>
-            /// <para>The description of the rule.</para>
+            /// <para>The rule description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>autoTest</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21**</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>auto_test_rule-EmzIXZ</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The template ID of the rule.</para>
+            /// <para>The rule template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100**</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleTemplateId { get; set; }
 
             /// <summary>
-            /// <para>The template name of the rule.</para>
+            /// <para>The rule template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>template01</para>
@@ -102,14 +102,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleTemplateName { get; set; }
 
             /// <summary>
-            /// <para>The rule items.</para>
+            /// <para>The list of selected rule items.</para>
             /// </summary>
             [NameInMap("SelectedPolicy")]
             [Validation(Required=false)]
             public List<string> SelectedPolicy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the switch.</para>
+            /// <para>The ID of the corresponding switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER-CONTAINER-RULE-SWITCH-TYPE_***</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SwitchId { get; set; }
 
             /// <summary>
-            /// <para>The images that are added to the whitelist.</para>
+            /// <para>The list of whitelisted images.</para>
             /// </summary>
             [NameInMap("WhiteImages")]
             [Validation(Required=false)]
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09969D2C-***0DEF8BF6F</para>

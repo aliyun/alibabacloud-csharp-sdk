@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedCheckWarningRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of the baseline.</para>
+        /// <para>The type to which the baseline belongs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the types of baselines from the response parameter <b>TypeName</b>.</para>
+        /// <para>The <b>TypeName</b> field returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TypeName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUID of the server to query. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of a server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

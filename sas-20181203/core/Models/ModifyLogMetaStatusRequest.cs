@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyLogMetaStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request source. Set the value to <b>sas</b>.</para>
+        /// <para>The request source identifier. Set this parameter to <b>sas</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated Logstore in which logs are stored.</para>
+        /// <para>The name of the dedicated Logstore where logs are stored.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of Logstores.</para>
+        /// <para>You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogStore { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The project name.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the names of projects.</para>
+        /// <para>You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the member account in the resource directory (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The status of the log analysis feature. Valid values:</para>
+        /// <para>The status to which you want to change the log. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enabled</b></description></item>
-        /// <item><description><b>disabled</b></description></item>
+        /// <item><description><b>enabled</b>: enabled</description></item>
+        /// <item><description><b>disabled</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

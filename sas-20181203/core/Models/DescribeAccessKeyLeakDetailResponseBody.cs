@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAccessKeyLeakDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AccessKey pair that is leaked.</para>
+        /// <para>The leaked AccessKey ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourAccessKeyID</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AccesskeyId { get; set; }
 
         /// <summary>
-        /// <para>The platform to which the asset belongs. The value is fixed as <b>Cloud platform</b>.</para>
+        /// <para>The platform where the asset resides. The value is fixed as <b>Cloud Platform</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Cloud platform</para>
+        /// <para>云平台</para>
         /// </summary>
         [NameInMap("Asset")]
         [Validation(Required=false)]
         public string Asset { get; set; }
 
         /// <summary>
-        /// <para>The code snippet that is leaked.</para>
+        /// <para>The leaked code snippet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>\n1231 \nak=yourAccessKeyID \n12311123 \nsk1999 \nsk1999sk1999 \nsk1999sk1999 \n\n\ntest001 ak hht \nak=yourAccessKeyID \nsk=yourAccessKeySecret</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the AccessKey pair leak was handled.</para>
+        /// <para>The time when the AccessKey pair leak event was handled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-17 15:47:08</para>
@@ -50,12 +50,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DealTime { get; set; }
 
         /// <summary>
-        /// <para>The solution to the AccessKey pair leak. Valid values:</para>
+        /// <para>The method used to handle the AccessKey pair leak event. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>manual</b>: manually deleted</description></item>
         /// <item><description><b>disable</b>: manually disabled</description></item>
         /// <item><description><b>add-whitelist</b>: added to the whitelist</description></item>
-        /// <item><description><b>pending</b>: unhandled</description></item>
+        /// <item><description><b>pending</b>: not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DealType { get; set; }
 
         /// <summary>
-        /// <para>The name of the GitHub file.</para>
+        /// <para>The GitHub file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testAkLeak</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GithubFileName { get; set; }
 
         /// <summary>
-        /// <para>The type of the GitHub file. Valid values:</para>
+        /// <para>The GitHub file type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Python</description></item>
         /// <item><description>XML</description></item>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description>Javascript</description></item>
         /// <item><description>INI</description></item>
         /// <item><description>JSON</description></item>
-        /// <item><description>C++</description></item>
+        /// <item><description>C++.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GithubFileType { get; set; }
 
         /// <summary>
-        /// <para>The time when the GitHub file was updated.</para>
+        /// <para>The time when the GitHub file was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-06T09:49:33</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GithubFileUrl { get; set; }
 
         /// <summary>
-        /// <para>The name of the GitHub repository.</para>
+        /// <para>The GitHub repository name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExamOnline</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GithubRepoUrl { get; set; }
 
         /// <summary>
-        /// <para>The username of the GitHub user.</para>
+        /// <para>The GitHub username.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Blue00Blue</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GithubUser { get; set; }
 
         /// <summary>
-        /// <para>The URL of the profile picture for the GitHub user.</para>
+        /// <para>The profile picture URL of the GitHub user.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://avatars.githubusercontent.com/u/26296896?s=48&v=">https://avatars.githubusercontent.com/u/26296896?s=48&amp;v=</a>****</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GithubUserPicUrl { get; set; }
 
         /// <summary>
-        /// <para>The first time when the AccessKey pair leak was detected.</para>
+        /// <para>The time when the AccessKey pair leak event was first detected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-06 17:49:41</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The last time when the AccessKey pair leak was detected.</para>
+        /// <para>The most recent time when the leak event was detected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-06 17:49:39</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the AccessKey pair leak.</para>
+        /// <para>The remarks of the AccessKey pair leak event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79CFF74D-E967-5407-8A78-EE03B925FDAA</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The platform on which the AccessKey pair leak is detected.</para>
+        /// <para>The intelligence source of the AccessKey pair leak event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GitHub</para>
@@ -205,10 +205,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The validity of the key that is associated with the AccessKey pair. Valid values:</para>
+        /// <para>The validity of the key associated with the AccessKey pair. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: to be confirmed.</description></item>
-        /// <item><description><b>1</b>: valid.</description></item>
+        /// <item><description><b>0</b>: to be confirmed</description></item>
+        /// <item><description><b>1</b>: valid</description></item>
         /// <item><description><b>2</b>: invalid.</description></item>
         /// </list>
         /// 
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TokenValid { get; set; }
 
         /// <summary>
-        /// <para>The type of the leak. The value is fixed as <b>AccessKey</b>.</para>
+        /// <para>The type of the leaked information. The value is fixed as <b>AccessKey</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AccessKey</para>
@@ -230,10 +230,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the AccessKey pair leak is added to the whitelist. Valid values:</para>
+        /// <para>Indicates whether the AccessKey pair leak event is added to the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>no</b>: no</description></item>
-        /// <item><description><b>yes</b>: yes</description></item>
+        /// <item><description><b>no</b>: not added to the whitelist</description></item>
+        /// <item><description><b>yes</b>: added to the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerabilities. Valid values:</para>
+        /// <para>The type of vulnerability that you want to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerabilities</description></item>
         /// <item><description><b>app</b>: application vulnerabilities</description></item>
-        /// <item><description><b>sca</b>: vulnerabilities that are detected based on software component analysis</description></item>
+        /// <item><description><b>sca</b>: software composition analysis (SCA) vulnerabilities</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

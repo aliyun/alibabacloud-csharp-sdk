@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterVulStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics of the vulnerabilities.</para>
+        /// <para>The vulnerability statistics.</para>
         /// </summary>
         [NameInMap("VulStat")]
         [Validation(Required=false)]
         public DescribeClusterVulStatisticsResponseBodyVulStat VulStat { get; set; }
         public class DescribeClusterVulStatisticsResponseBodyVulStat : TeaModel {
             /// <summary>
-            /// <para>The number of high-risk vulnerabilities.</para>
+            /// <para>The number of high-severity vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AsapCount { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk vulnerabilities.</para>
+            /// <para>The number of medium-severity vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LaterCount { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk vulnerabilities.</para>
+            /// <para>The number of low-severity vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

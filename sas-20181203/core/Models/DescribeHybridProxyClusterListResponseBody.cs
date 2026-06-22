@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHybridProxyClusterListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The proxy clusters.</para>
+        /// <para>The list of clusters.</para>
         /// </summary>
         [NameInMap("ClusterList")]
         [Validation(Required=false)]
         public List<DescribeHybridProxyClusterListResponseBodyClusterList> ClusterList { get; set; }
         public class DescribeHybridProxyClusterListResponseBodyClusterList : TeaModel {
             /// <summary>
-            /// <para>The ID of the credential that is used for cluster authentication.</para>
+            /// <para>The credential ID for cluster authentication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuthKey { get; set; }
 
             /// <summary>
-            /// <para>The key of the credential that is used for cluster authentication.</para>
+            /// <para>The credential key for cluster authentication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuthKeySecret { get; set; }
 
             /// <summary>
-            /// <para>The number of servers that are connected to the proxy cluster.</para>
+            /// <para>The number of Security Center clients connected to the current cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The installation command for the node of the proxy cluster.</para>
+            /// <para>The installation command for the current proxy cluster node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstallCommand { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the cluster. An IP address or a domain name is specified.</para>
+            /// <para>The access address of the cluster, which can be an IP address or a domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114.115.XXX.XXX</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the cluster last sent a heartbeat message. Unit: milliseconds.</para>
+            /// <para>The timestamp of the last heartbeat from the cluster. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1608304654000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ProxyCount { get; set; }
 
             /// <summary>
-            /// <para>The description of the proxy cluster.</para>
+            /// <para>The remarks of the proxy cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The status of the cluster.</para>
+            /// <para>The running status of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>offline</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeHybridProxyClusterListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeHybridProxyClusterListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries displayed on each page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C1A36413-50B2-5B2F-843F-EB14C582713F</para>

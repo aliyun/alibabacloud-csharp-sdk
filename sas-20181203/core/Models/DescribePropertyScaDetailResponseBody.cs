@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribePropertyScaDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyScaDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The value of NextToken that is returned when the NextToken method is used.</para>
+            /// <para>The NextToken value returned when the NextToken method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B60***</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+            /// <para>The number of Asset Fingerprints entries per page in a paged query. Default value: <b>10</b>, which indicates that 10 Asset Fingerprints entries are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of Asset Fingerprints entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The details about the asset fingerprints returned.</para>
+        /// <para>The details of the Asset Fingerprints list.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>database</b>: database</description></item>
             /// <item><description><b>web_container</b>: web container</description></item>
             /// <item><description><b>jar</b>: JAR package</description></item>
-            /// <item><description><b>web_framework</b>: web framework</description></item>
+            /// <item><description><b>web_framework</b>: web framework.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,15 +95,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>The display name of the type of the middleware, database, or web service . Valid values:</para>
+            /// <para>The display name of the middleware, database, or web service type. Valid values:
+            /// &lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description>System service</description></item>
-            /// <item><description>Software library</description></item>
-            /// <item><description>Container component</description></item>
+            /// <item><description>系统服务</description></item>
+            /// <item><description>软件库</description></item>
+            /// <item><description>容器组件</description></item>
+            /// <item><description>数据库</description></item>
+            /// <item><description>Web容器</description></item>
+            /// <item><description>Jar包</description></item>
+            /// <item><description>Web框架</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description>System Service</description></item>
+            /// <item><description>Software Library</description></item>
+            /// <item><description>Docker Component</description></item>
             /// <item><description>Database</description></item>
-            /// <item><description>Web container</description></item>
-            /// <item><description>JAR package</description></item>
-            /// <item><description>Web framework</description></item>
+            /// <item><description>Web Container</description></item>
+            /// <item><description>Jar</description></item>
+            /// <item><description>Web Framework
+            /// .</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Cmdline { get; set; }
 
             /// <summary>
-            /// <para>The path to the configuration file.</para>
+            /// <para>The path of the configuration file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/etc/my.cnf</para>
@@ -134,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ConfigPath { get; set; }
 
             /// <summary>
-            /// <para>The name of the container.</para>
+            /// <para>The container name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5-rce_web_1</para>
@@ -144,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerName { get; set; }
 
             /// <summary>
-            /// <para>The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan, which is the most recent time when Security Center collected middleware, database, or web service information. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1597987834000</para>
@@ -154,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The name of the image.</para>
+            /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-beijing.aliyuncs.com/acs/aliyun-ingress-controller****</para>
@@ -164,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server on which the middleware, database, or web service is run.</para>
+            /// <para>The instance ID of the server on which the middleware, database, or web service is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2zeclqj7ti****</para>
@@ -174,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server on which the middleware, database, or web service is run.</para>
+            /// <para>The name of the server on which the middleware, database, or web service is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test01</para>
@@ -184,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the server on which the middleware, database, or web service is run.</para>
+            /// <para>The public IP address of the server on which the middleware, database, or web service is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.42.XX.XX</para>
@@ -194,7 +206,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the server on which the middleware, database, or web service is run.</para>
+            /// <para>The private IP address of the server on which the middleware, database, or web service is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.210.XX.XX</para>
@@ -204,7 +216,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the server on which the middleware, database, or web service is run.</para>
+            /// <para>The public IP address of the server on which the middleware, database, or web service is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.42.XX.XX</para>
@@ -214,7 +226,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The IP address that the process monitors.</para>
+            /// <para>The IP address on which the process listens.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.XX.XX</para>
@@ -224,10 +236,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ListenIp { get; set; }
 
             /// <summary>
-            /// <para>The protocol of the traffic on which the process listens. Valid values:</para>
+            /// <para>The protocol on which the process listens. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>UDP</b></description></item>
-            /// <item><description><b>TCP</b></description></item>
+            /// <item><description><b>TCP</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -240,8 +252,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The listening status of the process. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NONE</b>: not listening</description></item>
-            /// <item><description><b>LISTEN</b>: listening</description></item>
+            /// <item><description><b>NONE</b>: Not listening.</description></item>
+            /// <item><description><b>LISTEN</b>: Listening.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -272,7 +284,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The PID.</para>
+            /// <para>The process ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>756</para>
@@ -282,17 +294,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// <para>The name of the Kubernetes pod.</para>
+            /// <para>The pod name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>myapp-pod</para>
+            /// <para>hello-pod</para>
             /// </summary>
             [NameInMap("PodName")]
             [Validation(Required=false)]
             public string PodName { get; set; }
 
             /// <summary>
-            /// <para>The port of the middleware, database, or web service.</para>
+            /// <para>The service port of the middleware, database, or web service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68</para>
@@ -302,7 +314,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The ID of the parent process.</para>
+            /// <para>The parent process ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -312,7 +324,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ppid { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the process starts. Unit: milliseconds.</para>
+            /// <para>The timestamp when the process started. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1596539788</para>
@@ -322,7 +334,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ProcessStarted { get; set; }
 
             /// <summary>
-            /// <para>The name of the user who runs the process.</para>
+            /// <para>The username of the user that runs the process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -332,7 +344,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcessUser { get; set; }
 
             /// <summary>
-            /// <para>The version verification information about the middleware, database, or web service.</para>
+            /// <para>The version verification information of the middleware, database, or web service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/lib64/libssl.so.1.0.2k</para>
@@ -342,9 +354,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Proof { get; set; }
 
             /// <summary>
-            /// <para>The version of the runtime environment.</para>
+            /// <para>The runtime environment version.</para>
             /// <remarks>
-            /// <para> The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</para>
+            /// <para>For example, the JDK version of the Java process runtime environment.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -365,7 +377,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server on which the middleware, database, or web service is run.</para>
+            /// <para>The UUID of the server on which the middleware, database, or web service is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uuid-02ebabe7-1c19-a****</para>
@@ -397,7 +409,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F9146867-16C8-4AAB-BB4FB8C2A4</para>

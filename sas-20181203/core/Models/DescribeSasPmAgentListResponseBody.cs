@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSasPmAgentListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8EF3ACC2-9400-5B64-B72D-4A1D35113750</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information about servers.</para>
+        /// <para>The query result list.</para>
         /// </summary>
         [NameInMap("SasPmAgentList")]
         [Validation(Required=false)]
         public List<DescribeSasPmAgentListResponseBodySasPmAgentList> SasPmAgentList { get; set; }
         public class DescribeSasPmAgentListResponseBodySasPmAgentList : TeaModel {
             /// <summary>
-            /// <para>The ID of Cloud Assistant.</para>
+            /// <para>The globally unique ID of Cloud Assistant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mi-hz034jn***yxhc0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliyunAssistId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CloudMonitor agent.</para>
+            /// <para>The globally unique ID of CloudMonitor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5d5ef6be-54ff-11ed-82cf-8f01475e****</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliyunMonitorId { get; set; }
 
             /// <summary>
-            /// <para>The installation result of Cloud Assistant. Valid values:</para>
+            /// <para>The installation execution result of Cloud Assistant. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: SUCCESS</description></item>
             /// <item><description><b>1</b>: MISSING_PARAM</description></item>
             /// <item><description><b>2</b>: UNKNOWN_SYSTEM</description></item>
             /// <item><description><b>3</b>: DOWNLOAD_FAILED</description></item>
-            /// <item><description><b>4</b>: INSTALL_FAILED</description></item>
+            /// <item><description><b>4</b>: INSTALL_FAILED.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,12 +64,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssistInstallResult { get; set; }
 
             /// <summary>
-            /// <para>The status of Cloud Assistant. Valid values:</para>
+            /// <para>The installation status of Cloud Assistant. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: installing</description></item>
-            /// <item><description><b>1</b>: installed</description></item>
-            /// <item><description><b>2</b>: installation failed</description></item>
-            /// <item><description><b>3</b>: installation timed out</description></item>
+            /// <item><description><b>0</b>: Installing.</description></item>
+            /// <item><description><b>1</b>: Installed.</description></item>
+            /// <item><description><b>2</b>: Installation failed.</description></item>
+            /// <item><description><b>3</b>: Installation timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssistInstallStatus { get; set; }
 
             /// <summary>
-            /// <para>The installation result of the CloudMonitor agent. Valid values:</para>
+            /// <para>The installation execution result of CloudMonitor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: failed</description></item>
-            /// <item><description><b>1</b>: successful</description></item>
+            /// <item><description><b>0</b>: Failed.</description></item>
+            /// <item><description><b>1</b>: Succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MonitorInstallResult { get; set; }
 
             /// <summary>
-            /// <para>The status of the CloudMonitor agent. Valid values:</para>
+            /// <para>The installation status of CloudMonitor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: installation failed</description></item>
-            /// <item><description><b>1</b>: installed</description></item>
+            /// <item><description><b>0</b>: Failed.</description></item>
+            /// <item><description><b>1</b>: Succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeQuaraFileDownloadInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request source. Set the value to sas.</para>
+        /// <para>The source identifier of the request. Set the value to sas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the quarantined file.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, you cannot call the RollbackSuspEventQuaraFile operation to restore a quarantined file. You can call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to query the IDs of quarantined files.</para>
+        /// <para>If you do not specify this parameter, calling the RollbackSuspEventQuaraFile operation does not cancel the quarantine of the file in the quarantine box, which means the call does not take effect. Call the <a href="~~DescribeSuspEventQuaraFiles~~">DescribeSuspEventQuaraFiles</a> operation to obtain the quarantined file ID (the value of the Id parameter).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListBySensitiveFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The information about the images.</para>
+        /// <para>The list of image information.</para>
         /// </summary>
         [NameInMap("ImageInfos")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the first scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the first scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// <para>The image instance ID.</para>
+            /// <para>The ID of the image instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-a595qp31knh9****</para>
@@ -66,12 +66,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The instance name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sec-NessusSc</para>
+            /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the most recent scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the image instance resides.</para>
+            /// <para>The region ID of the image instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The image repository name.</para>
+            /// <para>The name of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>opa-test</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the image repository belongs.</para>
+            /// <para>The namespace of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>libssh2</para>
@@ -113,9 +119,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><b>high</b>: High risk.</description></item>
+            /// <item><description><b>medium</b>: Medium risk.</description></item>
+            /// <item><description><b>low</b>: Low risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,11 +132,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The sensitive file status. Valid values:</para>
+            /// <para>The status of the sensitive file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: unhandled</description></item>
-            /// <item><description><b>1</b>: ignored</description></item>
-            /// <item><description><b>2</b>: false positive</description></item>
+            /// <item><description><b>0</b>: Unhandled.</description></item>
+            /// <item><description><b>1</b>: Ignored.</description></item>
+            /// <item><description><b>2</b>: False positive.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the image.</para>
+            /// <para>The image tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nuxeo6</para>
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The image UUID.</para>
+            /// <para>The unique identifier of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f58681174f944623345379e23b7b****</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The detailed information of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -180,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeImageListBySensitiveFileResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageListBySensitiveFileResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries displayed on the current page in a paginated query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -190,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paginated query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -200,7 +206,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The key of the last data entry.</para>
+            /// <para>The key of the last entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY1Nzg2NTcxNjE2NDc4NjE=</para>
@@ -210,7 +216,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastRowKey { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: 20.</para>
+            /// <para>The number of alert events displayed per page in a paginated query. Default value: <b>20</b>, indicating that 20 alert events are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -220,7 +226,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>83</para>
@@ -232,7 +238,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. It can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E0C5C07F-1576-509A-AE44-1C36B8445B37</para>
@@ -242,10 +248,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The result status of the API call. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The API call was successful.</description></item>
+        /// <item><description><b>false</b>: The API call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

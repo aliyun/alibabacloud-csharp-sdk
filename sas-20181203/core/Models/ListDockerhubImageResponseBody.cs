@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListDockerhubImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the images.</para>
+        /// <para>The list of image information.</para>
         /// </summary>
         [NameInMap("ImageList")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The size of the image. Unit: bytes.</para>
+            /// <para>The image size, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The name of the image repository.</para>
+            /// <para>The image repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>python</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the image repository belongs.</para>
+            /// <para>The image namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>python</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevelDetail { get; set; }
 
             /// <summary>
-            /// <para>The tag of the image.</para>
+            /// <para>The image tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.9</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier that Alibaba Cloud generates for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8B6F758-BCD4-597A-8A2C-DA5A552C****</para>

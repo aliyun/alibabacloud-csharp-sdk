@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAlarmMachineCountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request source. Set the value to sas.</para>
+        /// <para>The source identifier of the request. Set this parameter to sas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>

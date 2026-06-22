@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Advanced version count. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-2000000000</b>: Range</description></item>
-            /// <item><description><b>1</b>: Step</description></item>
+            /// <item><description><para><b>1-2000000000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,8 +35,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Anti-ransomware capacity. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-9000000000</b>: Range</description></item>
-            /// <item><description><b>10</b>: Step</description></item>
+            /// <item><description><para><b>1-9000000000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,8 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Anti-ransomware service. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Not enabled</description></item>
-            /// <item><description><b>1</b>: Enabled</description></item>
+            /// <item><description><para><b>0</b>: Not enabled</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Enabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,8 +67,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Anti-virus core count. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-2000000000</b>: Range</description></item>
-            /// <item><description><b>1</b>: Step</description></item>
+            /// <item><description><para><b>1-2000000000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,8 +83,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Flagship version core count. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-2000000000</b>: Range</description></item>
-            /// <item><description><b>1</b>: Step</description></item>
+            /// <item><description><para><b>1-2000000000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,8 +99,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Flagship version count. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-2000000000</b>: Range</description></item>
-            /// <item><description><b>1</b>: Step</description></item>
+            /// <item><description><para><b>1-2000000000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,8 +115,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Number of cloud platform configuration check scans. Value:</para>
             /// <list type="bullet">
-            /// <item><description><b>15000-9999999999</b>：Range</description></item>
-            /// <item><description><b>55000</b>：Step</description></item>
+            /// <item><description><para><b>15000-9999999999</b>:Range</para>
+            /// </description></item>
+            /// <item><description><para><b>55000</b>:Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,8 +131,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Enterprise version count. Range:</para>
             /// <list type="bullet">
-            /// <item><description><b>Value</b>: 1-2000000000</description></item>
-            /// <item><description><b>Step</b>: 1</description></item>
+            /// <item><description><para><b>Value</b>: 1-2000000000</para>
+            /// </description></item>
+            /// <item><description><para><b>Step</b>: 1</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,8 +147,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Number of authorized honeypots. Value:</para>
             /// <list type="bullet">
-            /// <item><description><b>20-500</b>：Range</description></item>
-            /// <item><description><b>1</b>：Step</description></item>
+            /// <item><description><para><b>20-500</b>:Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>:Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,8 +163,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Image scan authorization count. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-200000</b>: Range</description></item>
-            /// <item><description><b>20</b>: Step</description></item>
+            /// <item><description><para><b>1-200000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>20</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,8 +179,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Application protection count. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-100000000</b>: Range</description></item>
-            /// <item><description><b>1</b>: Step</description></item>
+            /// <item><description><para><b>1-100000000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,8 +195,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Number of authorized malicious file detection SDKs. Value:</para>
             /// <list type="bullet">
-            /// <item><description><b>10-9999999999</b>：Range</description></item>
-            /// <item><description><b>10</b>：Step</description></item>
+            /// <item><description><para><b>10-9999999999</b>:Range</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>:Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -187,8 +211,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Log storage capacity. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-600000000</b>: Range</description></item>
-            /// <item><description><b>10</b>: Step</description></item>
+            /// <item><description><para><b>1-600000000</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -201,8 +227,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Threat analysis capacity. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-9999999999</b>: Range</description></item>
-            /// <item><description><b>1000</b>: Step</description></item>
+            /// <item><description><para><b>1-9999999999</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1000</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -215,8 +243,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Threat analysis and response log access traffic. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-9999999999</b>: Range</description></item>
-            /// <item><description><b>100</b>: Step</description></item>
+            /// <item><description><para><b>1-9999999999</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>100</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,8 +259,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Web tamper-proof authorization count. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1-9999</b>: Range</description></item>
-            /// <item><description><b>1</b>: Step</description></item>
+            /// <item><description><para><b>1-9999</b>: Range</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Step</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

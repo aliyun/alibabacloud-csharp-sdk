@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateWhiteListStrategyStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>219.143.XX.XX</para>
@@ -34,24 +34,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The status of the policy. Valid values:</para>
+        /// <para>The policy status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: deleted</description></item>
-        /// <item><description><b>1</b>: learning</description></item>
-        /// <item><description><b>2</b>: paused</description></item>
-        /// <item><description><b>3</b>: learning completed</description></item>
-        /// <item><description><b>4</b>: enabled</description></item>
+        /// <item><description><b>0</b>: Deleted.</description></item>
+        /// <item><description><b>1</b>: Learning.</description></item>
+        /// <item><description><b>2</b>: Paused.</description></item>
+        /// <item><description><b>3</b>: Learning complete.</description></item>
+        /// <item><description><b>4</b>: Active.</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can change the status to <b>paused</b> only if the policy status is <b>learning</b>.</para>
-        /// </description></item>
-        /// <item><description><para>You can change the status to <b>learning</b> only if the policy status is <b>paused</b>.</para>
-        /// </description></item>
-        /// <item><description><para>You can change the status to <b>enabled</b> only if the policy status is <b>learning completed</b>.</para>
-        /// </description></item>
+        /// <item><description>Only a policy in the <b>Learning</b> state can be changed to the <b>Paused</b> state.</description></item>
+        /// <item><description>Only a policy in the <b>Paused</b> state can be changed to the <b>Learning</b> state.</description></item>
+        /// <item><description>Only a policy in the <b>Learning complete</b> state can be changed to the <b>Active</b> state.</description></item>
         /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,9 +59,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The policy ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain the ID.</para>
+        /// <para>Call the <a href="~~DescribeWhiteListStrategyList~~">DescribeWhiteListStrategyList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

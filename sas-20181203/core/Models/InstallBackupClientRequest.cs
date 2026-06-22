@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class InstallBackupClientRequest : TeaModel {
         /// <summary>
-        /// <para>The version of the anti-ransomware policy. Valid values:</para>
+        /// <para>The version of the mitigation policies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1.0.0</b></description></item>
-        /// <item><description><b>2.0.0</b></description></item>
+        /// <item><description><b>1.0.0</b>: The version of the mitigation policies is 1.0.0.</description></item>
+        /// <item><description><b>2.0.0</b>: The version of the mitigation policies is 2.0.0.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +25,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server on which you want to install the anti-ransomware agent.</para>
+        /// <para>The UUID of the server on which you want to install the anti-ransomware client.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers. You must specify at least one of the UuidList and Uuid parameters.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this value. UuidList and Uuid cannot both be empty.</para>
+        /// </remarks>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,9 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers on which you want to install the anti-ransomware agent.</para>
+        /// <para>The list of UUIDs of the servers that you want to protect.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

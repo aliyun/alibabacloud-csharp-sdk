@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the vulnerability.</para>
+        /// <para>The vulnerability information returned.</para>
         /// </summary>
         [NameInMap("VulRecords")]
         [Validation(Required=false)]
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</para>
+            /// <para>Indicates whether the vulnerability can be fixed in the console. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: Fixable.</description></item>
+            /// <item><description><b>no</b>: Not fixable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CanFix { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the packages of the software that has the vulnerability can be upgraded by using Security Center. Valid values:</para>
+            /// <para>Specifies whether the software package that causes the vulnerability can be upgraded through Security Center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>docker-law</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// <para>The extended information about the vulnerability.</para>
+            /// <para>The extended content of the vulnerability information.</para>
             /// </summary>
             [NameInMap("ExtendContentJson")]
             [Validation(Required=false)]
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Os { get; set; }
 
                 /// <summary>
-                /// <para>The version of the operating system in the image.</para>
+                /// <para>The release version of the operating system corresponding to the container image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.9</para>
@@ -122,14 +122,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OsRelease { get; set; }
 
                 /// <summary>
-                /// <para>The RPM packages.</para>
+                /// <para>The list of RPM packages.</para>
                 /// </summary>
                 [NameInMap("RpmEntityList")]
                 [Validation(Required=false)]
                 public List<DescribeCanFixVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList> RpmEntityList { get; set; }
                 public class DescribeCanFixVulListResponseBodyVulRecordsExtendContentJsonRpmEntityList : TeaModel {
                     /// <summary>
-                    /// <para>The complete version number of the software package.</para>
+                    /// <para>The full version number of the software package.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3.10.0-693.2.2.el7</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string FullVersion { get; set; }
 
                     /// <summary>
-                    /// <para>The SHA-256 value of the digest of the image layer.</para>
+                    /// <para>The SHA256 value of the container image layer digest.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>b1f5b9420803ad0657cf21566e3e20acc08581e7f22991249ef3aa80b8b1****</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Layer { get; set; }
 
                     /// <summary>
-                    /// <para>The information about the detected vulnerability.</para>
+                    /// <para>The details of the vulnerability match.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>python-perf version less than 0:3.10.0-693.21.1.el7</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string MatchDetail { get; set; }
 
                     /// <summary>
-                    /// <para>The rule that is used to detect the vulnerability.</para>
+                    /// <para>The rule hits.</para>
                     /// </summary>
                     [NameInMap("MatchList")]
                     [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The path of the software that has the vulnerability.</para>
+                    /// <para>The path of the software that contains the vulnerability.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>/usr/lib64/python2.7/site-packages</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The command that is used to fix the vulnerability.</para>
+                    /// <para>The command to fix the vulnerability.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The timestamp generated when the vulnerability was first detected. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was first detected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620752053000</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTs { get; set; }
 
             /// <summary>
-            /// <para>The name of the image.</para>
+            /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-conta****</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the image.</para>
+            /// <para>The unique identifier of the container image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageDigest { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// <para>The name must be 3 to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
             /// 
             /// <b>Example:</b>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the vulnerability was last detected. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620404763000</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastTs { get; set; }
 
             /// <summary>
-            /// <para>The image layers.</para>
+            /// <para>The list of container image layers.</para>
             /// </summary>
             [NameInMap("Layers")]
             [Validation(Required=false)]
@@ -290,9 +290,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The source of the malicious file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>agentless</b></description></item>
-            /// <item><description><b>image</b></description></item>
-            /// <item><description><b>container</b></description></item>
+            /// <item><description><b>agentless</b>: Agentless detection.</description></item>
+            /// <item><description><b>image</b>: Image.</description></item>
+            /// <item><description><b>container</b>: Container.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousSource { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the vulnerability status was modified. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability status was modified. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620404763000</para>
@@ -333,14 +333,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The priority to fix the vulnerability. Valid values:</para>
+            /// <para>The priority level of the vulnerability fix. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>asap</b>: high</description></item>
-            /// <item><description><b>later</b>: medium</description></item>
-            /// <item><description><b>nntf</b>: low</description></item>
+            /// <item><description><b>asap</b>: High.</description></item>
+            /// <item><description><b>later</b>: Medium.</description></item>
+            /// <item><description><b>nntf</b>: Low.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> We recommend that you fix high-level vulnerabilities as soon as possible.</para>
+            /// <para>Fix vulnerabilities with the <b>High</b> priority level as soon as possible.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Necessity { get; set; }
 
             /// <summary>
-            /// <para>The name of the container group.</para>
+            /// <para>The name of the pod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22222-7xsqq</para>
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pod { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability ID.</para>
+            /// <para>The ID of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>782661</para>
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PrimaryId { get; set; }
 
             /// <summary>
-            /// <para>The CVE IDs related to the vulnerability. Multiple CVE IDs are separated by commas (,).</para>
+            /// <para>The list of CVEs associated with the vulnerability. Multiple values are separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2017-7518,CVE-2017-12188</para>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Related { get; set; }
 
             /// <summary>
-            /// <para>The name of the image repository.</para>
+            /// <para>The name of the container image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varnish</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the image repository belongs.</para>
+            /// <para>The namespace of the container image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3rdparty</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the scan task was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>
@@ -411,11 +411,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ScanTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the vulnerability. Valid values:</para>
+            /// <para>The fix status of the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The vulnerability is unfixed.</description></item>
-            /// <item><description><b>4</b>: The vulnerability is being fixed.</description></item>
-            /// <item><description><b>7</b>: The vulnerability is fixed.</description></item>
+            /// <item><description><b>1</b>: Unfixed.</description></item>
+            /// <item><description><b>4</b>: Being fixed.</description></item>
+            /// <item><description><b>7</b>: Fixed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -426,7 +426,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the image.</para>
+            /// <para>The tag of the container image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest</para>
@@ -436,7 +436,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset that is scanned.</para>
+            /// <para>The ID of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300269</para>
@@ -446,7 +446,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset that is scanned.</para>
+            /// <para>The name of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>source-test-obj-XM0Ma</para>
@@ -456,11 +456,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The type of the asset that is scanned. Valid values:</para>
+            /// <para>The object type of the scan target. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IMAGE</b></description></item>
-            /// <item><description><b>ECS_IMAGE</b></description></item>
-            /// <item><description><b>ECS_SNAPSHOT</b></description></item>
+            /// <item><description><b>IMAGE</b>: Container image.</description></item>
+            /// <item><description><b>ECS_IMAGE</b>: Host image.</description></item>
+            /// <item><description><b>ECS_SNAPSHOT</b>: Snapshot.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -471,10 +471,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The type of the vulnerability. Valid values:</para>
+            /// <para>The vulnerability type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>cve</b>: system vulnerability</description></item>
-            /// <item><description><b>sca</b>: application vulnerability</description></item>
+            /// <item><description><b>sca</b>: application vulnerability.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

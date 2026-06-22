@@ -10,20 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyVulConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the vulnerability scan feature. Valid values:</para>
+        /// <para>Specifies whether to enable or disable vulnerability detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enables the feature</description></item>
-        /// <item><description><b>off</b>: disables the feature</description></item>
+        /// <item><description><b>on</b>: Enable vulnerability detection.</description></item>
+        /// <item><description><b>off</b>: Disable vulnerability detection.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Valid values when you set the Type parameter to scanMode:</para>
-        /// </remarks>
+        /// <para>If the type is set to real risk, valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>real</b>: displays only easily exploitable vulnerabilities.</para>
-        /// </description></item>
-        /// <item><description><para><b>all</b>: displays all vulnerabilities.</para>
-        /// </description></item>
+        /// <item><description><b>real</b>: Real risk vulnerabilities.</description></item>
+        /// <item><description><b>all</b>: All vulnerabilities.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -33,15 +31,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The type of vulnerability to modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
-        /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerability</description></item>
+        /// <item><description><b>cve</b>: Linux vulnerability</description></item>
+        /// <item><description><b>sys</b>: Windows vulnerability</description></item>
+        /// <item><description><b>cms</b>: WebCMS vulnerability</description></item>
+        /// <item><description><b>emg</b>: emergency vulnerability</description></item>
         /// <item><description><b>app</b>: application vulnerability</description></item>
-        /// <item><description><b>yum</b>: YUM and APT source configuration</description></item>
-        /// <item><description><b>scanMode</b>: easily exploitable vulnerability</description></item>
+        /// <item><description><b>yum</b>: YUM/APT source configuration</description></item>
+        /// <item><description><b>scanMode</b>: real risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

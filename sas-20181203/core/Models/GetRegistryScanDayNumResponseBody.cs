@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetRegistryScanDayNumResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09969D2C-4FAD-429E-BFBF-9A60DEF8****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the scan period.</para>
+        /// <para>The scan day configuration.</para>
         /// </summary>
         [NameInMap("ScanDayNumConfig")]
         [Validation(Required=false)]
         public GetRegistryScanDayNumResponseBodyScanDayNumConfig ScanDayNumConfig { get; set; }
         public class GetRegistryScanDayNumResponseBodyScanDayNumConfig : TeaModel {
             /// <summary>
-            /// <para>The selectable day options.</para>
+            /// <para>The list of available day options.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,3,7,15,30,90,180,365</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DayNumList { get; set; }
 
             /// <summary>
-            /// <para>The scan period. Unit: days.</para>
+            /// <para>The scan time range. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>

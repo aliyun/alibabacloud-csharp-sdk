@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDingTalkResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of details of notifications.</para>
+        /// <para>The notification list.</para>
         /// </summary>
         [NameInMap("ActionList")]
         [Validation(Required=false)]
         public List<DescribeDingTalkResponseBodyActionList> ActionList { get; set; }
         public class DescribeDingTalkResponseBodyActionList : TeaModel {
             /// <summary>
-            /// <para>The name of the notification.</para>
+            /// <para>The notification name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alert notification</para>
+            /// <para>TestRuleAction</para>
             /// </summary>
             [NameInMap("ActionName")]
             [Validation(Required=false)]
@@ -37,20 +37,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The list of notification settings.</para>
+            /// <para>The notification scope configuration for messages. The value is a JSON string that contains the following fields:</para>
+            /// <list type="bullet">
+            /// <item><description><b>type</b>: the notification type.</description></item>
+            /// <item><description><b>configItemList</b>: the notification scope.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;type\&quot;:\&quot;vul\&quot;,\&quot;configItemList\&quot;:[{\&quot;key\&quot;:\&quot;key\&quot;, \&quot;valueList\&quot;:\&quot;123\&quot;}]}]</para>
+            /// <para>[{&quot;type&quot;:&quot;sas_analysis_pre-sas-operation-log-sas-event-suspicious&quot;,&quot;configItemList&quot;:[{&quot;key&quot;:&quot;item_level&quot;,&quot;valueList&quot;:[&quot;all&quot;]}]},{&quot;type&quot;:&quot;sas_analysis_pre-sas-operation-log-sas-event-hc&quot;,&quot;configItemList&quot;:[{&quot;key&quot;:&quot;item_level&quot;,&quot;valueList&quot;:[&quot;all&quot;]}]}]</para>
             /// </summary>
             [NameInMap("ConfigList")]
             [Validation(Required=false)]
             public string ConfigList { get; set; }
 
             /// <summary>
-            /// <para>The language of the content within notifications. Valid values:</para>
+            /// <para>The language of the notification. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>zh</b>: Chinese</description></item>
-            /// <item><description><b>en</b>: English</description></item>
+            /// <item><description><b>en</b>: English.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DingTalkLang { get; set; }
 
             /// <summary>
-            /// <para>The creation time. unit:millisecond.</para>
+            /// <para>The creation timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1550828400000</para>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The group IDs.</para>
+            /// <para>The list of group IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;123,456&quot;</para>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupIdList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the notification.</para>
+            /// <para>The notification message ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>The interval at which the notifications are sent.unit:minute.</para>
+            /// <para>The time interval. Unit: minutes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -111,21 +115,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? IntervalTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the notification. Valid values:</para>
+            /// <para>The notification status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: disabled</description></item>
-            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the notification.</para>
+            /// <para>The notification parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://oapi.dingtalk.com/robot/send">https://oapi.dingtalk.com/robot/send</a></para>
@@ -144,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeDingTalkResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeDingTalkResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -154,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries displayed per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -164,10 +168,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of messages.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>149</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -176,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of this request, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B256A525-7E42-4BB9-A27C-9017FDDFF1A2</para>

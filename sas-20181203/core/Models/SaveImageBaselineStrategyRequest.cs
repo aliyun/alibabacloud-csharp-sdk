@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SaveImageBaselineStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The baseline check items.</para>
+        /// <para>The baseline items.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query baseline check items.</para>
+        /// <para>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> API to obtain the value of this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -23,15 +23,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string BaselineItemList { get; set; }
 
+        /// <summary>
+        /// <para>The baseline risk retention period, in days.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>90</para>
+        /// </summary>
         [NameInMap("ImageVulClean")]
         [Validation(Required=false)]
         public int? ImageVulClean { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,10 +50,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The data source. If this parameter is left empty, the baseline check policy for images is queried. Valid values:</para>
+        /// <para>The data source. If you do not specify this parameter, the operation queries image baseline strategies by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: the baseline check policy for images</description></item>
-        /// <item><description><b>agentless</b>: agentless detection</description></item>
+        /// <item><description><para><b>default</b>: image</para>
+        /// </description></item>
+        /// <item><description><para><b>agentless</b>: agentless</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,9 +66,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The ID of the baseline check policy.</para>
+        /// <para>The ID of the baseline check strategy.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> operation to query the IDs of baseline check policies.</para>
+        /// <para>You can call the <a href="~~DescribeImageBaselineStrategy~~">DescribeImageBaselineStrategy</a> API to obtain the value of this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the baseline check policy.</para>
+        /// <para>The name of the baseline check strategy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

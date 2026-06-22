@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1232428423234****</para>
+        /// <para>1082098404740323</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]

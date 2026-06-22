@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The service-linked role. Default value: <b>AliyunServiceRoleForSas</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AliyunServiceRoleForSas</b>: the service-linked role of Security Center. Security Center assumes this role to access the resources of other cloud services within your account.</description></item>
-        /// <item><description><b>AliyunServiceRoleForSasCspm</b>: the service-linked role of Security Center-CSPM. Security Center-CSPM assumes this role to access the resources of other cloud services within your account.</description></item>
+        /// <item><description><b>AliyunServiceRoleForSas</b>: the service-linked role for Security Center (SAS). Security Center uses this role to access your resources in other Alibaba Cloud services.</description></item>
+        /// <item><description><b>AliyunServiceRoleForSasCspm</b>: the service-linked role for Security Center - Cloud Security Posture Management (CSPM) (sas-cspm). sas-cspm uses this role to access your resources in other Alibaba Cloud services.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

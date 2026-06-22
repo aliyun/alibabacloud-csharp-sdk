@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectStrategyRequest : TeaModel {
         /// <summary>
+        /// <para>The page number for a paginated query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The strategy ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>210****</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The strategy name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>strategy****</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The whitelist mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>hash</b>: process hash</para>
+        /// </description></item>
+        /// <item><description><para><b>path</b>: process path</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>hash</para>
         /// </summary>

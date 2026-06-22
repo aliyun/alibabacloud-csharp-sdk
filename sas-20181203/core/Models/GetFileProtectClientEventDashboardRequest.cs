@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectClientEventDashboardRequest : TeaModel {
         /// <summary>
+        /// <para>The page number of the current page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The end timestamp of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1656038940435</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start timestamp of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1648438617000</para>
         /// </summary>

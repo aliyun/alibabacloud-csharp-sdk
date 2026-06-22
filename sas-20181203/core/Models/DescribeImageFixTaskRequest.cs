@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageFixTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b></para>
+        /// <para>The page number of the results to return. Default value: <b>1</b>, which indicates that the results start from page 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the task ends. Unit: milliseconds.</para>
+        /// <para>The end timestamp of the repair task that you want to query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635575219000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b></para>
+        /// <para>The number of entries per page in a paginated query. Default value: <b>20</b>, which indicates that up to 20 entries are returned per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the task starts. Unit: milliseconds.</para>
+        /// <para>The start timestamp of the repair task that you want to query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1634725571000</para>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The status of the image repair task that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The task is running.</description></item>
-        /// <item><description><b>2</b>: The task is successful.</description></item>
-        /// <item><description><b>3</b>: The task failed.</description></item>
+        /// <item><description><b>1</b>: Repairing</description></item>
+        /// <item><description><b>2</b>: Repaired</description></item>
+        /// <item><description><b>3</b>: Repair failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

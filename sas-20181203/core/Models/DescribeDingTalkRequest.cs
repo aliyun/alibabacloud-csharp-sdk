@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDingTalkRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.Default value: 1.</para>
+        /// <para>The page number of the current page to display in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.Default value: 20.</para>
+        /// <para>The maximum number of notifications to display per page in a paged query. Default value: <b>20</b>, which indicates that up to 20 entries are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the notification.</para>
+        /// <para>The notification name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Vulnerability notification</para>
+        /// <para>TestRuleAction</para>
         /// </summary>
         [NameInMap("RuleActionName")]
         [Validation(Required=false)]

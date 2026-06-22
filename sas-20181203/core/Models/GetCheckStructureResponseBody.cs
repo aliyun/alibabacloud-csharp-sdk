@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckStructureResponseBody : TeaModel {
         /// <summary>
-        /// <para>The structure information about check items provided by the configuration assessment feature.</para>
+        /// <para>The structure information of cloud platform configuration check items.</para>
         /// </summary>
         [NameInMap("CheckStructureResponse")]
         [Validation(Required=false)]
         public List<GetCheckStructureResponseBodyCheckStructureResponse> CheckStructureResponse { get; set; }
         public class GetCheckStructureResponseBodyCheckStructureResponse : TeaModel {
             /// <summary>
-            /// <para>The type of the check item.</para>
+            /// <para>The business type of the cloud platform configuration check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RISK: security risk.</description></item>
-            /// <item><description>IDENTITY_PERMISSION: Cloud Infrastructure Entitlement Management (CIEM).</description></item>
-            /// <item><description>COMPLIANCE: security compliance.</description></item>
+            /// <item><description><para>RISK: security risk</para>
+            /// </description></item>
+            /// <item><description><para>IDENTITY_PERMISSION: permission management CIEM</para>
+            /// </description></item>
+            /// <item><description><para>COMPLIANCE: security compliance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,14 +35,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StandardType { get; set; }
 
             /// <summary>
-            /// <para>The structure information about the check items of the business type.</para>
+            /// <para>The structure information of check items under the business type.</para>
             /// </summary>
             [NameInMap("Standards")]
             [Validation(Required=false)]
             public List<GetCheckStructureResponseBodyCheckStructureResponseStandards> Standards { get; set; }
             public class GetCheckStructureResponseBodyCheckStructureResponseStandards : TeaModel {
                 /// <summary>
-                /// <para>The standard ID of the check item.</para>
+                /// <para>The ID of the cloud platform configuration check item standard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -49,14 +52,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The standards of the check items.</para>
+                /// <para>The standards of the cloud platform configuration check items.</para>
                 /// </summary>
                 [NameInMap("Requirements")]
                 [Validation(Required=false)]
                 public List<GetCheckStructureResponseBodyCheckStructureResponseStandardsRequirements> Requirements { get; set; }
                 public class GetCheckStructureResponseBodyCheckStructureResponseStandardsRequirements : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the requirement item for the check item.</para>
+                    /// <para>The ID of the cloud platform configuration check item requirement.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>46</para>
@@ -66,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The information about the sections of check items.</para>
+                    /// <para>The sections of the check items.</para>
                     /// </summary>
                     [NameInMap("Sections")]
                     [Validation(Required=false)]
                     public List<GetCheckStructureResponseBodyCheckStructureResponseStandardsRequirementsSections> Sections { get; set; }
                     public class GetCheckStructureResponseBodyCheckStructureResponseStandardsRequirementsSections : TeaModel {
                         /// <summary>
-                        /// <para>The ID of the section for the check item.</para>
+                        /// <para>The ID of the check item section.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>177</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public long? Id { get; set; }
 
                         /// <summary>
-                        /// <para>The display name of the section for the check item.</para>
+                        /// <para>The name of the check item section.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Access Control</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The display name of the requirement item for the check item.</para>
+                    /// <para>The name of the cloud platform configuration check item requirement.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Networking</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string ShowName { get; set; }
 
                     /// <summary>
-                    /// <para>The total number of check items for the requirement.</para>
+                    /// <para>The total number of check items under the requirement.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>36</para>
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The display name of the standard for the check item.</para>
+                /// <para>The name of the cloud platform configuration check item standard.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Alibaba Cloud best security practices</para>
@@ -127,11 +130,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// <para>The standard type of the check item. Valid values:</para>
+                /// <para>The business type corresponding to the cloud platform configuration check item standard. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>RISK: security risk.</description></item>
-                /// <item><description>IDENTITY_PERMISSION: CIEM.</description></item>
-                /// <item><description>COMPLIANCE: security compliance.</description></item>
+                /// <item><description><para>RISK: security risk</para>
+                /// </description></item>
+                /// <item><description><para>IDENTITY_PERMISSION: permission management CIEM</para>
+                /// </description></item>
+                /// <item><description><para>COMPLIANCE: security compliance.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>379a9b8f-107b-4630-9e95-2299a1ea****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAttackPathSensitiveAssetConfigRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the created attack path sensitive asset setting.</para>
+        /// <para>The ID of the attack path sensitive asset configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apsac-123</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AttackPathSensitiveAssetConfigId { get; set; }
 
         /// <summary>
-        /// <para>Configuration type. Possible values:</para>
+        /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asset_instance: Asset.</description></item>
+        /// <item><description>asset_instance: asset.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

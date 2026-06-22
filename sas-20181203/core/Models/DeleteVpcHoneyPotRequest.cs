@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteVpcHoneyPotRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) on which the honeypot is deployed.</para>
+        /// <para>The VPC ID of the honeypot instance that you want to delete.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to query the IDs of VPCs.</para>
+        /// <para>You can call the <a href="~~DescribeVpcHoneyPotList~~">DescribeVpcHoneyPotList</a> operation to obtain the VPC ID of the honeypot instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

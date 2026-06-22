@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeLoginBaseConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the configuration.</para>
+        /// <para>The list of logon configuration details.</para>
         /// </summary>
         [NameInMap("BaseConfigs")]
         [Validation(Required=false)]
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The common logon location.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Montenegro</para>
+            /// <para>BeiJing</para>
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
 
             /// <summary>
-            /// <para>Corresponding configuration remark information.</para>
+            /// <para>The remark information displayed for the corresponding configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The details of the servers to which the configuration is applied.</para>
+            /// <para>The list of details about the servers on which the rule takes effect.</para>
             /// </summary>
             [NameInMap("TargetList")]
             [Validation(Required=false)]
             public List<DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList> TargetList { get; set; }
             public class DescribeLoginBaseConfigsResponseBodyBaseConfigsTargetList : TeaModel {
                 /// <summary>
-                /// <para>The UUID or group ID of the server.</para>
+                /// <para>The UUID of the server or the ID of the server group on which the rule takes effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0011ea53-738c-4bff-93be-ce6a1cc9****</para>
@@ -94,11 +94,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Target { get; set; }
 
                 /// <summary>
-                /// <para>The type of the server to which the configuration is applied. Valid values:</para>
+                /// <para>The selection mode for the assets on which the rule takes effect. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>uuid</b>: a server</description></item>
-                /// <item><description><b>groupId</b>: a server group</description></item>
-                /// <item><description><b>global</b>: all servers</description></item>
+                /// <item><description><b>uuid</b>: added by individual asset.</description></item>
+                /// <item><description><b>groupId</b>: added by server group.</description></item>
+                /// <item><description><b>global</b>: all assets are selected.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of servers to which the configuration is applied.</para>
+            /// <para>The number of servers on which the rule takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number in the paging query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+        /// <para>The number of logon configuration entries displayed on each page in the paging query result. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C2D4B3C-0524-17B1-93D2-DA50119F4E1E</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of logon configuration entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

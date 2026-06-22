@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterCheckSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the queried cluster</para>
+        /// <para>The ID of the cluster to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

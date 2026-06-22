@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageVulWhiteListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. A value of <b>200</b> indicates that the request was successful. Other values indicate that the request failed. You can identify the cause of the failure based on the value of this parameter.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The information about the whitelist of image vulnerabilities.</para>
+        /// <para>The image vulnerability whitelist.</para>
         /// </summary>
         [NameInMap("ImageVulWhitelist")]
         [Validation(Required=false)]
         public List<DescribeImageVulWhiteListResponseBodyImageVulWhitelist> ImageVulWhitelist { get; set; }
         public class DescribeImageVulWhiteListResponseBodyImageVulWhitelist : TeaModel {
             /// <summary>
-            /// <para>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</para>
+            /// <para>The alias of the vulnerability in the vulnerability advisory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2019-19906:in_sasl_add_string</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The reason why the vulnerability is added to the whitelist.</para>
+            /// <para>The reason for adding the vulnerability to the whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>already config in another way</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The object on which the query is performed. The value of this parameter is in the JSON format and contains the following fields:</para>
+            /// <para>The operation target. This parameter is in JSON format and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>type</b>: the object type. The value is fixed to repo.</description></item>
-            /// <item><description><b>target</b>: the object content. The value is in the Namespace/Image repository format.</description></item>
+            /// <item><description><b>type</b>: the target type. The value is fixed as repo.</description></item>
+            /// <item><description><b>target</b>: the target content. Format: namespace/image repository.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The type of the vulnerability. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>cve</b>: system vulnerability</description></item>
-            /// <item><description><b>sca</b>: application vulnerability</description></item>
+            /// <item><description><b>sca</b>: application vulnerability.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -117,14 +117,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information for the paged query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageVulWhiteListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageVulWhiteListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in the paged query. Paging starts from page 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in the paged query. Paging is used to display results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>911025D0-3D1E-5213-A18A-37EA0C92****</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The amount of time that was consumed to process the request. Unit: milliseconds.</para>
+        /// <para>The time consumed to process the request, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

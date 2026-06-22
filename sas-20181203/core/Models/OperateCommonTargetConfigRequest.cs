@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateCommonTargetConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the image. Valid values:</para>
+        /// <para>The target type of the image switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>repoName</b>: the name of the image repository</description></item>
-        /// <item><description><b>repoNamespace</b>: the namespace of the image repository</description></item>
+        /// <item><description><b>repoName</b>: repository name.</description></item>
+        /// <item><description><b>repoNamespace</b>: repository namespace name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldName { get; set; }
 
         /// <summary>
-        /// <para>The name of the image repository or the namespace of the image repository.</para>
+        /// <para>The repository name or repository namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cafcmc-dev</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>182.92.XXX.XXX</para>
@@ -44,11 +44,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The configuration of proactive defense for your server. The value includes the following fields:</para>
+        /// <para>The parameters for configuring proactive defense on servers. The following parameters are included:</para>
         /// <list type="bullet">
-        /// <item><description><b>targetType</b>: specifies the dimension from which you manage proactive defense. UUIDs are supported. Set the value to <b>uuid</b>.</description></item>
-        /// <item><description><b>target</b>: specifies the UUID of the server for which you want to configure proactive defense.</description></item>
-        /// <item><description><b>flag</b>: specifies whether to enable or disable proactive defense for your server. Valid values are <b>add</b> and <b>del</b>. The value add indicates that proactive defense will be enabled for your server. The value del indicates that proactive defense will be disabled for your server.</description></item>
+        /// <item><description><b>targetType</b>: the dimension of the defense configuration. Currently, only the UUID dimension is supported. Fixed value: <b>uuid</b>.</description></item>
+        /// <item><description><b>target</b>: the UUID of the server for which you want to configure proactive defense.</description></item>
+        /// <item><description><b>flag</b>: specifies whether to enable or disable proactive defense for the server. Valid values: <b>add</b> (enable) and <b>del</b> (disable).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,11 +66,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetOperations { get; set; }
 
         /// <summary>
-        /// <para>The dimension based on which the asset is selected. Valid values:</para>
+        /// <para>The Asset Type of the target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>uuid</b>: the UUID of the server</description></item>
-        /// <item><description><b>Cluster</b>: the ID of the cluster</description></item>
-        /// <item><description><b>image_repo</b>: the name of the image repository</description></item>
+        /// <item><description><b>uuid</b>: server UUID.</description></item>
+        /// <item><description><b>Cluster</b>: cluster ID.</description></item>
+        /// <item><description><b>image_repo</b>: image repository name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,19 +81,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the feature. Valid values:</para>
+        /// <para>The switch type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>alidetect-scan-enable</b>: local file detection</description></item>
-        /// <item><description><b>ACTION-TRIAL-PERMISSION</b>: data delivery to ActionTrail</description></item>
-        /// <item><description><b>alidetect</b>: local file detection engine</description></item>
-        /// <item><description><b>container_prevent_escape</b>: container escape prevention</description></item>
-        /// <item><description><b>image_repo</b>: repository image scan</description></item>
-        /// <item><description><b>proc_filter_switch</b>: log filtering</description></item>
-        /// <item><description><b>agentless</b>: agentless detection</description></item>
-        /// <item><description><b>rasp</b>: application protection</description></item>
-        /// <item><description><b>sensitiveFile</b>: sensitive file detection</description></item>
-        /// <item><description><b>aliscriptengine</b>: in-depth detection engine</description></item>
-        /// <item><description><b>containerNetwork</b>: container network visualization</description></item>
+        /// <item><description><b>alidetect-scan-enable</b>: local file detection that performs detection only locally.</description></item>
+        /// <item><description><b>ACTION-TRIAL-PERMISSION</b>: ActionTrail data delivery.</description></item>
+        /// <item><description><b>alidetect</b>: local file detection engine.</description></item>
+        /// <item><description><b>container_prevent_escape</b>: container escape prevention.</description></item>
+        /// <item><description><b>image_repo</b>: repository image scanning.</description></item>
+        /// <item><description><b>proc_filter_switch</b>: log filtering.</description></item>
+        /// <item><description><b>agentless</b>: agentless detection.</description></item>
+        /// <item><description><b>rasp</b>: application protection.</description></item>
+        /// <item><description><b>sensitiveFile</b>: sensitive information scanning.</description></item>
+        /// <item><description><b>aliscriptengine</b>: deep detection engine.</description></item>
+        /// <item><description><b>containerNetwork</b>: container visualization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

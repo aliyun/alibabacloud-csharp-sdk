@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClearLogstoreStorageRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request source. Set the value to <b>sas</b>.</para>
+        /// <para>The identifier of the request source. Set the value to <b>sas</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore that stores logs.</para>
+        /// <para>The name of the user LogStore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas_sls_storage</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string UserLogStore { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The user project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas-log-1234(uid)-cn-hangzhou</para>

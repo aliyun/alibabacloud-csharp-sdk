@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class VerifyCheckCustomConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Check item ID.</para>
+        /// <para>The ID of the check item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>Custom check item to validate input parameters.</para>
+        /// <para>The input parameters for custom check item validation.</para>
         /// </summary>
         [NameInMap("CustomCheckConfig")]
         [Validation(Required=false)]
         public VerifyCheckCustomConfigRequestCustomCheckConfig CustomCheckConfig { get; set; }
         public class VerifyCheckCustomConfigRequestCustomCheckConfig : TeaModel {
             /// <summary>
-            /// <para>Define rules for custom inspection items.</para>
+            /// <para>The definition rule of the custom check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AssociatedData&quot;:{&quot;ToDataList&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Instance&quot;,&quot;PropertyPath&quot;:&quot;InstanceId&quot;,&quot;FromPropertyPath&quot;:&quot;InstanceId&quot;}]},&quot;MatchProperty&quot;:{&quot;Operator&quot;:&quot;AND&quot;,&quot;MatchProperties&quot;:[{&quot;DataName&quot;:&quot;ACS_ECS_Disk&quot;,&quot;PropertyPath&quot;:&quot;DiskId&quot;,&quot;MatchOperator&quot;:&quot;EQ&quot;,&quot;MatchPropertyValue&quot;:&quot;testId&quot;}]}}</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckRule { get; set; }
 
             /// <summary>
-            /// <para>Asset instance that requires testing rules</para>
+            /// <para>The asset instance on which you want to test the rule.</para>
             /// </summary>
             [NameInMap("CloudAssetInstance")]
             [Validation(Required=false)]
             public VerifyCheckCustomConfigRequestCustomCheckConfigCloudAssetInstance CloudAssetInstance { get; set; }
             public class VerifyCheckCustomConfigRequestCustomCheckConfigCloudAssetInstance : TeaModel {
                 /// <summary>
-                /// <para>Instance ID of the asset.</para>
+                /// <para>The instance ID of the asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-0jl4mjgl261cfrz5****</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Asset subtype of the cloud product</para>
+            /// <para>The asset subtype of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DISK</para>
@@ -76,30 +76,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceSubType { get; set; }
 
             /// <summary>
-            /// <para>Asset types of cloud products. Values:</para>
+            /// <para>The asset type of the cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECS</b>: Elastic Compute Service </description></item>
-            /// <item><description><b>SLB</b>: Server Load Balancer </description></item>
-            /// <item><description><b>RDS</b>: Relational Database Service </description></item>
-            /// <item><description><b>MONGODB</b>: MongoDB Database </description></item>
-            /// <item><description><b>KVSTORE</b>: Redis Database </description></item>
-            /// <item><description><b>ACR</b>: Container Registry </description></item>
-            /// <item><description><b>CSK</b>: CSK </description></item>
-            /// <item><description><b>VPC</b>: Virtual Private Cloud </description></item>
-            /// <item><description><b>ACTIONTRAIL</b>: Action Trail </description></item>
-            /// <item><description><b>CDN</b>: Content Delivery Network </description></item>
-            /// <item><description><b>CAS</b>: Digital Certificate Management Service [formerly SSL Certificates] </description></item>
-            /// <item><description><b>RDC</b>: DevOps </description></item>
-            /// <item><description><b>RAM</b>: Resource Access Management </description></item>
-            /// <item><description><b>DDOS</b>: Distributed Denial of Service </description></item>
-            /// <item><description><b>WAF</b>: Web Application Firewall </description></item>
-            /// <item><description><b>OSS</b>: Object Storage Service </description></item>
-            /// <item><description><b>POLARDB</b>: POLARDB </description></item>
-            /// <item><description><b>POSTGRESQL</b>: PostgreSQL </description></item>
-            /// <item><description><b>MSE</b>: MSE </description></item>
-            /// <item><description><b>NAS</b>: Network Attached Storage </description></item>
-            /// <item><description><b>SDDP</b>: Sensitive Data Discovery and Protection </description></item>
-            /// <item><description><b>EIP</b>: Elastic IP</description></item>
+            /// <item><description><b>ECS</b>: server</description></item>
+            /// <item><description><b>SLB</b>: load balancing</description></item>
+            /// <item><description><b>RDS</b>: ApsaraDB RDS database</description></item>
+            /// <item><description><b>MONGODB</b>: ApsaraDB for MongoDB database</description></item>
+            /// <item><description><b>KVSTORE</b>: ApsaraDB for Redis database</description></item>
+            /// <item><description><b>ACR</b>: ACR</description></item>
+            /// <item><description><b>CSK</b>: CSK</description></item>
+            /// <item><description><b>VPC</b>: VPC</description></item>
+            /// <item><description><b>ACTIONTRAIL</b>: ActionTrail</description></item>
+            /// <item><description><b>CDN</b>: CDN</description></item>
+            /// <item><description><b>CAS</b>: Certificate Management Service (formerly SSL Certificates Service)</description></item>
+            /// <item><description><b>RDC</b>: Apsara Devops</description></item>
+            /// <item><description><b>RAM</b>: RAM</description></item>
+            /// <item><description><b>DDOS</b>: distributed deny of service</description></item>
+            /// <item><description><b>WAF</b>: WAF</description></item>
+            /// <item><description><b>OSS</b>: access control</description></item>
+            /// <item><description><b>POLARDB</b>: POLARDB</description></item>
+            /// <item><description><b>POSTGRESQL</b>: PostgreSQL</description></item>
+            /// <item><description><b>MSE</b>: MSE</description></item>
+            /// <item><description><b>NAS</b>: NAS</description></item>
+            /// <item><description><b>SDDP</b>: SDDP</description></item>
+            /// <item><description><b>EIP</b>: EIP.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,13 +110,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>Cloud asset vendor. Values: </para>
+            /// <para>The cloud asset vendor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ALIYUN</b>: Alibaba Cloud </description></item>
-            /// <item><description><b>Tencent</b>: Tencent Cloud </description></item>
-            /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud </description></item>
-            /// <item><description><b>Azure</b>: Microsoft </description></item>
-            /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
+            /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
+            /// <item><description><b>Tencent</b>: Tencent Cloud</description></item>
+            /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
+            /// <item><description><b>Azure</b>: Microsoft Azure</description></item>
+            /// <item><description><b>AWS</b>: Amazon Web Services (AWS).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>List of custom configuration items for the check item.</para>
+        /// <para>The list of custom parameter configuration items for the check item.</para>
         /// </summary>
         [NameInMap("CustomConfigs")]
         [Validation(Required=false)]
         public List<VerifyCheckCustomConfigRequestCustomConfigs> CustomConfigs { get; set; }
         public class VerifyCheckCustomConfigRequestCustomConfigs : TeaModel {
             /// <summary>
-            /// <para>Name of the custom configuration item for the check item, unique within the same check item.</para>
+            /// <para>The name of the custom configuration item for the check item. The name is unique within the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPList</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Operation type for the custom configuration item of the check item. Only pass DELETE when deleting; no need to pass for creation or update.</para>
+            /// <para>The operation type of the custom configuration item for the check item. Set this parameter to DELETE only for deletion operations. You do not need to specify this parameter for creation or update operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DELETE</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>User-configured value string for the custom configuration item of the check item.</para>
+            /// <para>The user-configured value string of the custom configuration item for the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.12.4.XX</para>
@@ -168,14 +168,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Repair parameters supported by the check item\&quot;s repair function.</para>
+        /// <para>The repair parameters supported by the repair feature of the check item.</para>
         /// </summary>
         [NameInMap("RepairConfigs")]
         [Validation(Required=false)]
         public List<VerifyCheckCustomConfigRequestRepairConfigs> RepairConfigs { get; set; }
         public class VerifyCheckCustomConfigRequestRepairConfigs : TeaModel {
             /// <summary>
-            /// <para>ID of the repair process during the repair.</para>
+            /// <para>The ID of the repair flow that corresponds to the repair operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7fec0a3395b345c18f108ffc9fc0****</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>Name of the repair parameter for the check item, unique within the same check item.</para>
+            /// <para>The name of the repair parameter for the check item. The name is unique within the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPLists</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Operation type for the custom configuration item of the check item. Only pass DELETE when deleting; no need to pass for creation or update.</para>
+            /// <para>The operation type of the custom configuration item for the check item. Set this parameter to DELETE only for deletion operations. You do not need to specify this parameter for creation or update operations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DELETE</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>User-configured value string for the repair parameter of the check item.</para>
+            /// <para>The user-configured value string of the repair configuration item for the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.26.49.XX</para>
@@ -217,10 +217,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Situation Awareness parameter validation types: </para>
+        /// <para>The validation type for Threat Detection Service parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>REPAIR_CONFIG</b>: Repair and custom parameter validation (default) </description></item>
-        /// <item><description><b>CHECK_ITEM_CONFIG</b>: Custom check item validation</description></item>
+        /// <item><description><b>REPAIR_CONFIG</b>: repair and custom parameter validation (default).</description></item>
+        /// <item><description><b>CHECK_ITEM_CONFIG</b>: custom check item validation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

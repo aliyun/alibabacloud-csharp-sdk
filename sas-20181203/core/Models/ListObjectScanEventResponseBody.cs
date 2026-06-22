@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListObjectScanEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListObjectScanEventResponseBodyData> Data { get; set; }
         public class ListObjectScanEventResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name of the OSS bucket.</para>
+            /// <para>The bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hz-new01****</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The details of the file.</para>
+            /// <para>The detailed information of the check item.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<ListObjectScanEventResponseBodyDataDetails> Details { get; set; }
             public class ListObjectScanEventResponseBodyDataDetails : TeaModel {
                 /// <summary>
-                /// <para>The name of the parameter in the file details.</para>
+                /// <para>The name of the detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DownloadUrl</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the alert.</para>
+                /// <para>The display name of the alert event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DownloadUrl</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NameDisplay { get; set; }
 
                 /// <summary>
-                /// <para>The value type of the parameter in the file details.</para>
+                /// <para>The type of the detail information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>html</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The value of the parameter.</para>
+                /// <para>The value of the detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://gcx.cn-hangzhou.aliyuncs.com/">http://gcx.cn-hangzhou.aliyuncs.com/</a>****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Value { get; set; }
 
                 /// <summary>
-                /// <para>The value of the parameter.</para>
+                /// <para>The display value of the detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://gcx.cn-hangzhou.aliyuncs.com/">http://gcx.cn-hangzhou.aliyuncs.com/</a>****</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the file can be detected by cloud sandbox. Valid values:</para>
+            /// <para>Indicates whether cloud sandbox detection is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DisplaySandboxResult { get; set; }
 
             /// <summary>
-            /// <para>Error message.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connect timed out</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The ID of the alert.</para>
+            /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>911273</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EventId { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert.</para>
+            /// <para>The alert name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebShell</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The path to the file.</para>
+            /// <para>The file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/local****</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The timestamp at which the alert was first detected.</para>
+            /// <para>The timestamp when the alert first occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -150,10 +150,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether an alert is generated for the file extracted from the package. Valid values:</para>
+            /// <para>Indicates whether alerts exist for sub-files within a compressed archive. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Yes. You can obtain the corresponding <b>EventId</b> value and call this operation again with the <b>EventId</b> value passed to <b>ParentEventId</b> to view the alert events for the sub-files within the compressed archive.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? HasSubEvent { get; set; }
 
             /// <summary>
-            /// <para>The timestamp at which the alert was last detected.</para>
+            /// <para>The timestamp when the alert was last detected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastTime { get; set; }
 
             /// <summary>
-            /// <para>Information on whitelisting rule hits.</para>
+            /// <para>The information about the matched whitelist rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b></b>&amp;nbsp&amp;nbspmd5&amp;nbsp&amp;nbsp contains &amp;nbsp&amp;nbsp23&amp;nbsp&amp;nbsp</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MatchedWhiteListRuleI18nStr { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the file.</para>
+            /// <para>The MD5 hash of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5b394b54ca632fe51c4ab4a6dbaf****</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>Alarm handling result</para>
+            /// <para>The alert handling result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fail</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateResult { get; set; }
 
             /// <summary>
-            /// <para>The key of the file that is stored in the OSS bucket.</para>
+            /// <para>The storage key of the file in the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1/2023/07/21/10/18/16899059356518bcf6c64-a04e-492d-a421-4ae8b888****</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OssKey { get; set; }
 
             /// <summary>
-            /// <para>Remark.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -224,11 +224,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the alert. Valid values:</para>
+            /// <para>The risk level of the scanned alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><b>high</b>: high risk.</description></item>
+            /// <item><description><b>medium</b>: medium risk.</description></item>
+            /// <item><description><b>low</b>: low risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The SHA-1 hash value of the file.</para>
+            /// <para>The SHA-1 hash of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3c01bdbb26f358bab27f267924aa2c9a03fc****</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Sha1 { get; set; }
 
             /// <summary>
-            /// <para>The SHA-256 hash value of the file.</para>
+            /// <para>The SHA-256 hash of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</para>
@@ -259,10 +259,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Sha256 { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to detect the malicious file. Valid values:</para>
+            /// <para>The data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>API</b>: uses API operations.</description></item>
-            /// <item><description><b>OSS</b>: uses OSS file check.</description></item>
+            /// <item><description><b>API</b>: API detection</description></item>
+            /// <item><description><b>OSS</b>: OSS detection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -273,13 +273,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>Event status. Valid values::</para>
+            /// <para>The event status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Unprocessed </description></item>
-            /// <item><description><b>1</b>: Processed manually </description></item>
-            /// <item><description><b>2</b>: Whitelisted </description></item>
-            /// <item><description><b>3</b>: Ignored </description></item>
-            /// <item><description><b>4</b>: Access denied</description></item>
+            /// <item><description>0: unhandled </description></item>
+            /// <item><description>1: manually handled</description></item>
+            /// <item><description>2: whitelisted</description></item>
+            /// <item><description>3: ignored</description></item>
+            /// <item><description>4: access denied.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -292,14 +292,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information for the paged query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListObjectScanEventResponseBodyPageInfo PageInfo { get; set; }
         public class ListObjectScanEventResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries displayed on each page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>253</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for this request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7BC55C8F-226E-5AF5-9A2C-2EC43864****</para>

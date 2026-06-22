@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectStrategyResponseBody : TeaModel {
+        /// <summary>
+        /// <para>An array of strategies.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListUnknownThreatDetectStrategyResponseBodyData> Data { get; set; }
         public class ListUnknownThreatDetectStrategyResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The asset selection identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>UNKNOWN_THREAT_DETECT_CONFIG_****</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetSelectionType { get; set; }
 
             /// <summary>
+            /// <para>The duration, in days, of the learning phase after model creation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DurationDaysAfterInit { get; set; }
 
             /// <summary>
+            /// <para>The number of consecutive days without new process detections before the learning phase automatically ends.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DurationDaysAfterStop { get; set; }
 
             /// <summary>
+            /// <para>The strategy ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The number of servers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MachineCount { get; set; }
 
             /// <summary>
+            /// <para>The strategy name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test****</para>
             /// </summary>
@@ -62,6 +77,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The whitelist mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>hash</b>: process hash</para>
+            /// </description></item>
+            /// <item><description><para><b>path</b>: process path</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>hash</para>
             /// </summary>
@@ -71,11 +94,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListUnknownThreatDetectStrategyResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectStrategyResponseBodyPageInfo : TeaModel {
             /// <summary>
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -84,6 +112,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -92,6 +122,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>The number of entries returned per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -100,6 +132,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of matching entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>69</para>
             /// </summary>
@@ -110,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>898F7AA7-CECD-5EC7-AF4D-664C601B****</para>

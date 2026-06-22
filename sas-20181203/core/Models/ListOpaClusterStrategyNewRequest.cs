@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOpaClusterStrategyNewRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The image names.</para>
+        /// <para>The list of image names.</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public List<string> ImageName { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the container.</para>
+        /// <para>The list of labels.</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public List<string> Label { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The rule names.</para>
+        /// <para>The policy name.</para>
         /// </summary>
         [NameInMap("StrategyName")]
         [Validation(Required=false)]

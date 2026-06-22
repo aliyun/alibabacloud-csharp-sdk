@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSwitchRegionDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSwitchRegionDetailResponseBodyData Data { get; set; }
         public class GetSwitchRegionDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the permissions were modified.</para>
+            /// <para>The time when the authorization operation was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1692858597000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtNoticed { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the migration is approved.</para>
+            /// <para>Indicates whether the migration is agreed to.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsAgree { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the notification is sent.</para>
+            /// <para>Indicates whether the notification has been sent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YES</para>
@@ -57,17 +57,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsNoticed { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to notify the account.</para>
+            /// <para>Indicates whether a pop-up notification needs to be displayed to the user.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: A pop-up notification needs to be displayed.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: No pop-up notification needs to be displayed.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("NeedNotice")]
             [Validation(Required=false)]
             public bool? NeedNotice { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to switch.</para>
+            /// <para>Indicates whether a switchover to the new console is required.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: A switchover to the new console is required.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The legacy console is still in use.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? NeedSwitch { get; set; }
 
             /// <summary>
-            /// <para>The status of the switching to the region.</para>
+            /// <para>The switchover status of the region.</para>
             /// </summary>
             [NameInMap("RegionStatus")]
             [Validation(Required=false)]
@@ -94,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? EcsCount { get; set; }
 
                 /// <summary>
-                /// <para>The time when the migration is scheduled.</para>
+                /// <para>The planned migration time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1692858597000</para>
@@ -104,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? GmtPlanSwitchTime { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the server resides.</para>
+                /// <para>The region where the server resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>us-east-1</para>
@@ -116,8 +128,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The migration status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: pending</description></item>
-                /// <item><description><b>1</b>: successful</description></item>
+                /// <item><description><b>0</b>: waiting for migration</description></item>
+                /// <item><description><b>1</b>: switchover succeeded.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -132,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The China Chinese mainland generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30CBF632-109F-596F-97F2-451C8B2A****</para>

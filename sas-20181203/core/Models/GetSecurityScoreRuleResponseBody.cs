@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSecurityScoreRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status of the custom settings of the security score feature.</para>
+        /// <para>The enabling status of the custom security scoring rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enabled</description></item>
-        /// <item><description>false: disabled</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Not enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? EnableStatus { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8B6F758-BCD4-597A-8A2C-DA5A552C****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the new version of the security score rule.</para>
+        /// <para>The list of new security score rules.</para>
         /// </summary>
         [NameInMap("SecurityScoreCategoryList")]
         [Validation(Required=false)]
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The category of the security score rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SS_SAS_HANDLE</b>: security governance.</description></item>
-            /// <item><description><b>SS_SAS_RESPOND</b>: security response.</description></item>
+            /// <item><description><b>SS_SAS_HANDLE</b>: Security governance.</description></item>
+            /// <item><description><b>SS_SAS_RESPOND</b>: Security response.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The threshold of deduction for the security score rule type.</para>
+            /// <para>The deduction threshold of the security score rule category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Score { get; set; }
 
             /// <summary>
-            /// <para>The deduction items of the security score rule.</para>
+            /// <para>The deduction list of security score rule types.</para>
             /// </summary>
             [NameInMap("SecurityRuleList")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RuleType { get; set; }
 
                 /// <summary>
-                /// <para>The threshold of deduction for the security score rule type.</para>
+                /// <para>The deduction threshold of the security score rule type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Score { get; set; }
 
                 /// <summary>
-                /// <para>The sub-deduction items of the security score rule.</para>
+                /// <para>The deduction list of security score rule sub-items.</para>
                 /// </summary>
                 [NameInMap("SecurityScoreItemList")]
                 [Validation(Required=false)]
                 public List<GetSecurityScoreRuleResponseBodySecurityScoreCategoryListSecurityRuleListSecurityScoreItemList> SecurityScoreItemList { get; set; }
                 public class GetSecurityScoreRuleResponseBodySecurityScoreCategoryListSecurityRuleListSecurityScoreItemList : TeaModel {
                     /// <summary>
-                    /// <para>The deduction score for the item.</para>
+                    /// <para>The deduction value of the individual item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? Score { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold of the deduction score for the item.</para>
+                    /// <para>The deduction threshold of the individual item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -119,22 +119,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? ScoreThreshold { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the sub-deduction item. Valid values:</para>
+                    /// <para>The type of the security score rule sub-item. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>SS_SAS_WEAK_PW</b>: unhandled weak password risk.</description></item>
-                    /// <item><description><b>SS_SAS_ALARM</b>: unhandled alert in Security Center.</description></item>
-                    /// <item><description><b>SS_SAS_EMG_VUL</b>: unfixed urgent vulnerability.</description></item>
-                    /// <item><description><b>SS_SAS_APP_VUL</b>: unfixed application vulnerability.</description></item>
-                    /// <item><description><b>SS_SAS_SYS_VUL</b>: unfixed system vulnerability.</description></item>
-                    /// <item><description><b>SS_SAS_CLOUD_HC</b>: unhandled cloud security posture management (CSPM) risk.</description></item>
-                    /// <item><description><b>SS_SDDP_DATA_RISK</b>: unhandled data security risk.</description></item>
-                    /// <item><description><b>SS_WAF_API_RISK</b>: unhandled API security risk.</description></item>
-                    /// <item><description><b>SS_DDOS_BH_ASSET</b>: asset on which blackhole filtering is triggered.</description></item>
-                    /// <item><description><b>SS_SAS_AK_LEAK</b>: unhandled AK/SK leak event.</description></item>
-                    /// <item><description><b>SS_PRODUCT_CONNECT</b>: security service not integrated.</description></item>
-                    /// <item><description><b>SS_KEY_CONFIG</b>: key feature configuration.</description></item>
-                    /// <item><description><b>SS_PRODUCT_EXPIRE</b>: service that is about to expire.</description></item>
-                    /// <item><description><b>SS_AI_RISK</b>: AI application risk.</description></item>
+                    /// <item><description><b>SS_SAS_WEAK_PW</b>: Pending weak passwords to fix.</description></item>
+                    /// <item><description><b>SS_SAS_ALARM</b>: Pending Security Center alerts.</description></item>
+                    /// <item><description><b>SS_SAS_EMG_VUL</b>: Pending emergency vulnerabilities to fix.</description></item>
+                    /// <item><description><b>SS_SAS_APP_VUL</b>: Pending application vulnerabilities to fix.</description></item>
+                    /// <item><description><b>SS_SAS_SYS_VUL</b>: Pending system vulnerabilities to fix.</description></item>
+                    /// <item><description><b>SS_SAS_CLOUD_HC</b>: Pending Cloud Security Posture Management (CSPM) risks.</description></item>
+                    /// <item><description><b>SS_SDDP_DATA_RISK</b>: Pending data security risks to remediate.</description></item>
+                    /// <item><description><b>SS_WAF_API_RISK</b>: Pending API security risks.</description></item>
+                    /// <item><description><b>SS_DDOS_BH_ASSET</b>: Assets in Black Hole Activated status.</description></item>
+                    /// <item><description><b>SS_SAS_AK_LEAK</b>: Unhandled AccessKey/SecretKey leakage events.</description></item>
+                    /// <item><description><b>SS_PRODUCT_CONNECT</b>: Security products not in Normal connection status.</description></item>
+                    /// <item><description><b>SS_KEY_CONFIG</b>: Key feature configuration.</description></item>
+                    /// <item><description><b>SS_PRODUCT_EXPIRE</b>: Products about to expire.</description></item>
+                    /// <item><description><b>SS_AI_RISK</b>: AI application risks.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -145,10 +145,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string SubRuleType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the sub-deduction item of the security score rule.</para>
+                    /// <para>The name of the security score rule sub-item.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Unfixed application vulnerabilities</para>
+                    /// <para>Unhandled application vulnerabilities exist.</para>
                     /// </summary>
                     [NameInMap("Title")]
                     [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The name of the security score rule type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>AI application risks</para>
+                /// <para>AI Application Risks</para>
                 /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
@@ -169,10 +169,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The category of the security score rule.</para>
+            /// <para>The name of the security score rule category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Security governance</para>
+            /// <para>Security Response</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
@@ -181,21 +181,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The information about the old version of the security score rule.</para>
+        /// <para>The list of legacy security score rules.</para>
         /// </summary>
         [NameInMap("SecurityScoreRuleList")]
         [Validation(Required=false)]
         public List<GetSecurityScoreRuleResponseBodySecurityScoreRuleList> SecurityScoreRuleList { get; set; }
         public class GetSecurityScoreRuleResponseBodySecurityScoreRuleList : TeaModel {
             /// <summary>
-            /// <para>The deduction module that is supported by the security score feature. Valid values:</para>
+            /// <para>The type of the security score rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SS_REINFORCE: issue in key feature configuration</description></item>
-            /// <item><description>SS_ALARM: unhandled alert</description></item>
-            /// <item><description>SS_VUL: unfixed vulnerability</description></item>
-            /// <item><description>SS_HC: baseline risk</description></item>
-            /// <item><description>SS_CLOUD_HC: risk item of configuration assessment</description></item>
-            /// <item><description>SS_AK: risk of AccessKey pair leaks</description></item>
+            /// <item><description>SS_REINFORCE: Key feature configuration.</description></item>
+            /// <item><description>SS_ALARM: Pending alerts.</description></item>
+            /// <item><description>SS_VUL: Pending vulnerabilities to fix.</description></item>
+            /// <item><description>SS_HC: Baseline issues.</description></item>
+            /// <item><description>SS_CLOUD_HC: Cloud platform configuration check item issues.</description></item>
+            /// <item><description>SS_AK: AccessKey leakage risk exists.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -206,9 +206,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>The deduction threshold of the deduction module.</para>
+            /// <para>The deduction value of the security score rule.</para>
             /// <remarks>
-            /// <para> Valid values: 0 to 100. The sum of the deduction thresholds for all deduction modules must be equal to 100.</para>
+            /// <para>The configurable range is 0 to 100 points. The sum of all security score rule deduction thresholds must equal 100 points.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -219,14 +219,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Score { get; set; }
 
             /// <summary>
-            /// <para>The deduction items of the deduction module.</para>
+            /// <para>The list of individual deduction items for the security score rule.</para>
             /// </summary>
             [NameInMap("SecurityScoreItemList")]
             [Validation(Required=false)]
             public List<GetSecurityScoreRuleResponseBodySecurityScoreRuleListSecurityScoreItemList> SecurityScoreItemList { get; set; }
             public class GetSecurityScoreRuleResponseBodySecurityScoreRuleListSecurityScoreItemList : TeaModel {
                 /// <summary>
-                /// <para>The penalty point of the deduction item.</para>
+                /// <para>The deduction value of the individual item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -236,9 +236,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Score { get; set; }
 
                 /// <summary>
-                /// <para>The threshold for the deduction item.</para>
+                /// <para>The deduction threshold of the individual item.</para>
                 /// <remarks>
-                /// <para> Valid values: 0 to the deduction threshold of the deduction module.</para>
+                /// <para>The configurable range is 0 to the deduction threshold of the security score rule.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -249,51 +249,51 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? ScoreThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The deduction item of the deduction module. The following list describes the deduction modules and their deduction items:</para>
+                /// <para>The sub-rule type of the security score deduction item. The relationship between security score categorization types and sub-rule types is as follows:</para>
                 /// <list type="bullet">
-                /// <item><description><para>SS_REINFORCE: issue in key feature configuration</para>
+                /// <item><description><para>SS_REINFORCE: Key feature configuration.</para>
                 /// <list type="bullet">
-                /// <item><description>XPRESS_INSTALL: Security Center is not authorized.</description></item>
-                /// <item><description>REINFORCE_SUSPICIOUS: The antivirus feature is disabled.</description></item>
-                /// <item><description>RANSOMWARE: The anti-ransomware policy is disabled.</description></item>
-                /// <item><description>WEB_LOCK: The web tamper proofing feature is disabled.</description></item>
-                /// <item><description>VIRUS_SCHEDULE_SCAN: The periodic virus scan policy is disabled.</description></item>
-                /// <item><description>IMAGE_REPO_SCAN: The range of container image scan is not configured.</description></item>
-                /// <item><description>IMAGE_SCAN_TASK: The feature of one-click scan of container images for security risks is not performed.</description></item>
+                /// <item><description>XPRESS_INSTALL: Security Center service authorization is not enabled.</description></item>
+                /// <item><description>REINFORCE_SUSPICIOUS: Anti-virus feature is not enabled.</description></item>
+                /// <item><description>RANSOMWARE: Anti-ransomware policy is not enabled.</description></item>
+                /// <item><description>WEB_LOCK: Web tamper-proofing feature is not enabled.</description></item>
+                /// <item><description>VIRUS_SCHEDULE_SCAN: Periodic virus scan policy is not enabled.</description></item>
+                /// <item><description>IMAGE_REPO_SCAN: Container image scan scope is not configured.</description></item>
+                /// <item><description>IMAGE_SCAN_TASK: One-click container image security risk scan has not been executed.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_ALARM: unhandled alert.</para>
+                /// <item><description><para>SS_ALARM: Pending alerts.</para>
                 /// <list type="bullet">
-                /// <item><description>ALARM_SERIOUS: An unhandled high-risk alert event is detected.</description></item>
-                /// <item><description>ALARM_SUSPICIOUS: An unhandled medium-risk alarm event is detected.</description></item>
-                /// <item><description>ALARM_REMIND: An unhandled low-risk alarm event is detected.</description></item>
+                /// <item><description>ALARM_SERIOUS: One unhandled high-risk alert event exists.</description></item>
+                /// <item><description>ALARM_SUSPICIOUS: One unhandled medium-risk alert event exists.</description></item>
+                /// <item><description>ALARM_REMIND: One unhandled low-risk alert event exists.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_VUL: unfixed vulnerability</para>
+                /// <item><description><para>SS_VUL: Pending vulnerabilities to fix.</para>
                 /// <list type="bullet">
-                /// <item><description>CMS_UNFIX: An unfixed Web-CMS vulnerability is detected.</description></item>
-                /// <item><description>WIN_UNFIX: An unfixed Windows host vulnerability is detected.</description></item>
-                /// <item><description>CVE_UNFIX: An unfixed Linux host vulnerability is detected.</description></item>
-                /// <item><description>ERM_UNFIX: An unfixed urgent vulnerability is detected.</description></item>
-                /// <item><description>ERM_UNCHECK: An undetected urgent vulnerability exists.</description></item>
+                /// <item><description>CMS_UNFIX: One unfixed CMS vulnerability exists.</description></item>
+                /// <item><description>WIN_UNFIX: One unfixed Windows host vulnerability exists.</description></item>
+                /// <item><description>CVE_UNFIX: One unfixed Linux host vulnerability exists.</description></item>
+                /// <item><description>ERM_UNFIX: One unfixed emergency vulnerability exists.</description></item>
+                /// <item><description>ERM_UNCHECK: One undetected emergency vulnerability exists.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_HC: baseline risks</para>
+                /// <item><description><para>SS_HC: Baseline issues.</para>
                 /// <list type="bullet">
-                /// <item><description>WEAK_EXPLOIT: Weak passwords are exposed to the Internet.</description></item>
-                /// <item><description>WEAK_PASSWORD: Weak passwords exist.</description></item>
-                /// <item><description>HC_EXPLOIT: The data source may be hacked.</description></item>
-                /// <item><description>HC_OTHER_WARNING: Security configuration risks exist.</description></item>
+                /// <item><description>WEAK_EXPLOIT: Weak password risk exposed to the Internet exists.</description></item>
+                /// <item><description>WEAK_PASSWORD: Weak password risk exists.</description></item>
+                /// <item><description>HC_EXPLOIT: High-risk intrusion vulnerability exists.</description></item>
+                /// <item><description>HC_OTHER_WARNING: Security configuration risk exists.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_CLOUD_HC: Cloud platform configuration check item problem.</para>
+                /// <item><description><para>SS_CLOUD_HC: Cloud platform configuration check item issues.</para>
                 /// <list type="bullet">
-                /// <item><description>CSPM_CIEM_NOT_PASS: A CIEM check item failed the check.</description></item>
-                /// <item><description>CSPM_RISK_NOT_PASS: A security risk check item failed the check.</description></item>
-                /// <item><description>CSPM_COMPLIANCE_NOT_PASS: A compliance check item failed the check.</description></item>
+                /// <item><description>CSPM_CIEM_NOT_PASS: One failed CIEM check item exists.</description></item>
+                /// <item><description>CSPM_RISK_NOT_PASS: One failed security risk check item exists.</description></item>
+                /// <item><description>CSPM_COMPLIANCE_NOT_PASS: One failed compliance check item exists.</description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>SS_AK: risk of AccessKey pair leaks</para>
+                /// <item><description><para>SS_AK: AccessKey leakage risk exists.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string SubRuleType { get; set; }
 
                 /// <summary>
-                /// <para>The description of the deduction item in a deduction module.</para>
+                /// <para>The description of the sub-rule type for the security score deduction item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Unhandled Urgent Alert Event Exists</para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The description of the deduction module.</para>
+            /// <para>The description of the security score rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unhandled Alerts</para>

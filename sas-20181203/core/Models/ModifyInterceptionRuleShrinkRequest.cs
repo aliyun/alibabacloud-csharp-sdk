@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the container cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The destination objects of the rule. The following parameters are included:</para>
+        /// <para>The destination object. The metric description is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>targetId: the ID of the destination object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
-        /// <item><description>ports: the destination port ranges.</description></item>
+        /// <item><description>targetId: the ID of the destination object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</description></item>
+        /// <item><description>ports: the list of destination port ranges.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The interception mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: block</description></item>
-        /// <item><description><b>2</b>: alert</description></item>
-        /// <item><description><b>3</b>: allow</description></item>
+        /// <item><description><b>1</b>: Block Mode</description></item>
+        /// <item><description><b>2</b>: Alert mode</description></item>
+        /// <item><description><b>3</b>: Allow mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? InterceptType { get; set; }
 
         /// <summary>
-        /// <para>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</para>
+        /// <para>The priority of the rule. The priority ranges from 1 to 1000. A smaller number indicates a higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? OrderIndex { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tetsRule</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the rule is enabled. Valid values:</para>
+        /// <para>The switch status of the rule. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleSwitch { get; set; }
 
         /// <summary>
-        /// <para>The source object of the rule. The following parameters are included:</para>
+        /// <para>The source rule object. The metric description is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>targetId: the ID of the source object. You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to query the ID.</description></item>
+        /// <item><description>targetId: the ID of the source object. You can invoke the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

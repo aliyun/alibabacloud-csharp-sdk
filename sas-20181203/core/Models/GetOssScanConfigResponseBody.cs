@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOssScanConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetOssScanConfigResponseBodyData Data { get; set; }
         public class GetOssScanConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the prefixes of all objects are matched.</para>
+            /// <para>Indicates whether all prefixes are matched.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,24 +37,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BucketCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the bucket.</para>
+            /// <para>The bucket name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hz-new01****</para>
+            /// <para>hz-new02****</para>
             /// </summary>
             [NameInMap("BucketName")]
             [Validation(Required=false)]
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The names of the buckets.</para>
+            /// <para>The list of bucket names.</para>
             /// </summary>
             [NameInMap("BucketNameList")]
             [Validation(Required=false)]
             public List<string> BucketNameList { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of objects that can be extracted during decompression. Valid values: 1 to 1000. If the maximum number of objects that can be extracted is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</para>
+            /// <para>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. If the number of files exceeds this value, the decompression operation stops. Files that have already been decompressed are still scanned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DecompressMaxFileCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the maximum number of decompression levels is reached, the decompression operation immediately ends and the detection of extracted objects is not affected.</para>
+            /// <para>The maximum number of decompression layers for nested compressed files. Minimum value: 1. Maximum value: 5. If the number of layers exceeds this value, the decompression operation stops. Files that have already been decompressed are still scanned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,16 +74,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DecompressMaxLayer { get; set; }
 
             /// <summary>
-            /// <para>The decryption methods.</para>
+            /// <para>The list of decryption types.</para>
             /// </summary>
             [NameInMap("DecryptionList")]
             [Validation(Required=false)]
             public List<string> DecryptionList { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the check policy is enabled. Valid values:</para>
+            /// <para>Indicates whether the policy is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><b>1</b>: enabled</description></item>
             /// <item><description><b>0</b>: disabled.</description></item>
             /// </list>
             /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Enable { get; set; }
 
             /// <summary>
-            /// <para>The end time of the check. The time is in the HH:mm:ss format.</para>
+            /// <para>The scan end time in the HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>
@@ -108,28 +108,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1274****</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The prefixes of the objects.</para>
+            /// <para>The file prefix list.</para>
             /// </summary>
             [NameInMap("KeyPrefixList")]
             [Validation(Required=false)]
             public List<string> KeyPrefixList { get; set; }
 
             /// <summary>
-            /// <para>The suffixes of the objects that are checked.</para>
+            /// <para>The list of file suffixes to scan.</para>
             /// </summary>
             [NameInMap("KeySuffixList")]
             [Validation(Required=false)]
             public List<string> KeySuffixList { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the object was last modified. The time must be later than the timestamp that you specify. Unit: milliseconds.</para>
+            /// <para>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1724301769834</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastModifiedStartTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the configuration was last modified.</para>
+            /// <para>The timestamp of the last update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1702025633079</para>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test0104</para>
+            /// <para>testPolicy****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</para>
+            /// <para>Specifies whether to enable real-time incremental scanning. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -169,14 +169,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? RealTimeIncr { get; set; }
 
             /// <summary>
-            /// <para>The days when the check is performed. The value indicates the days of the week.</para>
+            /// <para>The scan days. Each number represents a day of the week.</para>
             /// </summary>
             [NameInMap("ScanDayList")]
             [Validation(Required=false)]
             public List<int?> ScanDayList { get; set; }
 
             /// <summary>
-            /// <para>The start time of the check. The time is in the HH:mm:ss format.</para>
+            /// <para>The scan start time in the HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E10BAF1C-A6C5-51E2-866C-76D5922E****</para>

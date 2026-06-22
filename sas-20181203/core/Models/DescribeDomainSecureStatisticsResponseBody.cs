@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainSecureStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of domain names that trigger security alerts.</para>
+        /// <para>The number of domain names that have security alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AlarmCount { get; set; }
 
         /// <summary>
-        /// <para>The number of the websites for which no certificates are installed.</para>
+        /// <para>The number of websites without certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? NoSslCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1EE7B150-D67E-53FD-A52D-3E8E669A****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of the domain names that have security risks.</para>
+        /// <para>The number of domain names that have security risks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalDomainCount { get; set; }
 
         /// <summary>
-        /// <para>The number of the domain names that have vulnerabilities.</para>
+        /// <para>The number of domain names that have vulnerabilities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

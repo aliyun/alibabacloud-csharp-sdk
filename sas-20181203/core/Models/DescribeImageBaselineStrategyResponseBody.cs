@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the baseline check policy.</para>
+        /// <para>The baseline check policy information.</para>
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]
         public DescribeImageBaselineStrategyResponseBodyStrategy Strategy { get; set; }
         public class DescribeImageBaselineStrategyResponseBodyStrategy : TeaModel {
             /// <summary>
-            /// <para>The baseline check policy for agentless detection.</para>
+            /// <para>The agentless baseline check policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hc_win2008_cis_rules</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineItem { get; set; }
 
             /// <summary>
-            /// <para>An array that contains the baselines.</para>
+            /// <para>The list of baseline items.</para>
             /// </summary>
             [NameInMap("BaselineItemList")]
             [Validation(Required=false)]
             public List<DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList> BaselineItemList { get; set; }
             public class DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList : TeaModel {
                 /// <summary>
-                /// <para>The key of the baseline type.</para>
+                /// <para>The classification key of the baseline main item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>identification</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ClassKey { get; set; }
 
                 /// <summary>
-                /// <para>The key of the baseline check item.</para>
+                /// <para>The key of the baseline subitem.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>duplicate_pwd_hash</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ItemKey { get; set; }
 
                 /// <summary>
-                /// <para>The key of the name for the baseline.</para>
+                /// <para>The name key of the baseline main item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>identification</para>
@@ -75,6 +75,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            /// <summary>
+            /// <para>The retention period of baseline risks. Unit: days.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>90</para>
+            /// </summary>
             [NameInMap("ImageVulClean")]
             [Validation(Required=false)]
             public int? ImageVulClean { get; set; }
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the baseline check policy.</para>
+            /// <para>The Policy Name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -122,9 +128,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the baseline check policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>default</b>: the default policy</description></item>
-            /// <item><description><b>full</b>: a policy that uses all baselines</description></item>
-            /// <item><description><b>normal</b>: a policy that uses general baselines</description></item>
+            /// <item><description><b>default</b>: default policy</description></item>
+            /// <item><description><b>full</b>: full baseline item policy</description></item>
+            /// <item><description><b>normal</b>: common baseline item policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

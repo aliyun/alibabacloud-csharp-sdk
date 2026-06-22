@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the policy task that is in the waiting state.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain the ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2837958.html">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ReceiveFunctionTrialRewardByAliUidResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. The value is a unique identifier that Alibaba Cloud generates for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94004FDB-27EC-5666-83D4-D0C5C624****</para>

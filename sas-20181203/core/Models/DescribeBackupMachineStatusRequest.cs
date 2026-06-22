@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupMachineStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the anti-ransomware policy.</para>
+        /// <para>The ID of the anti-ransomware backup policy.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</para>
+        /// <para>You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The version of the anti-ransomware policy. Valid values:</para>
+        /// <para>The version of the protection policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1.0.0</b></description></item>
-        /// <item><description><b>2.0.0</b></description></item>
+        /// <item><description><b>1.0.0</b>: The version of the protection policy is 1.0.0.</description></item>
+        /// <item><description><b>2.0.0</b>: The version of the protection policy is 2.0.0.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeBackupPolicy~~">DescribeBackupPolicy</a> operation to query the UUIDs of servers.</para>
+        /// <para>You can call the <a href="~~DescribeBackupPolicy~~">DescribeBackupPolicy</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,34 +10,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifySearchConditionRequest : TeaModel {
         /// <summary>
-        /// <para>The filter condition. The value of this parameter is in the JSON format and is case-sensitive. The value contains the following fields:</para>
+        /// <para>The filter conditions. This parameter is in JSON format. Pay attention to the letter case when you specify this parameter. The following fields are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>filterParams</b>: the filter-related parameters. The value is in the JSON format. Valid values:</para>
+        /// <item><description><para><b>filterParams</b>: The filter parameters. This parameter is in JSON format. The following fields are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>label</b>: the display name of the filter condition in the console.</para>
+        /// <item><description><para><b>label</b>: The display name for the search in the console.</para>
         /// </description></item>
-        /// <item><description><para><b>value</b>: the settings of the filter condition. The value is in the JSON format. The value contains the following fields:</para>
+        /// <item><description><para><b>value</b>: The filter parameter condition. This parameter is in JSON format. The following fields are included:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: the name of the field for filtering. For more information, see the value description of name.</description></item>
-        /// <item><description><b>value</b>: the value of the field for filtering.</description></item>
+        /// <item><description><b>name</b>: The filter condition field. For more information about the valid values of this field, see the description below.</description></item>
+        /// <item><description><b>value</b>: The value that corresponds to the filter condition field.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>LogicalExp</b>: the logical relationship among multiple filter conditions. Valid values:</para>
+        /// <item><description><para><b>LogicalExp</b>: The logical relationship between multiple filter conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b></description></item>
-        /// <item><description><b>AND</b></description></item>
+        /// <item><description><b>OR</b>: or</description></item>
+        /// <item><description><b>AND</b>: and<remarks>
+        /// <para>Valid values of <b>name</b>:</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>Type</b> is set to <b>ecs</b>, call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</description></item>
+        /// <item><description>If <b>Type</b> is set to <b>cloud_product</b>, call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported search conditions.</description></item>
         /// </list>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> Value description of <b>name</b>:</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>If <b>Type</b> is set to <b>ecs</b>, you can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported filter conditions.</para>
         /// </description></item>
-        /// <item><description><para>If <b>Type</b> is set to <b>cloud_product</b>, you can call the <a href="~~GetCloudAssetCriteria~~">GetCloudAssetCriteria</a> operation to query the supported filter conditions.</para>
+        /// </list>
         /// </description></item>
         /// </list>
         /// 
@@ -68,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27.223.XX.XX</para>
@@ -78,10 +76,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset. Default value: <b>ecs</b>. Valid values:</para>
+        /// <para>The asset type. Default value: <b>ecs</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: host</description></item>
-        /// <item><description><b>cloud_product</b>: Alibaba Cloud service</description></item>
+        /// <item><description><b>ecs</b>: host asset</description></item>
+        /// <item><description><b>cloud_product</b>: cloud service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

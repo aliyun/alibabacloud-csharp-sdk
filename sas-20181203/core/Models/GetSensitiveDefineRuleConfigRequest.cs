@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSensitiveDefineRuleConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source of the check rules. Valid values:</para>
+        /// <para>The source of the sensitive file check item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b>: image.</description></item>
-        /// <item><description><b>agentless</b>: agentless detection.</description></item>
+        /// <item><description><b>image</b>: image</description></item>
+        /// <item><description><b>agentless</b>: agentless.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

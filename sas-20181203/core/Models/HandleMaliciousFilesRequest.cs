@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class HandleMaliciousFilesRequest : TeaModel {
         /// <summary>
-        /// <para>List of file IDs to be processed.</para>
+        /// <para>The list of file IDs to process.</para>
         /// <remarks>
-        /// <h2>You can call <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> to get the IDs.</h2>
+        /// <para>You can call <a href="~~ListAgentlessMaliciousFiles~~">ListAgentlessMaliciousFiles</a> to obtain the IDs.
+        /// -.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("FileIdList")]
@@ -20,10 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> FileIdList { get; set; }
 
         /// <summary>
-        /// <para>Type of operation:</para>
+        /// <para>The type of operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>addWhitelist: Add to whitelist</description></item>
-        /// <item><description>offWhitelist: Remove from whitelist</description></item>
+        /// <item><description>addWhitelist: adds to the whitelist.</description></item>
+        /// <item><description>offWhitelist: removes from the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

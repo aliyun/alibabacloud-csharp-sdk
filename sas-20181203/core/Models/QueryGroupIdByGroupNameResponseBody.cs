@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryGroupIdByGroupNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the asset group.</para>
+        /// <para>The ID of the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9935302</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A20733-10A0-4AF6-BE6B-E3322413BB68</para>

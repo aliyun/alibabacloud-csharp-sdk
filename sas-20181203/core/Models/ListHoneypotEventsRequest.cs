@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The probe IDs.</para>
+        /// <para>The list of probe IDs.</para>
         /// </summary>
         [NameInMap("AgentIdList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? AlarmEventId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The status of the event. Valid values:</para>
+        /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: handled</description></item>
-        /// <item><description><b>n</b>: unhandled</description></item>
-        /// <item><description><b>a</b>: all statuses</description></item>
+        /// <item><description><b>y</b>: Handled.</description></item>
+        /// <item><description><b>n</b>: Unhandled.</description></item>
+        /// <item><description><b>a</b>: All.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,17 +52,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The honeypot IDs.</para>
+        /// <para>The list of honeypot IDs.</para>
         /// </summary>
         [NameInMap("HoneypotIdList")]
         [Validation(Required=false)]
         public List<string> HoneypotIdList { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries per page in a paging query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the attacker profile.</para>
+        /// <para>The ID of the attacker portrait.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cd48604a-1694-4f03-ade0-ec6994c3*****</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PortraitId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2F9CE167-58D5-5DA6-AA3B-923EED02****</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The risk levels.</para>
+        /// <para>The list of risk levels.</para>
         /// </summary>
         [NameInMap("RiskLevelList")]
         [Validation(Required=false)]

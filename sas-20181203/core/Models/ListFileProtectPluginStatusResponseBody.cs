@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The returned code after you install the Security Center agent. Valid values:</para>
             /// <ol>
-            /// <item><description>0: The installation is successful.</description></item>
-            /// <item><description>\-2: The kernel does not support the installation.</description></item>
+            /// <item><description><para>0: The installation is successful.</para>
+            /// </description></item>
+            /// <item><description><para>-2: The kernel does not support the installation.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -93,8 +95,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the Security Center agent is online. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,8 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the operating system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>windows</b>: Windows</description></item>
-            /// <item><description><b>linux</b>: Linux</description></item>
+            /// <item><description><para><b>windows</b>: Windows</para>
+            /// </description></item>
+            /// <item><description><para><b>linux</b>: Linux</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

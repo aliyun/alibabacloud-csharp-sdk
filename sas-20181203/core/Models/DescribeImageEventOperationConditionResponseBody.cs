@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageEventOperationConditionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeImageEventOperationConditionResponseBodyData Data { get; set; }
         public class DescribeImageEventOperationConditionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The alert type.</para>
+            /// <para>The alerting type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Only <b>sensitiveFile</b> may be returned.</description></item>
+            /// <item><description><b>sensitiveFile</b>: sensitive file.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The operations.</para>
+            /// <para>The list of operations.</para>
             /// </summary>
             [NameInMap("Operations")]
             [Validation(Required=false)]
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public List<DescribeImageEventOperationConditionResponseBodyDataOperationsConditions> Conditions { get; set; }
                 public class DescribeImageEventOperationConditionResponseBodyDataOperationsConditions : TeaModel {
                     /// <summary>
-                    /// <para>The keyword of the condition. Valid values:</para>
+                    /// <para>The condition key. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>MD5</b></description></item>
-                    /// <item><description><b>PATH</b></description></item>
+                    /// <item><description><b>MD5</b>: MD5.</description></item>
+                    /// <item><description><b>PATH</b>: path.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string ConditionKey { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the condition.</para>
+                    /// <para>The condition name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>MD5</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string ConditionName { get; set; }
 
                     /// <summary>
-                    /// <para>The matching types.</para>
+                    /// <para>The match type.</para>
                     /// </summary>
                     [NameInMap("SupportedMisType")]
                     [Validation(Required=false)]
@@ -87,9 +87,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The operation code.</para>
+                /// <para>The operation code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Only <b>whitelist</b> may be returned, which indicates that the alert event is added to the whitelist.</description></item>
+                /// <item><description><b>whitelist</b>: whitelist.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OperationCode { get; set; }
 
                 /// <summary>
-                /// <para>The name of the operation.</para>
+                /// <para>The operation name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>whitelist</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The application scopes of the rules.</para>
+            /// <para>The rule scope.</para>
             /// </summary>
             [NameInMap("Scenarios")]
             [Validation(Required=false)]
@@ -141,10 +141,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

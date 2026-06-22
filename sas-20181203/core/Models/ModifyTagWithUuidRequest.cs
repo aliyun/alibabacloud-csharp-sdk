@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;target&quot;:&quot;inet-7c676676-06fa-442e-90fb-b802e5d6****&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</para>
+        /// <para>[{&quot;target&quot;:&quot;inet-7c676676-06fa-432e-90fb-b802e5d6****&quot;,&quot;targetType&quot;:&quot;uuid&quot;,&quot;flag&quot;:&quot;add&quot;}]</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]

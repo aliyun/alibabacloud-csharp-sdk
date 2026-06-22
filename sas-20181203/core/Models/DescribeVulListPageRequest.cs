@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name of the vulnerability.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RCE vulnerability</para>
+        /// <para>远程代码执行漏洞</para>
         /// </summary>
         [NameInMap("VulNameLike")]
         [Validation(Required=false)]
@@ -68,9 +68,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the vulnerabilities. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
-        /// <item><description><b>app</b>: Application vulnerability that is detected by using web scanner.</description></item>
+        /// <item><description><para><b>cve</b>: Linux software vulnerability.</para>
+        /// </description></item>
+        /// <item><description><para><b>sys</b>: Windows system vulnerability.</para>
+        /// </description></item>
+        /// <item><description><para><b>app</b>: Application vulnerability that is detected by using web scanner.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

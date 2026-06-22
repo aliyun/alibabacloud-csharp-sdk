@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedVulRequest : TeaModel {
         /// <summary>
-        /// <para>The alias of the vulnerability.</para>
+        /// <para>The alias of the vulnerability to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RHSA-2019:0230-Important: polkit security update</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset on which the vulnerability is detected. Separate multiple types with commas (,). Valid values:</para>
+        /// <para>The Asset Type where the vulnerability is detected. Separate multiple types with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ECS</b>: Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description><b>CONTAINER</b>: container</description></item>
+        /// <item><description><b>ECS</b>: host asset</description></item>
+        /// <item><description><b>CONTAINER</b>: container asset.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. This parameter is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:</para>
+        /// <para>The vulnerability type. This query condition is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sca</b>: vulnerability that is detected based on software component analysis</description></item>
-        /// <item><description><b>app</b>: application vulnerability</description></item>
+        /// <item><description><b>sca</b>: software constituency parsing vulnerability</description></item>
+        /// <item><description><b>app</b>: application vulnerability.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,20 +58,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The key of the condition that is used to query containers. Valid values:</para>
+        /// <para>The container search field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>instanceId</b>: the ID of the asset</description></item>
-        /// <item><description><b>appName</b>: the name of the application</description></item>
-        /// <item><description><b>clusterId</b>: the ID of the cluster</description></item>
-        /// <item><description><b>regionId</b>: the ID of the region</description></item>
-        /// <item><description><b>nodeName</b>: the name of the node</description></item>
-        /// <item><description><b>namespace</b>: the namespace</description></item>
-        /// <item><description><b>clusterName</b>: the name of the cluster</description></item>
-        /// <item><description><b>image</b>: the name of the image</description></item>
-        /// <item><description><b>imageRepoName</b>: the name of the image repository</description></item>
-        /// <item><description><b>imageRepoNamespace</b>: the namespace to which the image repository belongs</description></item>
-        /// <item><description><b>imageRepoTag</b>: the tag that is added to the image</description></item>
-        /// <item><description><b>imageDigest</b>: the digest of the image</description></item>
+        /// <item><description><b>instanceId</b>: instance ID</description></item>
+        /// <item><description><b>appName</b>: application name</description></item>
+        /// <item><description><b>clusterId</b>: cluster ID</description></item>
+        /// <item><description><b>regionId</b>: region</description></item>
+        /// <item><description><b>nodeName</b>: node name</description></item>
+        /// <item><description><b>namespace</b>: namespace</description></item>
+        /// <item><description><b>clusterName</b>: cluster name</description></item>
+        /// <item><description><b>image</b>: image name</description></item>
+        /// <item><description><b>imageRepoName</b>: image repository name</description></item>
+        /// <item><description><b>imageRepoNamespace</b>: image repository namespace</description></item>
+        /// <item><description><b>imageRepoTag</b>: image tag</description></item>
+        /// <item><description><b>imageDigest</b>: image digest.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldName { get; set; }
 
         /// <summary>
-        /// <para>The value specified by <b>ContainerFieldName</b>.</para>
+        /// <para>The value that corresponds to <b>ContainerFieldName</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc914b0df156d40148412afe4a581****</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the first page to display in the query results. Default value: <b>1</b>, which indicates that the results start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The CVE ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeVulListPage~~">DescribeVulListPage</a> operation to query the CVE ID.</para>
+        /// <para>Call the <a href="~~DescribeVulListPage~~">DescribeVulListPage</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>y</b>: handled</description></item>
-        /// <item><description><b>n</b>: not handled</description></item>
+        /// <item><description><b>n</b>: not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,11 +153,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The priorities to fix the vulnerabilities. Separate multiple priorities with commas (,). Valid values:</para>
+        /// <para>The priority of the vulnerability fix to query. Separate multiple priorities with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asap</b>: high</description></item>
         /// <item><description><b>later</b>: medium</description></item>
-        /// <item><description><b>nntf</b>: low</description></item>
+        /// <item><description><b>nntf</b>: low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of vulnerability entries per page in a paged query. Default value: 10, which indicates that 10 vulnerability entries are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -178,12 +178,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+        /// <para>Specifies whether Runtime Application Self-Protection (RASP) supports real-time protection against the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: no.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: yes.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: Not supported.</description></item>
+        /// <item><description><b>1</b>: Supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,9 +192,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RaspDefend { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the Alibaba Cloud account that is added as one of the member accounts in a resource folder.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</para>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -207,14 +205,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The tag that is used to search for the vulnerability. Valid values:</para>
+        /// <para>The label used for filtering. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Restart required</b></description></item>
         /// <item><description><b>Remote utilization</b></description></item>
         /// <item><description><b>EXP exists</b></description></item>
         /// <item><description><b>Available</b></description></item>
-        /// <item><description><b>Elevation of Privilege</b></description></item>
-        /// <item><description><b>Code Execution</b></description></item>
+        /// <item><description><b>Privilege escalation</b></description></item>
+        /// <item><description><b>Code execution</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -225,10 +223,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchTags { get; set; }
 
         /// <summary>
-        /// <para>The query type for containers. Valid values:</para>
+        /// <para>The container query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>containerId</b>: the ID of the container</description></item>
-        /// <item><description><b>uuid</b>: the ID of the asset</description></item>
+        /// <item><description><b>containerId</b>: container ID</description></item>
+        /// <item><description><b>uuid</b>: asset ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -239,13 +237,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability that you want to query. Default value: cve. Valid values:</para>
+        /// <para>The type of the vulnerability to query. Default value: cve. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-        /// <item><description><b>app</b>: application vulnerability that is detected by network scanning</description></item>
-        /// <item><description><b>sca</b>: application vulnerability that is detected by software component analysis</description></item>
+        /// <item><description><b>app</b>: application vulnerability (network scan)</description></item>
+        /// <item><description><b>sca</b>: application vulnerability (software constituency parsing).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -256,7 +254,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers to query. Separate multiple UUIDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>d42f938c-d962-48a0-90f9-05e4ea****</para>

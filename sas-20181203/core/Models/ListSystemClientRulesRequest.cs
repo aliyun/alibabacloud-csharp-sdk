@@ -30,8 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to query only container images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><para><b>0</b>: no</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: yes</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,8 +46,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name of the system defense rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Rule\<em>\</em>\<em>\</em></para>
+        /// <para>规则****</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
@@ -86,9 +90,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the OS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b>: Windows</description></item>
-        /// <item><description><b>1</b>: Linux</description></item>
-        /// <item><description><b>0</b>: all types</description></item>
+        /// <item><description><para><b>2</b>: Windows</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Linux</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: all types</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

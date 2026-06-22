@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileProtectClientRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The policy ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

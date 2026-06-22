@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyBackupPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the anti-ransomware policy that you want to modify.</para>
+        /// <para>The ID of the anti-ransomware mitigation policy to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the anti-ransomware policy that you want to modify.</para>
+        /// <para>The name of the anti-ransomware mitigation policy to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,26 +32,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the anti-ransomware policy that you want to modify. The value is a JSON string that contains the following fields:</para>
+        /// <para>The content of the mitigation policy to modify. The value is a JSON-format string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Source</b>: the directory that you want to protect. If you want to protect all directories, set this field to brackets [].</para>
+        /// <item><description><para><b>Source</b>: The server folder to protect. To protect all folders, set this field to [].</para>
         /// </description></item>
-        /// <item><description><para><b>Include</b>: the format of the file that you want to protect. Examples: \<em>.jpg and \</em>.doc.</para>
+        /// <item><description><para><b>Include</b>: The file types to protect. Examples: &quot;\<em>.jpg&quot; and &quot;\</em>.doc&quot;.</para>
         /// </description></item>
-        /// <item><description><para><b>Exclude</b>: the directory that you want to exclude from the anti-ransomware policy. You can call the DescribeExcludeSystemPath operation to query all directories and then specify the directory that you want to exclude. Example: /home/user.</para>
+        /// <item><description><para><b>Exclude</b>: The custom folders to exclude. For example, exclude the folder &quot;/home/user&quot;. Invoke the DescribeExcludeSystemPath operation to obtain all folders, and then add the folders that you want to exclude.</para>
         /// </description></item>
-        /// <item><description><para><b>Schedule</b>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour.</para>
+        /// <item><description><para><b>Schedule</b>: The start time and interval of the data backup task. Specify a non-hourly time during off-peak hours.</para>
         /// <list type="bullet">
-        /// <item><description>If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of three weeks.</description></item>
-        /// <item><description>If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of 24 hours.</description></item>
+        /// <item><description><para>Example 1: I|1583216092|P21D indicates that the start time is 2020-03-03 14:14:52 and the interval is 3 weeks.</para>
+        /// </description></item>
+        /// <item><description><para>Example 2: I|1583216092|PT24H indicates that the start time is 2020-03-03 14:14:52 and the interval is 24 hours.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Retention</b>: the period during which backup data is retained. Unit: day. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</para>
+        /// <item><description><para><b>Retention</b>: The retention period of backup data. Unit: days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</para>
         /// </description></item>
-        /// <item><description><para><b>SpeedLimiter</b>: the limit on the network bandwidth for data backup tasks. If you set this field to 12:15:15360|6:12:5120, the maximum bandwidth for a data backup task is 15 Mbit/s from 12:00 to 15:00 and 5 Mbit/s from 06:00 to 12:00.</para>
+        /// <item><description><para><b>SpeedLimiter</b>: The network bandwidth throttling for backup. Example: 12:15:15360|6:12:5120 indicates 15 MB from 12:00 to 15:00 and 5 MB from 6:00 to 12:00.
+        /// Cloud-hosted servers connect through the internal network. Do not limit the backup network bandwidth. To remove the bandwidth limit, set this parameter to an empty string (&quot;&quot;).</para>
         /// </description></item>
         /// </list>
-        /// <para>If you back up data on an Elastic Compute Service (ECS) instance that is connected over an internal network, we recommend that you leave this field empty. If this field is left empty, the bandwidth for data backup tasks is unlimited.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,8 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the server to which the anti-ransomware policy is applied.</para>
-        /// <para>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions in which the anti-ransomware feature is supported.</para>
+        /// <para>The region of the server for which you want to modify the mitigation policy.</para>
+        /// <para>You can invoke the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions supported by the anti-ransomware feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyRegionId { get; set; }
 
         /// <summary>
-        /// <para>The version of the anti-ransomware policy. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies.</para>
+        /// <para>The version of the mitigation policy. You can invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the version.</para>
         /// <list type="bullet">
         /// <item><description><b>1.0.0</b></description></item>
         /// <item><description><b>2.0.0</b></description></item>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers to which the anti-ransomware policy is applied.</para>
+        /// <para>The UUIDs of the servers protected by the mitigation policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

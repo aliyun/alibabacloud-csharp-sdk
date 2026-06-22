@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockUnbindResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. It is a unique identifier that Alibaba Cloud generates for the request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0A8A039-930D-5EC1-97C8-43F05776188A</para>

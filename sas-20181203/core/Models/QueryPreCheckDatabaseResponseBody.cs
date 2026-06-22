@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryPreCheckDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the precheck task was complete.</para>
+        /// <para>The time when the pre-check was completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1657524396</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CompletedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the precheck task was started.</para>
+        /// <para>The time when the pre-check started.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1660448660</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the precheck task. Valid values:</para>
+        /// <para>The status description of the pre-check task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>completed</b>: complete</description></item>
-        /// <item><description><b>created</b>: started</description></item>
-        /// <item><description><b>error</b>: failed</description></item>
+        /// <item><description><b>completed</b>: Completed.</description></item>
+        /// <item><description><b>created</b>: Started.</description></item>
+        /// <item><description><b>error</b>: Pre-check failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The precheck progress in percentage. Valid values: 0 to 100.</para>
+        /// <para>The pre-check progress. Valid values: 0 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Progress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE500770-42D3-442E-9DDD-156E0F9F****</para>
@@ -65,51 +65,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the precheck task. The value is a JSON string that contains the following fields:</para>
+        /// <para>The task result of the dry run node. The value is a JSON string. The KEY valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>instanceId</b>: the ID of the server that hosts the database</para>
-        /// </description></item>
-        /// <item><description><para><b>checkTime</b>: the precheck time</para>
-        /// </description></item>
-        /// <item><description><para><b>sourceType</b>: the database type</para>
-        /// </description></item>
-        /// <item><description><para><b>results</b>: the precheck item and result</para>
-        /// <list type="bullet">
-        /// <item><description><b>item</b>: the precheck item</description></item>
-        /// <item><description><b>result</b>: the precheck result</description></item>
+        /// <item><description><b>instanceId</b>: the instance ID of the server where the database resides.</description></item>
+        /// <item><description><b>checkTime</b>: the dry run time.</description></item>
+        /// <item><description><b>sourceType</b>: the database type.</description></item>
+        /// <item><description><b>results</b>: the dry run items and task results.<list type="bullet">
+        /// <item><description><b>item</b>: the dry run item.</description></item>
+        /// <item><description><b>result</b>: the dry run task result.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The following section describes the precheck items:</para>
+        /// <para>Dry run item description</para>
+        /// <list type="bullet">
+        /// <item><description>MSSQL<list type="bullet">
+        /// <item><description><b>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</b>: OSS connectivity check.	</description></item>
+        /// <item><description><b>SERVICE_CONNECTIVITY</b>: control network connectivity check.</description></item>
+        /// <item><description><b>SQL_SERVER_DB_IN_SIMPLE_RECOVERY_MODE</b>: recovery mode check.</description></item>
+        /// <item><description><b>SQL_SERVER_DB_NOT_ONLINE</b>: SQL Server database status check.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>ORACLE<list type="bullet">
+        /// <item><description><b>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</b>: OSS connectivity check.	</description></item>
+        /// <item><description><b>SERVICE_CONNECTIVITY</b>: control network connectivity check.</description></item>
+        /// <item><description><b>ORACLE_INSTANCE_STATUS</b>: Oracle instance status check.</description></item>
+        /// <item><description><b>ORACLE_DB_STATUS</b>: Oracle database status check.</description></item>
+        /// <item><description><b>ARCHIVELOG</b>: archive mode check.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>MYSQL<list type="bullet">
+        /// <item><description><b>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</b>: OSS connectivity check.	</description></item>
+        /// <item><description><b>SERVICE_CONNECTIVITY</b>: control network connectivity check.</description></item>
+        /// <item><description><b>MYSQL_VERSION</b>: version check for full backup support.</description></item>
+        /// <item><description><b>MYSQL_BINLOG</b>: BINLOG check.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>MSSQL</para>
-        /// <list type="bullet">
-        /// <item><description><b>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</b>: OSS connectivity check</description></item>
-        /// <item><description><b>SERVICE_CONNECTIVITY</b>: control network connectivity check</description></item>
-        /// <item><description><b>SQL_SERVER_DB_IN_SIMPLE_RECOVERY_MODE</b>: recovery mode check</description></item>
-        /// <item><description><b>SQL_SERVER_DB_NOT_ONLINE</b>: SQL Server database status check</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>ORACLE</para>
-        /// <list type="bullet">
-        /// <item><description><b>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</b>: OSS connectivity check</description></item>
-        /// <item><description><b>SERVICE_CONNECTIVITY</b>: control network connectivity check</description></item>
-        /// <item><description><b>ORACLE_INSTANCE_STATUS</b>: Oracle instance status check</description></item>
-        /// <item><description><b>ORACLE_DB_STATUS</b>: Oracle database status check</description></item>
-        /// <item><description><b>ARCHIVELOG</b>: archive mode check</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>MYSQL</para>
-        /// <list type="bullet">
-        /// <item><description><b>OSS_INTERNAL_ENDPOINT_CONNECTIVITY</b>: OSS connectivity check</description></item>
-        /// <item><description><b>SERVICE_CONNECTIVITY</b>: control network connectivity check</description></item>
-        /// <item><description><b>MYSQL_VERSION</b>: Supports full backup version checking</description></item>
-        /// <item><description><b>MYSQL_BINLOG</b>: BINLOG check</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -144,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Result { get; set; }
 
         /// <summary>
-        /// <para>The time when the precheck task was last updated.</para>
+        /// <para>The time when the pre-check was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1671084106</para>

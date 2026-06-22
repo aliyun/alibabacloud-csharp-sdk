@@ -10,16 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSasContainerWebDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The search conditions for assets. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The conditions for searching assets. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>name</b>: the name of the search condition.</para>
-        /// </description></item>
-        /// <item><description><para><b>value</b>: the value of the search condition.</para>
-        /// </description></item>
-        /// <item><description><para><b>logicalExp</b>: the logical relation for multiple search conditions. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>OR</b>: The search conditions use a logical <b>OR</b>.</description></item>
-        /// <item><description><b>AND</b>: The search conditions use a logical <b>AND</b>.</description></item>
+        /// <item><description><b>name</b>: The search item.</description></item>
+        /// <item><description><b>value</b>: The value of the search item.</description></item>
+        /// <item><description><b>logicalExp</b>: The logical relationship among multiple search item values. Valid values:<list type="bullet">
+        /// <item><description><b>OR</b>: The search item values are evaluated by using the OR operator.</description></item>
+        /// <item><description><b>AND</b>: The search item values are evaluated by using the AND operator.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -32,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the current page in a paged query. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,10 +39,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The logical relation for multiple search conditions. Valid values:</para>
+        /// <para>The logical relationship among multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: The search conditions use a logical <b>OR</b>.</description></item>
-        /// <item><description><b>AND</b>: The search conditions use a logical <b>AND</b>.</description></item>
+        /// <item><description><b>OR</b>: The search conditions are evaluated by using the OR operator.</description></item>
+        /// <item><description><b>AND</b>: The search conditions are evaluated by using the AND operator.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>20</b>, which indicates that 20 entries are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

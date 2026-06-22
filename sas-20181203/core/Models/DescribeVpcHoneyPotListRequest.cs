@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVpcHoneyPotListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the cloud honeypot feature is enabled for the VPCs. Valid values:</para>
+        /// <para>Specifies whether the VPCs to query have cloud honeypot enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: enabled</description></item>
+        /// <item><description><b>false</b>: disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? HoneyPotExistence { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>We recommend that you specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC on which the honeypot is deployed.</para>
+        /// <para>The ID of the VPC in which the honeypot instance that you want to query resides.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</para>
+        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the VPC ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The name of the VPC.</para>
+        /// <para>The name of the VPC in which the honeypot instance that you want to query resides.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the names of VPCs.</para>
+        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the VPC name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,9 +73,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string VpcName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC.</para>
+        /// <para>The region ID of the VPC in which the honeypot instance that you want to query resides.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the region IDs of VPCs.</para>
+        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain the region ID of the VPC.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

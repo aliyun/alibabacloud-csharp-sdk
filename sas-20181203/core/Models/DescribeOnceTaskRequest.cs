@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeOnceTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTimeQuery { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of client tasks per page in a paged query. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the root task.</para>
+        /// <para>The root task ID.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the <b>TaskType</b> and <b>RootTaskId</b> parameters.</para>
+        /// <para><b>TaskType</b> and <b>RootTaskId</b> cannot both be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RootTaskId { get; set; }
 
         /// <summary>
-        /// <para>The source of the task. Valid values include the following values:</para>
+        /// <para>The node source. Valid values include but are not limited to:</para>
         /// <list type="bullet">
-        /// <item><description><b>schedule</b>: automatic scheduling of Cloud Security Scanner.</description></item>
-        /// <item><description><b>console</b>: one-click detection in the Cloud Security Scanner console.</description></item>
+        /// <item><description><b>schedule</b>: automatic scheduling of vulnerability scanning</description></item>
+        /// <item><description><b>console</b>: one-click detection from the vulnerability scanning console</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTimeQuery { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d7b2acf8d362742123e4a84e1bf8****</para>
@@ -87,15 +87,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: a task of the Security Center agent</description></item>
-        /// <item><description><b>CLIENT_DEV_OPS</b>: an O\&amp;M task of Cloud Assistant</description></item>
-        /// <item><description><b>ASSET_SECURITY_CHECK</b>: a task of asset information collection</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>You must specify at least one of the <b>TaskType</b> and <b>RootTaskId</b> parameters.</para>
+        /// <item><description><b>VUL_CHECK_TASK</b>: vulnerability scanning node</description></item>
+        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client node</description></item>
+        /// <item><description><b>CLIENT_DEV_OPS</b>: cloud O&amp;M node</description></item>
+        /// <item><description><b>ASSET_SECURITY_CHECK</b>: asset information collection node<remarks>
+        /// <para><b>TaskType</b> and <b>RootTaskId</b> cannot both be empty.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CLIENT_PROBLEM_CHECK</para>

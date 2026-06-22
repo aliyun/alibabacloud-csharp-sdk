@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>all</para>
+            /// <para>linux</para>
             /// </summary>
             [NameInMap("Platform")]
             [Validation(Required=false)]

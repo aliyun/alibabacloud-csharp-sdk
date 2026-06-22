@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribePropertyPortItemResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyPortItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page to display in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries to display on each page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>163</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>An array that consists of the ports returned.</para>
+        /// <para>The port information.</para>
         /// </summary>
         [NameInMap("PropertyItems")]
         [Validation(Required=false)]
         public List<DescribePropertyPortItemResponseBodyPropertyItems> PropertyItems { get; set; }
         public class DescribePropertyPortItemResponseBodyPropertyItems : TeaModel {
             /// <summary>
-            /// <para>The number of servers that use the port.</para>
+            /// <para>The number of servers associated with the port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>495</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The number of the listening port.</para>
+            /// <para>The listening port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The network protocol of the port.</para>
+            /// <para>The network protocol associated with the port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>

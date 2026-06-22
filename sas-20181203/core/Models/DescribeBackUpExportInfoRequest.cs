@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackUpExportInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The type of archived information. Valid values:</para>
+        /// <para>The type of archive data to export. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>suspiciousExport</b>: alert event</description></item>
+        /// <item><description><b>suspiciousExport</b>: security alerts.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExportType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language type for requests and responses. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name of the release batch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>批次1</para>
         /// </summary>
         [NameInMap("BatchName")]
         [Validation(Required=false)]
         public string BatchName { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page when paging is used.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page when paging is used.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The destination version of the Security Center agent.</para>
+        /// <para>The target version to upgrade to.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOnceTaskResultInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the scan task.</para>
+        /// <para>The ID of the one-time task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: a task of the Security Center agent</description></item>
-        /// <item><description><b>CLIENT_DEV_OPS</b>: an O\&amp;M task of Cloud Assistant</description></item>
-        /// <item><description><b>ASSET_SECURITY_CHECK</b>: a task of asset information collection</description></item>
+        /// <item><description><para><b>CLIENT_PROBLEM_CHECK</b>: client troubleshooting task</para>
+        /// </description></item>
+        /// <item><description><para><b>CLIENT_DEV_OPS</b>: cloud O\&amp;M task</para>
+        /// </description></item>
+        /// <item><description><para><b>ASSET_SECURITY_CHECK</b>: asset collection task</para>
+        /// </description></item>
+        /// <item><description><para><b>ASSETS_COLLECTION</b>: asset fingerprint collection task</para>
+        /// </description></item>
+        /// <item><description><para><b>IMAGE_SCAN</b>: container image scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>AI_SECURITY_CHECK</b>: AI asset synchronization task</para>
+        /// </description></item>
+        /// <item><description><para><b>IDC_PROBE_SCAN</b>: IDC probe scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>ATTACK_SURFACE_SCAN</b>: attack surface and boundary asset scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>ASSET_EXPOSURE_SCAN</b>: asset exposure scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>VUL_CHECK_TASK</b>: vulnerability scan task</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,9 +56,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: a task of the Security Center agent</description></item>
-        /// <item><description><b>CLIENT_DEV_OPS</b>: an O\&amp;M task of Cloud Assistant</description></item>
-        /// <item><description><b>ASSET_SECURITY_CHECK</b>: a task of asset information collection</description></item>
+        /// <item><description><para><b>CLIENT_PROBLEM_CHECK</b>: client troubleshooting task</para>
+        /// </description></item>
+        /// <item><description><para><b>CLIENT_DEV_OPS</b>: cloud O\&amp;M task</para>
+        /// </description></item>
+        /// <item><description><para><b>ASSET_SECURITY_CHECK</b>: asset collection task</para>
+        /// </description></item>
+        /// <item><description><para><b>ASSETS_COLLECTION</b>: asset fingerprint collection task</para>
+        /// </description></item>
+        /// <item><description><para><b>IMAGE_SCAN</b>: container image scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>AI_SECURITY_CHECK</b>: AI asset synchronization task</para>
+        /// </description></item>
+        /// <item><description><para><b>IDC_PROBE_SCAN</b>: IDC probe scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>ATTACK_SURFACE_SCAN</b>: attack surface and boundary asset scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>ASSET_EXPOSURE_SCAN</b>: asset exposure scan task</para>
+        /// </description></item>
+        /// <item><description><para><b>VUL_CHECK_TASK</b>: vulnerability scan task</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

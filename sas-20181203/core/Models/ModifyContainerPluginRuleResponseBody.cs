@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyContainerPluginRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The defense rule against container escapes.</para>
+        /// <para>The list of container escape prevention rules.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyContainerPluginRuleResponseBodyData Data { get; set; }
         public class ModifyContainerPluginRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>600640</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test555</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The switch ID.</para>
+            /// <para>The corresponding switch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER-CONTAINER-RULE-SWITCH-TYPE_xxx</para>

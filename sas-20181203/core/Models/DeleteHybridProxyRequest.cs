@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>IDC-代理</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the proxy node that you want to remove. The value starts with inet-proxy.</para>
+        /// <para>The UUID of the proxy server to delete. The value starts with inet-proxy-.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

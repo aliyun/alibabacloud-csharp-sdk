@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCheckRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The list of instances to be added in this rule update. This parameter does not need to be passed if there are no instances to add.</para>
+        /// <para>The list of instances to add in this rule update. If no instances need to be added, you do not need to specify this parameter.</para>
         /// </summary>
         [NameInMap("AddInstanceList")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The list of instances to be removed in this rule update. This parameter does not need to be passed if there are no instances to remove.</para>
+        /// <para>The list of instances to delete in this rule update. If no instances need to be deleted, you do not need to specify this parameter.</para>
         /// </summary>
         [NameInMap("DeleteInstanceList")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Remarks.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testRemark</para>
@@ -78,9 +78,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>Rule ID.</para>
+        /// <para>The rule ID.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> API.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListCheckRule</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,9 +92,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>Rule type. Default is <b>WHITE</b>. Values:</para>
+        /// <para>The rule type. Default value: <b>WHITE</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WHITE</b>: Add to whitelist</description></item>
+        /// <item><description><b>WHITE</b>: whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The scope of effect for modifying the rule:</para>
+        /// <para>The scope of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b>: Instance</description></item>
-        /// <item><description><b>ITEM</b>: Check item</description></item>
+        /// <item><description><b>INSTNACE</b>: instance</description></item>
+        /// <item><description><b>ITEM</b>: check item.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

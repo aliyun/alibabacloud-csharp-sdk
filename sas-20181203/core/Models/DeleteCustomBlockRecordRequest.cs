@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCustomBlockRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the IP address blocking policy.</para>
+        /// <para>The ID of the record to delete.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to query the ID.</para>
+        /// <para>Call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

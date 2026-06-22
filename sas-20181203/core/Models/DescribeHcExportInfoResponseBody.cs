@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHcExportInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of exported entries.</para>
+        /// <para>The number of data entries that have been exported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>148</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The time when the export task was created.</para>
+        /// <para>The time when the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-11-03T15:15Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The download URL for the exported file.</para>
+        /// <para>The download link of the exported file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://hc-export.oss-cn-shanghai.aliyuncs.com/export_hc/health_check_export_20221222_1671699255808.zip?Expires=1672304056&OSSAccessKeyId=****&Signature=">https://hc-export.oss-cn-shanghai.aliyuncs.com/export_hc/health_check_export_20221222_1671699255808.zip?Expires=1672304056&amp;OSSAccessKeyId=****&amp;Signature=</a>****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Link { get; set; }
 
         /// <summary>
-        /// <para>The progress percentage of the export task.</para>
+        /// <para>The export progress in percentage (%).</para>
         /// 
         /// <b>Example:</b>
         /// <para>89</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Progress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3C2C94CF-ED08-50C0-BC72-C5029251****</para>
@@ -82,8 +82,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The status of the export task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>exporting</b>: The task is in progress.</description></item>
-        /// <item><description><b>success</b>: The task is complete.</description></item>
+        /// <item><description><para><b>exporting</b>: The export is in progress.</para>
+        /// </description></item>
+        /// <item><description><para><b>success</b>: The export is successful.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ResultStatus { get; set; }
 
         /// <summary>
-        /// <para>The total number of exported entries.</para>
+        /// <para>The total number of data entries to be exported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>624</para>

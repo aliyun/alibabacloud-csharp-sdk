@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHybridProxyLinkedClientListRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the proxy cluster. You can query the name of the proxy cluster in the Security Center console.</para>
+        /// <para>The name of the proxy cluster. You can view the proxy cluster name in the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>office-proxy</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page when paging is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page when paging is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the proxy node. You can call the DescribeHybridProxyList operation to query the UUID of the proxy node.</para>
+        /// <para>The UUID of the proxy node. You can call the DescribeHybridProxyList operation to obtain this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612XXXX</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProxyUuid { get; set; }
 
         /// <summary>
-        /// <para>The description of the proxy cluster.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server on which the Security Center agent is installed. You can query the UUID by querying asset information.</para>
+        /// <para>The unique key of the Security Center agent. You can call an asset query operation to obtain the UUID of the Security Center agent installed on the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80d2f7d6-31a9-4d7f-8ff4-7ecc42f89ca****</para>

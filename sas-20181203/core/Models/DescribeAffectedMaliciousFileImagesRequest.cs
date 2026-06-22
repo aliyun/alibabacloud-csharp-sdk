@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedMaliciousFileImagesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// <para>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page when using paging. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The image digest.</para>
+        /// <para>The digest of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6a5e103187b31a94592a47a5858617f7a179ead61df7606****</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageDigest { get; set; }
 
         /// <summary>
-        /// <para>The image layer.</para>
+        /// <para>The layer of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27213ad375b53628dd152a5ca****</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageLayer { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the image.</para>
+        /// <para>The tag of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.2</para>
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageTag { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <para>The language type of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,11 +108,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the malicious image sample. Separate multiple severity levels with commas (,). Valid values:</para>
+        /// <para>The severity levels. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>serious</b></description></item>
-        /// <item><description><b>suspicious</b></description></item>
-        /// <item><description><b>remind</b></description></item>
+        /// <item><description><b>serious</b>: urgent</description></item>
+        /// <item><description><b>suspicious</b>: suspicious</description></item>
+        /// <item><description><b>remind</b>: reminder.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,9 +123,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Levels { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash value of the malicious image sample.</para>
+        /// <para>The MD5 hash of the malicious file.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedMaliciousFiles~~">DescribeGroupedMaliciousFiles</a> operation to query the MD5 hash values of malicious image samples.</para>
+        /// <para>Call the <a href="~~DescribeGroupedMaliciousFiles~~">DescribeGroupedMaliciousFiles</a> operation to obtain the MD5 hash of the malicious file.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The maximum number of entries per page when using paging. Default value: <b>20</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the image repository.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of image repositories from the value of the <b>RepoId</b> response parameter.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry. You can obtain the image repository ID from the <b>RepoId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -180,9 +180,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container image.</para>
+        /// <para>The ID of the container image instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation to query the IDs of container images from the value of the <b>InstanceId</b> response parameter.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry. You can obtain the container image instance ID from the <b>InstanceId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the image repository.</para>
         /// <remarks>
-        /// <para> Fuzzy match is supported.</para>
+        /// <para>Fuzzy match is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -206,9 +206,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the image repository belongs.</para>
+        /// <para>The namespace of the image repository.</para>
         /// <remarks>
-        /// <para> Fuzzy match is supported.</para>
+        /// <para>Fuzzy match is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -226,13 +226,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
         /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
         /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
+        /// <item><description><b>cn-hongkong</b>: Hong Kong (China)</description></item>
         /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
         /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta)</description></item>
         /// <item><description><b>us-east-1</b>: US (Virginia)</description></item>
         /// <item><description><b>us-west-1</b>: US (Silicon Valley)</description></item>
         /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
-        /// <item><description><b>eu-west-1</b>: UK (London)</description></item>
+        /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -243,19 +243,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
-        /// <para>The types of the assets that you want to scan.</para>
+        /// <para>The collection of scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
         public List<string> ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The status of the malicious image sample. Valid values:</para>
+        /// <para>The processing status of the malicious image sample. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The malicious image sample is not handled.</description></item>
-        /// <item><description><b>1</b>: The malicious image sample is handled.</description></item>
-        /// <item><description><b>2</b>: The malicious image sample is being verified.</description></item>
-        /// <item><description><b>3</b>: The malicious image sample is added to the whitelist.</description></item>
+        /// <item><description><b>0</b>: unhandled</description></item>
+        /// <item><description><b>1</b>: handled</description></item>
+        /// <item><description><b>2</b>: verifying</description></item>
+        /// <item><description><b>3</b>: added to whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

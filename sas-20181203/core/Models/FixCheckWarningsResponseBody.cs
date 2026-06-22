@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FixCheckWarningsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the baseline risk item that has been fixed by using the Batch Repair feature.</para>
+        /// <para>The ID of the batch fix task for risk items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52370</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BatchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76C1D7FD-DB1E-45EA-B804-3FBD9A1DD9C0</para>

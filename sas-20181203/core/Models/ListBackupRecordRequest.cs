@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListBackupRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The timestamp when the backup task ended. Unit: milliseconds.</para>
+        /// <para>The backup end time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1699600611000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BackupEndTime { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the backup task started. Unit: milliseconds.</para>
+        /// <para>The backup start time. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1699514211000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BackupStartTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>. Pages start from page 1.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The information that you want to use to identify the servers protected by the anti-ransomware policy. You can enter the IP address or ID of a server.</para>
+        /// <para>The identification information of the server protected by the anti-ransomware policy that you want to query. You can enter the IP address or instance ID of the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineRemark { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The backup task status. Valid values:</para>
+        /// <para>The list of backup task statuses. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BACKUP_COMPLETE</b>: The backup task is successful.</description></item>
-        /// <item><description><b>BACKUP_FAILED</b>: The backup task failed.</description></item>
-        /// <item><description><b>PARTIAL_COMPLETE</b>: The backup task is partially successful.</description></item>
+        /// <item><description><b>BACKUP_COMPLETE</b>: backup succeeded</description></item>
+        /// <item><description><b>BACKUP_FAILED</b>: backup failed</description></item>
+        /// <item><description><b>PARTIAL_COMPLETE</b>: partial backup succeeded.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("StatusList")]

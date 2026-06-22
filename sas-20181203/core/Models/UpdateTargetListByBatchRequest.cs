@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? BatchId { get; set; }
 
         /// <summary>
-        /// <para>The operations on assets.</para>
+        /// <para>The list of asset operations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OperationList")]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the server group.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</para>
+            /// <para>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the server group ID.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>add</b>: the add operation.</description></item>
-            /// <item><description><b>del</b>: the remove operation.</description></item>
+            /// <item><description><b>add</b>: increase.</description></item>
+            /// <item><description><b>del</b>: delete.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The UUID of the server.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+            /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

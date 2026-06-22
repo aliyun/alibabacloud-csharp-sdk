@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class InstallAegisForLingjunShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>List of unique UUIDs for Lingjun bare metal.</para>
+        /// <para>The list of unique UUIDs for Lingjun bare metal servers.</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

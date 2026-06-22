@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The ID of the cloud service configuration check task to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to query the ID.</para>
+        /// <para>You can call the <a href="~~SubmitCheck~~">SubmitCheck</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

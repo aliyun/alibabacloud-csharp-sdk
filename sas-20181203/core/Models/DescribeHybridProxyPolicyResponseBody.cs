@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHybridProxyPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries returned on the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The data collection configurations of the proxy cluster.</para>
+        /// <para>The list of data collection configurations for the proxy cluster.</para>
         /// </summary>
         [NameInMap("PolicyList")]
         [Validation(Required=false)]
         public List<DescribeHybridProxyPolicyResponseBodyPolicyList> PolicyList { get; set; }
         public class DescribeHybridProxyPolicyResponseBodyPolicyList : TeaModel {
             /// <summary>
-            /// <para>The information about the policy.</para>
+            /// <para>The policy information.</para>
             /// </summary>
             [NameInMap("Info")]
             [Validation(Required=false)]
             public List<DescribeHybridProxyPolicyResponseBodyPolicyListInfo> Info { get; set; }
             public class DescribeHybridProxyPolicyResponseBodyPolicyListInfo : TeaModel {
                 /// <summary>
-                /// <para>The value of the policy configurations.</para>
+                /// <para>The specific value of the policy configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Config { get; set; }
 
                 /// <summary>
-                /// <para>The name of the file. After you configure a blocking policy, the blocked data is written to the file.</para>
+                /// <para>The file to which the data intercepted by the proxy cluster policy is written.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -54,11 +54,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the policy that you configured. Valid values:</para>
+                /// <para>The configured policy type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>file</b></description></item>
-                /// <item><description><b>net</b></description></item>
-                /// <item><description><b>process</b></description></item>
+                /// <item><description><b>file</b>: file data collection</description></item>
+                /// <item><description><b>net</b>: network data collection</description></item>
+                /// <item><description><b>process</b>: process data collection.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The type of the policy. Valid values:</para>
+            /// <para>The policy type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>limitFrequency</b></description></item>
-            /// <item><description><b>limitBandWidth</b></description></item>
+            /// <item><description><b>limitFrequency</b>: collection frequency control</description></item>
+            /// <item><description><b>limitBandWidth</b>: collection bandwidth control.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7A1B40A-7EED-55A0-BCBC-2F83A486F0AB</para>

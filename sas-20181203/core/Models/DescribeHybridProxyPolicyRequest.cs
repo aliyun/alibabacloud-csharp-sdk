@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHybridProxyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the proxy cluster. You can query the name of the proxy cluster in the Security Center console.</para>
+        /// <para>The name of the proxy cluster. You can view the cluster name in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

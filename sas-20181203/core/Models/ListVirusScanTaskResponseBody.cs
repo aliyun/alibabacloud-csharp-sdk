@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListVirusScanTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned virus scan tasks.</para>
+        /// <para>The result list.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListVirusScanTaskResponseBodyList> List { get; set; }
         public class ListVirusScanTaskResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the virus scan task ended. Unit: milliseconds.</para>
+            /// <para>The end timestamp, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1662343860051</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sql-test-0****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The progress of the task in percentage.</para>
+            /// <para>The task progress percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>62</para>
@@ -67,17 +67,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The information about the file that is scanned.</para>
+            /// <para>The scanned file information.</para>
             /// </summary>
             [NameInMap("ScanPath")]
             [Validation(Required=false)]
             public List<string> ScanPath { get; set; }
 
             /// <summary>
-            /// <para>The type of the virus scan task. Valid values:</para>
+            /// <para>The scan type of the virus scan task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>system</b>: automatic scan task</description></item>
-            /// <item><description><b>user</b>: custom scan task</description></item>
+            /// <item><description><b>system</b>: automatic system scan</description></item>
+            /// <item><description><b>user</b>: custom user scan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ScanType { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the virus scan task started. Unit: milliseconds.</para>
+            /// <para>The start timestamp, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1651290987000</para>
@@ -98,12 +98,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the virus scan task. Valid values:</para>
+            /// <para>The execution status of the virus scan task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: running</description></item>
-            /// <item><description><b>2</b>: complete</description></item>
-            /// <item><description><b>3</b>: failed</description></item>
-            /// <item><description><b>4</b>: timed out</description></item>
+            /// <item><description><b>1</b>: Scanning.</description></item>
+            /// <item><description><b>2</b>: Completed.</description></item>
+            /// <item><description><b>3</b>: Failed.</description></item>
+            /// <item><description><b>4</b>: Timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virus scan task.</para>
+            /// <para>The ID of the scan task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2e75557bfa570381f5c516cad9b6xxxx</para>
@@ -124,9 +124,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the virus scan task.</para>
+            /// <para>The task name.</para>
             /// <list type="bullet">
-            /// <item><description>The value is fixed as <b>VIRUS_VUL_SCHEDULE_SCAN</b>, which indicates a virus scan task.</description></item>
+            /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListVirusScanTaskResponseBodyPageInfo PageInfo { get; set; }
         public class ListVirusScanTaskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A4EB8B1C-1DEC-5E18-BCD0-D1BBB3936FA7</para>

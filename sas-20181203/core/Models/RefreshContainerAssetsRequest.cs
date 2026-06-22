@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class RefreshContainerAssetsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the container asset whose statistics you want to refresh. Valid values:</para>
+        /// <para>The Asset Type of the container asset to refresh. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IMAGE</b></description></item>
-        /// <item><description><b>CONTAINER</b></description></item>
+        /// <item><description><b>IMAGE</b>: container image.</description></item>
+        /// <item><description><b>CONTAINER</b>: container.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

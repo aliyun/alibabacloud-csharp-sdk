@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageSecurityScanCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImageSecurityScanCountResponseBodyData Data { get; set; }
         public class DescribeImageSecurityScanCountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of image baseline risks detected on the current asset.</para>
+            /// <para>The number of image baseline risks in the current asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ImageBaselineCount { get; set; }
 
             /// <summary>
-            /// <para>The number of image system vulnerabilities returned on the current page.</para>
+            /// <para>The number of image system vulnerabilities on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ImageCveVulCount { get; set; }
 
             /// <summary>
-            /// <para>The number of malicious image samples returned on the current page.</para>
+            /// <para>The number of malicious image samples on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ImageMaliciousFileCount { get; set; }
 
             /// <summary>
-            /// <para>The number of image application vulnerabilities returned on the current page.</para>
+            /// <para>The number of image application vulnerabilities displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C699E4E4-F2F4-58FC-A949-457FFE59****</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyContainerPluginRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for requests and responses. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The action mode of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: alerts</description></item>
-        /// <item><description><b>2</b>: block</description></item>
+        /// <item><description><b>1</b>: Alert.</description></item>
+        /// <item><description><b>2</b>: Block.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Mode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2623606.html">ListSasContainerWebDefenseRule</a> operation to obtain this parameter.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -59,10 +62,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: user-defined rule</description></item>
-        /// <item><description><b>1</b>: built-in rule</description></item>
+        /// <item><description><b>0</b>: User-defined.</description></item>
+        /// <item><description><b>1</b>: System built-in.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,14 +76,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleType { get; set; }
 
         /// <summary>
-        /// <para>The rule items.</para>
+        /// <para>The list of rule items.</para>
         /// </summary>
         [NameInMap("SelectedPolicy")]
         [Validation(Required=false)]
         public List<string> SelectedPolicy { get; set; }
 
         /// <summary>
-        /// <para>The images that are added to the whitelist.</para>
+        /// <para>The list of whitelisted images.</para>
         /// </summary>
         [NameInMap("WhiteImages")]
         [Validation(Required=false)]

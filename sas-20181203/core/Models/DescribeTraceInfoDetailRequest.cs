@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTraceInfoDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request source. Set the value to <b>sas</b>.</para>
+        /// <para>The identifier of the request source. Set the value to <b>sas</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of the detection. Unit: milliseconds.</para>
+        /// <para>The detection timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1670555392000</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? IncidentTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request. The value of this parameter is specified by the system.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the vertex. Set the value to <b>SAS_INCIDENT</b>.</para>
+        /// <para>The vertex type. Set the value to <b>SAS_INCIDENT</b> for security alerts.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Uuid { get; set; }
 
         /// <summary>
-        /// <para>Vertex ID, which can be obtained from the AlarmUniqueInfo in the response of the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> interface.</para>
+        /// <para>The vertex ID. You can obtain this value from the AlarmUniqueInfo parameter returned by the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

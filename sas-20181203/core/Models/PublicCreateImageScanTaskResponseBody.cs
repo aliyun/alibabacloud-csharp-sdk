@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class PublicCreateImageScanTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned if the call is successful.</para>
+        /// <para>The data returned when the operation is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PublicCreateImageScanTaskResponseBodyData Data { get; set; }
         public class PublicCreateImageScanTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether you can create more image scan tasks. Valid values:</para>
+            /// <para>Indicates whether more scan tasks can be created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><b>true</b>: More scan tasks can be created.</description></item>
+            /// <item><description><b>false</b>: No more scan tasks can be created.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>By default, a maximum of 10 image scan tasks can be running at the same time. If 10 image scan tasks are running, you cannot create an image scan task by calling this operation. You must wait for at least one of the 10 existing image scan tasks to complete before you can create an image scan task.</para>
+            /// <para>By default, up to 10 scan tasks can exist at the same time. If the number of scan tasks exceeds 10, creating a scan task by calling this operation fails. Wait until an existing scan task is completed before creating a new scan task.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? CanCreate { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the image information was collected. Unit: milliseconds.</para>
+            /// <para>The timestamp when image information was collected, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1644286364150</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CollectTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the image scan task started to run. Unit: milliseconds.</para>
+            /// <para>The timestamp when the scan task started running, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1644286364150</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? FinishCount { get; set; }
 
             /// <summary>
-            /// <para>The progress of the image scan task in percentage.</para>
+            /// <para>The progress percentage of the scan task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -74,13 +74,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The result of the image scan task. Valid values:</para>
+            /// <para>The execution result of the scan task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SUCCESS</b>: The task is successful.</description></item>
-            /// <item><description><b>TASK_NOT_SUPPORT_REGION</b>: The images are deployed in a region that is not supported by container image scan.</description></item>
+            /// <item><description><b>SUCCESS</b>: The scan task succeeded.</description></item>
+            /// <item><description><b>TASK_NOT_SUPPORT_REGION</b>: The image is in a region that does not support scanning.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>For more information about the regions supported by container image scan, see the &quot;Regions supported by container image scan&quot; section in this topic.</para>
+            /// <para>For the regions that support image security scanning, see the table of supported regions after the response parameters table in this topic.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -91,12 +91,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The status of the image scan task. Valid values:</para>
+            /// <para>The status of the scan task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is being initialized.</description></item>
-            /// <item><description><b>PRE_ANALYZER</b>: The task is being pre-processed.</description></item>
-            /// <item><description><b>SUCCESS</b>: The task is successful.</description></item>
-            /// <item><description><b>FAIL</b>: The task fails.</description></item>
+            /// <item><description><b>INIT</b>: Initializing.</description></item>
+            /// <item><description><b>PRE_ANALYZER</b>: Pre-analyzing.</description></item>
+            /// <item><description><b>SUCCESS</b>: Succeeded.</description></item>
+            /// <item><description><b>FAIL</b>: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image scan task.</para>
+            /// <para>The ID of the scan task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a410bb3e68c217a3368bc0238c66886d</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F9353221-40F4-5F98-B73C-2803DC804033</para>

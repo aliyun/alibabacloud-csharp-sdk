@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeLogShipperStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information.</para>
+        /// <para>The log delivery status collection.</para>
         /// </summary>
         [NameInMap("LogShipperStatus")]
         [Validation(Required=false)]
         public DescribeLogShipperStatusResponseBodyLogShipperStatus LogShipperStatus { get; set; }
         public class DescribeLogShipperStatusResponseBodyLogShipperStatus : TeaModel {
             /// <summary>
-            /// <para>Indicates whether Security Center is authorized to access Log Service. Valid values:</para>
+            /// <para>The service authorization status of the log analysis feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: authorized</description></item>
+            /// <item><description><b>no</b>: not authorized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuthStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the log analysis feature is purchased. Valid values:</para>
+            /// <para>The purchase status of the log analysis feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: purchased</description></item>
+            /// <item><description><b>no</b>: not purchased.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BuyStatus { get; set; }
 
             /// <summary>
-            /// <para>The version of the log analysis field. Valid values:</para>
+            /// <para>The version of the log delivery fields for log analysis. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SAS_V1</description></item>
-            /// <item><description>SAS_V2</description></item>
+            /// <item><description><b>SAS_V1</b></description></item>
+            /// <item><description><b>SAS_V2</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EtlMetaVersion { get; set; }
 
             /// <summary>
-            /// <para>The status of the log analysis feature. Valid values:</para>
+            /// <para>The enabling status of log analysis. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>yes</b>: enabled</description></item>
-            /// <item><description><b>no</b>: disabled</description></item>
+            /// <item><description><b>no</b>: not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OpenStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the pay-as-you-go billing method is used. Valid values:</para>
+            /// <para>The pay-as-you-go activation status of the log analysis feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: activated</description></item>
+            /// <item><description><b>no</b>: not activated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,10 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PostPaidOpenStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the log analysis feature supports the pay-as-you-go billing method. Valid values:</para>
+            /// <para>The pay-as-you-go support status of the log analysis feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: supported</description></item>
+            /// <item><description><b>no</b>: not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PostPaidSupportStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the dedicated Log Service project. Valid values:</para>
+            /// <para>The status of the log project used by the log analysis feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: normal</description></item>
-            /// <item><description><b>Disable</b>: disabled</description></item>
+            /// <item><description><b>Normal</b>: Normal.</description></item>
+            /// <item><description><b>Disable</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SlsProjectStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Log Service is activated. Valid values:</para>
+            /// <para>The activation status of Simple Log Service (SLS). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: activated</description></item>
+            /// <item><description><b>no</b>: not activated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A20733-10A0-4AF6-BE6B-E3322413****</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the server group that you want to delete.</para>
         /// <remarks>
-        /// <para> To delete a server group, you must provide the ID of the server group. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the ID.</para>
+        /// <para>To delete a server group, you must specify the server group ID. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the server group ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

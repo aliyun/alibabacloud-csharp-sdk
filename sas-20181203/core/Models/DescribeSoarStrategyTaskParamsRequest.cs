@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSoarStrategyTaskParamsRequest : TeaModel {
         /// <summary>
-        /// <para>Strategy task ID.</para>
+        /// <para>The ID of the policy task.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> interface.</para>
+        /// <para>Call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

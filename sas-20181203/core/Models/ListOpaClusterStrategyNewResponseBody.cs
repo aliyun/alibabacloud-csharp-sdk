@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOpaClusterStrategyNewResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,18 +30,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The rules.</para>
+        /// <para>The list of policies.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListOpaClusterStrategyNewResponseBodyList> List { get; set; }
         public class ListOpaClusterStrategyNewResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The action of the rule. Valid values:</para>
+            /// <para>The action performed by the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: trigger alerts</description></item>
+            /// <item><description><b>1</b>: alert</description></item>
             /// <item><description><b>2</b>: block</description></item>
-            /// <item><description><b>3</b>: allow</description></item>
+            /// <item><description><b>3</b>: allow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Action { get; set; }
 
             /// <summary>
-            /// <para>The number of clusters on which the rule takes effect.</para>
+            /// <para>The number of clusters to which the policy applies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The clusters on which the rule takes effect.</para>
+            /// <para>The list of clusters to which the policy applies.</para>
             /// </summary>
             [NameInMap("ClusterIdList")]
             [Validation(Required=false)]
@@ -79,24 +79,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The image names.</para>
+            /// <para>The image name.</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public List<string> ImageName { get; set; }
 
             /// <summary>
-            /// <para>The tags that are added to the container.</para>
+            /// <para>The container label.</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public List<string> Label { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule supports malicious Internet images. Valid values:</para>
+            /// <para>Specifies whether the rule supports Internet malicious images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? MaliciousImage { get; set; }
 
             /// <summary>
-            /// <para>The rule ID.</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyId { get; set; }
 
             /// <summary>
-            /// <para>The rule name.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>auto-strategy-vohuiq</para>
@@ -127,10 +127,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StrategyName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule supports unscanned images. Valid values:</para>
+            /// <para>Specifies whether the rule supports unscanned images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The message that shows the export task result. The value is fixed as <b>success</b>, which indicates that the export task is successful.</para>
+        /// <para>The result message. Fixed value: <b>success</b>. This indicates that the export was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -153,14 +153,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListOpaClusterStrategyNewResponseBodyPageInfo PageInfo { get; set; }
         public class ListOpaClusterStrategyNewResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7DFD947C-9172-5129-B783-DD14C55191D2</para>
@@ -212,10 +212,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

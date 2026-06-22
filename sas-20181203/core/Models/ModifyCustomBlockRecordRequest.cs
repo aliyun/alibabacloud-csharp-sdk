@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCustomBlockRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The IP address that you want to specify in the policy.</para>
+        /// <para>The IP address blocked for brute-force attacks prevention.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BlockIp { get; set; }
 
         /// <summary>
-        /// <para>The traffic direction that you want to specify in the policy. Valid values:</para>
+        /// <para>The direction in which the brute-force attacks blocking policy blocks the IP address on the server. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>in</b>: inbound</description></item>
-        /// <item><description><b>out</b>: outbound</description></item>
+        /// <item><description><b>out</b>: outbound.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Bound { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the policy.</para>
+        /// <para>The expiration time of the blocking record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers.</para>
+        /// <para>The list of servers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

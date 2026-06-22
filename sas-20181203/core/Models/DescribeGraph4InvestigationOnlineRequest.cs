@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGraph4InvestigationOnlineRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the alert event ID, with the value path being: data.SuspEvents[index].UniqueInfo.</para>
+        /// <para>The ID of the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the alert event ID. The value is in the data.SuspEvents[index].UniqueInfo path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>786fc80896b25422b5324cb6e57bxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AnomalyId { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the alert event asset. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the asset UUID, with the value path being: data.SuspEvents[index].Uuid.</para>
+        /// <para>The UUID of the asset associated with the alert event. You can call <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> to obtain the asset UUID. The value is in the data.SuspEvents[index].Uuid path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3502e4b0-f362-4059-84a2-f47fa2b5exxx</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AnomalyUuid { get; set; }
 
         /// <summary>
-        /// <para>Sets the language type for the request and response messages. The default is <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the graph, which is fixed as: hundun_dc_online.</para>
+        /// <para>The namespace of the graph. Set this parameter to hundun_dc_online.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Vertex ID. This does not need to be proactively provided.</para>
+        /// <para>The vertex ID. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29872354f741b1b044b8a9b4e2ab****</para>

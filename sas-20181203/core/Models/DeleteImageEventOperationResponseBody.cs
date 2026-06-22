@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DeleteImageEventOperationResponseBodyData Data { get; set; }
         public class DeleteImageEventOperationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary key of the alert handling rule.</para>
+            /// <para>The primary key of the alert disposal rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>443496</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the exported file.</para>
+        /// <para>The ID of the export task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>131231</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request, used to locate and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6673D49C-A9AB-40DD-B4A2-B92306701AE7</para>

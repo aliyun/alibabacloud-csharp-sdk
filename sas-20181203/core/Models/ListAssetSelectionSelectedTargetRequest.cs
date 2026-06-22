@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetSelectionSelectedTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the asset.</para>
+        /// <para>The unique identifier of the asset selection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SelectionKey { get; set; }
 
         /// <summary>
-        /// <para>The details of queries.</para>
+        /// <para>The query list.</para>
         /// </summary>
         [NameInMap("TargetList")]
         [Validation(Required=false)]

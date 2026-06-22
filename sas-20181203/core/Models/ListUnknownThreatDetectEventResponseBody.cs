@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectEventResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListUnknownThreatDetectEventResponseBodyData> Data { get; set; }
@@ -22,6 +25,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AnalyzeResult { get; set; }
 
             /// <summary>
+            /// <para>The process chain.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;5133&quot;:&quot;pickup -l -t unix -u&quot;},{&quot;1077&quot;:&quot;/usr/libexec/postfix/master -w&quot;},{&quot;1&quot;:&quot;/usr/lib/systemd/systemd --switched-root --system --deserialize 22&quot;}]</para>
             /// </summary>
@@ -30,6 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CmdChain { get; set; }
 
             /// <summary>
+            /// <para>The process command line.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/usr/sbin/sshd -D</para>
             /// </summary>
@@ -38,6 +45,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Cmdline { get; set; }
 
             /// <summary>
+            /// <para>The number of occurrences.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -46,6 +55,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the first occurrence.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
             /// </summary>
@@ -53,7 +64,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? FirstTime { get; set; }
 
+            [NameInMap("HandleType")]
+            [Validation(Required=false)]
+            public string HandleType { get; set; }
+
             /// <summary>
+            /// <para>The unique identifier of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30368144069e7567bbb10eabc2******</para>
             /// </summary>
@@ -62,6 +79,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HashKey { get; set; }
 
             /// <summary>
+            /// <para>The event ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -70,6 +89,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>centos****</para>
             /// </summary>
@@ -78,6 +99,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The public IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>172.16.XX.XX</para>
             /// </summary>
@@ -86,6 +109,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
+            /// <para>The private IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.42.XX.XX</para>
             /// </summary>
@@ -94,6 +119,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the most recent occurrence.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
             /// </summary>
@@ -102,6 +129,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastTime { get; set; }
 
             /// <summary>
+            /// <para>The MD5 hash of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5b394b54ca632fe51c4ab4a6dbaf****</para>
             /// </summary>
@@ -110,6 +139,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Md5 { get; set; }
 
             /// <summary>
+            /// <para>The parent command line.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/usr/sbin/sshd -D</para>
             /// </summary>
@@ -118,6 +149,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ParentCmdline { get; set; }
 
             /// <summary>
+            /// <para>The parent process ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -126,6 +159,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ParentPid { get; set; }
 
             /// <summary>
+            /// <para>The parent process path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/usr/bin/tar</para>
             /// </summary>
@@ -134,6 +169,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ParentProcessPath { get; set; }
 
             /// <summary>
+            /// <para>The process ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -142,6 +179,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pid { get; set; }
 
             /// <summary>
+            /// <para>The process path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/usr/bin/tar</para>
             /// </summary>
@@ -150,6 +189,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcessPath { get; set; }
 
             /// <summary>
+            /// <para>The SHA-256 hash of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</para>
             /// </summary>
@@ -158,6 +199,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Sha256 { get; set; }
 
             /// <summary>
+            /// <para>The event status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>1</b>: Unhandled.</description></item>
+            /// <item><description><b>2</b>: Blocked.</description></item>
+            /// <item><description><b>3</b>: Ignored.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -166,6 +214,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>The UUID of the asset instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
             /// </summary>
@@ -175,11 +225,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListUnknownThreatDetectEventResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectEventResponseBodyPageInfo : TeaModel {
             /// <summary>
+            /// <para>The number of alerting events displayed on the current page in a paged query. This parameter is used for paging.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -188,6 +243,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The page number of the current page in a paged query. This parameter is used for paging.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -196,6 +253,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of entries displayed on each page in a paged query. This parameter is used for paging.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -204,6 +263,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>149</para>
             /// </summary>

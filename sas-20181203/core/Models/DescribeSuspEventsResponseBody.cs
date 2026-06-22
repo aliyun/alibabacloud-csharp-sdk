@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>8</para>
             /// </summary>
             [NameInMap("EventStatus")]
             [Validation(Required=false)]
@@ -458,7 +458,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the Kubernetes cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>k8s-daily</para>
+            /// <para>test-daily</para>
             /// </summary>
             [NameInMap("K8sClusterName")]
             [Validation(Required=false)]
@@ -578,7 +578,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The advanced whitelist rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{\&quot;uuid\&quot;:\&quot;ALL\&quot;,\&quot;field\&quot;:\&quot;gmtModified\&quot;,\&quot;operate\&quot;:\&quot;contains\&quot;,\&quot;fieldValue\&quot;:\&quot;222\&quot;}]</para>
+            /// <para><b>1.</b>&amp;nbsp&amp;nbsppath&amp;nbsp&amp;nbspcontain&amp;nbsp&amp;nbsp232&amp;nbsp&amp;nbsp</para>
             /// </summary>
             [NameInMap("MarkMisRules")]
             [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the vulnerability.</para>
+        /// <para>The list of vulnerability details.</para>
         /// </summary>
         [NameInMap("Cves")]
         [Validation(Required=false)]
         public List<DescribeVulDetailsResponseBodyCves> Cves { get; set; }
         public class DescribeVulDetailsResponseBodyCves : TeaModel {
             /// <summary>
-            /// <para>The type of the vulnerability.</para>
+            /// <para>The classification of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remote_code_execution</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Classify { get; set; }
 
             /// <summary>
-            /// <para>The vulnerability types.</para>
+            /// <para>The list of vulnerability classifications.</para>
             /// </summary>
             [NameInMap("Classifys")]
             [Validation(Required=false)]
             public List<DescribeVulDetailsResponseBodyCvesClassifys> Classifys { get; set; }
             public class DescribeVulDetailsResponseBodyCvesClassifys : TeaModel {
                 /// <summary>
-                /// <para>The type of the vulnerability.</para>
+                /// <para>The classification of the vulnerability.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>remote_code_execution</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Classify { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the demo video for the vulnerability.</para>
+                /// <para>The URL of the vulnerability demo video.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com">https://example.com</a></para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DemoVideoUrl { get; set; }
 
                 /// <summary>
-                /// <para>The description of the vulnerability type.</para>
+                /// <para>The description of the vulnerability classification.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Remote code execution</para>
+                /// <para>privilege escalation</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -81,11 +81,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The difficulty level of exploiting the vulnerability. Valid values:</para>
+            /// <para>The difficulty of exploiting the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>LOW</b></description></item>
-            /// <item><description><b>MEDIUM</b></description></item>
-            /// <item><description><b>HIGH</b></description></item>
+            /// <item><description><b>LOW</b>: low</description></item>
+            /// <item><description><b>MEDIUM</b>: medium</description></item>
+            /// <item><description><b>HIGH</b>: high.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The CVE content.</para>
+            /// <para>The content of the CVE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Apache Shiro is a user authentication and authorization framework for a wide range of rights management applications.↵Recently, Apache Shiro released version 1.7.0, which fixes the Apache Shiro authentication bypass vulnerability (CVE-2020-17510).↵Attackers can bypass Shiro\&quot;s authentication using malicious requests containing payloads.↵↵Related bugs:↵CVE-2020-17510 Shiro &lt; 1.7.0 Validation Bypass Vulnerability↵CVE-2020-13933 Shiro &lt; 1.6.0 Validation Bypass Vulnerability↵CVE-2020-11989 Shiro &lt; 1.5.3 Validation Bypass Vulnerability↵CVE-2020-1957 Shiro &lt; 1.5.2 Validation Bypass Vulnerability↵CVE-2016-6802 Shiro &lt; 1.3.2 Validation Bypass Vulnerability
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The Common Vulnerabilities and Exposures (CVE) ID.</para>
+            /// <para>The CVE ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2019-9167</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CveId { get; set; }
 
             /// <summary>
-            /// <para>The link to the CVE details.</para>
+            /// <para>The link to the CVE vulnerability details.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://avd.aliyun.com/detail/CVE-2022-1184">https://avd.aliyun.com/detail/CVE-2022-1184</a></para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CveLink { get; set; }
 
             /// <summary>
-            /// <para>The Common Vulnerability Scoring System (CVSS) score of the vulnerability in the Alibaba Cloud vulnerability library.</para>
+            /// <para>The CVSS score of the vulnerability in the Alibaba Cloud vulnerability database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.0</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CvssScore { get; set; }
 
             /// <summary>
-            /// <para>The vector that is used to calculate the CVSS score.</para>
+            /// <para>The CVSS score vector.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AV:N/AC:L/Au:N/C:C/I:C/A:C</para>
@@ -153,9 +153,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The name of the server instance.</para>
             /// <remarks>
-            /// <para> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</para>
+            /// <para>This field is deprecated. To query instances affected by the vulnerability, call <a href="~~DescribeVulList~~">DescribeVulList</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The public IP address of the server.</para>
             /// <remarks>
-            /// <para> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</para>
+            /// <para>This field is deprecated. To query instances affected by the vulnerability, call <a href="~~DescribeVulList~~">DescribeVulList</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The private IP address of the server.</para>
             /// <remarks>
-            /// <para> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</para>
+            /// <para>This field is deprecated. To query instances affected by the vulnerability, call <a href="~~DescribeVulList~~">DescribeVulList</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vulnerability.</para>
+            /// <para>The vulnerability ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2020-8597</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The POC content.</para>
+            /// <para>The content of the POC.</para>
             /// </summary>
             [NameInMap("Poc")]
             [Validation(Required=false)]
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The UNIX timestamp when the proof of concept (POC) was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the proof of concept (POC) was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1554189334000</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The UNIX timestamp when the POC was disclosed. Unit: milliseconds.</para>
+            /// <para>The timestamp when the POC was disclosed. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1554189334000</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The service that is affected by the vulnerability.</para>
+            /// <para>The product affected by the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Log4j2</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Product { get; set; }
 
             /// <summary>
-            /// <para>The reference of the vulnerability in the Alibaba Cloud vulnerability library. The value is a URL.</para>
+            /// <para>The reference link for the vulnerability in the Alibaba Cloud vulnerability database.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com">https://example.com</a></para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Reference { get; set; }
 
             /// <summary>
-            /// <para>The disclosure time that is displayed for the vulnerability in the Alibaba Cloud vulnerability library. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was disclosed in the Alibaba Cloud vulnerability database. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1554189334000</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The fixing suggestions of the vulnerability.</para>
+            /// <para>The remediation suggestion for the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>At present, Chanjet has urgently released a vulnerability patch to fix the vulnerability. CNVD recommends affected units and users to upgrade to the latest version immediately:</para>↵<para>https://www.chanjetvip.com/product/goods/goods-detail?id=53aaa40295d458e44f5d3ce5</para>↵<para>At the same time, organizations and users affected by the vulnerability are requested to immediately follow the steps below to conduct self-inspection and repair work:</para>↵<ol>↵<item><description><para>User self-check steps:↵<br  />Check whether website/bin/load.aspx.cdcab7d2.compiled, website/bin/App_Web_load.aspx.cdcab7d2.dll, and tplus/Load.aspx files exist locally. If they exist, it means that they have been poisoned, and you must reinstall the system and install the product. patch.</para>↵</description></item>↵<item><description><para>Non-poisoned users please:↵<br  />1) Update the latest product patch.↵<br  />2) Install anti-virus software and update the virus database in time.↵<br  />3) Upgrade the lower version of IIS and Nginx to IIS10.0 and Windows 2016.↵<br  />4) Local installation customers need to confirm whether the backup file is complete as soon as possible, and do off-site backup. Customers on the cloud should enable the mirroring function in time.↵<br  />5) Users who fail to update the patch in time can contact Chanjet technical support and take temporary preventive measures such as deleting files.</para>↵</description></item>↵<item><description><para>Poisoned users please:↵<br  />1) Check whether the server has taken regular snapshots or backups. If so, you can restore data through snapshots or backups.↵<br  />2) Contact Chanjet technical support to confirm whether it has the conditions and operation methods to restore data from backup files.</para>↵</description></item>↵</ol>↵<para>If you have any technical problems, please contact Chanjet technical support: 4006600566-9</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Solution { get; set; }
 
             /// <summary>
-            /// <para>The introduction to the vulnerability.</para>
+            /// <para>The summary of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Chanjet T-Plus is an Internet business management software. There is an unauthorized access vulnerability in one of its interfaces disclosed on the Internet. Attackers can construct malicious requests to upload malicious files to execute arbitrary code and control the server.</para>
@@ -300,9 +300,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The ID of the asset that is scanned.</para>
+            /// <para>The ID of the scan target.</para>
             /// <remarks>
-            /// <para> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</para>
+            /// <para>This field is deprecated. To query instances affected by the vulnerability, call <a href="~~DescribeVulList~~">DescribeVulList</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -316,9 +316,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The name of the asset that is scanned.</para>
+            /// <para>The name of the scan target.</para>
             /// <remarks>
-            /// <para> This parameter is deprecated. You can call the <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the instance that is affected by the vulnerability.</para>
+            /// <para>This field is deprecated. To query instances affected by the vulnerability, call <a href="~~DescribeVulList~~">DescribeVulList</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -353,12 +353,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Vendor { get; set; }
 
             /// <summary>
-            /// <para>The severity of the vulnerability. Valid values:</para>
+            /// <para>The severity level of the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>serious</b></description></item>
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><b>serious</b>: critical</description></item>
+            /// <item><description><b>high</b>: high</description></item>
+            /// <item><description><b>medium</b>: medium</description></item>
+            /// <item><description><b>low</b>: low.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EDA40EA3-6265-5900-AD99-C83E4F109CA8</para>

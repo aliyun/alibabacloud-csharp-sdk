@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>n</para>
+        /// <para>a</para>
         /// </summary>
         [NameInMap("Dealed")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The destination IP address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.20.XX.XX</para>
+        /// <para>183.224.XX.XX</para>
         /// </summary>
         [NameInMap("DstIp")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The source IP address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>101.132.XX.XX</para>
+        /// <para>185.224.XX.XX</para>
         /// </summary>
         [NameInMap("SrcIp")]
         [Validation(Required=false)]

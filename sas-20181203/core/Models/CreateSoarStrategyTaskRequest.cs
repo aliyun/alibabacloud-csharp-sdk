@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSoarStrategyTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The policy ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to obtain the ID.</para>
+        /// <para>Call the <a href="~~DescribeSoarSubscribedStrategy~~">DescribeSoarSubscribedStrategy</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy. Set the value to Automated Batch Vulnerability Fixing Policy for Multiple Servers.</para>
+        /// <para>The policy name. Fixed value: Automated Batch Vulnerability Fix Policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyName { get; set; }
 
         /// <summary>
-        /// <para>The name of.the policy task.</para>
+        /// <para>The name of the policy task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,24 +46,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyTaskName { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the policy task. The value is a JSON array.</para>
-        /// <para>Vulnerability-related parameters:</para>
+        /// <para>The parameter information of the policy. A string in JSONArray format with the following items:</para>
+        /// <para>Vulnerability configuration item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>name: vluList</description></item>
         /// <item><description>associationProperty: sasAllVul</description></item>
-        /// <item><description>value: basic vulnerability information</description></item>
+        /// <item><description>value: basic information about the vulnerability</description></item>
         /// </list>
-        /// <para>Snapshot-related parameters:</para>
+        /// <para>Snapshot configuration item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>name: snapshotConfig</description></item>
         /// <item><description>associationProperty: snapshotConfig</description></item>
-        /// <item><description>value: retention period</description></item>
+        /// <item><description>value: storage time information</description></item>
         /// </list>
-        /// <para>Notification-related parameters:</para>
+        /// <para>Notification configuration. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>name: notifyConfig</description></item>
         /// <item><description>associationProperty: notifyConfig</description></item>
-        /// <item><description>value: email or DingTalk configuration information</description></item>
+        /// <item><description>value: email or DingTalk configuration information.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyTaskParams { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the task is scheduled to start. Unit: milliseconds.</para>
+        /// <para>The planned execution timestamp of the policy task. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1586739841000</para>

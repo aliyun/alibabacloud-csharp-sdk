@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockStartRequest : TeaModel {
         /// <summary>
-        /// <para>The prevention mode. Valid values:</para>
+        /// <para>The defense mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>block</b>: Interception Mode</description></item>
-        /// <item><description><b>audit</b>: Alert Mode</description></item>
+        /// <item><description><b>block</b>: block</description></item>
+        /// <item><description><b>audit</b>: alert.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DefenceMode { get; set; }
 
         /// <summary>
-        /// <para>The directory for which you want to enable web tamper proofing. Separate multiple directories with commas (,).</para>
+        /// <para>The protection directories. Separate multiple directories with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dir { get; set; }
 
         /// <summary>
-        /// <para>The directory for which you want to disable web tamper proofing.</para>
+        /// <para>The folder that does not require web tamper proofing protection (excluded folder).</para>
         /// <remarks>
-        /// <para>If you set <b>Mode</b> to <b>blacklist</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>blacklist</b> pattern.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExclusiveDir { get; set; }
 
         /// <summary>
-        /// <para>The file for which you want to disable web tamper proofing.</para>
+        /// <para>The files that do not require web tamper proofing protection (excluded files).</para>
         /// <remarks>
-        /// <para>If you set <b>Mode</b> to <b>blacklist</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>blacklist</b> pattern.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExclusiveFile { get; set; }
 
         /// <summary>
-        /// <para>The type of the file for which you want to disable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</para>
+        /// <para>The file types that do not require web tamper proofing protection (excluded file types). Separate multiple file types with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>php</description></item>
         /// <item><description>jsp</description></item>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description>png</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set <b>Mode</b> to <b>blacklist</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>blacklist</b> pattern.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExclusiveFileType { get; set; }
 
         /// <summary>
-        /// <para>The type of the file for which you want to enable web tamper proofing. Separate multiple types with semicolons (;). Valid values:</para>
+        /// <para>The file types that require web tamper proofing protection. Separate multiple file types with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>php</description></item>
         /// <item><description>jsp</description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description>png</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set <b>Mode</b> to <b>whitelist</b>, you must specify this parameter.</para>
+        /// <para>This parameter is required when the Defense mode <b>Mode</b> is set to the <b>whitelist</b> pattern.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,11 +120,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InclusiveFileType { get; set; }
 
         /// <summary>
-        /// <para>The local path to the backup files of the protected directory.\
-        /// The directory format of a Linux server is different from that of a Windows server. You must enter the directory in the required format based on your operating system. Examples:</para>
+        /// <para>The local backup path used to back up the protection directories. The format of the protection directory path may differ between Linux servers and Windows servers. Make sure that you enter the path in the correct format. The following examples show the directory formats:</para>
         /// <list type="bullet">
         /// <item><description>Linux server: /usr/local/aegis/bak</description></item>
-        /// <item><description>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak</description></item>
+        /// <item><description>Windows server: C:\Program Files (x86)\Alibaba\Aegis\bak.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -136,10 +135,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LocalBackupDir { get; set; }
 
         /// <summary>
-        /// <para>The protection mode of web tamper proofing. Valid values:</para>
+        /// <para>The protection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>whitelist</b>: In this mode, web tamper proofing is enabled for the specified directories and file types.</description></item>
-        /// <item><description><b>blacklist</b>: In this mode, web tamper proofing is enabled for the unspecified subdirectories, file types, and files in the protected directory.</description></item>
+        /// <item><description><b>whitelist</b>: whitelist mode. Protects the specified protection directories and file types.</description></item>
+        /// <item><description><b>blacklist</b>: blacklist mode. Protects all subdirectories, file types, and specified files in the protection directories that are not excluded.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -151,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server for which you want to enable web tamper proofing.</para>
+        /// <para>The UUID of the server that you want to protect.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

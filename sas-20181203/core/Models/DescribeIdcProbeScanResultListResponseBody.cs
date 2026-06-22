@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeIdcProbeScanResultListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeIdcProbeScanResultListResponseBodyInstances> Instances { get; set; }
         public class DescribeIdcProbeScanResultListResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The status of the client of the instance on which the probe is installed. Valid values:</para>
+            /// <para>The online status of the probe instance client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: The Security Center agent on the asset is <b>enabled</b>.</description></item>
-            /// <item><description><b>offline</b>: The Security Center agent on the asset is <b>disabled</b>.</description></item>
+            /// <item><description><b>online</b>: The Agent client on the asset is enabled.</description></item>
+            /// <item><description><b>offline</b>: The Agent client on the asset is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,17 +31,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of the IDC.</para>
+            /// <para>The name of the IDC server room.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>3K机房广州</para>
             /// </summary>
             [NameInMap("IdcName")]
             [Validation(Required=false)]
             public string IdcName { get; set; }
 
             /// <summary>
-            /// <para>The CIDR blocks.</para>
+            /// <para>The IP segment list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.2.0/24</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IpSegment { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720006818000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The operating system type of the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>windows</b></description></item>
-            /// <item><description><b>linux</b></description></item>
+            /// <item><description><b>linux</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the associated instance.</para>
+            /// <para>The public IP address of the associated machine instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42.121.<em>.</em></para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProbeInternetIp { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the associated instance.</para>
+            /// <para>The private IP address of the associated machine instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.<em>.</em></para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProbeIntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The name of the associated instance.</para>
+            /// <para>The name of the associated machine instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxxx</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProbeMachineName { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the associated instance.</para>
+            /// <para>The UUID of the associated machine instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11C96623-E106-59C9-866D-A6C82911****</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProbeUuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scan result.</para>
+            /// <para>The scan result ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1231</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ScanResultId { get; set; }
 
             /// <summary>
-            /// <para>The IP address that is scanned.</para>
+            /// <para>The scanned IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.<em>.</em></para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ScannedIp { get; set; }
 
             /// <summary>
-            /// <para>The port that is scanned.</para>
+            /// <para>The scanned port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeIdcProbeScanResultListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeIdcProbeScanResultListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3D7C47D-3F11-57BB-90E8-E5C20C61****</para>

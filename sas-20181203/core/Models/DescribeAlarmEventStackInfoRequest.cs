@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Mining program</para>
+        /// <para>Variable Trojan</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeletePrivateRegistryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The image repository ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to query the IDs of image repositories.</para>
+        /// <para>Call the <a href="~~PageImageRegistry~~">PageImageRegistry</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizeReportConfigDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the chart that is included in the report. Multiple IDs are separated by commas (,).</para>
+        /// <para>The report chart configuration IDs, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BIZ_STAT_QUERY_KEY_ATTACK,CUSTOM_VUL_CVE_LIST,CUSTOM_VUL_SYS_LIST,CUSTOM_VUL_WEBCMS_LIST,CUSTOM_AUTO_BREAKING_PIE,CUSTOM_AK_LEAK_LIST,KEY_HP_TAMPERPROOF,KEY_HP_DEFENCE</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ChartIds { get; set; }
 
         /// <summary>
-        /// <para>The grouping type. Valid values:</para>
+        /// <para>The group type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALIYUN_RG</b></description></item>
-        /// <item><description><b>SAS_GROUP</b></description></item>
+        /// <item><description><b>ALIYUN_RG</b>: ALIYUN_RG.</description></item>
+        /// <item><description><b>SAS_GROUP</b>: SAS_GROUP.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the report is the default report. Valid values:</para>
+        /// <para>Indicates whether the report is a default report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no.</description></item>
-        /// <item><description><b>1</b>: yes.</description></item>
+        /// <item><description><b>0</b>: Not a default report.</description></item>
+        /// <item><description><b>1</b>: A default report.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,11 +48,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsDefault { get; set; }
 
         /// <summary>
-        /// <para>Whether the new account is connected by default. Values:</para>
+        /// <para>Specifies whether newly added accounts are included by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Yes.</description></item>
-        /// <item><description><b>false</b>: No.<remarks>
-        /// <para>Only supported in version 2.0.0.</para>
+        /// <item><description><b>true</b>: Included.</description></item>
+        /// <item><description><b>false</b>: Not included.<remarks>
+        /// <para>Only version 2.0.0 supports this parameter.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? MemberAccountSyncFlag { get; set; }
 
         /// <summary>
-        /// <para>The time when the report is pinned.</para>
+        /// <para>The pinned time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717430400000</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PinnedTime { get; set; }
 
         /// <summary>
-        /// <para>The email address of the recipient. Multiple email addresses are separated by commas (,).</para>
+        /// <para>The recipient email addresses, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:PengZheng@eaton.com">PengZheng@eaton.com</a>,<a href="mailto:ZhongJi@Eaton.com">ZhongJi@Eaton.com</a></para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Recipients { get; set; }
 
         /// <summary>
-        /// <para>The most recent days for report statistics.</para>
+        /// <para>The number of recent days covered by the report statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ReportDays { get; set; }
 
         /// <summary>
-        /// <para>The end date on which the report is sent.</para>
+        /// <para>The end date for report delivery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1720022399999</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ReportEndDate { get; set; }
 
         /// <summary>
-        /// <para>The ID of the report.</para>
+        /// <para>The report ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>663434</para>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ReportId { get; set; }
 
         /// <summary>
-        /// <para>The language of the report. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,10 +129,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ReportLang { get; set; }
 
         /// <summary>
-        /// <para>The time range in which the report is sent. Valid values:</para>
+        /// <para>The report delivery time range. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: 00:00 to 06:00.</description></item>
-        /// <item><description><b>2</b>: 06:00 to 12:00.</description></item>
+        /// <item><description><b>1</b>: 0:00 to 6:00.</description></item>
+        /// <item><description><b>2</b>: 6:00 to 12:00.</description></item>
         /// <item><description><b>3</b>: 12:00 to 18:00.</description></item>
         /// <item><description><b>4</b>: 18:00 to 24:00.</description></item>
         /// </list>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ReportSendType { get; set; }
 
         /// <summary>
-        /// <para>The start date on which the report is sent.</para>
+        /// <para>The start date for report delivery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717430400000</para>
@@ -155,10 +155,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ReportStartDate { get; set; }
 
         /// <summary>
-        /// <para>The status of the report. Valid values:</para>
+        /// <para>The report status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disabled.</description></item>
-        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,12 +169,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ReportStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the report. Valid values:</para>
+        /// <para>The report type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: daily report.</description></item>
-        /// <item><description><b>1</b>: weekly report.</description></item>
-        /// <item><description><b>2</b>: monthly report.</description></item>
-        /// <item><description><b>3</b>: report whose statistics are collected in a custom time range.</description></item>
+        /// <item><description><b>0</b>: Daily report.</description></item>
+        /// <item><description><b>1</b>: Weekly report.</description></item>
+        /// <item><description><b>2</b>: Monthly report.</description></item>
+        /// <item><description><b>3</b>: Custom period.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The end time at which the report is sent. The value is in the HH:mm:ss format.</para>
+        /// <para>The delivery end time, in the format of HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10:00:00</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SendEndTime { get; set; }
 
         /// <summary>
-        /// <para>The exact day within the sending period.</para>
+        /// <para>The specific execution dates within the delivery period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -215,11 +215,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SendPeriodDays { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the report is sent. Valid values:</para>
+        /// <para>The delivery period type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DAY</b></description></item>
-        /// <item><description><b>WEEK</b></description></item>
-        /// <item><description><b>MONTH</b></description></item>
+        /// <item><description><b>DAY</b>: day.</description></item>
+        /// <item><description><b>WEEK</b>: week.</description></item>
+        /// <item><description><b>MONTH</b>: month.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SendPeriodType { get; set; }
 
         /// <summary>
-        /// <para>The start time at which the report is sent. The value is in the HH:mm:ss format.</para>
+        /// <para>The delivery start time, in the format of HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09:00:00</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SendStartTime { get; set; }
 
         /// <summary>
-        /// <para>The time at which the report is sent. The value is in the HH:mm:ss format.</para>
+        /// <para>The delivery time, in the format of HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09:00:00</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SendTime { get; set; }
 
         /// <summary>
-        /// <para>The groups.</para>
+        /// <para>The targets within the group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12125884,12140191</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetGroups { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. Multiple IDs are separated by commas (,).</para>
+        /// <para>The list of target UIDs, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1457515594445744,1600011353839072,1766185894104675,1674080148055995,1627510829033157</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetUids { get; set; }
 
         /// <summary>
-        /// <para>The title of the report.</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>marketing report</para>

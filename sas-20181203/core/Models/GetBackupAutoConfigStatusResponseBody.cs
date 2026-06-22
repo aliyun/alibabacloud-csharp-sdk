@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetBackupAutoConfigStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetBackupAutoConfigStatusResponseBodyData Data { get; set; }
         public class GetBackupAutoConfigStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the anti-ransomware policy for servers can be automatically configured by the managed anti-ransomware feature. Valid values:</para>
+            /// <para>Indicates whether the managed service supports configuring anti-ransomware backup policies. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b></description></item>
-            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>898F7AA7-CECD-5EC7-AF4D-664C601B****</para>

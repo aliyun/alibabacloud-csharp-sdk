@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAntiBruteForceRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Set which page of the returned results to start displaying the query results. The default value is <b>1</b>, indicating that the display starts from the first page.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the anti-brute force rule.</para>
+        /// <para>The ID of the brute-force attacks prevention rule.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> interface.</para>
+        /// <para>You can invoke the <a href="~~DescribeAntiBruteForceRules~~">DescribeAntiBruteForceRules</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the brute force rule.</para>
+        /// <para>The name of the brute-force attacks prevention rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries displayed per page during a paginated query.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

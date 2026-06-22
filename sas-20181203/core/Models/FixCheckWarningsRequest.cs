@@ -10,17 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FixCheckWarningsRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters for the baseline risk item that you want to fix.</para>
+        /// <para>The parameters of the baseline check items to fix. The following parameters are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>checkId</b>: the ID of the check item that corresponds to the baseline risk item.</para>
-        /// </description></item>
-        /// <item><description><para><b>rules</b>: an array that consists of the rules applied to fixes.</para>
-        /// <list type="bullet">
-        /// <item><description><b>value</b>: specifies whether a fix method is selected. Valid values: <b>0</b> and <b>1</b>. The value 0 indicates that no fix method is selected and the value 1 indicates that a fix method is selected.</description></item>
-        /// <item><description><b>ruleId</b>: the ID of the fix method.</description></item>
-        /// <item><description><b>paramList</b>: an array that consists of the details about the fix method.\
-        /// • <b>paramName</b>: the name of the fix method.\
-        /// • <b>value</b>: the value of the fix method.</description></item>
+        /// <item><description><b>checkId</b>: The ID of the check item.</description></item>
+        /// <item><description><b>rules</b>: The fix rules (in array format).<list type="bullet">
+        /// <item><description><b>value</b>: Specifies whether the fix method is selected. Valid values: <b>0</b> (not selected), <b>1</b> (selected).</description></item>
+        /// <item><description><b>ruleId</b>: The ID of the fix method.</description></item>
+        /// <item><description><b>paramList</b>: The list of fix methods (in array format).<br>      • <b>paramName</b>: The name of the fix method.<br>      • <b>value</b>: The value of the fix method.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -34,10 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CheckParams { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the snapshot that is created when you fix the baseline risk. Valid values: 1 to 365. Unit: days.</para>
+        /// <para>The retention period of the snapshot to create when performing the baseline fix operation. Valid values: 1 to 365. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the risk item.</para>
         /// <remarks>
-        /// <para> To query the information about the risk items and check items of a server, you must specify the IDs of the risk items. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to query the IDs of risk items.</para>
+        /// <para>To query the check item information for a specified risk item and a specified server, you must provide the risk item ID. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to obtain the ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RiskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot that is created when you fix the baseline risk.</para>
+        /// <para>The name of the snapshot to create when performing the baseline fix operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas_fix_2024-12-04</para>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SnapshotName { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>165.225.XX.XX</para>
@@ -91,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the asset for which you want to fix the baseline risk item. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to query the UUIDs of assets.</para>
+        /// <para>The unique ID of the asset instance to fix. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75a417dda5f25edb5bed8f208a9a****,c7e10fd794262a1510d5648f9e5d****</para>

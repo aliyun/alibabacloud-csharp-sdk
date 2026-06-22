@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSasContainerWebDefenseRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the container file defense rule.</para>
+        /// <para>The details of the container file defense rule.</para>
         /// </summary>
         [NameInMap("ContainerWebDefenseRule")]
         [Validation(Required=false)]
         public GetSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRule ContainerWebDefenseRule { get; set; }
         public class GetSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRule : TeaModel {
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000**0002</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>Total number of applications.</para>
+            /// <para>The total number of applications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AppTotalCount { get; set; }
 
             /// <summary>
-            /// <para>Timestamp when the rule was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the rule was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709173360000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Timestamp when the rule was last modified. Unit: milliseconds.</para>
+            /// <para>The timestamp when the rule was modified. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1655432638000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Rule ID.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>List of configured file paths.</para>
+            /// <para>The list of configured file paths.</para>
             /// </summary>
             [NameInMap("PathConfDTOList")]
             [Validation(Required=false)]
             public List<GetSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRulePathConfDTOList> PathConfDTOList { get; set; }
             public class GetSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRulePathConfDTOList : TeaModel {
                 /// <summary>
-                /// <para>Backup path.</para>
+                /// <para>The backup path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/usr/path/</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string BackupPath { get; set; }
 
                 /// <summary>
-                /// <para>Action to be executed.</para>
+                /// <para>The action to take. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>block</b> : Block</description></item>
-                /// <item><description><b>audit</b> : Alert</description></item>
+                /// <item><description><b>block</b>: Block.</description></item>
+                /// <item><description><b>audit</b>: Alert.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DefenseMode { get; set; }
 
                 /// <summary>
-                /// <para>Defense path</para>
+                /// <para>The defense path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/test11*</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DefensePath { get; set; }
 
                 /// <summary>
-                /// <para>Excluded files.</para>
+                /// <para>The excluded file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file1</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ExcludeFile { get; set; }
 
                 /// <summary>
-                /// <para>Excluded file path.</para>
+                /// <para>The excluded file path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/test2/sub1,/test2/sub2</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ExcludeFilePath { get; set; }
 
                 /// <summary>
-                /// <para>Exclude file types.</para>
+                /// <para>The excluded file type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>doc</para>
@@ -138,10 +138,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ExcludeFileType { get; set; }
 
                 /// <summary>
-                /// <para>Protection mode.</para>
+                /// <para>The defense mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Basic mode (whitelist)</description></item>
-                /// <item><description><b>1</b>: Advanced mode (blacklist)</description></item>
+                /// <item><description><b>0</b>: Basic pattern (whitelist).</description></item>
+                /// <item><description><b>1</b>: Advanced pattern (blacklist).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? GuardType { get; set; }
 
                 /// <summary>
-                /// <para>Included files.</para>
+                /// <para>The included file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>webapp</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string IncludeFile { get; set; }
 
                 /// <summary>
-                /// <para>Type of included files.</para>
+                /// <para>The included file type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>doc</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string IncludeFileType { get; set; }
 
                 /// <summary>
-                /// <para>Whitelist process list.</para>
+                /// <para>The list of whitelisted processes.</para>
                 /// </summary>
                 [NameInMap("ProcessPathList")]
                 [Validation(Required=false)]
@@ -181,20 +181,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Rule name.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>FiledefenseRule.</para>
+            /// <para>防篡改规则</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>Rule status. The value descriptions are as follows:</para>
+            /// <para>The rule status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Enabled</description></item>
-            /// <item><description><b>0</b>: Disabled</description></item>
+            /// <item><description><b>1</b>: Enabled.</description></item>
+            /// <item><description><b>0</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the current request, which is a unique identifier generated by Alibaba Cloud for this request and can be used for troubleshooting and issue localization.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BA674E4**62FB5133</para>

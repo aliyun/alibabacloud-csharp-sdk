@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The days in a week on which an automatic check is performed.</para>
+        /// <para>The periodic check schedule.</para>
         /// </summary>
         [NameInMap("CycleDays")]
         [Validation(Required=false)]
         public List<int?> CycleDays { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:</para>
+        /// <para>Indicates whether new check items added to the selected standards are checked by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true:</b> Enabled.</description></item>
+        /// <item><description><b>false:</b> Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? EnableAddCheck { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the automatic check is enabled. Valid values:</para>
+        /// <para>Indicates whether automatic periodic checks are enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true:</b> Enabled.</description></item>
+        /// <item><description><b>false:</b> Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,12 +45,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? EnableAutoCheck { get; set; }
 
         /// <summary>
-        /// <para>The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:</para>
+        /// <para>The end time of the check period, indicating the hour of the day. The start time and end time must fall within one of the following time ranges:</para>
         /// <list type="bullet">
-        /// <item><description><b>00:00 to 06:00</b>: If StartTime is set to 00:00, EndTime must be set to 06:00.</description></item>
-        /// <item><description><b>06:00 to 12:00</b>: If StartTime is set to 06:00, EndTime must be set to 12:00.</description></item>
-        /// <item><description><b>12:00 to 18:00</b>: If StartTime is set to 12:00, EndTime must be set to 18:00.</description></item>
-        /// <item><description><b>18:00 to 24:00</b>: If StartTime is set to 18:00, EndTime must be set to 24:00.</description></item>
+        /// <item><description><b>0~6</b>: If the start time is 0, the end time must be set to 6.</description></item>
+        /// <item><description><b>6~12</b>: If the start time is 6, the end time must be set to 12.</description></item>
+        /// <item><description><b>12~18</b>: If the start time is 12, the end time must be set to 18.</description></item>
+        /// <item><description><b>18~24</b>: If the start time is 18, the end time must be set to 24.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A3D5C8F-2A42-5477-BDD8-27E64B5F1739</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The information about the check items.</para>
+        /// <para>The list of check item information.</para>
         /// </summary>
         [NameInMap("Standards")]
         [Validation(Required=false)]
@@ -120,17 +120,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the check item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cloud service configuration management</para>
+            /// <para>云产品配置管理</para>
             /// </summary>
             [NameInMap("ShowName")]
             [Validation(Required=false)]
             public string ShowName { get; set; }
 
             /// <summary>
-            /// <para>The status of the check item. Valid values:</para>
+            /// <para>The enabling status of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ON</b>: The check item is enabled.</description></item>
-            /// <item><description><b>OFF</b>: The check item is disabled.</description></item>
+            /// <item><description><b>ON:</b> Enabled.</description></item>
+            /// <item><description><b>OFF:</b> Shutdown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -143,9 +143,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RISK</b>: cloud service configuration management</description></item>
-            /// <item><description><b>IDENTITY_PERMISSION</b>: identity and permission management</description></item>
-            /// <item><description><b>COMPLIANCE</b>: compliance</description></item>
+            /// <item><description><b>RISK:</b> cloud service configuration management</description></item>
+            /// <item><description><b>IDENTITY_PERMISSION:</b> permission management</description></item>
+            /// <item><description><b>COMPLIANCE:</b> compliance.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The start time of the check. The value indicates a point in time.</para>
+        /// <para>The start time of the check period, indicating the hour of the day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

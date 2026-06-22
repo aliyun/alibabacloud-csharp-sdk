@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeQuaraFileDownloadInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL that is used to download the file. The URL is valid for five minutes.</para>
+        /// <para>The download URL. The URL is valid for 5 minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash value of the quarantined file.</para>
+        /// <para>The MD5 hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bb62ef1311bc564377a0378d3axxxxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? QuaraFileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29874225-EAAC-5415-8501-32DD20FXXXXX</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the related alert.</para>
+        /// <para>The tag of the alert record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6d4ff40a22b15c86adecf2aa48xxxxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The unique identifier of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4fe8e1cd-3c37-4851-b9de-124da32c****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListMachineAppsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the SAE application.</para>
+        /// <para>The SAE application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b41f4bf-349f-4263-89b1-9234c034****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SAE application.</para>
+        /// <para>The SAE application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-commprice-shop</para>
@@ -40,13 +40,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppRegionId { get; set; }
 
         /// <summary>
-        /// <para>The edition of Security Center. Valid values:</para>
+        /// <para>The authorization version of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>6</b>: Anti-virus.</description></item>
-        /// <item><description><b>5</b>: Advanced.</description></item>
-        /// <item><description><b>3</b>: Enterprise.</description></item>
-        /// <item><description><b>7</b>: Ultimate.</description></item>
-        /// <item><description><b>10</b>: Value-added Plan.</description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+        /// <item><description><b>5</b>: Premium Edition</description></item>
+        /// <item><description><b>3</b>: Enterprise Edition</description></item>
+        /// <item><description><b>7</b>: Ultimate Edition</description></item>
+        /// <item><description><b>10</b>: value-added service Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuthVersion { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListInterceptionHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c7c190a82d9a048be9038d352840f****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp.</para>
+        /// <para>The end timestamp of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635575219000</para>
@@ -40,27 +40,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert.</para>
+        /// <para>The alert name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Abnormal access</para>
+        /// <para>异常访问。</para>
         /// </summary>
         [NameInMap("HistoryName")]
         [Validation(Required=false)]
         public string HistoryName { get; set; }
 
         /// <summary>
-        /// <para>The types of exceptions.</para>
+        /// <para>The types of exception events.</para>
         /// </summary>
         [NameInMap("InterceptionTypes")]
         [Validation(Required=false)]
         public List<int?> InterceptionTypes { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The value is a UNIX timestamp.</para>
+        /// <para>The start timestamp of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1651290987000</para>

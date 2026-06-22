@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the export task.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ExportRecord~~">ExportRecord</a> operation to query the IDs of export tasks.</para>
+        /// <para>You can obtain this parameter by calling the <a href="~~ExportRecord~~">ExportRecord</a> operation to initiate an export.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ExportId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the member account in the resource directory.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>You can obtain this parameter by invoking the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

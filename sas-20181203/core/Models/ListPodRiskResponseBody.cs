@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListPodRiskResponseBodyPageInfo PageInfo { get; set; }
         public class ListPodRiskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries returned on the current page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2-</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>An array that consists of the risks.</para>
+        /// <para>The security risks of pod groups.</para>
         /// </summary>
         [NameInMap("PodRiskList")]
         [Validation(Required=false)]
         public List<ListPodRiskResponseBodyPodRiskList> PodRiskList { get; set; }
         public class ListPodRiskResponseBodyPodRiskList : TeaModel {
             /// <summary>
-            /// <para>The number of alerts that are generated for the pod.</para>
+            /// <para>The number of alerts in the pod group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test66</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that indicates the time when the pod was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the pod group was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1644283112720</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The number of baseline risk items that are detected in the pod.</para>
+            /// <para>The number of baseline issues in the pod group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the Kubernetes cluster.</para>
+            /// <para>The Kubernetes namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kube-system</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The name of the pod.</para>
+            /// <para>The pod group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>expoit-xxx-b****</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pod { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the pod.</para>
+            /// <para>The IP address of the pod group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.0.XXX.XXX</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PodIp { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that are detected in the pod.</para>
+            /// <para>The number of vulnerabilities in the pod group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94254AD7-5026-5847-833B-403C2326BD6E</para>

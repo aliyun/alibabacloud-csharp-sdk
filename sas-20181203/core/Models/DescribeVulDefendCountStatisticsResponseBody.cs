@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulDefendCountStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of defended vulnerabilities.</para>
+        /// <para>The number of vulnerabilities that have been defended against.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RaspDefendedCount { get; set; }
 
         /// <summary>
-        /// <para>The number of supported vulnerabilities.</para>
+        /// <para>The number of vulnerabilities that can be defended against.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RaspDefensibleCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. China Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE500770-42D3-442E-9DDD-156E0F9F3B45</para>

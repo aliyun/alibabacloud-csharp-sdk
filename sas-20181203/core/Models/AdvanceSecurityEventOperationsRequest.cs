@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The alert name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Execution of malicious script code</para>
+        /// <para>恶意脚本代码执行</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>For more information about alert types, see <a href="https://help.aliyun.com/document_detail/68388.html">Alerts</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Malicious script</para>
+        /// <para>恶意脚本</para>
         /// </summary>
         [NameInMap("EventType")]
         [Validation(Required=false)]

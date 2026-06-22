@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCycleTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task configuration.</para>
+        /// <para>The ID of the configuration.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</para>
+        /// <para>Call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

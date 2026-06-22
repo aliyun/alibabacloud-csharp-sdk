@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRelateMaliciousResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of hosts that are associated with the risk.</para>
+        /// <para>The list of servers with associated risks.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListAgentlessRelateMaliciousResponseBodyList> List { get; set; }
         public class ListAgentlessRelateMaliciousResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The details of the alert events.</para>
+            /// <para>The alert event details.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<ListAgentlessRelateMaliciousResponseBodyListDetails> Details { get; set; }
             public class ListAgentlessRelateMaliciousResponseBodyListDetails : TeaModel {
                 /// <summary>
-                /// <para>The name of the detailed item.</para>
+                /// <para>The name of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MD5</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The name key of the detailed item.</para>
+                /// <para>The name key of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>${suspicious.mp.db.maliciousfilemd5}</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NameKey { get; set; }
 
                 /// <summary>
-                /// <para>The type of the detailed item.</para>
+                /// <para>The type of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The value of the detailed item.</para>
+                /// <para>The value of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1f2e13a7c51ee89316ae50066515****</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The URL to download the malicious image sample.</para>
+            /// <para>The download URL of the malicious sample.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/</a>***</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the first scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the first scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The highlighted JSON string.</para>
+            /// <para>The highlighted text, in JSON string format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;highlight\&quot;:{\&quot;ruleVersion\&quot;:\&quot;20230223\&quot;,\&quot;ruleId\&quot;:600139,\&quot;events\&quot;:[[207,284]]}}</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset.</para>
+            /// <para>The name of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sql-test-0****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -156,11 +156,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LatestScanTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The severity of the malicious file. Valid values:</para>
+            /// <para>The severity level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>serious</description></item>
-            /// <item><description>suspicious</description></item>
-            /// <item><description>remind</description></item>
+            /// <item><description>serious: urgent</description></item>
+            /// <item><description>suspicious: suspicious</description></item>
+            /// <item><description>remind: reminder.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the malicious file.</para>
+            /// <para>The MD5 hash of the malicious file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1f2e13a7c51ee89316ae50066515****</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousName { get; set; }
 
             /// <summary>
-            /// <para>The type of the virus.</para>
+            /// <para>The virus type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebShell</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousType { get; set; }
 
             /// <summary>
-            /// <para>The handling result of the alert.</para>
+            /// <para>The alert handling result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>addWhitelist.USER.Success</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateResult { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert is handled. Unit: milliseconds.</para>
+            /// <para>The timestamp when the alert was handled. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The partition of the disk.</para>
+            /// <para>The disk partition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/dev/xvda1</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Partition { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
+            /// <para>The ID of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-****</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>image_***</para>
@@ -251,9 +251,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task object. Valid values:</para>
+            /// <para>The object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: snapshot.</description></item>
+            /// <item><description><b>1</b>: snapshot</description></item>
             /// <item><description><b>2</b>: image.</description></item>
             /// </list>
             /// 
@@ -277,14 +277,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information for the paging query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListAgentlessRelateMaliciousResponseBodyPageInfo PageInfo { get; set; }
         public class ListAgentlessRelateMaliciousResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -314,7 +314,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>197</para>
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FCA270CC-24C8-5DA1-9184-20F2605C****</para>

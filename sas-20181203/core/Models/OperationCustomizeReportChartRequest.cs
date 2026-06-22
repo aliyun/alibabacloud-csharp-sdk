@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperationCustomizeReportChartRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the chart that is included in the report. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of report chart configurations. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID.</para>
+        /// <para>Call <a href="~~DescribeChartList~~">DescribeChartList</a> to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ChartIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the report.</para>
+        /// <para>The report ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</para>
+        /// <para>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

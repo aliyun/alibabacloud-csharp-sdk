@@ -10,14 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyVulTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The configuration target. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>vulType</b>: the type of the vulnerabilities to scan. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>cve</b>: Linux software vulnerabilities</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerabilities</description></item>
-        /// <item><description><b>cms</b>: Web-CMS vulnerabilities</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerabilities</description></item>
+        /// <item><description><b>vulType</b>: The vulnerability type. Valid values:<list type="bullet">
+        /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
+        /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
+        /// <item><description><b>emg</b>: Emergency vulnerability.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -30,16 +29,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The operation. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The operation target. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>target</b>: the UUID of the server.</para>
-        /// </description></item>
-        /// <item><description><para><b>targetType</b>: the application scope of the operation. Set the value to uuid.</para>
-        /// </description></item>
-        /// <item><description><para><b>flag</b>: the type of the operation. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>add</b>: select</description></item>
-        /// <item><description><b>del</b>: deselect</description></item>
+        /// <item><description><b>target</b>: The UUID of the target machine.</description></item>
+        /// <item><description><b>targetType</b>: The target type. Fixed value: uuid.</description></item>
+        /// <item><description><b>flag</b>: The flag. Valid values:<list type="bullet">
+        /// <item><description><b>add</b>: Selected.</description></item>
+        /// <item><description><b>del</b>: Deselected.</description></item>
         /// </list>
         /// </description></item>
         /// </list>

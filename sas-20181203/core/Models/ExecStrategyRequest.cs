@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExecStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>Set the action for this execution, default is <b>exec</b>. Values:</para>
+        /// <para>The action to perform. Default value: <b>exec</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>exec</b>: Execute. - <b>terminate</b>: Terminate.</description></item>
+        /// <item><description><b>exec</b>: exec.</description></item>
+        /// <item><description><b>terminate</b>: stop.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExecAction { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the baseline check policy.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to query the IDs of baseline check policies.</para>
+        /// <para>You can call the <a href="~~DescribeStrategy~~">DescribeStrategy</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

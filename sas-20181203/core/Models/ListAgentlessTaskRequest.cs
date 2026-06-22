@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page in a paged query. Paging starts from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the task.</para>
+        /// <para>The timestamp of the end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635575219000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the asset that you want to query.</para>
+        /// <para>The public IP address of the asset to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.XX.XX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the asset that you want to query.</para>
+        /// <para>The private IP address of the asset to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.26.XX.XX</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// <para>The language type. Valid values:</para>
+        /// <para>The language type. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page in a paged query. Paging is performed based on this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query main tasks. Valid values:</para>
+        /// <para>Specifies whether to query the root task list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: queries main tasks.</description></item>
-        /// <item><description><b>false</b>: queries subtasks.</description></item>
+        /// <item><description><b>true</b>: Root tasks.</description></item>
+        /// <item><description><b>false</b>: Subtasks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? RootTask { get; set; }
 
         /// <summary>
-        /// <para>The ID of the main task.</para>
+        /// <para>The ID of the root task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12c27343861610c5db3f7a2573b4****</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RootTaskId { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the task.</para>
+        /// <para>The timestamp of the start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1651290987000</para>
@@ -118,12 +118,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the detection task.</para>
+        /// <para>The detection status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The detection task is in progress.</description></item>
-        /// <item><description><b>2</b>: The detection task is complete.</description></item>
-        /// <item><description><b>3</b>: The detection task fails.</description></item>
-        /// <item><description><b>4</b>: The detection task times out.</description></item>
+        /// <item><description><b>1</b>: Detecting.</description></item>
+        /// <item><description><b>2</b>: Completed.</description></item>
+        /// <item><description><b>3</b>: Failed.</description></item>
+        /// <item><description><b>4</b>: Timed out.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the asset that you want to detect.</para>
+        /// <para>The name of the detection target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source-test-obj-0****</para>
@@ -144,10 +144,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetName { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset that you want to detect. Valid values:</para>
+        /// <para>The scan object type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: snapshot</description></item>
-        /// <item><description><b>2</b>: image</description></item>
+        /// <item><description><b>1</b>: snapshot </description></item>
+        /// <item><description><b>2</b>: image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the main task. If you want to query subtasks of a main task, you must specify this parameter.</para>
+        /// <para>The ID of the root task. Specify this parameter to query the subtask list of a root task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d7b2acf8d362742123e4a84e1bf8****</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e4af3620-6895-4e2f-a641-a9d8fb53****</para>

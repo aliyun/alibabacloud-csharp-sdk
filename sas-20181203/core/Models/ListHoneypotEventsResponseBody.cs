@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The intrusion events.</para>
+        /// <para>The list of honeypot attack events.</para>
         /// </summary>
         [NameInMap("HoneypotEvents")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DstIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp at which the event was first detected.</para>
+            /// <para>The timestamp of the first occurrence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1692670297</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the honeypot.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>honeypot-2</para>
+            /// <para>主机 tcp监听****</para>
             /// </summary>
             [NameInMap("HoneypotName")]
             [Validation(Required=false)]
             public string HoneypotName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp at which the event was last detected.</para>
+            /// <para>The timestamp of the most recent occurrence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1676558664</para>
@@ -90,21 +90,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China Beijing</para>
+            /// <para>北京市</para>
             /// </summary>
             [NameInMap("Location")]
             [Validation(Required=false)]
             public string Location { get; set; }
 
             /// <summary>
-            /// <para>The extended values that correspond to the field key.</para>
+            /// <para>The list of extended field key-value pairs.</para>
             /// </summary>
             [NameInMap("MergeFieldList")]
             [Validation(Required=false)]
             public List<ListHoneypotEventsResponseBodyHoneypotEventsMergeFieldList> MergeFieldList { get; set; }
             public class ListHoneypotEventsResponseBodyHoneypotEventsMergeFieldList : TeaModel {
                 /// <summary>
-                /// <para>The supplementary information about the field.</para>
+                /// <para>The supplementary information of the field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>data</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string FieldKey { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>level2_item1</para>
@@ -148,8 +148,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The protocol. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>tcp</b></description></item>
-            /// <item><description><b>udp</b></description></item>
+            /// <item><description><b>tcp</b>.</description></item>
+            /// <item><description><b>udp</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -162,9 +162,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>2</b>: low</description></item>
-            /// <item><description><b>3</b>: medium</description></item>
-            /// <item><description><b>4</b>: high</description></item>
+            /// <item><description><b>2</b>: Low risk.</description></item>
+            /// <item><description><b>3</b>: Medium risk.</description></item>
+            /// <item><description><b>4</b>: High risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The ID of the intrusion event.</para>
+            /// <para>The unique ID of the attack event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70427821</para>
@@ -197,14 +197,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListHoneypotEventsResponseBodyPageInfo PageInfo { get; set; }
         public class ListHoneypotEventsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The key of the last data entry.</para>
+            /// <para>The key of the last entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAGYXFWIAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM1Mzc3Njc4MzA2ODY5NmI2YTY*********</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastRowKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the NextToken parameter that is returned by using the NextToken method.</para>
+            /// <para>The NextToken value returned when the NextToken-based pagination method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B604532DEF982B875E8360A6EFA3B***</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FBD28009-6096-5E90-BFE6-62CCD67*****</para>

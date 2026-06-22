@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the management node.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to query the IDs of management nodes.</para>
+        /// <para>You can call the <a href="~~ListHoneypotNode~~">ListHoneypotNode</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The CIDR blocks that are allowed to access the management node.</para>
+        /// <para>The collection of allowed CIDR blocks.</para>
         /// </summary>
         [NameInMap("SecurityGroupProbeIpList")]
         [Validation(Required=false)]

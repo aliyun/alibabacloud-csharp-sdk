@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.2.3.4</para>
+        /// <para>123.24.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

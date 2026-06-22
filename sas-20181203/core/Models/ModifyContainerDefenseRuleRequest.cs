@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The description of the rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Prevent non-mirror programs from starting in containers</para>
+        /// <para>防御规则。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The action specified in the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: alert</description></item>
-        /// <item><description><b>2</b>: block</description></item>
+        /// <item><description><para><b>1</b>: alert</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: block</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the rule.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the IDs of rules.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2590599.html">ListContainerDefenseRule</a> operation to query the IDs of rules.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,8 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><para><b>1</b>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,8 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: system rule</description></item>
-        /// <item><description>2: custom rule</description></item>
+        /// <item><description><para>1: system rule</para>
+        /// </description></item>
+        /// <item><description><para>2: custom rule</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,8 +100,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether to include all namespaces. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: no</description></item>
-            /// <item><description><b>1</b>: yes</description></item>
+            /// <item><description><para><b>0</b>: no</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: yes</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the cluster on which the rule takes effect.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+            /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The hash values of the files that need to be added to the whitelist.</para>
             /// <remarks>
-            /// <para> This parameter is not supported.</para>
+            /// <para>This parameter is not supported.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Hash")]

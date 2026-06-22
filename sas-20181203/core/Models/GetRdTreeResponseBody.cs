@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public GetRdTreeResponseBodyData Data { get; set; }
         public class GetRdTreeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The subfolder.</para>
+            /// <para>The child folders.</para>
             /// </summary>
             [NameInMap("Children")]
             [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The name of the folder.</para>
+            /// <para>The folder name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Root</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30CBF632-109F-596F-97F2-451C8B2A****</para>

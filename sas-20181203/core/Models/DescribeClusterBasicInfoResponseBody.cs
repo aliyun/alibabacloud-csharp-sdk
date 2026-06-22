@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterBasicInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed information about the cluster.</para>
+        /// <para>The cluster details.</para>
         /// </summary>
         [NameInMap("ClusterInfo")]
         [Validation(Required=false)]
         public DescribeClusterBasicInfoResponseBodyClusterInfo ClusterInfo { get; set; }
         public class DescribeClusterBasicInfoResponseBodyClusterInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c870ec78ecbcb41d2a35c679823ef****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testackpro</para>
@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. Valid values:</para>
+            /// <para>The cluster type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ManagedKubernetes</b>: managed Kubernetes cluster</description></item>
-            /// <item><description><b>NotManagedKubernetes</b>: non-managed Kubernetes cluster</description></item>
+            /// <item><description><b>ManagedKubernetes</b>: managed Kubernetes</description></item>
+            /// <item><description><b>NotManagedKubernetes</b>: non-managed Kubernetes</description></item>
             /// <item><description><b>PrivateKubernetes</b>: private cluster</description></item>
-            /// <item><description><b>kubernetes</b>: dedicated Kubernetes cluster</description></item>
-            /// <item><description><b>ask</b>: dedicated ASK cluster</description></item>
+            /// <item><description><b>kubernetes</b>: dedicated Kubernetes</description></item>
+            /// <item><description><b>ask</b>: dedicated ASK.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The version of the cluster.</para>
+            /// <para>The version information of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.22.10-aliyun.1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the cluster is deployed.</para>
+            /// <para>The region ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -94,12 +94,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the cluster. Valid values:</para>
+            /// <para>The availability status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>unavailable</b></description></item>
-            /// <item><description><b>Available</b></description></item>
-            /// <item><description><b>Creating</b></description></item>
-            /// <item><description><b>CreateFailed</b></description></item>
+            /// <item><description><b>unavailable</b>: Not available.</description></item>
+            /// <item><description><b>Available</b>: Available.</description></item>
+            /// <item><description><b>Creating</b>: Being created.</description></item>
+            /// <item><description><b>CreateFailed</b>: Creation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,10 +110,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cluster is enabled. Valid values:</para>
+            /// <para>The cluster switch status.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The cluster is enabled.</description></item>
-            /// <item><description><b>false</b>: The cluster is disabled.</description></item>
+            /// <item><description><b>true</b>: enabled</description></item>
+            /// <item><description><b>false</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A20733-10A0-4AF6-BE6B-E3322413BB68</para>

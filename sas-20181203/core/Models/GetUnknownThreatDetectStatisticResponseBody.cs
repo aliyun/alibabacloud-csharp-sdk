@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetUnknownThreatDetectStatisticResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetUnknownThreatDetectStatisticResponseBodyData Data { get; set; }
@@ -18,6 +21,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BlockEventMachineCount { get; set; }
 
             /// <summary>
+            /// <para>The number of servers under control.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BlockMachineCount { get; set; }
 
             /// <summary>
+            /// <para>The total number of servers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MachineCount { get; set; }
 
             /// <summary>
+            /// <para>The number of servers in warning status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MonitorMachineCount { get; set; }
 
             /// <summary>
+            /// <para>The number of servers with the service enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? OpenMachineCount { get; set; }
 
             /// <summary>
+            /// <para>The number of servers in learning status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

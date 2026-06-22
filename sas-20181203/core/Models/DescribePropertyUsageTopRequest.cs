@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyUsageTopRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the asset fingerprint. Valid value:</para>
+        /// <para>The Asset Fingerprints type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>port</b>: port</description></item>
         /// <item><description><b>process</b>: process</description></item>
         /// <item><description><b>software</b>: software</description></item>
         /// <item><description><b>user</b>: account</description></item>
-        /// <item><description><b>sca</b>: middleware</description></item>
+        /// <item><description><b>sca</b>: middleware.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

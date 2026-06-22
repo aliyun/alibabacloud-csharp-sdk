@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSystemAggregationRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details about the aggregation types.</para>
+        /// <para>The result list.</para>
         /// </summary>
         [NameInMap("AggregationList")]
         [Validation(Required=false)]
         public List<ListSystemAggregationRulesResponseBodyAggregationList> AggregationList { get; set; }
         public class ListSystemAggregationRulesResponseBodyAggregationList : TeaModel {
             /// <summary>
-            /// <para>The ID of the aggregation type.</para>
+            /// <para>The ID of the rule cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the aggregation type.</para>
+            /// <para>The name of the rule cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Remote control\<em>\</em>\<em>\</em></para>
+            /// <para>远程控制****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of rules that are of the aggregation type.</para>
+            /// <para>The number of rules in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListSystemAggregationRulesResponseBodyPageInfo PageInfo { get; set; }
         public class ListSystemAggregationRulesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6800B790-B10A-5C2F-BEB3-F1D5CE61****</para>

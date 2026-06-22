@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteInstallCodeRequest : TeaModel {
         /// <summary>
-        /// <para>The installation command.</para>
+        /// <para>The installation code.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeInstallCodes~~">DescribeInstallCodes</a> operation to query installation commands.</para>
+        /// <para>You can call the <a href="~~DescribeInstallCodes~~">DescribeInstallCodes</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

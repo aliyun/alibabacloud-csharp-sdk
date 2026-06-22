@@ -10,26 +10,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedInstanceCriteriaRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member in the resource directory.</para>
+        /// <para>The ID of the member account in the resource directory.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the account ID.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1232428423234****</para>
+        /// <para>127608589417****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public string ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The value of the search condition. Fuzzy match is supported.</para>
+        /// <para>The value of the query condition. Fuzzy match is supported.</para>
         /// <remarks>
-        /// <para> You can specify the name, ID, public IP address, private IP address, component, port, or IP address of an exposed asset.</para>
+        /// <para>This parameter supports queries by asset name, asset ID, public IP address of the asset, private IP address of the asset, exposed component, exposed port, or exposed IP address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>id</para>
+        /// <para>testInstanceName</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

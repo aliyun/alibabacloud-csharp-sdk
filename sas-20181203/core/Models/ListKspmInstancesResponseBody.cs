@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListKspmInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of Kubernetes asset information.</para>
+        /// <para>The list of Kubernetes asset information.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListKspmInstancesResponseBodyInstances> Instances { get; set; }
         public class ListKspmInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the asset has security alarms. Values:</para>
+            /// <para>Indicates whether security alerts exist for the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b>: There are security alarms</description></item>
-            /// <item><description><b>NO</b>: There are no security alarms</description></item>
+            /// <item><description><b>YES</b>: Security alerts exist.</description></item>
+            /// <item><description><b>NO</b>: No security alerts exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yztest-l***</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the asset is located.</para>
+            /// <para>The ID of the region where the asset resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hanghzou</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asset has security risks. Values:</para>
+            /// <para>Indicates whether security risks exist for the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b>: There are security risks</description></item>
-            /// <item><description><b>NO</b>: There are no security risks</description></item>
+            /// <item><description><b>YES</b>: Security risks exist.</description></item>
+            /// <item><description><b>NO</b>: No security risks exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// <para>Security information of the asset.</para>
+            /// <para>The security information of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;seriousNum\&quot;:0,\&quot;appNum\&quot;:0,\&quot;baselineMedium\&quot;:0,\&quot;remindNum\&quot;:0,\&quot;imageVulNntf\&quot;:0,\&quot;cveNum\&quot;:0,\&quot;vul\&quot;:0,\&quot;uuid\&quot;:\&quot;rm-uf6t6u05n6g485o70\&quot;,\&quot;emgNum\&quot;:0,\&quot;weakPWNum\&quot;:0,\&quot;imageMaliciousFileRemind\&quot;:0,\&quot;imageBaselineMedium\&quot;:0,\&quot;laterVulCount\&quot;:0,\&quot;cmsNum\&quot;:0,\&quot;imageMaliciousFileSerious\&quot;:0,\&quot;agentlessMalicious\&quot;:0,\&quot;suspNum\&quot;:0,\&quot;imageBaselineHigh\&quot;:0,\&quot;asapVulCount\&quot;:0,\&quot;imageVulLater\&quot;:0,\&quot;agentlessAll\&quot;:0,\&quot;sysNum\&quot;:0,\&quot;containerLater\&quot;:0,\&quot;containerSuspicious\&quot;:0,\&quot;imageBaselineNum\&quot;:0,\&quot;newSuspicious\&quot;:0,\&quot;nntfVulCount\&quot;:0,\&quot;scaNum\&quot;:0,\&quot;containerNntf\&quot;:0,\&quot;health\&quot;:0,\&quot;trojan\&quot;:0,\&quot;suspicious\&quot;:0,\&quot;imageMaliciousFileSuspicious\&quot;:0,\&quot;containerRemind\&quot;:0,\&quot;baselineLow\&quot;:0,\&quot;imageVulAsap\&quot;:0,\&quot;imageBaselineLow\&quot;:0,\&quot;containerAsap\&quot;:0,\&quot;agentlessBaseline\&quot;:0,\&quot;agentlessVulSca\&quot;:0,\&quot;agentlessVulCve\&quot;:0,\&quot;containerSerious\&quot;:0,\&quot;baselineHigh\&quot;:0,\&quot;account\&quot;:0,\&quot;baselineNum\&quot;:6}</para>
@@ -145,14 +145,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SecurityInfo { get; set; }
 
             /// <summary>
-            /// <para>List of resource tags.</para>
+            /// <para>The list of resource tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<string> Tags { get; set; }
 
             /// <summary>
-            /// <para>The vendor of the asset. This value is fixed at <b>200</b>.</para>
+            /// <para>The asset vendor. This parameter is fixed to <b>200</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -164,14 +164,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Page information for pagination queries.</para>
+        /// <para>The paging information for a paged query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListKspmInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class ListKspmInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of data items displayed on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a pagination query.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of items to display per page in a pagination query.</para>
+            /// <para>The maximum number of entries per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of data items found.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>55</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of this call request, a unique identifier generated by Alibaba Cloud for the request, which can be used to troubleshoot and pinpoint issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</para>
@@ -223,10 +223,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the API call was successful. Values:</para>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Success</description></item>
-        /// <item><description><b>false</b>: Failure</description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

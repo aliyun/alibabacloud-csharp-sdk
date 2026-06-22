@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeVpcHoneyPotListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeVpcHoneyPotListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FEC7F58-FCDA-415F-AE25-CD8BC0931DF2</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the honeypots.</para>
+        /// <para>The information about cloud honeypot instances.</para>
         /// </summary>
         [NameInMap("VpcHoneyPotDTOList")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The time at which the VPC was created. Unit: milliseconds.</para>
+            /// <para>The time when the VPC was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1607365213000</para>
@@ -96,13 +96,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the server on which the honeypot is deployed. Valid values:</para>
+            /// <para>The status of the Elastic Compute Service (ECS) instance that corresponds to the cloud honeypot instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: The server is being created.</description></item>
-            /// <item><description><b>Running</b>: The server is running.</description></item>
-            /// <item><description><b>Starting</b>: The server is being started.</description></item>
-            /// <item><description><b>Stopping</b>: The server is being stopped.</description></item>
-            /// <item><description><b>Stopped</b>: The server is stopped.</description></item>
+            /// <item><description><b>Pending</b>: being created</description></item>
+            /// <item><description><b>Running</b>: running</description></item>
+            /// <item><description><b>Starting</b>: starting</description></item>
+            /// <item><description><b>Stopping</b>: stopping</description></item>
+            /// <item><description><b>Stopped</b>: stopped</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneyPotEcsInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the elastic network interface (ENI) used by the honeypot in the VPC.</para>
+            /// <para>The ID of the elastic network interface (ENI) that the cloud honeypot created in the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-p0whwgg7bing8b80****</para>
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneyPotEniInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cloud honeypot feature is enabled for the VPC. Valid values:</para>
+            /// <para>Indicates whether the VPC has cloud honeypot enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><b>true</b>: enabled</description></item>
+            /// <item><description><b>false</b>: disabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -137,13 +137,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? HoneyPotExistence { get; set; }
 
             /// <summary>
-            /// <para>The status of the honeypot. Valid values:</para>
+            /// <para>The status of the cloud honeypot instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pending</b>: The honeypot is being created.</description></item>
-            /// <item><description><b>deleting</b>: The honeypot is being deleted.</description></item>
-            /// <item><description><b>off</b>: The honeypot is disabled.</description></item>
-            /// <item><description><b>suspending</b>: The honeypot is suspended.</description></item>
-            /// <item><description><b>on</b>: The honeypot is enabled.</description></item>
+            /// <item><description><b>pending</b>: being created</description></item>
+            /// <item><description><b>deleting</b>: being deleted</description></item>
+            /// <item><description><b>off</b>: disabled</description></item>
+            /// <item><description><b>suspending</b>: being suspended</description></item>
+            /// <item><description><b>on</b>: enabled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneyPotInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the ENI used by the honeypot is connected.</para>
+            /// <para>The ID of the vSwitch to which the ENI used by the cloud honeypot belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-p0w7gdcfvn20tvdul****</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneyPotVpcSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The ID of the VPC in which the cloud honeypot instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-p0w223apdl49sr5zv****</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The name of the VPC.</para>
+            /// <para>The name of the VPC in which the cloud honeypot instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc-vpcname</para>
@@ -184,9 +184,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VpcName { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the VPC.</para>
+            /// <para>The region ID of the VPC in which the cloud honeypot instance resides.</para>
             /// <remarks>
-            /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+            /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -199,8 +199,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the VPC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Available</b>: The VPC is normal and available.</description></item>
-            /// <item><description><b>Pending</b>: The VPC is being configured.</description></item>
+            /// <item><description><b>Available</b>: normal</description></item>
+            /// <item><description><b>Pending</b>: being configured</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VpcStatus { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the vSwitches in the VPC.</para>
+            /// <para>The information about vSwitches in the VPC.</para>
             /// </summary>
             [NameInMap("VpcSwitchIdList")]
             [Validation(Required=false)]

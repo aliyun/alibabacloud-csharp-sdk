@@ -15,9 +15,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The ID of the alert event.</para>
-        /// <remarks>
-        /// <para> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,10 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? SecurityEventId { get; set; }
 
         /// <summary>
-        /// <para>The codes of alert events that are triggered by the same rule or of the same alert type.</para>
-        /// <remarks>
-        /// <para> You must specify at least one of the SecurityEventId and SimilarEventScenarioCode parameters.</para>
-        /// </remarks>
+        /// <para>The code of the alerting event that has the same type or rule hits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -41,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SimilarEventScenarioCode { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>

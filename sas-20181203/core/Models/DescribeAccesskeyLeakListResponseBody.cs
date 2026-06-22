@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAccesskeyLeakListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details about AccessKey pair leaks.</para>
+        /// <para>The list of detailed information about leaked AccessKey pairs.</para>
         /// </summary>
         [NameInMap("AccessKeyLeakList")]
         [Validation(Required=false)]
         public List<DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList> AccessKeyLeakList { get; set; }
         public class DescribeAccesskeyLeakListResponseBodyAccessKeyLeakList : TeaModel {
             /// <summary>
-            /// <para>The ID of the AccessKey pair that is leaked.</para>
+            /// <para>The leaked AccessKey ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourAccessKeyID</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AccesskeyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud account that is affected.</para>
+            /// <para>The name of the affected Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testAccountName</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliUserName { get; set; }
 
             /// <summary>
-            /// <para>The platform to which the asset belongs. The value is fixed as <b>Cloud platform</b>.</para>
+            /// <para>The platform where the asset resides. The value is fixed as <b>Cloud Platform</b>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cloud platform</para>
+            /// <para>云平台</para>
             /// </summary>
             [NameInMap("Asset")]
             [Validation(Required=false)]
             public string Asset { get; set; }
 
             /// <summary>
-            /// <para>The time when the AccessKey pair leak is handled.</para>
+            /// <para>The time when the AccessKey leak information was processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-03 21:23:38</para>
@@ -57,12 +57,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DealTime { get; set; }
 
             /// <summary>
-            /// <para>The method to handle the AccessKey pair leak. Valid values:</para>
+            /// <para>The method used to handle the AccessKey leak information. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pending</b>: The AccessKey pair leak is unhandled.</description></item>
-            /// <item><description><b>manual</b>: The AccessKey pair leak is manually handled.</description></item>
-            /// <item><description><b>disable</b>: The AccessKey pair leak is disabled.</description></item>
-            /// <item><description><b>add-whitelist</b>: The AccessKey pair leak is added to the whitelist.</description></item>
+            /// <item><description><b>pending</b>: unprocessed</description></item>
+            /// <item><description><b>manual</b>: manually processed</description></item>
+            /// <item><description><b>disable</b>: disabled</description></item>
+            /// <item><description><b>add-whitelist</b>: added to the whitelist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DealType { get; set; }
 
             /// <summary>
-            /// <para>The time when the AccessKey pair leak is first detected. The value of this parameter is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the AccessKey leak was first discovered. This parameter is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1612357897000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The primary key ID of the database.</para>
+            /// <para>The primary key ID in the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>389357</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the AccessKey pair leak is handled. Valid values:</para>
+            /// <para>The processing status of the leaked AccessKey information. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pending</b>: unhandled</description></item>
-            /// <item><description><b>dealed</b>: handled</description></item>
+            /// <item><description><b>pending</b>: unprocessed</description></item>
+            /// <item><description><b>dealed</b>: processed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the leak. The value is fixed as <b>AccessKey</b>.</para>
+            /// <para>The type of the leak information. The value is fixed as <b>AccessKey</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AccessKey</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The URL of the platform on which the AccessKey pair leak is detected.</para>
+            /// <para>The URL of the external platform where the AccessKey leak was discovered.</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The type of the account to which the leaked AccessKey pair belongs. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>master</b>: Alibaba Cloud account</description></item>
-            /// <item><description><b>ram</b>: RAM user</description></item>
+            /// <item><description><b>ram</b>: Resource Access Management (RAM) user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of AccessKey pair leaks that are unhandled.</para>
+        /// <para>The number of unprocessed AccessKey leak entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AkLeakCount { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated and can be ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1612357897000</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GmtLast { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B37C9052-A73E-4707-A024-9247702852BE</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of AccessKey pair leaks.</para>
+        /// <para>The total number of AccessKey leak entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

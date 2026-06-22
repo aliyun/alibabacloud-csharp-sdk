@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedVulResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The information about the vulnerability.</para>
+        /// <para>The vulnerability information returned by the query.</para>
         /// </summary>
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that have the <b>high</b> priority.</para>
+            /// <para>The number of vulnerabilities with a fix priority of <b>high</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AsapCount { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was first detected. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was first detected, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639371046000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtFirst { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was last detected, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639371446000</para>
@@ -80,11 +80,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The language type associated with the vulnerability. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>java</b></description></item>
-            /// <item><description><b>php</b></description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> This parameter is valid only for a vulnerability of the sca type.</para>
+            /// <item><description><b>php</b><remarks>
+            /// <para>This parameter applies only to sca vulnerabilities.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>java</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LanguageType { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that have the <b>medium</b> priority.</para>
+            /// <para>The number of vulnerabilities with a fix priority of <b>medium</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that have the <b>low</b> priority.</para>
+            /// <para>The number of vulnerabilities with a fix priority of <b>low</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>59</para>
@@ -124,14 +124,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NntfCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+            /// <para>Indicates whether RASP real-time protection is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not supported</description></item>
-            /// <item><description><b>1</b>: supported</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> If this parameter is not returned, the application protection feature is not supported.</para>
+            /// <item><description><b>0</b>: Not supported.</description></item>
+            /// <item><description><b>1</b>: Supported.<remarks>
+            /// <para>If this property is not present, RASP real-time protection is not supported.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RaspDefend { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.</para>
+            /// <para>The list of CVEs associated with the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2023-24881,CVE-2023-24898</para>
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Related { get; set; }
 
             /// <summary>
-            /// <para>The tag of the vulnerability. Valid values:</para>
+            /// <para>The vulnerability label. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Restart required</b></description></item>
             /// <item><description><b>Remote utilization</b></description></item>
             /// <item><description><b>EXP exists</b></description></item>
             /// <item><description><b>Available</b></description></item>
-            /// <item><description><b>Elevation of Privilege</b></description></item>
-            /// <item><description><b>Code Execution</b></description></item>
+            /// <item><description><b>Privilege escalation</b></description></item>
+            /// <item><description><b>Code execution</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,8 +185,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
             /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
             /// <item><description><b>app</b>: application vulnerability</description></item>
-            /// <item><description><b>emg</b>: urgent vulnerability</description></item>
-            /// <item><description><b>sca</b>: vulnerability that is detected by software component analysis</description></item>
+            /// <item><description><b>emg</b>: emergency vulnerability</description></item>
+            /// <item><description><b>sca</b>: software constituency parsing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of vulnerability entries per page in a paged query. Default value: 10, which indicates that 10 vulnerability entries are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9BFA6D78-07EA-5C0A-9358-E4434573507B</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

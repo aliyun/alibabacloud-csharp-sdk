@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListObjectScanEventRequest : TeaModel {
         /// <summary>
-        /// <para>Batch operation type. Valid values:</para>
+        /// <para>The batch operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sha256</b>: Same file content</description></item>
-        /// <item><description><b>eventName</b>: Same alert type</description></item>
+        /// <item><description><para><b>sha256</b>: same file content</para>
+        /// </description></item>
+        /// <item><description><para><b>eventName</b>: same alerting type.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BatchType { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS bucket.</para>
+        /// <para>The bucket name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ltrbuck****</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page when you perform a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Event ID.</para>
+        /// <para>The event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8925****</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EventId { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert.</para>
+        /// <para>The alert name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WebShell</para>
@@ -65,10 +67,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash value of the file.</para>
+        /// <para>The MD5 hash of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0552c44e243abdea1729d4507bce****</para>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Md5 { get; set; }
 
         /// <summary>
-        /// <para>The key of the file that is stored in an OSS bucket.</para>
+        /// <para>The storage key of the file in the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</para>
@@ -99,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page when you perform a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,7 +112,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert that is generated for the package to which the subfile belongs.</para>
+        /// <para>If the file is a sub-file within a compressed archive, <b>ParentEventId</b> specifies the event ID of the alert for the compressed archive itself.</para>
+        /// <para>To retrieve and query alert events for sub-files within a compressed archive:</para>
+        /// <ol>
+        /// <item><description>Call this operation and check the <b>HasSubEvent</b> response parameter. If the value is <b>true</b>, the corresponding <b>EventId</b> is the event ID of the alert for the compressed archive itself.</description></item>
+        /// <item><description>Call this operation again and pass the <b>EventId</b> value to <b>ParentEventId</b> to view the alert events for the sub-files within the compressed archive.</description></item>
+        /// </ol>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,11 +127,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ParentEventId { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the alert. Valid values:</para>
+        /// <para>The risk level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><para><b>high</b>: high risk</para>
+        /// </description></item>
+        /// <item><description><para><b>medium</b>: medium risk</para>
+        /// </description></item>
+        /// <item><description><para><b>low</b>: low risk.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,10 +145,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to detect the malicious file. Valid values:</para>
+        /// <para>The data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>API</b>: uses API operations.</description></item>
-        /// <item><description><b>OSS</b>: uses Object Storage Service (OSS) file check.</description></item>
+        /// <item><description><b>API</b>: API detection</description></item>
+        /// <item><description><b>OSS</b>: OSS detection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,13 +159,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Event status. The values are as follows:</para>
+        /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Unprocessed </description></item>
-        /// <item><description><b>1</b>: I have processed manually </description></item>
-        /// <item><description><b>2</b>: Whitelisted </description></item>
-        /// <item><description><b>3</b>: Ignored </description></item>
-        /// <item><description><b>4</b>: Access denied</description></item>
+        /// <item><description>0: unhandled </description></item>
+        /// <item><description>1: manually handled</description></item>
+        /// <item><description>2: whitelisted</description></item>
+        /// <item><description>3: ignored</description></item>
+        /// <item><description>4: access denied.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the exception is detected.</para>
+        /// <para>The end time of the time range during which the exception event occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683862286000</para>
@@ -176,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? TimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the exception is detected.</para>
+        /// <para>The start time of the time range during which the exception event occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683603086000</para>

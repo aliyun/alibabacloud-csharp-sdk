@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGraph4InvestigationOnlineResponseBody : TeaModel {
         /// <summary>
-        /// <para>Result code, where <b>200</b> indicates success. Any other value indicates failure, and the caller can use this field to determine the reason for the failure.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeGraph4InvestigationOnlineResponseBodyData Data { get; set; }
         public class DescribeGraph4InvestigationOnlineResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of edges.</para>
+            /// <para>The list of edges.</para>
             /// </summary>
             [NameInMap("EdgeList")]
             [Validation(Required=false)]
             public List<DescribeGraph4InvestigationOnlineResponseBodyDataEdgeList> EdgeList { get; set; }
             public class DescribeGraph4InvestigationOnlineResponseBodyDataEdgeList : TeaModel {
                 /// <summary>
-                /// <para>ID of the end point of the edge.</para>
+                /// <para>The ID of the end vertex of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f944c2362c7e111dee16f0e70ad2xxxx</para>
@@ -44,13 +44,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string EndId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the end point of the current edge. Possible values include but are not limited to:</para>
+                /// <para>The type of the end vertex of the edge. Valid values include but are not limited to:</para>
                 /// <list type="bullet">
-                /// <item><description><b>process</b>: Process</description></item>
-                /// <item><description><b>file</b>: File</description></item>
-                /// <item><description><b>alert</b>: Alert</description></item>
+                /// <item><description><b>process</b>: process</description></item>
+                /// <item><description><b>file</b>: file</description></item>
+                /// <item><description><b>alert</b>: alert</description></item>
                 /// <item><description><b>ip</b>: IP address</description></item>
-                /// <item><description><b>domain</b>: Domain</description></item>
+                /// <item><description><b>domain</b>: domain name.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string EndType { get; set; }
 
                 /// <summary>
-                /// <para>Edge name.</para>
+                /// <para>The name of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bash-&gt;apt-get</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Start vertex id of edge.</para>
+                /// <para>The ID of the start vertex of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f944c2362c7e111dee16f0e70ad2xxxx</para>
@@ -81,13 +81,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string StartId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the starting point of the edge. Possible values include, but are not limited to:</para>
+                /// <para>The type of the start vertex of the edge. Valid values include but are not limited to:</para>
                 /// <list type="bullet">
-                /// <item><description><b>process</b>： Process</description></item>
-                /// <item><description><b>file</b>： File</description></item>
-                /// <item><description><b>alert</b>： Alert</description></item>
-                /// <item><description><b>ip</b>： IP address</description></item>
-                /// <item><description><b>domain</b>： Domain</description></item>
+                /// <item><description><b>process</b>: process</description></item>
+                /// <item><description><b>file</b>: file</description></item>
+                /// <item><description><b>alert</b>: alert</description></item>
+                /// <item><description><b>ip</b>: IP address</description></item>
+                /// <item><description><b>domain</b>: domain name.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string StartType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the edge was established.</para>
+                /// <para>The time when the edge was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-07-01 15:25:46</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>List of vertex types.</para>
+            /// <para>The list of vertex types.</para>
             /// </summary>
             [NameInMap("EntityTypeList")]
             [Validation(Required=false)]
             public List<DescribeGraph4InvestigationOnlineResponseBodyDataEntityTypeList> EntityTypeList { get; set; }
             public class DescribeGraph4InvestigationOnlineResponseBodyDataEntityTypeList : TeaModel {
                 /// <summary>
-                /// <para>Vertex rendering color.</para>
+                /// <para>The rendering color of the vertex.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>#fff</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DisplayColor { get; set; }
 
                 /// <summary>
-                /// <para>Vertex icon.</para>
+                /// <para>The icon of the vertex.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://img.alicdn.com/tfs/TB176P5OgDqK1RjSZSyXXaxEVXa-49-48.png">https://img.alicdn.com/tfs/TB176P5OgDqK1RjSZSyXXaxEVXa-49-48.png</a></para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DisplayIcon { get; set; }
 
                 /// <summary>
-                /// <para>Display order</para>
+                /// <para>The display order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? DisplayOrder { get; set; }
 
                 /// <summary>
-                /// <para>Node type ID.</para>
+                /// <para>The ID of the node type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Vertex name.</para>
+                /// <para>The name of the vertex.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alert</para>
@@ -179,17 +179,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>List of edge types.</para>
+            /// <para>The list of edge types.</para>
             /// </summary>
             [NameInMap("RelationTypeList")]
             [Validation(Required=false)]
             public List<DescribeGraph4InvestigationOnlineResponseBodyDataRelationTypeList> RelationTypeList { get; set; }
             public class DescribeGraph4InvestigationOnlineResponseBodyDataRelationTypeList : TeaModel {
                 /// <summary>
-                /// <para>Direction of the edge. Possible values:</para>
+                /// <para>The direction of the edge. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b> ： Forward</description></item>
-                /// <item><description><b>0</b>： Reverse</description></item>
+                /// <item><description><b>1</b>: forward</description></item>
+                /// <item><description><b>0</b>: reverse.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Directed { get; set; }
 
                 /// <summary>
-                /// <para>Render color of the edge.</para>
+                /// <para>The rendering color of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>#fff</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DisplayColor { get; set; }
 
                 /// <summary>
-                /// <para>Icon style of the edge</para>
+                /// <para>The icon style of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://img.alicdn.com/imgextra/i4/O1CN01ft6rvQ22uUX2JsTmv_!!6000000007180-55-tps-12-12.svg">https://img.alicdn.com/imgextra/i4/O1CN01ft6rvQ22uUX2JsTmv_!!6000000007180-55-tps-12-12.svg</a></para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DisplayIcon { get; set; }
 
                 /// <summary>
-                /// <para>Name of the edge.</para>
+                /// <para>The name of the edge.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spawn process</para>
@@ -232,14 +232,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>List of vertices.</para>
+            /// <para>The list of vertices.</para>
             /// </summary>
             [NameInMap("VertexList")]
             [Validation(Required=false)]
             public List<DescribeGraph4InvestigationOnlineResponseBodyDataVertexList> VertexList { get; set; }
             public class DescribeGraph4InvestigationOnlineResponseBodyDataVertexList : TeaModel {
                 /// <summary>
-                /// <para>Vertex name.</para>
+                /// <para>The name of the vertex.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1a79b3a10ad5e6cad090dd697a7axxxxx</para>
@@ -249,14 +249,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>List of neighboring vertices of the current vertex.</para>
+                /// <para>The list of vertices adjacent to the current vertex.</para>
                 /// </summary>
                 [NameInMap("NeighborList")]
                 [Validation(Required=false)]
                 public List<DescribeGraph4InvestigationOnlineResponseBodyDataVertexListNeighborList> NeighborList { get; set; }
                 public class DescribeGraph4InvestigationOnlineResponseBodyDataVertexListNeighborList : TeaModel {
                     /// <summary>
-                    /// <para>Number of neighboring nodes.</para>
+                    /// <para>The number of adjacent nodes.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? Count { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether there are more neighboring vertices.</para>
+                    /// <para>Indicates whether more adjacent vertices exist.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>False</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public bool? HasMore { get; set; }
 
                     /// <summary>
-                    /// <para>Neighbor node type.</para>
+                    /// <para>The type of the neighbor node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>alert</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Properties.</para>
+                /// <para>The properties.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;DomainName\&quot;: {\&quot;SupportScratchDetection\&quot;: False, \&quot;Description\&quot;: \&quot;The name of the domain.\&quot;, \&quot;Required\&quot;: True, \&quot;UpdateAllowed\&quot;: False, \&quot;Type\&quot;: \&quot;string\&quot;, \&quot;Immutable\&quot;: False}}</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Properties { get; set; }
 
                 /// <summary>
-                /// <para>Time.</para>
+                /// <para>The time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-07-02 16:14:01</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Time { get; set; }
 
                 /// <summary>
-                /// <para>Vertex type.</para>
+                /// <para>The type of the vertex.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alert</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Asset UUID.</para>
+                /// <para>The UUID of the asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5c081b02-f66a-47a4-bd2f-79ee3eafxxxx</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The response message from the request.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier generated by Alibaba Cloud for this request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C699E4E4-F2F4-58FC-A949-457FFE59****</para>
@@ -352,10 +352,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result status of the API call. Values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The API call was successful.</description></item>
-        /// <item><description><b>false</b>: The API call failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

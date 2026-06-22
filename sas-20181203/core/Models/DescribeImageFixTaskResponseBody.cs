@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageFixTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tasks returned.</para>
+        /// <para>The details of the image repair tasks.</para>
         /// </summary>
         [NameInMap("BuildTasks")]
         [Validation(Required=false)]
         public List<DescribeImageFixTaskResponseBodyBuildTasks> BuildTasks { get; set; }
         public class DescribeImageFixTaskResponseBodyBuildTasks : TeaModel {
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The ID of the image repair task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ivf-939536b5-c3ca-427b-8183-91007756</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BuildTaskId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the task starts. Unit: milliseconds.</para>
+            /// <para>The timestamp when the repair task started. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-14 20:34:07</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the task ends. Unit: milliseconds.</para>
+            /// <para>The timestamp when the repair task ended. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-14 20:32:05</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FixTime { get; set; }
 
             /// <summary>
-            /// <para>The version of the image after image risks are fixed.</para>
+            /// <para>The tag of the repaired image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redhat8-vault</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NewTag { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the image after image risks are fixed.</para>
+            /// <para>The UUID of the repaired image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2fa731681911ae8d1b5f11893ace****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NewUuid { get; set; }
 
             /// <summary>
-            /// <para>The version of the image.</para>
+            /// <para>The tag of the original image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>centos8.1-ja</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OldTag { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the image.</para>
+            /// <para>The UUID of the original image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2fa731681911ae8d1b5f11893ace****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OldUuid { get; set; }
 
             /// <summary>
-            /// <para>The region of the image.</para>
+            /// <para>The region ID of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -117,11 +117,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The status of the image repair task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The task is running.</description></item>
-            /// <item><description><b>2</b>: The task is successful.</description></item>
-            /// <item><description><b>3</b>: The task failed.</description></item>
+            /// <item><description><b>1</b>: Repairing</description></item>
+            /// <item><description><b>2</b>: Repaired</description></item>
+            /// <item><description><b>3</b>: Repair failed</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the task. The value is fixed as IMAGE_REPAIR. The value indicates a task that fixes image risks.</para>
+            /// <para>The type of the image repair task. The value is fixed as IMAGE_REPAIR, which indicates image repair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE_REPAIR</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The alias of the fixed vulnerability.</para>
+            /// <para>The name of the vulnerability that was repaired.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2007-5686:rpath_linux Information Disclosure</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeImageFixTaskResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageFixTaskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of tasks returned on the current page.</para>
+            /// <para>The number of image repair tasks on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page. Default value: <b>1</b></para>
+            /// <para>The page number of the results returned. Default value: <b>1</b>, which indicates that the results start from page 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>20</b></para>
+            /// <para>The number of entries per page in a paginated query. Default value: <b>20</b>, which indicates that up to 20 entries are returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of tasks returned.</para>
+            /// <para>The total number of image repair tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8AC52BBA-85D3-5F64-9B48-D08437CAF916</para>

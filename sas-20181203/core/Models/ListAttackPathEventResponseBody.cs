@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAttackPathEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of attack path events.</para>
+        /// <para>The list of attack path events.</para>
         /// </summary>
         [NameInMap("AttackPathEventList")]
         [Validation(Required=false)]
         public List<ListAttackPathEventResponseBodyAttackPathEventList> AttackPathEventList { get; set; }
         public class ListAttackPathEventResponseBodyAttackPathEventList : TeaModel {
             /// <summary>
-            /// <para>Destination asset.</para>
+            /// <para>The destination asset.</para>
             /// </summary>
             [NameInMap("DstAsset")]
             [Validation(Required=false)]
             public ListAttackPathEventResponseBodyAttackPathEventListDstAsset DstAsset { get; set; }
             public class ListAttackPathEventResponseBodyAttackPathEventListDstAsset : TeaModel {
                 /// <summary>
-                /// <para>Subtype of the cloud product asset.</para>
+                /// <para>The subtype of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AssetSubType { get; set; }
 
                 /// <summary>
-                /// <para>Type of the cloud product asset.</para>
+                /// <para>The type of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AssetType { get; set; }
 
                 /// <summary>
-                /// <para>ID of the cloud product asset instance.</para>
+                /// <para>The ID of the cloud service asset instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-uf6a1tt9umxwoxqn****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Instance name.</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>ID of the region where the cloud product asset instance is located.</para>
+                /// <para>The region ID of the cloud service asset instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Sensitive asset flag. Values:</para>
+                /// <para>The sensitive asset flag. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Non-sensitive asset.</description></item>
-                /// <item><description><b>1</b>: Sensitive asset.</description></item>
+                /// <item><description><b>0</b>: Not a sensitive asset.</description></item>
+                /// <item><description><b>1</b>: A sensitive asset.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? SensitiveAssetFlag { get; set; }
 
                 /// <summary>
-                /// <para>Vendor of the cloud product asset.</para>
+                /// <para>The vendor of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EventId { get; set; }
 
             /// <summary>
-            /// <para>Timestamp of the latest discovery. Unit: milliseconds.</para>
+            /// <para>The timestamp of the most recent detection. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742869699000</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastTime { get; set; }
 
             /// <summary>
-            /// <para>Path name.</para>
+            /// <para>The path name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs_get_credential_by_create_login_profile</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathName { get; set; }
 
             /// <summary>
-            /// <para>Description of the path name.</para>
+            /// <para>The path name description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS Instance Can Obtain Long-term Access Credential by Enabling Console Logon for RAM User</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathNameDesc { get; set; }
 
             /// <summary>
-            /// <para>Path type.</para>
+            /// <para>The path type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>role_escalation</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathType { get; set; }
 
             /// <summary>
-            /// <para>Description of the path type.</para>
+            /// <para>The path type description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Privilege Escalation by Role</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathTypeDesc { get; set; }
 
             /// <summary>
-            /// <para>Risk level.</para>
+            /// <para>The risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>suspicious</para>
@@ -170,14 +170,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Source asset.</para>
+            /// <para>The source asset.</para>
             /// </summary>
             [NameInMap("SrcAsset")]
             [Validation(Required=false)]
             public ListAttackPathEventResponseBodyAttackPathEventListSrcAsset SrcAsset { get; set; }
             public class ListAttackPathEventResponseBodyAttackPathEventListSrcAsset : TeaModel {
                 /// <summary>
-                /// <para>Subtype of the cloud product asset.</para>
+                /// <para>The subtype of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AssetSubType { get; set; }
 
                 /// <summary>
-                /// <para>Type of the cloud product asset.</para>
+                /// <para>The type of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AssetType { get; set; }
 
                 /// <summary>
-                /// <para>ID of the cloud product asset instance.</para>
+                /// <para>The ID of the cloud service asset instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp18ifsr1tu1dx39****</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Instance name.</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>ID of the region where the cloud product asset instance is located.</para>
+                /// <para>The region ID of the cloud service asset instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -227,10 +227,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Sensitive asset flag. Values:</para>
+                /// <para>The sensitive asset flag. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: Non-sensitive asset.</description></item>
-                /// <item><description><b>1</b>: Sensitive asset.</description></item>
+                /// <item><description><b>0</b>: Not a sensitive asset.</description></item>
+                /// <item><description><b>1</b>: A sensitive asset.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? SensitiveAssetFlag { get; set; }
 
                 /// <summary>
-                /// <para>Vendor of the cloud product asset.</para>
+                /// <para>The vendor of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -255,14 +255,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Pagination information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListAttackPathEventResponseBodyPageInfo PageInfo { get; set; }
         public class ListAttackPathEventResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of data entries displayed on the current page when performing a paginated query.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number displayed in the pagination query.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of data items displayed per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of data items.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of this request, which is a unique identifier generated by Alibaba Cloud for the request. It can be used for troubleshooting and problem localization.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3956048F-9D73-5EDB-834B-4827BB48****</para>

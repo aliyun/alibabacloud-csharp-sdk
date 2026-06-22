@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExposedStatisticsDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The search condition for components.</para>
+        /// <para>The query condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the server or the cloud asset.</para>
+        /// <para>The public IP address that is exposed on the Internet for the asset to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>116.12.XX.XX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ExposureIp { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the asset.</para>
+        /// <para>The instance ID of the asset to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp1g6wxdwps7s9dz****</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Set PageSize to a non-empty value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,25 +63,25 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource folder.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the ID.</para>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>127608589417****</para>
+        /// <para>1232428423234****</para>
         /// </summary>
         [NameInMap("ResourceDirectoryAccountId")]
         [Validation(Required=false)]
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The type of the exposed asset. Valid values:</para>
+        /// <para>The type of statistics to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>exposureType</b>: gateway assets</description></item>
-        /// <item><description><b>exposurePort</b>: ports</description></item>
-        /// <item><description><b>exposureComponent</b>: system components</description></item>
-        /// <item><description><b>exposureIp</b>: IP addresses</description></item>
+        /// <item><description><b>exposureType</b>: gateway assets exposed on the Internet.</description></item>
+        /// <item><description><b>exposurePort</b>: ports exposed on the Internet.</description></item>
+        /// <item><description><b>exposureComponent</b>: system components exposed on the Internet.</description></item>
+        /// <item><description><b>exposureIp</b>: IP addresses exposed on the Internet.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatisticsType { get; set; }
 
         /// <summary>
-        /// <para>The type of the gateway asset. This parameter is required when the <b>StatisticsType</b> parameter is set to <b>exposureType</b>. Valid values:</para>
+        /// <para>The Asset Type of the gateway to query. This parameter takes effect only when <b>StatisticsType</b> is set to <b>exposureType</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SLB</b>: the public IP address of a Server Load Balancer (SLB) instance</description></item>
-        /// <item><description><b>DNAT</b>: the NAT gateway that connects to the Internet by using the DNAT feature</description></item>
+        /// <item><description><b>SLB</b>: public IP address of a load balancing SLB instance.</description></item>
+        /// <item><description><b>DNAT</b>: NAT gateway that uses the DNAT feature to connect to the Internet.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatisticsTypeGatewayType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway asset. This parameter is required when the <b>StatisticsType</b> parameter is set to <b>exposureType</b>.</para>
+        /// <para>The instance ID of the gateway to query. This parameter takes effect only when <b>StatisticsType</b> is set to <b>exposureType</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-2ze4rso39h4nczcqs****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatisticsTypeInstanceValue { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c9107c04-942f-40c1-981a-f1c1***</para>

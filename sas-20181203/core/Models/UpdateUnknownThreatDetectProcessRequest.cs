@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateUnknownThreatDetectProcessRequest : TeaModel {
         /// <summary>
+        /// <para>The process ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026011210040602108912721603151374234</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProcessId { get; set; }
 
         /// <summary>
+        /// <para>The remark for the process.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>remark</para>
         /// </summary>

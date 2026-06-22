@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListMaliciousFileWhitelistConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the current page to return. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert.</para>
+        /// <para>The alerting name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to ALL, which indicates all alert types.</description></item>
+        /// <item><description>ALL: all Alarm Metric values.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Event ID. <notice>Field is deprecated.</notice></para>
+        /// <para>The event ID.</para>
+        /// <remarks>
+        /// <para>Notice: This field is deprecated..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -46,10 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? IdList { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries to return per page in a paging query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The feature to which this operation belongs. If you leave this parameter empty, the default value agentless is used.</para>
+        /// <para>The business source. This parameter can be left empty. Default value: agentless.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agentless</para>

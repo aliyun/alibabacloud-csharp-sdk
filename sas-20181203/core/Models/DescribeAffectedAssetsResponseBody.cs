@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedAssetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the affected servers.</para>
+        /// <para>The queried server asset information.</para>
         /// </summary>
         [NameInMap("AssetList")]
         [Validation(Required=false)]
         public List<DescribeAffectedAssetsResponseBodyAssetList> AssetList { get; set; }
         public class DescribeAffectedAssetsResponseBodyAssetList : TeaModel {
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The instance ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The instance name of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The number of viruses detected on the server.</para>
+            /// <para>The number of virus detection risks on the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RiskNum { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server.</para>
+            /// <para>The unique identifier of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>947d7514-258a-4b47-9dde-9dxxxxxxxxxx</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeAffectedAssetsResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeAffectedAssetsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paginated query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paginated query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42XXXXXXXX</para>

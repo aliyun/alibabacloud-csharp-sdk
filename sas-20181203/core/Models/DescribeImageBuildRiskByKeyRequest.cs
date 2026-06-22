@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBuildRiskByKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageUuid { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the content in the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The key of the risk rule. </para>
+        /// <para>The key of the build risk rule.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeImageBuildRiskList~~">DescribeImageBuildRiskList</a> operation to obtain the value of <b>RiskKey</b>.</para>
+        /// <para>You can call the <a href="~~DescribeImageBuildRiskList~~">DescribeImageBuildRiskList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskKey { get; set; }
 
         /// <summary>
-        /// <para>The status of the alert event. Valid values:</para>
+        /// <para>The status of the alert event to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: unhandled.</description></item>
         /// <item><description><b>1</b>: ignored.</description></item>

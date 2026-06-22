@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the assets.</para>
+        /// <para>The list of asset information returned.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeGroupedInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeGroupedInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The number of assets on which high-risk vulnerabilities are detected.</para>
+            /// <para>The number of assets that have high-severity vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AsapVulInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of assets that are protected by the specified edition.</para>
+            /// <para>The number of assets that meet the edition requirements.</para>
             /// 
             /// <b>Example:</b>
             /// <para>205</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The type of the server group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: the default group</description></item>
-            /// <item><description><b>1</b>: other group</description></item>
+            /// <item><description><b>1</b>: other groups</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GroupFlag { get; set; }
 
             /// <summary>
-            /// <para>The number of cores of assets in the specified asset type.</para>
+            /// <para>The total number of compute cores of all assets of the specified asset type.</para>
             /// <remarks>
-            /// <para> If the <b>MachineTypes</b> request parameter is not specified, the value of the InstanceCoreCount parameter indicates the total number of cores of assets within your account.</para>
+            /// <para>If the <b>MachineTypes</b> request parameter is not set, the value of this parameter is the total number of compute cores of assets of all types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? InstanceCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of assets that belong to the specified type.</para>
+            /// <para>The total number of assets of the specified asset type.</para>
             /// <remarks>
-            /// <para> If the <b>MachineTypes</b> request parameter is not specified, the value of the InstanceCount parameter is the total number of your assets.</para>
+            /// <para>If the <b>MachineTypes</b> request parameter is not set, the value of this parameter is the total number of assets of all types.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The operating system type of the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>windows</b></description></item>
-            /// <item><description><b>linux</b></description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>This parameter is returned only when Lang is set to zh.</para>
+            /// <item><description><b>linux</b><remarks>
+            /// <para>Notice: This field is returned only when <b>Lang</b> is set to <b>zh</b>.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>windows</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The number of assets that are at risk.</para>
+            /// <para>The number of assets that have security risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172</para>
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeGroupedInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeGroupedInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of asset entries displayed on the current page in a paginated query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paginated query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+            /// <para>The number of entries per page in a paginated query. Default value: <b>20</b>, indicating that 20 entries of asset information are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of asset entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52A3AEE6-114A-499D-8990-4BA9B27FE0AA</para>

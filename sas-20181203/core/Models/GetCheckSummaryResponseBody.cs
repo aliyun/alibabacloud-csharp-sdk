@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics about the number of check items.</para>
+        /// <para>The statistics information related to the number of check items.</para>
         /// </summary>
         [NameInMap("OverallItemStatistic")]
         [Validation(Required=false)]
         public GetCheckSummaryResponseBodyOverallItemStatistic OverallItemStatistic { get; set; }
         public class GetCheckSummaryResponseBodyOverallItemStatistic : TeaModel {
             /// <summary>
-            /// <para>The number of check items supported by the system.</para>
+            /// <para>The number of check items published by the system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>620</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ReleaseCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items available to you.</para>
+            /// <para>The number of check items currently owned by the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The overall risk statistics.</para>
+        /// <para>The overall risk statistics information.</para>
         /// </summary>
         [NameInMap("OverallStatistic")]
         [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotCheckCount { get; set; }
 
             /// <summary>
-            /// <para>The number of unchecked high-risk check items.</para>
+            /// <para>The number of unchecked check items with a high risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotCheckHighCount { get; set; }
 
             /// <summary>
-            /// <para>The number of unchecked low-risk check items.</para>
+            /// <para>The number of unchecked check items with a low risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotCheckLowCount { get; set; }
 
             /// <summary>
-            /// <para>The number of unchecked medium-risk check items.</para>
+            /// <para>The number of unchecked check items with a medium risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotCheckMediumCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items that failed to pass the check.</para>
+            /// <para>The number of check items that failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassCount { get; set; }
 
             /// <summary>
-            /// <para>The number of high-risk check items that failed to pass the check.</para>
+            /// <para>The number of failed check items with a high risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassHighCount { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk check items that failed to pass the check.</para>
+            /// <para>The number of failed check items with a low risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassLowCount { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk check items that failed to pass the check.</para>
+            /// <para>The number of failed check items with a medium risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NotPassMediumCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items that pass the check.</para>
+            /// <para>The number of check items that passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PassCount { get; set; }
 
             /// <summary>
-            /// <para>The number of high-risk check items that pass the check.</para>
+            /// <para>The number of passed check items with a high risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PassHighCount { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk check items that pass the check.</para>
+            /// <para>The number of passed check items with a low risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PassLowCount { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk check items that pass the check.</para>
+            /// <para>The number of passed check items with a medium risk level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>843E4805-****-7EE12FA8DBFD</para>
@@ -178,14 +178,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The summary information about the configuration checks on cloud services.</para>
+        /// <para>The overview results.</para>
         /// </summary>
         [NameInMap("Summarys")]
         [Validation(Required=false)]
         public List<GetCheckSummaryResponseBodySummarys> Summarys { get; set; }
         public class GetCheckSummaryResponseBodySummarys : TeaModel {
             /// <summary>
-            /// <para>The number of detected risk items.</para>
+            /// <para>The number of risk items detected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items that pass the check.</para>
+            /// <para>The number of check items that passed the check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -205,14 +205,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PassCount { get; set; }
 
             /// <summary>
-            /// <para>The information about the check items.</para>
+            /// <para>The standard output of check items.</para>
             /// </summary>
             [NameInMap("Standards")]
             [Validation(Required=false)]
             public List<GetCheckSummaryResponseBodySummarysStandards> Standards { get; set; }
             public class GetCheckSummaryResponseBodySummarysStandards : TeaModel {
                 /// <summary>
-                /// <para>The number of check items that failed to pass the check.</para>
+                /// <para>The number of check items that failed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? FailCount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the check item.</para>
+                /// <para>The check item ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The number of check items that pass the check.</para>
+                /// <para>The number of check items that passed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? PassCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of <b>high-risk</b> items.</para>
+                /// <para>The number of check items with a <b>high</b> risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? RiskLevelHighCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of <b>low-risk</b> items.</para>
+                /// <para>The number of check items with a <b>low</b> risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? RiskLevelLowCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of <b>medium-risk</b> items.</para>
+                /// <para>The number of check items with a <b>medium</b> risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -272,17 +272,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? RiskLevelMediumCount { get; set; }
 
                 /// <summary>
-                /// <para>The name of the check item.</para>
+                /// <para>The check item name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Identity and permission management</para>
+                /// <para>身份权限管理</para>
                 /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// <para>The standard statistics of the check items.</para>
+                /// <para>The risk statistics information for the standard.</para>
                 /// </summary>
                 [NameInMap("StandardStatistic")]
                 [Validation(Required=false)]
@@ -299,7 +299,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotCheckCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of unchecked high-risk check items.</para>
+                    /// <para>The number of unchecked check items with a high risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotCheckHighCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of unchecked low-risk check items.</para>
+                    /// <para>The number of unchecked check items with a low risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotCheckLowCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of unchecked medium-risk check items.</para>
+                    /// <para>The number of unchecked check items with a medium risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -329,7 +329,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotCheckMediumCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of check items that failed to pass the check.</para>
+                    /// <para>The number of check items that failed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotPassCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of high-risk check items that failed to pass the check.</para>
+                    /// <para>The number of failed check items with a high risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotPassHighCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of low-risk check items that failed to pass the check.</para>
+                    /// <para>The number of failed check items with a low risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotPassLowCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of medium-risk check items that failed to pass the check.</para>
+                    /// <para>The number of failed check items with a medium risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? NotPassMediumCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of check items that pass the check.</para>
+                    /// <para>The number of check items that passed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? PassCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of high-risk check items that pass the check.</para>
+                    /// <para>The number of passed check items with a high risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? PassHighCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of low-risk check items that pass the check.</para>
+                    /// <para>The number of passed check items with a low risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -399,7 +399,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? PassLowCount { get; set; }
 
                     /// <summary>
-                    /// <para>The number of medium-risk check items that pass the check.</para>
+                    /// <para>The number of passed check items with a medium risk level.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -413,11 +413,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The type of the check item. Valid values:</para>
+            /// <para>The check item type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>COMPLIANCE</b></description></item>
-            /// <item><description><b>RISK</b></description></item>
-            /// <item><description><b>IDENTITY_PERMISSION</b></description></item>
+            /// <item><description><b>COMPLIANCE</b>: Compliance.</description></item>
+            /// <item><description><b>RISK</b>: Security risk.</description></item>
+            /// <item><description><b>IDENTITY_PERMISSION</b>: Identity and access management.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The risk statistics by type.</para>
+            /// <para>The risk statistics information for the risk category.</para>
             /// </summary>
             [NameInMap("TypeStatistic")]
             [Validation(Required=false)]
@@ -445,7 +445,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotCheckCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of unchecked high-risk check items.</para>
+                /// <para>The number of unchecked check items with a high risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -455,7 +455,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotCheckHighCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of unchecked low-risk check items.</para>
+                /// <para>The number of unchecked check items with a low risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -465,7 +465,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotCheckLowCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of unchecked medium-risk check items.</para>
+                /// <para>The number of unchecked check items with a medium risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -475,7 +475,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotCheckMediumCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of check items that failed to pass the check.</para>
+                /// <para>The number of check items that failed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -485,7 +485,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotPassCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of high-risk check items that failed to pass the check.</para>
+                /// <para>The number of failed check items with a high risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotPassHighCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of low-risk check items that failed to pass the check.</para>
+                /// <para>The number of failed check items with a low risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotPassLowCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of medium-risk check items that failed to pass the check.</para>
+                /// <para>The number of failed check items with a medium risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -515,7 +515,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? NotPassMediumCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of check items that pass the check.</para>
+                /// <para>The number of check items that passed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? PassCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of high-risk check items that pass the check.</para>
+                /// <para>The number of passed check items with a high risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -535,7 +535,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? PassHighCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of low-risk check items that pass the check.</para>
+                /// <para>The number of passed check items with a low risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -545,7 +545,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? PassLowCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of medium-risk check items that pass the check.</para>
+                /// <para>The number of passed check items with a medium risk level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

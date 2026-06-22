@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeFieldStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the asset to query. If no asset types are specified, all types of assets are returned. Valid values:</para>
+        /// <para>The type of asset to query. If you do not specify an asset type, the statistics information of all asset types is queried. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ecs</b>: server</description></item>
-        /// <item><description><b>cloud_product</b>: Alibaba Cloud service</description></item>
+        /// <item><description><b>cloud_product</b>: cloud product.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the asset resides.</para>
+        /// <para>The ID of the region where the server resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary account of the Resource Directory member account.</para>
+        /// <para>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</para>
         /// <remarks>
-        /// <para>call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> interface to obtain this parameter.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

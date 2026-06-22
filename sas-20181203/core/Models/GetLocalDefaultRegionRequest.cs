@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLocalDefaultRegionRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud service provider. Valid values:</para>
+        /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Tencent</b>: Tencent Cloud.</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
-        /// <item><description><b>Azure</b>: Microsoft Azure.</description></item>
-        /// <item><description><b>AWS</b>: Amazon Web Services (AWS).</description></item>
+        /// <item><description><b>Tencent</b>: Tencent Cloud</description></item>
+        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
+        /// <item><description><b>Azure</b>: Azure</description></item>
+        /// <item><description><b>AWS</b>: AWS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ProcessSoarStrategyTaskRequest : TeaModel {
         /// <summary>
-        /// <para>ID of the strategy task.</para>
+        /// <para>The ID of the policy task.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> interface.</para>
+        /// <para>Call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyTaskId { get; set; }
 
         /// <summary>
-        /// <para>Task action status. Values:</para>
+        /// <para>The action status of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SCHEDULE: Schedule</description></item>
-        /// <item><description>PAUSE: Pause</description></item>
+        /// <item><description>SCHEDULE: scheduling</description></item>
+        /// <item><description>PAUSE: pause.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSoarStrategyTaskResultRequest : TeaModel {
         /// <summary>
-        /// <para>Condition parameters for task scheduling.</para>
+        /// <para>The condition parameter for task scheduling.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;status&quot;:1}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>The current page number during paginated queries.</para>
+        /// <para>The page number of the current page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to display per page during paginated queries.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Strategy task ID.</para>
+        /// <para>The ID of the policy task.</para>
         /// <remarks>
-        /// <para>You can obtain this parameter by calling the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> interface.</para>
+        /// <para>Call the <a href="~~DescribeSoarStrategyTasks~~">DescribeSoarStrategyTasks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

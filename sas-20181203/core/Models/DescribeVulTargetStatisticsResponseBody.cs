@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulTargetStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page when paging is used in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page when paging is used in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23AD0BD2-8771-5647-819E-6BA51E212F80</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the configurations of the vulnerability scan feature.</para>
+        /// <para>The statistics of vulnerability configurations.</para>
         /// </summary>
         [NameInMap("TargetStats")]
         [Validation(Required=false)]
         public List<DescribeVulTargetStatisticsResponseBodyTargetStats> TargetStats { get; set; }
         public class DescribeVulTargetStatisticsResponseBodyTargetStats : TeaModel {
             /// <summary>
-            /// <para>An array that consists of available servers.</para>
+            /// <para>The list of target servers for the assets.</para>
             /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
             public List<DescribeVulTargetStatisticsResponseBodyTargetStatsTargets> Targets { get; set; }
             public class DescribeVulTargetStatisticsResponseBodyTargetStatsTargets : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the configurations are applied to the server. Valid values:</para>
+                /// <para>The type of configuration effect. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>add</b>: yes</description></item>
-                /// <item><description><b>del</b>: no</description></item>
+                /// <item><description><b>add</b>: The configuration takes effect on the server.</description></item>
+                /// <item><description><b>del</b>: The configuration does not take effect on the server.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Flag { get; set; }
 
                 /// <summary>
-                /// <para>The group ID or UUID of the server to which the configurations are applied.</para>
+                /// <para>The group ID or UUID of the asset on which the configuration takes effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0011ea53-738c-4bff-93be-ce6a1cc9****</para>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Target { get; set; }
 
                 /// <summary>
-                /// <para>The condition by which the configurations are applied to the server. Valid values:</para>
+                /// <para>The target type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>uuid</b>: the UUID of the server</description></item>
-                /// <item><description><b>groupId</b>: the ID of the server group</description></item>
+                /// <item><description><b>uuid</b>: asset.</description></item>
+                /// <item><description><b>groupId</b>: server group.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The total number of servers.</para>
+            /// <para>The total number of assets returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of servers to which the configurations are applied.</para>
+            /// <para>The number of servers on which the configuration takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,12 +114,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UuidCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the vulnerability. Valid values:</para>
+            /// <para>The type of vulnerability to query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cve: Linux software vulnerabilities</description></item>
-            /// <item><description>sys: Windows system vulnerabilities</description></item>
-            /// <item><description>cms: Web-CMS vulnerabilities</description></item>
-            /// <item><description>emg: urgent vulnerabilities</description></item>
+            /// <item><description>cve: Linux software vulnerability</description></item>
+            /// <item><description>sys: Windows system vulnerability</description></item>
+            /// <item><description>cms: Web-CMS vulnerability</description></item>
+            /// <item><description>emg: emergency vulnerability.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

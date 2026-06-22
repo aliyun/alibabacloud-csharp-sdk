@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListMaliciousFileWhitelistConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,16 +30,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The alert whitelist rules of sensitive files that are detected by using the agentless detection feature.</para>
+        /// <para>The list of allowlist rules for agentless file detection alerts.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListMaliciousFileWhitelistConfigsResponseBodyList> List { get; set; }
         public class ListMaliciousFileWhitelistConfigsResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The number of the assets on which the rule takes effect.</para>
+            /// <para>The number of assets for which the rule takes effect.</para>
             /// <remarks>
-            /// <para> The value of this parameter is returned only if the value of TargetType is SELECTION_KEY.</para>
+            /// <para>This field has a value only when targetType is set to SELECTION_KEY.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Count { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert.</para>
+            /// <para>The alerting name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>The value is fixed as ALL, which indicates all alert types.</description></item>
+            /// <item><description>ALL: all Alarm Metric values.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The field that is used in the whitelist rule.</para>
+            /// <para>The field added to the allowlist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fileMd5</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Field { get; set; }
 
             /// <summary>
-            /// <para>The value of the field that is used in the whitelist rule.</para>
+            /// <para>The value of the field added to the allowlist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b2cf9747ee49d8d9b105cf16e078cc16</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1691719662000</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the rule was modified.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1691719662000</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The ID of the alert allowlist rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -113,9 +113,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The logical operator of the whitelist rule.</para>
+            /// <para>The operator used for rule evaluation. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>The value is fixed as strEqual, which indicates the equality operator (=).</description></item>
+            /// <item><description>strEqual: string equals.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>Remark</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -136,9 +136,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The feature to which this operation belongs.</para>
+            /// <para>The business source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>The value is fixed as agentless, which indicates the agentless detection feature.</description></item>
+            /// <item><description>agentless: agentless detection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,10 +149,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The type of the assets on which the rule takes effect. Valid values:</para>
+            /// <para>The target type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ALL: all assets</description></item>
-            /// <item><description>SELECTION_KEY: selected assets</description></item>
+            /// <item><description>SELECTION_KEY: assets selected by the asset selection component.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -163,10 +163,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The assets on which the rule takes effect. Valid values:</para>
+            /// <para>The target scope. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ALL: all assets</description></item>
-            /// <item><description>Others: selected assets</description></item>
+            /// <item><description>Other values: the asset scope key selected by the asset selection component.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListMaliciousFileWhitelistConfigsResponseBodyPageInfo PageInfo { get; set; }
         public class ListMaliciousFileWhitelistConfigsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>
@@ -248,10 +248,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

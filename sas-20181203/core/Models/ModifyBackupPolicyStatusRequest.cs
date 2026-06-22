@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyBackupPolicyStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the anti-ransomware policy.</para>
+        /// <para>The ID of the anti-ransomware policy that you want to enable or shutdown.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The version of the anti-ransomware policy. Set the value to <b>2.0.0</b>.</para>
+        /// <para>The version of the policy that you want to enable or disable. Set the value to <b>2.0.0</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable or disable the anti-ransomware policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enabled</b>: enables the anti-ransomware policy. After you enable the anti-ransomware policy, the anti-ransomware feature protects data on your servers. Data on your servers is backed up based on the policy.</description></item>
-        /// <item><description><b>disabled</b>: disables the anti-ransomware policy. After you disable the anti-ransomware policy, the data backup task that is running based on the policy stops.</description></item>
+        /// <item><description><b>enabled</b>: Enables the anti-ransomware policy. After the policy is enabled, anti-ransomware can protect your server data by backing up data on specified servers based on your anti-ransomware policy.</description></item>
+        /// <item><description><b>disabled</b>: Disables the anti-ransomware policy. After the policy is disabled, running backup tasks are stopped.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> When the system runs data backup tasks, your network bandwidth is consumed. We recommend that you enable the anti-ransomware policy during peak-off hours to back up data.</para>
+        /// <para>Backup tasks consume network bandwidth. Enable the policy during off-peak hours to execute data backup tasks.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

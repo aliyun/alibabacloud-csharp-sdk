@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLocalDefaultRegionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier that Alibaba Cloud generates for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F6D23860-55C2-55AA-B484-****</para>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The access type of the multi-cloud site. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The current site is not the default site of the multi-cloud site. You can specify a site as the default site of the multi-cloud site.</description></item>
-        /// <item><description><b>1</b>: The current site is the default site of the multi-cloud site.</description></item>
-        /// <item><description><b>2</b>: Another site is set as the default site of the multi-cloud site.</description></item>
+        /// <item><description><b>0</b>: No default site exists. You can select one.</description></item>
+        /// <item><description><b>1</b>: The current site is already the default site.</description></item>
+        /// <item><description><b>2</b>: Another site is already set as the default site.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

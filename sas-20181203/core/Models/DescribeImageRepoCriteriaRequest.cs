@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageRepoCriteriaRequest : TeaModel {
         /// <summary>
-        /// <para>The value of the filter condition.</para>
+        /// <para>The search value for image repositories.</para>
         /// <remarks>
-        /// <para>You can perform fuzzy search based on the image ID, image tag, image instance ID, image repository name, image repository namespace, image repository ID, image repository region, image digest, and image repository type.</para>
+        /// <para>This parameter supports fuzzy match for image IDs, tags, image instance IDs, repository names, repository namespaces, repository IDs, repository regions, digests, and repository types.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

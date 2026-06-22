@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GenerateK8sAccessInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GenerateK8sAccessInfoResponseBodyData Data { get; set; }
         public class GenerateK8sAccessInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The aliuid of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1766185894104***</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service Logstore that is used to store the audit logs.</para>
+            /// <para>The SLS Logstore of the audit log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audit-cf6baf6afa106eca665296fdf68b65bf</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuditLogStore { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project that is used to store the audit logs.</para>
+            /// <para>The SLS project of the audit log.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-custom-your-project-sd89ehaaa</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuditProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the server is deployed.</para>
+            /// <para>The region ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -77,17 +77,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>CPU architectures are divided into ARM architecture and x86 architecture.</para>
+            /// <para>The CPU architecture, which can be ARM or x86. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>arm64</para>
+            /// </description></item>
+            /// <item><description><para>x86</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>arm</para>
+            /// <para>x86</para>
             /// </summary>
             [NameInMap("CpuArch")]
             [Validation(Required=false)]
             public string CpuArch { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. Unit: milliseconds.</para>
+            /// <para>The expiration time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1804230578566</para>
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier that Alibaba Cloud generates for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>061955B2-BC40-589F-AF63-C40A901EE279</para>

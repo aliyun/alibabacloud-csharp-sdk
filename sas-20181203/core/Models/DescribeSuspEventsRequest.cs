@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Webshell</para>
+        /// <para>other</para>
         /// </summary>
         [NameInMap("ParentEventTypes")]
         [Validation(Required=false)]

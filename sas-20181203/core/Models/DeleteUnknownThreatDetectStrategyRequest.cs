@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteUnknownThreatDetectStrategyRequest : TeaModel {
         /// <summary>
+        /// <para>The list of policy IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>

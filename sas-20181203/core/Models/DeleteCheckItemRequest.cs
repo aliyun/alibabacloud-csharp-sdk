@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteCheckItemRequest : TeaModel {
         /// <summary>
-        /// <para>List of check item IDs.</para>
+        /// <para>The list of check item IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CheckIds")]

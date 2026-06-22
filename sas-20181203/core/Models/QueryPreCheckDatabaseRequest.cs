@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class QueryPreCheckDatabaseRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the agent that is used to back up the data of the database.</para>
+        /// <para>The unique identifier of the server database backup client.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</para>
+        /// <para>You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceUuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database precheck task.</para>
+        /// <para>The ID of the database pre-check task.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to query the ID of the database precheck task.</para>
+        /// <para>You can call the <a href="~~StartPreCheckDatabase~~">StartPreCheckDatabase</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the server that hosts the database.</para>
+        /// <para>The region ID of the database server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

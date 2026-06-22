@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTotalStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The source of data. Default value: <b>aqs</b>. Valid values:</para>
+        /// <para>The source of the data request. Default value: <b>aqs</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sas</b>: Security Center</description></item>
-        /// <item><description><b>aqs</b>: Server Guard</description></item>
+        /// <item><description><b>sas</b>: The data request comes from Security Center.</description></item>
+        /// <item><description><b>aqs</b>: The data request comes from Server Guard.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset group.</para>
+        /// <para>The ID of the asset group to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to query the IDs of asset groups.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/130972.html">DescribeAllGroups</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name or public IP address of the asset.</para>
+        /// <para>The asset name or public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>222.185.XX.XX</para>

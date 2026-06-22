@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to query the IDs of check items.</para>
+        /// <para>Call the <a href="~~ListCheckItemWarningSummary~~">ListCheckItemWarningSummary</a> operation to obtain the check item ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The reason why the check item is added to the whitelist.</para>
+        /// <para>The reason for adding the whitelist entry.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AutoRun</para>
+        /// <para>Manually processed.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>A list of asset UUIDs from which container names need to be removed from the whitelist.</para>
+        /// <para>The list of asset UUIDs for which container names are to be removed from the whitelist.</para>
         /// </summary>
         [NameInMap("RemoveContainerUuids")]
         [Validation(Required=false)]
@@ -66,8 +66,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: server</description></item>
-        /// <item><description><b>agentless</b>: agentless detection</description></item>
+        /// <item><description><b>default</b>: host</description></item>
+        /// <item><description><b>agentless</b>: agentless.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The type of the assets on which the whitelist rule takes effect. Valid values:</para>
+        /// <para>The type of the target on which the whitelist takes effect. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>all_instance</b>: all servers</description></item>
-        /// <item><description><b>instance</b>: specific servers</description></item>
+        /// <item><description><b>instance</b>: specific servers.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

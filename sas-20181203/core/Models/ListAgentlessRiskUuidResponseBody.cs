@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRiskUuidResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the hosts.</para>
+        /// <para>The list of servers.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListAgentlessRiskUuidResponseBodyList> List { get; set; }
         public class ListAgentlessRiskUuidResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The number of baseline risks.</para>
+            /// <para>The number of baseline risk items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BaselineCount { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the asset.</para>
+            /// <para>The ID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-bp1g6wxdwps7s9dz****</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MaliciousCount { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the detection. Unit: milliseconds.</para>
+            /// <para>The timestamp of the scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ScanTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset that is detected.</para>
+            /// <para>The ID of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset that is detected.</para>
+            /// <para>The name of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test****</para>
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information for the query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListAgentlessRiskUuidResponseBodyPageInfo PageInfo { get; set; }
         public class ListAgentlessRiskUuidResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>05AE6B16-741A-5A75-9BF0-BC747DD9****</para>

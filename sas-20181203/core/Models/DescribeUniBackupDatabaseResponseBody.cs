@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUniBackupDatabaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the information about the databases.</para>
+        /// <para>The list of database details.</para>
         /// </summary>
         [NameInMap("DatabaseList")]
         [Validation(Required=false)]
         public List<DescribeUniBackupDatabaseResponseBodyDatabaseList> DatabaseList { get; set; }
         public class DescribeUniBackupDatabaseResponseBodyDatabaseList : TeaModel {
             /// <summary>
-            /// <para>The status of the anti-ransomware agent. Valid values:</para>
+            /// <para>The status of the database client agent. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UNKNOWN</b>: unknown</description></item>
-            /// <item><description><b>INSTALLED</b>: installed</description></item>
-            /// <item><description><b>INSTALL_FAILED</b>: installation failed</description></item>
-            /// <item><description><b>UNINSTALL_FAILED</b>: uninstallation failed</description></item>
+            /// <item><description><b>UNKNOWN</b>: unknown.</description></item>
+            /// <item><description><b>INSTALLED</b>: installed.</description></item>
+            /// <item><description><b>INSTALL_FAILED</b>: installation failed.</description></item>
+            /// <item><description><b>UNINSTALL_FAILED</b>: uninstallation failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,10 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AgentStatus { get; set; }
 
             /// <summary>
-            /// <para>The service from which the database is created. Valid values:</para>
+            /// <para>The method used to create the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HBR</b>: HBR</description></item>
-            /// <item><description><b>AEGIS</b>: Security Center</description></item>
+            /// <item><description><b>HBR</b>: Cloud Backup.</description></item>
+            /// <item><description><b>AEGIS</b>: Security Center.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><b>MYSQL</b></description></item>
             /// <item><description><b>MSSQL</b></description></item>
-            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><b>Oracle</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DatabaseType { get; set; }
 
             /// <summary>
-            /// <para>The version of the database engine.</para>
+            /// <para>The version of the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12.0.4100.1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DatabaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The instance ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp15aho9hhftvmhw****</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to back up the data of the database.</para>
+            /// <para>The unique identifier of the database backup client on the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>85878b284df911ec800000163e19****</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceUuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the anti-ransomware policy.</para>
+            /// <para>The ID of the anti-ransomware backup policy for the database.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -122,10 +122,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The status of the ECS instance. Valid values:</para>
+            /// <para>The instance status of the ECS instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Stopped</b></description></item>
-            /// <item><description><b>Running</b></description></item>
+            /// <item><description><b>Stopped</b>: stopped.</description></item>
+            /// <item><description><b>Running</b>: running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeUniBackupDatabaseResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeUniBackupDatabaseResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of databases on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of databases per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of databases.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09969D2C-4FAD-429E-BFBF-9A60DEF8****</para>

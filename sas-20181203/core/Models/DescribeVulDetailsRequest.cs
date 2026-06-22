@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language type for the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the vulnerability.</para>
+        /// <para>The vulnerability name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> or <a href="~~DescribeVulList~~">DescribeVulList</a> operation to query the names of vulnerabilities.</para>
+        /// <para>You can call <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> or <a href="~~DescribeVulList~~">DescribeVulList</a> to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The Alibaba Cloud account ID of the member accounts in the resource directory folder.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>You can invoke <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The type of vulnerability to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-        /// <item><description><b>app</b>: application vulnerabilitiy</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerability</description></item>
-        /// <item><description><b>sca</b>: vulnerability that is detected based on software component analysis</description></item>
+        /// <item><description><b>app</b>: application vulnerability</description></item>
+        /// <item><description><b>emg</b>: emergency vulnerability</description></item>
+        /// <item><description><b>sca</b>: software constituency parsing vulnerability.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

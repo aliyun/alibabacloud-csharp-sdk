@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteAutoTagRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the asset auto-tagging rule. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the rules. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListAutoTagRules~~">ListAutoTagRules</a> operation to query the ID.</para>
+        /// <para>Call the <a href="~~ListAutoTagRules~~">ListAutoTagRules</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

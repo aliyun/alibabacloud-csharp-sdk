@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSasContainerWebDefenseRuleApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The applications.</para>
+        /// <para>The application list.</para>
         /// </summary>
         [NameInMap("ContainerWebDefenseAppList")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the container cluster.</para>
             /// <remarks>
-            /// <para> The IDs of clusters can be obtained by using the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation.</para>
+            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/182997.html">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created. Unit: milliseconds.</para>
+            /// <para>The creation time of the application, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1677839038000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time. Unit: milliseconds.</para>
+            /// <para>The most recent modification time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1667891185000</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The ID of the current node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>143761</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>403327</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The value of the application label.</para>
+            /// <para>The application tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app:test</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09969D2C-4FAD-429E-BFBF-9A60DEF8****</para>

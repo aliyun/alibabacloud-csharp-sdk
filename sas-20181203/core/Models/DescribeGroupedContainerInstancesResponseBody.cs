@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedContainerInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the container.</para>
+        /// <para>The list of container asset information returned.</para>
         /// </summary>
         [NameInMap("GroupedContainerInstanceList")]
         [Validation(Required=false)]
         public List<DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList> GroupedContainerInstanceList { get; set; }
         public class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList : TeaModel {
             /// <summary>
-            /// <para>The number of alerts that are detected for the current pod, application, namespace, or cluster.</para>
+            /// <para>The number of alerts detected in the current pod, application, namespace, or cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AlarmCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-liveness-probe</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Kubernetes</b>: dedicated Kubernetes cluster.</description></item>
-            /// <item><description><b>ManagedKubernetes</b>: standard managed cluster (edge cluster).</description></item>
-            /// <item><description><b>Ask</b>: serverless Kubernetes (ASK) cluster.</description></item>
+            /// <item><description><b>Kubernetes</b>: dedicated Kubernetes cluster</description></item>
+            /// <item><description><b>ManagedKubernetes</b>: standard managed cluster (edge cluster)</description></item>
+            /// <item><description><b>Ask</b>: standard serverless cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the cluster was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the cluster was created, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1600076893000</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the cluster. Valid values:</para>
+            /// <para>The running status of the cluster. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>running</b>: The cluster is running.</description></item>
             /// <item><description><b>stopped</b>: The cluster is stopped.</description></item>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CusterState { get; set; }
 
             /// <summary>
-            /// <para>The number of baseline risks that are detected for the current pod, application, namespace, or cluster.</para>
+            /// <para>The total number of baseline checks detected in the current pod, application, namespace, or cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HcCount { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host in the container cluster.</para>
+            /// <para>The host IP address of the container cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.114.XX.XX</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageRepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the image repository.</para>
+            /// <para>The tag of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev-20220512-2</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUuid { get; set; }
 
             /// <summary>
-            /// <para>The number of pods, applications, clusters, or namespaces.</para>
+            /// <para>The number of pods, applications, clusters, or namespaces returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The ID of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-8vb9ul5xec4tua4q****</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the pod.</para>
+            /// <para>The pod name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>csi-plugin-2n****</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PodIp { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The ID of the region in which the instance resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The number of at-risk instances.</para>
+            /// <para>The number of instances that are at risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -251,9 +251,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><b>high</b>: high</description></item>
+            /// <item><description><b>medium</b>: medium</description></item>
+            /// <item><description><b>low</b>: low.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -264,10 +264,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether risks were detected. Valid values:</para>
+            /// <para>The risk status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NO</b></description></item>
-            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b>: No risk.</description></item>
+            /// <item><description><b>YES</b>: At risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -278,9 +278,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the synchronization of cluster audit logs is enabled. Valid values:</para>
+            /// <para>The log audit synchronization switch for the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled.</description></item>
+            /// <item><description><b>0</b>: disabled</description></item>
             /// <item><description><b>1</b>: enabled.</description></item>
             /// </list>
             /// 
@@ -292,10 +292,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SyncOpen { get; set; }
 
             /// <summary>
-            /// <para>The status of the synchronization of cluster audit logs. Valid values:</para>
+            /// <para>The log audit synchronization status for the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The synchronization failed.</description></item>
-            /// <item><description><b>1</b>: The synchronization is successful.</description></item>
+            /// <item><description><b>0</b>: synchronization failed</description></item>
+            /// <item><description><b>1</b>: synchronization succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SyncStatus { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that are detected for the current pod, application, namespace, or cluster.</para>
+            /// <para>The number of vulnerabilities detected in the current pod, application, namespace, or cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeGroupedContainerInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeGroupedContainerInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of container assets returned on the current page.</para>
+            /// <para>The number of container assets displayed on the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+            /// <para>The number of container assets displayed on each page in a paging query. Default value: <b>20</b>, which indicates that 20 container assets are displayed on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4E5BFDCF-B9DD-430D-9DA4-151BCB581C9D</para>

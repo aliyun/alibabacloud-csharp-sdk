@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ReceiveFunctionTrialRewardByAliUidRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the feature for which you want to apply for a free trial. Valid values:</para>
+        /// <para>The name of the trial feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>trail_honeypot_reward</b>: cloud honeypot</description></item>
-        /// <item><description><b>trail_file_detect_api_reward</b>: SDK for malicious file detection</description></item>
+        /// <item><description><b>trail_file_detect_api_reward</b>: malicious file detection SDK.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

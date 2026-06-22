@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeEmgVulItemRequest : TeaModel {
         /// <summary>
-        /// <para>The check method. Valid values:</para>
+        /// <para>The check type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: proof of concept (POC) verification</description></item>
-        /// <item><description><b>1</b>: version comparison</description></item>
+        /// <item><description><b>0</b>: POC verification</description></item>
+        /// <item><description><b>1</b>: version comparison.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CheckType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the first page to return. Default value: <b>1</b>, which indicates that query results are displayed starting from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates that 10 emergency vulnerability entries are displayed per page. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the member accounts in the resource directory (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,11 +71,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the vulnerability poses risks.\
-        /// If you do not specify this parameter, all vulnerabilities are queried regardless of whether the vulnerabilities pose risks. Valid values:</para>
+        /// <para>The risk status of the vulnerabilities to query. If this parameter is not specified, vulnerabilities of all risk statuses are returned, including those with risks and those without risks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: yes</description></item>
-        /// <item><description><b>n</b>: no</description></item>
+        /// <item><description><b>y</b>: at risk</description></item>
+        /// <item><description><b>n</b>: not at risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,11 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskStatus { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to detect the vulnerability.\
-        /// If you do not specify this parameter, all vulnerabilities are queried regardless of which method is used. Valid values:</para>
+        /// <para>The detection method of the vulnerabilities to query. If this parameter is not specified, vulnerabilities detected by all methods are returned by default, including version detection and network scanning. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>python</b>: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</description></item>
-        /// <item><description><b>scan</b>: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</description></item>
+        /// <item><description><b>python</b>: version detection (server software version detection). Detects whether your server has disclosed software vulnerabilities.</description></item>
+        /// <item><description><b>scan</b>: network scanning (network traffic detection). Detects whether your public assets (Internet-accessible servers) have vulnerabilities.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -101,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanType { get; set; }
 
         /// <summary>
-        /// <para>The name of the urgent vulnerability.</para>
+        /// <para>The name of the emergency vulnerability to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Changjietong T + SetupAccount/Upload.aspx file Upload vulnerability (CNVD-2022-60632)</para>

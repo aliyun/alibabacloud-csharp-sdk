@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedMaliciousFileImagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array consisting of the images that have malicious image samples.</para>
+        /// <para>The list of images in which malicious samples are detected.</para>
         /// </summary>
         [NameInMap("AffectedMaliciousFileImagesResponse")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// <para>The image digest.</para>
+            /// <para>The digest of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6a5e1031a5858617f7d8a179ead6****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The URL to download the malicious image sample.</para>
+            /// <para>The download URL of the malicious sample.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://aegis-metadata-file.oss-cn-shanghai.aliyuncs.com/">https://aegis-metadata-file.oss-cn-shanghai.aliyuncs.com/</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The path to the image file.</para>
+            /// <para>The file path of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/d836968041f7683b5605a****</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The text that is highlighted.</para>
+            /// <para>The highlighted text.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ruleVersion&quot;:&quot;highlight_20210908&quot;,&quot;ruleId&quot;:600106,&quot;events&quot;:[[2,54]]}</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HighLight { get; set; }
 
             /// <summary>
-            /// <para>The ID of alert event.</para>
+            /// <para>The ID of the alert event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000040</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUuid { get; set; }
 
             /// <summary>
-            /// <para>The name of the ECS instance.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sql-test-001</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the last scan.</para>
+            /// <para>The timestamp of the latest scan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1596522785000</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LatestScanTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the last verification.</para>
+            /// <para>The timestamp of the latest verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1596522711000</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LatestVerifyTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The image layer.</para>
+            /// <para>The layer of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27213ad3447f0209dd152a5cadea****</para>
@@ -187,11 +187,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Layer { get; set; }
 
             /// <summary>
-            /// <para>The severity of the malicious image sample. Valid values:</para>
+            /// <para>The severity level of the malicious image sample. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>serious</b></description></item>
-            /// <item><description><b>suspicious</b></description></item>
-            /// <item><description><b>remind</b></description></item>
+            /// <item><description><b>serious</b>: urgent</description></item>
+            /// <item><description><b>suspicious</b>: suspicious</description></item>
+            /// <item><description><b>remind</b>: reminder.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the malicious image sample.</para>
+            /// <para>The MD5 hash of the malicious file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>d836968041f768300d9605a****</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousMd5 { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the image repository belongs.</para>
+            /// <para>The namespace of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hanghai-namespace</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the container image.</para>
+            /// <para>The instance ID of the container image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cri-datvail3m****</para>
@@ -272,12 +272,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoRegionId { get; set; }
 
             /// <summary>
-            /// <para>The handling status of the malicious image sample. Valid values:</para>
+            /// <para>The processing status of the malicious image sample. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: unhandled</description></item>
             /// <item><description><b>1</b>: handled</description></item>
             /// <item><description><b>2</b>: verifying</description></item>
-            /// <item><description><b>3</b>: added to the whitelist</description></item>
+            /// <item><description><b>3</b>: added to whitelist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the image.</para>
+            /// <para>The tag of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.2</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task object.</para>
+            /// <para>The ID of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-bp17m0pc0xprzbwo****</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task object.</para>
+            /// <para>The name of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>source-test-obj-9LaLJ</para>
@@ -318,10 +318,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The object type. Valid value:</para>
+            /// <para>The object type of the scan target. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECS_IMAGE</b></description></item>
-            /// <item><description><b>ECS_SNAPSHOT</b></description></item>
+            /// <item><description><b>ECS_IMAGE</b>: image.</description></item>
+            /// <item><description><b>ECS_SNAPSHOT</b>: snapshot.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeAffectedMaliciousFileImagesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeAffectedMaliciousFileImagesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of images that have malicious image samples returned on the current page.</para>
+            /// <para>The number of images with malicious samples returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+            /// <para>The page number of the current page when using paging. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+            /// <para>The maximum number of entries per page when using paging. Default value: <b>20</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of images that have malicious image samples.</para>
+            /// <para>The total number of images in which malicious samples are detected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -393,7 +393,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACF97412-FD09-4D1F-994F-34DF12BREF20</para>

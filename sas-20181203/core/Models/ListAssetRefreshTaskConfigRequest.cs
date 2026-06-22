@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetRefreshTaskConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the configuration. Valid values:</para>
+        /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: server synchronization task</description></item>
-        /// <item><description><b>1</b>: cloud service synchronization task</description></item>
-        /// <item><description><b>2</b>: scheduled AccessKey pair verification task</description></item>
+        /// <item><description><b>0</b>: host refresh task</description></item>
+        /// <item><description><b>1</b>: cloud service refresh task</description></item>
+        /// <item><description><b>2</b>: AccessKey scheduled verification task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RefreshConfigType { get; set; }
 
         /// <summary>
-        /// <para>The region where the Security Center instance is deployed.</para>
+        /// <para>The region of the Security Center instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</para>
+        /// <para>The ID of the AccessKey record specified when querying an AccessKey scheduled verification task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2295</para>

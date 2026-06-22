@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetStrategyTemplateDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the template.</para>
+        /// <para>The template details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetStrategyTemplateDetailResponseBodyData Data { get; set; }
         public class GetStrategyTemplateDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The configuration of the rule.</para>
+            /// <para>The rule configuration information.</para>
             /// </summary>
             [NameInMap("AlarmDetail")]
             [Validation(Required=false)]
             public GetStrategyTemplateDetailResponseBodyDataAlarmDetail AlarmDetail { get; set; }
             public class GetStrategyTemplateDetailResponseBodyDataAlarmDetail : TeaModel {
                 /// <summary>
-                /// <para>The configuration of the baseline.</para>
+                /// <para>The baseline rule configuration information.</para>
                 /// </summary>
                 [NameInMap("Baseline")]
                 [Validation(Required=false)]
                 public GetStrategyTemplateDetailResponseBodyDataAlarmDetailBaseline Baseline { get; set; }
                 public class GetStrategyTemplateDetailResponseBodyDataAlarmDetailBaseline : TeaModel {
                     /// <summary>
-                    /// <para>The baseline items.</para>
+                    /// <para>The list of baseline check items.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -70,11 +70,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The severities of the baselines. Valid values:</para>
+                    /// <para>The list of baseline risk levels. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>high</b></description></item>
-                    /// <item><description><b>medium</b></description></item>
-                    /// <item><description><b>low</b></description></item>
+                    /// <item><description><b>high</b>: High.</description></item>
+                    /// <item><description><b>medium</b>: Medium.</description></item>
+                    /// <item><description><b>low</b>: Low.</description></item>
                     /// </list>
                     /// </summary>
                     [NameInMap("RiskLevel")]
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the alert rule for the malicious sample.</para>
+                /// <para>The malicious sample rule configuration information.</para>
                 /// </summary>
                 [NameInMap("MaliciousFile")]
                 [Validation(Required=false)]
                 public GetStrategyTemplateDetailResponseBodyDataAlarmDetailMaliciousFile MaliciousFile { get; set; }
                 public class GetStrategyTemplateDetailResponseBodyDataAlarmDetailMaliciousFile : TeaModel {
                     /// <summary>
-                    /// <para>The items on which malicious samples are detected.</para>
+                    /// <para>The list of malicious sample items.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The severities of the malicious samples.</para>
+                    /// <para>The list of malicious sample risk levels.</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration of the vulnerability detection rule.</para>
+                /// <para>The vulnerability rule configuration information.</para>
                 /// </summary>
                 [NameInMap("Vul")]
                 [Validation(Required=false)]
                 public GetStrategyTemplateDetailResponseBodyDataAlarmDetailVul Vul { get; set; }
                 public class GetStrategyTemplateDetailResponseBodyDataAlarmDetailVul : TeaModel {
                     /// <summary>
-                    /// <para>The items on which vulnerabilities are detected.</para>
+                    /// <para>The list of vulnerability items.</para>
                     /// </summary>
                     [NameInMap("Item")]
                     [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The alias of the vulnerability.</para>
+                        /// <para>The name of the vulnerability.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ezOffice evoInterfaceServlet Info Leak</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>The severities of the vulnerabilities.</para>
+                    /// <para>The list of vulnerability severity levels.</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c8ca91e0907d94efaba7fb0827eb9****</para>
@@ -206,24 +206,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The names of images.</para>
+            /// <para>The list of image names.</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public List<string> ImageName { get; set; }
 
             /// <summary>
-            /// <para>The tags that are added to the containers.</para>
+            /// <para>The list of container labels.</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
             public List<string> Label { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule supports malicious Internet images. Valid values:</para>
+            /// <para>Specifies whether the rule supports Internet malicious images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -234,18 +234,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? MaliciousImage { get; set; }
 
             /// <summary>
-            /// <para>The namespaces.</para>
+            /// <para>The list of namespaces.</para>
             /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public List<string> Namespace { get; set; }
 
             /// <summary>
-            /// <para>The action on requests. Valid values:</para>
+            /// <para>The rule action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: trigger alerts</description></item>
+            /// <item><description><b>1</b>: alert</description></item>
             /// <item><description><b>2</b>: block</description></item>
-            /// <item><description><b>3</b>: allow</description></item>
+            /// <item><description><b>3</b>: allow.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StrategyName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the template.</para>
+            /// <para>The ID of the template used by the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1204</para>
@@ -286,10 +286,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StrategyTemplateId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the rule supports unscanned images. Valid values:</para>
+            /// <para>Specifies whether the rule supports unscanned images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? UnScanedImage { get; set; }
 
             /// <summary>
-            /// <para>The whitelists of tags that are added to images.</para>
+            /// <para>The list of image tag whitelists.</para>
             /// </summary>
             [NameInMap("WhiteList")]
             [Validation(Required=false)]
@@ -309,7 +309,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information about the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1E36BEEA-0B27-58CC-8319-50279203B048</para>
@@ -329,10 +329,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

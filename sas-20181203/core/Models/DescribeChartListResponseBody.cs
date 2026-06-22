@@ -10,22 +10,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeChartListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The charts.</para>
+        /// <para>The list of charts.</para>
         /// </summary>
         [NameInMap("ChartList")]
         [Validation(Required=false)]
         public List<DescribeChartListResponseBodyChartList> ChartList { get; set; }
         public class DescribeChartListResponseBodyChartList : TeaModel {
             /// <summary>
-            /// <para>The name of the business type. Valid values:</para>
+            /// <para>The business type name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Overall Operations Metrics</description></item>
-            /// <item><description>Asset Operations Metrics</description></item>
-            /// <item><description>Security Alert Operations Metrics</description></item>
-            /// <item><description>Vulnerability Operations Metrics</description></item>
-            /// <item><description>Baseline Operations Metrics</description></item>
-            /// <item><description>Cloud Product Operations Metrics</description></item>
-            /// <item><description>Honeypot Operations Metrics</description></item>
+            /// <item><description>Overall operation metrics</description></item>
+            /// <item><description>Asset operation metrics</description></item>
+            /// <item><description>Security alert operation metrics</description></item>
+            /// <item><description>Vulnerability operation metrics</description></item>
+            /// <item><description>Baseline operation metrics</description></item>
+            /// <item><description>Cloud service operation metrics</description></item>
+            /// <item><description>Cloud honeypot operation metrics.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description>INDEX_VUL_OPERATION</description></item>
             /// <item><description>INDEX_BASELINE_CHECK_OPERATION</description></item>
             /// <item><description>INDEX_CLOUD_ASSET_OPERATION</description></item>
-            /// <item><description>INDEX_HONEYPOT_RISK_OPERATION</description></item>
+            /// <item><description>INDEX_HONEYPOT_RISK_OPERATION.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BusinessType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the chart.</para>
+            /// <para>The chart ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CID_CLOUD_ASSET_SUMMARY</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ChartId { get; set; }
 
             /// <summary>
-            /// <para>The name of the chart.</para>
+            /// <para>The chart name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Security Score</para>
@@ -75,16 +75,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ChartName { get; set; }
 
             /// <summary>
-            /// <para>The type of the chart. Valid values:</para>
+            /// <para>The chart type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b></description></item>
-            /// <item><description><b>table</b></description></item>
-            /// <item><description><b>gauge</b></description></item>
-            /// <item><description><b>pie</b></description></item>
-            /// <item><description><b>line</b></description></item>
-            /// <item><description><b>bar</b></description></item>
-            /// <item><description><b>timeBar</b></description></item>
-            /// <item><description><b>timeLine</b></description></item>
+            /// <item><description><b>text</b>: text</description></item>
+            /// <item><description><b>table</b>: table</description></item>
+            /// <item><description><b>gauge</b>: gauge chart</description></item>
+            /// <item><description><b>pie</b>: pie chart</description></item>
+            /// <item><description><b>line</b>: line chart</description></item>
+            /// <item><description><b>bar</b>: bar chart</description></item>
+            /// <item><description><b>timeBar</b>: timeline bar chart</description></item>
+            /// <item><description><b>timeLine</b>: timeline line chart.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35B434CC-1615-5937-A04E-A9BC2868DB45</para>

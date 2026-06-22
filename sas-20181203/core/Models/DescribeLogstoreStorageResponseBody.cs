@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeLogstoreStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the dedicated Logstore that is used to store full logs of Security Center. The value is fixed as <b>sas-log</b>.</para>
+        /// <para>The name of the dedicated Logstore in which full logs of Security Center are stored. The value is fixed as <b>sas-log</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas-log</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The purchased log storage capacity, in GB.</para>
+        /// <para>The purchased log analysis storage capacity. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12240</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Preserve { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>25EC270F-5783-4416-AD7C-1EDF063A039C</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of days during which logs can be retained. The value is fixed as <b>180</b>, which indicates that logs can be retained for 180 days.</para>
+        /// <para>The number of days for which logs are retained. The value is fixed as <b>180</b>, which indicates that logs can be retained for 180 days.</para>
         /// <remarks>
-        /// <para> You are not allowed to change the value of this parameter.</para>
+        /// <para>Security Center does not support adjusting the log retention period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Ttl { get; set; }
 
         /// <summary>
-        /// <para>The used log storage capacity, in GB.</para>
+        /// <para>The used log analysis storage capacity. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>335</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Used { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated Project that is used to store full logs of Security Center.</para>
+        /// <para>The name of the dedicated Project in which full logs of Security Center are stored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas-log-XXXX-cn-hangzhou</para>

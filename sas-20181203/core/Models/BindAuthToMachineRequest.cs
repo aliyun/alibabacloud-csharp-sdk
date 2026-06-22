@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class BindAuthToMachineRequest : TeaModel {
         /// <summary>
-        /// <para>The edition of Security Center that is authorized to scan the asset. Valid values:</para>
+        /// <para>The authorization version of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>6</b>: Anti-virus</description></item>
-        /// <item><description><b>5</b>: Advanced</description></item>
-        /// <item><description><b>3</b>: Enterprise</description></item>
-        /// <item><description><b>7</b>: Ultimate</description></item>
-        /// <item><description><b>10</b>: Value-added Plan</description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition</description></item>
+        /// <item><description><b>5</b>: Advanced Edition</description></item>
+        /// <item><description><b>3</b>: Enterprise Edition</description></item>
+        /// <item><description><b>7</b>: Ultimate Edition</description></item>
+        /// <item><description><b>10</b>: Value-added Service Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AuthVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically bind servers to Security Center. Valid values:</para>
+        /// <para>Specifies whether to enable automatic binding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers that you want to bind to Security Center.</para>
+        /// <para>The UUIDs of the servers to bind.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>Bind</b> and <b>UnBind</b> parameters.</para>
+        /// <para><b>Bind</b> and <b>UnBind</b> cannot both be empty.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Bind")]
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> Bind { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to bind all servers to Security Center. Default value: <b>false</b>. Valid values:</para>
+        /// <para>Specifies whether to bind all assets. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Bind all assets.</description></item>
+        /// <item><description><b>false</b>: Do not bind all assets.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? BindAll { get; set; }
 
         /// <summary>
-        /// <para>The search conditions that are used to filter servers. The value of this parameter is in the JSON format and is case-sensitive.</para>
+        /// <para>The search conditions for assets. This parameter is in JSON format. Note that the parameter values are case-sensitive.</para>
         /// <remarks>
-        /// <para> A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,13 +78,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to specify servers for protection when you purchase Security Center. Valid values:</para>
+        /// <para>Specifies whether this is a pre-binding operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: No.</description></item>
+        /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify servers, the servers are automatically added to Security Center for protection after the purchase order is complete.</para>
+        /// <para>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,10 +95,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsPreBind { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship that you want to use to evaluate multiple search conditions. Default value: <b>OR</b>. Valid values:</para>
+        /// <para>The logical relationship among multiple search conditions. Default value: <b>OR</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b></description></item>
-        /// <item><description><b>AND</b></description></item>
+        /// <item><description><b>OR</b>: The search conditions are evaluated with a logical OR.</description></item>
+        /// <item><description><b>AND</b>: The search conditions are evaluated with a logical AND.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,13 +109,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The edition of Security Center that you purchase in the order. Valid values:</para>
+        /// <para>The order version associated with the pre-binding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>level7</b>: Anti-virus</description></item>
-        /// <item><description><b>level3</b>: Advanced</description></item>
-        /// <item><description><b>level2</b>: Enterprise</description></item>
-        /// <item><description><b>level8</b>: Ultimate</description></item>
-        /// <item><description><b>level10</b>: Value-added Plan</description></item>
+        /// <item><description><b>level7</b>: Anti-virus Edition</description></item>
+        /// <item><description><b>level3</b>: Advanced Edition</description></item>
+        /// <item><description><b>level2</b>: Enterprise Edition</description></item>
+        /// <item><description><b>level8</b>: Ultimate Edition</description></item>
+        /// <item><description><b>level10</b>: Value-added service only.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NtmVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order in which Security Center is purchased and servers are specified for protection.</para>
+        /// <para>The order ID associated with the pre-binding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>233016**0482</para>
@@ -136,9 +136,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PreBindOrderId { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers that you want to unbind from Security Center.</para>
+        /// <para>The ID of the member accounts in the resource folder (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>Bind</b> and <b>UnBind</b> parameters.</para>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16670360956*****</para>
+        /// </summary>
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        /// <summary>
+        /// <para>The UUIDs of the servers to unbind.</para>
+        /// <remarks>
+        /// <para><b>Bind</b> and <b>UnBind</b> cannot both be empty.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UnBind")]

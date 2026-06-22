@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ExportVulRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the vulnerability.</para>
+        /// <para>The vulnerability name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RHSA-2019:3197-Important: sudo security update</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The additional type of the vulnerabilities. You need to specify this parameter when you query application vulnerabilities. If you set the Type parameter to app, you must specify this parameter. Set the value to <b>sca</b>.</para>
+        /// <para>An additional vulnerability type to export. This parameter is required and must be set to <b>sca</b> if the <c>Type</c> parameter is set to <c>app</c>.</para>
         /// <remarks>
-        /// <para>If this parameter is set to <b>sca</b>, <b>application vulnerabilities</b> and the <b>vulnerabilities that are detected based on software component analysis</b> are queried. If you do not specify this parameter, only application vulnerabilities are queried.</para>
+        /// <para>If you set this parameter to <b>sca</b>, the query returns both application vulnerabilities (<b>app</b>) and software composition analysis (<b>sca</b>) vulnerabilities. If you do not set this parameter, only application vulnerabilities are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AttachTypes { get; set; }
 
         /// <summary>
-        /// <para>The name of the container that is affected by the vulnerability.</para>
+        /// <para>The affected container name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxljob-7b87597b99-mcskr</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the first scan.</para>
+        /// <para>The end of the creation time range for the vulnerabilities to export.</para>
         /// <remarks>
-        /// <para> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>A Unix timestamp in milliseconds.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CreateTsEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the first scan.</para>
+        /// <para>The start of the creation time range for the vulnerabilities to export.</para>
         /// <remarks>
-        /// <para> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>A Unix timestamp in milliseconds.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CreateTsStart { get; set; }
 
         /// <summary>
-        /// <para>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</para>
+        /// <para>The CVE ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CVE-2022-44702</para>
@@ -79,10 +79,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CveId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the vulnerability is fixed. Valid values:</para>
+        /// <para>Indicates whether the vulnerability is remediated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: The vulnerability is fixed.</description></item>
-        /// <item><description><b>n</b>: The vulnerability is not fixed.</description></item>
+        /// <item><description><para><b>y</b>: Remediated</para>
+        /// </description></item>
+        /// <item><description><para><b>n</b>: Not remediated</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,9 +95,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The server group ID of the server on which the vulnerabilities are detected.</para>
+        /// <para>The ID of the asset group that contains the affected servers.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</para>
+        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image that is affected by the vulnerability.</para>
+        /// <para>The affected image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>container-<em><b>:</b></em>*</para>
@@ -116,10 +118,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. The default value is <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,11 +134,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</para>
+        /// <para>The remediation priority of the vulnerabilities to export. Separate multiple priorities with commas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: high</description></item>
-        /// <item><description><b>later</b>: medium</description></item>
-        /// <item><description><b>nntf</b>: low</description></item>
+        /// <item><description><para><b>asap</b>: High</para>
+        /// </description></item>
+        /// <item><description><para><b>later</b>: Medium</para>
+        /// </description></item>
+        /// <item><description><para><b>nntf</b>: Low</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The path of the process that is affected by the vulnerability.</para>
+        /// <para>The affected process path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/etc/test</para>
@@ -155,11 +162,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+        /// <para>Specifies whether the vulnerability is protected by runtime application self-protection (RASP). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: no.</para>
+        /// <item><description><para><b>0</b>: Not supported</para>
         /// </description></item>
-        /// <item><description><para><b>1</b>: yes.</para>
+        /// <item><description><para><b>1</b>: Supported</para>
         /// </description></item>
         /// </list>
         /// 
@@ -179,14 +186,36 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The tag that is used to search for the vulnerabilities. Valid values:</para>
+        /// <para>A tag for filtering vulnerabilities. Separate multiple tags with commas. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Restart required</description></item>
-        /// <item><description>Remote exploitation</description></item>
-        /// <item><description>Exploit exists</description></item>
-        /// <item><description>Exploitable</description></item>
-        /// <item><description>Privilege escalation</description></item>
-        /// <item><description>Code execution</description></item>
+        /// <item><description><para>Restart required</para>
+        /// </description></item>
+        /// <item><description><para>remote exploitation</para>
+        /// </description></item>
+        /// <item><description><para>exploit exists</para>
+        /// </description></item>
+        /// <item><description><para>exploitable</para>
+        /// </description></item>
+        /// <item><description><para>Elevation of Privilege</para>
+        /// </description></item>
+        /// <item><description><para>Code Execution</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Restart required</b></para>
+        /// </description></item>
+        /// <item><description><para><b>remote exploitation</b></para>
+        /// </description></item>
+        /// <item><description><para><b>exploit exists</b></para>
+        /// </description></item>
+        /// <item><description><para><b>exploitable</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Elevation of Privilege</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Code Execution</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -197,13 +226,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchTags { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability that you want to export. Valid values:</para>
+        /// <para>The type of vulnerabilities to export. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
-        /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-        /// <item><description><b>app</b>: application vulnerability</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerability</description></item>
+        /// <item><description><para><b>cve</b>: Linux software vulnerability</para>
+        /// </description></item>
+        /// <item><description><para><b>sys</b>: Windows system vulnerability</para>
+        /// </description></item>
+        /// <item><description><para><b>cms</b>: Web-CMS vulnerability</para>
+        /// </description></item>
+        /// <item><description><para><b>app</b>: application vulnerability</para>
+        /// </description></item>
+        /// <item><description><para><b>emg</b>: emergency vulnerability</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -215,7 +249,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server on which the vulnerabilities are detected. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers for which to export vulnerabilities. Separate multiple UUIDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1587bedb-fdb4-48c4-9330-****</para>
@@ -225,9 +259,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Uuids { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) in which the vulnerabilities are detected. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the VPC instances for which to export vulnerabilities. Separate multiple IDs with commas.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to query the IDs of VPCs.</para>
+        /// <para>You can call the <a href="~~DescribeVpcList~~">DescribeVpcList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -238,14 +272,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string VpcInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>漏洞组件信息列表</para>
+        /// <para>A list of vulnerability component information.</para>
         /// </summary>
         [NameInMap("VulEntityList")]
         [Validation(Required=false)]
         public List<ExportVulRequestVulEntityList> VulEntityList { get; set; }
         public class ExportVulRequestVulEntityList : TeaModel {
             /// <summary>
-            /// <para>组件名称</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ollama</para>
@@ -255,7 +289,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EntityName { get; set; }
 
             /// <summary>
-            /// <para>组件版本</para>
+            /// <para>The component version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>

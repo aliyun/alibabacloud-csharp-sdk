@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable the schedule image fix.</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enable</description></item>
-        /// <item><description><b>off</b>: disable</description></item>
+        /// <item><description><para><b>on</b>: enable</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: disable</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>type</b>: The type of the image. The value is fixed to repo.</description></item>
-        /// <item><description><b>target</b>: The content of the image. The value is in the format of Namespace/Image repository.</description></item>
+        /// <item><description><para><b>type</b>: The type of the image. The value is fixed to repo.</para>
+        /// </description></item>
+        /// <item><description><para><b>target</b>: The content of the image. The value is in the format of Namespace/Image repository.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

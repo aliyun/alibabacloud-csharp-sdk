@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListOperationProcessResponseBodyPageInfo PageInfo { get; set; }
         public class ListOperationProcessResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page to display in a paged query. This parameter is used for paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The information about the operation tasks.</para>
+        /// <para>The list of operation task information.</para>
         /// </summary>
         [NameInMap("Processes")]
         [Validation(Required=false)]
         public List<ListOperationProcessResponseBodyProcesses> Processes { get; set; }
         public class ListOperationProcessResponseBodyProcesses : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. Unit: milliseconds.</para>
+            /// <para>The creation time of the task. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1674388824000</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Number of completed subtasks</para>
+            /// <para>The number of completed subtasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DetailTaskReadyCount { get; set; }
 
             /// <summary>
-            /// <para>Total number of subtasks.</para>
+            /// <para>The total number of subtasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks that are complete.</para>
+            /// <para>The number of completed items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>197</para>
@@ -126,12 +126,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task status code. Valid values:</para>
+            /// <para>The check task status code. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: not started.</description></item>
-            /// <item><description>1: running.</description></item>
-            /// <item><description>2: complete.</description></item>
-            /// <item><description>3: times out.</description></item>
+            /// <item><description>1: checking.</description></item>
+            /// <item><description>2: check completed.</description></item>
+            /// <item><description>3: timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,9 +152,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task source. Values: </para>
+            /// <para>The task source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YAO_CHI</b>: YaoChi.</description></item>
+            /// <item><description><b>YAO_CHI</b>: ApsaraDB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,10 +168,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CHECK_ALL: full check.</description></item>
-            /// <item><description>CHECK_POLICY: policy-based check for which check items are configured.</description></item>
+            /// <item><description>CHECK_POLICY: check performed based on check items in the configured policy.</description></item>
             /// <item><description>CHECK_SCHEDULE: scheduled check.</description></item>
-            /// <item><description>CHECK_ITEM: specific check item-based check.</description></item>
-            /// <item><description>CHECK_INSTANCE: specific check item-based check on specific instances.</description></item>
+            /// <item><description>CHECK_ITEM: check performed based on specified check items.</description></item>
+            /// <item><description>CHECK_INSTANCE: check performed based on specified check items and instances.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8B6F758-BCD4-597A-8A2C-DA5A552C****</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteServiceTrailRequest : TeaModel {
         /// <summary>
-        /// <para>The region in which your Security Center service is deployed. Valid values:</para>
+        /// <para>The region of the Security Center instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou</b>: center.</description></item>
-        /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
+        /// <item><description><b>cn-hangzhou:</b> China</description></item>
+        /// <item><description><b>ap-southeast-1:</b> Singapore.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

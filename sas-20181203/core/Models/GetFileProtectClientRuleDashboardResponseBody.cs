@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectClientRuleDashboardResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned when the API call is successful.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFileProtectClientRuleDashboardResponseBodyData Data { get; set; }
         public class GetFileProtectClientRuleDashboardResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The total number of web tamper-proofing licenses.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuthTotal { get; set; }
 
             /// <summary>
+            /// <para>The number of bound tamper-proofing licenses.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BindCount { get; set; }
 
             /// <summary>
+            /// <para>The total number of web tamper-proofing rules.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ProtectedDirectoriesCount { get; set; }
 
             /// <summary>
+            /// <para>The total number of online web tamper-proofing clients.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>

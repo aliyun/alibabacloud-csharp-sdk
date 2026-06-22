@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBuildRiskListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeImageBuildRiskListResponseBodyData Data { get; set; }
         public class DescribeImageBuildRiskListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The risks.</para>
+            /// <para>The summary list of build risks.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp generated when the first scan was performed. Unit: milliseconds.</para>
+                /// <para>The timestamp of the first scan. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1723710827000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? FirstScanTime { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp generated when the last scan was performed. Unit: milliseconds.</para>
+                /// <para>The timestamp of the most recent scan. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1723710827999</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? LastScanTime { get; set; }
 
                 /// <summary>
-                /// <para>The type key of the risk.</para>
+                /// <para>The key of the build risk rule category.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>other</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RiskClass { get; set; }
 
                 /// <summary>
-                /// <para>The type name of the risk.</para>
+                /// <para>The category name of the build risk rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>other</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RiskClassName { get; set; }
 
                 /// <summary>
-                /// <para>The key of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value of <b>RiskKey</b>.</para>
+                /// <para>The key of the build risk rule. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value of <b>RiskKey</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>no_user</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RiskKey { get; set; }
 
                 /// <summary>
-                /// <para>The rule name of the risk.</para>
+                /// <para>The name of the build risk rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>no_user</para>
@@ -106,9 +106,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>high</b></description></item>
-                /// <item><description><b>medium</b></description></item>
-                /// <item><description><b>low</b></description></item>
+                /// <item><description><para><b>high</b>: High.</para>
+                /// </description></item>
+                /// <item><description><para><b>medium</b>: Medium.</para>
+                /// </description></item>
+                /// <item><description><para><b>low</b>: Low.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,14 +134,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>The paging parameters.</para>
             /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
             public DescribeImageBuildRiskListResponseBodyDataPageInfo PageInfo { get; set; }
             public class DescribeImageBuildRiskListResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The page number. Default value: <b>1</b>.</para>
+                /// <para>The page number of the current page when paging is used. Default value: <b>1</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -148,9 +151,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+                /// <para>The maximum number of entries per page when paging is used. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
                 /// <remarks>
-                /// <para> We recommend that you do not leave this parameter empty.</para>
+                /// <para>Do not leave PageSize empty.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information about the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -185,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578AB****</para>
@@ -195,10 +198,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

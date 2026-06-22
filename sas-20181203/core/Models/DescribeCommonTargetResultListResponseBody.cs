@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCommonTargetResultListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6673D49C-A9AB-40DD-B4A2-B92306701AE7</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the configuration item.</para>
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("TargetConfig")]
         [Validation(Required=false)]
         public DescribeCommonTargetResultListResponseBodyTargetConfig TargetConfig { get; set; }
         public class DescribeCommonTargetResultListResponseBodyTargetConfig : TeaModel {
             /// <summary>
-            /// <para>The identifier that indicates whether the configuration item is applied to the server. Valid values:</para>
+            /// <para>The asset configuration flag. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>add</b>: applied</description></item>
-            /// <item><description><b>del</b>: not applied</description></item>
+            /// <item><description><b>add</b>: The configuration takes effect on the asset.</description></item>
+            /// <item><description><b>del</b>: The configuration does not take effect on the asset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Flag { get; set; }
 
             /// <summary>
-            /// <para>The default identifier.</para>
+            /// <para>The default flag for asset configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>add</para>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetDefault { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the IDs of the server groups or the UUIDs of the servers.</para>
+            /// <para>The group ID or asset UUID on which the configuration takes effect.</para>
             /// <remarks>
-            /// <para> If <b>uuid</b> is returned for the <b>TargetType</b> parameter, <b>UUIDs</b> of the servers are returned. If <b>groupId</b> is returned for the <b>TargetType</b> parameter, IDs of the server groups are returned.</para>
+            /// <para>If <b>TargetType</b> returns <b>uuid</b>, this field indicates the <b>UUID</b> of the asset. If <b>TargetType</b> returns <b>groupId</b>, this field indicates the group ID.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("TargetList")]
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<string> TargetList { get; set; }
 
             /// <summary>
-            /// <para>The type of the server to which the configuration item is applied. Valid values:</para>
+            /// <para>The selection mode for the assets on which the configuration takes effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>uuid</b>: a server</description></item>
-            /// <item><description><b>groupId</b>: a server group</description></item>
+            /// <item><description><b>uuid</b>: Added by individual asset.</description></item>
+            /// <item><description><b>groupId</b>: Added by server group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,12 +85,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the configuration item. Valid values:</para>
+            /// <para>The configuration type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>webshell_timescan</b>: webshell detection and removal</description></item>
-            /// <item><description><b>aliscriptengine</b>: in-depth detection engine</description></item>
-            /// <item><description><b>alidetect</b>: installation scope of local file detection</description></item>
-            /// <item><description><b>alidetect-scan-enable</b>: detection scope of local file detection</description></item>
+            /// <item><description><b>webshell_timescan</b>: web shell scan.</description></item>
+            /// <item><description><b>aliscriptengine</b>: deep detection engine.</description></item>
+            /// <item><description><b>alidetect</b>: installation scope of the local file detection engine.</description></item>
+            /// <item><description><b>alidetect-scan-enable</b>: detection scope of the local file detection engine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

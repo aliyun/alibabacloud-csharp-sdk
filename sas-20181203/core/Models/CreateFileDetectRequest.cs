@@ -10,11 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileDetectRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to decompress or not. Valid values:</para>
+        /// <para>Specifies whether to decompress the archive for detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: To decompress.</description></item>
-        /// <item><description>false: Not to decompress.</description></item>
+        /// <item><description><para><b>true</b>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +29,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Decompress { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</para>
+        /// <para>The maximum number of files that can be decompressed from an archive. The maximum value is 1000.</para>
+        /// <para>This parameter is required if you set <c>Decompress</c> to <c>true</c>.</para>
+        /// <remarks>
+        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -34,7 +43,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.</para>
+        /// <para>The maximum number of decompression layers for nested archives. The maximum value is 5.</para>
+        /// <para>This parameter is required if you set <c>Decompress</c> to <c>true</c>.</para>
+        /// <remarks>
+        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxLayer { get; set; }
 
         /// <summary>
-        /// <para>The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.</para>
+        /// <para>The download link for the file. You can provide a public URL to trigger file detection without uploading the file.</para>
+        /// <remarks>
+        /// <para>Skill archives can be submitted only by providing a download link. Therefore, this parameter is required when <c>Type</c> is set to <c>6</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></para>
@@ -54,7 +70,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the file. Only MD5 hash values are supported.</para>
+        /// <para>The unique identifier of the file.</para>
+        /// <para>This parameter is required if <c>Type</c> is <c>0</c>. Its value must be the MD5 or SHA-256 hash of the file.</para>
+        /// <para>If you set <c>Type</c> to <c>6</c>, you do not need to specify this parameter. The operation returns the file\&quot;s unique identifier in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a212417e65c26ff133cfff28f6c****</para>
@@ -64,7 +82,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HashKey { get; set; }
 
         /// <summary>
-        /// <para>The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation to query the keys of files.</para>
+        /// <para>The storage key of the file in an Object Storage Service (OSS) bucket.</para>
+        /// <para>If you submit the file by using the <c>DownloadUrl</c> parameter, you can leave this parameter empty. To obtain the value of this parameter, call the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</para>
+        /// <remarks>
+        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</para>
@@ -74,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>115.213.XX.XX</para>
@@ -84,16 +106,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the file. Valid values:</para>
+        /// <para>The type of the file to detect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: unknown files</description></item>
-        /// <item><description><b>1</b>: binary files</description></item>
-        /// <item><description><b>2</b>: webshell files</description></item>
-        /// <item><description><b>4</b>: script files</description></item>
+        /// <item><description><para><b>0</b>: Malicious file detection</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: Skill archive detection</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para> If you do not know the type of the file, set this parameter to 0.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

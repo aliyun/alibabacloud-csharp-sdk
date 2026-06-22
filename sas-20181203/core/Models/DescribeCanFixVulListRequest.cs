@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCanFixVulListRequest : TeaModel {
         /// <summary>
-        /// <para>The alias of the vulnerability that is specified in Common Vulnerabilities and Exposures (CVE).</para>
+        /// <para>The alias in the vulnerability advisory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RHSA-2017:0184-Important: mysql security update</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the container cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The name of the container cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas-test-cnnf</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the current page in a paging query. The value starts from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
-        /// <para><b>y</b>: The vulnerability is handled. <b>n</b>: The vulnerability is not handled.</para>
+        /// <para><b>y</b>: Handled.
+        /// <b>n</b>: Not handled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>n</para>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the image.</para>
+        /// <para>The unique identifier of the container image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d50****</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The name of the container image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</para>
@@ -94,9 +95,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container image.</para>
+        /// <para>The container image instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the ID of the container image from <b>InstanceId</b> in the response.</para>
+        /// <para>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <b>InstanceId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,9 +118,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the cluster.</para>
+        /// <para>The cluster namespace.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~GetOpaClusterNamespaceList~~">GetOpaClusterNamespaceList</a> operation to query the namespaces of clusters.</para>
+        /// <para>You can call the <a href="~~GetOpaClusterNamespaceList~~">GetOpaClusterNamespaceList</a> operation to query this value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,11 +131,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The priority to fix the vulnerability. Separate multiple priorities with commas (,). Valid values:</para>
+        /// <para>The priority levels of vulnerabilities to query. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asap</b>: high</description></item>
         /// <item><description><b>later</b>: medium</description></item>
-        /// <item><description><b>nntf</b>: low</description></item>
+        /// <item><description><b>nntf</b>: low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries per page in a paging query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -155,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the container group.</para>
+        /// <para>The name of the pod.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22222-7xsqq</para>
@@ -172,13 +173,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
         /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
         /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
+        /// <item><description><b>cn-hongkong</b>: Hong Kong (China)</description></item>
         /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
         /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta)</description></item>
         /// <item><description><b>us-east-1</b>: US (Virginia)</description></item>
         /// <item><description><b>us-west-1</b>: US (Silicon Valley)</description></item>
         /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
-        /// <item><description><b>eu-west-1</b>: UK (London)</description></item>
+        /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -191,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the image repository.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry and obtain the ID of the image repository from <b>RepoId</b> in the response.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/145293.html">ListRepository</a> operation of Container Registry and obtain the value of the <b>RepoId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -202,9 +203,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container image.</para>
+        /// <para>The container image instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the ID of the container image from <b>InstanceId</b> in the response.</para>
+        /// <para>Invoke the <a href="https://help.aliyun.com/document_detail/451339.html">ListRepository</a> operation of Container Registry and obtain the container image instance ID from the <b>InstanceId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -217,7 +218,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the image repository.</para>
         /// <remarks>
-        /// <para> Fuzzy match is supported.</para>
+        /// <para>Fuzzy match is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -228,9 +229,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the image repository belongs.</para>
+        /// <para>The namespace of the image repository.</para>
         /// <remarks>
-        /// <para> Fuzzy match is supported.</para>
+        /// <para>Fuzzy match is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -248,13 +249,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
         /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
         /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
+        /// <item><description><b>cn-hongkong</b>: Hong Kong (China)</description></item>
         /// <item><description><b>ap-southeast-1</b>: Singapore</description></item>
         /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta)</description></item>
         /// <item><description><b>us-east-1</b>: US (Virginia)</description></item>
         /// <item><description><b>us-west-1</b>: US (Silicon Valley)</description></item>
         /// <item><description><b>eu-central-1</b>: Germany (Frankfurt)</description></item>
-        /// <item><description><b>eu-west-1</b>: UK (London)</description></item>
+        /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -265,10 +266,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset that you want to scan. Valid values:</para>
+        /// <para>The scan scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b></description></item>
-        /// <item><description><b>container</b></description></item>
+        /// <item><description><b>image</b>: Image.</description></item>
+        /// <item><description><b>container</b>: Container.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ScanRange")]
@@ -276,11 +277,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The status of the vulnerability. Valid values:</para>
+        /// <para>The fix status of the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The vulnerability is unfixed.</description></item>
-        /// <item><description><b>4</b>: The vulnerability is being fixed.</description></item>
-        /// <item><description><b>7</b>:The vulnerability is fixed.</description></item>
+        /// <item><description><b>1</b>: Unfixed.</description></item>
+        /// <item><description><b>4</b>: Being fixed.</description></item>
+        /// <item><description><b>7</b>: Fixed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -291,7 +292,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatusList { get; set; }
 
         /// <summary>
-        /// <para>The tag to add to the image.</para>
+        /// <para>The tag of the container image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1.0</para>
@@ -301,10 +302,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The vulnerability type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: system vulnerability</description></item>
-        /// <item><description><b>sca</b>: application vulnerability</description></item>
+        /// <item><description><b>sca</b>: application vulnerability.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -316,7 +317,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the image. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of images. Separate multiple UUIDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>d15df12472809c1c3b158606c0f1****</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribePropertyUserItemResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyUserItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page to display in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries displayed on each page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>114</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>An array that consists of the account information returned.</para>
+        /// <para>The account information.</para>
         /// </summary>
         [NameInMap("PropertyItems")]
         [Validation(Required=false)]
         public List<DescribePropertyUserItemResponseBodyPropertyItems> PropertyItems { get; set; }
         public class DescribePropertyUserItemResponseBodyPropertyItems : TeaModel {
             /// <summary>
-            /// <para>The number of servers that belong to the account.</para>
+            /// <para>The number of servers associated with the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>384</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The name of the account.</para>
+            /// <para>The account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adm</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique identifier that Alibaba Cloud generated for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76068BE2-F9C4-4EDD-967B-F503B8CCDD3D</para>

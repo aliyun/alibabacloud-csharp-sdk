@@ -23,11 +23,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The field that you want to query. You can enter multiple fields and separate them with commas (,).</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ThreatTypes</b>: the type of the threat intelligence event</description></item>
-        /// <item><description><b>Intelligences</b>: the threat intelligence event</description></item>
-        /// <item><description><b>ThreatLevel</b>: the level of the threat intelligence event</description></item>
-        /// <item><description><b>Basic</b>: the basic information about the report (the scan result)</description></item>
-        /// <item><description><b>Sandbox</b>: the cloud sandbox check report</description></item>
+        /// <item><description><para><b>ThreatTypes</b>: the type of the threat intelligence event</para>
+        /// </description></item>
+        /// <item><description><para><b>Intelligences</b>: the threat intelligence event</para>
+        /// </description></item>
+        /// <item><description><para><b>ThreatLevel</b>: the level of the threat intelligence event</para>
+        /// </description></item>
+        /// <item><description><para><b>Basic</b>: the basic information about the report (the scan result)</para>
+        /// </description></item>
+        /// <item><description><para><b>Sandbox</b>: the cloud sandbox check report</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,8 +55,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,8 +71,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The data source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>machine</b>: host alerts</description></item>
-        /// <item><description><b>object_scan</b>: file detection alerts</description></item>
+        /// <item><description><para><b>machine</b>: host alerts</para>
+        /// </description></item>
+        /// <item><description><para><b>object_scan</b>: file detection alerts</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

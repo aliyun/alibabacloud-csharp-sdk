@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeIdcAssetCriteriaRequest : TeaModel {
         /// <summary>
-        /// <para>The status of the IP address. Valid values:</para>
+        /// <para>Indicates whether the corresponding IP address is valid. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The IP address is valid.</description></item>
-        /// <item><description><b>1</b>: The IP address is ignored.</description></item>
-        /// <item><description><em>2</em>: The IP address is invalid.</description></item>
-        /// <item><description><em>3</em>: The IP address is expired.</description></item>
-        /// <item><description><em>4</em>: The probe that is used to scan the IP address does not exist.</description></item>
+        /// <item><description><b>0</b>: valid</description></item>
+        /// <item><description><b>1</b>: ignored</description></item>
+        /// <item><description><b>2</b>: invalid</description></item>
+        /// <item><description><b>3</b>: expired</description></item>
+        /// <item><description><b>4</b>: probe does not exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to match assets in fuzzy mode.</para>
+        /// <para>The fuzzy match value entered when querying assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testwww</para>

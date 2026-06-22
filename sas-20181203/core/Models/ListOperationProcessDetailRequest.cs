@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOperationProcessDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number in a paged query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The query end time based on the task completion time, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1731555850000</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The query start time based on the task creation time, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1731469330000</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The subtask status codes.</para>
+        /// <para>The list of operation subtask status codes.</para>
         /// </summary>
         [NameInMap("StatusCodes")]
         [Validation(Required=false)]
         public List<int?> StatusCodes { get; set; }
 
         /// <summary>
-        /// <para>The IDs of operation tasks.</para>
+        /// <para>The list of operation task IDs.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateVulsRequest : TeaModel {
         /// <summary>
-        /// <para>The operation on the vulnerabilities. Set the value to <b>vul_fix</b>, which indicates vulnerability fixing.</para>
+        /// <para>The method to handle the vulnerability. Set the value to <b>vul_fix</b>, which indicates fixing the vulnerability.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerabilities that you want to fix. Set the value to <b>cve</b>, which indicates Linux software vulnerabilities.</para>
+        /// <para>The type of vulnerability to fix. Set the value to <b>cve</b>, which indicates a Linux software vulnerability.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers for which you want to fix vulnerabilities.</para>
+        /// <para>The UUIDs of the servers on which you want to fix the vulnerabilities.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Uuids")]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> Uuids { get; set; }
 
         /// <summary>
-        /// <para>The names of the vulnerabilities that you want to fix.</para>
+        /// <para>The names of the vulnerabilities to fix.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VulNames")]

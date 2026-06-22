@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateMaliciousFileWhitelistConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</para>
+        /// <para>The rule ID. This parameter is optional. If you do not specify this parameter, a whitelist rule is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert.</para>
+        /// <para>The alerting name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to ALL, which indicates all alert types.</description></item>
+        /// <item><description>ALL: all Alarm Metric.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The field that you want to use in the whitelist rule.</para>
+        /// <para>The field to be whitelisted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fileMd5</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>The value of the field that you want to use in the whitelist rule.</para>
+        /// <para>The value of the field to be whitelisted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b2cf9747ee49d8d9b105cf16e078cc16</para>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>The logical operator that you want to use in the whitelist rule.</para>
+        /// <para>The operator used for rule matching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to strEqual, which indicates the equality operator (=).</description></item>
+        /// <item><description>strEqual: string equals.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>Remark.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The feature to which this operation belongs.</para>
+        /// <para>The business source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to agentless, which indicates the agentless detection feature.</description></item>
+        /// <item><description>agentless: agentless detection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The type of the assets on which you want the whitelist rule to take effect. Valid values:</para>
+        /// <para>The type of the target scope. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ALL: all assets</description></item>
-        /// <item><description>SELECTION_KEY: selected assets</description></item>
+        /// <item><description>SELECTION_KEY: assets selected by using the asset selection component.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The assets on which you want the whitelist rule to take effect. Valid values:</para>
+        /// <para>The target scope. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ALL: all assets</description></item>
-        /// <item><description>Others: selected assets</description></item>
+        /// <item><description>Other values: the key of the asset scope selected by using the asset selection component.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The name of the check item.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Create Alert Rule</para>
+                /// <para>使用SSH密钥对登录</para>
                 /// </summary>
                 [NameInMap("CheckName")]
                 [Validation(Required=false)]
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The server group to which the server belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sg-bp1iw5enua6gf5i2xr7z</para>
+            /// <para>test-group****</para>
             /// </summary>
             [NameInMap("GroupNo")]
             [Validation(Required=false)]

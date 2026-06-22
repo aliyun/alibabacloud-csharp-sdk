@@ -29,14 +29,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: an ECS instance</description></item>
-            /// <item><description><b>1</b>: a SLB instance</description></item>
-            /// <item><description><b>2</b>: a NAT gateway</description></item>
-            /// <item><description><b>3</b>: an ApsaraDB RDS instance</description></item>
-            /// <item><description><b>4</b>: an ApsaraDB for MongoDB instance</description></item>
-            /// <item><description><b>5</b>: an ApsaraDB for Redis instance</description></item>
-            /// <item><description><b>6</b>: a container image</description></item>
-            /// <item><description><b>7</b>: a container</description></item>
+            /// <item><description><para><b>0</b>: an ECS instance</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: a SLB instance</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: a NAT gateway</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: an ApsaraDB RDS instance</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: an ApsaraDB for MongoDB instance</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: an ApsaraDB for Redis instance</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: a container image</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: a container</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,11 +57,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The service provider of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Alibaba Cloud</description></item>
-            /// <item><description><b>3</b>: Huawei Cloud</description></item>
-            /// <item><description><b>4</b>: Microsoft Azure</description></item>
-            /// <item><description><b>5</b>: AWS</description></item>
-            /// <item><description><b>7</b>: Tencent Cloud</description></item>
+            /// <item><description><para><b>0</b>: Alibaba Cloud</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Huawei Cloud</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: Microsoft Azure</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: AWS</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: Tencent Cloud</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,8 +158,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: paid</description></item>
-            /// <item><description><b>1</b>: free</description></item>
+            /// <item><description><para><b>0</b>: paid</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: free</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,10 +182,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckShowName { get; set; }
 
             /// <summary>
-            /// <para>The source type of the situation awareness check item: </para>
+            /// <para>The source type of the situation awareness check item:</para>
             /// <list type="bullet">
-            /// <item><description><b>CUSTOM</b>: User-defined </description></item>
-            /// <item><description><b>SYSTEM</b>: Predefined by the situation awareness platform</description></item>
+            /// <item><description><para><b>CUSTOM</b>: User-defined</para>
+            /// </description></item>
+            /// <item><description><para><b>SYSTEM</b>: Predefined by the situation awareness platform</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,23 +202,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>ECS</b>, this parameter supports the following valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INSTANCE</b></description></item>
-            /// <item><description><b>DISK</b></description></item>
-            /// <item><description><b>SECURITY_GROUP</b></description></item>
+            /// <item><description><para><b>INSTANCE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>DISK</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SECURITY_GROUP</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>ACR</b>, this parameter supports the following valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>REPOSITORY_ENTERPRISE</b></description></item>
-            /// <item><description><b>REPOSITORY_PERSON</b></description></item>
+            /// <item><description><para><b>REPOSITORY_ENTERPRISE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>REPOSITORY_PERSON</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>RAM</b>, this parameter supports the following valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ALIAS</b></description></item>
-            /// <item><description><b>USER</b></description></item>
-            /// <item><description><b>POLICY</b></description></item>
-            /// <item><description><b>GROUP</b></description></item>
+            /// <item><description><para><b>ALIAS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>USER</b></para>
+            /// </description></item>
+            /// <item><description><para><b>POLICY</b></para>
+            /// </description></item>
+            /// <item><description><para><b>GROUP</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>If the <b>InstanceType</b> parameter is set to <b>WAF</b>, this parameter supports the following valid values:</para>
@@ -226,28 +252,50 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The asset type of the cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECS</b>: ECS</description></item>
-            /// <item><description><b>SLB</b>: SLB</description></item>
-            /// <item><description><b>RDS</b>: ApsaraDB RDS</description></item>
-            /// <item><description><b>MONGODB</b>: MongoDB</description></item>
-            /// <item><description><b>KVSTORE</b>: Redis</description></item>
-            /// <item><description><b>ACR</b>: Container Registry</description></item>
-            /// <item><description><b>CSK</b>: ACK</description></item>
-            /// <item><description><b>VPC</b>: VPC</description></item>
-            /// <item><description><b>ACTIONTRAIL</b>: ActionTrail</description></item>
-            /// <item><description><b>CDN</b>: CDN</description></item>
-            /// <item><description><b>CAS</b>: Certificate Management Service (formerly SSL Certificates Service)</description></item>
-            /// <item><description><b>RDC</b>: Apsara Devops</description></item>
-            /// <item><description><b>RAM</b>: RAM</description></item>
-            /// <item><description><b>DDOS</b>: Anti-DDoS</description></item>
-            /// <item><description><b>WAF</b>: WAF</description></item>
-            /// <item><description><b>OSS</b>: OSS</description></item>
-            /// <item><description><b>POLARDB</b>: PolarDB</description></item>
-            /// <item><description><b>POSTGRESQL</b>: ApsaraDB RDS for PostgreSQL</description></item>
-            /// <item><description><b>MSE</b>: MSE</description></item>
-            /// <item><description><b>NAS</b>: NAS</description></item>
-            /// <item><description><b>SDDP</b>: SDDP</description></item>
-            /// <item><description><b>EIP</b>: EIP</description></item>
+            /// <item><description><para><b>ECS</b>: ECS</para>
+            /// </description></item>
+            /// <item><description><para><b>SLB</b>: SLB</para>
+            /// </description></item>
+            /// <item><description><para><b>RDS</b>: ApsaraDB RDS</para>
+            /// </description></item>
+            /// <item><description><para><b>MONGODB</b>: MongoDB</para>
+            /// </description></item>
+            /// <item><description><para><b>KVSTORE</b>: Redis</para>
+            /// </description></item>
+            /// <item><description><para><b>ACR</b>: Container Registry</para>
+            /// </description></item>
+            /// <item><description><para><b>CSK</b>: ACK</para>
+            /// </description></item>
+            /// <item><description><para><b>VPC</b>: VPC</para>
+            /// </description></item>
+            /// <item><description><para><b>ACTIONTRAIL</b>: ActionTrail</para>
+            /// </description></item>
+            /// <item><description><para><b>CDN</b>: CDN</para>
+            /// </description></item>
+            /// <item><description><para><b>CAS</b>: Certificate Management Service (formerly SSL Certificates Service)</para>
+            /// </description></item>
+            /// <item><description><para><b>RDC</b>: Apsara Devops</para>
+            /// </description></item>
+            /// <item><description><para><b>RAM</b>: RAM</para>
+            /// </description></item>
+            /// <item><description><para><b>DDOS</b>: Anti-DDoS</para>
+            /// </description></item>
+            /// <item><description><para><b>WAF</b>: WAF</para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b>: OSS</para>
+            /// </description></item>
+            /// <item><description><para><b>POLARDB</b>: PolarDB</para>
+            /// </description></item>
+            /// <item><description><para><b>POSTGRESQL</b>: ApsaraDB RDS for PostgreSQL</para>
+            /// </description></item>
+            /// <item><description><para><b>MSE</b>: MSE</para>
+            /// </description></item>
+            /// <item><description><para><b>NAS</b>: NAS</para>
+            /// </description></item>
+            /// <item><description><para><b>SDDP</b>: SDDP</para>
+            /// </description></item>
+            /// <item><description><para><b>EIP</b>: EIP</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -270,8 +318,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether fixing is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SUPPORT_REPAIR</b></description></item>
-            /// <item><description><b>NOT_SUPPORT_REPAIR</b></description></item>
+            /// <item><description><para><b>SUPPORT_REPAIR</b></para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_SUPPORT_REPAIR</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -284,9 +334,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HIGH</b></description></item>
-            /// <item><description><b>MEDIUM</b></description></item>
-            /// <item><description><b>LOW</b></description></item>
+            /// <item><description><para><b>HIGH</b></para>
+            /// </description></item>
+            /// <item><description><para><b>MEDIUM</b></para>
+            /// </description></item>
+            /// <item><description><para><b>LOW</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -299,12 +352,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PASS</b>: passed</description></item>
-            /// <item><description><b>NOT_PASS</b>: failed</description></item>
-            /// <item><description><b>CHECKING</b>: being checked</description></item>
-            /// <item><description><b>NOT_CHECK</b>: not checked</description></item>
-            /// <item><description><b>WHITELIST</b>: added to the whitelist</description></item>
-            /// <item><description><b>FAILED</b>: failed</description></item>
+            /// <item><description><para><b>PASS</b>: passed</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_PASS</b>: failed</para>
+            /// </description></item>
+            /// <item><description><para><b>CHECKING</b>: being checked</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_CHECK</b>: not checked</para>
+            /// </description></item>
+            /// <item><description><para><b>WHITELIST</b>: added to the whitelist</para>
+            /// </description></item>
+            /// <item><description><para><b>FAILED</b>: failed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -347,8 +406,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Check whether the data delivery period for ActionTrail is enabled for more than 30 days to establish a baseline of behaviour.</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: REQUIRED</description></item>
-            /// <item><description><b>1</b>: NOT REQUIRED</description></item>
+            /// <item><description><para><b>0</b>: REQUIRED</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: NOT REQUIRED</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

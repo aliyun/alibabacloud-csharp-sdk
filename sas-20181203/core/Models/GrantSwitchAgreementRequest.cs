@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GrantSwitchAgreementRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to agree to migrate the client connections from overseas servers to the Singapore center.</para>
+        /// <para>Specifies whether you agree to the data migration from the Hong Kong (China) region to the Singapore data center. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Agree.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disagree.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,26 +26,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsAgree { get; set; }
 
         /// <summary>
-        /// <para>Has the user confirmed the migration of Hong Kong region data to Singapore data center</para>
+        /// <para>Specifies whether the user confirms that the data migration from the Hong Kong (China) region to the Singapore data center has been completed.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true:</b> The user has confirmed that Hong Kong region data has been migrated to the Singapore data center. No notification popup needs to be displayed subsequently.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>:The user has not confirmed that Hong Kong region data has been migrated to the Singapore data center. Notification popup still needs to be displayed subsequently.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Confirmed. The user has confirmed that the data migration from the Hong Kong (China) region to the Singapore data center has been completed, and the notification pop-up window no longer needs to be displayed.</description></item>
+        /// <item><description><b>false</b>: Not confirmed. The user has not confirmed that the data migration from the Hong Kong (China) region to the Singapore data center has been completed, and the notification pop-up window still needs to be displayed.</description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
         /// </summary>
         [NameInMap("IsConfirmed")]
         [Validation(Required=false)]
         public bool? IsConfirmed { get; set; }
 
         /// <summary>
-        /// <para>Whether to schedule the migration of data from the Hong Kong region to the Singapore data center within 24 hours. Values:</para>
+        /// <para>Specifies whether to schedule data migration of data from the Hong Kong (China) region to the Singapore data center within 24 hours. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Schedule the switch within 24 hours.</description></item>
-        /// <item><description><b>false</b>: Do not schedule. Users with cloud products in the Hong Kong region will be automatically migrated on March 5, 2026; users without cloud products in the Hong Kong region will be automatically migrated on November 17, 2025.</description></item>
+        /// <item><description><para><b>true</b>: Schedule the switch within 24 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Do not schedule. For users who have cloud services in the Hong Kong (China) region, data migration will be automatically completed on March 5, 2026. For users who do not have cloud services in the Hong Kong (China) region, data migration will be automatically completed on November 17, 2025.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,10 +53,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsImmediate { get; set; }
 
         /// <summary>
-        /// <para>The language type for requests and responses. The default value is <b>zh</b>. Possible values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,9 +67,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Switching type. Possible values:</para>
+        /// <para>The switch type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sg_switch</b>: Migrate client connections from overseas servers to Singapore</description></item>
+        /// <item><description><b>sg_switch</b>: data migration from the Hong Kong (China) region to the Singapore data center.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

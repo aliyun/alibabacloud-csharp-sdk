@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SetImageBuildRiskStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The UUIDs of images. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The image UUIDs. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to query the UUIDs of images.</para>
+        /// <para>Call the <a href="~~DescribeImageInstances~~">DescribeImageInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageUuids { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the image build command risk.</para>
+        /// <para>The risk keyword.</para>
         /// 
         /// <b>Example:</b>
         /// <para>risk.type</para>
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskKey { get; set; }
 
         /// <summary>
-        /// <para>The status of the image build command risk. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: unhandled.</description></item>
-        /// <item><description><b>1</b>: ignored.</description></item>
-        /// <item><description><b>2</b>: false positive.</description></item>
+        /// <item><description><b>0</b>: Unhandled.</description></item>
+        /// <item><description><b>1</b>: Ignored.</description></item>
+        /// <item><description><b>2</b>: False positive.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

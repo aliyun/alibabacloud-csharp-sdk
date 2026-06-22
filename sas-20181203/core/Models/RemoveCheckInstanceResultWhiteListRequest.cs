@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances. Separate multiple IDs with commas (,).</para>
+        /// <para>The instance ID to query. Separate multiple instance IDs with commas (,).</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

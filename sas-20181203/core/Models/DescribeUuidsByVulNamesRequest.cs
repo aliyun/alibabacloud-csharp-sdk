@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUuidsByVulNamesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the vulnerability is fixed. Valid values:</para>
+        /// <para>Specifies whether the vulnerability has been handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: the vulnerability is fixed.</description></item>
-        /// <item><description><b>n</b>: the vulnerability is not fixed.</description></item>
+        /// <item><description><b>y</b>: handled</description></item>
+        /// <item><description><b>n</b>: not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The name of the search field that is used to query containers.</para>
+        /// <para>The container search field name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>namespace</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldName { get; set; }
 
         /// <summary>
-        /// <para>The value of the search field that is used to query containers.</para>
+        /// <para>The container search field value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-adad-qeqwe</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The severity of the vulnerability. Separate multiple severities with commas (,). Valid values:</para>
+        /// <para>The vulnerability level. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><b>high</b>: high</description></item>
+        /// <item><description><b>medium</b>: medium</description></item>
+        /// <item><description><b>low</b>: low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,11 +83,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The priority based on which the vulnerability is fixed. Separate multiple priorities with commas (,). Valid values:</para>
+        /// <para>The priority level of vulnerability fixing. Separate multiple levels with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>asap</b>: high</description></item>
         /// <item><description><b>later</b>: medium</description></item>
-        /// <item><description><b>nntf</b>: low</description></item>
+        /// <item><description><b>nntf</b>: low.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</para>
+        /// <para>The asset information for the vulnerability query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.7.</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The tags that are used to search for the vulnerability.</para>
+        /// <para>The tag for querying vulnerabilities.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oval</para>
@@ -118,21 +118,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchTags { get; set; }
 
         /// <summary>
-        /// <para>The status of the vulnerability. Separate multiple states with commas (,). Valid values:</para>
+        /// <para>The fix status of the vulnerability. Separate multiple statuses with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: unfixed</description></item>
-        /// <item><description><b>2</b>: fix failed</description></item>
+        /// <item><description><b>2</b>: fix failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1,4</para>
+        /// <para>1,2</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public string StatusList { get; set; }
 
         /// <summary>
-        /// <para>The tag of the vulnerability.</para>
+        /// <para>The vulnerability tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oval</para>
@@ -142,10 +142,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The type of the query condition. Valid values:</para>
+        /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>containerId</b>: the ID of the container</description></item>
-        /// <item><description><b>uuid</b>: the ID of the asset</description></item>
+        /// <item><description><b>containerId</b>: container ID</description></item>
+        /// <item><description><b>uuid</b>: asset ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -156,10 +156,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The type of vulnerability to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) in which the vulnerability is detected. Separate multiple IDs with commas (,).</para>
+        /// <para>The instance IDs of VPC-connected instances to query for vulnerabilities. Separate multiple instance IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6ssrvbrwe37ekw****,vpc-bp1aevy8sofi8mh1q****</para>
@@ -181,9 +181,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string VpcInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the names of vulnerabilities.</para>
+        /// <para>The collection of vulnerability names.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain the names of vulnerabilities.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>

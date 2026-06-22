@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name or the name of website that you want to query.</para>
+        /// <para>The name of the domain name or website to query.</para>
         /// <remarks>
-        /// <para> Fuzzy match is not supported. You must enter a complete domain name or a website.</para>
+        /// <para>Fuzzy match is not supported. Enter the complete domain name or website name.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>

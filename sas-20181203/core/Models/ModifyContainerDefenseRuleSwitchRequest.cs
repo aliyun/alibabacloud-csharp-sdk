@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyContainerDefenseRuleSwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the rules.</para>
+        /// <para>The IDs of the rules that you want to modify.</para>
         /// </summary>
         [NameInMap("RuleIds")]
         [Validation(Required=false)]
         public List<long?> RuleIds { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values:</para>
+        /// <para>The switch status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

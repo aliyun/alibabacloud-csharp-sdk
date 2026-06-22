@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageEventOperationPageRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of the page to return in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the alert item.</para>
+        /// <para>The keyword of the alert metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PEM</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventKey { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert item.</para>
+        /// <para>The name of the alert metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PEM</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The alert type.</para>
+        /// <para>The alerting type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to <b>sensitiveFile</b>.</description></item>
+        /// <item><description><b>sensitiveFile</b>: sensitive file tampering.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content in the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The source of the alert handling rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: image.</description></item>
+        /// <item><description><b>default</b>: image</description></item>
         /// <item><description><b>agentless</b>: agentless detection.</description></item>
         /// </list>
         /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifySasContainerWebDefenseRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The paths that are protected.</para>
+        /// <para>The list of defense paths for the rule.</para>
         /// </summary>
         [NameInMap("PathConfDTOList")]
         [Validation(Required=false)]
         public List<ModifySasContainerWebDefenseRuleRequestPathConfDTOList> PathConfDTOList { get; set; }
         public class ModifySasContainerWebDefenseRuleRequestPathConfDTOList : TeaModel {
             /// <summary>
-            /// <para>The backup paths.</para>
+            /// <para>The backup path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/tmp/test</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BackupPath { get; set; }
 
             /// <summary>
-            /// <para>The prevention mode. Valid values:</para>
+            /// <para>The action to perform. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>block</b></description></item>
-            /// <item><description><b>audit</b></description></item>
+            /// <item><description><b>block</b>: Block.</description></item>
+            /// <item><description><b>audit</b>: Alert.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DefenseMode { get; set; }
 
             /// <summary>
-            /// <para>The path that is protected.</para>
+            /// <para>The defense path.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DefensePath { get; set; }
 
             /// <summary>
-            /// <para>The files that are excluded.</para>
+            /// <para>The excluded file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/usr/test</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExcludeFile { get; set; }
 
             /// <summary>
-            /// <para>The paths to the files that are excluded.</para>
+            /// <para>The excluded file path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test/home/qq</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExcludeFilePath { get; set; }
 
             /// <summary>
-            /// <para>The types of the files that are excluded.</para>
+            /// <para>The excluded file type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>php</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExcludeFileType { get; set; }
 
             /// <summary>
-            /// <para>The protection mode. Valid values:</para>
+            /// <para>The Defense mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: basic mode (whitelist)</description></item>
-            /// <item><description><b>1</b>: complex mode (blacklist)</description></item>
+            /// <item><description><b>0</b>: Basic pattern (whitelist). </description></item>
+            /// <item><description><b>1</b>: Complex pattern (blacklist).</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GuardType { get; set; }
 
             /// <summary>
-            /// <para>The files that are included.</para>
+            /// <para>The included file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home/admin/test</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IncludeFile { get; set; }
 
             /// <summary>
-            /// <para>The type of the files that are included.</para>
+            /// <para>The included file type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jsp</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PathConfId { get; set; }
 
             /// <summary>
-            /// <para>The processes that are added to the whitelist.</para>
+            /// <para>The list of whitelisted processes.</para>
             /// </summary>
             [NameInMap("ProcessPathList")]
             [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wwwwwww</para>

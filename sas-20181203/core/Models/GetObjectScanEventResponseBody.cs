@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The name of the item.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DownloadUrl</para>
+                /// <para>DownloadUrl。</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The display name of the item.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DownloadUrl</para>
+                /// <para>DownloadUrl。</para>
                 /// </summary>
                 [NameInMap("NameDisplay")]
                 [Validation(Required=false)]

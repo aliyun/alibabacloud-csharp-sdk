@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageLatestScanTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The digest value of the image.</para>
+        /// <para>The digest of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

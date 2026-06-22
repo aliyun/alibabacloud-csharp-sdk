@@ -9,11 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectProcessResponseBody : TeaModel {
+        /// <summary>
+        /// <para>An array of process details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListUnknownThreatDetectProcessResponseBodyData> Data { get; set; }
         public class ListUnknownThreatDetectProcessResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The analysis result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>black</b>: A malicious process.</para>
+            /// </description></item>
+            /// <item><description><para><b>white</b>: A normal process.</para>
+            /// </description></item>
+            /// <item><description><para><b>abnormal</b>: An abnormal process.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>white</para>
             /// </summary>
@@ -30,6 +43,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExplanationZh { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the first occurrence.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
             /// </summary>
@@ -38,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
+            /// <para>The MD5 hash of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5b394b54ca632fe51c4ab4a6dbaf****</para>
             /// </summary>
@@ -46,6 +63,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Md5 { get; set; }
 
             /// <summary>
+            /// <para>The process ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025031506350619216822625103151158982</para>
             /// </summary>
@@ -54,6 +73,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcessId { get; set; }
 
             /// <summary>
+            /// <para>The process path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/usr/bin/tar</para>
             /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcessPath { get; set; }
 
             /// <summary>
+            /// <para>Remarks about the process.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>safe process</para>
             /// </summary>
@@ -70,6 +93,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <para>The SHA-256 hash of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3a6fed5fc11392b3ee9f81caf017b48640d7458766a8eb0382899a605b41****</para>
             /// </summary>
@@ -79,11 +104,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         }
 
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListUnknownThreatDetectProcessResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectProcessResponseBodyPageInfo : TeaModel {
             /// <summary>
+            /// <para>The number of entries on the current page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -92,6 +122,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Count { get; set; }
 
             /// <summary>
+            /// <para>The current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -100,6 +132,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>The number of entries to return on each page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -108,6 +142,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>83</para>
             /// </summary>
@@ -118,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20456DD5-5CBF-5015-9173-12CA4246B***</para>

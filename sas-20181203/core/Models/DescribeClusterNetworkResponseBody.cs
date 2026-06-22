@@ -79,8 +79,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The type of the source node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>cluster</b>: a cluster.</description></item>
-                /// <item><description><b>internet</b>: a network node outside the cluster</description></item>
+                /// <item><description><para><b>cluster</b>: a cluster.</para>
+                /// </description></item>
+                /// <item><description><para><b>internet</b>: a network node outside the cluster</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -102,8 +104,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The status of the microsegmentation switch. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: off.</description></item>
-                /// <item><description><b>1</b>: on.</description></item>
+                /// <item><description><para><b>0</b>: off.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: on.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,8 +130,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The network type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: classic network.</description></item>
-                /// <item><description><b>1</b>: virtual private cloud (VPC).</description></item>
+                /// <item><description><para><b>0</b>: classic network.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: virtual private cloud (VPC).</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -150,8 +156,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The status of the network topology switch. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ON</b></description></item>
-                /// <item><description><b>OFF</b></description></item>
+                /// <item><description><para><b>ON</b></para>
+                /// </description></item>
+                /// <item><description><para><b>OFF</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -164,11 +172,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>3</b>: high.</description></item>
-                /// <item><description><b>2</b>: medium.</description></item>
-                /// <item><description><b>1</b>: low.</description></item>
-                /// <item><description><b>0</b>: secure.</description></item>
-                /// <item><description><b>-1</b>: unknown.</description></item>
+                /// <item><description><para><b>3</b>: high.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: medium.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: low.</para>
+                /// </description></item>
+                /// <item><description><para><b>0</b>: secure.</para>
+                /// </description></item>
+                /// <item><description><para><b>-1</b>: unknown.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -181,8 +194,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The type of the node. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>cluster</b>: a cluster.</description></item>
-                /// <item><description><b>internet</b>: a network node outside the cluster.</description></item>
+                /// <item><description><para><b>cluster</b>: a cluster.</para>
+                /// </description></item>
+                /// <item><description><para><b>internet</b>: a network node outside the cluster.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

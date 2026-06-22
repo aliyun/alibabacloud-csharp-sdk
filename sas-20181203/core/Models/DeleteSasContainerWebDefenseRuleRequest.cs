@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The rule ID.</para>
         /// <remarks>
-        /// <para> You can call the ListContainerWebDefenseRule operation to query the rule ID.</para>
+        /// <para>You can call the ListContainerWebDefenseRule operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

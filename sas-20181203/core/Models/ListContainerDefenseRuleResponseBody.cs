@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListContainerDefenseRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of a failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The HTTP status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The rules.</para>
+        /// <para>The list of rules.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ClusterCount { get; set; }
 
             /// <summary>
-            /// <para>The clusters specified in the rule.</para>
+            /// <para>The list of clusters associated with the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cfb41a8**8a106</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterIdList { get; set; }
 
             /// <summary>
-            /// <para>The description of the rule.</para>
+            /// <para>The rule description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>defense rule.</para>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The action specified in the rule. Valid values:</para>
+            /// <para>The rule action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: alert</description></item>
-            /// <item><description><b>2</b>: block</description></item>
+            /// <item><description><para><b>1</b>: Alert.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Block.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RuleAction { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>181</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-rule-01</para>
@@ -101,10 +103,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The status of the rule. Valid values:</para>
+            /// <para>The switch status of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled</description></item>
-            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
+            /// <item><description><b>0</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,10 +117,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RuleSwitch { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule. Valid values:</para>
+            /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: system rule</description></item>
-            /// <item><description><b>2</b>: custom rule</description></item>
+            /// <item><description><b>1</b>: system rule.</description></item>
+            /// <item><description><b>2</b>: user-defined rule.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,14 +143,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListContainerDefenseRuleResponseBodyPageInfo PageInfo { get; set; }
         public class ListContainerDefenseRuleResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -158,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -168,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The key of the last data entry.</para>
+            /// <para>The key of the last entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CAESGgo***jE2NDc4NjE=</para>
@@ -178,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastRowKey { get; set; }
 
             /// <summary>
-            /// <para>The query credential.</para>
+            /// <para>The value of NextToken returned when the NextToken-based pagination method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B60***</para>
@@ -188,7 +190,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -210,7 +212,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E3A63BA-***843</para>
@@ -220,10 +222,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

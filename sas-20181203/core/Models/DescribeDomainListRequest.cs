@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in a paged query. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The type of the domain name that you want to query. Valid values:</para>
+        /// <para>The type of the domain name to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>root</b>: root domain name</description></item>
-        /// <item><description><b>sub</b>: subdomain name</description></item>
+        /// <item><description><b>sub</b>: subdomain name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DomainType { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to query domain names. Fuzzy match is supported.</para>
+        /// <para>The search keyword for the domain name to query. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FuzzyDomain { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of domain names to display on each page in a paged query. Default value: <b>10</b>, which indicates that 10 domain names are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.122.XX.XX</para>

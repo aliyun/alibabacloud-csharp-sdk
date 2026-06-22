@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyPushAllTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The results of security check tasks.</para>
+        /// <para>The result of the security check task execution.</para>
         /// </summary>
         [NameInMap("PushTaskRsp")]
         [Validation(Required=false)]
         public ModifyPushAllTaskResponseBodyPushTaskRsp PushTaskRsp { get; set; }
         public class ModifyPushAllTaskResponseBodyPushTaskRsp : TeaModel {
             /// <summary>
-            /// <para>The information about the server on which security check tasks failed.</para>
+            /// <para>The information about the servers on which the security check task failed.</para>
             /// </summary>
             [NameInMap("PushTaskResultList")]
             [Validation(Required=false)]
             public List<ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList> PushTaskResultList { get; set; }
             public class ModifyPushAllTaskResponseBodyPushTaskRspPushTaskResultList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the server group to which the server belongs.</para>
+                /// <para>The ID of the server group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>226</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the server.</para>
+                /// <para>The ID of the server instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-wz9f7wlklxqnvdk****</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The IP address of the server.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>127.XX.XX</para>
+                /// <para>127.136.XX.XX</para>
                 /// </summary>
                 [NameInMap("Ip")]
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// <para>The message that describes the security check failure.</para>
+                /// <para>The details about the security check task failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>successful</para>
@@ -76,11 +76,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>Indicates whether the Security Center agent is online. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: yes</description></item>
-                /// <item><description><b>false</b>: no</description></item>
+                /// <item><description><b>true</b>: The agent is online.</description></item>
+                /// <item><description><b>false</b>: The agent is offline.</description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> If the Security Center agent of the server is offline, Security Center does not protect the server.</para>
+                /// <para>If the agent is offline, Security Center cannot provide security protection for the server.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OsVersion { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the server resides.</para>
+                /// <para>The region where the server is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the security check task is successful. Valid values:</para>
+                /// <para>Indicates whether the security check was successful. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b>: yes</description></item>
-                /// <item><description><b>false</b>: no</description></item>
+                /// <item><description><b>true</b>: The security check was successful.</description></item>
+                /// <item><description><b>false</b>: The security check failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91EB4AC7-7FEF-4C72-BE49-4414E459AEC2</para>

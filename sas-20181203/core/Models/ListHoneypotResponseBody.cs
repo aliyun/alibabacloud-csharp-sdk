@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information about the honeypots.</para>
+        /// <para>The list of honeypot data.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListHoneypotResponseBodyList> List { get; set; }
         public class ListHoneypotResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The name of the management node.</para>
+            /// <para>The name of the honeypot management node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0804-pre</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ControlNodeName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the honeypot.</para>
+            /// <para>The honeypot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>76c2a1c72ef259777d96d55a7834e5f5d98f85666c49f76ad9caa447d8b7****</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom configuration for the honeypot.</para>
+            /// <para>The ID of the custom honeypot parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a882e590-b87b-45a6-87b9-d0a3e5a0****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PresetId { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the status information about the honeypot.</para>
+            /// <para>The status of the honeypot.</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The detailed information about the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListHoneypotResponseBodyPageInfo PageInfo { get; set; }
         public class ListHoneypotResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries to return per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C80AFF1F-CC20-502C-A4D4-F5433E529B69</para>
@@ -195,10 +195,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

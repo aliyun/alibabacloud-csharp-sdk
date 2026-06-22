@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeMatchedMaliciousNamesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The severity of the malicious image sample that you want to query. You can enter multiple severities. Separate the severities with commas (,). Valid values:</para>
+        /// <para>The risk levels of the malicious samples in images to query. You can specify multiple values. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>serious</b></description></item>
-        /// <item><description><b>suspicious</b></description></item>
-        /// <item><description><b>remind</b></description></item>
+        /// <item><description><b>serious</b>: urgent</description></item>
+        /// <item><description><b>suspicious</b>: suspicious</description></item>
+        /// <item><description><b>remind</b>: reminder.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

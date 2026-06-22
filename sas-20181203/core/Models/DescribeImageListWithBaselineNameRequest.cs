@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListWithBaselineNameRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the image baseline.</para>
+        /// <para>The name of the image baseline check result.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BaselineNameKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>docker-law</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container.</para>
+        /// <para>The container ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c08d5fc1a329a4b88950a253d082f****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The search condition for the image baseline.</para>
+        /// <para>The query condition for the baseline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unauthorized access</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The type of the search condition. Valid values:</para>
+        /// <para>The query type for the baseline. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>BaselineNameAlias</b>: baseline name</description></item>
-        /// <item><description><b>BaselineClassAlias</b>: baseline category</description></item>
+        /// <item><description><b>BaselineClassAlias</b>: baseline category.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the image to which the container belongs.</para>
+        /// <para>The container image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The SHA-256 value of the image digest.</para>
+        /// <para>The SHA256 value of the image digest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2e6daffce524ffeae66cccaa90c8fc47de912346dcec295c27395b6d66db6423</para>
@@ -108,10 +108,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageDigest { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>Settings for paged query paging. The number of image baseline check result details to display per page. Default value: <b>10</b>, which indicates that 10 image baseline check result details are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the image repository belongs.</para>
+        /// <para>The namespace of the image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>libssh2</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoNamespace { get; set; }
 
         /// <summary>
-        /// <para>The types of the assets that you want to scan.</para>
+        /// <para>The collection of scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

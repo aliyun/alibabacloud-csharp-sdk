@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAssetsPropertyItemResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information for the query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public GetAssetsPropertyItemResponseBodyPageInfo PageInfo { get; set; }
         public class GetAssetsPropertyItemResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of aggregated Asset Fingerprints entries displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of aggregated Asset Fingerprints entries displayed on each page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of aggregated Asset Fingerprints entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>An array that consists of the aggregation information about asset fingerprints.</para>
+        /// <para>The collection of aggregated Asset Fingerprints entries.</para>
         /// </summary>
         [NameInMap("PropertyItems")]
         [Validation(Required=false)]
         public List<GetAssetsPropertyItemResponseBodyPropertyItems> PropertyItems { get; set; }
         public class GetAssetsPropertyItemResponseBodyPropertyItems : TeaModel {
             /// <summary>
-            /// <para>The number of servers related to the asset fingerprints.</para>
+            /// <para>The number of servers associated with the aggregated Asset Fingerprints entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The endpoint.</para>
+            /// <para>The domain name.</para>
             /// <remarks>
             /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>AI tool name.</para>
+            /// <para>The AI tool name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vllm</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MiddlewareName { get; set; }
 
             /// <summary>
-            /// <para>Name of the LLM service.</para>
+            /// <para>The large language model service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Deepseek</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The name of the module.</para>
+            /// <para>The module name.</para>
             /// <remarks>
             /// <para>This parameter is returned only when <b>Biz</b> is set to <b>lkm</b>.</para>
             /// </remarks>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The path to the startup item.</para>
+            /// <para>The startup item path.</para>
             /// <remarks>
             /// <para>This parameter is returned only when <b>Biz</b> is set to <b>autorun</b>.</para>
             /// </remarks>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>340D7FC4-D575-1661-8ACD-CFA7BE57****</para>

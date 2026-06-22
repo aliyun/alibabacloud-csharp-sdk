@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListImageRiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of security information about the image.</para>
+        /// <para>The list of image risk information.</para>
         /// </summary>
         [NameInMap("ImageRiskList")]
         [Validation(Required=false)]
@@ -27,24 +27,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the details of the endpoint.</para>
+            /// <para>The list of endpoint information.</para>
             /// </summary>
             [NameInMap("EndPointList")]
             [Validation(Required=false)]
             public List<ListImageRiskResponseBodyImageRiskListEndPointList> EndPointList { get; set; }
             public class ListImageRiskResponseBodyImageRiskListEndPointList : TeaModel {
                 /// <summary>
-                /// <para>An array that consists the details of the domain name in the endpoint.</para>
+                /// <para>The list of endpoint domain names.</para>
                 /// </summary>
                 [NameInMap("Domains")]
                 [Validation(Required=false)]
                 public List<string> Domains { get; set; }
 
                 /// <summary>
-                /// <para>The type of the domain name in the endpoint. Valid values:</para>
+                /// <para>The type of the endpoint domain name. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>internet</b>: Internet</description></item>
-                /// <item><description><b>intranet</b>: internal network</description></item>
+                /// <item><description><b>internet</b>: public network</description></item>
+                /// <item><description><b>intranet</b>: private network.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The endpoint of Container Registry.</para>
+            /// <para>The list of endpoints for the image service.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://172.20.XXX.XXX/test">https://172.20.XXX.XXX/test</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Endpoints { get; set; }
 
             /// <summary>
-            /// <para>The image of the container.</para>
+            /// <para>The image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>.aliyuncs.com/sas_test/baseline:exploit</para>
@@ -79,8 +79,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The registration status of the image repository. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IN_SAS</b>: The image repository is registered with Security Center.</description></item>
-            /// <item><description><b>NOT_IN_SAS</b>: The image repository is not registered with Security Center.</description></item>
+            /// <item><description><b>IN_SAS</b>: The repository is registered in Security Center.</description></item>
+            /// <item><description><b>NOT_IN_SAS</b>: The repository is not registered in Security Center.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageAccessType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f922bfeb6960436fe3f0e7b62fc6b9a0b47980986669c367c22433269404****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint of the image repository.</para>
+            /// <para>The public network access URL of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>registry-registry.cn-shenzhen-finance-1.cr.aliyuncs.com/xxxx/docker-</b></b></para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetURLs { get; set; }
 
             /// <summary>
-            /// <para>The region of the image repository.</para>
+            /// <para>The region where the image repository resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -121,12 +121,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of the image repository. Valid values:</para>
+            /// <para>The type of the image registry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>acr</b></description></item>
-            /// <item><description><b>harbor</b></description></item>
-            /// <item><description><b>quay</b></description></item>
-            /// <item><description><b>CI/CD</b>: Jenkins</description></item>
+            /// <item><description><b>acr</b>: ACR</description></item>
+            /// <item><description><b>harbor</b>: Harbor</description></item>
+            /// <item><description><b>quay</b>: Quay</description></item>
+            /// <item><description><b>CI/CD</b>: Jenkins.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace to which the repository belongs.</para>
+            /// <para>The image namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vultar***</para>
@@ -167,10 +167,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The type of the repository. Valid values:</para>
+            /// <para>The repository type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PUBLIC</c></description></item>
-            /// <item><description><c>PRIVATE</c></description></item>
+            /// <item><description><para><c>PUBLIC</c>: public</para>
+            /// </description></item>
+            /// <item><description><para><c>PRIVATE</c>: private.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoType { get; set; }
 
             /// <summary>
-            /// <para>The statistics on a security event.</para>
+            /// <para>The statistics of security events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Statistics { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the image.</para>
+            /// <para>The image tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1.0</para>
@@ -205,10 +207,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image version is immutable. If the image version is immutable, only the image of the latest version in the image repository can be overwritten. Valid values:</para>
+            /// <para>The tag immutability setting. If immutability is enabled, image versions other than latest cannot be used to overwrite existing versions in this repository. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The image version is mutable.</description></item>
-            /// <item><description><b>1</b>: The image version is immutable.</description></item>
+            /// <item><description><b>0</b>: Mutable.</description></item>
+            /// <item><description><b>1</b>: Immutable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -219,7 +221,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TagImmutable { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the image.</para>
+            /// <para>The unique identifier of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>624778f3-5bf2-423c-ac0c-47a62c05****</para>
@@ -229,7 +231,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the image repository in the VPC.</para>
+            /// <para>The VPC access URL of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b><b>-registry-registry-vpc.cn-shenzhen-finance-1.cr.aliyuncs.com/xxxx/docker-</b></b></para>
@@ -248,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListImageRiskResponseBodyPageInfo PageInfo { get; set; }
         public class ListImageRiskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries returned on the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -258,7 +260,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -268,7 +270,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -290,7 +292,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>050ACC7A-D4FD-55C6-B861-BA9569C1****</para>

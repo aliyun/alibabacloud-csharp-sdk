@@ -19,10 +19,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The severity of alerts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: does not generate alerts</description></item>
-            /// <item><description>1: sends notifications</description></item>
-            /// <item><description>2: suspicious</description></item>
-            /// <item><description>3: high-risk</description></item>
+            /// <item><description><para>0: does not generate alerts</para>
+            /// </description></item>
+            /// <item><description><para>1: sends notifications</para>
+            /// </description></item>
+            /// <item><description><para>2: suspicious</para>
+            /// </description></item>
+            /// <item><description><para>3: high-risk</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,8 +149,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the operating system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>windows</b>: Windows</description></item>
-            /// <item><description><b>linux</b>: Linux</description></item>
+            /// <item><description><para><b>windows</b>: Windows</para>
+            /// </description></item>
+            /// <item><description><para><b>linux</b>: Linux</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,9 +205,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: not handled</description></item>
-            /// <item><description>1: handled</description></item>
-            /// <item><description>2: added to the whitelist</description></item>
+            /// <item><description><para>0: not handled</para>
+            /// </description></item>
+            /// <item><description><para>1: handled</para>
+            /// </description></item>
+            /// <item><description><para>2: added to the whitelist</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

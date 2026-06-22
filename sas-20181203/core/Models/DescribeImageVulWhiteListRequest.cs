@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageVulWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The alias of the vulnerability that you want to query.</para>
+        /// <para>The alias of the vulnerability to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CVE-2007-5686:rpath_linux</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page in a paged query. Paging is used to display results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries per page in a paged query. Paging is used to display results. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The source of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b></description></item>
-        /// <item><description><b>agentless</b></description></item>
+        /// <item><description><b>image</b>: image</description></item>
+        /// <item><description><b>agentless</b>: agentless.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

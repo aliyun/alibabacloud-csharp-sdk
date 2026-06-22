@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The ID of the asset group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8076980</para>
+        /// <para>9454789</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

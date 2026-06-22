@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetInstallCodeForUuidRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the server for which the client installation code is to be queried.</para>
+        /// <para>The UUID of the server whose agent installation code you want to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> API to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

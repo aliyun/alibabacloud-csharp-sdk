@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSasContainerWebDefenseRuleApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// <remarks>
-        /// <para> You can call the ListSasContainerWebDefenseRule operation to query the IDs of rules.</para>
+        /// <para>You can call the ListSasContainerWebDefenseRule operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

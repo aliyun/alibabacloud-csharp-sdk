@@ -35,8 +35,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Set the language type for the request and response messages. The default value is <b>zh</b>. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,26 +100,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>A list of task statuses. Multiple statuses should be separated by commas (,). Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INIT</b>: Initialization</description></item>
-        /// <item><description><b>FAIL</b>: Processing failed</description></item>
-        /// <item><description><b>THROTTLING</b>: Repairing concurrently</description></item>
-        /// <item><description><b>IN_BACKUP</b>: Backing up</description></item>
-        /// <item><description><b>BACKED_UP</b>: Backed up</description></item>
-        /// <item><description><b>BACKUP_FAIL</b>: Backup failed</description></item>
-        /// <item><description><b>REPAIRING</b>: Repairing</description></item>
-        /// <item><description><b>REPAIR_SUCCESS</b>: Repair succeeded</description></item>
-        /// <item><description><b>REPAIR_FAIL</b>: Repair failed</description></item>
-        /// <item><description><b>REPAIR_SUCCESS_VERIFYING</b>: Verifying repair success</description></item>
-        /// <item><description><b>REPAIR_SUCCESS_UNVERIFIED</b>: Repair success verification failed</description></item>
-        /// <item><description><b>REPAIR_SUCCESS_VERIFIED</b>: Repair success verified</description></item>
-        /// <item><description><b>REPAIR_RE_EXECUTE</b>: Re-executing repair</description></item>
-        /// <item><description><b>ROLL_BACKING</b>: Rolling back</description></item>
-        /// <item><description><b>ROLL_BACKED</b>: Rolled back</description></item>
-        /// <item><description><b>ROLL_BACK_FAIL</b>: Rollback failed</description></item>
-        /// <item><description><b>ROLL_BACK_INIT</b>: Rollback initiated</description></item>
-        /// <item><description><b>ROLL_BACK_VERIFYING</b>: Verifying rollback success</description></item>
-        /// <item><description><b>ROLL_BACK_UNVERIFIED</b>: Rollback success verification failed</description></item>
-        /// <item><description><b>ROLL_BACK_VERIFIED</b>: Rollback success verified</description></item>
+        /// <item><description><para><b>INIT</b>: Initialization</para>
+        /// </description></item>
+        /// <item><description><para><b>FAIL</b>: Processing failed</para>
+        /// </description></item>
+        /// <item><description><para><b>THROTTLING</b>: Repairing concurrently</para>
+        /// </description></item>
+        /// <item><description><para><b>IN_BACKUP</b>: Backing up</para>
+        /// </description></item>
+        /// <item><description><para><b>BACKED_UP</b>: Backed up</para>
+        /// </description></item>
+        /// <item><description><para><b>BACKUP_FAIL</b>: Backup failed</para>
+        /// </description></item>
+        /// <item><description><para><b>REPAIRING</b>: Repairing</para>
+        /// </description></item>
+        /// <item><description><para><b>REPAIR_SUCCESS</b>: Repair succeeded</para>
+        /// </description></item>
+        /// <item><description><para><b>REPAIR_FAIL</b>: Repair failed</para>
+        /// </description></item>
+        /// <item><description><para><b>REPAIR_SUCCESS_VERIFYING</b>: Verifying repair success</para>
+        /// </description></item>
+        /// <item><description><para><b>REPAIR_SUCCESS_UNVERIFIED</b>: Repair success verification failed</para>
+        /// </description></item>
+        /// <item><description><para><b>REPAIR_SUCCESS_VERIFIED</b>: Repair success verified</para>
+        /// </description></item>
+        /// <item><description><para><b>REPAIR_RE_EXECUTE</b>: Re-executing repair</para>
+        /// </description></item>
+        /// <item><description><para><b>ROLL_BACKING</b>: Rolling back</para>
+        /// </description></item>
+        /// <item><description><para><b>ROLL_BACKED</b>: Rolled back</para>
+        /// </description></item>
+        /// <item><description><para><b>ROLL_BACK_FAIL</b>: Rollback failed</para>
+        /// </description></item>
+        /// <item><description><para><b>ROLL_BACK_INIT</b>: Rollback initiated</para>
+        /// </description></item>
+        /// <item><description><para><b>ROLL_BACK_VERIFYING</b>: Verifying rollback success</para>
+        /// </description></item>
+        /// <item><description><para><b>ROLL_BACK_UNVERIFIED</b>: Rollback success verification failed</para>
+        /// </description></item>
+        /// <item><description><para><b>ROLL_BACK_VERIFIED</b>: Rollback success verified</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("Statuses")]
@@ -137,8 +159,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of operation task to be queried:</para>
         /// <list type="bullet">
-        /// <item><description>REPAIR: Repair</description></item>
-        /// <item><description>ROLLBACK: Rollback</description></item>
+        /// <item><description><para>REPAIR: Repair</para>
+        /// </description></item>
+        /// <item><description><para>ROLLBACK: Rollback</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

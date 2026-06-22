@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineCheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the check results of image baselines.</para>
+        /// <para>The details of the image baseline check results.</para>
         /// </summary>
         [NameInMap("BaselineResult")]
         [Validation(Required=false)]
         public List<DescribeImageBaselineCheckResultResponseBodyBaselineResult> BaselineResult { get; set; }
         public class DescribeImageBaselineCheckResultResponseBodyBaselineResult : TeaModel {
             /// <summary>
-            /// <para>The key of the image baseline type.</para>
+            /// <para>The type key of the baseline item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>identification</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BaselineItemCount { get; set; }
 
             /// <summary>
-            /// <para>The alias of the image baseline.</para>
+            /// <para>The alias of the baseline item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Identity authentication</para>
+            /// <para>身份鉴别</para>
             /// </summary>
             [NameInMap("BaselineNameAlias")]
             [Validation(Required=false)]
             public string BaselineNameAlias { get; set; }
 
             /// <summary>
-            /// <para>The key of the image baseline.</para>
+            /// <para>The name key of the baseline item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>identification</para>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineNameKey { get; set; }
 
             /// <summary>
-            /// <para>The severity of the image baseline. Valid values:</para>
+            /// <para>The risk level of the baseline. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><b>high</b>: high risk</description></item>
+            /// <item><description><b>medium</b>: medium risk</description></item>
+            /// <item><description><b>low</b>: low risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineNameLevel { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the first scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the first scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1610304058366</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTime { get; set; }
 
             /// <summary>
-            /// <para>The number of high-risk images that are affected.</para>
+            /// <para>The number of associated high-risk images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the most recent scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1610304058301</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk images that are affected.</para>
+            /// <para>The number of associated low-risk images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? LowRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk images that are affected.</para>
+            /// <para>The number of associated medium-risk images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -122,10 +122,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MiddleRiskItemCount { get; set; }
 
             /// <summary>
-            /// <para>The status of the baseline risks. Valid values:</para>
+            /// <para>The fix status of the baseline risk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: unfixed</description></item>
-            /// <item><description><b>1</b>: fixed</description></item>
+            /// <item><description><b>0</b>: Unfixed.</description></item>
+            /// <item><description><b>1</b>: Fixed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,14 +138,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageBaselineCheckResultResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageBaselineCheckResultResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

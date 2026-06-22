@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,21 +34,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The details of the tracing diagram.</para>
+        /// <para>The details of the trace graph.</para>
         /// </summary>
         [NameInMap("TraceInfoDetail")]
         [Validation(Required=false)]
         public DescribeTraceInfoDetailResponseBodyTraceInfoDetail TraceInfoDetail { get; set; }
         public class DescribeTraceInfoDetailResponseBodyTraceInfoDetail : TeaModel {
             /// <summary>
-            /// <para>An array that consists of the edges of the tracing diagram.</para>
+            /// <para>The edge information in the trace graph.</para>
             /// </summary>
             [NameInMap("EdgeList")]
             [Validation(Required=false)]
             public List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailEdgeList> EdgeList { get; set; }
             public class DescribeTraceInfoDetailResponseBodyTraceInfoDetailEdgeList : TeaModel {
                 /// <summary>
-                /// <para>The number of times.</para>
+                /// <para>The number of occurrences.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The ending vertex ID of the edge of the tracing diagram.</para>
+                /// <para>The end vertex ID of the edge in the trace graph.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a1d1fa39e5345dcef3f9712172cxxxxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string EndId { get; set; }
 
                 /// <summary>
-                /// <para>The starting vertex ID of the edge of the tracing diagram.</para>
+                /// <para>The start vertex ID of the edge in the trace graph.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>02b4bf933c8e3bb8b9465eee502xxxxx</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Time { get; set; }
 
                 /// <summary>
-                /// <para>The type of the edge of the tracing diagram.</para>
+                /// <para>The type of the edge in the trace graph.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>trigger_file_alert</para>
@@ -100,14 +100,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>An array that consists of the metadata configurations of the vertex type.</para>
+            /// <para>The metadata configuration of vertex types.</para>
             /// </summary>
             [NameInMap("EntityTypeList")]
             [Validation(Required=false)]
             public List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailEntityTypeList> EntityTypeList { get; set; }
             public class DescribeTraceInfoDetailResponseBodyTraceInfoDetailEntityTypeList : TeaModel {
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>Deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Deprecated</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DisplayIcon { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>Deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;name&quot;:&quot;${logtime}&quot;,&quot;value&quot;:&quot;$!{time}&quot;}]</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DisplayTemplate { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the vertex was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-09T11:47Z</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The time when the vertex was last modified.</para>
+                /// <para>The last modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-09T11:47Z</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vertex type.</para>
+                /// <para>The ID of the vertex type record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Alert</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>Deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Deprecated</para>
@@ -209,7 +209,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>Deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Deprecated</para>
@@ -221,17 +221,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>An array that consists of the metadata configurations of the edge type.</para>
+            /// <para>The metadata configuration of edge types.</para>
             /// </summary>
             [NameInMap("RelationTypeList")]
             [Validation(Required=false)]
             public List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailRelationTypeList> RelationTypeList { get; set; }
             public class DescribeTraceInfoDetailResponseBodyTraceInfoDetailRelationTypeList : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the edge is a directional edge. Valid values:</para>
+                /// <para>Indicates whether the edge is directed. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>1</b>: yes</description></item>
-                /// <item><description><b>0</b>: no</description></item>
+                /// <item><description><b>0</b>: no.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RelationTypeId { get; set; }
 
                 /// <summary>
-                /// <para>This parameter is deprecated.</para>
+                /// <para>Deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Deprecated</para>
@@ -284,14 +284,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>An array that consists of all vertexes of the tracing diagram.</para>
+            /// <para>The information about all vertices in the trace graph.</para>
             /// </summary>
             [NameInMap("VertexList")]
             [Validation(Required=false)]
             public List<DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexList> VertexList { get; set; }
             public class DescribeTraceInfoDetailResponseBodyTraceInfoDetailVertexList : TeaModel {
                 /// <summary>
-                /// <para>The number of times.</para>
+                /// <para>The number of occurrences.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vertex.</para>
+                /// <para>The vertex ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a1d1fa39e5345dcef3f9712172xxxxxx</para>
@@ -321,7 +321,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of the neighbor nodes.</para>
+                /// <para>The information about neighbor nodes.</para>
                 /// </summary>
                 [NameInMap("NeighborList")]
                 [Validation(Required=false)]
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? Count { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether one more page is returned.</para>
+                    /// <para>Indicates whether there is a next page.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>False</para>

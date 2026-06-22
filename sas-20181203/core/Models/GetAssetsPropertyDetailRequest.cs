@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAssetsPropertyDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The type of asset fingerprint to be queried, with a default value of <b>sca</b>. Values:</para>
+        /// <para>The type of Asset Fingerprints to query. Default value: <b>sca</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>lkm</b>: Kernel module</description></item>
-        /// <item><description><b>autorun</b>: Startup item</description></item>
-        /// <item><description><b>web_server</b>: Web site</description></item>
+        /// <item><description><b>lkm</b>: kernel module</description></item>
+        /// <item><description><b>autorun</b>: startup item</description></item>
+        /// <item><description><b>web_server</b>: web site.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Biz { get; set; }
 
         /// <summary>
-        /// <para>Set the page number from which to start displaying the query results. The default value is <b>1</b>, indicating that the display starts from the first page.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The aggregated item name of the asset fingerprint to be queried.</para>
+        /// <para>The aggregation item name of the Asset Fingerprints to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> API to obtain this parameter.</para>
+        /// <para>Call the <a href="~~GetAssetsPropertyItem~~">GetAssetsPropertyItem</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ItemName { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response. Values:</para>
+        /// <para>The language type of the request and response messages. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,9 +63,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Used to mark the current read position. Leave it empty to start from the beginning.</para>
+        /// <para>The token that marks the starting position for the query. Leave this parameter empty to query from the beginning.</para>
         /// <remarks>
-        /// <para>Do not fill in for the first call; the response will include the NextToken for the second call. Each subsequent call\&quot;s response will contain the NextToken for the next call.</para>
+        /// <para>Do not specify this parameter for the first call. The response includes the NextToken value for the next call. Each subsequent response contains the NextToken value for the following call.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Specify the maximum number of data entries per page in a paginated query. The default number of data entries per page is 20. If the PageSize parameter is empty, 20 data entries will be returned by default.</para>
+        /// <para>The maximum number of entries per page for a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by default.</para>
         /// <remarks>
-        /// <para>It is recommended that the PageSize value is not empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Server name or IP.</para>
+        /// <para>The server name or IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>
@@ -99,29 +99,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>A set of conditions for querying asset fingerprint details.</para>
+        /// <para>The collection of search criteria for querying Asset Fingerprints details.</para>
         /// </summary>
         [NameInMap("SearchCriteriaList")]
         [Validation(Required=false)]
         public List<GetAssetsPropertyDetailRequestSearchCriteriaList> SearchCriteriaList { get; set; }
         public class GetAssetsPropertyDetailRequestSearchCriteriaList : TeaModel {
             /// <summary>
-            /// <para>The name of the condition to be queried. Values are as follows:</para>
+            /// <para>The name of the search criterion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>remarkItemName</b>: The aggregated item name of the asset fingerprint, supporting fuzzy matching</description></item>
+            /// <item><description><b>remarkItemName</b>: the aggregation item name of Asset Fingerprints. Fuzzy match is supported.</description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
             /// <item><description><list type="bullet">
-            /// <item><description>When <b>Biz</b> is <b>web_server</b>, <b>remarkItemName</b> represents the domain name as the search condition.</description></item>
+            /// <item><description>When <b>Biz</b> is set to <b>web_server</b>, <b>remarkItemName</b> indicates the domain name.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><list type="bullet">
-            /// <item><description>When <b>Biz</b> is <b>lkm</b>, <b>remarkItemName</b> represents the module name as the search condition.</description></item>
+            /// <item><description>When <b>Biz</b> is set to <b>lkm</b>, <b>remarkItemName</b> indicates the module name.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><list type="bullet">
-            /// <item><description>When <b>Biz</b> is <b>autorun</b>, <b>remarkItemName</b> represents the startup item path as the search condition.</description></item>
+            /// <item><description>When <b>Biz</b> is set to <b>autorun</b>, <b>remarkItemName</b> indicates the startup item path.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The value of the condition to be queried.</para>
+            /// <para>The value of the search criterion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>virtio</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Whether to use the NextToken method to fetch the list of vulnerabilities. If this parameter is used, TotalCount will not be returned. Values:</para>
+        /// <para>Specifies whether to use the NextToken method to retrieve the vulnerability list. If this parameter is used, TotalCount is no longer returned. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Use the NextToken method.</description></item>
         /// <item><description><b>false</b>: Do not use the NextToken method.</description></item>
@@ -161,9 +161,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? UseNextToken { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the asset to be queried.</para>
+        /// <para>The UUID of the asset to query.</para>
         /// <remarks>
-        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> API to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

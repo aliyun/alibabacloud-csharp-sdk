@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClientConfSetupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations of the Security Center agent.</para>
+        /// <para>The resource configuration information of the client.</para>
         /// </summary>
         [NameInMap("ClientConf")]
         [Validation(Required=false)]
         public DescribeClientConfSetupResponseBodyClientConf ClientConf { get; set; }
         public class DescribeClientConfSetupResponseBodyClientConf : TeaModel {
             /// <summary>
-            /// <para>The configurations of the usage for the Security Center agent.</para>
+            /// <para>The resource configuration information used by the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;mem&quot;:&quot;200&quot;,&quot;cpu&quot;:&quot;10&quot;,&quot;cpu_all&quot;:&quot;0&quot;}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the configuration.</para>
+            /// <para>The policy tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>machineResource</para>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StrategyTag { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. Valid values:</para>
+            /// <para>The policy value. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>major</description></item>
             /// <item><description>advanced</description></item>
-            /// <item><description>basic</description></item>
+            /// <item><description>basic.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>151F6EB6-D5F3-417A-AF7B-4D84975D****</para>

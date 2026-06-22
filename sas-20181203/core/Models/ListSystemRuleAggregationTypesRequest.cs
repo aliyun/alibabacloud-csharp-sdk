@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSystemRuleAggregationTypesRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: zh. Valid values:</para>
+        /// <para>The language of the request and response. Default value: zh. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

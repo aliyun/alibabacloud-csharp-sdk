@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeFixUsedCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB1CE824-7F80-546D-8AF8-4A5209F9B698</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerabilities that are fixed by the vulnerability fixing feature.</para>
+        /// <para>The number of vulnerability fixes used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? UsedCount { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerabilities that are fixed by the vulnerability fixing feature in China.</para>
+        /// <para>The number of vulnerability fixes used in regions in the Chinese mainland.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? UsedCountCn { get; set; }
 
         /// <summary>
-        /// <para>The number of vulnerabilities that are fixed by the vulnerability fixing feature outside China.</para>
+        /// <para>The number of vulnerability fixes used in regions outside the Chinese mainland.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

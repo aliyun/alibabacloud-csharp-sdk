@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The most recent honeypot that was attacked.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vpc tcp honeypot</para>
+            /// <para>vpc tcp 蜜罐</para>
             /// </summary>
             [NameInMap("LastTargetHoneypot")]
             [Validation(Required=false)]
@@ -79,9 +79,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>2</b>: low</description></item>
-            /// <item><description><b>3</b>: medium</description></item>
-            /// <item><description><b>4</b>: high</description></item>
+            /// <item><description><para><b>2</b>: low</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: medium</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: high</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -175,8 +178,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

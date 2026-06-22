@@ -29,11 +29,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The cloud service provider that uses the standard. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Alibaba Cloud.</description></item>
-            /// <item><description><b>3</b>: Tencent Cloud.</description></item>
-            /// <item><description><b>4</b>: Huawei Cloud.</description></item>
-            /// <item><description><b>5</b>: Microsoft Azure.</description></item>
-            /// <item><description><b>7</b>: AWS.</description></item>
+            /// <item><description><para><b>0</b>: Alibaba Cloud.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Tencent Cloud.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: Huawei Cloud.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: Microsoft Azure.</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: AWS.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The display name of the search condition.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>RAM identity authentication</para>
+                /// <para>RAM身份认证</para>
                 /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]
@@ -106,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The display name of the check item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Identity and permission management</para>
+            /// <para>身份权限管理</para>
             /// </summary>
             [NameInMap("ShowName")]
             [Validation(Required=false)]

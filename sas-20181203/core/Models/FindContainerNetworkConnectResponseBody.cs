@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FindContainerNetworkConnectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the network connections.</para>
+        /// <para>The network connectivity information.</para>
         /// </summary>
         [NameInMap("Connects")]
         [Validation(Required=false)]
         public List<FindContainerNetworkConnectResponseBodyConnects> Connects { get; set; }
         public class FindContainerNetworkConnectResponseBodyConnects : TeaModel {
             /// <summary>
-            /// <para>The information about the destination container.</para>
+            /// <para>The destination container information.</para>
             /// <remarks>
-            /// <para>This parameter is not supported.</para>
+            /// <para>Notice: This parameter is not supported..</para>
             /// </remarks>
             /// </summary>
             [NameInMap("DstContainer")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public FindContainerNetworkConnectResponseBodyConnectsDstContainer DstContainer { get; set; }
             public class FindContainerNetworkConnectResponseBodyConnectsDstContainer : TeaModel {
                 /// <summary>
-                /// <para>The ID of the destination container.</para>
+                /// <para>The container ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>48a6dxxx9d5a5866</para>
@@ -59,17 +59,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DstPort { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the connection was first established.</para>
+            /// <para>The timestamp when the connection first occurred. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-11-11 20:54:32</para>
+            /// <para>1636077279174</para>
             /// </summary>
             [NameInMap("FirstTime")]
             [Validation(Required=false)]
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the network connection.</para>
+            /// <para>The network connectivity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1458</para>
@@ -79,19 +79,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the connection was last established.</para>
+            /// <para>The timestamp when the connection most recently occurred. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-11-24 10:26:00</para>
+            /// <para>1636595679174</para>
             /// </summary>
             [NameInMap("LastTime")]
             [Validation(Required=false)]
             public long? LastTime { get; set; }
 
             /// <summary>
-            /// <para>The information about the source container.</para>
+            /// <para>The source container information.</para>
             /// <remarks>
-            /// <para>This parameter is not supported.</para>
+            /// <para>Notice: This parameter is not supported..</para>
             /// </remarks>
             /// </summary>
             [NameInMap("SrcContainer")]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public FindContainerNetworkConnectResponseBodyConnectsSrcContainer SrcContainer { get; set; }
             public class FindContainerNetworkConnectResponseBodyConnectsSrcContainer : TeaModel {
                 /// <summary>
-                /// <para>The ID of the source container.</para>
+                /// <para>The container ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>48a6xxx5709d5a5866</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SrcIp { get; set; }
 
             /// <summary>
-            /// <para>The source port.</para>
+            /// <para>The source port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10240</para>
@@ -133,14 +133,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information for the query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public FindContainerNetworkConnectResponseBodyPageInfo PageInfo { get; set; }
         public class FindContainerNetworkConnectResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries returned on the current page in the paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number in the paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+            /// <para>The number of entries per page in the paging query. Default value: <b>20</b>, which indicates that 20 network connectivity entries are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of connections returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8686CE6E-9BFA-5436-A9D9-77B984AEE7F8</para>

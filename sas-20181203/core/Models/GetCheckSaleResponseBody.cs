@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSaleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The sales information about the configuration assessment quota.</para>
+        /// <para>The sales information of cloud service configuration check.</para>
         /// </summary>
         [NameInMap("CheckSale")]
         [Validation(Required=false)]
         public GetCheckSaleResponseBodyCheckSale CheckSale { get; set; }
         public class GetCheckSaleResponseBodyCheckSale : TeaModel {
             /// <summary>
-            /// <para>The consumed quota.</para>
+            /// <para>The number of consumed authorized quotas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -26,11 +26,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? ConsumeCount { get; set; }
 
+            [NameInMap("InstanceConsumeCount")]
+            [Validation(Required=false)]
+            public long? InstanceConsumeCount { get; set; }
+
+            [NameInMap("InstanceHybridPostLatestCycledResourceCount")]
+            [Validation(Required=false)]
+            public long? InstanceHybridPostLatestCycledResourceCount { get; set; }
+
+            [NameInMap("InstancePostConsumeCount")]
+            [Validation(Required=false)]
+            public long? InstancePostConsumeCount { get; set; }
+
+            [NameInMap("InstancePurchaseCount")]
+            [Validation(Required=false)]
+            public long? InstancePurchaseCount { get; set; }
+
             /// <summary>
-            /// <para>Indicates whether the user is an existing user and whether the user uses the configuration assessment feature before the feature is released for sale on July 07, 2023. Valid values:</para>
+            /// <para>Indicates whether the user is an existing user who used the cloud service configuration check feature before the sales feature was released on July 7, 2023. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: existing user</description></item>
-            /// <item><description><b>false</b>: new user</description></item>
+            /// <item><description><b>true</b>: The user is an existing user.</description></item>
+            /// <item><description><b>false</b>: The user is not an existing user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? LoyalUser { get; set; }
 
             /// <summary>
-            /// <para>The purchased quota.</para>
+            /// <para>The number of purchased authorized quotas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -51,11 +67,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PurchaseCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the user. Valid values:</para>
+            /// <para>The type of the sales user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: a user who can use all check items.</description></item>
-            /// <item><description><b>2</b>: an user who can only use the check items before the release of the feature on July 07, 2023. This type of users must upgrade Security Center before the users can use all check items.</description></item>
-            /// <item><description><b>3</b>: a new user who cannot use the configuration assessment feature. This type of users must make a purchase before the users can use the feature.</description></item>
+            /// <item><description><b>1</b>: full-feature user who can use all check items.</description></item>
+            /// <item><description><b>2</b>: user who needs to upgrade and can only use check items that were available before the sales feature was released on July 7, 2023.</description></item>
+            /// <item><description><b>3</b>: user who needs to purchase the feature and cannot use the cloud service configuration check feature.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>

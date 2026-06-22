@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulExportInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The ID of the vulnerability export task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateImageVulRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the vulnerability. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The information about the vulnerability to be processed. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>namespace: the namespace of the image</description></item>
-        /// <item><description>repoName: the name of the Container Registry repository</description></item>
-        /// <item><description>regionId: the region ID</description></item>
-        /// <item><description>instanceId: the ID of the Container Registry instance</description></item>
-        /// <item><description>repoId: the name of the repository</description></item>
-        /// <item><description>tag: the tad added to the image</description></item>
-        /// <item><description>digest: the digest of the image</description></item>
-        /// <item><description>newTag: the tag added to the image after the vulnerability is fixed</description></item>
-        /// <item><description>uuid: the UUID of the image</description></item>
-        /// <item><description>ids: the IDs of the vulnerability primary keys</description></item>
+        /// <item><description>namespace: the image namespace.</description></item>
+        /// <item><description>repoName: the name of the ACR image repository.</description></item>
+        /// <item><description>regionId: the region.</description></item>
+        /// <item><description>instanceId: the ID of the ACR instance.</description></item>
+        /// <item><description>repoId: the ID of the repository.</description></item>
+        /// <item><description>tag: the original tag of the image.</description></item>
+        /// <item><description>digest: the digest of the image.</description></item>
+        /// <item><description>newTag: the tag of the image after the fix.</description></item>
+        /// <item><description>uuid: the UUID of the image.</description></item>
+        /// <item><description>ids: the list of primary key IDs of the vulnerabilities.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Info { get; set; }
 
         /// <summary>
-        /// <para>If you want to fix the vulnerability, set the value to vul_fix.</para>
+        /// <para>The operation type for image vulnerability fix. Set this parameter to vul_fix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vul_fix</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Set the value to cve.</para>
+        /// <para>The vulnerability type. Set this parameter to cve.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cve</para>

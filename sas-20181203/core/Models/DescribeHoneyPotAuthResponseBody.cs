@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHoneyPotAuthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total quota.</para>
+        /// <para>The total number of authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? HoneyPotAuthCount { get; set; }
 
         /// <summary>
-        /// <para>The quota that is consumed.</para>
+        /// <para>The number of consumed authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HoneyPotCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0F5023B6-9C1F-459F-ACCC-8B4636804037</para>

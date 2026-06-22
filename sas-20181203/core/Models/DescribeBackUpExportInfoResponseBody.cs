@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackUpExportInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeBackUpExportInfoResponseBodyData> Data { get; set; }
         public class DescribeBackUpExportInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of exported entries.</para>
+            /// <para>The number of entries that have been exported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the file.</para>
+            /// <para>The name of the archive export file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>suspicious_event_20221203</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The time when the export task was created.</para>
+            /// <para>The creation time of the archive export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671607025000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the export task.</para>
+            /// <para>The ID of the archive export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>273698***</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The URL at which you can download the archived information.</para>
+            /// <para>The download URL of the archive data.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.oss-cn-xxx.aliyuncs.com/export/assetInstance_20221221_1671606250570.zip">http://xxx.oss-cn-xxx.aliyuncs.com/export/assetInstance_20221221_1671606250570.zip</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Link { get; set; }
 
             /// <summary>
-            /// <para>The error message that is returned when the export task fails.</para>
+            /// <para>The error message returned when the archive export task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The progress percentage of the export task.</para>
+            /// <para>The progress percentage (%) of the archive export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -87,11 +87,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The status of the export task. Valid values:</para>
+            /// <para>The status of the archive data export task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>init</b>: The task is being initialized.</description></item>
-            /// <item><description><b>exporting</b>: The task is in progress.</description></item>
-            /// <item><description><b>success</b>: The task is complete.</description></item>
+            /// <item><description><b>init</b>: Export initialization.</description></item>
+            /// <item><description><b>exporting</b>: Export in progress.</description></item>
+            /// <item><description><b>success</b>: Export succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries in the file.</para>
+            /// <para>The total number of archive data entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeBackUpExportInfoResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeBackUpExportInfoResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</para>

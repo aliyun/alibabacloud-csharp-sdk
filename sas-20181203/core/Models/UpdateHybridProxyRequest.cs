@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHybridProxyRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the Security Center agent.</para>
+        /// <para>The UUID of the proxy client.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

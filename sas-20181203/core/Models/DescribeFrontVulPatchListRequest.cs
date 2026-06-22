@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeFrontVulPatchListRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the Windows system vulnerability. The value is a JSON string that contains the following fields:</para>
+        /// <para>The information about the Windows system vulnerability to query. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: the name of the vulnerability.</description></item>
-        /// <item><description><b>uuid</b>: the UUID of the server on which the vulnerability is detected.</description></item>
-        /// <item><description><b>tag</b>: the tag that is added to the vulnerability. Set this field to <b>system</b>, which indicates Windows system vulnerabilities.</description></item>
+        /// <item><description><b>name</b>: the vulnerability name.</description></item>
+        /// <item><description><b>uuid</b>: the UUID of the server that has the vulnerability.</description></item>
+        /// <item><description><b>tag</b>: the vulnerability tag. Set this field to <b>system</b>, which indicates a system vulnerability.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Info { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform on the vulnerability. Set the value to <b>vul_fix</b>, which indicates vulnerability fixing.</para>
+        /// <para>The method to handle the vulnerability. Set this parameter to <b>vul_fix</b>, which indicates fixing the vulnerability.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Set the value to <b>sys</b>, which indicates Windows system vulnerabilities.</para>
+        /// <para>The type of vulnerability to query. Set this parameter to <b>sys</b>, which indicates a Windows vulnerability.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

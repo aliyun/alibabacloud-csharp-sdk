@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the image repository. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>acr</b>: Container Registry</description></item>
-        /// <item><description><b>harbor</b>: Harbor</description></item>
-        /// <item><description><b>quay</b>: Quay</description></item>
-        /// <item><description><b>CI/CD</b>: Jenkins</description></item>
+        /// <item><description><para><b>acr</b>: ACR</para>
+        /// </description></item>
+        /// <item><description><para><b>harbor</b>: Harbor</para>
+        /// </description></item>
+        /// <item><description><para><b>quay</b>: Quay</para>
+        /// </description></item>
+        /// <item><description><para><b>CI/CD</b>: Jenkins</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

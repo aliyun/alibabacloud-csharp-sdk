@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateSwitchStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The rule ID.</para>
         /// <remarks>
-        /// <para> You can call the ListContainerWebDefenseRule operation to query the IDs of rules.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2623606.html">ListSasContainerWebDefenseRule</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Valid values: on and off.</para>
+        /// <para>The status of the container tamper-proofing rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteMonitorAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the member that you want to delete.</para>
+        /// <para>The ID of the member account that you want to delete from the Security Center monitoring account list.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of the members in the Security Center console.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the list of member accounts IDs that are managed by Security Center.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

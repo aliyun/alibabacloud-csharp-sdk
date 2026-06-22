@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>runtime</para>
+        /// <para>testName</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

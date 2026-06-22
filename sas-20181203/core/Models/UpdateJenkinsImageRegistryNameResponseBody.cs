@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateJenkinsImageRegistryNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation. Valid values:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: successful</description></item>
-        /// <item><description><b>false</b>: failed</description></item>
+        /// <item><description><b>true</b>: Processing succeeded.</description></item>
+        /// <item><description><b>false</b>: Processing failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4347E985-6E64-467B-96EC-30D4EA9E****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time consumed. Unit: seconds.</para>
+        /// <para>The time consumed for the execution. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageEventOperationPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImageEventOperationPageResponseBodyData Data { get; set; }
         public class DescribeImageEventOperationPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The alert handling rules.</para>
+            /// <para>The list of alert handling rules.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<DescribeImageEventOperationPageResponseBodyDataList> List { get; set; }
             public class DescribeImageEventOperationPageResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The rule conditions. The value is in the JSON format. Valid values of keys:</para>
+                /// <para>The rule conditions in JSON format. Valid keys:</para>
                 /// <list type="bullet">
                 /// <item><description><b>condition</b>: the matching condition.</description></item>
                 /// <item><description><b>type</b>: the matching type.</description></item>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Conditions { get; set; }
 
                 /// <summary>
-                /// <para>The keyword of the alert item.</para>
+                /// <para>The keyword of the alert metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PEM</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string EventKey { get; set; }
 
                 /// <summary>
-                /// <para>The name of the alert item.</para>
+                /// <para>The name of the alert metric.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PEM</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string EventName { get; set; }
 
                 /// <summary>
-                /// <para>The alert type.</para>
+                /// <para>The alerting type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Only <b>sensitiveFile</b> may be returned.</description></item>
+                /// <item><description><b>sensitiveFile</b>: sensitive file tampering.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -102,9 +102,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Note { get; set; }
 
                 /// <summary>
-                /// <para>The operation code.</para>
+                /// <para>The operation code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Only <b>whitelist</b> may be returned, which means that the alert item is added to the whitelist.</description></item>
+                /// <item><description><b>whitelist</b>: whitelist.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -115,10 +115,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string OperationCode { get; set; }
 
                 /// <summary>
-                /// <para>The application scope of the rule. The value is in the JSON format. Valid values of keys:</para>
+                /// <para>The rule scope in JSON format. Valid keys:</para>
                 /// <list type="bullet">
-                /// <item><description><b>type</b></description></item>
-                /// <item><description><b>value</b></description></item>
+                /// <item><description><b>type</b>: the scope type.</description></item>
+                /// <item><description><b>value</b>: the scope value.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Scenarios { get; set; }
 
                 /// <summary>
-                /// <para>The source of the whitelist. Valid values:</para>
+                /// <para>The source of the alert handling rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>image</b>: image.</description></item>
-                /// <item><description><b>agentless</b>: agentless detection.</description></item>
+                /// <item><description><b>default</b>: image</description></item>
+                /// <item><description><b>agentless</b>: agentless.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>agentless</para>
+                /// <para>default</para>
                 /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]
@@ -145,14 +145,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The pagination information.</para>
+            /// <para>The paged query parameters.</para>
             /// </summary>
             [NameInMap("PageInfo")]
             [Validation(Required=false)]
             public DescribeImageEventOperationPageResponseBodyDataPageInfo PageInfo { get; set; }
             public class DescribeImageEventOperationPageResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The page number.</para>
+                /// <para>The number of the page to return in a paged query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page.</para>
+                /// <para>The maximum number of entries to return on each page in a paged query.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -206,10 +206,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The API call was successful.</description></item>
+        /// <item><description><b>false</b>: The API call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Database { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the Hybrid Backup Recovery (HBR) agent that is used to restore the data of the database on your server.</para>
+        /// <para>The unique identifier of the database backup client on the destination server for restoration.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to query the UUID.</para>
+        /// <para>Call the <a href="~~DescribeUniBackupDatabase~~">DescribeUniBackupDatabase</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceUuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the anti-ransomware policy.</para>
+        /// <para>The ID of the database anti-ransomware backup policy.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the ID.</para>
+        /// <para>Call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the point in time for restoration in the backup version that you want to use. The database is an Oracle database.****</para>
+        /// <para>The <b>reset_scn</b> value of the selected record from the recoverable points in time when you query backups for an Oracle database.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the value.</para>
+        /// <para>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ResetScn { get; set; }
 
         /// <summary>
-        /// <para>The point in time for restoration in the backup version that you want to use. The database is an Oracle database.****</para>
+        /// <para>The <b>reset_time</b> value of the selected record from the recoverable points in time when you query backups for an Oracle database.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the value.</para>
+        /// <para>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ResetTime { get; set; }
 
         /// <summary>
-        /// <para>The information about the database. This parameter is available when the database is a Microsoft SQL Server (MSSQL) database. The value is a JSON string. Valid values:</para>
+        /// <para>The database restoration information when the database type is MSSQL. The value is a JSON string. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: the name of the database</description></item>
-        /// <item><description><b>files</b>: the path to the database files</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> You can call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to query the information.</para>
+        /// <item><description><b>name</b>: the name of the database.</description></item>
+        /// <item><description><b>files</b>: the file path of the database.<remarks>
+        /// <para>Call the <a href="~~DescribeUniRecoverableList~~">DescribeUniRecoverableList</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;files&quot;: {&quot;qtc&quot;:&quot;F:\\database\\qtc.mdf&quot;,&quot;qtc_log&quot;:&quot;F:\\database\\qtc_0.ldf&quot;},
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RestoreInfo { get; set; }
 
         /// <summary>
-        /// <para>The point in time to which you want to restore data.</para>
+        /// <para>The point in time to which you want to restore the database.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to query the point in time.</para>
+        /// <para>Call the <a href="~~DescribeRestorePlans~~">DescribeRestorePlans</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

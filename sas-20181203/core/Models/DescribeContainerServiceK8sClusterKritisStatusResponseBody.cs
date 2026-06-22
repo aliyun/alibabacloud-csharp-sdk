@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerServiceK8sClusterKritisStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Kritis status of the ACK cluster.</para>
+        /// <para>The Kritis status information of the ACK cluster.</para>
         /// </summary>
         [NameInMap("KritisStatus")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether Kritis is installed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Installed.</description></item>
+            /// <item><description><b>false</b>: Not installed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

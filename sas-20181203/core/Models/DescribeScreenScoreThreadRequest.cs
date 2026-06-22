@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeScreenScoreThreadRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time as a timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Source of security score, default is Cloud Security Center if left empty. Enum values: </para>
-        /// <list type="bullet">
-        /// <item><description>0:Cloud Security Center. </description></item>
-        /// <item><description>1:Yaochi Console.</description></item>
-        /// </list>
+        /// <para>The source of the security score. If left empty, the default value is Security Center. Valid values:</para>
+        /// <para>0: Security Center.</para>
+        /// <para>1: Alibaba Cloud ApsaraDB console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -35,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Source { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time as a timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

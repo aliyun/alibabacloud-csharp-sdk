@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOperationProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page to display in a paged query. This parameter is used for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The end time of the query based on the task completion time. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635575219000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The start time of the query based on the task creation time. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1680919232000</para>
@@ -50,34 +50,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The task status codes.</para>
+        /// <para>The list of task status codes.</para>
         /// </summary>
         [NameInMap("StatusCodes")]
         [Validation(Required=false)]
         public List<int?> StatusCodes { get; set; }
 
         /// <summary>
-        /// <para>The task IDs.</para>
+        /// <para>The list of task IDs.</para>
         /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public List<string> TaskIds { get; set; }
 
         /// <summary>
-        /// <para>List of task sources.</para>
+        /// <para>The list of task sources.</para>
         /// </summary>
         [NameInMap("TaskSources")]
         [Validation(Required=false)]
         public List<string> TaskSources { get; set; }
 
         /// <summary>
-        /// <para>The task types. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CHECK_ALL: full check.</description></item>
-        /// <item><description>CHECK_POLICY: policy-based check for which check items are configured.</description></item>
+        /// <item><description>CHECK_POLICY: check performed based on check items in the configured policy.</description></item>
         /// <item><description>CHECK_SCHEDULE: scheduled check.</description></item>
-        /// <item><description>CHECK_ITEM: specific check item-based check.</description></item>
-        /// <item><description>CHECK_INSTANCE: specific check item-based check on specific instances.</description></item>
+        /// <item><description>CHECK_ITEM: check performed based on specified check items.</description></item>
+        /// <item><description>CHECK_INSTANCE: check performed based on specified check items and instances.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("TaskTypes")]

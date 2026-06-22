@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAppVulScanCycleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The scan cycle for application vulnerabilities.</para>
+        /// <para>The application vulnerability scanning epoch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>1week</description></item>
         /// <item><description>2weeks</description></item>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyVulTargetConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable vulnerability detection. Valid values:</para>
+        /// <para>Specifies whether to enable or disable vulnerability detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: yes</description></item>
-        /// <item><description><b>off</b>: no</description></item>
+        /// <item><description><b>on</b>: Enable vulnerability detection.</description></item>
+        /// <item><description><b>off</b>: Disable vulnerability detection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>
@@ -35,12 +35,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Valid values:</para>
+        /// <para>The type of vulnerability detection to configure. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerability</description></item>
+        /// <item><description><b>emg</b>: urgent vulnerability.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to configure.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether a honeypot is allowed to access the Internet. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The honeypot is allowed to access the Internet.</description></item>
-            /// <item><description><b>false</b>: The honeypot is not allowed to access the Internet.</description></item>
+            /// <item><description><para><b>true</b>: The honeypot is allowed to access the Internet.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The honeypot is not allowed to access the Internet.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,11 +142,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the management node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: preparing</description></item>
-            /// <item><description><b>1</b>: normal</description></item>
-            /// <item><description><b>2</b>: abnormal</description></item>
-            /// <item><description><b>4</b>: starting</description></item>
-            /// <item><description><b>5</b>: upgrading</description></item>
+            /// <item><description><para><b>0</b>: preparing</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: normal</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: abnormal</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: starting</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: upgrading</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,8 +164,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the management node can be upgraded. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: no</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -203,8 +212,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

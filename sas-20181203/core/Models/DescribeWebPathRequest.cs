@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebPathRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page in a paged query. Paging is used to display results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page in a paged query. Paging is used to display results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the alert configuration. Valid values:</para>
+        /// <para>The alert configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>web_path</b></description></item>
+        /// <item><description><b>web_path</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

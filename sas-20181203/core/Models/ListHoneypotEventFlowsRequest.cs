@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotEventFlowsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page in a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The status of the event. Valid values: y, n, and a. The value y indicates handled. The value n indicates unhandled. The value a indicates all.</para>
+        /// <para>Specifies whether the event has been handled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>y</b>: Handled. </description></item>
+        /// <item><description><b>n</b>: Unhandled. </description></item>
+        /// <item><description><b>a</b>: All.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>n</para>
@@ -30,10 +35,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,9 +49,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries to return per page in a paged query. Default value: 100. If the PageSize parameter is left empty, 100 entries are returned by default.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,19 +62,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Invalid parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20540822-520E-54F5-B7E6-236CF1EC987F</para>
+        /// <para>9F4E6157-9600-5588-86B9-38F09067****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert event. The ID of the management account of the ListHoneypotEvents resource directory.</para>
+        /// <para>The ID of the alert event.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListHoneypotEvents~~">ListHoneypotEvents</a> operation to query the IDs of alert events.</para>
+        /// <para>You can call the <a href="~~ListHoneypotEvents~~">ListHoneypotEvents</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnfinishedOnceTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the tasks.</para>
+        /// <para>The task details.</para>
         /// </summary>
         [NameInMap("OnceTasks")]
         [Validation(Required=false)]
         public List<ListUnfinishedOnceTaskResponseBodyOnceTasks> OnceTasks { get; set; }
         public class ListUnfinishedOnceTaskResponseBodyOnceTasks : TeaModel {
             /// <summary>
-            /// <para>The time when the task ends.</para>
+            /// <para>The end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1670307567000</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is complete. Valid values:</para>
+            /// <para>Indicates whether the task is completed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: no</description></item>
-            /// <item><description><b>1</b>: yes</description></item>
+            /// <item><description><b>0</b>: not completed</description></item>
+            /// <item><description><b>1</b>: completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Finish { get; set; }
 
             /// <summary>
-            /// <para>The number of assets on which the task is complete.</para>
+            /// <para>The number of completed records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>67</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? FinishCount { get; set; }
 
             /// <summary>
-            /// <para>The progress percentage of the task.</para>
+            /// <para>The export progress percentage (%).</para>
             /// 
             /// <b>Example:</b>
             /// <para>75</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Progress { get; set; }
 
             /// <summary>
-            /// <para>The execution duration of the task.</para>
+            /// <para>The task execution time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1670307567000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RealRunTime { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the task.</para>
+            /// <para>The execution result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TASK_NOT_SUPPORT_REGION</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The time when the task is started.</para>
+            /// <para>The start time of the task execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640102400000</para>
@@ -101,12 +101,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The running status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is not started.</description></item>
-            /// <item><description><b>START</b>: The task is started.</description></item>
-            /// <item><description><b>SUCCESS</b>: The task is complete.</description></item>
-            /// <item><description><b>TIMEOUT</b>: The task timed out.</description></item>
+            /// <item><description><b>INIT</b>: pending</description></item>
+            /// <item><description><b>START</b>: started</description></item>
+            /// <item><description><b>SUCCESS</b>: completed</description></item>
+            /// <item><description><b>TIMEOUT</b>: timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StatusText { get; set; }
 
             /// <summary>
-            /// <para>The objective of the task.</para>
+            /// <para>The task target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>238cf050a7270dd6940602e70f1e5a11eeaf4e02035f445b7f613ff5e064****</para>
@@ -127,10 +127,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The type of the assets that are scanned. Valid values:</para>
+            /// <para>The scan object type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IMAGE_REPO</b>: image repository</description></item>
-            /// <item><description><b>IMAGE</b>: image</description></item>
+            /// <item><description><b>IMAGE_REPO</b>: image repository.</description></item>
+            /// <item><description><b>IMAGE</b>: image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9fb50f2af8bb67c9fdb684194c83****</para>
@@ -151,14 +151,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The information about the image scan task.</para>
+            /// <para>The image scan information.</para>
             /// </summary>
             [NameInMap("TaskImageInfo")]
             [Validation(Required=false)]
             public ListUnfinishedOnceTaskResponseBodyOnceTasksTaskImageInfo TaskImageInfo { get; set; }
             public class ListUnfinishedOnceTaskResponseBodyOnceTasksTaskImageInfo : TeaModel {
                 /// <summary>
-                /// <para>The name of the application.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ack-jenkins-****</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a765ba1435e7f9446065370e9a41****</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the cluster.</para>
+                /// <para>The cluster name used to query the instance list of a specific cluster under the service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACK-test-****</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Image { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the node.</para>
+                /// <para>The node instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-0xi5mxvtmfw9****</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeIp { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pztest****</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The pod of the image.</para>
+                /// <para>The image pod information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>expoit-law-****</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Pod { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the server image.</para>
+                /// <para>The region where the server image resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the image repository.</para>
+                /// <para>The image repository ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>crr-r88w2vryp8m****</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RepoId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the image repository.</para>
+                /// <para>The image repository name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testyyy</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace to which the image repository belongs.</para>
+                /// <para>The image namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bitn***</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE_SCAN</para>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task.</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE_SCAN</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries. This parameter takes effect for paged query and paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>

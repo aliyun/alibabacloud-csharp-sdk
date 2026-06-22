@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeBackupPoliciesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeBackupPoliciesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries displayed on the current page during paginated queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in the returned data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: 10.</para>
+            /// <para>The number of backup policies on each page during paginated queries. Default value: 10, which indicates that each page contains 10 backup policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of anti-ransomware policies returned.</para>
+            /// <para>The total number of backup policies in the returned data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The details of the anti-ransomware policy.</para>
+        /// <para>The details of protection policies.</para>
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public List<DescribeBackupPoliciesResponseBodyPolicies> Policies { get; set; }
         public class DescribeBackupPoliciesResponseBodyPolicies : TeaModel {
             /// <summary>
-            /// <para>The number of the servers on which the anti-ransomware agent is in an abnormal state.</para>
+            /// <para>The number of errors reported by the anti-ransomware client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -76,17 +76,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ClientErrorCount { get; set; }
 
             /// <summary>
-            /// <para>The UUIDs of the servers on which the anti-ransomware agent is in an <b>abnormal</b> state.</para>
+            /// <para>The UUID list of clients in the <b>abnormal</b> state.</para>
             /// </summary>
             [NameInMap("ClientErrorUuidList")]
             [Validation(Required=false)]
             public List<string> ClientErrorUuidList { get; set; }
 
             /// <summary>
-            /// <para>The status of the anti-ransomware agent. Valid values:</para>
+            /// <para>The status of the anti-ransomware client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>running</b>: normal</description></item>
-            /// <item><description><b>exception</b>: abnormal</description></item>
+            /// <item><description><para><b>running</b>: Normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>exception</b>: Abnormal.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientStatus { get; set; }
 
             /// <summary>
-            /// <para>The number of the servers on which the anti-ransomware agent is in a normal state.</para>
+            /// <para>The number of clients in the normal state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -107,14 +109,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HealthClientCount { get; set; }
 
             /// <summary>
-            /// <para>The UUIDs of the servers on which the anti-ransomware agent is in a <b>normal</b> state.</para>
+            /// <para>The UUID list of clients in the <b>healthy</b> state.</para>
             /// </summary>
             [NameInMap("HealthClientUuidList")]
             [Validation(Required=false)]
             public List<string> HealthClientUuidList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the anti-ransomware policy.</para>
+            /// <para>The ID of the anti-ransomware protection policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The time when the anti-ransomware policy was last updated. Unit: milliseconds.</para>
+            /// <para>The latest update time of the anti-ransomware protection policy status, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719488535027</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastStatusSyncTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the anti-ransomware policy.</para>
+            /// <para>The name of the anti-ransomware protection policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SecurityStrategy-20200303</para>
@@ -144,41 +146,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the anti-ransomware policy. The value of this parameter is in the JSON format and contains the following fields:</para>
+            /// <para>The content of the anti-ransomware protection policy. This parameter is in JSON format. The following section describes the fields:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>IsDefault</b>: the type of the anti-ransomware policy. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>1</b>: recommended policy</description></item>
-            /// <item><description><b>0</b>: custom policy</description></item>
+            /// <item><description><b>IsDefault</b>: The type of the protection policy. Valid values:<list type="bullet">
+            /// <item><description><b>1</b>: Recommended policy.</description></item>
+            /// <item><description><b>0</b>: Custom policy.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>Include</b>: the format of the files that are protected. If the value of this field is [], all formats of files are protected.</para>
-            /// </description></item>
-            /// <item><description><para><b>Source</b>: the directory that is protected. If the value of this field is [], all directories are protected.</para>
-            /// </description></item>
-            /// <item><description><para><b>ExcludeSystemPath</b>: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is <b>true</b>, a directory is excluded. If this field is left empty, no directories are excluded.</para>
-            /// </description></item>
-            /// <item><description><para><b>Exclude</b>: the directory that is excluded from the anti-ransomware policy. If the value of this field is [], no directories are excluded.</para>
-            /// </description></item>
-            /// <item><description><para><b>Schedule</b>: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:</para>
-            /// <list type="bullet">
-            /// <item><description>If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</description></item>
-            /// <item><description>If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</description></item>
+            /// <item><description><b>Include</b>: The file types to protect. To protect all file types, set this parameter to [].</description></item>
+            /// <item><description><b>Source</b>: The server directories to protect. To protect all directories, set this parameter to [].</description></item>
+            /// <item><description><b>ExcludeSystemPath</b>: Specifies whether to exclude specified directories. Set this parameter to <b>true</b> to exclude directories. If you do not want to exclude directories, you do not need to set this parameter.</description></item>
+            /// <item><description><b>Exclude</b>: The specified protection directory addresses. If no specific protection directory address is set, set this parameter to [].</description></item>
+            /// <item><description><b>Schedule</b>: The execution time and interval of the data backup task. We recommend that you specify a non-peak hour at a non-round time. The following provides setting examples:<list type="bullet">
+            /// <item><description>Example 1: I|1583216092|P21D indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy is executed at an interval of 3 weeks.</description></item>
+            /// <item><description>Example 2: I|1583216092|PT24H indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy is executed at an interval of 24 hours.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>Retention</b>: the period during which backup data is retained. Unit: days. If the value of this field is 7, backup data is retained for a week. If the value of this field is 365, backup data is retained for a year. If the value of this field is -1, backup data is permanently retained.</para>
-            /// </description></item>
-            /// <item><description><para><b>SpeedLimiter</b>: the limit on the network bandwidth for data backup tasks. If the value of this field is 0:24:30720, the maximum bandwidth for a data backup task is 30 MB/s from 00:00 to 24:00.</para>
-            /// </description></item>
-            /// <item><description><para><b>UseVss</b>: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>Retention</b>: The retention period of the backup data, in days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</description></item>
+            /// <item><description><b>SpeedLimiter</b>: The backup network bandwidth limit. For example, 0:24:30720 indicates that the backup network bandwidth limit from 0:00 to 24:00 is 30 MByte/s.</description></item>
+            /// <item><description><b>UseVss</b>: Specifies whether to enable the VSS (Windows) feature. Valid values:<list type="bullet">
+            /// <item><description><b>true</b>: Enable.</description></item>
+            /// <item><description><b>false</b>: Disable.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.</para>
+            /// <para>The VSS (Windows) feature is only available for Windows systems. After it is enabled, it can effectively reduce the issue of individual file backup failures caused by process occupation. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats will not be supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -189,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region that you specified for data backup when you installed the anti-ransomware agent for the server not deployed on Alibaba Cloud.</para>
+            /// <para>The region ID of the backup service selected when installing the anti-ransomware client on non-Alibaba Cloud servers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ch-hangzhou</para>
@@ -199,10 +192,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PolicyRegionId { get; set; }
 
             /// <summary>
-            /// <para>The version of the anti-ransomware policy. Valid values:</para>
+            /// <para>The version of the protection policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1.0.0</description></item>
-            /// <item><description>2.0.0</description></item>
+            /// <item><description>1.0.0.</description></item>
+            /// <item><description>2.0.0.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -213,11 +206,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PolicyVersion { get; set; }
 
             /// <summary>
-            /// <para>The previous status of the anti-ransomware policy. Valid values:</para>
+            /// <para>The previous status of the anti-ransomware protection policy.</para>
             /// <list type="bullet">
-            /// <item><description><b>enabled</b>: The anti-ransomware policy is manually enabled.</description></item>
-            /// <item><description><b>disabled</b>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</description></item>
-            /// <item><description><b>closed</b>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</description></item>
+            /// <item><description><para><b>enabled</b>: The policy is manually enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>disabled</b>: The policy is manually disabled. After the policy is disabled, running backup tasks will stop.</para>
+            /// </description></item>
+            /// <item><description><para><b>closed</b>: The anti-ransomware capacity is exceeded, and the system disables the policy.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -228,18 +224,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PreStatus { get; set; }
 
             /// <summary>
-            /// <para>The UUIDs that are returned based on the value of the MachineRemark request parameter.</para>
+            /// <para>The UUID list of servers returned after retrieval by the MachineRemark request parameter.</para>
             /// </summary>
             [NameInMap("RemarkedUuidList")]
             [Validation(Required=false)]
             public List<string> RemarkedUuidList { get; set; }
 
             /// <summary>
-            /// <para>The type of the server. Valid values:</para>
+            /// <para>The server type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>OUT_CLOUD</b>: server not deployed on Alibaba Cloud</description></item>
-            /// <item><description><b>ALIYUN</b>: Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>TRIPARTITE</b>: simple application server</description></item>
+            /// <item><description><b>OUT_CLOUD</b>: Non-Alibaba Cloud server.</description></item>
+            /// <item><description><b>ALIYUN</b>: Alibaba Cloud server.</description></item>
+            /// <item><description><b>TRIPARTITE</b>: Simple Application Server.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -250,7 +246,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServerType { get; set; }
 
             /// <summary>
-            /// <para>The number of servers on which data backup is exceptional.</para>
+            /// <para>The number of servers with data backup exceptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -260,18 +256,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ServiceErrorCount { get; set; }
 
             /// <summary>
-            /// <para>The UUIDs of the servers on which data backup is exceptional.</para>
+            /// <para>The UUID list of servers with data backup exceptions.</para>
             /// </summary>
             [NameInMap("ServiceErrorUuidList")]
             [Validation(Required=false)]
             public List<string> ServiceErrorUuidList { get; set; }
 
             /// <summary>
-            /// <para>The status of the anti-ransomware policy. Valid values:</para>
+            /// <para>The status of the anti-ransomware protection policy.</para>
             /// <list type="bullet">
-            /// <item><description><b>enabled</b>: The anti-ransomware policy is manually enabled.</description></item>
-            /// <item><description><b>disabled</b>: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.</description></item>
-            /// <item><description><b>closed</b>: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.</description></item>
+            /// <item><description><para><b>enabled</b>: The policy is manually enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>disabled</b>: The policy is manually disabled. After the policy is disabled, running backup tasks will stop.</para>
+            /// </description></item>
+            /// <item><description><para><b>closed</b>: The anti-ransomware capacity is exceeded, and the system disables the policy.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -282,12 +281,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The upgrade status of the anti-ransomware policy. Valid values:</para>
+            /// <para>The upgrade status of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NotUpgraded</b></description></item>
-            /// <item><description><b>Upgrading</b></description></item>
-            /// <item><description><b>UpgradeFailed</b></description></item>
-            /// <item><description><b>UpgradeSuccess</b></description></item>
+            /// <item><description><b>NotUpgraded</b>: Not upgraded.</description></item>
+            /// <item><description><b>Upgrading</b>: Upgrading.</description></item>
+            /// <item><description><b>UpgradeFailed</b>: Upgrade failed.</description></item>
+            /// <item><description><b>UpgradeSuccess</b>: Upgrade succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -298,7 +297,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UpgradeStatus { get; set; }
 
             /// <summary>
-            /// <para>The UUIDs of the servers to which the anti-ransomware policy is applied.</para>
+            /// <para>The UUID list of servers protected by the anti-ransomware protection policy.</para>
             /// </summary>
             [NameInMap("UuidList")]
             [Validation(Required=false)]
@@ -307,7 +306,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. It can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</para>

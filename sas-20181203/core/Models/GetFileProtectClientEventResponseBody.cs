@@ -9,11 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileProtectClientEventResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFileProtectClientEventResponseBodyData Data { get; set; }
         public class GetFileProtectClientEventResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The alert notification level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: no alert</description></item>
+            /// <item><description>1: reminder</description></item>
+            /// <item><description>2: suspicious</description></item>
+            /// <item><description>3: high-risk.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -22,6 +33,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AlertLevel { get; set; }
 
             /// <summary>
+            /// <para>The command line of the event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[&quot;touch&quot;,&quot;/usr/local/aaaa&quot;]</para>
             /// </summary>
@@ -30,6 +43,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CmdLine { get; set; }
 
             /// <summary>
+            /// <para>The number of times the alert occurred.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -38,6 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The file path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/usr/local</para>
             /// </summary>
@@ -46,6 +63,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilePath { get; set; }
 
             /// <summary>
+            /// <para>The process permissions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rwxr-xr-x</para>
             /// </summary>
@@ -54,6 +73,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilePermission { get; set; }
 
             /// <summary>
+            /// <para>The timestamp when the event first occurred.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
             /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the event was handled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
             /// </summary>
@@ -70,6 +93,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? HandleTime { get; set; }
 
             /// <summary>
+            /// <para>The event ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3454</para>
             /// </summary>
@@ -78,6 +103,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-wz92q7m5hsbgfhdss***</para>
             /// </summary>
@@ -86,6 +113,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The public IP address of the associated instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17.16.XX.XX</para>
             /// </summary>
@@ -94,6 +123,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InternetIp { get; set; }
 
             /// <summary>
+            /// <para>The private IP address of the associated instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.42.XX.XX</para>
             /// </summary>
@@ -102,6 +133,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
+            /// <para>The time when the event most recently occurred.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1694576692000</para>
             /// </summary>
@@ -110,6 +143,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LatestTime { get; set; }
 
             /// <summary>
+            /// <para>The operation that the process performed on the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DELETE</para>
             /// </summary>
@@ -118,6 +153,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
+            /// <para>The operating system type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>linux</para>
             /// </summary>
@@ -126,6 +163,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Platform { get; set; }
 
             /// <summary>
+            /// <para>The process path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/bin/bash33</para>
             /// </summary>
@@ -134,6 +173,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcPath { get; set; }
 
             /// <summary>
+            /// <para>The process ID of the event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3453</para>
             /// </summary>
@@ -142,6 +183,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProcessId { get; set; }
 
             /// <summary>
+            /// <para>The remarks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -150,6 +193,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <para>The action of the blocking rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>block</para>
             /// </summary>
@@ -158,6 +203,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleAction { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-000</para>
             /// </summary>
@@ -166,6 +213,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The event status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: unhandled </description></item>
+            /// <item><description>1: handled</description></item>
+            /// <item><description>2: whitelisted.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -174,6 +228,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>The user ID of the event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -182,6 +238,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The username of the event.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>root</para>
             /// </summary>
@@ -190,6 +248,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UserName { get; set; }
 
             /// <summary>
+            /// <para>The UUID of the asset instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
             /// </summary>

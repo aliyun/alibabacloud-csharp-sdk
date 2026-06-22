@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDynamicDictResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of weak password rules that are added.</para>
+        /// <para>The number of weak password rules that have been added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS object that contains custom weak passwords.</para>
+        /// <para>The name of the weak password file in OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_dict.plain</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The size of the OSS object. Unit: bytes.</para>
+        /// <para>The file size, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the Object Storage Service (OSS) object.</para>
+        /// <para>The OSS object URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudtest01/661767e1-5ae3-4ec5-865f-03039436893a/sacc2*****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OssUrl { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier that Alibaba Cloud generated for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3D7C47D-3F11-57BB-90E8-E5C20C61****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the OSS object was uploaded. Unit: milliseconds.</para>
+        /// <para>The upload timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1719919421</para>

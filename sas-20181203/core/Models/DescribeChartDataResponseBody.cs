@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeChartDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The valid values for all subtypes of the chart.</para>
+        /// <para>The available values for all subtypes of the chart.</para>
         /// </summary>
         [NameInMap("AllChartSubTypeList")]
         [Validation(Required=false)]
         public List<DescribeChartDataResponseBodyAllChartSubTypeList> AllChartSubTypeList { get; set; }
         public class DescribeChartDataResponseBodyAllChartSubTypeList : TeaModel {
             /// <summary>
-            /// <para>The subtype of the chart.</para>
+            /// <para>The chart subtype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CID_SUSPICIOUS_TREND-ALL</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SubType { get; set; }
 
             /// <summary>
-            /// <para>The name of the chart subtype.</para>
+            /// <para>The chart subtype name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>All Alerts</para>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The data type of the chart. Valid values:</para>
+        /// <para>The chart data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>commonCoordinate</b></description></item>
-        /// <item><description><b>timeCoordinate</b></description></item>
-        /// <item><description><b>multipleValue</b></description></item>
-        /// <item><description><b>singleValue</b></description></item>
-        /// <item><description><b>propertyValue</b></description></item>
-        /// <item><description><b>propertyArrayValue</b></description></item>
+        /// <item><description><b>commonCoordinate</b>: common coordinate</description></item>
+        /// <item><description><b>timeCoordinate</b>: time-axis coordinate</description></item>
+        /// <item><description><b>multipleValue</b>: multiple values</description></item>
+        /// <item><description><b>singleValue</b>: single value</description></item>
+        /// <item><description><b>propertyValue</b>: property value</description></item>
+        /// <item><description><b>propertyArrayValue</b>: array property value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,23 +57,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ChartDataType { get; set; }
 
         /// <summary>
-        /// <para>The subtype values in which the chart is selected.</para>
+        /// <para>The list of selected chart subtype values.</para>
         /// </summary>
         [NameInMap("ChartSubTypeList")]
         [Validation(Required=false)]
         public List<string> ChartSubTypeList { get; set; }
 
         /// <summary>
-        /// <para>The type of the chart. Valid values:</para>
+        /// <para>The chart type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>timeLine</b></description></item>
-        /// <item><description><b>timeBar</b></description></item>
-        /// <item><description><b>bar</b></description></item>
-        /// <item><description><b>line</b></description></item>
-        /// <item><description><b>pie</b></description></item>
-        /// <item><description><b>gauge</b></description></item>
-        /// <item><description><b>table</b></description></item>
-        /// <item><description><b>text</b></description></item>
+        /// <item><description><b>timeLine</b>: timeline chart</description></item>
+        /// <item><description><b>timeBar</b>: time-axis bar chart</description></item>
+        /// <item><description><b>bar</b>: bar chart</description></item>
+        /// <item><description><b>line</b>: line chart</description></item>
+        /// <item><description><b>pie</b>: pie chart</description></item>
+        /// <item><description><b>gauge</b>: gauge chart</description></item>
+        /// <item><description><b>table</b>: table</description></item>
+        /// <item><description><b>text</b>: text.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,21 +91,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeChartDataResponseBodyCoordinateData CoordinateData { get; set; }
         public class DescribeChartDataResponseBodyCoordinateData : TeaModel {
             /// <summary>
-            /// <para>The x-axis values.</para>
+            /// <para>The list of X-axis values.</para>
             /// </summary>
             [NameInMap("XAxis")]
             [Validation(Required=false)]
             public List<string> XAxis { get; set; }
 
             /// <summary>
-            /// <para>The y-axis values.</para>
+            /// <para>The list of Y-axis values.</para>
             /// </summary>
             [NameInMap("YAxisList")]
             [Validation(Required=false)]
             public List<DescribeChartDataResponseBodyCoordinateDataYAxisList> YAxisList { get; set; }
             public class DescribeChartDataResponseBodyCoordinateDataYAxisList : TeaModel {
                 /// <summary>
-                /// <para>The name of the data type.</para>
+                /// <para>The data type name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Port</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The subtype data of the chart.</para>
+                /// <para>The chart subtype data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CID_SUSPICIOUS_TREND-AL</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string SubType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the data.</para>
+                /// <para>The data type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>high</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The values of the y-axis that corresponds to x-axis points.</para>
+                /// <para>The Y-axis values corresponding to each X-axis point.</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The values in the multi-value charts.</para>
+        /// <para>The multiple-value chart data.</para>
         /// </summary>
         [NameInMap("MultipleData")]
         [Validation(Required=false)]
         public List<DescribeChartDataResponseBodyMultipleData> MultipleData { get; set; }
         public class DescribeChartDataResponseBodyMultipleData : TeaModel {
             /// <summary>
-            /// <para>The font color, which is an RGBA value.</para>
+            /// <para>The font color in RGBA hexadecimal color code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>#FFA800</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Color { get; set; }
 
             /// <summary>
-            /// <para>The name of the data type.</para>
+            /// <para>The data type name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Safety</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the data.</para>
+            /// <para>The data type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>safe</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The attribute value.</para>
+            /// <para>The property value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The attribute value of the array chart.</para>
+        /// <para>The array chart property values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PropertyArrayValue { get; set; }
 
         /// <summary>
-        /// <para>The data of the chart.</para>
+        /// <para>The property value in the chart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;totalCount\&quot;: \&quot;0\&quot;}</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PropertyValue { get; set; }
 
         /// <summary>
-        /// <para>The array data of the chart.</para>
+        /// <para>The property array of the chart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProperyArrayValue { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID generated by Alibaba Cloud for this request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50CCE62A-2BC4-5CF8-B976-E4F62A31****</para>
@@ -235,14 +235,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The data of the single value chart.</para>
+        /// <para>The single-value chart data.</para>
         /// </summary>
         [NameInMap("SingleData")]
         [Validation(Required=false)]
         public DescribeChartDataResponseBodySingleData SingleData { get; set; }
         public class DescribeChartDataResponseBodySingleData : TeaModel {
             /// <summary>
-            /// <para>The name of the data type.</para>
+            /// <para>The data type name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>suspicious</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the data.</para>
+            /// <para>The data type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>suspicious</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The value in the single value chart.</para>
+            /// <para>The data value of the single-value chart.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172</para>

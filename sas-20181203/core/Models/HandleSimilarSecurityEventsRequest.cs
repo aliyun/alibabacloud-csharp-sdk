@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class HandleSimilarSecurityEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The whitelist rule. For example, if you want to add a file that contains the string a to the whitelist based on the MD5 hash value, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</para>
+        /// <para>The rule for adding items to the whitelist. For example, to add a whitelist rule based on file MD5 where the file contains the string &quot;a&quot;, set this parameter to {&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;field&quot;:&quot;md5&quot;,&quot;operate&quot;:&quot;contains&quot;,&quot;fieldValue&quot;:&quot;aa&quot;}</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MarkMissParam { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform to handle the alert events.</para>
+        /// <para>The type of operation for batch processing alert events of the same type.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to query the operations.</para>
+        /// <para>Call the <a href="~~DescribeSecurityEventOperations~~">DescribeSecurityEventOperations</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,39 +34,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperationCode { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the operation that you want to perform to handle the alert events. The value of this parameter is in the JSON format.</para>
+        /// <para>The configuration of the sub-operation for handling alerting events. The value is in JSON format.</para>
         /// <remarks>
-        /// <para> If you set <b>OperationCode</b> to <b>kill_and_quara</b>, <b>block_ip</b>, or <b>virus_quara</b>, you must specify OperationParams. If you set <b>OperationCode</b> to other values, you can leave OperationParams empty. If you set <b>OperationCode</b> to <b>block_ip</b>, the value of OperationParams must consist of the following fields:</para>
+        /// <para>This parameter is required when <b>OperationCode</b> is set to <b>kill_and_quara</b>, <b>block_ip</b>, or <b>virus_quara</b>. For other values of <b>OperationCode</b>, this parameter can be left empty.</para>
         /// </remarks>
         /// <remarks>
+        /// <para>When <b>OperationCode</b> is set to <b>block_ip</b>, the following field is included:</para>
         /// <list type="bullet">
-        /// <item><description><b>expireTime</b>: the end time of locking. Unit: milliseconds.</description></item>
+        /// <item><description><b>expireTime</b>: the lock expiration time. Unit: milliseconds.</description></item>
         /// </list>
-        /// </remarks>
-        /// <remarks>
-        /// <para> If you set <b>OperationCode</b> to <b>kill_and_quara</b>, the value of OperationParams must consist of the following fields:</para>
-        /// </remarks>
-        /// <remarks>
+        /// <para>When <b>OperationCode</b> is set to <b>kill_and_quara</b>, the following field is included:</para>
         /// <list type="bullet">
-        /// <item><description><b>subOperation</b>: the method of detection and removal. Valid values:</description></item>
+        /// <item><description><b>subOperation</b>: the method used to scan and remove threats. Valid values:<list type="bullet">
+        /// <item><description><b>killAndQuaraFileByMd5andPath</b>: terminates the process and moves the file to the quarantined file.</description></item>
+        /// <item><description><b>killByMd5andPath</b>: terminates the running process.</description></item>
         /// </list>
-        /// </remarks>
-        /// <remarks>
-        /// <pre><c>*   **killAndQuaraFileByMd5andPath**: terminates the process and quarantines the source file of the process.
-        /// *   **killByMd5andPath**: terminates the running process.
-        /// </c></pre>
-        /// </remarks>
-        /// <remarks>
-        /// <para> If you set <b>OperationCode</b> to <b>virus_quara</b>, the value of OperationParams consists of the following fields:</para>
-        /// </remarks>
-        /// <remarks>
+        /// </description></item>
+        /// </list>
+        /// <para>When <b>OperationCode</b> is set to <b>virus_quara</b>, the following field is included:</para>
         /// <list type="bullet">
-        /// <item><description><b>subOperation</b>: the method of detection and removal. Valid values:</description></item>
+        /// <item><description><b>subOperation</b>: the method used to scan and remove threats. Valid values:<list type="bullet">
+        /// <item><description><b>quaraFileByMd5andPath</b>: moves the source file of the process to the quarantined file.</description></item>
         /// </list>
-        /// </remarks>
-        /// <remarks>
-        /// <pre><c>*   **quaraFileByMd5andPath**: quarantines the source file of the process.
-        /// </c></pre>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperationParams { get; set; }
 
         /// <summary>
-        /// <para>The remark of the operation.</para>
+        /// <para>The remarks for the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>remark test.</para>
@@ -91,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -101,9 +92,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task that handles the alert events at a time.</para>
+        /// <para>The ID of the task that batch processes all alert events of the same type.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~CreateSimilarSecurityEventsQueryTask~~">CreateSimilarSecurityEventsQueryTask</a> operation to query the IDs of tasks.</para>
+        /// <para>Call the <a href="~~CreateSimilarSecurityEventsQueryTask~~">CreateSimilarSecurityEventsQueryTask</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

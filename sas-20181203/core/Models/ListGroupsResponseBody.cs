@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code returned by the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The groups.</para>
+        /// <para>The list of server groups.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListGroupsResponseBodyList> List { get; set; }
         public class ListGroupsResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The server group type. Valid values:</para>
+            /// <para>The type of the server group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: default group</description></item>
-            /// <item><description><b>1</b>: other group</description></item>
+            /// <item><description><b>1</b>: other group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? GroupFlag { get; set; }
 
             /// <summary>
-            /// <para>The server group ID.</para>
+            /// <para>The ID of the server group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11028542</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GroupId { get; set; }
 
             /// <summary>
-            /// <para>The server group name.</para>
+            /// <para>The name of the server group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen+dir-1440978***</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The detailed information of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query results.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+            /// <para>The NextToken value returned when the NextToken method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B604532DEF982B875E8360A6EFA3B***</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB414DB5-F692-5DAB-9F0F-975C060AF***</para>
@@ -152,10 +152,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether exceptions are handled. Valid values:</para>
+        /// <para>Indicates whether the exception event was processed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Processed.</description></item>
+        /// <item><description><b>false</b>: Not processed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

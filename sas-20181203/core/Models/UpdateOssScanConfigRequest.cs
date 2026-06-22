@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateOssScanConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to match the prefixes of all objects.</para>
+        /// <para>Specifies whether to match all file prefixes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? AllKeyPrefix { get; set; }
 
         /// <summary>
-        /// <para>The names of the buckets.</para>
+        /// <para>The list of bucket names.</para>
         /// </summary>
         [NameInMap("BucketNameList")]
         [Validation(Required=false)]
         public List<string> BucketNameList { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of objects that can be extracted from a package. Valid values: 1 to 1000. If the value is reached, the decompression operation immediately finishes. The detection of extracted objects is not affected.</para>
+        /// <para>The maximum number of files to decompress. Minimum value: 1. Maximum value: 1000. If the maximum number of decompressed files is exceeded, the decompression operation stops. The detection of already decompressed files is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of decompression levels when multi-level packages are decompressed. Valid values: 1 to 5. If the value is reached, the decompression operation immediately finishes. The detection of extracted objects is not affected.</para>
+        /// <para>The maximum number of decompression layers for nested compressed files. Minimum value: 1. Maximum value: 5. If the maximum number of decompression layers is exceeded, the decompression operation stops. The detection of already decompressed files is not affected.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxLayer { get; set; }
 
         /// <summary>
-        /// <para>The decryption methods.</para>
+        /// <para>The list of decryption types.</para>
         /// </summary>
         [NameInMap("DecryptionList")]
         [Validation(Required=false)]
         public List<string> DecryptionList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the bucket check policy. Valid values:</para>
+        /// <para>Specifies whether to enable the scan policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enables the bucket check policy.</description></item>
-        /// <item><description><b>0</b>: disables the bucket check policy.</description></item>
+        /// <item><description><b>1</b>: Enable.</description></item>
+        /// <item><description><b>0</b>: Disable.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Enable { get; set; }
 
         /// <summary>
-        /// <para>The end time of the check. Specify the time in the HH:mm:ss format.</para>
+        /// <para>The scan end time in the HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:01</para>
@@ -78,31 +78,31 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The policy ID.</para>
+        /// <para>The scan policy ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>65778</para>
+        /// <para>1141****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The prefixes of the objects.</para>
+        /// <para>The prefix list of files.</para>
         /// </summary>
         [NameInMap("KeyPrefixList")]
         [Validation(Required=false)]
         public List<string> KeyPrefixList { get; set; }
 
         /// <summary>
-        /// <para>The suffixes of the objects that you want to check.</para>
+        /// <para>The list of file suffixes.</para>
         /// </summary>
         [NameInMap("KeySuffixList")]
         [Validation(Required=false)]
         public List<string> KeySuffixList { get; set; }
 
         /// <summary>
-        /// <para>The timestamp. The objects whose last modification time is later than the specified value are detected. Unit: milliseconds.</para>
+        /// <para>Scans files whose last modification time is after the specified timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1724301769834</para>
@@ -112,17 +112,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? LastModifiedStartTime { get; set; }
 
         /// <summary>
-        /// <para>The policy name.</para>
+        /// <para>The scan policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nacos****</para>
+        /// <para>testStrategy</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable real-time incremental detection. When this parameter is set to true, the parameters ScanDayList, StartTime, and EndTime are not effective.</para>
+        /// <para>Specifies whether to enable real-time incremental detection. If this parameter is set to true, the ScanDayList, StartTime, and EndTime parameters do not take effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -132,14 +132,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? RealTimeIncr { get; set; }
 
         /// <summary>
-        /// <para>The time when the check is performed. The value specifies the days of the week.</para>
+        /// <para>The scan days. The number indicates the day of the week.</para>
         /// </summary>
         [NameInMap("ScanDayList")]
         [Validation(Required=false)]
         public List<int?> ScanDayList { get; set; }
 
         /// <summary>
-        /// <para>The start time of the check. Specify the time in the HH:mm:ss format.</para>
+        /// <para>The scan start time in the HH:mm:ss format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00:00</para>

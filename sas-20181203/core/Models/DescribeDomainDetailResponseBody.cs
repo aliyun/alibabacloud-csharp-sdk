@@ -30,20 +30,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the details about the domain asset.</para>
+        /// <para>The asset information related to the domain name.</para>
         /// </summary>
         [NameInMap("DomainDetailItems")]
         [Validation(Required=false)]
         public List<DescribeDomainDetailResponseBodyDomainDetailItems> DomainDetailItems { get; set; }
         public class DescribeDomainDetailResponseBodyDomainDetailItems : TeaModel {
             /// <summary>
-            /// <para>The type of the domain asset. Valid values:</para>
+            /// <para>The Asset Type of the asset under the domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: an Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>1</b>: a Server Load Balancer (SLB) instance</description></item>
-            /// <item><description><b>2</b>: a Network Address Translation (NAT) gateway</description></item>
-            /// <item><description><b>3</b>: an ApsaraDB RDS instance</description></item>
-            /// <item><description><b>4</b>: an ApsaraDB for MongoDB instance</description></item>
+            /// <item><description><b>0</b>: ECS</description></item>
+            /// <item><description><b>1</b>: load balancing</description></item>
+            /// <item><description><b>2</b>: NAT gateway</description></item>
+            /// <item><description><b>3</b>: RDS database</description></item>
+            /// <item><description><b>4</b>: MongoDB database</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The instance UUID of the domain asset.</para>
+            /// <para>The UUID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-bp1g9dohoyin9cjhn6****</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. The China value is a unique identifier that Alibaba Cloud generates for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3A85CFCF-05C8-451A-9E41-C0D5E96BA407</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the root domain that corresponds to the domain.</para>
+        /// <para>The root domain name that corresponds to the domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAssetsPropertyItemRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the asset fingerprint that you want to query. Default value: <b>sca</b>. Valid values:</para>
+        /// <para>The type of Asset Fingerprints to query. Default value: <b>sca</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>lkm</b>: kernel module</description></item>
         /// <item><description><b>autorun</b>: startup item</description></item>
-        /// <item><description><b>web_server</b>: website</description></item>
+        /// <item><description><b>web_server</b>: website.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Biz { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully refresh the data that you want to query. Valid values:</para>
+        /// <para>Specifies whether to forcefully refresh the data to be queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Forcefully refresh.</description></item>
+        /// <item><description><b>false</b>: Do not forcefully refresh.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? ForceFlush { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries to return on each page when using paging. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The value of the search condition. You must specify this parameter based on the value of the <b>SearchItem</b> parameter.</para>
+        /// <para>The content to query. Specify different query content based on the value of <b>SearchItem</b>:</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>SearchItem</b> to <b>domain</b>, you must enter the domain name.</description></item>
-        /// <item><description>If you set <b>SearchItem</b> to <b>module_name</b>, you must enter the module name.</description></item>
-        /// <item><description>If you set <b>SearchItem</b> to <b>path</b>, you must enter the path to the self-starting item.</description></item>
+        /// <item><description>If <b>SearchItem</b> is set to <b>domain</b>, enter the domain name of the Asset Fingerprints entry.</description></item>
+        /// <item><description>If <b>SearchItem</b> is set to <b>module_name</b>, enter the module name of the Asset Fingerprints entry.</description></item>
+        /// <item><description>If <b>SearchItem</b> is set to <b>path</b>, enter the startup item path of the Asset Fingerprints entry.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify both the <b>SearchItem</b> and <b>SearchInfo</b> parameters before you can query the information about asset fingerprints by asset fingerprint name.</para>
+        /// <para>The <b>SearchItem</b> and <b>SearchInfo</b> parameters must be used together. Both parameters must be set at the same time for the query to take effect. Setting only one parameter does not take effect. You can use these parameters to query all data of a specific Asset Fingerprints entry by name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,27 +95,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchInfo { get; set; }
 
         /// <summary>
-        /// <para>The type of the search condition. You must specify this parameter based on the value of the <b>Biz</b> parameter. Valid values:</para>
+        /// <para>The type of query condition. Set different aggregation search conditions based on the <b>Biz</b> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <b>Biz</b> to <b>web_server</b>, set <b>SearchItem</b> to the following value:</para>
-        /// <list type="bullet">
-        /// <item><description><b>domain</b>: the domain name</description></item>
+        /// <item><description>If <b>Biz</b> is set to <b>web_server</b>, the following search conditions are supported for <b>SearchItem</b>:<list type="bullet">
+        /// <item><description><b>domain</b>: domain name</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If you set <b>Biz</b> to <b>lkm</b>, set <b>SearchItem</b> to the following value:</para>
-        /// <list type="bullet">
-        /// <item><description><b>module_name</b>: the name of the module</description></item>
+        /// <item><description>If <b>Biz</b> is set to <b>lkm</b>, the following search conditions are supported for <b>SearchItem</b>:<list type="bullet">
+        /// <item><description><b>module_name</b>: module name</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If you set <b>Biz</b> to <b>autorun</b>, set <b>SearchItem</b> to the following value:</para>
-        /// <list type="bullet">
-        /// <item><description><b>path</b>: the path to the self-starting item</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> You must specify both the <b>SearchItem</b> and <b>SearchInfo</b> parameters before you can query the information about asset fingerprints by asset fingerprint name.</para>
+        /// <item><description>If <b>Biz</b> is set to <b>autorun</b>, the following search conditions are supported for <b>SearchItem</b>:<list type="bullet">
+        /// <item><description><b>path</b>: startup item path<remarks>
+        /// <para>The <b>SearchItem</b> and <b>SearchInfo</b> parameters must be used together. Both parameters must be set at the same time for the query to take effect. Setting only one parameter does not take effect. You can use these parameters to query all data of a specific Asset Fingerprints entry by name.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>path</para>

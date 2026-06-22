@@ -46,10 +46,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the attribute that is used for the query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>namespace</b>: the namespace</description></item>
-        /// <item><description><b>appName</b>: the application name</description></item>
-        /// <item><description><b>image</b>: the image</description></item>
-        /// <item><description><b>tag</b>: the tag</description></item>
+        /// <item><description><para><b>namespace</b>: the namespace</para>
+        /// </description></item>
+        /// <item><description><para><b>appName</b>: the application name</para>
+        /// </description></item>
+        /// <item><description><para><b>image</b>: the image</para>
+        /// </description></item>
+        /// <item><description><para><b>tag</b>: the tag</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

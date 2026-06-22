@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListPublishBatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the release batches.</para>
+        /// <para>The details of the batch release tasks.</para>
         /// </summary>
         [NameInMap("BatchList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? BatchId { get; set; }
 
             /// <summary>
-            /// <para>The interval between two release batches. Unit: hours.</para>
+            /// <para>The interval between the completion of the current batch and the start of the next batch. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the release batch.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>发布批次1</para>
             /// </summary>
             [NameInMap("BatchName")]
             [Validation(Required=false)]
             public string BatchName { get; set; }
 
             /// <summary>
-            /// <para>The current batch number during a batch release.</para>
+            /// <para>The number of the current batch in a phased release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2147483647</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BatchNo { get; set; }
 
             /// <summary>
-            /// <para>The progress of the release batch. This parameter indicates the number of servers that are upgraded in the release batch.</para>
+            /// <para>The release progress of the current batch, indicating the number of machines that have been released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BatchProcess { get; set; }
 
             /// <summary>
-            /// <para>The total number of batches.</para>
+            /// <para>The total number of batches in the release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -77,11 +77,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BatchTotal { get; set; }
 
             /// <summary>
-            /// <para>The asset selection dimension. Valid values:</para>
+            /// <para>The dimension for asset selection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: instance.</description></item>
-            /// <item><description><b>1</b>: machine group.</description></item>
-            /// <item><description><b>2</b>: Virtual Private Cloud (VPC) ID.</description></item>
+            /// <item><description><b>0</b>: machine instance</description></item>
+            /// <item><description><b>1</b>: machine group</description></item>
+            /// <item><description><b>2</b>: VPC-connected instance ID.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,13 +92,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? OperationBase { get; set; }
 
             /// <summary>
-            /// <para>The publish status of the Security Center agent. Valid values:</para>
+            /// <para>The release status of the client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: not started.</description></item>
-            /// <item><description><b>1</b>: publishing.</description></item>
-            /// <item><description><b>2</b>: published.</description></item>
-            /// <item><description><b>3</b>: publish suspended.</description></item>
-            /// <item><description><b>4</b>: forcibly upgrading.</description></item>
+            /// <item><description><b>0</b>: not started</description></item>
+            /// <item><description><b>1</b>: releasing</description></item>
+            /// <item><description><b>2</b>: release completed</description></item>
+            /// <item><description><b>3</b>: release paused</description></item>
+            /// <item><description><b>4</b>: force upgrading.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The destination version of the Security Center agent.</para>
+            /// <para>The target version to upgrade to.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.9</para>
@@ -121,14 +121,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The page information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListPublishBatchResponseBodyPageInfo PageInfo { get; set; }
         public class ListPublishBatchResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. The China Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7532B7EE-7CE7-5F4D-BF04-B12447DDCAE1</para>

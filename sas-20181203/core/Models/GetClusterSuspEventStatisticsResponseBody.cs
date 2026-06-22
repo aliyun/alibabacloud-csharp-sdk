@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterSuspEventStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACF97412-FD09-4D1F-994F-34DF12BR****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of alerts by risk level.</para>
+        /// <para>The number of alerts by severity level.</para>
         /// </summary>
         [NameInMap("SuspStatistics")]
         [Validation(Required=false)]
         public GetClusterSuspEventStatisticsResponseBodySuspStatistics SuspStatistics { get; set; }
         public class GetClusterSuspEventStatisticsResponseBodySuspStatistics : TeaModel {
             /// <summary>
-            /// <para>The number of alerts whose Emergency level is Reminder.</para>
+            /// <para>The number of alerts with the reminder severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Remind { get; set; }
 
             /// <summary>
-            /// <para>The number of alerts whose Emergency level is Urgent.</para>
+            /// <para>The number of alerts with the urgent severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Serious { get; set; }
 
             /// <summary>
-            /// <para>The number of alerts whose Emergency level is Suspicious.</para>
+            /// <para>The number of alerts with the suspicious severity level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

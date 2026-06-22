@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateImageVulWhitelistTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The whitelist ID.</para>
+        /// <para>The ID of the vulnerability whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000083</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The reason why you add the vulnerability to the whitelist.</para>
+        /// <para>The reason for adding the whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ignore</para>
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The source of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image</b></description></item>
-        /// <item><description><b>agentless</b></description></item>
+        /// <item><description><b>image</b>: image</description></item>
+        /// <item><description><b>agentless</b>: agentless.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The vulnerability that you want to add to the whitelist. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The operation target. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>type</b>: The type of the vulnerability. The value is fixed to repo.</description></item>
-        /// <item><description><b>target</b>: The content of the vulnerability. The value is in the format of Namespace/Image repository.</description></item>
+        /// <item><description><b>type</b>: The target type. Set to repo.</description></item>
+        /// <item><description><b>target</b>: The target content. Format: namespace/image repository.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -109,10 +109,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The interception mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: monitor</description></item>
-            /// <item><description><b>1</b>: block</description></item>
-            /// <item><description><b>2</b>: alert</description></item>
-            /// <item><description><b>3</b>: allow</description></item>
+            /// <item><description><para><b>0</b>: monitor</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: block</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: alert</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: allow</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,8 +159,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the defense rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The rule is enabled.</description></item>
-            /// <item><description><b>0</b>: The rule is disabled.</description></item>
+            /// <item><description><para><b>1</b>: The rule is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: The rule is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -169,8 +175,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>suggest</b>: a suggestion rule</description></item>
-            /// <item><description><b>customize</b>: a custom rule</description></item>
+            /// <item><description><para><b>suggest</b>: a suggestion rule</para>
+            /// </description></item>
+            /// <item><description><para><b>customize</b>: a custom rule</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

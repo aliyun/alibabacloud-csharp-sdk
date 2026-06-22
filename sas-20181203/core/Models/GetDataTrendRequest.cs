@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetDataTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the security data that you want to query. Valid values:</para>
+        /// <para>The type of security data to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HC_NEW</b>: the number of new baseline risks.</description></item>
-        /// <item><description><b>HC_OPERATE</b>: the number of handled baseline risks.</description></item>
-        /// <item><description><b>VUL_NEW</b>: the number of new vulnerabilities.</description></item>
-        /// <item><description><b>VUL_OPERATE</b>: the number of handled vulnerabilities.</description></item>
-        /// <item><description><b>SUSP_NEW</b>: the number of new alerts.</description></item>
-        /// <item><description><b>SUSP_OPERATE</b>: the number of handled alerts.</description></item>
+        /// <item><description><b>HC_NEW</b>: number of new baseline risks</description></item>
+        /// <item><description><b>HC_OPERATE</b>: number of handled baseline risks</description></item>
+        /// <item><description><b>VUL_NEW</b>: number of new vulnerability risks</description></item>
+        /// <item><description><b>VUL_OPERATE</b>: number of handled vulnerability risks</description></item>
+        /// <item><description><b>SUSP_NEW</b>: number of new alert risks</description></item>
+        /// <item><description><b>SUSP_OPERATE</b>: number of handled alert risks.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BizTypes { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end timestamp of the query. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The interval of the data that you want to query. Unit: milliseconds.</para>
+        /// <para>The interval for querying data. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para> The minimum value is 1000.</para>
+        /// <para>Minimum value: 1000.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Interval { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start timestamp of the query. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The digest of the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>a8c9f3765684cd8d9053db9523eab58878e99a199217500efd9ae2a860a7e01e</para>
+        /// <para>a8c9f3765684cd8d9053db9523eab58878e99a199217500efd9ae2a860a7****</para>
         /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The ID of the image.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>b10ef7b245c34a0822055c74fc4a0e8b5baf0279306316b2c517a501ed250b1e</para>
+        /// <para>b10ef7b245c34a0822055c74fc4a0e8b5baf0279306316b2c517a501ed25****</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]

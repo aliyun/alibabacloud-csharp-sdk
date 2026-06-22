@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of root domains.</para>
+        /// <para>The number of root domains in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RootDomainsCount { get; set; }
 
         /// <summary>
-        /// <para>The number of subdomains.</para>
+        /// <para>The number of subdomains in the assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SubDomainsCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of domain name assets returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListBackupRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the backup record.</para>
+        /// <para>The list of backup records.</para>
         /// </summary>
         [NameInMap("BackupRecordList")]
         [Validation(Required=false)]
         public List<ListBackupRecordResponseBodyBackupRecordList> BackupRecordList { get; set; }
         public class ListBackupRecordResponseBodyBackupRecordList : TeaModel {
             /// <summary>
-            /// <para>The timestamp when the backup task ended. Unit: milliseconds.</para>
+            /// <para>The backup end time. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1699600611000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BackupPlanId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the backup task started. Unit: milliseconds.</para>
+            /// <para>The backup start time. The value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1699514211000</para>
@@ -57,11 +57,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? BackupStartTime { get; set; }
 
             /// <summary>
-            /// <para>The backup task status. Valid value:</para>
+            /// <para>The backup task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>BACKUP_COMPLETE</b>: The backup task is successful.</description></item>
-            /// <item><description><b>BACKUP_FAILED</b>: The backup task failed.</description></item>
-            /// <item><description><b>PARTIAL_COMPLETE</b>: The backup task is partially successful.</description></item>
+            /// <item><description><b>BACKUP_COMPLETE</b>: backup succeeded</description></item>
+            /// <item><description><b>BACKUP_FAILED</b>: backup failed</description></item>
+            /// <item><description><b>PARTIAL_COMPLETE</b>: partial backup succeeded.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BackupStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the anti-ransomware agent.</para>
+            /// <para>The anti-ransomware client ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-0002bgagelj3d2sc****</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message of the backup task.</para>
+            /// <para>The error details of the backup task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FILE_CACHE_NO_SPACE</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the server.</para>
+            /// <para>The ID of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-wz9ikn44p46krnic****</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the backup is stored.</para>
+            /// <para>The region ID of the backup service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server whose data is backed up based on the anti-ransomware policy.</para>
+            /// <para>The UUID of the server backed up by database anti-ransomware.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b93cccb9-f19f-4886-97fe-47df26ba****</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListBackupRecordResponseBodyPageInfo PageInfo { get; set; }
         public class ListBackupRecordResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3956048F-9D73-5EDB-834B-4827BB48****</para>

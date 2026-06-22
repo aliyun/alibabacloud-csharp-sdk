@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteTagWithUuidRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the tag.</para>
+        /// <para>The label name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TagName { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers.</para>
+        /// <para>The list of server UUIDs.</para>
         /// <remarks>
-        /// <para>If the UuidList parameter is specified, Security Center removes the tag only from the servers whose UUIDs are specified by UuidList. If the UuidList parameter is not specified, Security Center removes the tag from all servers.</para>
+        /// <para>If UuidList is specified, Security Center deletes the label only from the servers included in UuidList. If UuidList is empty, Security Center deletes the label from all servers.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

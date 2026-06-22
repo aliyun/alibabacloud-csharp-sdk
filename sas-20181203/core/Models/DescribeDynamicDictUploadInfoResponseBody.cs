@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDynamicDictUploadInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID that is used to access OSS.</para>
+        /// <para>The AccessKey ID of OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourAccessKeyID</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Accessid { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the signature. The value is a UNIX timestamp.</para>
+        /// <para>The expiration time of the OSS authorization, in timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1719919893</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Expire { get; set; }
 
         /// <summary>
-        /// <para>The OSS endpoint.</para>
+        /// <para>The OSS domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com">https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS object.</para>
+        /// <para>The key of the OSS file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DegradePool_Offset_****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3D7C47D-3F11-57BB-90E8-E5C20C61***</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The signature that is calculated based on <b>AccessKeySecret</b> and <b>Policy</b>. When you call an OSS API operation, OSS uses the signature information to check the validity of the POST request.</para>
+        /// <para>The signature information calculated based on <b>AccessKeySecret</b> and <b>Policy</b>. When you call an OSS API operation, OSS verifies this signature information to confirm the validity of the POST request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wBiwkhd5LGcLzijtc3FhI****</para>

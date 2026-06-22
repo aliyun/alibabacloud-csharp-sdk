@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ProtectedDatabaseCount { get; set; }
 
         /// <summary>
-        /// <para>The regions of the database instances.</para>
+        /// <para>The list of regions in which database instances can be configured.</para>
         /// </summary>
         [NameInMap("RegionCountList")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AutomaticCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the database instance resides.</para>
+            /// <para>The region ID of the database instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7532B7EE-7CE7-5F4D-BF04-B12447DD****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of the restoration tasks that are running.</para>
+        /// <para>The number of tasks that are being restored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RestoringTaskCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of database instances that can be restored.</para>
+        /// <para>The number of recoverable database instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalRecoverableCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of the restoration tasks.</para>
+        /// <para>The total number of restoration records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

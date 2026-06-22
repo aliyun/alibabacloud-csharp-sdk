@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAssetGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the new server group to which the servers belong.</para>
+        /// <para>The ID of the new group to which you want to assign the servers.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</para>
+        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the group IDs of servers.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.12.XX.XX</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers for which you want to change the server group. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers whose group you want to modify. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
         /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
         /// </remarks>

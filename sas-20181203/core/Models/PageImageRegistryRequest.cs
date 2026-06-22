@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class PageImageRegistryRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the image repository. Fuzzy match is supported.</para>
+        /// <para>The image repository name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asa</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegistryNameLike { get; set; }
 
         /// <summary>
-        /// <para>The types of image repositories.</para>
+        /// <para>The list of image repository types to include.</para>
         /// </summary>
         [NameInMap("RegistryTypeInList")]
         [Validation(Required=false)]
         public List<string> RegistryTypeInList { get; set; }
 
         /// <summary>
-        /// <para>The types of excluded image repositories.</para>
+        /// <para>The list of image repository types to exclude.</para>
         /// </summary>
         [NameInMap("RegistryTypeNotInList")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSuspiciousStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of alerts whose Emergency level is Reminder.</para>
+        /// <para>The number of security alerts whose alert level is Reminder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RemindCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>84092B42-1A59-4F34-8DF8-1D93520990A5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of alerts whose Emergency level is Urgent.</para>
+        /// <para>The number of security alerts whose alert level is Urgent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SeriousCount { get; set; }
 
         /// <summary>
-        /// <para>The number of alerts whose Emergency level is Suspicious.</para>
+        /// <para>The number of security alerts whose alert level is Suspicious.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SuspiciousCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of alerts.</para>
+        /// <para>The total number of security alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

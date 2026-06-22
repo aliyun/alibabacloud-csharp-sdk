@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeOnceTaskLeafRecordPageRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the sub-task.</para>
+        /// <para>The timestamp of the end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1668064495000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether extension information is associated.</para>
+        /// <para>Specifies whether to associate extended information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? RelateInfo { get; set; }
 
         /// <summary>
-        /// <para>The source of the request.</para>
+        /// <para>The request source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>console_batch</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the sub-task.</para>
+        /// <para>The timestamp of the start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1648438617000</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status information.</para>
+        /// <para>The list of statuses.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sub-task.</para>
+        /// <para>The ID of the task to retrieve.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1471d8ebb96795b41ede090b9758****</para>
@@ -90,10 +90,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the sub-task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
-        /// <item><description><b>IMAGE_REGISTRY_PULL</b>: image asset synchronization task</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scanning</description></item>
+        /// <item><description><b>IMAGE_REGISTRY_PULL</b>: image asset synchronization.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

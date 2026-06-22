@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeLogMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request source. Default value: <b>aegis</b>. Valid values:</para>
+        /// <para>The source identifier of the request. Default value: <b>aegis</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>aegis</b>: Server Guard</description></item>
-        /// <item><description><b>sas</b>: Security Center</description></item>
+        /// <item><description><b>aegis</b>: Server Guard edition.</description></item>
+        /// <item><description><b>sas</b>: Security Center edition.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you use Server Guard, set the value to <b>aegis</b>. If you use Security Center, set the value to <b>sas</b>.</para>
+        /// <para>Server Guard users should use <b>aegis</b>, and Security Center users should use <b>sas</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the member accounts in the resource directory (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123.168.XX.XX</para>

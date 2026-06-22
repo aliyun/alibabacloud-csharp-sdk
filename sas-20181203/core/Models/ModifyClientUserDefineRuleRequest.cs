@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyClientUserDefineRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The action of the rule. Valid values:</para>
+        /// <para>The action type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: allow</description></item>
-        /// <item><description><b>1</b>: block</description></item>
+        /// <item><description><b>1</b>: block.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,9 +65,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The ID of the custom rule.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> operation to query the IDs of rules.</para>
+        /// <para>Call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The hash values of processes.</para>
+        /// <para>The list of process hashes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aa5ee3ed4363c9d195a591a70281****,3e522d6f3bf5cf88bb77e9ff3d13****</para>
@@ -89,17 +89,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Md5List { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Rule\<em>\</em>\<em>\</em></para>
+        /// <para>规则****</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The new file path after the file is renamed.</para>
+        /// <para>The new file path for file rename.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/etc/pam****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NewFilePath { get; set; }
 
         /// <summary>
-        /// <para>The parent command line.</para>
+        /// <para>The parent process command line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/usr/sbin/s****</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ParentCmdline { get; set; }
 
         /// <summary>
-        /// <para>The path to the parent process.</para>
+        /// <para>The parent process path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C:/Windows/System32/cmd****</para>
@@ -129,11 +129,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ParentProcPath { get; set; }
 
         /// <summary>
-        /// <para>The type of the operating system. Valid values:</para>
+        /// <para>The operating system type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>windows</b>: Windows</description></item>
         /// <item><description><b>linux</b>: Linux</description></item>
-        /// <item><description><b>all</b>: all types</description></item>
+        /// <item><description><b>all</b>: all.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PortStr { get; set; }
 
         /// <summary>
-        /// <para>The path to the process.</para>
+        /// <para>The process path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/1111/****</para>
@@ -197,15 +197,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegistryKey { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Process hash</description></item>
-        /// <item><description><b>2</b>: Command line</description></item>
-        /// <item><description><b>3</b>: Process Network</description></item>
-        /// <item><description><b>4</b>: File Read and Write</description></item>
-        /// <item><description><b>5</b>: Operation on Registry</description></item>
-        /// <item><description><b>6</b>: Dynamic-link Library Loading</description></item>
-        /// <item><description><b>7</b>: File Renaming</description></item>
+        /// <item><description><b>1</b>: process hash</description></item>
+        /// <item><description><b>2</b>: command line</description></item>
+        /// <item><description><b>3</b>: process network</description></item>
+        /// <item><description><b>4</b>: file read/write</description></item>
+        /// <item><description><b>5</b>: registry operation</description></item>
+        /// <item><description><b>6</b>: dynamic-link library loading</description></item>
+        /// <item><description><b>7</b>: file rename.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetServerlessAppAuthDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Data details.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetServerlessAppAuthDetailResponseBodyData Data { get; set; }
         public class GetServerlessAppAuthDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Application ID.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c932b7a0***</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>Number of CPU cores.</para>
+            /// <para>The number of CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CoreCount { get; set; }
 
             /// <summary>
-            /// <para>Number of instances.</para>
+            /// <para>The number of instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>Whether authorization is bound. Values: </para>
+            /// <para>Indicates whether the authorization is bound. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes</description></item>
-            /// <item><description><b>false</b>: No</description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? IsBind { get; set; }
 
             /// <summary>
-            /// <para>Whether it is a post-paid instance. Values: </para>
+            /// <para>Indicates whether the instance uses pay-as-you-go billing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes</description></item>
-            /// <item><description><b>false</b>: No</description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? IsPostPaid { get; set; }
 
             /// <summary>
-            /// <para>Serverless post-paid status. Values: </para>
+            /// <para>The serverless pay-as-you-go status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Active</description></item>
-            /// <item><description><b>false</b>: Expired</description></item>
+            /// <item><description><b>true</b>: active</description></item>
+            /// <item><description><b>false</b>: expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,13 +89,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? IsServerlessPostPaidValid { get; set; }
 
             /// <summary>
-            /// <para>Pay-as-you-go module switch. Values: </para>
+            /// <para>The pay-as-you-go module switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>VUL</b>: Vulnerability repair module</description></item>
-            /// <item><description><b>CSPM</b>: Cloud Security Posture Management module</description></item>
-            /// <item><description><b>AGENTLESS</b>: Agentless detection module</description></item>
-            /// <item><description><b>SERVERLESS</b>: Serverless security module</description></item>
-            /// <item><description><b>CTDR</b>: Threat Detection and Response module</description></item>
+            /// <item><description><b>VUL</b>: vulnerability management module</description></item>
+            /// <item><description><b>CSPM</b>: Cloud Security Posture Management (CSPM) module</description></item>
+            /// <item><description><b>AGENTLESS</b>: agentless detection module</description></item>
+            /// <item><description><b>SERVERLESS</b>: serverless security module</description></item>
+            /// <item><description><b>CTDR</b>: Cloud Threat Detection and Response (CTDR) module.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PostPaidModuleSwitch { get; set; }
 
             /// <summary>
-            /// <para>Post-paid activation time.</para>
+            /// <para>The time when pay-as-you-go billing was enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1655432638000</para>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PostPaidOpenTime { get; set; }
 
             /// <summary>
-            /// <para>Post-paid instance status. Values: </para>
+            /// <para>The pay-as-you-go instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Active</description></item>
-            /// <item><description><b>2</b>: Suspended due to unpaid bills</description></item>
+            /// <item><description><b>1</b>: active</description></item>
+            /// <item><description><b>2</b>: suspended due to overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PostPaidStatus { get; set; }
 
             /// <summary>
-            /// <para>Post-paid instance ID.</para>
+            /// <para>The pay-as-you-go instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of this call request, a unique identifier generated by Alibaba Cloud for the request, which can be used to troubleshoot and pinpoint issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30CBF632-109F-596F-97F2-451C8B2A****</para>
@@ -152,10 +152,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the API call was successful. Values: </para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Success</description></item>
-        /// <item><description><b>false</b>: Failure</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

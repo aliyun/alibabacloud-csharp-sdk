@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileDetectResultRequest : TeaModel {
         /// <summary>
-        /// <para>The identifiers of files. Only MD5 hash values are supported.</para>
+        /// <para>An array of up to 100 unique file identifiers.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HashKeyList")]
@@ -28,16 +28,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the file. Valid values:</para>
+        /// <para>The type of file to detect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: unknown file</description></item>
-        /// <item><description><b>1</b>: binary file</description></item>
-        /// <item><description><b>2</b>: webshell file</description></item>
-        /// <item><description><b>4</b>: script file</description></item>
+        /// <item><description><para><b>0</b>: malicious file detection</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: Skill compressed package detection</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>If you do not know the type of the file, set this parameter to 0.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

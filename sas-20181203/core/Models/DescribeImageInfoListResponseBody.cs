@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeImageInfoListResponseBodyImageInfos> ImageInfos { get; set; }
         public class DescribeImageInfoListResponseBodyImageInfos : TeaModel {
             /// <summary>
-            /// <para>The number of alerts that are generated on the current pod, application, namespace, or cluster.</para>
+            /// <para>The number of alerts detected in the current pod, application, namespace, or cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AlarmCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether alerts are generated on the asset. Valid values:</para>
+            /// <para>Indicates whether the asset has security alerts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b></description></item>
-            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b>: Security alerts exist.</description></item>
+            /// <item><description><b>NO</b>: No security alerts exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of Container Registry.</para>
+            /// <para>The list of endpoints for the image service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-x7</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The size of the image.</para>
+            /// <para>The image size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>157408623</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was updated.</para>
+            /// <para>The time when the image was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1636974116000</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of the registration.</para>
+            /// <para>The registry type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>harbor</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the image repository belongs.</para>
+            /// <para>The namespace of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>libssh2</para>
@@ -161,10 +161,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The type of the image repository. Valid values:</para>
+            /// <para>The repository type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PUBLIC</c></description></item>
-            /// <item><description><c>PRIVATE</c></description></item>
+            /// <item><description><para><c>PUBLIC</c>: public</para>
+            /// </description></item>
+            /// <item><description><para><c>PRIVATE</c>: private</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -175,10 +177,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image is at risk. Valid values:</para>
+            /// <para>Indicates whether the image has security risks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b></description></item>
-            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b>: The image has risks.</description></item>
+            /// <item><description><b>NO</b>: The image does not have risks.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -189,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// <para>The usage label of the image.</para>
+            /// <para>The business purpose tag of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PAI</para>
@@ -199,7 +201,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SourceBizTag { get; set; }
 
             /// <summary>
-            /// <para>The status of the image.</para>
+            /// <para>The image status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -209,7 +211,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the image.</para>
+            /// <para>The image tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -249,10 +251,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? VulCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether vulnerabilities are detected on the asset. Valid values:</para>
+            /// <para>Indicates whether the instance has vulnerabilities. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b></description></item>
-            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b>: Vulnerabilities exist.</description></item>
+            /// <item><description><b>NO</b>: No vulnerabilities exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -265,7 +267,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC3B0DAE-CC0E-59E9-9383-6F060F22****</para>

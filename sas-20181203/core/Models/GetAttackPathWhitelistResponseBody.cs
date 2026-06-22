@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAttackPathWhitelistResponseBody : TeaModel {
         /// <summary>
-        /// <para>Attack path whitelist.</para>
+        /// <para>The attack path whitelist.</para>
         /// </summary>
         [NameInMap("AttackPathWhitelist")]
         [Validation(Required=false)]
         public GetAttackPathWhitelistResponseBodyAttackPathWhitelist AttackPathWhitelist { get; set; }
         public class GetAttackPathWhitelistResponseBodyAttackPathWhitelist : TeaModel {
             /// <summary>
-            /// <para>List of cloud product assets in the attack path.</para>
+            /// <para>The list of cloud service assets in the attack path.</para>
             /// </summary>
             [NameInMap("AttackPathAssetList")]
             [Validation(Required=false)]
             public List<GetAttackPathWhitelistResponseBodyAttackPathWhitelistAttackPathAssetList> AttackPathAssetList { get; set; }
             public class GetAttackPathWhitelistResponseBodyAttackPathWhitelistAttackPathAssetList : TeaModel {
                 /// <summary>
-                /// <para>Subtype of the cloud product asset.</para>
+                /// <para>The subtype of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AssetSubType { get; set; }
 
                 /// <summary>
-                /// <para>Type of the cloud product asset.</para>
+                /// <para>The type of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? AssetType { get; set; }
 
                 /// <summary>
-                /// <para>Instance ID of the cloud product asset.</para>
+                /// <para>The instance ID of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-8vb0e8qdaj0yyxjo****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Instance name.</para>
+                /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xwl</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Node type, values:</para>
+                /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>start</b>: Start point.</description></item>
-                /// <item><description><b>end</b>: End point.</description></item>
+                /// <item><description><b>start</b>: start node.</description></item>
+                /// <item><description><b>end</b>: end node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>Region ID of the cloud product asset instance.</para>
+                /// <para>The region ID of the cloud service asset instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>Vendor of the cloud product asset.</para>
+                /// <para>The vendor of the cloud service asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Attack path whitelist ID.</para>
+            /// <para>The attack path whitelist ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apwl-b33dec0acf9b42aabde032d656c0****</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AttackPathWhitelistId { get; set; }
 
             /// <summary>
-            /// <para>Last modified timestamp, in milliseconds.</para>
+            /// <para>The timestamp of the last modification, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1743004587000</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastModifiedTimestamp { get; set; }
 
             /// <summary>
-            /// <para>Path name.</para>
+            /// <para>The path name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs_get_credential_by_create_login_profile</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathName { get; set; }
 
             /// <summary>
-            /// <para>Path type.</para>
+            /// <para>The path type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>role_escalation</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathType { get; set; }
 
             /// <summary>
-            /// <para>Remark information.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>Whitelist name.</para>
+            /// <para>The whitelist name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -160,10 +160,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string WhitelistName { get; set; }
 
             /// <summary>
-            /// <para>Whitelist type. Possible values:</para>
+            /// <para>The whitelist type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ALL_ASSET</b>: All assets</description></item>
-            /// <item><description><b>PART_ASSET</b>: Partial assets</description></item>
+            /// <item><description><b>ALL_ASSET</b>: all assets.</description></item>
+            /// <item><description><b>PART_ASSET</b>: partial assets.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of this request, which is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting and problem localization.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D03DD0FD-6041-5107-AC00-383E28F1****</para>

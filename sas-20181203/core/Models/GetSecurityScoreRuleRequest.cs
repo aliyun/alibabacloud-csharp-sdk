@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSecurityScoreRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The old or new version of the security score rule. If you set this parameter to <b>home_security_score</b>, the new version of the security score rule is returned. Otherwise, the old version of the security score rule is returned by default.</para>
+        /// <para>Specifies whether to query the new or legacy security score rules. If the value is <b>home_security_score</b>, the new security score rules are queried. Otherwise, the legacy security score rules are queried by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>home_security_score</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CalType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 

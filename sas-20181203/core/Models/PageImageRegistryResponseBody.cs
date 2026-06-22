@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class PageImageRegistryResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of image repositories.</para>
+        /// <para>The image repository list data.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<PageImageRegistryResponseBodyList> List { get; set; }
         public class PageImageRegistryResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The IP address blacklist.</para>
+            /// <para>The blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>129.211.XXX.XXX</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BlackList { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the image repository.</para>
+            /// <para>The domain name of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sinochem.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The creation time, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-30 10:23:30</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.</para>
+            /// <para>The update time, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-30 10:23:30</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image repository.</para>
+            /// <para>The unique ID of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1078312</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The number of images that are stored in the image repository.</para>
+            /// <para>The number of images in the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ImageCount { get; set; }
 
             /// <summary>
-            /// <para>The information about the Jenkins environment.</para>
+            /// <para>The Jenkins environment context.</para>
             /// 
             /// <b>Example:</b>
             /// <para>projectInfo</para>
@@ -89,8 +89,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The network type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Internet.</description></item>
-            /// <item><description><b>2</b>: virtual private cloud (VPC).</description></item>
+            /// <item><description><b>1</b>: public network</description></item>
+            /// <item><description><b>2</b>: VPC.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which assets are retained.</para>
+            /// <para>The number of days that assets are retained.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PersistenceDay { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: HTTP.</description></item>
+            /// <item><description><b>1</b>: HTTP</description></item>
             /// <item><description><b>2</b>: HTTPS.</description></item>
             /// </list>
             /// 
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ProtocolType { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the image repository.</para>
+            /// <para>The region ID of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the image repository.</para>
+            /// <para>The IP address of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39.104.XXX.XXX</para>
@@ -165,11 +165,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegistryName { get; set; }
 
             /// <summary>
-            /// <para>The type of the image repository. Valid values:</para>
+            /// <para>The image repository type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>acr</b>: Container Registry.</description></item>
-            /// <item><description><b>harbor</b>: Harbor.</description></item>
-            /// <item><description><b>quay</b>: Quay.</description></item>
+            /// <item><description><b>acr</b>: ACR</description></item>
+            /// <item><description><b>harbor</b>: Harbor</description></item>
+            /// <item><description><b>quay</b>: Quay</description></item>
             /// <item><description><b>CI/CD</b>: Jenkins.</description></item>
             /// </list>
             /// 
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Token { get; set; }
 
             /// <summary>
-            /// <para>The number of scan tasks that are performed per hour.</para>
+            /// <para>The number of scan tasks per hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID.</para>
+            /// <para>The instance ID of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-5gu8iu68w9b472jbb****</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The IP address whitelist.</para>
+            /// <para>The whitelist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XXX.XXX</para>
@@ -233,14 +233,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information for the paged query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public PageImageRegistryResponseBodyPageInfo PageInfo { get; set; }
         public class PageImageRegistryResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FDA9E37C-6114-5945-8FF1-E3D4D397****</para>

@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the aggregation type for the system defense rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Initial entry</para>
+            /// <para>初始入口</para>
             /// </summary>
             [NameInMap("AggregationName")]
             [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The description of the system defense rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Supports alerting or blocking of images that have high-risk vulnerabilities\<em>\</em>\<em>\</em></para>
+            /// <para>支持告警或拦截存在高危漏洞的镜像在集****</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -88,9 +88,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the OS. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>windows</b>: Windows</description></item>
-            /// <item><description><b>linux</b>: Linux</description></item>
-            /// <item><description><b>all</b>: all types</description></item>
+            /// <item><description><para><b>windows</b>: Windows</para>
+            /// </description></item>
+            /// <item><description><para><b>linux</b>: Linux</para>
+            /// </description></item>
+            /// <item><description><para><b>all</b>: all types</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The name of the policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>System self-starting task\<em>\</em>\<em>\</em></para>
+                /// <para>系统自启动任务****</para>
                 /// </summary>
                 [NameInMap("PolicyName")]
                 [Validation(Required=false)]
@@ -143,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the system defense rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Rule\<em>\</em>\<em>\</em></para>
+            /// <para>规则****</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
@@ -152,8 +155,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the system defense rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: alihips, process-specific defense</description></item>
-            /// <item><description><b>2</b>: alinet, network-specific defense</description></item>
+            /// <item><description><para><b>1</b>: alihips, process-specific defense</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: alinet, network-specific defense</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,8 +171,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the system defense rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: enabled</description></item>
-            /// <item><description><b>offline</b>: disabled</description></item>
+            /// <item><description><para><b>online</b>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><b>offline</b>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -180,8 +187,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Whether the current rule switch takes effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enabled</description></item>
-            /// <item><description><b>false</b>: disabled</description></item>
+            /// <item><description><para><b>true</b>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

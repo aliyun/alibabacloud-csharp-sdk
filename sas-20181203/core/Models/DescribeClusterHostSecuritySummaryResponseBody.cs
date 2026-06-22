@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterHostSecuritySummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The alert details of the hosts.</para>
+        /// <para>The host alert details.</para>
         /// </summary>
         [NameInMap("ClusterHostEvent")]
         [Validation(Required=false)]
         public DescribeClusterHostSecuritySummaryResponseBodyClusterHostEvent ClusterHostEvent { get; set; }
         public class DescribeClusterHostSecuritySummaryResponseBodyClusterHostEvent : TeaModel {
             /// <summary>
-            /// <para>The alert details of the host.</para>
+            /// <para>The host alert details.</para>
             /// </summary>
             [NameInMap("AlarmEvent")]
             [Validation(Required=false)]
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The alert level. Valid values:</para>
+                /// <para>The warning level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>serious</b></description></item>
-                /// <item><description><b>suspicious</b></description></item>
-                /// <item><description><b>remind</b></description></item>
+                /// <item><description><b>serious</b>: urgent.</description></item>
+                /// <item><description><b>suspicious</b>: suspicious.</description></item>
+                /// <item><description><b>remind</b>: reminder.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The baseline details of the host.</para>
+            /// <para>The host baseline details.</para>
             /// </summary>
             [NameInMap("BaselineEvent")]
             [Validation(Required=false)]
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the baseline. Valid values:</para>
+                /// <para>The baseline risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>high</b></description></item>
-                /// <item><description><b>medium</b></description></item>
-                /// <item><description><b>low</b></description></item>
+                /// <item><description><b>high</b>: high risk.</description></item>
+                /// <item><description><b>medium</b>: medium risk.</description></item>
+                /// <item><description><b>low</b>: low risk.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The vulnerability details of the host.</para>
+            /// <para>The host vulnerability details.</para>
             /// </summary>
             [NameInMap("VulEvent")]
             [Validation(Required=false)]
@@ -102,11 +102,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the vulnerability. Valid values:</para>
+                /// <para>The warning level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>asap</b>: high. You must fix the vulnerability at the earliest opportunity.</description></item>
-                /// <item><description><b>nntf</b>: medium. You can fix the vulnerability based on your business requirements.</description></item>
-                /// <item><description><b>later</b>: low. You can ignore the vulnerability.</description></item>
+                /// <item><description><b>asap</b>: high. Fix the vulnerability at the earliest opportunity.</description></item>
+                /// <item><description><b>nntf</b>: medium. The vulnerability can be temporarily left unfixed.</description></item>
+                /// <item><description><b>later</b>: low. The vulnerability can be left unfixed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

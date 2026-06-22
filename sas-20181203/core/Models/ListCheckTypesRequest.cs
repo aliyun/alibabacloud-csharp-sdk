@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("ShowChecks")]
         [Validation(Required=false)]

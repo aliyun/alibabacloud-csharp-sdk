@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetPropertyScheduleConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the asset fingerprints. Valid values:</para>
+        /// <para>The type of Asset Fingerprints for which the automatic collection frequency is configured. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>scheduler_port_period</b>: listening port</description></item>
         /// <item><description><b>scheduler_process_period</b>: running process</description></item>
-        /// <item><description><b>scheduler_account_period</b>: account</description></item>
-        /// <item><description><b>scheduler_software_period</b>: software</description></item>
-        /// <item><description><b>scheduler_cron_period</b>: scheduled task</description></item>
+        /// <item><description><b>scheduler_account_period</b>: account asset</description></item>
+        /// <item><description><b>scheduler_software_period</b>: software asset</description></item>
+        /// <item><description><b>scheduler_cron_period</b>: scheduled node</description></item>
         /// <item><description><b>scheduler_sca_period</b>: middleware</description></item>
         /// <item><description><b>scheduler_autorun_period</b>: startup item</description></item>
         /// <item><description><b>scheduler_lkm_period</b>: kernel module</description></item>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

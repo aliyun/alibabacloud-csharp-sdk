@@ -10,7 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAegisContainerPluginRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The query condition.</para>
+        /// <para>The query conditions. The format is as follows:</para>
+        /// <pre><code class="language-json">[
+        ///   {
+        ///     &quot;name&quot;: &quot;ruleName&quot;,
+        ///     &quot;value&quot;: &quot;test&quot;
+        ///   }
+        /// ]
+        /// </c></pre>
+        /// <para><b>- name</b>: The condition name. The following conditions are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ruleName</b>: The rule name.</description></item>
+        /// </list>
+        /// <para><b>- value</b>: The condition value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;name\&quot;: \&quot;name\&quot;, \&quot;value\&quot;: \&quot;test-1818\&quot;}]</para>
@@ -20,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paginated query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +43,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>Specifies the language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page in a paginated query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,10 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: custom</description></item>
-        /// <item><description><b>1</b>: system</description></item>
+        /// <item><description><b>0</b>: User-defined.</description></item>
+        /// <item><description><b>1</b>: System built-in.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

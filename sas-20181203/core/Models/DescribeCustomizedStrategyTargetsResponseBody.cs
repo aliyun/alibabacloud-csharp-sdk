@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizedStrategyTargetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1EE7B150-D67E-53FD-A52D-3E8E669A****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the servers to which custom policies are applied.</para>
+        /// <para>The list of target information for the custom policy.</para>
         /// </summary>
         [NameInMap("StartegyTargets")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the server group.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</para>
+            /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query server group IDs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,16 +53,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the baseline check policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>win</para>
+            /// <para>白名单</para>
             /// </summary>
             [NameInMap("StrategyName")]
             [Validation(Required=false)]
             public string StrategyName { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server.</para>
+            /// <para>The UUID of the asset.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+            /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageRepoListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,13 +20,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the field that is used for the query. Valid values:</para>
+        /// <para>The search field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>repoName</b>: the name of the image repository</description></item>
-        /// <item><description><b>repoNamespace</b>: the namespace to which the image repository belongs</description></item>
+        /// <item><description><b>repoName</b>: image repository name</description></item>
+        /// <item><description><b>repoNamespace</b>: image repository namespace</description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>OperateType</b> parameter is set to <b>other</b>.</para>
+        /// <para>This parameter takes effect only when <b>OperateType</b> is set to <b>other</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldName { get; set; }
 
         /// <summary>
-        /// <para>The value of the field that is used for the query.</para>
+        /// <para>The value of the search field.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when the <b>OperateType</b> parameter is set to <b>other</b>.</para>
+        /// <para>This parameter takes effect only when <b>OperateType</b> is set to <b>other</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>The type of the operation. Valid values:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>count</b>: counts statistics</description></item>
-        /// <item><description><b>other</b>: others</description></item>
+        /// <item><description><b>count</b>: statistics</description></item>
+        /// <item><description><b>other</b>: other.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page during paging.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Set PageSize to a non-empty value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the image repository belongs.</para>
+        /// <para>The namespace of the container image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>libssh2</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoNamespace { get; set; }
 
         /// <summary>
-        /// <para>Whether it is selected. Values:</para>
+        /// <para>Specifies whether the item is selected. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: NO</description></item>
-        /// <item><description><b>1</b>: YES</description></item>
+        /// <item><description><b>0</b>: No.</description></item>
+        /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,9 +111,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Selected { get; set; }
 
         /// <summary>
-        /// <para>The condition by which the feature is applied. Valid values:</para>
+        /// <para>The dimension of the defense switch configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image_repo</b>: the ID of the image repository</description></item>
+        /// <item><description><b>image_repo</b>: image repository ID.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -125,9 +125,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the feature. Valid values:</para>
+        /// <para>The type of the defense switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>image_repo</b>: image repository protection</description></item>
+        /// <item><description><b>image_repo</b>: image repository defense.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

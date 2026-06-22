@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityEventMarkMissListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The list of whitelist rules.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert event. The value indicates a subtype.</para>
+            /// <para>The alert event name (child class).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Login with unusual location</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert event. The value indicates a type.</para>
+            /// <para>The alert event name (parent class).</para>
             /// 
             /// <b>Example:</b>
             /// <para>login_common_location</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventNameOriginal { get; set; }
 
             /// <summary>
-            /// <para>The subtype of the alert event.</para>
+            /// <para>The alert event type (child class).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unusual Logon</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The type of the alert event.</para>
+            /// <para>The alert event type (parent class).</para>
             /// 
             /// <b>Example:</b>
             /// <para>login_common_location</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventTypeOriginal { get; set; }
 
             /// <summary>
-            /// <para>The field that is used in the whitelist rule.</para>
+            /// <para>The whitelist field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>type</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Field { get; set; }
 
             /// <summary>
-            /// <para>The value of the field.</para>
+            /// <para>The whitelist value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// <para>The alias of the field.</para>
+            /// <para>The alias of the whitelist field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Logon Time</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FiledAliasName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The ID of the alert whitelist rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>104037</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the server.</para>
+            /// <para>The server instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-bp1e8t4q15sr3****</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>notContains</b>: does not contain</description></item>
             /// <item><description><b>strEqual</b>: equals</description></item>
             /// <item><description><b>strNotEqual</b>: does not equal</description></item>
-            /// <item><description><b>regex</b>: regular expression</description></item>
+            /// <item><description><b>regex</b>: regular expression.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operate { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the asset.</para>
+            /// <para>The UUID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeSecurityEventMarkMissListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeSecurityEventMarkMissListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of whitelist rules on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Default value: <b>20</b>.</para>
+            /// <para>The number of whitelist rules to display on each page in a paged query. Default value: <b>20</b>, which indicates that 20 whitelist rules are displayed on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of whitelist rules returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A20733-10A0-4AF6-BE6B-E3322413BB68</para>

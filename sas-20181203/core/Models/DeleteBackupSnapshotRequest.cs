@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteBackupSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The regions for backup.</para>
+        /// <para>The backup regions.</para>
         /// </summary>
         [NameInMap("BackupRegionIdList")]
         [Validation(Required=false)]
@@ -24,32 +24,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DeleteBackupSnapshotRequestBackupSnapshotList> BackupSnapshotList { get; set; }
         public class DeleteBackupSnapshotRequestBackupSnapshotList : TeaModel {
             /// <summary>
-            /// <para>The ID of the Cloud Backup client.</para>
+            /// <para>The ID of the backup client.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</para>
+            /// <para>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>c-000a4h33w14ka8xagb2s</para>
+            /// <para>c-000a4h33w14ka8xa****</para>
             /// </summary>
             [NameInMap("ClientId")]
             [Validation(Required=false)]
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The ID of the server instance.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i-j6cj8vyajp1fo4atxkae</para>
+            /// <para>i-j6cj8vyajp1fo4at****</para>
             /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The region in which Security Center is deployed. Valid values:</para>
+            /// <para>The region of the Security Center instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>cn-hangzhou</b>: China (Hangzhou).</description></item>
             /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the snapshot that you want to delete.</para>
+            /// <para>The ID of the snapshot to delete.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</para>
+            /// <para>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>s-000f9p6r5trm6u4dc1iq</para>
+            /// <para>s-000f9p6r5trm6u4d****</para>
             /// </summary>
             [NameInMap("SnapshotId")]
             [Validation(Required=false)]
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ECS_FILE</b>: Elastic Compute Service (ECS) files.</description></item>
-            /// <item><description><b>OSS</b>: Object Storage Service (OSS) buckets.</description></item>
-            /// <item><description><b>NAS</b>: File Storage NAS (NAS) file systems.</description></item>
-            /// <item><description><b>OTS_TABLE</b>: Tablestore instances.</description></item>
+            /// <item><description><b>ECS_FILE</b>: backup snapshot of ECS files.</description></item>
+            /// <item><description><b>OSS</b>: backup snapshot of Alibaba Cloud OSS.</description></item>
+            /// <item><description><b>NAS</b>: backup snapshot of Alibaba Cloud NAS.</description></item>
+            /// <item><description><b>OTS_TABLE</b>: backup snapshot of Alibaba Cloud Tablestore.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup vault that is used in the restoration task.</para>
+            /// <para>The ID of the backup vault for the restoration task.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to query the ID.</para>
+            /// <para>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>v-0004vhwcs2pmacfzrzt5</para>
+            /// <para>v-0004vhwcs2pmacfz****</para>
             /// </summary>
             [NameInMap("VaultId")]
             [Validation(Required=false)]
@@ -114,8 +114,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to retain the latest snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: retains the latest snapshot.</description></item>
+        /// <item><description><b>false</b>: does not retain the latest snapshot.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

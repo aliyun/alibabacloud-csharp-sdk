@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCycleTaskListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of periodic scan tasks.</para>
+        /// <para>The list of cyclic scan tasks.</para>
         /// </summary>
         [NameInMap("CycleScheduleResponseList")]
         [Validation(Required=false)]
         public List<DescribeCycleTaskListResponseBodyCycleScheduleResponseList> CycleScheduleResponseList { get; set; }
         public class DescribeCycleTaskListResponseBodyCycleScheduleResponseList : TeaModel {
             /// <summary>
-            /// <para>The configuration ID.</para>
+            /// <para>The ID of the configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2cdbdeba8dd70586d5814d4cbf21****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ConfigId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configuration for the task interval was enabled. Valid values:</para>
+            /// <para>Indicates whether the task is enabled. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>1</b>: enabled.</description></item>
             /// <item><description><b>0</b>: disabled.</description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Enable { get; set; }
 
             /// <summary>
-            /// <para>The time when the task first started.</para>
+            /// <para>The first execution time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1667491200000</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstDateStr { get; set; }
 
             /// <summary>
-            /// <para>The interval between which two consecutive tasks are run.</para>
+            /// <para>The interval period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastTaskId { get; set; }
 
             /// <summary>
-            /// <para>The time when the next task starts. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The next execution time. The value is a millisecond-level timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671184531000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? NextStartTimeStr { get; set; }
 
             /// <summary>
-            /// <para>The extended information.</para>
+            /// <para>The extended information field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;userAgreement&quot;:&quot;yes&quot;,&quot;lang&quot;:&quot;zh&quot;}</para>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Param { get; set; }
 
             /// <summary>
-            /// <para>The unit of the scan interval. Valid values:</para>
+            /// <para>The unit of the scan period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>day</b></description></item>
-            /// <item><description><b>hour</b></description></item>
+            /// <item><description><b>day</b>: day.</description></item>
+            /// <item><description><b>hour</b>: hour.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The end time of the task. The time must be a time frame.</para>
+            /// <para>The task end time, in hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TargetEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the task. The start time must be a time frame.</para>
+            /// <para>The task start time, in hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TargetStartTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE_SCAN</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The type of the task.</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMAGE_SCAN</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeCycleTaskListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeCycleTaskListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>149</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A4EB8B1C-1DEC-5E18-BCD0-D1BBB393****</para>

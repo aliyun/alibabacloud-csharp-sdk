@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateUserSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The severities of alerts.</para>
+        /// <para>The list of alert notification levels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>high,low</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AlertLevels { get; set; }
 
         /// <summary>
-        /// <para>The number of days during which you want to retain invalid alerts.</para>
+        /// <para>The number of days to retain false positive alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? InvalidWarningKeepDays { get; set; }
 
         /// <summary>
-        /// <para>The source IP address.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>112.48.16.***</para>

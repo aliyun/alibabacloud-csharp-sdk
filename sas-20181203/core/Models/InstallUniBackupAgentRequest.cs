@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class InstallUniBackupAgentRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the anti-ransomware policy.</para>
+        /// <para>The ID of the anti-ransomware backup policy for databases.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</para>
+        /// <para>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAssetsPropertyDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information displayed on the page when performing a paginated query.</para>
+        /// <para>The paging information displayed on the page.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public GetAssetsPropertyDetailResponseBodyPageInfo PageInfo { get; set; }
         public class GetAssetsPropertyDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of asset fingerprint details displayed on the current page.</para>
+            /// <para>The number of Asset Fingerprints detail entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page when performing a paginated query.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The NextToken value returned when using the NextToken method.</para>
+            /// <para>The NextToken value returned when the NextToken method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6k+AtdhNE3kgQEK36GujZ5on+tWdc+4WoaoMP/kUNxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of asset fingerprint details displayed per page when performing a paginated query.</para>
+            /// <para>The number of Asset Fingerprints details displayed per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of detailed asset fingerprint information queried.</para>
+            /// <para>The total number of Asset Fingerprints detail entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Collection of asset fingerprint details.</para>
+        /// <para>The collection of Asset Fingerprints details.</para>
         /// </summary>
         [NameInMap("Propertys")]
         [Validation(Required=false)]
         public List<GetAssetsPropertyDetailResponseBodyPropertys> Propertys { get; set; }
         public class GetAssetsPropertyDetailResponseBodyPropertys : TeaModel {
             /// <summary>
-            /// <para>Agent</para>
+            /// <para>The agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Mozilla/5.0 (Windows NT 10.0%3B Win64%3B x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Agent { get; set; }
 
             /// <summary>
-            /// <para>Container name.</para>
+            /// <para>The container name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5-rce_web_1</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the latest asset fingerprint scan, in milliseconds.</para>
+            /// <para>The timestamp of the latest Asset Fingerprints scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649149566000</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>Asset description.</para>
+            /// <para>The asset description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;Type\&quot;: \&quot;text\&quot;, \&quot;Value\&quot;: u\&quot;\u786e\u4fdd\u7f51\u5173\u5b89\u5168\u9632\u62a4\u3002\u8981\u6c42\uff1a\u5f00\u542fWAF\u9632\u706b\u5899\u9632\u62a4\u529f\u80fd\u3002\&quot;}</para>
@@ -116,9 +116,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Web site domain. </para>
+            /// <para>The domain name of the web site.</para>
             /// <remarks>
-            /// <para>Only returned when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Large model service request interface address.</para>
+            /// <para>The endpoint address of the large language model service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dashscope.aliyuncs.com</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EndPoint { get; set; }
 
             /// <summary>
-            /// <para>File path for requesting the large model service.</para>
+            /// <para>The file path for requesting the large language model service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/root/llm.py</para>
@@ -149,9 +149,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string File { get; set; }
 
             /// <summary>
-            /// <para>Kernel module file path.</para>
+            /// <para>The file path of the kernel module.</para>
             /// <remarks>
-            /// <para>Returned only when <b>Biz</b> is <b>lkm</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>lkm</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Filepath { get; set; }
 
             /// <summary>
-            /// <para>镜像Digest</para>
+            /// <para>The digest of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImageDigest</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageDigest { get; set; }
 
             /// <summary>
-            /// <para>Image name.</para>
+            /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-beijing.aliyuncs.com/acs/aliyun-ingress-controller****</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>AI tool installation path</para>
+            /// <para>The installation path of the AI tool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/etc/pip3/env/vllm</para>
@@ -242,9 +242,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>Web site process listening protocol. </para>
+            /// <para>The listening protocol of the web site process.</para>
             /// <remarks>
-            /// <para>Only returned when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ListenProtocol { get; set; }
 
             /// <summary>
-            /// <para>MCP name.</para>
+            /// <para>The MCP name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@modelcontextprotocol/server-github</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string McpName { get; set; }
 
             /// <summary>
-            /// <para>AI tool name</para>
+            /// <para>The name of the AI tool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vllm</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MiddlewareName { get; set; }
 
             /// <summary>
-            /// <para>AI tool version.</para>
+            /// <para>The version of the AI tool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.1</para>
@@ -285,19 +285,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MiddlewareVersion { get; set; }
 
             /// <summary>
-            /// <para>Name of the large model vendor</para>
+            /// <para>The name of the large language model provider.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>OpenAI</para>
+            /// <para>阿里云百炼</para>
             /// </summary>
             [NameInMap("ModelName")]
             [Validation(Required=false)]
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>Module name.</para>
+            /// <para>The module name.</para>
             /// <remarks>
-            /// <para>Returned only when <b>Biz</b> is <b>lkm</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>lkm</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -308,10 +308,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ModuleName { get; set; }
 
             /// <summary>
-            /// <para>The meaning varies based on the value of <b>Biz</b>:</para>
+            /// <para>The meaning of this parameter varies based on the value of <b>Biz</b>:</para>
             /// <list type="bullet">
-            /// <item><description>When <b>Biz</b> is <b>web_server</b>, it represents the Web root path</description></item>
-            /// <item><description>When <b>Biz</b> is <b>autorun</b>, it represents the startup item path</description></item>
+            /// <item><description>When <b>Biz</b> is set to <b>web_server</b>, this parameter indicates the web root path.</description></item>
+            /// <item><description>When <b>Biz</b> is set to <b>autorun</b>, this parameter indicates the startup item path.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -322,9 +322,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>Web site directory permissions. </para>
+            /// <para>The directory permissions of the web site.</para>
             /// <remarks>
-            /// <para>Only returned when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -335,9 +335,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PathMode { get; set; }
 
             /// <summary>
-            /// <para>Web site process Pid. </para>
+            /// <para>The PID of the web site process.</para>
             /// <remarks>
-            /// <para>Only returned when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -348,9 +348,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// <para>Web site port.</para>
+            /// <para>The port of the web site.</para>
             /// <remarks>
-            /// <para>Returned only when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -361,9 +361,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>Timestamp of the web site process startup, in milliseconds.  </para>
+            /// <para>The timestamp when the web site process started, in milliseconds.</para>
             /// <remarks>
-            /// <para>Only returned when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ProcessStarted { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the instance is located.</para>
+            /// <para>The region ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>镜像的RepoName</para>
+            /// <para>The RepoName of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACR-Example</para>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>镜像Repo命名空间</para>
+            /// <para>The repo namespace of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Default</para>
@@ -404,9 +404,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>Web site type.</para>
+            /// <para>The type of the web site.</para>
             /// <remarks>
-            /// <para>Returned only when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -417,9 +417,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServerType { get; set; }
 
             /// <summary>
-            /// <para>Kernel module size.</para>
+            /// <para>The size of the kernel module.</para>
             /// <remarks>
-            /// <para>Returned only when <b>Biz</b> is <b>lkm</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>lkm</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -430,7 +430,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>Skill name</para>
+            /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Analytics and Data Analysis</para>
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SkillsName { get; set; }
 
             /// <summary>
-            /// <para>标签</para>
+            /// <para>The tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AI</para>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>Transmission name.</para>
+            /// <para>The transport name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -460,9 +460,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TransportName { get; set; }
 
             /// <summary>
-            /// <para>Number of dependencies for the kernel module.</para>
+            /// <para>The number of dependencies on the kernel module.</para>
             /// <remarks>
-            /// <para>Returned only when <b>Biz</b> is <b>lkm</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>lkm</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -473,9 +473,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UsedByCount { get; set; }
 
             /// <summary>
-            /// <para>Web site user. </para>
+            /// <para>The user of the web site.</para>
             /// <remarks>
-            /// <para>Only returned when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -496,9 +496,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>Web site web path. </para>
+            /// <para>The web path of the web site.</para>
             /// <remarks>
-            /// <para>Only returned when <b>Biz</b> is <b>web_server</b>.</para>
+            /// <para>This parameter is returned only when <b>Biz</b> is set to <b>web_server</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -511,7 +511,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of this call request, a unique identifier generated by Alibaba Cloud for the request, which can be used to troubleshoot and locate issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4C1AE3F3-18FA-4108-BBB9-AFA1A032****</para>

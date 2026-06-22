@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupClientsRequest : TeaModel {
         /// <summary>
-        /// <para>The region in which the anti-ransomware feature is supported.</para>
-        /// <remarks>
-        /// <para>You can call the <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> operation to query the regions in which the anti-ransomware feature is supported.</para>
-        /// </remarks>
+        /// <para>The region supported by the anti-ransomware feature. You can call <a href="~~DescribeSupportRegion~~">DescribeSupportRegion</a> to query the regions supported by the anti-ransomware feature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

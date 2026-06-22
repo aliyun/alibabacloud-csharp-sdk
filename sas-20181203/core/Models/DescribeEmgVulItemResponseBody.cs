@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeEmgVulItemResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the returned page. The value starts from <b>1</b>. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the urgent vulnerabilities returned.</para>
+        /// <para>The information about the emergency vulnerabilities.</para>
         /// </summary>
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
         public List<DescribeEmgVulItemResponseBodyGroupedVulItems> GroupedVulItems { get; set; }
         public class DescribeEmgVulItemResponseBodyGroupedVulItems : TeaModel {
             /// <summary>
-            /// <para>The name of the urgent vulnerability.</para>
+            /// <para>The name of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Changjietong T + SetupAccount/Upload.aspx file Upload vulnerability (CNVD-2022-60632)</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The check method.</para>
+            /// <para>The check type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CheckType { get; set; }
 
             /// <summary>
-            /// <para>The introduction to the vulnerability.</para>
+            /// <para>The description of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Chanjet T-Plus is an Internet business management software. There is an unauthorized access vulnerability in one of its interfaces disclosed on the Internet. Attackers can construct malicious requests to upload malicious files to execute arbitrary code and control the server.</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the urgent vulnerability was last detected. Unit: milliseconds.</para>
+            /// <para>The timestamp of the most recent vulnerability detection. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1619286031000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtLastCheck { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the urgent vulnerability was last disclosed. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was published. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1618887687000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtPublish { get; set; }
 
             /// <summary>
-            /// <para>The name of the detection rule.</para>
+            /// <para>The name of the scan rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scan:AVD-2021-179344</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of unhandled urgent vulnerabilities.</para>
+            /// <para>The number of unfixed vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PendingCount { get; set; }
 
             /// <summary>
-            /// <para>The progress of the urgent vulnerability detection task. Valid values: 0 to 100.</para>
+            /// <para>The detection progress of the vulnerability. Value range: 0 to 100.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when an urgent vulnerability is being detected.</para>
+            /// <para>This parameter is displayed only for emergency vulnerabilities that are in the detecting state.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -110,11 +110,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application protection feature is supported. Valid values:</para>
+            /// <para>Indicates whether Runtime Application Self-Protection (RASP) real-time protection is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: no</description></item>
-            /// <item><description><b>1</b>: yes<remarks>
-            /// <para> If this parameter is not returned, the application protection is not supported.</para>
+            /// <item><description><b>0</b>: Not supported.</description></item>
+            /// <item><description><b>1</b>: Supported.<remarks>
+            /// <para>If this property is not present, RASP real-time protection is not supported.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -127,11 +127,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RaspDefend { get; set; }
 
             /// <summary>
-            /// <para>The detection status of the urgent vulnerability. Valid values:</para>
+            /// <para>The detection status of the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>10</b>: The urgent vulnerability is not detected.</description></item>
-            /// <item><description><b>20</b>: The urgent vulnerability is being detected.</description></item>
-            /// <item><description><b>30</b>: The urgent vulnerability detection is complete.</description></item>
+            /// <item><description><b>10</b>: not detected</description></item>
+            /// <item><description><b>20</b>: detecting</description></item>
+            /// <item><description><b>30</b>: detection completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,10 +142,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to detect the urgent vulnerability. Valid values:</para>
+            /// <para>The detection method of the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>python</b>: The Version method is used. Security Center checks the software versions of your server to check whether disclosed vulnerabilities exist on your server.</description></item>
-            /// <item><description><b>scan</b>: The Network Scan method is used. Security Center analyzes the access traffic to your server over the Internet to check whether vulnerabilities exist on your server.</description></item>
+            /// <item><description><b>python</b>: version detection (server software version detection). Detects whether your server has disclosed software vulnerabilities.</description></item>
+            /// <item><description><b>scan</b>: network scanning (network traffic detection). Detects whether your public assets (Internet-accessible servers) have vulnerabilities.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+        /// <para>The number of emergency vulnerability entries per page in a paged query. Default value: <b>10</b>, which indicates that 10 emergency vulnerability entries are displayed per page. Paging is used to display the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC1868ED-A0E1-4D1C-BF7E-10DC0C34B3C3</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the urgent vulnerabilities returned.</para>
+        /// <para>The total number of emergency vulnerabilities returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

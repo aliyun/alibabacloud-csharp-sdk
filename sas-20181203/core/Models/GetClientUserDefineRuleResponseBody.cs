@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClientUserDefineRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF4****</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the custom defense rule.</para>
+        /// <para>The rule details.</para>
         /// </summary>
         [NameInMap("UserDefineRuleDetail")]
         [Validation(Required=false)]
         public GetClientUserDefineRuleResponseBodyUserDefineRuleDetail UserDefineRuleDetail { get; set; }
         public class GetClientUserDefineRuleResponseBodyUserDefineRuleDetail : TeaModel {
             /// <summary>
-            /// <para>The action of the custom defense rule. Valid values:</para>
+            /// <para>The action type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: allow</description></item>
-            /// <item><description><b>1</b>: block</description></item>
+            /// <item><description><b>0</b>: added to the whitelist</description></item>
+            /// <item><description><b>1</b>: added to the blacklist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The time when the custom defense rule was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>167118088****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the custom defense rule was last modified.</para>
+            /// <para>The most recent modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>167118088****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IP { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom defense rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200****</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The hash values of processes.</para>
+            /// <para>The list of process hashes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0c9045b5bec90f9825f1f3f64dd4****</para>
@@ -121,10 +121,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Md5List { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom defense rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Rule\<em>\</em>\<em>\</em></para>
+            /// <para>规则****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ParentCmdline { get; set; }
 
             /// <summary>
-            /// <para>The path to the parent process.</para>
+            /// <para>The parent process path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c:/windows/system32/i****</para>
@@ -161,11 +161,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ParentProcPath { get; set; }
 
             /// <summary>
-            /// <para>The type of the operating system. Valid values:</para>
+            /// <para>The operating system type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>linux</b></description></item>
             /// <item><description><b>windows</b></description></item>
-            /// <item><description><b>all</b></description></item>
+            /// <item><description><b>all</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PortStr { get; set; }
 
             /// <summary>
-            /// <para>The path to the process.</para>
+            /// <para>The process path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c:/windows/system32/i****</para>
@@ -226,15 +226,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegistryKey { get; set; }
 
             /// <summary>
-            /// <para>The type of the custom defense rule. Valid values:</para>
+            /// <para>The rule type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Process hash</description></item>
-            /// <item><description><b>2</b>: Command line</description></item>
-            /// <item><description><b>3</b>: Process Network</description></item>
-            /// <item><description><b>4</b>: File Read and Write</description></item>
-            /// <item><description><b>5</b>: Operation on Registry</description></item>
-            /// <item><description><b>6</b>: Dynamic-link Library Loading</description></item>
-            /// <item><description><b>7</b>: File Renaming</description></item>
+            /// <item><description><b>1</b>: process hash</description></item>
+            /// <item><description><b>2</b>: command line</description></item>
+            /// <item><description><b>3</b>: process network</description></item>
+            /// <item><description><b>4</b>: file read/write</description></item>
+            /// <item><description><b>5</b>: registry operation</description></item>
+            /// <item><description><b>6</b>: dynamic-link library loading</description></item>
+            /// <item><description><b>7</b>: file rename.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

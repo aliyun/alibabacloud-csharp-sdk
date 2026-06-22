@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The keyword of the dictionary.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>keyword</para>
+        /// <para>Admin</para>
         /// </summary>
         [NameInMap("ArgKeywords")]
         [Validation(Required=false)]

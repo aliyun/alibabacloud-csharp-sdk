@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupRestoreCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics of restoration tasks.</para>
+        /// <para>The statistics of anti-ransomware restoration tasks.</para>
         /// </summary>
         [NameInMap("BackupRestoreCount")]
         [Validation(Required=false)]
         public DescribeBackupRestoreCountResponseBodyBackupRestoreCount BackupRestoreCount { get; set; }
         public class DescribeBackupRestoreCountResponseBodyBackupRestoreCount : TeaModel {
             /// <summary>
-            /// <para>The number of the restoration tasks that are in the <b>being restored</b> state.</para>
+            /// <para>The number of tasks in the <b>Restoring</b> state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Recovering { get; set; }
 
             /// <summary>
-            /// <para>The total number of the restoration tasks that you create.</para>
+            /// <para>The total number of restoration tasks that have been created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</para>

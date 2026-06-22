@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExportInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of exported entries.</para>
+        /// <para>The number of data entries that have been exported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The status of the export task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The task is being initialized.</description></item>
-        /// <item><description><b>exporting</b>: The task is in progress.</description></item>
-        /// <item><description><b>success</b>: The task is complete.</description></item>
+        /// <item><description><b>init</b>: export initialization</description></item>
+        /// <item><description><b>exporting</b>: export in progress</description></item>
+        /// <item><description><b>success</b>: export successful.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The URL at which you can download the exported Excel file.</para>
+        /// <para>The download URL of the exported Excel file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Link { get; set; }
 
         /// <summary>
-        /// <para>The message that shows the task result. The value is fixed as <b>success</b>, which indicates that the task is complete.</para>
+        /// <para>The message returned for the export result. Fixed value: <b>success</b>. This value indicates that the export is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The progress percentage of the export task.</para>
+        /// <para>The export progress percentage (%).</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Progress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE500770-42D3-442E-9DDD-156E0F9F3B45</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries in the exported Excel file.</para>
+        /// <para>The total number of data entries in the exported Excel file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

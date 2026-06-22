@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeExcludeSystemPathResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array consisting of the directories that are excluded.</para>
+        /// <para>The list of system excluded directories.</para>
         /// </summary>
         [NameInMap("ExcludePaths")]
         [Validation(Required=false)]
@@ -19,8 +19,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operating system of the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>linux</b>: Linux</description></item>
-            /// <item><description><b>windows</b>: Windows</description></item>
+            /// <item><description><b>linux</b>: Linux.</description></item>
+            /// <item><description><b>windows</b>: Windows.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The absolute path to the directory.</para>
+            /// <para>The absolute path of the directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/bin/</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeExcludeSystemPathResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeExcludeSystemPathResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of system excluded directories on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in the paged query when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of system excluded folders returned per page in the paged query when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of system excluded directories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>55</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FBBEB173-1F43-505F-A876-C03ECDF6****</para>

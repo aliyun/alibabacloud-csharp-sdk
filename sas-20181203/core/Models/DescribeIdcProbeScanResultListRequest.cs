@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeIdcProbeScanResultListRequest : TeaModel {
         /// <summary>
-        /// <para>The search conditions for assets. This parameter is in the JSON format. The value is case-sensitive.</para>
+        /// <para>The search conditions for assets. This parameter is in JSON format. Parameter names are case-sensitive.</para>
         /// <remarks>
-        /// <para> A search condition can be the instance ID, instance name, VPC ID, region, or public IP address. You can call the <a href="https://help.aliyun.com/document_detail/2842671.html">DescribeIdcAssetCriteria</a> operation to query supported search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end time of the scan.</para>
+        /// <para>The end time of the scan discovery period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1720006819000</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? FoundEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the scan.</para>
+        /// <para>The start time of the scan discovery period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1720006818000</para>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? FoundStartTime { get; set; }
 
         /// <summary>
-        /// <para>The logical operator that combines multiple search conditions. Valid values:</para>
+        /// <para>The logical relationship between multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>****</description></item>
-        /// <item><description><b>AND</b>****</description></item>
+        /// <item><description><b>OR</b>: The search conditions are in a logical <b>OR</b> relationship.</description></item>
+        /// <item><description><b>AND</b>: The search conditions are in a logical <b>AND</b> relationship.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,13 +80,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The statuses of the corresponding probes. Separate multiple values with commas (,). Valid values:</para>
+        /// <para>The status list of the corresponding probes. Separate multiple values with commas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The probe is valid.</description></item>
-        /// <item><description><b>1</b>: The probe is ignored.</description></item>
-        /// <item><description><b>2</b>: The probe is invalid.</description></item>
-        /// <item><description><b>3</b>: The probe expired.</description></item>
-        /// <item><description><b>4</b>: The probe does not exist.</description></item>
+        /// <item><description><b>0</b>: active</description></item>
+        /// <item><description><b>1</b>: ignored</description></item>
+        /// <item><description><b>2</b>: invalid</description></item>
+        /// <item><description><b>3</b>: expired</description></item>
+        /// <item><description><b>4</b>: probe does not exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

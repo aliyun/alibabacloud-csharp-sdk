@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GenerateK8sAccessInfoRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliyunYundunGatewayApiName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliyunYundunGatewayPopName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated and does not need to be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliyunYundunGatewayProjectName { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service Logstore that is used to store the audit logs.</para>
+        /// <para>The SLS Logstore of the audit log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>audit-cf6baf6afa106eca665296fdf68b65bf</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuditLogStore { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service project that is used to store the audit logs.</para>
+        /// <para>The SLS project of the audit log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k8s-log-custom-huxintest1018-2</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AuditProject { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the audit logs are stored.</para>
+        /// <para>The region of the audit log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>CPU architectures are divided into ARM architecture and x86 architecture.</para>
+        /// <para>The CPU architecture, which can be ARM or x86.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arm</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CpuArch { get; set; }
 
         /// <summary>
-        /// <para>The time at which the container ends to be added.</para>
+        /// <para>The expiration time for container access.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ExpireDate { get; set; }
 
         /// <summary>
-        /// <para>The group ID.</para>
+        /// <para>The queried group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,13 +113,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The service provider of the cloud asset. Valid values:</para>
+        /// <para>The cloud asset vendor. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Tencent</b></description></item>
         /// <item><description><b>HUAWEICLOUD</b></description></item>
         /// <item><description><b>Azure</b></description></item>
-        /// <item><description><b>AWS</b></description></item>
-        /// <item><description><b>Others</b></description></item>
+        /// <item><description><b>AWS</b> </description></item>
+        /// <item><description><b>Other cloud assets</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

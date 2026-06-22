@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The reason why the vulnerability is added to the whitelist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Ignore</para>
+            /// <para>忽略</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -71,8 +71,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <list type="bullet">
             /// <item><description><para><b>type</b>: the type of the assets to which the rule is applied. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Uuid</b>: server</description></item>
-            /// <item><description><b>GroupId</b>: server group</description></item>
+            /// <item><description><para><b>Uuid</b>: server</para>
+            /// </description></item>
+            /// <item><description><para><b>GroupId</b>: server group</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>groupIds</b>: the ID of the server group</para>
@@ -114,11 +116,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </description></item>
             /// <item><description><para><b>Type</b>: the type of the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
-            /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
-            /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
-            /// <item><description><b>app</b>: application vulnerability</description></item>
-            /// <item><description><b>emg</b>: urgent vulnerabilities</description></item>
+            /// <item><description><para><b>cve</b>: Linux software vulnerability</para>
+            /// </description></item>
+            /// <item><description><para><b>sys</b>: Windows system vulnerability</para>
+            /// </description></item>
+            /// <item><description><para><b>cms</b>: Web-CMS vulnerability</para>
+            /// </description></item>
+            /// <item><description><para><b>app</b>: application vulnerability</para>
+            /// </description></item>
+            /// <item><description><para><b>emg</b>: urgent vulnerabilities</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>AliasName</b>: the alias of the vulnerability.</para>

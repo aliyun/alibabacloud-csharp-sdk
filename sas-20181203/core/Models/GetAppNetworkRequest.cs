@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAppNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster to which the container belongs.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the query. Unit: milliseconds.</para>
+        /// <para>The timestamp of the end time. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The days between the start timestamp and the end timestamp cannot exceed <b>seven</b> days.</para>
+        /// <para>The difference between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the query. Unit: milliseconds.</para>
+        /// <para>The timestamp of the start time. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The days between the start timestamp and the end timestamp cannot exceed <b>seven</b> days.</para>
+        /// <para>The difference between the start timestamp and the end timestamp cannot exceed <b>7</b> days.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

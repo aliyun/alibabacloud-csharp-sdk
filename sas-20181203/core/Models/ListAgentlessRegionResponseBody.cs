@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRegionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the regions.</para>
+        /// <para>The region list information.</para>
         /// </summary>
         [NameInMap("RegionList")]
         [Validation(Required=false)]
         public List<string> RegionList { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42B5E92****</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the regions.</para>
+        /// <para>The region list information.</para>
         /// </summary>
         [NameInMap("VendorRegionList")]
         [Validation(Required=false)]
         public List<ListAgentlessRegionResponseBodyVendorRegionList> VendorRegionList { get; set; }
         public class ListAgentlessRegionResponseBodyVendorRegionList : TeaModel {
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The region in which the server resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -44,13 +44,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of the server. Valid values:</para>
+            /// <para>The server vendor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Alibaba Cloud</description></item>
-            /// <item><description><b>3</b>: Tencent Cloud</description></item>
-            /// <item><description><b>4</b>: Huawei Cloud</description></item>
-            /// <item><description><b>5</b>: Azure</description></item>
-            /// <item><description><b>7</b>: AWS</description></item>
+            /// <item><description><b>0</b>: Alibaba Cloud.</description></item>
+            /// <item><description><b>3</b>: Tencent Cloud.</description></item>
+            /// <item><description><b>4</b>: Huawei Cloud.</description></item>
+            /// <item><description><b>5</b>: Azure.</description></item>
+            /// <item><description><b>7</b>: AWS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

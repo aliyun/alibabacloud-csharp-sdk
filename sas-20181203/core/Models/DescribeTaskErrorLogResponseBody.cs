@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTaskErrorLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the error logs.</para>
+        /// <para>The list of error logs.</para>
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F929E952-EBFC-56C3-BD35-BF8B59024C69</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetLastOnceTaskInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the task.</para>
+        /// <para>The source that initiated the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>console_batch</para>
@@ -22,9 +22,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client diagnosis task</description></item>
-        /// <item><description><b>CLIENT_DEV_OPS</b>: O\&amp;M task of Cloud Assistant</description></item>
-        /// <item><description><b>ASSETS_COLLECTION</b>: asset collection task</description></item>
+        /// <item><description><para><c>CLIENT_PROBLEM_CHECK</c>: client troubleshooting task</para>
+        /// </description></item>
+        /// <item><description><para><c>CLIENT_DEV_OPS</c>: O\&amp;M task</para>
+        /// </description></item>
+        /// <item><description><para><c>ASSET_SECURITY_CHECK</c>: asset collection task</para>
+        /// </description></item>
+        /// <item><description><para><c>ASSETS_COLLECTION</c>: asset fingerprint collection task</para>
+        /// </description></item>
+        /// <item><description><para><c>IMAGE_SCAN</c>: container image scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>AI_SECURITY_CHECK</c>: AI asset synchronization task</para>
+        /// </description></item>
+        /// <item><description><para><c>IDC_PROBE_SCAN</c>: IDC probe scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>ATTACK_SURFACE_SCAN</c>: attack surface boundary asset scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>ASSET_EXPOSURE_SCAN</c>: asset exposure scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>VUL_CHECK_TASK</c>: vulnerability scan task</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,9 +55,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client diagnosis task</description></item>
-        /// <item><description><b>CLIENT_DEV_OPS</b>: O\&amp;M task of Cloud Assistant</description></item>
-        /// <item><description><b>ASSETS_COLLECTION</b>: asset collection task</description></item>
+        /// <item><description><para><c>CLIENT_PROBLEM_CHECK</c>: client troubleshooting task</para>
+        /// </description></item>
+        /// <item><description><para><c>CLIENT_DEV_OPS</c>: O\&amp;M task</para>
+        /// </description></item>
+        /// <item><description><para><c>ASSET_SECURITY_CHECK</c>: asset collection task</para>
+        /// </description></item>
+        /// <item><description><para><c>ASSETS_COLLECTION</c>: asset fingerprint collection task</para>
+        /// </description></item>
+        /// <item><description><para><c>IMAGE_SCAN</c>: container image scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>AI_SECURITY_CHECK</c>: AI asset synchronization task</para>
+        /// </description></item>
+        /// <item><description><para><c>IDC_PROBE_SCAN</c>: IDC probe scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>ATTACK_SURFACE_SCAN</c>: attack surface boundary asset scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>ASSET_EXPOSURE_SCAN</c>: asset exposure scan task</para>
+        /// </description></item>
+        /// <item><description><para><c>VUL_CHECK_TASK</c>: vulnerability scan task</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

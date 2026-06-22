@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeOnceTaskResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeOnceTaskResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of client tasks displayed on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+            /// <para>The number of client tasks per page in a paged query. Default value: <b>20</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of client tasks returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>
@@ -69,26 +69,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the tasks.</para>
+        /// <para>The list of client task query results.</para>
         /// </summary>
         [NameInMap("TaskManageResponseList")]
         [Validation(Required=false)]
         public List<DescribeOnceTaskResponseBodyTaskManageResponseList> TaskManageResponseList { get; set; }
         public class DescribeOnceTaskResponseBodyTaskManageResponseList : TeaModel {
             /// <summary>
-            /// <para>The execution details of the task. The value of this parameter is in the JSON format.</para>
+            /// <para>The task execution details. This parameter is in JSON format.</para>
             /// <list type="bullet">
-            /// <item><description><b>causeCode</b>: the returned code for the cause.</description></item>
-            /// <item><description><b>causeMsg</b>: the returned message for the cause.</description></item>
-            /// <item><description><b>resCode</b>: the returned code for troubleshooting.</description></item>
-            /// <item><description><b>resMsg</b>: the returned message for troubleshooting.</description></item>
-            /// <item><description><b>problemType</b>: the type of the issue.</description></item>
-            /// <item><description><b>dispatchType</b>: the task delivery method.</description></item>
-            /// <item><description><b>uuid</b>: the UUID of the server.</description></item>
-            /// <item><description><b>instanceId</b>: the instance ID of the server.</description></item>
+            /// <item><description><b>causeCode</b>: the return code of the troubleshooting cause.</description></item>
+            /// <item><description><b>causeMsg</b>: the return message of the troubleshooting cause.</description></item>
+            /// <item><description><b>resCode</b>: the troubleshooting return code.</description></item>
+            /// <item><description><b>resMsg</b>: the troubleshooting return message.</description></item>
+            /// <item><description><b>problemType</b>: the problem type.</description></item>
+            /// <item><description><b>dispatchType</b>: the task dispatch method.</description></item>
+            /// <item><description><b>uuid</b>: the server UUID.</description></item>
+            /// <item><description><b>instanceId</b>: the ID of the server instance.</description></item>
             /// <item><description><b>internetIp</b>: the public IP address of the server.</description></item>
             /// <item><description><b>intranetIp</b>: the private IP address of the server.</description></item>
-            /// <item><description><b>instanceName</b>: the instance name of the server.</description></item>
+            /// <item><description><b>instanceName</b>: the name of the server instance.</description></item>
             /// <item><description><b>url</b>: the download URL of the troubleshooting log.</description></item>
             /// </list>
             /// 
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DetailData { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks that fail to be executed.</para>
+            /// <para>The number of tasks that failed to be executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The progress of the task. Unit: percent (%).</para>
+            /// <para>The task progress, in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10%</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Progress { get; set; }
 
             /// <summary>
-            /// <para>The execution result of the task.</para>
+            /// <para>The task execution result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>successful</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ResultInfo { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks that are executed.</para>
+            /// <para>The number of tasks that are executed successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SuccessCount { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that indicates the time when the task ends. Unit: milliseconds.</para>
+            /// <para>The timestamp when the task actually ends. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1650267989000</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLIENT_PROBLEM_CHECK</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that indicates the time when the task starts. Unit: milliseconds.</para>
+            /// <para>The timestamp when the task actually starts. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649732012000</para>
@@ -194,12 +194,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? TaskStartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: The task is started.</description></item>
-            /// <item><description><b>2</b>: The task is complete.</description></item>
-            /// <item><description><b>3</b>: The task fails.</description></item>
-            /// <item><description><b>4</b>: The task times out.</description></item>
+            /// <item><description><b>1</b>: Started.</description></item>
+            /// <item><description><b>2</b>: Completed.</description></item>
+            /// <item><description><b>3</b>: Failed.</description></item>
+            /// <item><description><b>4</b>: Timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The text description of the status for the task. Valid values:</para>
+            /// <para>The text representation of the task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is pending start.</description></item>
-            /// <item><description><b>START</b>: The task is started.</description></item>
-            /// <item><description><b>DISPATCH</b>: The self-check command is issued.</description></item>
-            /// <item><description><b>SUCCESS</b>: The self-check is complete.</description></item>
-            /// <item><description><b>FAIL</b>: The task fails.</description></item>
-            /// <item><description><b>TIMEOUT</b>: The task times out.</description></item>
+            /// <item><description><b>INIT</b>: Pending.</description></item>
+            /// <item><description><b>START</b>: Started.</description></item>
+            /// <item><description><b>DISPATCH</b>: Self-check command dispatched.</description></item>
+            /// <item><description><b>SUCCESS</b>: Self-check completed.</description></item>
+            /// <item><description><b>FAIL</b>: Execution failed.</description></item>
+            /// <item><description><b>TIMEOUT</b>: Timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -228,11 +228,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskStatusText { get; set; }
 
             /// <summary>
-            /// <para>The type of the task. Valid values:</para>
+            /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: a task of the Security Center client</description></item>
-            /// <item><description><b>CLIENT_DEV_OPS</b>: an O\&amp;M task of Cloud Assistant</description></item>
-            /// <item><description><b>ASSET_SECURITY_CHECK</b>: a task for asset information collection</description></item>
+            /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client task</description></item>
+            /// <item><description><b>CLIENT_DEV_OPS</b>: cloud O&amp;M task</description></item>
+            /// <item><description><b>ASSET_SECURITY_CHECK</b>: asset information collection task.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

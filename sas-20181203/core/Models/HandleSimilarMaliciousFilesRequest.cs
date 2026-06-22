@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class HandleSimilarMaliciousFilesRequest : TeaModel {
         /// <summary>
-        /// <para>Target alert ID</para>
+        /// <para>The ID of the target alert.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EventId { get; set; }
 
         /// <summary>
-        /// <para>Language type for request and response messages. Values include:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,13 +35,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Handling action:</para>
+        /// <para>The handling action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>addWhitelist: Add to whitelist;</description></item>
-        /// <item><description>offWhitelist: Remove from whitelist;</description></item>
-        /// <item><description>offline_handled: Handled offline;</description></item>
-        /// <item><description>mark_mis_info: Report as false positive;</description></item>
-        /// <item><description>ignore: Ignore.</description></item>
+        /// <item><description>addWhitelist: adds to the whitelist.</description></item>
+        /// <item><description>offWhitelist: removes from the whitelist.</description></item>
+        /// <item><description>offline_handled: handled offline.</description></item>
+        /// <item><description>mark_mis_info: submits as a false positive.</description></item>
+        /// <item><description>ignore: ignores the alert.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,11 +53,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>File source. Values include:</para>
+        /// <para>The file source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>agentless: Host detection;</description></item>
-        /// <item><description>ecs_snapshot: User snapshot detection;</description></item>
-        /// <item><description>ecs_image: User-defined image detection.</description></item>
+        /// <item><description>agentless: host detection.</description></item>
+        /// <item><description>ecs_snapshot: user snapshot detection.</description></item>
+        /// <item><description>ecs_image: user custom image detection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanRange { get; set; }
 
         /// <summary>
-        /// <para>Batch processing scenario:</para>
+        /// <para>The batch processing scenario. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>same_file_md5: Same file MD5;</description></item>
-        /// <item><description>default (default value): Same alert type.</description></item>
+        /// <item><description>same_file_md5: same file MD5.</description></item>
+        /// <item><description>default (default value): same alerting type.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

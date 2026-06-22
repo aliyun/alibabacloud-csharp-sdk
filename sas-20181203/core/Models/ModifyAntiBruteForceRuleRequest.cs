@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAntiBruteForceRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to set the defense rule as the default rule. Valid values:</para>
+        /// <para>Specifies whether the defense rule against brute-force attacks is set as the default policy in Settings. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: The rule is set as the default policy.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The rule is not set as the default policy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,16 +26,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? DefaultRule { get; set; }
 
         /// <summary>
-        /// <para>The threshold of logon failures that you specify. Valid values:</para>
+        /// <para>The threshold for the number of logon failures. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b></description></item>
-        /// <item><description><b>3</b></description></item>
-        /// <item><description><b>4</b></description></item>
-        /// <item><description><b>5</b></description></item>
-        /// <item><description><b>10</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>80</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><b>2</b>: 2 times</description></item>
+        /// <item><description><b>3</b>: 3 times</description></item>
+        /// <item><description><b>4</b>: 4 times</description></item>
+        /// <item><description><b>5</b>: 5 times</description></item>
+        /// <item><description><b>10</b>: 10 times</description></item>
+        /// <item><description><b>50</b>: 50 times</description></item>
+        /// <item><description><b>80</b>: 80 times</description></item>
+        /// <item><description><b>100</b>: 100 times.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,18 +46,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? FailCount { get; set; }
 
         /// <summary>
-        /// <para>The period of time during which logons from an account are not allowed. Unit: minutes. Valid values:</para>
+        /// <para>The duration for which logon is prohibited, in minutes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>5</b></description></item>
-        /// <item><description><b>15</b></description></item>
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>60</b></description></item>
-        /// <item><description><b>120</b></description></item>
-        /// <item><description><b>360</b></description></item>
-        /// <item><description><b>720</b></description></item>
-        /// <item><description><b>1440</b></description></item>
-        /// <item><description><b>10080</b></description></item>
-        /// <item><description><b>52560000</b>: permanent</description></item>
+        /// <item><description><b>5</b>: 5 minutes</description></item>
+        /// <item><description><b>15</b>: 15 minutes</description></item>
+        /// <item><description><b>30</b>: 30 minutes</description></item>
+        /// <item><description><b>60</b>: 1 hour</description></item>
+        /// <item><description><b>120</b>: 2 hours</description></item>
+        /// <item><description><b>360</b>: 6 hours</description></item>
+        /// <item><description><b>720</b>: 12 hours</description></item>
+        /// <item><description><b>1440</b>: 24 hours</description></item>
+        /// <item><description><b>10080</b>: 7 days</description></item>
+        /// <item><description><b>52560000</b>: permanent (100 years).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ForbiddenTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the defense rule.</para>
+        /// <para>The ID of the defense rule against brute-force attacks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the defense rule.</para>
+        /// <para>The name of the defense rule against brute-force attacks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TestRule</para>
@@ -87,17 +89,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol types supported by the anti-brute force rule for interception.</para>
+        /// <para>The protocol types that the defense rule against brute-force attacks supports for interception.</para>
         /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public ModifyAntiBruteForceRuleRequestProtocolType ProtocolType { get; set; }
         public class ModifyAntiBruteForceRuleRequestProtocolType : TeaModel {
             /// <summary>
-            /// <para>Whether to modify the RDP interception method, which is enabled by default. Values:</para>
+            /// <para>Specifies whether to enable RDP interception. This is enabled by default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: Enable</description></item>
-            /// <item><description><b>off</b>: Disable</description></item>
+            /// <item><description><b>on</b>: enabled</description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,10 +110,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Rdp { get; set; }
 
             /// <summary>
-            /// <para>Whether to modify the SQL Server interception method, which is disabled by default. Values:</para>
+            /// <para>Specifies whether to enable SqlServer interception. This is disabled by default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: Enable</description></item>
-            /// <item><description><b>off</b>: Disable</description></item>
+            /// <item><description><b>on</b>: enabled</description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,10 +124,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SqlServer { get; set; }
 
             /// <summary>
-            /// <para>Whether to modify the SSH interception method, which is enabled by default. Values:</para>
+            /// <para>Specifies whether to enable SSH interception. This is enabled by default. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: Enable</description></item>
-            /// <item><description><b>off</b>: Disable</description></item>
+            /// <item><description><b>on</b>: enabled</description></item>
+            /// <item><description><b>off</b>: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,7 +144,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.XX.XX</para>
@@ -152,13 +154,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The period of time during which logon failures from an account are measured. Unit: minutes. Valid values:</para>
+        /// <para>The threshold for the period of time during which logon failures are counted, in minutes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b></description></item>
-        /// <item><description><b>2</b></description></item>
-        /// <item><description><b>5</b></description></item>
-        /// <item><description><b>10</b></description></item>
-        /// <item><description><b>15</b></description></item>
+        /// <item><description><b>1</b>: 1 minute</description></item>
+        /// <item><description><b>2</b>: 2 minutes</description></item>
+        /// <item><description><b>5</b>: 5 minutes</description></item>
+        /// <item><description><b>10</b>: 10 minutes</description></item>
+        /// <item><description><b>15</b>: 15 minutes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,7 +171,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Span { get; set; }
 
         /// <summary>
-        /// <para>An array consisting of the UUIDs of the servers to which the defense rule is applied.</para>
+        /// <para>The list of servers to which the defense rule against brute-force attacks applies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uuid-13213-dasda</para>

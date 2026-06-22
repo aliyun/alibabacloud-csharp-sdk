@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class VerifyCheckCustomConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of check parameters with configuration errors.</para>
+        /// <para>The list of check parameters that have configuration check errors.</para>
         /// </summary>
         [NameInMap("ErrorCheckConfigs")]
         [Validation(Required=false)]
         public List<VerifyCheckCustomConfigResponseBodyErrorCheckConfigs> ErrorCheckConfigs { get; set; }
         public class VerifyCheckCustomConfigResponseBodyErrorCheckConfigs : TeaModel {
             /// <summary>
-            /// <para>Error code.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ConfigEqualIllegal</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Error message.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom parameter is not equal to corresponding check parameter</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>Related configurations causing this error.</para>
+            /// <para>The related configurations that caused this error.</para>
             /// </summary>
             [NameInMap("LinkErrorConfigs")]
             [Validation(Required=false)]
             public List<VerifyCheckCustomConfigResponseBodyErrorCheckConfigsLinkErrorConfigs> LinkErrorConfigs { get; set; }
             public class VerifyCheckCustomConfigResponseBodyErrorCheckConfigsLinkErrorConfigs : TeaModel {
                 /// <summary>
-                /// <para>Name of the check item configuration, unique within the same check item.</para>
+                /// <para>The name of the check item configuration. The name is unique within the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IpLists</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Display name of the user\&quot;s check configuration.</para>
+                /// <para>The display name of the user check configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IP Lists</para>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the parameter that caused the error:</para>
+                /// <para>The type of the parameter that has an error. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>repair: Repair parameter</description></item>
-                /// <item><description>custom: Custom configuration parameter</description></item>
+                /// <item><description>repair: repair parameter</description></item>
+                /// <item><description>custom: custom configuration parameter.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Name of the custom configuration item for the check item, unique within the same check item.</para>
+            /// <para>The name of the custom configuration item for the check item. The name is unique within the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IpList</para>
@@ -90,9 +90,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Type of the erroneous parameter:</para>
+            /// <para>The type of the parameter that has an error. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>custom: Custom configuration parameter</description></item>
+            /// <item><description>custom: custom configuration parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>User-configured value string for the custom configuration item of the check item.</para>
+            /// <para>The user-configured value string of the custom configuration item for the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.12.4.XX</para>
@@ -115,17 +115,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Check the error code returned by the custom check item.</para>
+        /// <para>The error code returned for the custom check item validation.</para>
         /// </summary>
         [NameInMap("ErrorCheckCustomConfig")]
         [Validation(Required=false)]
         public VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig ErrorCheckCustomConfig { get; set; }
         public class VerifyCheckCustomConfigResponseBodyErrorCheckCustomConfig : TeaModel {
             /// <summary>
-            /// <para>Error code when failed. This parameter is not returned upon success. </para>
+            /// <para>The error code returned upon failure. This parameter is not returned upon success. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CspmVerifyCheckCustomItemNoPass</b>: The asset did not pass the set custom rules. </description></item>
-            /// <item><description><b>CspmVerifyCheckCustomItemError</b>: Verification error, there is an issue with the input rule.</description></item>
+            /// <item><description><b>CspmVerifyCheckCustomItemNoPass</b>: The asset did not pass the custom rule that was configured.</description></item>
+            /// <item><description><b>CspmVerifyCheckCustomItemError</b>: A validation error occurred because the input rule has issues.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Error message</para>
+            /// <para>The exception information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Creation verification failed.</para>
@@ -148,14 +148,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>List of repair parameters with configuration check errors.</para>
+        /// <para>The list of repair parameters that have configuration check errors.</para>
         /// </summary>
         [NameInMap("ErrorRepairConfigs")]
         [Validation(Required=false)]
         public List<VerifyCheckCustomConfigResponseBodyErrorRepairConfigs> ErrorRepairConfigs { get; set; }
         public class VerifyCheckCustomConfigResponseBodyErrorRepairConfigs : TeaModel {
             /// <summary>
-            /// <para>Error code.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ConfigEqualIllegal</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Error message.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Repair parameter is not equal to corresponding check parameter</para>
@@ -175,14 +175,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>Related configurations causing this error.</para>
+            /// <para>The related configurations that caused this error.</para>
             /// </summary>
             [NameInMap("LinkErrorConfigs")]
             [Validation(Required=false)]
             public List<VerifyCheckCustomConfigResponseBodyErrorRepairConfigsLinkErrorConfigs> LinkErrorConfigs { get; set; }
             public class VerifyCheckCustomConfigResponseBodyErrorRepairConfigsLinkErrorConfigs : TeaModel {
                 /// <summary>
-                /// <para>Name of the check item\&quot;s configuration, unique within the same check item.</para>
+                /// <para>The name of the check item configuration. The name is unique within the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IpList</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Display name of the user\&quot;s check configuration.</para>
+                /// <para>The display name of the user check configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Ip List</para>
@@ -202,10 +202,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ShowName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the parameter that caused the error:</para>
+                /// <para>The type of the parameter that has an error. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>repair: Repair parameter</description></item>
-                /// <item><description>custom: Custom configuration parameter</description></item>
+                /// <item><description>repair: repair parameter</description></item>
+                /// <item><description>custom: custom configuration parameter.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Name of the check item\&quot;s repair configuration, unique within the same check item.</para>
+            /// <para>The name of the repair configuration item for the check item. The name is unique within the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IpLists</para>
@@ -228,9 +228,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the parameter that caused the error:</para>
+            /// <para>The type of the parameter that has an error. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>repair: Repair parameter</description></item>
+            /// <item><description>repair: repair parameter.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Name of the check item\&quot;s repair parameter, unique within the same check item.</para>
+            /// <para>The name of the repair parameter for the check item. The name is unique within the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.26.49.XX</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of this call request, a unique identifier generated by Alibaba Cloud for the request, which can be used for troubleshooting and problem localization.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7532B7EE-7CE7-5F4D-BF04-B12447DD****</para>

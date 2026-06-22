@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyUniBackupPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The username of the database account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sa</para>
@@ -30,12 +30,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
-        /// <para>The policy for full backup. The value of this parameter is a JSON string that contains the following fields:</para>
+        /// <para>The full backup policy. The value is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>start</b>: the start time of a backup task</description></item>
-        /// <item><description><b>interval</b>: the interval of backup tasks</description></item>
-        /// <item><description><b>type</b>: the unit of the interval</description></item>
-        /// <item><description><b>days</b>: the days of a week on which a backup task is performed</description></item>
+        /// <item><description><b>start</b>: the backup start time.</description></item>
+        /// <item><description><b>interval</b>: the interval.</description></item>
+        /// <item><description><b>type</b>: the unit of the interval.</description></item>
+        /// <item><description><b>days</b>: the days of the week on which the backup is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,12 +46,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FullPlanShrink { get; set; }
 
         /// <summary>
-        /// <para>The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:</para>
+        /// <para>The incremental backup policy. The value is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>start</b>: the start time of a backup task</description></item>
-        /// <item><description><b>interval</b>: the interval of backup tasks</description></item>
-        /// <item><description><b>type</b>: the unit of the interval</description></item>
-        /// <item><description><b>days</b>: the days of a week on which a backup task is performed</description></item>
+        /// <item><description><b>start</b>: the backup start time.</description></item>
+        /// <item><description><b>interval</b>: the interval.</description></item>
+        /// <item><description><b>type</b>: the unit of the interval.</description></item>
+        /// <item><description><b>days</b>: the days of the week on which the backup is performed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IncPlanShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the anti-ransomware policy.</para>
+        /// <para>The ID of the anti-ransomware backup policy for databases.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</para>
+        /// <para>You can call the <a href="~~DescribeUniBackupPolicies~~">DescribeUniBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the anti-ransomware policy.</para>
+        /// <para>The name of the anti-ransomware backup policy for databases.</para>
         /// 
         /// <b>Example:</b>
         /// <para>databak</para>
@@ -86,10 +86,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The status of the anti-ransomware policy. Valid values:</para>
+        /// <para>The status of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enabled</b></description></item>
-        /// <item><description><b>disabled</b></description></item>
+        /// <item><description><b>enabled</b>: The policy is enabled.</description></item>
+        /// <item><description><b>disabled</b>: The policy is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyStatus { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the backup snapshot.</para>
+        /// <para>The number of days for which backup snapshots are retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Retention { get; set; }
 
         /// <summary>
-        /// <para>The maximum network bandwidth that is allowed during data backup. Unit: bytes.</para>
+        /// <para>The network bandwidth throttling for backup network bandwidth. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1048576</para>

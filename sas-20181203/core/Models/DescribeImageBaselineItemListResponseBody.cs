@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineItemListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of baseline check items.</para>
+        /// <para>The list of image baseline data.</para>
         /// </summary>
         [NameInMap("BaselineItemInfos")]
         [Validation(Required=false)]
         public List<DescribeImageBaselineItemListResponseBodyBaselineItemInfos> BaselineItemInfos { get; set; }
         public class DescribeImageBaselineItemListResponseBodyBaselineItemInfos : TeaModel {
             /// <summary>
-            /// <para>The alias of the baseline type.</para>
+            /// <para>The alias of the baseline category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AccessKey pair leak</para>
+            /// <para>Access Key泄漏</para>
             /// </summary>
             [NameInMap("BaselineClassAlias")]
             [Validation(Required=false)]
             public string BaselineClassAlias { get; set; }
 
             /// <summary>
-            /// <para>The key of the baseline type.</para>
+            /// <para>The key of the baseline category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ak_leak</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineClassKey { get; set; }
 
             /// <summary>
-            /// <para>The alias of the baseline check item.</para>
+            /// <para>The alias of the baseline sub-item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AccessKey pair leak</para>
+            /// <para>Access Key泄漏</para>
             /// </summary>
             [NameInMap("BaselineItemAlias")]
             [Validation(Required=false)]
             public string BaselineItemAlias { get; set; }
 
             /// <summary>
-            /// <para>The key of the baseline check item.</para>
+            /// <para>The key of the baseline sub-item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ak_leak</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineItemKey { get; set; }
 
             /// <summary>
-            /// <para>The alias of the baseline.</para>
+            /// <para>The alias of the baseline name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AccessKey pair leak</para>
+            /// <para>Access Key泄漏</para>
             /// </summary>
             [NameInMap("BaselineNameAlias")]
             [Validation(Required=false)]
@@ -77,12 +77,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BaselineNameKey { get; set; }
 
             /// <summary>
-            /// <para>The status of the baseline risks. Valid values:</para>
+            /// <para>The fix status of the baseline risk. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: unfixed</description></item>
             /// <item><description><b>1</b>: fixed</description></item>
             /// <item><description><b>2</b>: pending verification</description></item>
-            /// <item><description><b>3</b>: fixing failed</description></item>
+            /// <item><description><b>3</b>: fix failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the baseline check item is added to the whitelist. Valid values:</para>
+            /// <para>The whitelist status of the baseline check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The baseline check item is not added to the whitelist.</description></item>
-            /// <item><description><b>1</b>: The baseline check item is added to the whitelist.</description></item>
+            /// <item><description><b>0</b>: not whitelisted</description></item>
+            /// <item><description><b>1</b>: whitelisted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,14 +109,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query results.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageBaselineItemListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageBaselineItemListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

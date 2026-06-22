@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The key of the configuration item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>vul_scan_ip_list</b>: The IP addresses that are detected.</description></item>
+        /// <item><description><b>vul_scan_ip_list</b>: the collection of vulnerability scanning IP addresses.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

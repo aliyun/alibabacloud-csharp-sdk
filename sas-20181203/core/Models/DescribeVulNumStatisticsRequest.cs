@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeVulNumStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the request.</para>
+        /// <para>The request source.</para>
         /// <list type="bullet">
-        /// <item><description>If you want to query Security Center-related data, set the value to <b>sas</b>.</description></item>
-        /// <item><description>If you want to query Server Guard-related data, you do not need to specify this parameter.</description></item>
+        /// <item><description>When querying Security Center data, set this parameter to <b>sas</b>.</description></item>
+        /// <item><description>When querying Server Guard data, you do not need to set this parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The member account ID in the resource directory (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

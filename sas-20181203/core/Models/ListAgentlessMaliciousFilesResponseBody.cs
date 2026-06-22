@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessMaliciousFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The malicious files.</para>
+        /// <para>The list of malicious files.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<ListAgentlessMaliciousFilesResponseBodyList> List { get; set; }
         public class ListAgentlessMaliciousFilesResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The details of the alert event.</para>
+            /// <para>The alert event details.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<ListAgentlessMaliciousFilesResponseBodyListDetails> Details { get; set; }
             public class ListAgentlessMaliciousFilesResponseBodyListDetails : TeaModel {
                 /// <summary>
-                /// <para>The name of the detailed item.</para>
+                /// <para>The name of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MD5</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The name key of the detailed item.</para>
+                /// <para>The name key of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>${suspicious.mp.db.maliciousfilemd5}</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NameKey { get; set; }
 
                 /// <summary>
-                /// <para>The type of the detailed item.</para>
+                /// <para>The type of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The value of the detailed item.</para>
+                /// <para>The value of the alert event detail item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The URL to download the malicious image sample.</para>
+            /// <para>The download URL of the malicious sample.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/rule/V3.166.2/totalpackage_rule_V3.16_6.2_tip_20230220110">https://upgrade-rule-pkg.oss-cn-beijing.aliyuncs.com/totalpackage/rule/V3.166.2/totalpackage_rule_V3.16_6.2_tip_20230220110</a>****</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FilePath { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the first scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the first scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstScanTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The highlighted JSON string.</para>
+            /// <para>The highlighted text, in JSON string format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;highlight\&quot;:{\&quot;ruleVersion\&quot;:\&quot;20230223\&quot;,\&quot;ruleId\&quot;:600139,\&quot;events\&quot;:[[207,284]]}}</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset.</para>
+            /// <para>The name of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sql-test-001****</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -156,11 +156,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LatestScanTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The severity of the malicious file. Valid values:</para>
+            /// <para>The severity level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>serious</description></item>
-            /// <item><description>suspicious</description></item>
-            /// <item><description>remind</description></item>
+            /// <item><description>serious: urgent</description></item>
+            /// <item><description>suspicious: suspicious</description></item>
+            /// <item><description>remind: reminder.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value of the malicious file.</para>
+            /// <para>The MD5 hash of the malicious file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1f2e13a7c51ee89316ae50066515****</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousName { get; set; }
 
             /// <summary>
-            /// <para>The type of the virus.</para>
+            /// <para>The virus type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebShell</para>
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<ListAgentlessMaliciousFilesResponseBodyListNotes> Notes { get; set; }
             public class ListAgentlessMaliciousFilesResponseBodyListNotes : TeaModel {
                 /// <summary>
-                /// <para>The remark.</para>
+                /// <para>The remarks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Serious***</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Note { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the remark.</para>
+                /// <para>The ID of the remark record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50****</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NoteId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the remark was created.</para>
+                /// <para>The time of the remark record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-04-27 14:49:21</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The handling result of the alert.</para>
+            /// <para>The alert handling result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>addWhitelist.USER.Success</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateResult { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the alert is handled. Unit: milliseconds.</para>
+            /// <para>The timestamp when the alert was handled, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>168257753****</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The partition of the disk.</para>
+            /// <para>The disk partition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/dev/xvda1</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Partition { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset that is scanned.</para>
+            /// <para>The ID of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-****</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset that is scanned.</para>
+            /// <para>The name of the scan target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jenkins****</para>
@@ -290,9 +290,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>The type of the asset that is scanned. Valid values:</para>
+            /// <para>The object type of the scan target. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>2: The scanned asset is an image.</description></item>
+            /// <item><description>2: image.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the asset.</para>
+            /// <para>The UUID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>49e25e0f-bb51-4a5a-a1b3-13a4ddaa****</para>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListAgentlessMaliciousFilesResponseBodyPageInfo PageInfo { get; set; }
         public class ListAgentlessMaliciousFilesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of malicious files displayed on the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number in the returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries returned per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of malicious files found.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID generated by Alibaba Cloud for this request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE343162-35BF-565E-B85E-8E3B7A2B****</para>

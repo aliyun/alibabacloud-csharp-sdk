@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebLockStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total quota that you purchase for web tamper proofing.</para>
+        /// <para>The total number of purchased tamper-proofing authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AuthCount { get; set; }
 
         /// <summary>
-        /// <para>The associated tamper proofing quota.</para>
+        /// <para>The number of bound tamper-proofing authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DirCount { get; set; }
 
         /// <summary>
-        /// <para>The timestamp generated when the quota for tamper proofing expires. Unit: millisecond.</para>
+        /// <para>The timestamp when the tamper-proofing authorization expires. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1688090851000</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>

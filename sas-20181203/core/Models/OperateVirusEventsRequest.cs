@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateVirusEventsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to handle all alert events. Valid values:</para>
+        /// <para>Specifies whether to handle all alerts. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><b>0</b>: no.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,12 +25,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? OperationAll { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform on the alert events. Valid values:</para>
+        /// <para>The method to handle the alert event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: performs in-depth detection and removal</description></item>
-        /// <item><description><b>ignore</b>: ignores the alert event</description></item>
-        /// <item><description><b>advance_mark_mis_info</b>: adds the alert events to the whitelist</description></item>
-        /// <item><description><b>manual_handled</b>: marks the alert events as manually handled</description></item>
+        /// <item><description><b>default</b>: deep scan and removal</description></item>
+        /// <item><description><b>ignore</b>: ignore</description></item>
+        /// <item><description><b>advance_mark_mis_info</b>: add to whitelist</description></item>
+        /// <item><description><b>manual_handled</b>: manually handled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OperationCode { get; set; }
 
         /// <summary>
-        /// <para>The handling scope.</para>
+        /// <para>The scope of the handling operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;type\&quot;:\&quot;machine\&quot;,\&quot;list\&quot;:[\&quot;xxxxxxxxx-4cbf-4ca6-a1b7-8a09d1f86ab0\&quot;]}]</para>

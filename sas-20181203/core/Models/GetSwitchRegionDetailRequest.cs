@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSwitchRegionDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of the migration operation. Valid values:</para>
+        /// <para>The service switchover type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sg_switch</b>: the migration of a server from a region in the Chinese mainland to the Singapore region.</description></item>
-        /// <item><description><b>sls_meta_version_switch_stage_1</b>: the upgrade of log dictionaries.</description></item>
+        /// <item><description><b>sg_switch</b>: The server connection is migrated from China to Singapore.</description></item>
+        /// <item><description><b>sls_meta_version_switch_stage_1</b>: The log analysis delivery field upgrade switchover.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

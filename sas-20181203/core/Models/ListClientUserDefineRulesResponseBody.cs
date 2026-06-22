@@ -68,8 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The action of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: allow</description></item>
-            /// <item><description><b>1</b>: block</description></item>
+            /// <item><description><para><b>0</b>: allow</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: block</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Rule\<em>\</em>\<em>\</em></para>
+            /// <para>规则****</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -102,9 +104,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the operating system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>windows</b>: Windows</description></item>
-            /// <item><description><b>linux</b>: Linux</description></item>
-            /// <item><description><b>all</b>: all types</description></item>
+            /// <item><description><para><b>windows</b>: Windows</para>
+            /// </description></item>
+            /// <item><description><para><b>linux</b>: Linux</para>
+            /// </description></item>
+            /// <item><description><para><b>all</b>: all types</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,13 +132,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Process hash</description></item>
-            /// <item><description><b>2</b>: Command line</description></item>
-            /// <item><description><b>3</b>: Process Network</description></item>
-            /// <item><description><b>4</b>: File Read and Write</description></item>
-            /// <item><description><b>5</b>: Operation on Registry</description></item>
-            /// <item><description><b>6</b>: Dynamic-link Library Loading</description></item>
-            /// <item><description><b>7</b>: File Renaming</description></item>
+            /// <item><description><para><b>1</b>: Process hash</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Command line</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Process Network</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: File Read and Write</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: Operation on Registry</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: Dynamic-link Library Loading</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: File Renaming</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

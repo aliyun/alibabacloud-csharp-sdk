@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The data source. Default value: default. Valid values:</para>
+        /// <para>The data source. If this parameter is left empty, the image baseline policy is queried by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b>: queries the information about a baseline check policy for images.</description></item>
-        /// <item><description><b>agentless</b>: queries the information about a baseline check policy for agentless detection.</description></item>
+        /// <item><description><b>default</b>: image</description></item>
+        /// <item><description><b>agentless</b>: agentless.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

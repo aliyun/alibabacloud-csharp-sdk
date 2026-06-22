@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListVirusScanTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the results to return. Default value: <b>1</b>, which indicates that results start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the virus scan task ended. Unit: milliseconds.</para>
+        /// <para>The timestamp of the task end time to query, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1680919232999</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the server.</para>
+        /// <para>The public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120.27.XX.XX</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the server.</para>
+        /// <para>The private IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.26.XX.XX</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>20</b>.</para>
+        /// <para>The number of tasks per page in a paged query. Default value: <b>20</b>, which indicates that each page contains 20 tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the virus scan task is the root task.</para>
+        /// <para>Specifies whether the task is the root task of the virus scan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? RootTask { get; set; }
 
         /// <summary>
-        /// <para>The ID of the root task.</para>
+        /// <para>The root task ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~GetVirusScanLatestTaskStatistic~~">GetVirusScanLatestTaskStatistic</a> operation to query the ID.</para>
+        /// <para>Call <a href="~~GetVirusScanLatestTaskStatistic~~">GetVirusScanLatestTaskStatistic</a> to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RootTaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the virus scan task. Valid values:</para>
+        /// <para>The scan type of the virus scan task to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>system</b>: automatic scan task</description></item>
-        /// <item><description><b>user</b>: custom scan task</description></item>
+        /// <item><description><b>system</b>: automatic system scan</description></item>
+        /// <item><description><b>user</b>: custom user scan.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanType { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the virus scan task started. Unit: milliseconds.</para>
+        /// <para>The timestamp of the task start time to query, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1680919232000</para>
@@ -131,12 +131,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the virus scan task. Valid values:</para>
+        /// <para>The execution status of the virus scan task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: running</description></item>
-        /// <item><description><b>2</b>: complete</description></item>
-        /// <item><description><b>3</b>: failed</description></item>
-        /// <item><description><b>4</b>: timed out</description></item>
+        /// <item><description><b>1</b>: Scanning.</description></item>
+        /// <item><description><b>2</b>: Completed.</description></item>
+        /// <item><description><b>3</b>: Failed.</description></item>
+        /// <item><description><b>4</b>: Timed out.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -147,16 +147,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The statuses of virus scan tasks.</para>
+        /// <para>The list of statuses used to filter tasks by multiple statuses.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<int?> StatusList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virus scan task.</para>
+        /// <para>The ID of the virus scan task to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListVirusScanTask~~">ListVirusScanTask</a> operation to query the ID.</para>
+        /// <para>Call <a href="~~ListVirusScanTask~~">ListVirusScanTask</a> to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

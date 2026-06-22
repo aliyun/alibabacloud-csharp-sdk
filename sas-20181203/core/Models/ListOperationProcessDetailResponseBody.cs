@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListOperationProcessDetailResponseBodyPageInfo PageInfo { get; set; }
         public class ListOperationProcessDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The information about the operation subtasks.</para>
+        /// <para>The list of operation subtask information.</para>
         /// </summary>
         [NameInMap("ProcessDetails")]
         [Validation(Required=false)]
         public List<ListOperationProcessDetailResponseBodyProcessDetails> ProcessDetails { get; set; }
         public class ListOperationProcessDetailResponseBodyProcessDetails : TeaModel {
             /// <summary>
-            /// <para>The subtype of the asset associated with the operation subtask.</para>
+            /// <para>The asset subtype associated with the operation subtask.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetSubType { get; set; }
 
             /// <summary>
-            /// <para>The type of the asset associated with the operation subtask.</para>
+            /// <para>The asset type associated with the operation subtask.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetType { get; set; }
 
             /// <summary>
-            /// <para>The vendor of the asset associated with the operation subtask.</para>
+            /// <para>The asset vendor associated with the operation subtask.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetVendor { get; set; }
 
             /// <summary>
-            /// <para>The check items associated with the operation subtask.</para>
+            /// <para>The list of check items associated with the operation subtask.</para>
             /// </summary>
             [NameInMap("Checks")]
             [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The timestamp when the task was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the task was created, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706544199000</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the operation subtask.</para>
+            /// <para>The operation subtask ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fb4bcd41-a916-46bc-ab1a-65fd383be***</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DetailTaskId { get; set; }
 
             /// <summary>
-            /// <para>The end timestamp of the operation subtask. Unit: milliseconds.</para>
+            /// <para>The timestamp when the operation subtask ended, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1706544199000</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp of the operation subtask. Unit: milliseconds.</para>
+            /// <para>The timestamp when the operation subtask started, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730335622000</para>
@@ -165,12 +165,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The subtask status code. Enumerated values:</para>
+            /// <para>The operation subtask status code. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: not started.</description></item>
-            /// <item><description>1: running.</description></item>
-            /// <item><description>2: successful.</description></item>
-            /// <item><description>3: times out.</description></item>
+            /// <item><description>1: checking.</description></item>
+            /// <item><description>2: succeeded.</description></item>
+            /// <item><description>3: timed out.</description></item>
             /// <item><description>4: failed.</description></item>
             /// </list>
             /// 
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? StatusCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the operation subtask.</para>
+            /// <para>The operation subtask ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v34578b8-e567-47ec-2345-3e5b077ca***</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE500770-42D3-442E-9DDD-156E0F9F3***</para>

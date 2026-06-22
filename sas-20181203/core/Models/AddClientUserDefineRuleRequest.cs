@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Rule 1</para>
+        /// <para>规则1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -180,6 +180,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RegistryKey { get; set; }
 
+        /// <summary>
+        /// <para>Whether machines are automatically added to the rule. Default value: add. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>add</b>: Added by default  </description></item>
+        /// <item><description><b>del</b>: Not added by default</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>add</para>
+        /// </summary>
         [NameInMap("TargetDefault")]
         [Validation(Required=false)]
         public string TargetDefault { get; set; }

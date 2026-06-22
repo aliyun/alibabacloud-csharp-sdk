@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The remarks of the proxy cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

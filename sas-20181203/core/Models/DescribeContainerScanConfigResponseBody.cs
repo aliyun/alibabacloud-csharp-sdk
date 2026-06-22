@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerScanConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeContainerScanConfigResponseBodyData Data { get; set; }
         public class DescribeContainerScanConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of container applications in the cluster.</para>
+            /// <para>The total number of applications in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AllCount { get; set; }
 
             /// <summary>
-            /// <para>The names of the container applications.</para>
+            /// <para>The container application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[\&quot;alicloud-monitor-controller\&quot;]</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AppNames { get; set; }
 
             /// <summary>
-            /// <para>The number of selected container applications.</para>
+            /// <para>The number of selected applications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hhht-cluster-02</para>

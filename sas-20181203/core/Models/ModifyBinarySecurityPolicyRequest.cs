@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyBinarySecurityPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster information.</para>
+        /// <para>The cluster information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Clusters { get; set; }
 
         /// <summary>
-        /// <para>Policy name.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-policy-04-11</para>
@@ -31,22 +31,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Policy content. JSON format, Key values:</para>
+        /// <para>The policy content in JSON format. Valid keys:</para>
         /// <list type="bullet">
-        /// <item><description><b>policyMode</b>: Type of policy, default is requireAttestor.</description></item>
-        /// <item><description><b>requiredAttestors</b>: Required attestors.</description></item>
+        /// <item><description><b>policyMode</b>: The policy type. Default value: requireAttestor.</description></item>
+        /// <item><description><b>requiredAttestors</b>: The required attestors.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;PolicyMode\&quot;:\&quot;requireAttestor\&quot;,\&quot;RequiredAttestors\&quot;:[\&quot;test-xcs-04-11-hhht\&quot;]}</para>
+        /// <para>{\&quot;PolicyMode\&quot;:\&quot;requireAttestor\&quot;,\&quot;RequiredAttestors\&quot;:[\&quot;test-xcs-04-11-****\&quot;]}</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>Remark.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Remark</para>
@@ -63,17 +63,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.2.3.4</para>
+        /// <para>115.213.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>Set to enable or disable the policy. Values:</para>
+        /// <para>Settings to enable or disable the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enabled</b>: Enable the protection policy.</description></item>
-        /// <item><description><b>disabled</b>: Disable the protection policy.</description></item>
+        /// <item><description><b>enabled</b>: Enables the mitigation policies.</description></item>
+        /// <item><description><b>disabled</b>: Disables the mitigation policies.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

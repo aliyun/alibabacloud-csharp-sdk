@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeLogMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the configurations of the log analysis feature.</para>
+        /// <para>The list of log analysis configurations in Security Center.</para>
         /// </summary>
         [NameInMap("LogMetaList")]
         [Validation(Required=false)]
         public List<DescribeLogMetaResponseBodyLogMetaList> LogMetaList { get; set; }
         public class DescribeLogMetaResponseBodyLogMetaList : TeaModel {
             /// <summary>
-            /// <para>The category of logs. Valid values:</para>
+            /// <para>The log category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>host</b></description></item>
-            /// <item><description><b>security</b></description></item>
+            /// <item><description><b>host</b>: Host logs.</description></item>
+            /// <item><description><b>security</b>: Security logs.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The time period after which logs in hot storage are moved to cold storage. Unit: days.</para>
+            /// <para>The number of days before hot storage data is converted to cold storage. Unit: days.</para>
             /// <remarks>
-            /// <para> If the value is -1, logs that are stored in hot storage are not moved to cold storage.</para>
+            /// <para>A value of <b>-1</b> indicates that no conversion is performed.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LogDesc { get; set; }
 
             /// <summary>
-            /// <para>The name of the dedicated Logstore in which logs are stored.</para>
+            /// <para>The name of the dedicated Logstore where logs are stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aegis-log-login</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LogStore { get; set; }
 
             /// <summary>
-            /// <para>The name of the project.</para>
+            /// <para>The Project name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aegis-log</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The status of the log analysis feature. Valid values:</para>
+            /// <para>The current status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>disabled</b></description></item>
-            /// <item><description><b>enabled</b></description></item>
+            /// <item><description><b>disabled</b>: Disabled.</description></item>
+            /// <item><description><b>enabled</b>: Enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The topic of logs that are delivered.</para>
+            /// <para>The topic of the delivered logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aegis-log-login</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Topic { get; set; }
 
             /// <summary>
-            /// <para>The number of days during which logs can be retained.</para>
+            /// <para>The log retention period, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Ttl { get; set; }
 
             /// <summary>
-            /// <para>The name of the dedicated Logstore in which user logs are stored.</para>
+            /// <para>The name of the dedicated Logstore where user logs are stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aegis-log-network</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UserLogStore { get; set; }
 
             /// <summary>
-            /// <para>The name of the dedicated project in which logs are stored.</para>
+            /// <para>The name of the dedicated Project where logs are stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sasnew-log-XXXX-cn-hangzhou</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UserProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region to which the logs belong.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D0D6E6E4-CB8C-4897-B852-46AEFDA04B21</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of configuration entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

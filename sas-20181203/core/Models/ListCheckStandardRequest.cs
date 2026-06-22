@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,11 +56,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The cloud service providers. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALIYUN</b>: Alibaba Cloud.</description></item>
-        /// <item><description><b>TENCENT</b>: Tencent Cloud.</description></item>
-        /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud.</description></item>
-        /// <item><description><b>MICROSOFT</b>: Microsoft Azure.</description></item>
-        /// <item><description><b>AWS</b>: Amazon Web Services (AWS).</description></item>
+        /// <item><description><para><b>ALIYUN</b>: Alibaba Cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>TENCENT</b>: Tencent Cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>HUAWEICLOUD</b>: Huawei Cloud.</para>
+        /// </description></item>
+        /// <item><description><para><b>MICROSOFT</b>: Microsoft Azure.</para>
+        /// </description></item>
+        /// <item><description><para><b>AWS</b>: Amazon Web Services (AWS).</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("Vendors")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAvailableHoneypotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The number of images that are used for the honeypot.</para>
+        /// <para>The number of honeypot images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>An array consisting of the information about the images that are used for the honeypot.</para>
+        /// <para>The list of honeypot image information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAvailableHoneypotResponseBodyData> Data { get; set; }
         public class ListAvailableHoneypotResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The display name of the image.</para>
+            /// <para>The display name of the honeypot image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RuoYi</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotImageDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image.</para>
+            /// <para>The ID of the honeypot image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha256:007095d6de9c7a343e9fc1f74a7efc9c5de9d5454789d2fa505a1b3fc62****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the image that is used for the honeypot.</para>
+            /// <para>The name of the honeypot image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ruoyi</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotImageName { get; set; }
 
             /// <summary>
-            /// <para>The type of the image.</para>
+            /// <para>The type of the honeypot image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Web</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotImageType { get; set; }
 
             /// <summary>
-            /// <para>The version of the image.</para>
+            /// <para>The image version of the honeypot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.2</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotImageVersion { get; set; }
 
             /// <summary>
-            /// <para>The port that is supported by the honeypot. The value is in the JSON format. Valid values:</para>
+            /// <para>The ports supported by the honeypot. The value is in JSON format and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>log_type</b>: the log type</description></item>
-            /// <item><description><b>proto</b>: the supported protocol</description></item>
-            /// <item><description><b>description</b>: the description</description></item>
-            /// <item><description><b>ports</b>: the supported ports</description></item>
-            /// <item><description><b>port_str</b>: the supported port number of the string type</description></item>
-            /// <item><description><b>type</b>: the type</description></item>
+            /// <item><description><b>log_type</b>: the log type.</description></item>
+            /// <item><description><b>proto</b>: the supported protocol.</description></item>
+            /// <item><description><b>description</b>: the description.</description></item>
+            /// <item><description><b>ports</b>: the set of supported ports.</description></item>
+            /// <item><description><b>port_str</b>: the supported ports as a string.</description></item>
+            /// <item><description><b>type</b>: the type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Multiports { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is supported by the honeypot.</para>
+            /// <para>The protocol supported by the honeypot.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServicePort { get; set; }
 
             /// <summary>
-            /// <para>The configuration template of the honeypot.</para>
+            /// <para>The honeypot configuration parameter template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The detailed information of the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C24D883-984D-52FD-BB66-5F89F86E4837</para>
@@ -167,10 +167,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

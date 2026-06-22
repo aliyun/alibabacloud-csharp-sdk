@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the server group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the default group</description></item>
-        /// <item><description><b>1</b>: other groups</description></item>
+        /// <item><description><b>0</b>: default group</description></item>
+        /// <item><description><b>1</b>: other group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? GroupFlag { get; set; }
 
         /// <summary>
-        /// <para>The ID of the server group.</para>
+        /// <para>The ID of the asset group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>958****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The sequence number.</para>
+        /// <para>The sort order number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of child groups.</para>
+        /// <para>The collection of child groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<string> Groups { get; set; }
 
         /// <summary>
-        /// <para>The number of servers in the group.</para>
+        /// <para>The number of servers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MachineNum { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9FBC6E47-7508-58C9-9E76-528E118C****</para>

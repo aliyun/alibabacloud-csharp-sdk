@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the information about domain names.</para>
+        /// <para>The list of domain name asset information.</para>
         /// </summary>
         [NameInMap("DomainListResponseList")]
         [Validation(Required=false)]
         public List<DescribeDomainListResponseBodyDomainListResponseList> DomainListResponseList { get; set; }
         public class DescribeDomainListResponseBodyDomainListResponseList : TeaModel {
             /// <summary>
-            /// <para>The name of the domain or website.</para>
+            /// <para>The domain name or website name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of the domain name.</para>
+            /// <para>The IP address information associated with the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.2.XX.XX,1.0.XX.XX</para>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeDomainListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeDomainListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of domain names displayed on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page. Default value: <b>10</b>.</para>
+            /// <para>The number of domain names displayed on each page in a paged query. Default value: <b>10</b>, which indicates that 10 domain names are displayed on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of domain names returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>

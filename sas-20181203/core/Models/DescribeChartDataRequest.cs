@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeChartDataRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the chart.</para>
+        /// <para>The chart ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID. This parameter is required if the report version is 1.0.0.</para>
+        /// <para>Call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to obtain this parameter. This parameter is required if the report version is 1.0.0.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CharId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the chart.</para>
+        /// <para>The chart ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to query the ID. This parameter is required if the report version is 2.0.0.</para>
+        /// <para>Call the <a href="~~DescribeChartList~~">DescribeChartList</a> operation to obtain this parameter. This parameter is required if the report version is 2.0.0.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ChartId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security report.</para>
+        /// <para>The report ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to query the ID.</para>
+        /// <para>Call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ReportId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end timestamp for statistics. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683862286000</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? TimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start timestamp for statistics. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683603086000</para>

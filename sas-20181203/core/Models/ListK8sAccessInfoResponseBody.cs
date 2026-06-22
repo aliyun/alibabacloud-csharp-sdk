@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListK8sAccessInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the Kubernetes clusters.</para>
+        /// <para>The list of K8s access information.</para>
         /// </summary>
         [NameInMap("K8sAccessInfos")]
         [Validation(Required=false)]
         public List<ListK8sAccessInfoResponseBodyK8sAccessInfos> K8sAccessInfos { get; set; }
         public class ListK8sAccessInfoResponseBodyK8sAccessInfos : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud UID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1960721413485****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service Logstore that is used to store the audit logs.</para>
+            /// <para>The Simple Log Service Logstore for audit logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>audit-cf6baf6afa106eca665296fdf68b****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuditLogStore { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project that is used to store the audit logs.</para>
+            /// <para>The Simple Log Service project for audit logs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-custom-your-project-sd89eh****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuditProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the server is deployed.</para>
+            /// <para>The region ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuditRegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c0da5e4cb82a848c4a57c4dc9f49a****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>CPU architecture, divided into ARM and x86 architectures.</para>
+            /// <para>The CPU architecture. Valid values: ARM architecture and x86 architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arm</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server group.</para>
+            /// <para>The server group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11088522</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server group.</para>
+            /// <para>The server group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the access information.</para>
+            /// <para>The unique ID of the access information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>67070</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The installation key of the Kubernetes cluster.</para>
+            /// <para>The K8s installation key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstallKey { get; set; }
 
             /// <summary>
-            /// <para>The service provider.</para>
+            /// <para>The vendor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0B48AB3C-84FC-424D-A01D-B9270EF46038</para>

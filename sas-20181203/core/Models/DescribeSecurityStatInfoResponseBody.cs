@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSecurityStatInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed statistics of attacks.</para>
+        /// <para>The statistics of attack events.</para>
         /// </summary>
         [NameInMap("AttackEvent")]
         [Validation(Required=false)]
         public DescribeSecurityStatInfoResponseBodyAttackEvent AttackEvent { get; set; }
         public class DescribeSecurityStatInfoResponseBodyAttackEvent : TeaModel {
             /// <summary>
-            /// <para>The points in time when the number of attacks is collected in the trend chart.</para>
+            /// <para>The collection of statistical time points in the attack count trend chart.</para>
             /// </summary>
             [NameInMap("DateArray")]
             [Validation(Required=false)]
             public List<string> DateArray { get; set; }
 
             /// <summary>
-            /// <para>The total number of attacks on the current day.</para>
+            /// <para>The number of attacks on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1096</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of attacks at all points in time.</para>
+            /// <para>The collection of attack counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("ValueArray")]
             [Validation(Required=false)]
@@ -43,21 +43,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The detailed statistics of baseline risk items.</para>
+        /// <para>The statistics of baseline issues.</para>
         /// </summary>
         [NameInMap("HealthCheck")]
         [Validation(Required=false)]
         public DescribeSecurityStatInfoResponseBodyHealthCheck HealthCheck { get; set; }
         public class DescribeSecurityStatInfoResponseBodyHealthCheck : TeaModel {
             /// <summary>
-            /// <para>The points in time when data of baseline risk items is collected in the trend chart.</para>
+            /// <para>The collection of statistical time points in the baseline issue trend chart.</para>
             /// </summary>
             [NameInMap("DateArray")]
             [Validation(Required=false)]
             public List<string> DateArray { get; set; }
 
             /// <summary>
-            /// <para>The number of baseline risk items that have the high-risk level on the current day.</para>
+            /// <para>The number of high-risk baseline issues on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,21 +67,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HighCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of baseline risk items that have the high-risk level at all points in time.</para>
+            /// <para>The collection of high-risk baseline counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("HighList")]
             [Validation(Required=false)]
             public List<string> HighList { get; set; }
 
             /// <summary>
-            /// <para>The risk levels of baseline risk items.</para>
+            /// <para>The collection of baseline risk levels included in the statistics.</para>
             /// </summary>
             [NameInMap("LevelsOn")]
             [Validation(Required=false)]
             public List<string> LevelsOn { get; set; }
 
             /// <summary>
-            /// <para>The number of baseline risk items that have the low-risk level on the current day.</para>
+            /// <para>The number of low-risk baseline issues on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? LowCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of baseline risk items that have the low-risk level at all points in time.</para>
+            /// <para>The collection of low-risk baseline issue counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("LowList")]
             [Validation(Required=false)]
             public List<string> LowList { get; set; }
 
             /// <summary>
-            /// <para>The number of baseline risk items that have the medium-risk level on the current day.</para>
+            /// <para>The number of medium-risk baseline issues on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -108,21 +108,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MediumCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of baseline risk items that have the medium-risk level at all points in time.</para>
+            /// <para>The collection of medium-risk baseline issue counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("MediumList")]
             [Validation(Required=false)]
             public List<string> MediumList { get; set; }
 
             /// <summary>
-            /// <para>The time periods during which data of baseline risk items is collected.</para>
+            /// <para>The collection of statistical time periods for baselines.</para>
             /// </summary>
             [NameInMap("TimeArray")]
             [Validation(Required=false)]
             public List<string> TimeArray { get; set; }
 
             /// <summary>
-            /// <para>The total number of baseline risk items on the current day.</para>
+            /// <para>The total number of baseline issues on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of baseline risk items at all points in time.</para>
+            /// <para>The collection of total baseline counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("ValueArray")]
             [Validation(Required=false)]
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A3E61730-85E2-4789-8017-B9B1B70F0568</para>
@@ -151,28 +151,28 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The detailed statistics of unhandled alerts.</para>
+        /// <para>The statistics of pending security alerts.</para>
         /// </summary>
         [NameInMap("SecurityEvent")]
         [Validation(Required=false)]
         public DescribeSecurityStatInfoResponseBodySecurityEvent SecurityEvent { get; set; }
         public class DescribeSecurityStatInfoResponseBodySecurityEvent : TeaModel {
             /// <summary>
-            /// <para>The points in time when data of unhandled alerts is collected in the trend chart.</para>
+            /// <para>The collection of statistical time points in the pending alert trend chart.</para>
             /// </summary>
             [NameInMap("DateArray")]
             [Validation(Required=false)]
             public List<string> DateArray { get; set; }
 
             /// <summary>
-            /// <para>The risk levels of unhandled alerts.</para>
+            /// <para>The collection of alert severity levels included in the statistics for pending alerts.</para>
             /// </summary>
             [NameInMap("LevelsOn")]
             [Validation(Required=false)]
             public List<string> LevelsOn { get; set; }
 
             /// <summary>
-            /// <para>The number of <b>remind</b> alerts on the current day.</para>
+            /// <para>The number of alerts with the <b>Reminder</b> severity level detected on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RemindCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of remind alerts at all points in time.</para>
+            /// <para>The collection of Reminder-level alert counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("RemindList")]
             [Validation(Required=false)]
             public List<string> RemindList { get; set; }
 
             /// <summary>
-            /// <para>The number of <b>serious</b> alerts on the current day.</para>
+            /// <para>The number of alerts with the <b>Urgent</b> severity level on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>404</para>
@@ -199,14 +199,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SeriousCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of serious alerts at all points in time.</para>
+            /// <para>The collection of Urgent-level alert counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("SeriousList")]
             [Validation(Required=false)]
             public List<string> SeriousList { get; set; }
 
             /// <summary>
-            /// <para>The number of <b>suspicious</b> alerts on the current day.</para>
+            /// <para>The number of alerts with the <b>Suspicious</b> severity level on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>148</para>
@@ -216,21 +216,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SuspiciousCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of suspicious alerts at all points in time.</para>
+            /// <para>The collection of Suspicious-level alert counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("SuspiciousList")]
             [Validation(Required=false)]
             public List<string> SuspiciousList { get; set; }
 
             /// <summary>
-            /// <para>The time periods during which data of the same alert is collected.</para>
+            /// <para>The collection of statistical time periods for alerts.</para>
             /// </summary>
             [NameInMap("TimeArray")]
             [Validation(Required=false)]
             public List<string> TimeArray { get; set; }
 
             /// <summary>
-            /// <para>The total number of unhandled alerts on the current day.</para>
+            /// <para>The total number of pending alerts on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>552</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of unhandled alerts at all points in time.</para>
+            /// <para>The collection of pending alert counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("ValueArray")]
             [Validation(Required=false)]
@@ -249,10 +249,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the query is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -263,14 +263,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The detailed statistics of unfixed vulnerabilities.</para>
+        /// <para>The statistics information of unfixed vulnerabilities.</para>
         /// </summary>
         [NameInMap("Vulnerability")]
         [Validation(Required=false)]
         public DescribeSecurityStatInfoResponseBodyVulnerability Vulnerability { get; set; }
         public class DescribeSecurityStatInfoResponseBodyVulnerability : TeaModel {
             /// <summary>
-            /// <para>The number of <b>high-risk</b> unfixed vulnerabilities on the current day.</para>
+            /// <para>The number of unfixed vulnerabilities with <b>high</b> priority on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>109</para>
@@ -280,21 +280,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AsapCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of high-risk unfixed vulnerabilities at all points in time.</para>
+            /// <para>The collection of high-priority unfixed vulnerability counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("AsapList")]
             [Validation(Required=false)]
             public List<string> AsapList { get; set; }
 
             /// <summary>
-            /// <para>The points in time when data of unfixed vulnerabilities is collected in the trend chart.</para>
+            /// <para>The collection of statistical time points in the unfixed vulnerability trend chart.</para>
             /// </summary>
             [NameInMap("DateArray")]
             [Validation(Required=false)]
             public List<string> DateArray { get; set; }
 
             /// <summary>
-            /// <para>The number of <b>medium-risk</b> unfixed vulnerabilities on the current day.</para>
+            /// <para>The number of unfixed vulnerabilities with <b>medium</b> priority on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>275</para>
@@ -304,21 +304,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? LaterCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of medium-risk unfixed vulnerabilities at all points in time.</para>
+            /// <para>The collection of medium-priority unfixed vulnerability counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("LaterList")]
             [Validation(Required=false)]
             public List<string> LaterList { get; set; }
 
             /// <summary>
-            /// <para>The risk levels of unfixed vulnerabilities.</para>
+            /// <para>The collection of vulnerability priority levels included in the statistics for unfixed vulnerabilities.</para>
             /// </summary>
             [NameInMap("LevelsOn")]
             [Validation(Required=false)]
             public List<string> LevelsOn { get; set; }
 
             /// <summary>
-            /// <para>The number of <b>low-risk</b> unfixed vulnerabilities on the current day.</para>
+            /// <para>The number of unfixed vulnerabilities with <b>low</b> priority on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -328,21 +328,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NntfCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of low-risk unfixed vulnerabilities at all points in time.</para>
+            /// <para>The collection of low-priority unfixed vulnerability counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("NntfList")]
             [Validation(Required=false)]
             public List<string> NntfList { get; set; }
 
             /// <summary>
-            /// <para>The time periods during which data of unfixed vulnerabilities is collected.</para>
+            /// <para>The collection of statistical time periods for unfixed vulnerabilities.</para>
             /// </summary>
             [NameInMap("TimeArray")]
             [Validation(Required=false)]
             public List<string> TimeArray { get; set; }
 
             /// <summary>
-            /// <para>The total number of unfixed vulnerabilities on the current day.</para>
+            /// <para>The number of unfixed vulnerabilities on the current day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>384</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The numbers of unfixed vulnerabilities at all points in time.</para>
+            /// <para>The collection of unfixed vulnerability counts at each statistical time point.</para>
             /// </summary>
             [NameInMap("ValueArray")]
             [Validation(Required=false)]

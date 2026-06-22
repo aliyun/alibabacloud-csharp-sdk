@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<DescribeIdcAssetCriteriaResponseBodyCriteriaList> CriteriaList { get; set; }
         public class DescribeIdcAssetCriteriaResponseBodyCriteriaList : TeaModel {
             /// <summary>
-            /// <para>The name of the search condition.</para>
+            /// <para>The name of the corresponding search condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scannedIp</para>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the search condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>input</b>: The search condition needs to be specified.</description></item>
-            /// <item><description><b>select</b>: The search condition is an option that can be selected from the drop-down list.</description></item>
+            /// <item><description><b>input</b>: You must manually enter the search field.</description></item>
+            /// <item><description><b>select</b>: You must select a child class of the search condition from the drop-down list.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The attribute values of the assets that match the keyword.</para>
+            /// <para>The specific asset property values that correspond to the entered fuzzy match value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.*</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11C96623-E106-59C9-866D-A6C82911****</para>

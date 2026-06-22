@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteAntiBruteForceRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the defense rules against brute-force attacks to delete.</para>
+        /// <para>The IDs of the brute-force attacks defense rules that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ids")]

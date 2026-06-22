@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClusterScannerYamlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Base64 encoded CA certificate.</para>
+        /// <para>The CA certificate in Base64 encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CaCertBase64 { get; set; }
 
         /// <summary>
-        /// <para>Cluster environment information.</para>
+        /// <para>The cluster environment context.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterEnvInfo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster that you want to scan.</para>
+        /// <para>The ID of the container cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c7c190a82d9a048be9038d352840f****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The container image information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-registry.cn-shanghai.cr.aliyuncs.com/default/scanner:v1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A20733-10A0-4AF6-BE6B-E3322413BB68</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Base64 encoded webhook certificate.</para>
+        /// <para>The webhook certificate in Base64 encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TlsCertBase64 { get; set; }
 
         /// <summary>
-        /// <para>Base64 encoded webhook private key.</para>
+        /// <para>The webhook private key in Base64 encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TlsKeyBase64 { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the incremental scan switch is enabled. Values:</para>
+        /// <para>Indicates whether incremental scanning is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Not enabled</description></item>
-        /// <item><description><b>1</b>: Enabled</description></item>
+        /// <item><description><b>0</b>: Disabled.</description></item>
+        /// <item><description><b>1</b>: Enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

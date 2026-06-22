@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to turn on the switch for newly added servers. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>add</b>: yes</description></item>
-        /// <item><description><b>del</b>: no</description></item>
+        /// <item><description><para><b>add</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>del</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the switch.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</para>
+        /// <para>You can call the <a href="~~ListClientUserDefineRules~~">ListClientUserDefineRules</a> or <a href="~~ListSystemClientRules~~">ListSystemClientRules</a> operation to obtain the type from the response parameter SwitchId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetSasContainerWebDefenseRuleCriteriaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The search conditions.</para>
+        /// <para>The list of query criteria.</para>
         /// </summary>
         [NameInMap("CriteriaList")]
         [Validation(Required=false)]
         public List<GetSasContainerWebDefenseRuleCriteriaResponseBodyCriteriaList> CriteriaList { get; set; }
         public class GetSasContainerWebDefenseRuleCriteriaResponseBodyCriteriaList : TeaModel {
             /// <summary>
-            /// <para>The name of the search condition.</para>
+            /// <para>The name of the query criterion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the search condition. Valid values:</para>
+            /// <para>The type of the query criterion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>input</b>: You must manually enter the search condition.</description></item>
-            /// <item><description><b>select</b>: You must select a search condition from the <b>Values</b> drop-down list.</description></item>
+            /// <item><description><b>input</b>: Input type. You must manually enter the query content when using this query criterion.</description></item>
+            /// <item><description><b>select</b>: Selection type. You must select a value from the options list (the <b>Values</b> field) when using this query criterion.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The values of the search condition. This parameter is returned only if the value of <b>Type</b> is <b>select</b>.</para>
+            /// <para>The available options when <b>Type</b> (the type of the query criterion) is set to <b>select</b> (selection type).</para>
             /// <remarks>
-            /// <para> If the value of <b>Type</b> is <b>input</b>, the value of this parameter is empty.</para>
+            /// <para>When <b>Type</b> (the type of the query criterion) is set to <b>input</b> (input type), this parameter returns an empty value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

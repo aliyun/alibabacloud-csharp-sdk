@@ -62,8 +62,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The unit of the scan interval. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>day</b></description></item>
-        /// <item><description><b>hour</b></description></item>
+        /// <item><description><para><b>day</b></para>
+        /// </description></item>
+        /// <item><description><para><b>hour</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,8 +78,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The usage status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: enabled.</description></item>
-        /// <item><description><b>1</b>: disabled.</description></item>
+        /// <item><description><para><b>0</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

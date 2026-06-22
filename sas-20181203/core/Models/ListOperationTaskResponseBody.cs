@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the check item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>checkShowName</para>
+            /// <para>开启恶意主机行为防御功能</para>
             /// </summary>
             [NameInMap("CheckShowName")]
             [Validation(Required=false)]
@@ -69,8 +69,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Whether the instance is released:</para>
             /// <list type="bullet">
-            /// <item><description>true: Released</description></item>
-            /// <item><description>false: Not released</description></item>
+            /// <item><description><para>true: Released</para>
+            /// </description></item>
+            /// <item><description><para>false: Not released</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,9 +115,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of repair supported by the check item:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>：Supports repair and rollback operations</description></item>
-            /// <item><description><b>2</b>：Supports repair but not rollback</description></item>
-            /// <item><description><b>3</b>：Redirect to a third-party platform for operation</description></item>
+            /// <item><description><para><b>1</b>:Supports repair and rollback operations</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>:Supports repair but not rollback</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>:Redirect to a third-party platform for operation</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,9 +133,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level of the detected alert. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b>: High risk.</description></item>
-            /// <item><description><b>medium</b>: Medium risk. </description></item>
-            /// <item><description><b>low</b>: Low risk.</description></item>
+            /// <item><description><para><b>high</b>: High risk.</para>
+            /// </description></item>
+            /// <item><description><para><b>medium</b>: Medium risk.</para>
+            /// </description></item>
+            /// <item><description><para><b>low</b>: Low risk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,26 +161,46 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the task. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>：Initialization</description></item>
-            /// <item><description><b>FAIL</b>：Processing failed</description></item>
-            /// <item><description><b>THROTTLING</b>：Repairing concurrently</description></item>
-            /// <item><description><b>IN_BACKUP</b>：Backing up</description></item>
-            /// <item><description><b>BACKED_UP</b>：Backed up</description></item>
-            /// <item><description><b>BACKUP_FAIL</b>：Backup failed</description></item>
-            /// <item><description><b>REPAIRING</b>：Repairing</description></item>
-            /// <item><description><b>REPAIR_SUCCESS</b>：Repair succeeded</description></item>
-            /// <item><description><b>REPAIR_FAIL</b>：Repair failed</description></item>
-            /// <item><description><b>REPAIR_SUCCESS_VERIFYING</b>：Verifying repair success</description></item>
-            /// <item><description><b>REPAIR_SUCCESS_UNVERIFIED</b>：Verification of repair success failed</description></item>
-            /// <item><description><b>REPAIR_SUCCESS_VERIFIED</b>：Verification of repair success succeeded</description></item>
-            /// <item><description><b>REPAIR_RE_EXECUTE</b>：Re-executing repair</description></item>
-            /// <item><description><b>ROLL_BACKING</b>：Rolling back</description></item>
-            /// <item><description><b>ROLL_BACKED</b>：Rolled back</description></item>
-            /// <item><description><b>ROLL_BACK_FAIL</b>：Rollback failed</description></item>
-            /// <item><description><b>ROLL_BACK_INIT</b>：Initiating rollback</description></item>
-            /// <item><description><b>ROLL_BACK_VERIFYING</b>：Verifying rollback success</description></item>
-            /// <item><description><b>ROLL_BACK_UNVERIFIED</b>：Verification of rollback success failed</description></item>
-            /// <item><description><b>ROLL_BACK_VERIFIED</b>：Verification of rollback success succeeded</description></item>
+            /// <item><description><para><b>INIT</b>:Initialization</para>
+            /// </description></item>
+            /// <item><description><para><b>FAIL</b>:Processing failed</para>
+            /// </description></item>
+            /// <item><description><para><b>THROTTLING</b>:Repairing concurrently</para>
+            /// </description></item>
+            /// <item><description><para><b>IN_BACKUP</b>:Backing up</para>
+            /// </description></item>
+            /// <item><description><para><b>BACKED_UP</b>:Backed up</para>
+            /// </description></item>
+            /// <item><description><para><b>BACKUP_FAIL</b>:Backup failed</para>
+            /// </description></item>
+            /// <item><description><para><b>REPAIRING</b>:Repairing</para>
+            /// </description></item>
+            /// <item><description><para><b>REPAIR_SUCCESS</b>:Repair succeeded</para>
+            /// </description></item>
+            /// <item><description><para><b>REPAIR_FAIL</b>:Repair failed</para>
+            /// </description></item>
+            /// <item><description><para><b>REPAIR_SUCCESS_VERIFYING</b>:Verifying repair success</para>
+            /// </description></item>
+            /// <item><description><para><b>REPAIR_SUCCESS_UNVERIFIED</b>:Verification of repair success failed</para>
+            /// </description></item>
+            /// <item><description><para><b>REPAIR_SUCCESS_VERIFIED</b>:Verification of repair success succeeded</para>
+            /// </description></item>
+            /// <item><description><para><b>REPAIR_RE_EXECUTE</b>:Re-executing repair</para>
+            /// </description></item>
+            /// <item><description><para><b>ROLL_BACKING</b>:Rolling back</para>
+            /// </description></item>
+            /// <item><description><para><b>ROLL_BACKED</b>:Rolled back</para>
+            /// </description></item>
+            /// <item><description><para><b>ROLL_BACK_FAIL</b>:Rollback failed</para>
+            /// </description></item>
+            /// <item><description><para><b>ROLL_BACK_INIT</b>:Initiating rollback</para>
+            /// </description></item>
+            /// <item><description><para><b>ROLL_BACK_VERIFYING</b>:Verifying rollback success</para>
+            /// </description></item>
+            /// <item><description><para><b>ROLL_BACK_UNVERIFIED</b>:Verification of rollback success failed</para>
+            /// </description></item>
+            /// <item><description><para><b>ROLL_BACK_VERIFIED</b>:Verification of rollback success succeeded</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The display status of the repair task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Verified After Repair Success</para>
+            /// <para>回滚已验证</para>
             /// </summary>
             [NameInMap("StatusShowName")]
             [Validation(Required=false)]
@@ -195,8 +223,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Whether rollback is supported:</para>
             /// <list type="bullet">
-            /// <item><description>true: Supported</description></item>
-            /// <item><description>false: Not supported</description></item>
+            /// <item><description><para>true: Supported</para>
+            /// </description></item>
+            /// <item><description><para>false: Not supported</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -219,8 +249,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the operation task being queried:</para>
             /// <list type="bullet">
-            /// <item><description>REPAIR: Repair</description></item>
-            /// <item><description>ROLLBACK: Rollback</description></item>
+            /// <item><description><para>REPAIR: Repair</para>
+            /// </description></item>
+            /// <item><description><para>ROLLBACK: Rollback</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

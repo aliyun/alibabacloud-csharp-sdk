@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeGroupedContainerInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The search conditions for assets. Specify the value in the JSON format. Separate multiple search conditions with commas (,). Example: <c>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</c>.</para>
+        /// <para>The conditions for searching assets. This parameter is in JSON format. Separate multiple conditions with commas (,). Example: <c>[{&quot;name&quot;:&quot;riskStatus&quot;,&quot;value&quot;:&quot;YES&quot;},{&quot;name&quot;:&quot;riskLevel&quot;,&quot;value&quot;:&quot;2&quot;}]</c>.</para>
         /// <remarks>
-        /// <para> Supported search conditions include the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call <a href="~~DescribeCriteria~~">DescribeCriteria</a> to query the supported search conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The keyword that you want to use to query containers. This parameter depends on the value of the GroupField parameter.</para>
+        /// <para>The search condition for the specified group type. Set the search condition based on the type specified by GroupField:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>GroupField</b> parameter is set to <b>pod</b>, set this parameter to the name of the pod that you want to query.</description></item>
-        /// <item><description>If the <b>GroupField</b> parameter is set to <b>appName</b>, set this parameter to the name of the application that you want to query.</description></item>
-        /// <item><description>If the <b>GroupField</b> parameter is set to <b>namespace</b>, set this parameter to the namespace that you want to query.</description></item>
-        /// <item><description>If the <b>GroupField</b> parameter is set to <b>clusterId</b>, set this parameter to the ID of the cluster that you want to query.</description></item>
-        /// <item><description>If the <b>GroupField</b> parameter is set to <b>image</b>, set this parameter to the name of the image that you want to query.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> Fuzzy match is supported.</para>
+        /// <item><description>If <b>GroupField</b> is set to <b>pod</b>: specify the pod name to query.</description></item>
+        /// <item><description>If <b>GroupField</b> is set to <b>appName</b>: specify the application name to query.</description></item>
+        /// <item><description>If <b>GroupField</b> is set to <b>namespace</b>: specify the namespace to query.</description></item>
+        /// <item><description>If <b>GroupField</b> is set to <b>clusterId</b>: specify the cluster ID to query.</description></item>
+        /// <item><description>If <b>GroupField</b> is set to <b>image</b>: specify the image name to query.<remarks>
+        /// <para>All the preceding search conditions support fuzzy match.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cas-adad-qeqwe</para>
@@ -53,13 +53,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>The group type that you want to use to query containers. Valid values:</para>
+        /// <para>The group type to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pod</b></description></item>
-        /// <item><description><b>appName</b></description></item>
-        /// <item><description><b>namespace</b></description></item>
-        /// <item><description><b>clusterId</b></description></item>
-        /// <item><description><b>image</b></description></item>
+        /// <item><description><b>pod</b>: pod</description></item>
+        /// <item><description><b>appName</b>: application name</description></item>
+        /// <item><description><b>namespace</b>: namespace</description></item>
+        /// <item><description><b>clusterId</b>: cluster ID</description></item>
+        /// <item><description><b>image</b>: image.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupField { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship that you want to use to evaluate multiple search conditions. Valid values:</para>
+        /// <para>The logical relationship among multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: Search conditions are evaluated by using a logical <b>OR</b>.</description></item>
-        /// <item><description><b>AND</b>: Search conditions are evaluated by using a logical <b>AND</b>.</description></item>
+        /// <item><description><b>OR</b>: The search conditions are evaluated with a logical OR.</description></item>
+        /// <item><description><b>AND</b>: The search conditions are evaluated with a logical AND.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,9 +85,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of container assets to display on each page when paging is used. Default value: <b>20</b>, which indicates that 20 container assets are displayed on each page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

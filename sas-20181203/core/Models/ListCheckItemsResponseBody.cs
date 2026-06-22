@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The type of the help information for the check item risk. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>text</b>：Text</description></item>
+                /// <item><description><b>text</b>:Text</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -128,11 +128,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The name of the associated policy category:</para>
                 /// <list type="bullet">
-                /// <item><description><b>AISPM</b>：AI Configuration Management (AI-SPM)</description></item>
-                /// <item><description><b>KISPM</b>：Kubernetes Configuration Management (KSPM)</description></item>
-                /// <item><description><b>IDENTITY_PERMISSION</b>：Identity and Permission Management (CIEM)</description></item>
-                /// <item><description><b>RISK</b>：Security Risk</description></item>
-                /// <item><description><b>COMPLIANCE</b>：Compliance Risk</description></item>
+                /// <item><description><para><b>AISPM</b>:AI Configuration Management (AI-SPM)</para>
+                /// </description></item>
+                /// <item><description><para><b>KISPM</b>:Kubernetes Configuration Management (KSPM)</para>
+                /// </description></item>
+                /// <item><description><para><b>IDENTITY_PERMISSION</b>:Identity and Permission Management (CIEM)</para>
+                /// </description></item>
+                /// <item><description><para><b>RISK</b>:Security Risk</para>
+                /// </description></item>
+                /// <item><description><para><b>COMPLIANCE</b>:Compliance Risk</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -167,8 +172,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The source type of the Security Posture check item:</para>
             /// <list type="bullet">
-            /// <item><description><b>CUSTOM</b>: User-defined</description></item>
-            /// <item><description><b>SYSTEM</b>: Predefined by the Security Posture platform</description></item>
+            /// <item><description><para><b>CUSTOM</b>: User-defined</para>
+            /// </description></item>
+            /// <item><description><para><b>SYSTEM</b>: Predefined by the Security Posture platform</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -188,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The type of the check description attribute. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>text</b>：Text</description></item>
+                /// <item><description><b>text</b>:Text</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -243,9 +250,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level of the check item. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>HIGH</b>: High risk</description></item>
-            /// <item><description><b>MEDIUM</b>: Medium risk</description></item>
-            /// <item><description><b>LOW</b>: Low risk</description></item>
+            /// <item><description><para><b>HIGH</b>: High risk</para>
+            /// </description></item>
+            /// <item><description><para><b>MEDIUM</b>: Medium risk</para>
+            /// </description></item>
+            /// <item><description><para><b>LOW</b>: Low risk</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -265,7 +275,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The type of the check item solution information. Values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>text</b>：Text</description></item>
+                /// <item><description><b>text</b>:Text</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -290,8 +300,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the check item. Values:</para>
             /// <list type="bullet">
-            /// <item><description><b>EDIT</b>: In editing</description></item>
-            /// <item><description><b>RELEASE</b>: Released</description></item>
+            /// <item><description><para><b>EDIT</b>: In editing</para>
+            /// </description></item>
+            /// <item><description><para><b>RELEASE</b>: Released</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

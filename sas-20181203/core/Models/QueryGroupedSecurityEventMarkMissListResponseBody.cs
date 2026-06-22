@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The type of the alert event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Unusual logon</para>
+            /// <para>异常登录</para>
             /// </summary>
             [NameInMap("EventTypeOriginal")]
             [Validation(Required=false)]

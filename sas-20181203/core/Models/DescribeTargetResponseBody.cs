@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79CFF74D-E967-5407-8A78-EE03B925FDAA</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the server.</para>
+        /// <para>The machine settings for the vulnerability type.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public List<DescribeTargetResponseBodyTargets> Targets { get; set; }
         public class DescribeTargetResponseBodyTargets : TeaModel {
             /// <summary>
-            /// <para>The flag that is added to the server. This parameter can be empty.</para>
+            /// <para>The flag. This parameter can be empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>del</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Flag { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server or the ID of the server group.</para>
+            /// <para>The target. The value is a machine UUID or a machine group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5c5f0169-3527-40a2-b5ff-0bc1db8f****</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The type of the object. Valid values:</para>
+            /// <para>The target type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>uuid</b>: a server</description></item>
-            /// <item><description><b>groupId</b>: a server group</description></item>
+            /// <item><description><b>uuid</b>: added by individual asset</description></item>
+            /// <item><description><b>groupId</b>: added by server group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of machine configuration entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

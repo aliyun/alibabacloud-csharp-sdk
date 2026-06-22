@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterCnnfStatusDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the protection status of the container firewall.</para>
+        /// <para>The list of container firewall statuses.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListClusterCnnfStatusDetailResponseBodyData> Data { get; set; }
         public class ListClusterCnnfStatusDetailResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c8ca91e0907d94efaba7fb0827eb9****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Installed { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The instance ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp180bogui4fc0z4****</para>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The cause why the plug-in is invalid. Valid values:</para>
+            /// <para>The invalid type of the plug-in. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PLUGIN_OFFLINE</b>: The plug-in is offline.</description></item>
-            /// <item><description><b>PLUGIN_NOT_INSTALLED</b>: The plug-in is not installed.</description></item>
-            /// <item><description><b>PLUGIN_INVALID_VERSION</b>: The version of the plug-in is invalid.</description></item>
+            /// <item><description><b>PLUGIN_OFFLINE</b>: offline</description></item>
+            /// <item><description><b>PLUGIN_NOT_INSTALLED</b>: not installed</description></item>
+            /// <item><description><b>PLUGIN_INVALID_VERSION</b>: invalid version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MachineName { get; set; }
 
             /// <summary>
-            /// <para>The machine type of the instance. The value is fixed as <b>ecs</b>.</para>
+            /// <para>The type of the instance. The value is fixed as <b>ecs</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MachineType { get; set; }
 
             /// <summary>
-            /// <para>The name of the plug-in. The value is fixed as <b>alinet</b>.</para>
+            /// <para>The name of the plug-in type. The value is fixed as <b>alinet</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alinet</para>
@@ -124,8 +124,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The online status of the plug-in. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b>: The plug-in is offline.</description></item>
-            /// <item><description><b>true</b>: The plug-in is online.</description></item>
+            /// <item><description><b>false</b>: offline</description></item>
+            /// <item><description><b>true</b>: online.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the asset.</para>
+            /// <para>The UUID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6690a46c-0edb-4663-a641-3629d1a9****</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The China Chinese Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64329F40-5C94-51D3-A400-37AA7BAC****</para>

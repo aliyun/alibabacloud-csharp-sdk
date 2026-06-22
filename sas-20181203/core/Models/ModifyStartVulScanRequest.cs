@@ -10,19 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyStartVulScanRequest : TeaModel {
         /// <summary>
-        /// <para>The types of vulnerabilities that can be detected. Valid values:</para>
+        /// <para>Settings for the types of vulnerabilities to detect by using the one-click scan feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cve</b>: Linux software vulnerabilities</description></item>
-        /// <item><description><b>sys</b>: Windows system vulnerabilities</description></item>
-        /// <item><description><b>cms</b>: Web-CMS vulnerabilities</description></item>
-        /// <item><description><b>app</b>: application vulnerabilities</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerabilities</description></item>
-        /// <item><description><b>image</b>: container image vulnerabilities</description></item>
-        /// <item><description><b>sca</b>: vulnerabilities that are detected based on software component analysis</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you leave this parameter empty, all types of vulnerabilities can be detected.</para>
+        /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
+        /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
+        /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
+        /// <item><description><b>app</b>: Application vulnerability detected by the web scanner.</description></item>
+        /// <item><description><b>emg</b>: Emergency vulnerability.</description></item>
+        /// <item><description><b>image</b>: Container image vulnerability.</description></item>
+        /// <item><description><b>sca</b>: Application vulnerability detected by software constituency parsing.<remarks>
+        /// <para>If this parameter is left empty, all vulnerability types are detected.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;cve,sys,cms,app,emg&quot;</para>
@@ -32,10 +32,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Types { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers.</para>
+        /// <para>The list of server UUIDs. Separate multiple UUIDs with commas (,).</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;i-sdada-xxxxx&quot;,&quot;i-ifaedada-sfsasdxxx&quot;}</para>
+        /// <para>1587bedb-fdb4-48c4-9330-****</para>
         /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]

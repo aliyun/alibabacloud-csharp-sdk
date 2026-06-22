@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name of the rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Rule\<em>\</em>\<em>\</em></para>
+        /// <para>规则****</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

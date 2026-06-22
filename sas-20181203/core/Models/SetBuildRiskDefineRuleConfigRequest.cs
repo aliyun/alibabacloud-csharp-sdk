@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SetBuildRiskDefineRuleConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration item for scanning image build command risks. Valid values:</para>
+        /// <para>The risk items in the risk scan configuration for image build instructions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>classKey</b>: Set the value to a valid value of the ClassKey parameter in RuleTree.</description></item>
-        /// <item><description><b>ruleList</b>: Set the value to a valid value of the RuleKey parameter in RuleList.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> You can call the <a href="~~GetBuildRiskDefineRuleConfig~~">GetBuildRiskDefineRuleConfig</a> operation to query the valid values.</para>
+        /// <item><description><b>classKey</b>: the ClassKey field value from RuleTree</description></item>
+        /// <item><description><b>ruleList</b>: the RuleKey field values under RuleList<remarks>
+        /// <para>Call the <a href="~~GetBuildRiskDefineRuleConfig~~">GetBuildRiskDefineRuleConfig</a> operation to obtain this parameter.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>[

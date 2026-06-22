@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the images.</para>
+        /// <para>The list of image information.</para>
         /// </summary>
         [NameInMap("ImageInstanceList")]
         [Validation(Required=false)]
         public List<DescribeImageInstancesResponseBodyImageInstanceList> ImageInstanceList { get; set; }
         public class DescribeImageInstancesResponseBodyImageInstanceList : TeaModel {
             /// <summary>
-            /// <para>The number of alerts that are generated for the image.</para>
+            /// <para>The number of security alerts for the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AlarmCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether alerts are generated for the image. Valid values:</para>
+            /// <para>Indicates whether security alerts exist for the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b></description></item>
-            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b>: security alerts exist.</description></item>
+            /// <item><description><b>NO</b>: no security alerts exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the image was deployed. Valid values:</para>
+            /// <para>Indicates whether the image has been deployed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The image was not deployed.</description></item>
-            /// <item><description><b>1</b>: The image was deployed.</description></item>
+            /// <item><description><b>0</b>: not deployed.</description></item>
+            /// <item><description><b>1</b>: deployed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Digest { get; set; }
 
             /// <summary>
-            /// <para>The address of the image.</para>
+            /// <para>The endpoint addresses of the image resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -85,10 +85,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HcCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether baseline risks exist. Valid values:</para>
+            /// <para>The baseline risk status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NO</b></description></item>
-            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b>: no baseline risk exists.</description></item>
+            /// <item><description><b>YES</b>: baseline risk exists.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HcStatus { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the image was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the image was created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1600069948849</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The timestamp generated when the image was updated. Unit: milliseconds.</para>
+            /// <para>The timestamp when the image was updated. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1600069948849</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUpdate { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the image.</para>
+            /// <para>The instance ID of the image asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39010****</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1721363159000</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the image.</para>
+            /// <para>The ID of the region where the image is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -169,12 +169,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The type of the image. Valid values:</para>
+            /// <para>The registry type of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>acr</b></description></item>
-            /// <item><description><b>harbor</b></description></item>
-            /// <item><description><b>quay</b></description></item>
-            /// <item><description><b>CI/CD</b></description></item>
+            /// <item><description><b>acr</b>: ACR.</description></item>
+            /// <item><description><b>harbor</b>: Harbor.</description></item>
+            /// <item><description><b>quay</b>: Quay.</description></item>
+            /// <item><description><b>CI/CD</b>: CI/CD repository type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the image repository belongs.</para>
+            /// <para>The namespace of the image repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>N/A</para>
@@ -215,10 +215,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The type of the repository. Valid values:</para>
+            /// <para>The repository type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>private</b></description></item>
-            /// <item><description><b>public</b></description></item>
+            /// <item><description><b>private</b>: private repository.</description></item>
+            /// <item><description><b>public</b>: public repository.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,10 +229,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether risks exist. Valid values:</para>
+            /// <para>Indicates whether a risk exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NO</b></description></item>
-            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b>: no risk.</description></item>
+            /// <item><description><b>YES</b>: risk exists.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// <para>The scan progress of the image. Valid values: 0 to 100.</para>
+            /// <para>The scan progress of the image. Value range: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -255,9 +255,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The error code of the image scan result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>TASK_NOT_EXISTS</b>: The image scan task does not exist.</description></item>
-            /// <item><description><b>TASK_NOT_SUPPORT_REGION</b>: The image scan task cannot be performed in the current region.</description></item>
-            /// <item><description><b>forbid_create_repeat_task</b>: The image scan task already exists.</description></item>
+            /// <item><description><b>TASK_NOT_EXISTS</b>: the task does not exist.</description></item>
+            /// <item><description><b>TASK_NOT_SUPPORT_REGION</b>: the task does not support the region.</description></item>
+            /// <item><description><b>forbid_create_repeat_task</b>: repeated tasks are not allowed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -268,22 +268,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ScaResult { get; set; }
 
             /// <summary>
-            /// <para>The scan status of the image. Valid values:</para>
+            /// <para>The image scan status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The image scan task is pending startup.</description></item>
-            /// <item><description><b>START</b>: The image scan task is started.</description></item>
-            /// <item><description><b>MESSAGE_SEND</b>: The message about the image scan task is sent.</description></item>
-            /// <item><description><b>START_RUN</b>: The image analysis task is started.</description></item>
-            /// <item><description><b>DOWNLOAD</b>: The image scan result is downloaded.</description></item>
-            /// <item><description><b>PRE_ANALYZER</b>: The image pre-analysis is started.</description></item>
-            /// <item><description><b>WEB_SHELL_ANALYZER</b>: The WebShell analysis of the image is complete.</description></item>
-            /// <item><description><b>CVE_ANALYZER</b>: The Common Vulnerabilities and Exposures (CVE) analysis of the image is complete.</description></item>
-            /// <item><description><b>BIN_ANALYZER</b>: The binary analysis of the image is complete.</description></item>
-            /// <item><description><b>OTHER_ANALYZER</b>: The extended analysis of the image is complete.</description></item>
-            /// <item><description><b>SUCCESS</b>: The image scan task is complete.</description></item>
-            /// <item><description><b>PRE_ANALYZER_SUCCESS</b>: The image pre-analysis is complete.</description></item>
-            /// <item><description><b>FAIL</b>: The image scan task failed.</description></item>
-            /// <item><description><b>TIMEOUT</b>: The image scan task timed out.</description></item>
+            /// <item><description><b>INIT</b>: image scan pending.</description></item>
+            /// <item><description><b>START</b>: image scan started.</description></item>
+            /// <item><description><b>MESSAGE_SEND</b>: image scan message sent.</description></item>
+            /// <item><description><b>START_RUN</b>: image analysis task started.</description></item>
+            /// <item><description><b>DOWNLOAD</b>: image scan downloaded.</description></item>
+            /// <item><description><b>PRE_ANALYZER</b>: image pre-analysis started.</description></item>
+            /// <item><description><b>WEB_SHELL_ANALYZER</b>: image WebShell analysis completed.</description></item>
+            /// <item><description><b>CVE_ANALYZER</b>: image CVE analysis completed.</description></item>
+            /// <item><description><b>BIN_ANALYZER</b>: image binary analysis completed.</description></item>
+            /// <item><description><b>OTHER_ANALYZER</b>: image extended analysis completed.</description></item>
+            /// <item><description><b>SUCCESS</b>: image scan completed.</description></item>
+            /// <item><description><b>PRE_ANALYZER_SUCCESS</b>: image pre-analysis completed.</description></item>
+            /// <item><description><b>FAIL</b>: image scan failed.</description></item>
+            /// <item><description><b>TIMEOUT</b>: image scan timed out.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -294,7 +294,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ScaStatus { get; set; }
 
             /// <summary>
-            /// <para>The usage label of the image.</para>
+            /// <para>The business tag of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PAI</para>
@@ -304,9 +304,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SourceBizTag { get; set; }
 
             /// <summary>
-            /// <para>The status of the image. Valid values:</para>
+            /// <para>The image status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NORMAL</b></description></item>
+            /// <item><description><b>NORMAL</b>: normal.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -349,8 +349,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether vulnerabilities exist in the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b></description></item>
-            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b>: vulnerabilities exist.</description></item>
+            /// <item><description><b>NO</b>: no vulnerabilities exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -363,14 +363,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeImageInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeImageInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of images returned on the current page.</para>
+            /// <para>The number of images displayed on the current page of the returned results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -380,7 +380,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -390,7 +390,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries of image information displayed on each page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The total number of images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69</para>
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</para>

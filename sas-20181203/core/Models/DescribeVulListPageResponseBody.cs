@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the vulnerability was detected based on version comparison. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: The vulnerability was detected based on version comparison.</description></item>
-            /// <item><description>0: The vulnerability was not detected based on version comparison.</description></item>
+            /// <item><description><para>1: The vulnerability was detected based on version comparison.</para>
+            /// </description></item>
+            /// <item><description><para>0: The vulnerability was not detected based on version comparison.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,8 +65,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the vulnerability was detected based on proof of concept (POC) verification. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: The vulnerability was detected based on POC verification.</description></item>
-            /// <item><description>0: The vulnerability was not detected based on POC verification.</description></item>
+            /// <item><description><para>1: The vulnerability was detected based on POC verification.</para>
+            /// </description></item>
+            /// <item><description><para>0: The vulnerability was not detected based on POC verification.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Windows RCE vulnerability</para>
+            /// <para>Windows 终端远程代码执行漏洞</para>
             /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]

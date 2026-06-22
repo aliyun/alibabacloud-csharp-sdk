@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotProbeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether address resolution protocol (ARP) is enabled for the check type.</para>
+        /// <para>The ARP check type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Arp { get; set; }
 
         /// <summary>
-        /// <para>The name of the probe.</para>
+        /// <para>The probe name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>svwsx-vpc-4430</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether ping is enabled for the check type.</para>
+        /// <para>The ping detection type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Ping { get; set; }
 
         /// <summary>
-        /// <para>The ID of the probe.</para>
+        /// <para>The probe ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</para>
+        /// <para>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProbeId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses that are monitored.</para>
+        /// <para>The list of listening IP addresses.</para>
         /// </summary>
         [NameInMap("ServiceIpList")]
         [Validation(Required=false)]

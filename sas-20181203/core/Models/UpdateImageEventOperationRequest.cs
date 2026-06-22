@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateImageEventOperationRequest : TeaModel {
         /// <summary>
-        /// <para>The rule conditions. Specify a value in the JSON format. You can specify the following keys:</para>
+        /// <para>The rule conditions. The value is in JSON format. The following keys are supported:</para>
         /// <list type="bullet">
         /// <item><description><b>condition</b>: the matching condition.</description></item>
         /// <item><description><b>type</b>: the matching type.</description></item>
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Conditions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert handling rule. </para>
+        /// <para>The ID of the alert handling rule.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeImageEventOperationPage~~">DescribeImageEventOperationPage</a> operation to query the ID.</para>
+        /// <para>You can call <a href="~~DescribeImageEventOperationPage~~">DescribeImageEventOperationPage</a> to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The remarks that you want to add.</para>
+        /// <para>The remarks to add.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -48,10 +48,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Note { get; set; }
 
         /// <summary>
-        /// <para>The application scope of the rule. The value is in the JSON format. Valid values:</para>
+        /// <para>The rule scope. The value is in JSON format. The following keys are supported:</para>
         /// <list type="bullet">
-        /// <item><description><b>type</b></description></item>
-        /// <item><description><b>value</b></description></item>
+        /// <item><description><b>type</b>: the scope type.</description></item>
+        /// <item><description><b>value</b>: the scope value.<remarks>
+        /// <para>This parameter and Source cannot both be empty. If Source is set to agentless, this parameter does not take effect.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,10 +65,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Scenarios { get; set; }
 
         /// <summary>
-        /// <para>The source of the whitelist. Valid values:</para>
+        /// <para>The whitelist source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>image</b>: image.</description></item>
-        /// <item><description><b>agentless</b>: agentless detection.</description></item>
+        /// <item><description><b>agentless</b>: agentless detection.<remarks>
+        /// <para>This parameter and Scenarios cannot both be empty. If this parameter is set to agentless, the Scenarios parameter does not take effect.</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

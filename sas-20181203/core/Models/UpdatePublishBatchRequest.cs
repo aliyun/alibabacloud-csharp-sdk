@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The name of the release batch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>批次1</para>
         /// </summary>
         [NameInMap("BatchName")]
         [Validation(Required=false)]
         public string BatchName { get; set; }
 
         /// <summary>
-        /// <para>The interval between two release batches.</para>
+        /// <para>The interval between release batches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -42,9 +42,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The asset selection dimension. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: instance</description></item>
+        /// <item><description><b>0</b>: machine instance</description></item>
         /// <item><description><b>1</b>: machine group</description></item>
-        /// <item><description><b>2</b>: VPC-based instance ID</description></item>
+        /// <item><description><b>2</b>: VPC-connected instance ID</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

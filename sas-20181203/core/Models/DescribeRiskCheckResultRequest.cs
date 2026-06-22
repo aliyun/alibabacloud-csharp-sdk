@@ -32,12 +32,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the check item that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: identity authentication and permissions</description></item>
-        /// <item><description><b>2</b>: network access control</description></item>
-        /// <item><description><b>3</b>: log audit</description></item>
-        /// <item><description><b>4</b>: data security</description></item>
-        /// <item><description><b>5</b>: monitoring and alerting</description></item>
-        /// <item><description><b>6</b>: basic security protection</description></item>
+        /// <item><description><para><b>1</b>: identity authentication and permissions</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: network access control</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: log audit</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: data security</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: monitoring and alerting</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: basic security protection</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>If you do not specify this parameter, all types of check items are queried.</para>
@@ -63,8 +69,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,8 +105,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether the check item is supported by the edition of Security Center that you purchase. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enabled</b>: yes</description></item>
-        /// <item><description><b>disabled</b>: no</description></item>
+        /// <item><description><para><b>enabled</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>disabled</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,9 +125,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The risk level of the check item that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><para><b>high</b></para>
+        /// </description></item>
+        /// <item><description><para><b>medium</b></para>
+        /// </description></item>
+        /// <item><description><para><b>low</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,12 +153,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The status of the check results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pass</b></description></item>
-        /// <item><description><b>failed</b></description></item>
-        /// <item><description><b>running</b></description></item>
-        /// <item><description><b>waiting</b></description></item>
-        /// <item><description><b>ignored</b></description></item>
-        /// <item><description><b>falsePositive</b></description></item>
+        /// <item><description><para><b>pass</b></para>
+        /// </description></item>
+        /// <item><description><para><b>failed</b></para>
+        /// </description></item>
+        /// <item><description><para><b>running</b></para>
+        /// </description></item>
+        /// <item><description><para><b>waiting</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ignored</b></para>
+        /// </description></item>
+        /// <item><description><para><b>falsePositive</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

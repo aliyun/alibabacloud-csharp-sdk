@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>[1,100]</para>
+                /// <para>[100,1]</para>
                 /// </summary>
                 [NameInMap("AuthLimitList")]
                 [Validation(Required=false)]

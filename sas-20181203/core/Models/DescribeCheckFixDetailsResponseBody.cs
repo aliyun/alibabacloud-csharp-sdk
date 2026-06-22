@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckFixDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the parameters.</para>
+        /// <para>The list of check item fix parameters.</para>
         /// </summary>
         [NameInMap("CheckFixDetails")]
         [Validation(Required=false)]
         public List<DescribeCheckFixDetailsResponseBodyCheckFixDetails> CheckFixDetails { get; set; }
         public class DescribeCheckFixDetailsResponseBodyCheckFixDetails : TeaModel {
             /// <summary>
-            /// <para>The detailed description of the risk item.</para>
+            /// <para>The detailed description of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Force users not to reuse recently used passwords to reduce the risk of password guessing attacks</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckDesc { get; set; }
 
             /// <summary>
-            /// <para>The ID of the risk item.</para>
+            /// <para>The ID of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>58</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// <para>The description of the risk item.</para>
+            /// <para>The description of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Ensure password reuse is limited</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CheckItem { get; set; }
 
             /// <summary>
-            /// <para>An array consisting of the rules that are supported by the risk item.</para>
+            /// <para>The list of rules supported by the check item.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribeCheckFixDetailsResponseBodyCheckFixDetailsRules> Rules { get; set; }
             public class DescribeCheckFixDetailsResponseBodyCheckFixDetailsRules : TeaModel {
                 /// <summary>
-                /// <para>The ID of the risk item.</para>
+                /// <para>The ID of the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>58</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>Indicates whether the rule is optional. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>1</b>: yes</description></item>
-                /// <item><description><b>0</b>: no</description></item>
+                /// <item><description><b>0</b>: no.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Optional { get; set; }
 
                 /// <summary>
-                /// <para>An array that consists of the rule parameters.</para>
+                /// <para>The list of rule parameters.</para>
                 /// </summary>
                 [NameInMap("ParamList")]
                 [Validation(Required=false)]
                 public List<DescribeCheckFixDetailsResponseBodyCheckFixDetailsRulesParamList> ParamList { get; set; }
                 public class DescribeCheckFixDetailsResponseBodyCheckFixDetailsRulesParamList : TeaModel {
                     /// <summary>
-                    /// <para>The options that can be selected for the rule parameter if the value of the ParamType parameter is 2.</para>
+                    /// <para>The options of the rule parameter when the parameter type is selection.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0,1,2,3</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     /// <para>The type of the rule parameter. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>1</b>: input</description></item>
-                    /// <item><description><b>2</b>: selection</description></item>
+                    /// <item><description><b>2</b>: selection.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public int? ParamType { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the rule.</para>
+                    /// <para>The rule ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pwd_reuse.system_auth</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string RuleId { get; set; }
 
                     /// <summary>
-                    /// <para>The specified value of the rule parameter.</para>
+                    /// <para>The configured value of the rule parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>18</para>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RuleDesc { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the rule.</para>
+                /// <para>The rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pwd_reuse.system_auth</para>
@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The specified value of the rule parameter.</para>
+                /// <para>The configured value of the rule parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? Value { get; set; }
 
                 /// <summary>
-                /// <para>The name of the variable.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>open</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of risk items that can be fixed.</para>
+        /// <para>The number of check items that support fixing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0DBF1E27-98D8-5EC2-9CF3-4A2E26F6****</para>

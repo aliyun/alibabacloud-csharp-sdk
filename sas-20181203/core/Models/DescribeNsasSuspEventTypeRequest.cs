@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeNsasSuspEventTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the container field. Valid values:</para>
+        /// <para>The container field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>clusterId</b>: the ID of the cluster</description></item>
+        /// <item><description><b>clusterId</b>: cluster ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request source. Set the value to <b>sas</b>, which indicates that the request is sent from Security Center.</para>
+        /// <para>The source of the request. Set the value to <b>sas</b>, which indicates that the request is sent from Security Center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string From { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of the accounts that you want to query. Default value: <b>0</b>. Valid values:</para>
+        /// <para>The multi-account query type. Default value: <b>0</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: the current account.</description></item>
-        /// <item><description><b>1</b>: all accounts.</description></item>
+        /// <item><description><b>0</b>: queries data of the current account.</description></item>
+        /// <item><description><b>1</b>: queries data of all accounts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MultiAccountActionType { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert type.</para>
+        /// <para>The name of the security alerting Alarm Metric.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unusual Logon</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180.212.XX.XX</para>
@@ -101,16 +101,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>List of supported alarm operation types.</para>
+        /// <para>The list of operation types supported by the alert.</para>
         /// </summary>
         [NameInMap("SupportOperateCodeList")]
         [Validation(Required=false)]
         public List<string> SupportOperateCodeList { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

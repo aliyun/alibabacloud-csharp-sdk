@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyWebLockUnbindRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the server for which you want to disable web tamper proofing.</para>
+        /// <para>The UUID of the server from which you want to remove the protection directories.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> operation to query the UUIDs of servers.</para>
+        /// <para>Call <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> to obtain the UUID of the server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

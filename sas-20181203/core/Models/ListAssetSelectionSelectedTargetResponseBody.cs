@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAssetSelectionSelectedTargetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The data details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAssetSelectionSelectedTargetResponseBodyData> Data { get; set; }
         public class ListAssetSelectionSelectedTargetResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the asset.</para>
+            /// <para>The asset ID. When selecting by machine, the value is the UUID of the machine. When selecting by group, the value is the group ID. When selecting by VPC, the value is the VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset.</para>
+            /// <para>The asset name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jen****</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1EB12F73-6828-59D2-9FBF-F3713FD55128</para>

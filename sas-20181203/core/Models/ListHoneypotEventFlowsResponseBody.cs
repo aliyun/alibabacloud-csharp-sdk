@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListHoneypotEventFlowsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The status code <b>200</b> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</para>
+        /// <para>The result code. A value of <b>200</b> indicates success. Any other value indicates failure. You can use this field to determine the cause of the failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The attack timelines.</para>
+        /// <para>The list of attack timeline entries.</para>
         /// </summary>
         [NameInMap("HoneypotEventFlows")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DstPort { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the connection in the attack.</para>
+            /// <para>The unique ID of the connection during the attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fd7f1ff4-0c4b-41cb-99ad-0724349d****</para>
@@ -87,17 +87,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventConnection { get; set; }
 
             /// <summary>
-            /// <para>The extended information about the attack payload.</para>
+            /// <para>The extended information of the attack payload.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;payload\&quot;:{\&quot;format\&quot;:\&quot;line\&quot;,\&quot;name\&quot;:{\&quot;cn\&quot;:\&quot;payload\&quot;,\&quot;en\&quot;:\&quot;payload\&quot;},\&quot;value\&quot;:\&quot;\&quot;},\&quot;uid\&quot;:{\&quot;format\&quot;:\&quot;line\&quot;,\&quot;name\&quot;:{\&quot;cn\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;},\&quot;uid\&quot;:\&quot;5fa2ece9-aa08-4bbd-a272-5d27*********\&quot;,\&quot;value\&quot;:\&quot;\&quot;}}</para>
+            /// <para>{\&quot;payload\&quot;:{\&quot;format\&quot;:\&quot;line\&quot;,\&quot;name\&quot;:{\&quot;cn\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;payload\&quot;},\&quot;value\&quot;:\&quot;\&quot;},\&quot;uid\&quot;:{\&quot;format\&quot;:\&quot;line\&quot;,\&quot;name\&quot;:{\&quot;cn\&quot;:\&quot;\&quot;,\&quot;en\&quot;:\&quot;\&quot;},\&quot;uid\&quot;:\&quot;5fa2ece9-aa08-4bbd-a272-5d27*********\&quot;,\&quot;value\&quot;:\&quot;\&quot;}}</para>
             /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public string Extra { get; set; }
 
             /// <summary>
-            /// <para>The extension information about the virtual private cloud (VPC).</para>
+            /// <para>The VPC extended information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;vpc_id\&quot;:\&quot;\&quot;,\&quot;vpc_dest_port\&quot;:\&quot;\&quot;,\&quot;vpc_dest_ip\&quot;:\&quot;\&quot;}</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Extra1 { get; set; }
 
             /// <summary>
-            /// <para>The Object Storage Service (OSS) URL of the file.</para>
+            /// <para>The OSS URL of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://pop-test-file-upload.oss-cn-beijing.aliyuncs.com/5626_26331">https://pop-test-file-upload.oss-cn-beijing.aliyuncs.com/5626_26331</a>*****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FileOssUrl { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the intrusion event was first occurred.</para>
+            /// <para>The first time when the attack event occurred, in UNIX timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1686621122000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the intrusion event. The value is a string.</para>
+            /// <para>The attack event ID in string format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19bec028-d98b-45c4-a4d9-cc3d593f****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the intrusion event was last occurred.</para>
+            /// <para>The most recent time when the attack event occurred, in UNIX timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1686622222000</para>
@@ -169,9 +169,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>2</b>: low</description></item>
-            /// <item><description><b>3</b>: medium</description></item>
-            /// <item><description><b>4</b>: high</description></item>
+            /// <item><description><b>2</b>: Low.</description></item>
+            /// <item><description><b>3</b>: Medium.</description></item>
+            /// <item><description><b>4</b>: High.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The ID of the intrusion event.</para>
+            /// <para>The unique ID of the attack event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>306527555</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? SecurityEventId { get; set; }
 
             /// <summary>
-            /// <para>The source IP address.</para>
+            /// <para>The attack source IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>121.41.48.***</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SrcIp { get; set; }
 
             /// <summary>
-            /// <para>The source media access control (MAC) address.</para>
+            /// <para>The source MAC address of the attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:0C:29:CA:<b>:</b></para>
@@ -222,11 +222,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? SrcPort { get; set; }
 
             /// <summary>
-            /// <para>The handling status of the intrusion event. Valid values:</para>
+            /// <para>The handling status of the attack event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: pending handling</description></item>
-            /// <item><description><b>2</b>: ignored</description></item>
-            /// <item><description><b>4</b>: confirmed</description></item>
+            /// <item><description><b>1</b>: Pending.</description></item>
+            /// <item><description><b>2</b>: Ignored.</description></item>
+            /// <item><description><b>4</b>: Confirmed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TypeId { get; set; }
 
             /// <summary>
-            /// <para>The UUID of an attack in the intrusion event.</para>
+            /// <para>The unique ID of a single attack action within the attack event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5fa2ece9-aa08-4bbd-a272-5d27d1c6*****</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -279,14 +279,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information for the query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListHoneypotEventFlowsResponseBodyPageInfo PageInfo { get; set; }
         public class ListHoneypotEventFlowsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries displayed per page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>78</para>
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9F4E6157-9600-5588-86B9-38F09067****</para>
@@ -338,10 +338,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Successful.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

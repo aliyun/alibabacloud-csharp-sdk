@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageFixCycleConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeImageFixCycleConfigResponseBodyData Data { get; set; }
         public class DescribeImageFixCycleConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The cycle of the scheduled fix. Unit: day.</para>
+            /// <para>The scheduled fix cycle. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ImageFixCycle { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the scheduled fix of image risks is enabled.</para>
+            /// <para>The scheduled image fix switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: enabled</description></item>
-            /// <item><description><b>off</b>: disabled</description></item>
+            /// <item><description><b>on</b>: Enabled.</description></item>
+            /// <item><description><b>off</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageFixSwitch { get; set; }
 
             /// <summary>
-            /// <para>The range of the scheduled fix. The value of this parameter is in the JSON format and contains the following fields:</para>
+            /// <para>The scope of the scheduled image fix. This parameter is in JSON format and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>type</b>: The type of the image risk. The value is fixed to repo.</description></item>
-            /// <item><description><b>target</b>: The content of the image risk. The value is in the format of Namespace/Image repository.</description></item>
+            /// <item><description><b>type</b>: The target type. The value is fixed as repo.</description></item>
+            /// <item><description><b>target</b>: The target content. Format: namespace/image repository.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageFixTarget { get; set; }
 
             /// <summary>
-            /// <para>The time range during which the image was modified. Unit: day.</para>
+            /// <para>The time range during which the image was modified. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>

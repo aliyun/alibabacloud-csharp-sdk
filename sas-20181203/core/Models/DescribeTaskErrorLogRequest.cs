@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeTaskErrorLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The ID of the image fix task.</para>
         /// <remarks>
-        /// <para> You can call the DescribeImageFixTask operation to query the IDs of tasks.</para>
+        /// <para>Call the <a href="~~DescribeImageFixTask~~">DescribeImageFixTask</a> operation to query image vulnerability fix tasks and obtain the BuildTaskId.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

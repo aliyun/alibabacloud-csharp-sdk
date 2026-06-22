@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyInterceptionTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of images.</para>
+        /// <para>The list of images.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ImageList")]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The namespace.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of tags.</para>
+        /// <para>The list of labels.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can call the <a href="~~DescribeContainerTags~~">DescribeContainerTags</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TagList")]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the network object.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain the value of this parameter.</para>
+        /// <para>You can call the <a href="~~ListInterceptionTargetPage~~">ListInterceptionTargetPage</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetName { get; set; }
 
         /// <summary>
-        /// <para>The object type. Valid values:</para>
+        /// <para>The target type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IMAGE</b></description></item>
+        /// <item><description><b>IMAGE</b>: image.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

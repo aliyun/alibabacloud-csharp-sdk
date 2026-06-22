@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCustomizedDictUploadInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The AccessKey ID that is required to access the OSS object.</para>
+        /// <para>The AccessKey ID required to access the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourAccessKeyID</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Accessid { get; set; }
 
         /// <summary>
-        /// <para>The time when the OSS signature expires. This value is a UNIX timestamp.</para>
+        /// <para>The expiration time of the authentication, in timestamp format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1719921470</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Expire { get; set; }
 
         /// <summary>
-        /// <para>The OSS endpoint.</para>
+        /// <para>The OSS domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com">https://aegis-update-static-file.oss-cn-hangzhou.aliyuncs.com</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The key of the OSS object.</para>
+        /// <para>The OSS file key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HC_CUSTOMIZED_DICT/176618589410****.tmp</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The policy of the OSS bucket.</para>
+        /// <para>The bucket policy of the OSS bucket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJleHBpcmF0aW9uIjoiMjAyNC0wNy0wMlQxMTo1Nzo1MC44MzJaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsNDA5NjBdLFsiZXEiLCIka2V5IiwiSENfQ1VTVE9NSVpFRF9ESUNUXC8xNzY2MTg1ODk0MTA0Njc1LnRtc****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each API request. You can use this identifier to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BDEDEEE7-AC25-559E-8C12-5168B139****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The security token.</para>
+        /// <para>The Security Token Service (STS) token.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

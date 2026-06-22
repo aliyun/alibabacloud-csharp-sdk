@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOnceTaskResultInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution time of the task.</para>
+        /// <para>The time when the task was executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1671184531000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CollectTime { get; set; }
 
         /// <summary>
-        /// <para>The number of tasks that were completed.</para>
+        /// <para>The number of tasks that have been completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? FinishCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. This uniquely identifies the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE500770-42D3-442E-9DDD-156E0F9F****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scan task.</para>
+        /// <para>The ID of the one-time task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e7b70a4b030db086db52231f1b58****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? TaskId { get; set; }
 
         /// <summary>
-        /// <para>The information about the task.</para>
+        /// <para>Details of the task.</para>
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
@@ -59,10 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>INIT</b>: The task is not started.</description></item>
-            /// <item><description><b>START</b>: The task is started.</description></item>
-            /// <item><description><b>SUCCESS</b>: The task is complete.</description></item>
-            /// <item><description><b>TIMEOUT</b>: The task times out.</description></item>
+            /// <item><description><para><b>INIT</b>: The task is pending start.</para>
+            /// </description></item>
+            /// <item><description><para><b>START</b>: The task is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUCCESS</b>: The task is completed.</para>
+            /// </description></item>
+            /// <item><description><para><b>TIMEOUT</b>: The task has timed out.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

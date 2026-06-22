@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebPathResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the paths to the web directories.</para>
+        /// <para>The list of web paths.</para>
         /// </summary>
         [NameInMap("ConfigList")]
         [Validation(Required=false)]
         public List<DescribeWebPathResponseBodyConfigList> ConfigList { get; set; }
         public class DescribeWebPathResponseBodyConfigList : TeaModel {
             /// <summary>
-            /// <para>An array consisting of the servers on which the web directories are scanned.</para>
+            /// <para>The list of servers on which the web directory takes effect.</para>
             /// </summary>
             [NameInMap("TargetList")]
             [Validation(Required=false)]
             public List<DescribeWebPathResponseBodyConfigListTargetList> TargetList { get; set; }
             public class DescribeWebPathResponseBodyConfigListTargetList : TeaModel {
                 /// <summary>
-                /// <para>The object.</para>
+                /// <para>The target object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>82048187-bb9b-4e19-8320-7b4ddb97****</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Target { get; set; }
 
                 /// <summary>
-                /// <para>The object type. Valid values:</para>
+                /// <para>The target type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>uuid</b></description></item>
+                /// <item><description><b>uuid</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The path to the web directory.</para>
+            /// <para>The web directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/root/www****</para>
@@ -59,10 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string WebPath { get; set; }
 
             /// <summary>
-            /// <para>The path type of the web directory. Valid values:</para>
+            /// <para>The type of the web path. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>def</b>: automatically identified</description></item>
-            /// <item><description><b>customize</b>: manually added</description></item>
+            /// <item><description><b>def</b>: automatically identified by the system.</description></item>
+            /// <item><description><b>customize</b>: manually added.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current page in a paged query. Paging is used to display results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page in a paged query. Paging is used to display results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The China Chinese Cloud generates a unique identifier for each request, which can be used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B37C9052-A73E-4707-A024-92477028****</para>

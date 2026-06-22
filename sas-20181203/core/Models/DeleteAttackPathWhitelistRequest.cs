@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteAttackPathWhitelistRequest : TeaModel {
         /// <summary>
-        /// <para>Attack path whitelist ID.</para>
+        /// <para>The ID of the attack path whitelist entry.</para>
         /// <remarks>
-        /// <para>You can call <a href="~~ListAttackPathWhitelist~~">ListAttackPathWhitelist</a> to query the attack path whitelist ID.</para>
+        /// <para>You can call <a href="~~ListAttackPathWhitelist~~">ListAttackPathWhitelist</a> to query attack path whitelist IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

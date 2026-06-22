@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeStrategyDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5B28F65-9245-5DC1-B3CF-5F2756A756A8</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the baseline check policy.</para>
+        /// <para>The information about the policy.</para>
         /// </summary>
         [NameInMap("Strategy")]
         [Validation(Required=false)]
         public DescribeStrategyDetailResponseBodyStrategy Strategy { get; set; }
         public class DescribeStrategyDetailResponseBodyStrategy : TeaModel {
             /// <summary>
-            /// <para>The type of the baseline check policy that you want to query. Valid values:</para>
+            /// <para>The type of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>common</b>: standard baseline check policy</description></item>
-            /// <item><description><b>custom</b>: custom baseline check policy</description></item>
+            /// <item><description><b>common</b>: Standard policy.</description></item>
+            /// <item><description><b>custom</b>: Custom policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CustomType { get; set; }
 
             /// <summary>
-            /// <para>The check interval of the policy.</para>
+            /// <para>The detection cycle of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -51,12 +51,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CycleDays { get; set; }
 
             /// <summary>
-            /// <para>The time period during which the check starts. Valid values:</para>
+            /// <para>The detection cycle of the policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: 00:00 to 06:00</description></item>
             /// <item><description><b>6</b>: 06:00 to 12:00</description></item>
             /// <item><description><b>12</b>: 12:00 to 18:00</description></item>
-            /// <item><description><b>18</b>: 18:00 to 24:00</description></item>
+            /// <item><description><b>18</b>: 18:00 to 24:00.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CycleStartTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the check. Specify the time in the HH:mm:ss format.</para>
+            /// <para>The end time of the baseline check policy execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>03:00:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the baseline check policy.</para>
+            /// <para>The ID of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the baseline check policy.</para>
+            /// <para>The Policy Name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestStrategy</para>
@@ -97,10 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The subtype of the baselines. </para>
-            /// <remarks>
-            /// <para>You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the subtypes of baselines.</para>
-            /// </remarks>
+            /// <para>The subtype of the baseline check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hc_nginx_linux,tomcat7,hc_mysql_ali,hc_docker</para>
@@ -110,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskSubTypeName { get; set; }
 
             /// <summary>
-            /// <para>The information about the whitelist of risk items.</para>
+            /// <para>The list of risk item whitelists.</para>
             /// </summary>
             [NameInMap("RiskTypeWhiteListQueryResultList")]
             [Validation(Required=false)]
@@ -127,10 +124,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the check item is selected. Valid values:</para>
+                /// <para>Indicates whether the risk item is selected. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><b>true</b>: Selected.</description></item>
+                /// <item><description><b>false</b>: Not selected.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -141,7 +138,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public bool? On { get; set; }
 
                 /// <summary>
-                /// <para>The information about sub-check items.</para>
+                /// <para>The list of sub-risk items.</para>
                 /// </summary>
                 [NameInMap("SubTypes")]
                 [Validation(Required=false)]
@@ -158,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Alias { get; set; }
 
                     /// <summary>
-                    /// <para>The details of custom check items.</para>
+                    /// <para>The list of custom check item details.</para>
                     /// </summary>
                     [NameInMap("CheckDetails")]
                     [Validation(Required=false)]
@@ -195,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         public string CheckItem { get; set; }
 
                         /// <summary>
-                        /// <para>The details of rules.</para>
+                        /// <para>The list of rule information.</para>
                         /// </summary>
                         [NameInMap("Rules")]
                         [Validation(Required=false)]
@@ -212,10 +209,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                             public int? DefaultValue { get; set; }
 
                             /// <summary>
-                            /// <para>Indicates whether the rule can be selected. Valid values:</para>
+                            /// <para>Indicates whether the rule is optional. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><b>1</b>: yes</description></item>
-                            /// <item><description><b>0</b>: no</description></item>
+                            /// <item><description><b>1</b>: Optional.</description></item>
+                            /// <item><description><b>0</b>: Not optional.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -226,14 +223,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                             public int? Optional { get; set; }
 
                             /// <summary>
-                            /// <para>The rule parameters.</para>
+                            /// <para>The list of rule parameters.</para>
                             /// </summary>
                             [NameInMap("ParamList")]
                             [Validation(Required=false)]
                             public List<DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList> ParamList { get; set; }
                             public class DescribeStrategyDetailResponseBodyStrategyRiskTypeWhiteListQueryResultListSubTypesCheckDetailsRulesParamList : TeaModel {
                                 /// <summary>
-                                /// <para>The options that can be selected for the rule parameter if the value of ParamType is set to 2.</para>
+                                /// <para>The options for the rule parameter when the parameter type is selection.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>0,1,2,3</para>
@@ -296,7 +293,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                                 /// <para>The type of the rule parameter. Valid values:</para>
                                 /// <list type="bullet">
                                 /// <item><description><b>1</b>: input</description></item>
-                                /// <item><description><b>2</b>: selection</description></item>
+                                /// <item><description><b>2</b>: selection.</description></item>
                                 /// </list>
                                 /// 
                                 /// <b>Example:</b>
@@ -329,7 +326,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                             public string RuleDesc { get; set; }
 
                             /// <summary>
-                            /// <para>The rule ID.</para>
+                            /// <para>The ID of the rule.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>login_unlock_deny_pam_faillock.must.cus</para>
@@ -343,10 +340,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     }
 
                     /// <summary>
-                    /// <para>Indicates whether the sub-check item is selected. Valid values:</para>
+                    /// <para>Indicates whether the sub-risk item is selected. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>true</b></description></item>
-                    /// <item><description><b>false</b></description></item>
+                    /// <item><description><b>true</b>: Selected.</description></item>
+                    /// <item><description><b>false</b>: Not selected.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -357,10 +354,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public bool? On { get; set; }
 
                     /// <summary>
-                    /// <para>The operating system type of the server. Valid values:</para>
+                    /// <para>The supported operating system. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>windows</b></description></item>
-                    /// <item><description><b>linux</b></description></item>
+                    /// <item><description><b>linux</b>.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -371,7 +368,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string SupportedOs { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the sub-check item.</para>
+                    /// <para>The type name of the sub-check item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hc_exploit_redis</para>
@@ -383,7 +380,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the check item.</para>
+                /// <para>The check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hc_exploit</para>
@@ -395,7 +392,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The start time of the check. Specify the time in the HH:mm:ss format.</para>
+            /// <para>The start time of the baseline check policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>02:00:00</para>
@@ -405,10 +402,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to apply the baseline check policy. Valid values:</para>
+            /// <para>The method used to add assets to the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>groupId</b>: asset groups</description></item>
-            /// <item><description><b>uuid</b>: assets</description></item>
+            /// <item><description><b>groupId</b>: Assets are added by asset group.</description></item>
+            /// <item><description><b>uuid</b>: Assets are added individually.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -419,10 +416,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The type of the baseline check policy. Valid values:</para>
+            /// <para>The type of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: standard policies</description></item>
-            /// <item><description><b>2</b>: custom policies</description></item>
+            /// <item><description><b>1</b>: system-added policy. The policy name is the default policy.</description></item>
+            /// <item><description><b>2</b>: user-added policy.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

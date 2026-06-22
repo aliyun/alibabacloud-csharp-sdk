@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListCloudAssetMatchOperatorsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of operator types</para>
+        /// <para>The operator type.</para>
         /// </summary>
         [NameInMap("MatchTypeOperators")]
         [Validation(Required=false)]
         public List<ListCloudAssetMatchOperatorsResponseBodyMatchTypeOperators> MatchTypeOperators { get; set; }
         public class ListCloudAssetMatchOperatorsResponseBodyMatchTypeOperators : TeaModel {
             /// <summary>
-            /// <para>List of operators</para>
+            /// <para>The list of operators.</para>
             /// </summary>
             [NameInMap("MatchOperators")]
             [Validation(Required=false)]
@@ -209,7 +209,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Operator display name. Values: - For LIST type: </para>
+                /// <para>Operator display name. Values: </para>
+                /// <list type="bullet">
+                /// <item><description>For LIST type:</description></item>
+                /// </list>
                 /// <ol>
                 /// <item><description>Contains: includes </description></item>
                 /// <item><description>SizeGreaterThan: size greater than </description></item>
@@ -242,14 +245,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description>Equals: equals </description></item>
                 /// <item><description>In: in the list </description></item>
                 /// <item><description>NotEquals: does not equal </description></item>
-                /// <item><description><remarks>
-                /// <para>: greater than </para>
-                /// </remarks>
-                /// </description></item>
-                /// <item><description><remarks>
-                /// <para>=: greater than or equal to </para>
-                /// </remarks>
-                /// </description></item>
+                /// <item><description><c>&gt;</c>: greater than </description></item>
+                /// <item><description><c>&gt;=</c>: greater than or equal to </description></item>
                 /// <item><description>&lt;: less than </description></item>
                 /// <item><description>&lt;=: less than or equal to</description></item>
                 /// </ol>
@@ -261,14 +258,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description>Equals: equals </description></item>
                 /// <item><description>In: in the list </description></item>
                 /// <item><description>NotEquals: does not equal </description></item>
-                /// <item><description><remarks>
-                /// <para>: greater than </para>
-                /// </remarks>
-                /// </description></item>
-                /// <item><description><remarks>
-                /// <para>=: greater than or equal to </para>
-                /// </remarks>
-                /// </description></item>
+                /// <item><description><c>&gt;</c>: greater than </description></item>
+                /// <item><description><c>&gt;=</c>: greater than or equal to </description></item>
                 /// <item><description>&lt;: less than </description></item>
                 /// <item><description>&lt;=: less than or equal to (Note: There seems to be a repetition here, likely meant to be \&quot;&lt;=\&quot; for \&quot;less than or equal to\&quot;)</description></item>
                 /// </ol>
@@ -280,14 +271,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description>Equals: equals </description></item>
                 /// <item><description>In: in the list </description></item>
                 /// <item><description>NotEquals: does not equal </description></item>
-                /// <item><description><remarks>
-                /// <para>: greater than </para>
-                /// </remarks>
-                /// </description></item>
-                /// <item><description><remarks>
-                /// <para>=: greater than or equal to </para>
-                /// </remarks>
-                /// </description></item>
+                /// <item><description><c>&gt;</c>: greater than </description></item>
+                /// <item><description><c>&gt;=</c>: greater than or equal to </description></item>
                 /// <item><description>&lt;: less than </description></item>
                 /// <item><description>&lt;=: less than or equal to</description></item>
                 /// </ol>
@@ -318,14 +303,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <item><description>Equals: equals </description></item>
                 /// <item><description>In: in the list </description></item>
                 /// <item><description>NotEquals: does not equal </description></item>
-                /// <item><description><remarks>
-                /// <para>: greater than </para>
-                /// </remarks>
-                /// </description></item>
-                /// <item><description><remarks>
-                /// <para>=: greater than or equal to </para>
-                /// </remarks>
-                /// </description></item>
+                /// <item><description><c>&gt;</c>: greater than </description></item>
+                /// <item><description><c>&gt;=</c>: greater than or equal to </description></item>
                 /// <item><description>&lt;: less than </description></item>
                 /// <item><description>&lt;=: less than or equal to</description></item>
                 /// </ol>

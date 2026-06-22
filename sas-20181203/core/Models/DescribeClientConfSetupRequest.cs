@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClientConfSetupRequest : TeaModel {
         /// <summary>
-        /// <para>The tag that is added to the server.</para>
+        /// <para>The resource tag of the client to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyTag { get; set; }
 
         /// <summary>
-        /// <para>The value of the tag. Valid values:</para>
+        /// <para>The policy value. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>major</description></item>
         /// <item><description>advanced</description></item>
-        /// <item><description>basic</description></item>
+        /// <item><description>basic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAssetImportantRequest : TeaModel {
         /// <summary>
-        /// <para>The importance of the asset. Valid values:</para>
+        /// <para>The importance level. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: test</description></item>
         /// <item><description><b>1</b>: normal</description></item>
-        /// <item><description><b>2</b>: important</description></item>
+        /// <item><description><b>2</b>: important.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ImportantCode { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of servers. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</para>
+        /// <para>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

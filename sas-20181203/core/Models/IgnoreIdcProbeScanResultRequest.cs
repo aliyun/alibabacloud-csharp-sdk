@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class IgnoreIdcProbeScanResultRequest : TeaModel {
         /// <summary>
-        /// <para>The operation that you want to perform. Valid values:</para>
+        /// <para>The action to perform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: adds the scan result to the whitelist.</description></item>
-        /// <item><description><b>2</b>: ignores the scan result.</description></item>
+        /// <item><description><b>1</b>: whitelist</description></item>
+        /// <item><description><b>2</b>: ignore.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IgnoreAction { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scan result. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of scan results. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeIdcProbeScanResultList~~">DescribeIdcProbeScanResultList</a> operation to query the ID.</para>
+        /// <para>Call the <a href="~~DescribeIdcProbeScanResultList~~">DescribeIdcProbeScanResultList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The type name of the risky build command.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>itemName.</para>
+            /// <para>itemName</para>
             /// </summary>
             [NameInMap("ItemName")]
             [Validation(Required=false)]

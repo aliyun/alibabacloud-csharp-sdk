@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAccountsInResourceDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The members in the resource directory.</para>
+        /// <para>The list of member accounts in the resource directory.</para>
         /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated and should be ignored.</para>
+            /// <para>This parameter is deprecated and does not need to be used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? BuySas { get; set; }
 
             /// <summary>
-            /// <para>Whether a yearly or monthly subscription of Cloud Security Center is purchased. Values:</para>
+            /// <para>Indicates whether a Security Center subscription instance is purchased. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes</description></item>
-            /// <item><description><b>false</b>: No</description></item>
+            /// <item><description><b>true</b></description></item>
+            /// <item><description><b>false</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? BuySasNew { get; set; }
 
             /// <summary>
-            /// <para>Subscription type. Values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Prepaid</description></item>
-            /// <item><description><b>1</b>: Pay-As-You-Go</description></item>
+            /// <item><description><b>0</b>: upfront</description></item>
+            /// <item><description><b>1</b>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The name of the member.</para>
+            /// <para>The account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc**</para>
@@ -88,10 +88,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>Instance purchase type. Values:</para>
+            /// <para>The instance purchase type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Self-purchased</description></item>
-            /// <item><description><b>1</b>: Multi-account allocation</description></item>
+            /// <item><description><b>0</b>: self-purchased</description></item>
+            /// <item><description><b>1</b>: allocated through multi-account management.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,10 +102,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? InstanceBuyType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the member is an administrator account of the resource directory. Valid values:</para>
+            /// <para>Indicates whether the account is the management account of the resource directory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><para><b>yes</b></para>
+            /// </description></item>
+            /// <item><description><para><b>no</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsMaAccount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the member is marked as followed.</para>
+            /// <para>Indicates whether the account is marked as followed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>no</para>
@@ -126,10 +128,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsMarked { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the member is a delegated administrator account of Security Center. Valid values:</para>
+            /// <para>Indicates whether the account is a delegated administrator account of Security Center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><para><b>yes</b></para>
+            /// </description></item>
+            /// <item><description><para><b>no</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,10 +144,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsSasDaAccount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the member is an account of the threat analysis and response feature. Valid values:</para>
+            /// <para>Indicates whether the account is a management account of Cloud Threat Detection and Response (CTDR). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><para><b>yes</b></para>
+            /// </description></item>
+            /// <item><description><para><b>no</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,10 +160,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsSiemControlAccount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the member is a delegated administrator account of the threat analysis and response feature. Valid values:</para>
+            /// <para>Indicates whether the account is a delegated administrator account of Cloud Threat Detection and Response (CTDR). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><para><b>yes</b></para>
+            /// </description></item>
+            /// <item><description><para><b>no</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,10 +176,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IsSiemDaAccount { get; set; }
 
             /// <summary>
-            /// <para>Post-paid module switch. Values:</para>
+            /// <para>The pay-as-you-go module switch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Off</description></item>
-            /// <item><description><b>1</b>: On</description></item>
+            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><b>1</b>: enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,22 +190,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PostBasicService { get; set; }
 
             /// <summary>
-            /// <para>The switch status of the pay-as-you-go module. The value is a JSON string. Valid values:</para>
+            /// <para>The status of pay-as-you-go module switches, in JsonString format. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Key:</para>
-            /// <list type="bullet">
-            /// <item><description><b>VUL</b>: vulnerability fixing module</description></item>
-            /// <item><description><b>CSPM</b>: cloud service configuration check module</description></item>
+            /// <item><description>Key:<list type="bullet">
+            /// <item><description><b>VUL</b>: vulnerability management module</description></item>
+            /// <item><description><b>CSPM</b>: Cloud Security Posture Management (CSPM) module</description></item>
             /// <item><description><b>AGENTLESS</b>: agentless detection module</description></item>
             /// <item><description><b>SERVERLESS</b>: serverless asset module</description></item>
+            /// <item><description><b>CTDR</b>: Cloud Threat Detection and Response (CTDR) module</description></item>
+            /// <item><description><b>RASP</b>: Runtime Application Self-Protection (RASP) module</description></item>
+            /// <item><description><b>SDK</b>: malicious file detection SDK module</description></item>
+            /// <item><description><b>POST_HOST</b>: host and container security module</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Value: A value of 0 specifies disabled. A value of 1 specifies enabled.</para>
-            /// </description></item>
+            /// <item><description>Value: 0 indicates disabled. 1 indicates enabled.</description></item>
             /// </list>
-            /// <remarks>
-            /// <para> If you do not specify a value for a module, the original value of the module is retained.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;VUL\&quot;:0}</para>
@@ -207,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PostPayModuleSwitch { get; set; }
 
             /// <summary>
-            /// <para>Cloud Security Center Instance ID.</para>
+            /// <para>The Security Center instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>postpay-sas-x5x3hy1ly***</para>
@@ -217,13 +224,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SaleInstance { get; set; }
 
             /// <summary>
-            /// <para>The edition of Security Center that you use. Valid value:</para>
+            /// <para>The purchased edition of Security Center. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b> or <b>1</b>: Basic</description></item>
-            /// <item><description><b>2</b> or <b>3</b>: Enterprise</description></item>
-            /// <item><description><b>5</b>: Advanced</description></item>
-            /// <item><description><b>6</b>: Anti-virus</description></item>
-            /// <item><description><b>7</b>: Ultimate</description></item>
+            /// <item><description><b>0</b> or <b>1</b>: Free Edition</description></item>
+            /// <item><description><b>2</b> or <b>3</b>: Enterprise Edition  </description></item>
+            /// <item><description><b>5</b>: Premium Edition  </description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition </description></item>
+            /// <item><description><b>7</b>: Ultimate Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -236,7 +243,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B7A839E8-70AE-591D-8D9E-C5419A2240DB</para>

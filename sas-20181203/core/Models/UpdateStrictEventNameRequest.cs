@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateStrictEventNameRequest : TeaModel {
         /// <summary>
-        /// <para>List of strict alarms to be operated on. This list is a complete list, and any strict alarms not included in this list will have the opposite operation performed.</para>
+        /// <para>The list of strict mode alerts to operate on. This is a full list. Strict mode alerts not included in this list will have the opposite action applied.</para>
         /// <remarks>
-        /// <h2>You can call <a href="~~DescribeStrictEventName~~">DescribeStrictEventName</a> to get the list of all strict mode alarms.</h2>
+        /// <para>Call <a href="~~DescribeStrictEventName~~">DescribeStrictEventName</a> to obtain the list of all strict mode alerts.
+        /// -.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("EventNameList")]
@@ -20,10 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> EventNameList { get; set; }
 
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +35,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Operation rule determination operator:</para>
+        /// <para>The operator for the rule action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><em>on</em>: Turn on the alarm</description></item>
-        /// <item><description><em>off</em>: Turn off the alarm</description></item>
+        /// <item><description><em>on</em>: enables alerting</description></item>
+        /// <item><description><em>off</em>: disables alerting.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

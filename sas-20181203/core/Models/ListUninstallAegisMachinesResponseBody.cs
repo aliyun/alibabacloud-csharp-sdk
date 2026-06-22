@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUninstallAegisMachinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information about servers.</para>
+        /// <para>The list of server information.</para>
         /// </summary>
         [NameInMap("MachineList")]
         [Validation(Required=false)]
         public List<ListUninstallAegisMachinesResponseBodyMachineList> MachineList { get; set; }
         public class ListUninstallAegisMachinesResponseBodyMachineList : TeaModel {
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The ID of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas-bdrvxb4b****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the server.</para>
+            /// <para>The name of the server instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sql-test-001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The region in which the server resides.</para>
+            /// <para>The region where the server resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -79,9 +79,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The operating system of the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>linux</b></description></item>
-            /// <item><description><b>windows</b></description></item>
-            /// <item><description><b>windows-2003</b></description></item>
+            /// <item><description><para><b>linux</b>: linux</para>
+            /// </description></item>
+            /// <item><description><para><b>windows</b>: windows</para>
+            /// </description></item>
+            /// <item><description><para><b>windows-2003</b>: windows-2003.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the server resides.</para>
+            /// <para>The ID of the region where the server resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -112,13 +115,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The source of the server. Valid values:</para>
+            /// <para>The server vendor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: an asset provided by Alibaba Cloud</description></item>
-            /// <item><description><b>1</b>: a third-party cloud server</description></item>
-            /// <item><description><b>2</b>: a server in a data center</description></item>
-            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, and <b>7</b>: other cloud asset</description></item>
-            /// <item><description><b>8</b>: a lightweight asset</description></item>
+            /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
+            /// <item><description><b>1</b>: non-cloud asset</description></item>
+            /// <item><description><b>2</b>: IDC asset</description></item>
+            /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>: third-party cloud asset</description></item>
+            /// <item><description><b>8</b>: lightweight asset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,17 +132,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Vendor { get; set; }
 
             /// <summary>
-            /// <para>The name of the service provider (SP) for the server.</para>
+            /// <para>The name of the server vendor.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>ALIYUN</b>: Alibaba Cloud</description></item>
-            /// <item><description><b>OUT</b>: a third-party service provider</description></item>
-            /// <item><description><b>IDC</b>: a data center</description></item>
-            /// <item><description><b>TENCENT</b>: Tencent Cloud</description></item>
-            /// <item><description><b>HUAWEICLOUD</b>: Huawei Cloud</description></item>
-            /// <item><description><b>Microsoft</b>: Microsoft</description></item>
-            /// <item><description><b>AWS</b>: Amazon Web Services (AWS)</description></item>
-            /// <item><description><b>TRIPARTITE</b>: a lightweight server</description></item>
+            /// <item><description><b>OUT</b>: non-cloud asset</description></item>
+            /// <item><description><b>IDC</b>: IDC</description></item>
+            /// <item><description><b>TENCENT</b>: third-party cloud</description></item>
+            /// <item><description><b>HUAWEICLOUD</b>: third-party cloud</description></item>
+            /// <item><description><b>Microsoft</b>: third-party cloud</description></item>
+            /// <item><description><b>AWS</b>: third-party cloud</description></item>
+            /// <item><description><b>TRIPARTITE</b>: lightweight server.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -162,7 +165,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>151F6EB6-D5F3-417A-AF7B-4D84975DB586</para>
@@ -172,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44</para>

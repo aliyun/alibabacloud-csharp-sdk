@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeDomainSecureVulListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7532B7EE-7CE7-5F4D-BF04-B12447DD****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The domain name-related vulnerabilities.</para>
+        /// <para>The list of vulnerabilities associated with the domain name.</para>
         /// </summary>
         [NameInMap("VulList")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The number of the vulnerabilities that have the <b>high</b> priority.</para>
+            /// <para>The number of high-priority vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AsapCount { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was last detected, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639371446000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HandledCount { get; set; }
 
             /// <summary>
-            /// <para>The number of the vulnerabilities that have the <b>medium</b> priority.</para>
+            /// <para>The number of medium-priority vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of the vulnerabilities that have the <b>low</b> priority.</para>
+            /// <para>The number of low-priority vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -107,14 +107,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NntfCount { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the vulnerability. Valid values:</para>
+            /// <para>The label of the vulnerability. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
             /// <item><description>Restart required</description></item>
             /// <item><description>Remote utilization</description></item>
             /// <item><description>EXP exists</description></item>
             /// <item><description>Available</description></item>
-            /// <item><description>Elevation of Privilege</description></item>
-            /// <item><description>Code Execution</description></item>
+            /// <item><description>Privilege escalation</description></item>
+            /// <item><description>Code execution</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description>Restart required</description></item>
+            /// <item><description>Remote utilization</description></item>
+            /// <item><description>EXP exists</description></item>
+            /// <item><description>Available</description></item>
+            /// <item><description>Privilege escalation</description></item>
+            /// <item><description>Code execution</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,13 +135,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The type of the vulnerability. Default value: cve. Valid values:</para>
+            /// <para>The type of the vulnerability to query. Default value: cve. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
-            /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
-            /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
-            /// <item><description><b>app</b>: application vulnerability that is detected by network scanning.</description></item>
-            /// <item><description><b>sca</b>: application vulnerability that is detected by using software component analysis.</description></item>
+            /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
+            /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
+            /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
+            /// <item><description><b>app</b>: application vulnerability (network scan)</description></item>
+            /// <item><description><b>sca</b>: application vulnerability (software constituency parsing)</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

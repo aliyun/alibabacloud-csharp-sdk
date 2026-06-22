@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteSearchConditionRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the frequently used search condition.</para>
+        /// <para>The name of the saved search condition.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeSearchCondition~~">DescribeSearchCondition</a> operation to query frequently used search conditions.</para>
+        /// <para>Call the <a href="~~DescribeSearchCondition~~">DescribeSearchCondition</a> operation to obtain the name.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19.12.XX.XX</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset. Default value: ecs. Valid values:</para>
+        /// <para>The asset type. Default value: ecs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: an Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>cloud_product</b>: an Alibaba Cloud service.</description></item>
+        /// <item><description><b>ecs</b>: host asset</description></item>
+        /// <item><description><b>cloud_product</b>: cloud service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

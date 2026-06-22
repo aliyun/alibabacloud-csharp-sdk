@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListInterceptionTargetPageRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application to which the network object belongs.</para>
+        /// <para>The application name of the network object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>frontend</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The images of the network object.</para>
+        /// <para>The list of images included in the network object.</para>
         /// </summary>
         [NameInMap("ImageList")]
         [Validation(Required=false)]
         public List<string> ImageList { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the network object belongs.</para>
+        /// <para>The namespace of the network object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page for paging. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The labels specified for the network object.</para>
+        /// <para>The list of tags included in the network object.</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
@@ -77,9 +77,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetName { get; set; }
 
         /// <summary>
-        /// <para>The type of the network object. Valid values:</para>
+        /// <para>The object type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IMAGE</description></item>
+        /// <item><description>IMAGE: image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetOssBucketScanStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetOssBucketScanStatisticResponseBodyData Data { get; set; }
         public class GetOssBucketScanStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the purchased quota.</para>
+            /// <para>The timestamp when the authorization expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1714442403000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The number of high-risk objects.</para>
+            /// <para>The number of high-risk files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? HighRisk { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk objects.</para>
+            /// <para>The number of low-risk files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LowRisk { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk objects.</para>
+            /// <para>The number of medium-risk files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? MediumRisk { get; set; }
 
             /// <summary>
-            /// <para>The number of buckets that are not checked.</para>
+            /// <para>The number of buckets that have not been scanned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NoScanBucket { get; set; }
 
             /// <summary>
-            /// <para>Postpaid usage count.</para>
+            /// <para>The number of pay-as-you-go invocations used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PostPayInvokeCount { get; set; }
 
             /// <summary>
-            /// <para>Prepaid authorized count.</para>
+            /// <para>The number of prepaid authorization times.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PrePayAuthCount { get; set; }
 
             /// <summary>
-            /// <para>Prepaid usage count.</para>
+            /// <para>The number of prepaid invocations used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PrePayInvokeCount { get; set; }
 
             /// <summary>
-            /// <para>The remaining quota.</para>
+            /// <para>The remaining number of authorizations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RemainAuth { get; set; }
 
             /// <summary>
-            /// <para>The number of buckets in which at-risk objects exist.</para>
+            /// <para>The number of buckets that contain risky files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RiskBucket { get; set; }
 
             /// <summary>
-            /// <para>The number of objects that are checked.</para>
+            /// <para>The number of scanned files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? TotalBucket { get; set; }
 
             /// <summary>
-            /// <para>The total number of objects in the bucket.</para>
+            /// <para>The total number of files in the buckets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The China Chinese system generates a unique identifier for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FAC50208-E56B-5CC8-8738-2B219D1A****</para>

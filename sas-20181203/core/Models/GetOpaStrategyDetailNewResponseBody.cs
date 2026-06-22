@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// <para>The ID of the image build risk.</para>
                         /// <remarks>
-                        /// <para> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// <para>The name of the image build risk.</para>
                         /// <remarks>
-                        /// <para> You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~ListImageBuildRiskItem~~">ListImageBuildRiskItem</a> operation to query the ID of the malicious sample.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// <para>The ID of the sensitive files.</para>
                         /// <remarks>
-                        /// <para> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// <para>The name of the sensitive files.</para>
                         /// <remarks>
-                        /// <para> You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</para>
+                        /// <para>You can call the <a href="~~GetSensitiveDefineRuleConfig~~">GetSensitiveDefineRuleConfig</a> operation to query the ID of the malicious sample.</para>
                         /// </remarks>
                         /// 
                         /// <b>Example:</b>
@@ -271,8 +271,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// <para>The ID of the vulnerability types. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>cve</b>: system vulnerability</description></item>
-                        /// <item><description><b>app</b>: application vulnerability</description></item>
+                        /// <item><description><para><b>cve</b>: system vulnerability</para>
+                        /// </description></item>
+                        /// <item><description><para><b>app</b>: application vulnerability</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -285,12 +287,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                         /// <summary>
                         /// <para>The name of the vulnerability. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>system vulnerability</b></description></item>
-                        /// <item><description><b>application vulnerability</b></description></item>
+                        /// <item><description><para><b>system vulnerability</b></para>
+                        /// </description></item>
+                        /// <item><description><para><b>application vulnerability</b></para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>system vulnerability</para>
+                        /// <para>系统漏洞</para>
                         /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
@@ -366,8 +370,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>zh</b>: Chinese</description></item>
-            /// <item><description><b>en</b>: English</description></item>
+            /// <item><description><para><b>zh</b>: Chinese</para>
+            /// </description></item>
+            /// <item><description><para><b>en</b>: English</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -380,8 +386,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the rule supports malicious Internet images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -404,9 +412,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The action that is performed when the rule is hit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: trigger alerts</description></item>
-            /// <item><description><b>2</b>: block</description></item>
-            /// <item><description><b>3</b>: allow</description></item>
+            /// <item><description><para><b>1</b>: trigger alerts</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: block</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: allow</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -436,8 +447,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>Indicates whether all namespaces are included. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: yes</description></item>
-                /// <item><description><b>0</b>: no</description></item>
+                /// <item><description><para><b>1</b>: yes</para>
+                /// </description></item>
+                /// <item><description><para><b>0</b>: no</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -499,8 +512,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the rule supports unscanned images. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -552,8 +567,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

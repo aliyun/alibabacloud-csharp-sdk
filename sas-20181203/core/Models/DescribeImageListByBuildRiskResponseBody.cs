@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageListByBuildRiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeImageListByBuildRiskResponseBodyData Data { get; set; }
         public class DescribeImageListByBuildRiskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The images.</para>
+            /// <para>The list of images.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Digest { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp generated when the first scan was performed. Unit: milliseconds.</para>
+                /// <para>The timestamp of the first scan. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1723710827000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp generated when the last scan was performed. Unit: milliseconds.</para>
+                /// <para>The timestamp of the most recent scan. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1723710827999</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? LastScanTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RepoName { get; set; }
 
                 /// <summary>
-                /// <para>The namespace to which the image repository belongs.</para>
+                /// <para>The namespace of the image repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>namespace</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <list type="bullet">
                 /// <item><description><b>high</b></description></item>
                 /// <item><description><b>medium</b></description></item>
-                /// <item><description><b>low</b></description></item>
+                /// <item><description><b>low</b>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -119,11 +119,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The status of the alert event. Valid values:</para>
+                /// <para>The status of the alert event to query. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: unhandled.</description></item>
-                /// <item><description><b>1</b>: ignored.</description></item>
-                /// <item><description><b>2</b>: false positive.</description></item>
+                /// <item><description><b>0</b>: Unhandled.</description></item>
+                /// <item><description><b>1</b>: Ignored.</description></item>
+                /// <item><description><b>2</b>: False positive.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public DescribeImageListByBuildRiskResponseBodyDataPageInfo PageInfo { get; set; }
             public class DescribeImageListByBuildRiskResponseBodyDataPageInfo : TeaModel {
                 /// <summary>
-                /// <para>The page number. Default value: <b>1</b>.</para>
+                /// <para>The page number of the current page in paging query. Default value: <b>1</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -173,9 +173,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? CurrentPage { get; set; }
 
                 /// <summary>
-                /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+                /// <para>The maximum number of entries per page in paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</para>
                 /// <remarks>
-                /// <para> We recommend that you do not leave this parameter empty.</para>
+                /// <para>Do not leave PageSize empty.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The detailed information about the error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -220,10 +220,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

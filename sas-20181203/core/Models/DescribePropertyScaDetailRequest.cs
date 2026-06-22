@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribePropertyScaDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the asset fingerprint that you want to query. Default value: <b>sca</b>. Valid values:</para>
+        /// <para>The type of Asset Fingerprints to query. Default value: <b>sca</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>sca</b>: middleware</description></item>
         /// <item><description><b>sca_database</b>: database</description></item>
         /// <item><description><b>sca_web</b>: web service</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the default value <b>sca</b> is used, which indicates that middleware fingerprints are queried.</para>
+        /// <para>If this parameter is not set, the default value <b>sca</b> is used, which queries Asset Fingerprints information of the middleware type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Biz { get; set; }
 
         /// <summary>
-        /// <para>The type of the middleware, database, or web service that you want to query. Valid values:</para>
+        /// <para>The type of middleware, database, or web service to query. Valid values:  </para>
         /// <list type="bullet">
         /// <item><description><b>system_service</b>: system service</description></item>
         /// <item><description><b>software_library</b>: software library</description></item>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>database</b>: database</description></item>
         /// <item><description><b>web_container</b>: web container</description></item>
         /// <item><description><b>jar</b>: JAR package</description></item>
-        /// <item><description><b>web_framework</b>: web framework</description></item>
+        /// <item><description><b>web_framework</b>: web framework.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in the query results. Default value: <b>1</b>, which indicates that the results are displayed starting from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The name of the middleware, database, or web service.</para>
         /// <remarks>
-        /// <para> This parameter is deprecated. You can ignore it.</para>
+        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Name { get; set; }
 
         /// <summary>
-        /// <para>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</para>
+        /// <para>The token that marks the current position from which to start reading. Leave this parameter empty to start reading from the beginning.</para>
+        /// <remarks>
+        /// <para>Do not specify this parameter for the first call. The response includes the NextToken value for the second call. Each subsequent response contains the NextToken value for the next call.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6k+AtdhNE3kgQEK36GujZ5on+tWdc+4WoaoMP/kUNxxxx</para>
@@ -94,9 +97,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>Sets the number of Asset Fingerprints entries per page in a paged query. Default value: <b>10</b>, which indicates that 10 Asset Fingerprints entries are displayed per page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The PID.</para>
+        /// <para>The process ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>756</para>
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Pid { get; set; }
 
         /// <summary>
-        /// <para>The port that the process monitors.</para>
+        /// <para>The port on which the process listens.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68</para>
@@ -127,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the process ends. Unit: milliseconds.</para>
+        /// <para>The end of the time range for querying the process start timestamp. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1641110965</para>
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ProcessStartedEnd { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the process starts. Unit: milliseconds.</para>
+        /// <para>The start of the time range for querying the process start timestamp. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1641024565</para>
@@ -147,9 +150,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ProcessStartedStart { get; set; }
 
         /// <summary>
-        /// <para>The search condition, such as a server name or a server IP address.</para>
+        /// <para>The search condition (server name or IP address).</para>
         /// <remarks>
-        /// <para> Fuzzy match is supported.</para>
+        /// <para>Fuzzy match is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -160,7 +163,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The name of the asset fingerprint that you want to query.</para>
+        /// <para>The name of the Asset Fingerprints entry to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>openssl</para>
@@ -170,7 +173,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScaName { get; set; }
 
         /// <summary>
-        /// <para>The name of the process.</para>
+        /// <para>The process name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>open</para>
@@ -190,14 +193,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScaVersion { get; set; }
 
         /// <summary>
-        /// <para>搜索条件列表</para>
+        /// <para>The list of search criteria.</para>
         /// </summary>
         [NameInMap("SearchCriteriaList")]
         [Validation(Required=false)]
         public List<DescribePropertyScaDetailRequestSearchCriteriaList> SearchCriteriaList { get; set; }
         public class DescribePropertyScaDetailRequestSearchCriteriaList : TeaModel {
             /// <summary>
-            /// <para>搜索条件名称</para>
+            /// <para>The name of the search criterion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Name</para>
@@ -207,7 +210,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>搜索条件过滤值</para>
+            /// <para>The filter value of the search criterion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -219,12 +222,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The search keyword. You must specify this parameter based on the value of the <b>SearchItem</b> parameter.</para>
+        /// <para>The content to query. Depending on the value of <b>SearchItem</b>, you need to enter different query content:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the <b>SearchItem</b> parameter is set to <b>name</b>, you must enter the name of an asset fingerprint.</para>
-        /// </description></item>
-        /// <item><description><para>If the <b>SearchItem</b> parameter is set to <b>type</b>, you must enter the type of an asset fingerprint. Valid values:</para>
-        /// <list type="bullet">
+        /// <item><description>If <b>SearchItem</b> is set to <b>name</b>, enter the name of the asset fingerprint as the query condition.</description></item>
+        /// <item><description>If <b>SearchItem</b> is set to <b>type</b>, select the type of asset fingerprint to query. Valid values:   <list type="bullet">
         /// <item><description><b>system_service</b>: system service</description></item>
         /// <item><description><b>software_library</b>: software library</description></item>
         /// <item><description><b>docker_component</b>: container component</description></item>
@@ -236,7 +237,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify both the <b>SearchItem</b> and <b>SearchInfo</b> parameters before you can query the asset fingerprints based on the specified name or type.</para>
+        /// <para>The <b>SearchItem</b> and <b>SearchInfo</b> parameters must be used together. Setting only one of them has no effect. By setting both parameters, you can view all data for asset fingerprints of a specified name or type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -247,15 +248,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchInfo { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the subquery. You must specify this parameter based on the value of the <b>SearchItemSub</b> parameter.</para>
+        /// <para>The content of the sub-query condition. Depending on the value of <b>SearchItemSub</b>, you need to enter different query content:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>port</b>, you must enter a port number.</description></item>
-        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>pid</b>, you must enter a process ID (PID).</description></item>
-        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>version</b>, you must enter the version of a database, middleware, or web service.</description></item>
-        /// <item><description>If the <b>SearchItemSub</b> parameter is set to <b>user</b>, you must enter a username.</description></item>
+        /// <item><description>If <b>SearchItemSub</b> is set to <b>port</b>, enter the port as the sub-query condition.</description></item>
+        /// <item><description>If <b>SearchItemSub</b> is set to <b>pid</b>, enter the process ID as the sub-query condition.</description></item>
+        /// <item><description>If <b>SearchItemSub</b> is set to <b>version</b>, enter the middleware, database, or web service version as the sub-query condition.</description></item>
+        /// <item><description>If <b>SearchItemSub</b> is set to <b>user</b>, enter the username as the sub-query condition.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The subquery is used to search for data of a specified database, middleware, or web service.</para>
+        /// <para>Sub-query conditions help you search for the data list of a specific middleware, database, or web service.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -266,13 +267,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchInfoSub { get; set; }
 
         /// <summary>
-        /// <para>The type of the search condition. Valid values:</para>
+        /// <para>The type of query condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: the name of a database, middleware, or web service</description></item>
-        /// <item><description><b>type</b>: the type of a database, middleware, or web service</description></item>
+        /// <item><description><b>name</b>: the name of the middleware, database, or web service.</description></item>
+        /// <item><description><b>type</b>: the type of the middleware, database, or web service.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must specify both the <b>SearchItem</b> and <b>SearchInfo</b> parameters before you can query the asset fingerprints based on the specified name or type.</para>
+        /// <para>The <b>SearchItem</b> and <b>SearchInfo</b> parameters must be used together. Setting only one of them has no effect. By setting both parameters, you can view all data for asset fingerprints of a specified name or type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -283,12 +284,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchItem { get; set; }
 
         /// <summary>
-        /// <para>The type of the subquery. Valid values:</para>
+        /// <para>The type of sub-query condition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>port</b></description></item>
-        /// <item><description><b>pid</b></description></item>
-        /// <item><description><b>version</b></description></item>
-        /// <item><description><b>user</b></description></item>
+        /// <item><description><b>port</b>: port</description></item>
+        /// <item><description><b>pid</b>: process ID</description></item>
+        /// <item><description><b>version</b>: version</description></item>
+        /// <item><description><b>user</b>: user.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -299,10 +300,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SearchItemSub { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</para>
+        /// <para>Specifies whether to use the NextToken method to retrieve asset list data. If this parameter is used, TotalCount is no longer returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The NextToken method is used.</description></item>
-        /// <item><description><b>false</b>: The NextToken method is not used.</description></item>
+        /// <item><description><b>true</b>: Use the NextToken method.</description></item>
+        /// <item><description><b>false</b>: Do not use the NextToken method.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -313,7 +314,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? UseNextToken { get; set; }
 
         /// <summary>
-        /// <para>The user who runs the process.</para>
+        /// <para>The user that runs the process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -323,7 +324,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string User { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server on which the middleware, database, or web service is run.</para>
+        /// <para>The UUID of the server on which the middleware, database, or web service is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uuid-02ebabe7-1c19-ab****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetClientUserDefineRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom defense rule.</para>
+        /// <para>The ID of the custom rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateHoneypotProbeBindRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the honeypot to which the probe is bound.</para>
+        /// <para>The unique ID of the bound service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f52e8624-e43c-473c-8312-e0fed384****</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BindId { get; set; }
 
         /// <summary>
-        /// <para>The ports that are bound to the probe.</para>
+        /// <para>The list of bound ports.</para>
         /// </summary>
         [NameInMap("BindPortList")]
         [Validation(Required=false)]
         public List<UpdateHoneypotProbeBindRequestBindPortList> BindPortList { get; set; }
         public class UpdateHoneypotProbeBindRequestBindPortList : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to bind a port. Valid values:</para>
+            /// <para>Specifies whether to bind the port. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Yes.</description></item>
+            /// <item><description><b>false</b>: No.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? BindPort { get; set; }
 
             /// <summary>
-            /// <para>The end port on which the probe monitors.</para>
+            /// <para>The end port that the probe listens on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>81</para>
@@ -53,8 +53,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether the port is fixed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: no</description></item>
-            /// <item><description><b>1</b>: yes</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Fixed { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the port.</para>
+            /// <para>The unique identifier of the bound port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3183</para>
@@ -75,10 +75,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The type of the protocol. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>tcp</b></description></item>
-            /// <item><description><b>udp</b></description></item>
+            /// <item><description><b>udp</b>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Proto { get; set; }
 
             /// <summary>
-            /// <para>The start port on which the probe monitors.</para>
+            /// <para>The start port that the probe listens on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>81</para>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The operation that the probe performs. Valid values:</para>
+        /// <para>The service binding type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>forward_honey</b>: forward traffic to a honeypot</description></item>
-        /// <item><description><b>scan_port</b>: monitor and scan</description></item>
+        /// <item><description><b>forward_honey</b>: forward to honeypot</description></item>
+        /// <item><description><b>scan_port</b>: listen for scans.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BindType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Minimum value: <b>1</b>. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The honeypot ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain the IDs of honeypots.</para>
+        /// <para>You can call the <a href="~~ListHoneypot~~">ListHoneypot</a> operation to obtain this value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HoneypotId { get; set; }
 
         /// <summary>
-        /// <para>The port ID of the probe service.</para>
+        /// <para>The probe service port ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1906</para>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,9 +172,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
+        /// <para>The maximum number of entries to return on each page when using paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page by paging.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ports that are monitored.</para>
+        /// <para>The listening port range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;tcp\&quot;:\&quot;1-65535\&quot;,\&quot;udp\&quot;:\&quot;1-65535\&quot;}</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The probe ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to query the IDs of probes.</para>
+        /// <para>You can call the <a href="~~ListHoneypotProbe~~">ListHoneypotProbe</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProbeId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses that are monitored.</para>
+        /// <para>The list of listening IP addresses.</para>
         /// </summary>
         [NameInMap("ServiceIpList")]
         [Validation(Required=false)]
         public List<string> ServiceIpList { get; set; }
 
         /// <summary>
-        /// <para>The status of the port.</para>
+        /// <para>The listening port status setting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

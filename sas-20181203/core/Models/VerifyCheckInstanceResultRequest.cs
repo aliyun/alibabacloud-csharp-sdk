@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</para>
+        /// <para>You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,21 +23,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>List of item IDs to be checked.</para>
+        /// <para>The list of IDs of the check items.</para>
         /// </summary>
         [NameInMap("CheckIds")]
         [Validation(Required=false)]
         public List<long?> CheckIds { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs of the assets on which risks are detected based on the check item.</para>
+        /// <para>The list of instance IDs of the assets affected by the check item.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The source of task.</para>
+        /// <para>The source of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>YAO_CHI</b>: YaoChi console.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>YAO_CHI</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageGroupedVulListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current page in the paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the image vulnerabilities.</para>
+        /// <para>The list of image vulnerabilities.</para>
         /// </summary>
         [NameInMap("GroupedVulItems")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AliasName { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that have the high priority.</para>
+            /// <para>The number of high-risk vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AsapCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</para>
+            /// <para>Indicates whether the vulnerability can be fixed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>yes</b></description></item>
-            /// <item><description><b>no</b></description></item>
+            /// <item><description><b>yes</b>: The vulnerability can be fixed.</description></item>
+            /// <item><description><b>no</b>: The vulnerability cannot be fixed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CanFix { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the first scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the first scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1611201274000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtLast { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the last scan was performed. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1611201274000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastScanTime { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that have the medium priority.</para>
+            /// <para>The number of medium-risk vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that have the low priority.</para>
+            /// <para>The number of low-risk vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29</para>
@@ -111,9 +111,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? NntfCount { get; set; }
 
             /// <summary>
-            /// <para>The tag of this vulnerability. Valid values:</para>
+            /// <para>The vulnerability tag. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AI</b>: AI-related components.</description></item>
+            /// <item><description><b>AI</b>: vulnerabilities related to AI components.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,12 +124,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleTag { get; set; }
 
             /// <summary>
-            /// <para>The status of the vulnerability. Valid values:</para>
+            /// <para>The processing status of the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: unhandled</description></item>
-            /// <item><description><b>1</b>: handled</description></item>
-            /// <item><description><b>2</b>: verifying</description></item>
-            /// <item><description><b>3</b>: added to the whitelist</description></item>
+            /// <item><description><b>0</b>: Unhandled.</description></item>
+            /// <item><description><b>1</b>: Handled.</description></item>
+            /// <item><description><b>2</b>: Verifying.</description></item>
+            /// <item><description><b>3</b>: Added to the whitelist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,12 +140,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The tag of the vulnerability. Valid values:</para>
+            /// <para>The label of the vulnerability. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Restart required</description></item>
-            /// <item><description>Remote exploitation</description></item>
-            /// <item><description>Exploit exists</description></item>
-            /// <item><description>Exploitable</description></item>
+            /// <item><description>Remote utilization</description></item>
+            /// <item><description>EXP exists</description></item>
+            /// <item><description>Available</description></item>
             /// <item><description>Privilege escalation</description></item>
             /// <item><description>Code execution</description></item>
             /// </list>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The type of the vulnerability. Valid values:</para>
+            /// <para>The type of vulnerability to query. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>cve</b>: image system vulnerability</description></item>
-            /// <item><description><b>sca</b>: image application vulnerability</description></item>
+            /// <item><description><b>sca</b>: image application vulnerability.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+        /// <para>The number of image vulnerabilities returned on each page in the paging query. Default value: <b>20</b>, which indicates that 20 image vulnerability records are returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E244439-UJND-8BF7-26F36E21B9AA</para>

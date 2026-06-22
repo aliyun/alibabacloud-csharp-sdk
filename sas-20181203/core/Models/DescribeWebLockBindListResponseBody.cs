@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeWebLockBindListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the servers that have web tamper proofing enabled.</para>
+        /// <para>The collection of servers that have web tamper-proofing protection enabled.</para>
         /// </summary>
         [NameInMap("BindList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AuditCount { get; set; }
 
             /// <summary>
-            /// <para>The number of blocked tampering events.</para>
+            /// <para>The number of blocked events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The operating system that the server runs.</para>
+            /// <para>The operating system type of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The percentage of the starting progress of web tamper proofing. Valid values: 0 to 100.</para>
+            /// <para>The startup progress of web tamper-proofing protection, in percentage. Value range: 0 to 100%.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Percent { get; set; }
 
             /// <summary>
-            /// <para>The error code for web tamper proofing. Valid values:</para>
+            /// <para>The error code for the web tamper-proofing service exception. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>2001</b>: The Security Center agent is offline.</description></item>
-            /// <item><description><b>9999</b>: The connection timed out.</description></item>
+            /// <item><description><b>2001</b>: The client is offline.</description></item>
+            /// <item><description><b>9999</b>: The connection timeout.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,10 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>The exception details of web tamper proofing. Valid values:</para>
+            /// <para>The details of the web tamper-proofing service exception. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>client offline</b>: The Security Center agent is offline.</description></item>
-            /// <item><description><b>timeout</b>: The connection timed out.</description></item>
+            /// <item><description><b>client offline</b>: The client is offline.</description></item>
+            /// <item><description><b>timeout</b>: The connection timeout.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,13 +125,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ServiceDetail { get; set; }
 
             /// <summary>
-            /// <para>The status of web tamper proofing on the server. Valid values:</para>
+            /// <para>The web tamper-proofing service status of the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>stop</b>: Web tamper proofing is disabled.</description></item>
-            /// <item><description><b>initializing</b>: Web tamper proofing is being enabled.</description></item>
-            /// <item><description><b>exception</b>: Web tamper proofing is not running as expected.</description></item>
-            /// <item><description><b>running</b>: Web tamper proofing is running.</description></item>
-            /// <item><description><b>closing</b>: Web tamper proofing is being disabled.</description></item>
+            /// <item><description><b>stop</b>: The tamper-proofing service is not started.</description></item>
+            /// <item><description><b>initializing</b>: The tamper-proofing service is starting.</description></item>
+            /// <item><description><b>exception</b>: The tamper-proofing service is abnormal.</description></item>
+            /// <item><description><b>running</b>: The tamper-proofing service is running.</description></item>
+            /// <item><description><b>closing</b>: The tamper-proofing service is undergoing shutdown.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,8 +144,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The protection status of the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>on</b>: The server is protected.</description></item>
-            /// <item><description><b>off</b>: The server is not protected.</description></item>
+            /// <item><description><b>on</b>: Protection is enabled.</description></item>
+            /// <item><description><b>off</b>: Protection is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the current page in a paging query. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: 20.</para>
+        /// <para>The maximum number of entries per page in a paging query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The China value is a unique identifier generated by Alibaba Cloud for the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9354C1A-D709-4873-9AAE-41513327B247</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of servers that have web tamper proofing enabled.</para>
+        /// <para>The total number of servers attached to web tamper-proofing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11409</para>

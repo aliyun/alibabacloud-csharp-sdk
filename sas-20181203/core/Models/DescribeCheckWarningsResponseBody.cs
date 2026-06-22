@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the check item.</para>
+        /// <para>The details of the check items returned.</para>
         /// </summary>
         [NameInMap("CheckWarnings")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the alert that is generated for the baseline check result.</para>
+            /// <para>The alert data ID of the baseline check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>212251441</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CheckWarningId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the container.</para>
+            /// <para>The container ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8de456b00ff0a2009ee8ef7fc59fd0457fa44f20b8282af3e79c2a0e2492****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the container.</para>
+            /// <para>The container name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/svn-host</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerName { get; set; }
 
             /// <summary>
-            /// <para>The error message in the check result.</para>
+            /// <para>The error message during the alert data check.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ScriptKilledOfCpuHigh</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ExecErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether fixing is supported. Valid values:</para>
+            /// <para>Indicates whether the fix is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Fixing is not supported.</description></item>
-            /// <item><description><b>1</b>: Fixing is supported.</description></item>
+            /// <item><description><b>0</b>: not supported</description></item>
+            /// <item><description><b>1</b>: supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,21 +91,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Item { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the latest processing of the check item risk of the machine. Unit: milliseconds.</para>
+            /// <para>The timestamp of the most recent handling of the check item risk on the server. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1694692471000</para>
+            /// <para>1704937755000</para>
             /// </summary>
             [NameInMap("LastHandleTime")]
             [Validation(Required=false)]
             public long? LastHandleTime { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the risk item. Valid values:</para>
+            /// <para>The risk level of the baseline check risk item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><b>high</b>: high</description></item>
+            /// <item><description><b>medium</b>: medium</description></item>
+            /// <item><description><b>low</b>: low.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
@@ -128,11 +128,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: failed.</description></item>
-            /// <item><description><b>2</b>: verifying.</description></item>
-            /// <item><description><b>3</b>: passed.</description></item>
-            /// <item><description><b>5</b>: expired.</description></item>
-            /// <item><description><b>6</b>: ignored.</description></item>
+            /// <item><description><para><b>1</b>: The baseline check failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: The baseline fix is being verified.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: The baseline check passed.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: The baseline check status has expired.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: The baseline check item has been ignored.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +170,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of check items displayed on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -175,7 +180,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -185,7 +190,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Default value: <b>20</b>.</para>
+        /// <para>The number of check items displayed on each page in a paged query. Default value: <b>20</b>, which indicates that 20 check items are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -195,7 +200,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0DFCADBA-7065-42DA-AF17-6868B9C2A8CF</para>
@@ -205,7 +210,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of check items returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

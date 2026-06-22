@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DeleteBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the anti-ransomware policy that you want to delete.</para>
+        /// <para>The ID of the mitigation policies that you want to delete.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the IDs of anti-ransomware policies.</para>
+        /// <para>Invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The version of the anti-ransomware policy that you want to delete. You can call the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query the versions of anti-ransomware policies. Valid values:</para>
+        /// <para>The version of the mitigation policies that you want to delete. You can invoke the <a href="~~DescribeBackupPolicies~~">DescribeBackupPolicies</a> operation to query this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1.0.0</b></description></item>
-        /// <item><description><b>2.0.0</b></description></item>
+        /// <item><description><b>1.0.0</b>: The mitigation policies version is 1.0.0.</description></item>
+        /// <item><description><b>2.0.0</b>: The mitigation policies version is 2.0.0.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

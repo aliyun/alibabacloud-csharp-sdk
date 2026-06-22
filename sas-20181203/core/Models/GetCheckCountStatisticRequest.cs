@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckCountStatisticRequest : TeaModel {
         /// <summary>
-        /// <para>语言参数</para>
+        /// <para>Language parameter</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -22,10 +22,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of the statistics. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>user</b>: the top five users that are granted excessive permissions.</description></item>
-        /// <item><description><b>role</b>: the top five roles that are granted excessive permissions.</description></item>
-        /// <item><description><b>instance</b>: the top five cloud services on which risks are detected.</description></item>
-        /// <item><description><b>host</b>: the top five servers on which baseline risks are detected.</description></item>
+        /// <item><description><para><b>user</b>: the top five users that are granted excessive permissions.</para>
+        /// </description></item>
+        /// <item><description><para><b>role</b>: the top five roles that are granted excessive permissions.</para>
+        /// </description></item>
+        /// <item><description><para><b>instance</b>: the top five cloud services on which risks are detected.</para>
+        /// </description></item>
+        /// <item><description><para><b>host</b>: the top five servers on which baseline risks are detected.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

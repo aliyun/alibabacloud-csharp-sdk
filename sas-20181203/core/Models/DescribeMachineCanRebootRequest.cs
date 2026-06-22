@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeMachineCanRebootRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the vulnerabilities. Valid values:</para>
+        /// <para>The type of vulnerability that requires a restart to fix. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cve: Linux software vulnerabilities</description></item>
-        /// <item><description>sys: Windows system vulnerabilities</description></item>
+        /// <item><description>cve: Linux software vulnerability</description></item>
+        /// <item><description>sys: Windows system vulnerability.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the server.</para>
+        /// <para>The UUID of the server to restart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b268326-273e-44fc-a0e3-9482435c****</para>

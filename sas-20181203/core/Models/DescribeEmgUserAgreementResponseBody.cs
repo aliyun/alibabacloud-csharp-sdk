@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeEmgUserAgreementResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether Security Center is authorized to scan for urgent vulnerabilities. Valid values:</para>
+        /// <para>Indicates whether the emergency vulnerability scan is authorized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><b>true</b>: Authorized.</description></item>
+        /// <item><description><b>false</b>: Not authorized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

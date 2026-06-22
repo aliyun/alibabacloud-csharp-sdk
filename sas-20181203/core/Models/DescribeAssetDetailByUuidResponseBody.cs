@@ -10,23 +10,23 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAssetDetailByUuidResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the server.</para>
+        /// <para>The asset details.</para>
         /// </summary>
         [NameInMap("AssetDetail")]
         [Validation(Required=false)]
         public DescribeAssetDetailByUuidResponseBodyAssetDetail AssetDetail { get; set; }
         public class DescribeAssetDetailByUuidResponseBodyAssetDetail : TeaModel {
             /// <summary>
-            /// <para>The type of the asset. Valid values:</para>
+            /// <para>The asset type. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: ECS instance</description></item>
-            /// <item><description><b>1</b>: Server Load Balancer (SLB) instance</description></item>
-            /// <item><description><b>2</b>: NAT gateway</description></item>
-            /// <item><description><b>3</b>: ApsaraDB RDS database</description></item>
-            /// <item><description><b>4</b>: ApsaraDB for MongoDB database</description></item>
-            /// <item><description><b>5</b>: ApsaraDB for Redis database</description></item>
-            /// <item><description><b>6</b>: image</description></item>
-            /// <item><description><b>7</b>: container</description></item>
+            /// <item><description><b>0</b>: Elastic Compute Service (ECS) server.</description></item>
+            /// <item><description><b>1</b>: Server Load Balancer (SLB).</description></item>
+            /// <item><description><b>2</b>: NAT gateway.</description></item>
+            /// <item><description><b>3</b>: ApsaraDB RDS database.</description></item>
+            /// <item><description><b>4</b>: MongoDB database.</description></item>
+            /// <item><description><b>5</b>: Redis database.</description></item>
+            /// <item><description><b>6</b>: container image.</description></item>
+            /// <item><description><b>7</b>: container.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when Security Center is authorized to protect the asset. Unit: milliseconds.</para>
+            /// <para>The timestamp when the asset authorization was bound, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1627974044000</para>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AuthModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The edition of Security Center that is authorized to protect the asset. Valid values:</para>
+            /// <para>The authorization version of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Basic edition (Unauthorized)</description></item>
-            /// <item><description><b>6</b>: Anti-virus edition</description></item>
-            /// <item><description><b>5</b>: Advanced edition</description></item>
-            /// <item><description><b>3</b>: Enterprise edition</description></item>
-            /// <item><description><b>7</b>: Ultimate edition</description></item>
+            /// <item><description><b>1</b>: Free Edition (unauthorized).</description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition.</description></item>
+            /// <item><description><b>5</b>: Advanced Edition.</description></item>
+            /// <item><description><b>3</b>: Enterprise Edition.</description></item>
+            /// <item><description><b>7</b>: Ultimate Edition.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,10 +64,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AuthVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Security Center is authorized to protect the asset. Valid values:</para>
+            /// <para>Indicates whether the asset is bound to an authorization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><b>true</b>: The asset is bound to an authorization.</description></item>
+            /// <item><description><b>false</b>: The asset is not bound to an authorization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Bind { get; set; }
 
             /// <summary>
-            /// <para>The status of the Security Center agent. Valid values:</para>
+            /// <para>The status of the China China agent client. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><b>pause</b>: The Security Center agent suspends protection for your server.</description></item>
-            /// <item><description><b>online</b>: The Security Center agent is protecting your server.</description></item>
-            /// <item><description><b>offline</b>: The Security Center agent does not protect your server.</description></item>
+            /// <item><description><b>pause</b>: Protection paused.</description></item>
+            /// <item><description><b>online</b>: Protected.</description></item>
+            /// <item><description><b>offline</b>: Not protected.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientStatus { get; set; }
 
             /// <summary>
-            /// <para>The version of the Security Center agent.</para>
+            /// <para>The version of the agent client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The details of the CPU.</para>
+            /// <para>The CPU details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Intel(R) Xeon(R) Platinum 8163 CPU @ 2.50GHz</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CpuInfo { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when Security Center records the details of the server. Unit: milliseconds.</para>
+            /// <para>The timestamp when Security Center recorded the asset information, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1603863599000</para>
@@ -133,17 +133,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the information about the disk.</para>
+            /// <para>The collection of disk information.</para>
             /// </summary>
             [NameInMap("DiskInfoList")]
             [Validation(Required=false)]
             public List<string> DiskInfoList { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asset is provided by Alibaba Cloud. Valid values:</para>
+            /// <para>Indicates whether the asset is an Alibaba Cloud asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: yes</description></item>
-            /// <item><description><b>1</b>: no</description></item>
+            /// <item><description><b>0</b>: Alibaba Cloud asset.</description></item>
+            /// <item><description><b>1</b>: Non-Alibaba Cloud asset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Flag { get; set; }
 
             /// <summary>
-            /// <para>The group to which the server belongs. By default, the servers that are not grouped belong to the <b>Default</b> group.</para>
+            /// <para>The group to which the server belongs. Servers that are not assigned to a group belong to the <b>Ungrouped</b> group by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string GroupTrace { get; set; }
 
             /// <summary>
-            /// <para>The name of the host.</para>
+            /// <para>The hostname.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qewrqwerqs****</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The IP address that is assigned to the Elastic Compute Service (ECS) instance.</para>
+            /// <para>The IP address assigned by ECS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of the server.</para>
+            /// <para>The list of IP addresses of the server.</para>
             /// </summary>
             [NameInMap("IpList")]
             [Validation(Required=false)]
@@ -241,14 +241,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Kernel { get; set; }
 
             /// <summary>
-            /// <para>The media access control (MAC) addresses of the server.</para>
+            /// <para>The MAC addresses.</para>
             /// </summary>
             [NameInMap("MacList")]
             [Validation(Required=false)]
             public List<string> MacList { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the server. Unit: GB.</para>
+            /// <para>The memory size, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Mem { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the server. Unit: MB.</para>
+            /// <para>The memory size, in MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>512</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The operating system version of the server.</para>
+            /// <para>The operating system version and architecture of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux 64bit</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OsDetail { get; set; }
 
             /// <summary>
-            /// <para>The name of the operating system.</para>
+            /// <para>The operating system name of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OsName { get; set; }
 
             /// <summary>
-            /// <para>The region in which the server resides.</para>
+            /// <para>The region where the server resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-dg-a01</para>
@@ -310,7 +310,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the asset resides.</para>
+            /// <para>The region ID of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hanghzou</para>
@@ -320,7 +320,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region in which the server resides.</para>
+            /// <para>The name of the region where the server resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China (Hohhot)</para>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>The operating system information about the server.</para>
+            /// <para>The operating system information of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CentOS Linux 8.0.1905</para>
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SysInfo { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the server.</para>
+            /// <para>The tag of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InternetIp</para>
@@ -360,7 +360,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC) in which the server resides.</para>
+            /// <para>The ID of the VPC instance where the server resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1fs3bwonlfq503w****</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39031E31-6BBA-5C99-A870-D807E78918CD</para>

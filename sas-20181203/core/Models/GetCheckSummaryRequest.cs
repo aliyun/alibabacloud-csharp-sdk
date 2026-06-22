@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the statistics of the check items, including the number of check items supported by the system and the number of check items available to you. Default value: <b>false</b>. Valid values:</para>
+        /// <para>Specifies whether to return check item statistics information, including the number of check items published by the system and the number of check items currently owned by the user. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Returns the statistics information.</description></item>
+        /// <item><description><b>false</b>: Does not return the statistics information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? IsItemStatistic { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language type for requests and responses.</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the member accounts in the resource directory.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to query the IDs of Alibaba Cloud accounts.</para>
+        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>List of task sources.</para>
+        /// <para>The list of task sources.</para>
         /// </summary>
         [NameInMap("TaskSources")]
         [Validation(Required=false)]
         public List<string> TaskSources { get; set; }
 
         /// <summary>
-        /// <para>The cloud service providers.</para>
+        /// <para>The list of cloud service providers.</para>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

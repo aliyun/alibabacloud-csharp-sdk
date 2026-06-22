@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBaselineCheckResultRequest : TeaModel {
         /// <summary>
-        /// <para>The search condition for the image baseline.</para>
+        /// <para>The query condition for the baseline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ak_leak</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The type of the search condition. Valid values:</para>
+        /// <para>The query type of the baseline to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BaselineNameAlias</b>: baseline name</description></item>
-        /// <item><description><b>BaselineClassAlias</b>: baseline category</description></item>
+        /// <item><description><para><b>BaselineNameAlias</b>: baseline name</para>
+        /// </description></item>
+        /// <item><description><para><b>BaselineClassAlias</b>: baseline category.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number of the current page when using paging. Default value: 20, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,10 +57,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageUuid { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page when using paging. Default value: <b>20</b>, which indicates that 20 logon configuration entries are displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -79,11 +81,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The severity of the image baseline that you want to query. Separate multiple severities with commas (,). By default, all valid values are used. Valid values:</para>
+        /// <para>The risk level of the baseline to query. Separate multiple levels with commas (,). By default, all levels are included. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><para><b>high</b>: high risk</para>
+        /// </description></item>
+        /// <item><description><para><b>medium</b>: medium risk</para>
+        /// </description></item>
+        /// <item><description><para><b>low</b>: low risk.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The types of the assets that you want to scan.</para>
+        /// <para>The scan scope.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]

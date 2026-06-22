@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyAccessKeyLeakDealRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the AccessKey pair leak.</para>
+        /// <para>The ID of the AccessKey pair leak record.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to query the ID. You must specify at least one of the Id and <b>IdList</b> parameters.</para>
+        /// <para>Call the <a href="~~DescribeAccesskeyLeakList~~">DescribeAccesskeyLeakList</a> operation to obtain this parameter. This parameter and the <b>IdList</b> parameter cannot both be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The IDs of AccessKey pair leaks.</para>
+        /// <para>The IDs of the AccessKey pair leak records.</para>
         /// </summary>
         [NameInMap("IdList")]
         [Validation(Required=false)]
         public List<long?> IdList { get; set; }
 
         /// <summary>
-        /// <para>The remarks that are added.</para>
+        /// <para>The remarks for handling the AccessKey pair leak record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>disabled.</para>
@@ -40,11 +40,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The method to handle the AccessKey pair leak. Valid values:</para>
+        /// <para>The method to handle the AccessKey pair leak information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>manual</b>: manually handle</description></item>
-        /// <item><description><b>disable</b>: disable</description></item>
-        /// <item><description><b>add-whitelist</b>: add to the whitelist</description></item>
+        /// <item><description><b>manual</b>: Manual handling.</description></item>
+        /// <item><description><b>disable</b>: Disable.</description></item>
+        /// <item><description><b>add-whitelist</b>: Add to whitelist.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

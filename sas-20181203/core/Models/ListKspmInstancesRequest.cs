@@ -10,15 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListKspmInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>List of Kubernetes asset type information.</para>
+        /// <para>The list of asset type information for Kubernetes assets.</para>
         /// </summary>
         [NameInMap("CloudAssetTypes")]
         [Validation(Required=false)]
         public List<ListKspmInstancesRequestCloudAssetTypes> CloudAssetTypes { get; set; }
         public class ListKspmInstancesRequestCloudAssetTypes : TeaModel {
             /// <summary>
-            /// <para>Subtype of the product.
-            /// Asset type-subtype. Values:</para>
+            /// <para>The subtype of the asset. The value is in the format of asset type - subtype. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Workload<list type="bullet">
             /// <item><description><b>0</b>: Pod</description></item>
@@ -63,7 +62,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// </description></item>
             /// <item><description><b>8</b>: Policies<list type="bullet">
             /// <item><description><b>0</b>: LimitRanges</description></item>
-            /// <item><description><b>1</b>: ResourceQuota</description></item>
+            /// <item><description><b>1</b>: ResourceQuota.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -76,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetSubType { get; set; }
 
             /// <summary>
-            /// <para>Type of the asset. Values:</para>
+            /// <para>The type of the asset. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: Workload</description></item>
             /// <item><description><b>1</b>: Service</description></item>
@@ -86,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>5</b>: Container</description></item>
             /// <item><description><b>6</b>: Network</description></item>
             /// <item><description><b>7</b>: Configuration</description></item>
-            /// <item><description><b>8</b>: Policies</description></item>
+            /// <item><description><b>8</b>: Policies.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetType { get; set; }
 
             /// <summary>
-            /// <para>Vendor of the asset. The fixed value is <b>200</b>.</para>
+            /// <para>The asset vendor. This parameter is fixed to <b>200</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -109,14 +108,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Set the conditions for searching assets. This parameter is in JSON format, and case sensitivity should be noted when entering parameters. It includes the following fields:</para>
+        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter. The following fields are included:</para>
         /// <list type="bullet">
-        /// <item><description><b>name</b>: Search item</description></item>
-        /// <item><description><b>value</b>: Value of the search item</description></item>
-        /// <item><description><b>logicalExp</b>: The relationship between search items when multiple conditions are used. Values:<list type="bullet">
-        /// <item><description><b>OR</b>: Indicates an <b>or</b> relationship between multiple conditions.</description></item>
-        /// <item><description><b>AND</b>: Indicates an <b>and</b> relationship between multiple conditions.<remarks>
-        /// <para>Supports using region, instance name, instance ID, alarm status, risk status, and tag search conditions.</para>
+        /// <item><description><b>name</b>: the search item.</description></item>
+        /// <item><description><b>value</b>: the value of the search item.</description></item>
+        /// <item><description><b>logicalExp</b>: the logical relationship between multiple conditions. Valid values:<list type="bullet">
+        /// <item><description><b>OR</b>: The conditions are in an OR relationship.</description></item>
+        /// <item><description><b>AND</b>: The conditions are in an AND relationship.<remarks>
+        /// <para>You can search by region, instance name, instance ID, alert status, risk status, or tag.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -131,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>Set which page to start displaying the query results from. The default value is 1, indicating that the display starts from the first page.</para>
+        /// <para>The page number of the page to return in the query results. Default value: 1, which indicates that the results are returned starting from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -141,10 +140,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Set the logical relationship that takes effect between multiple search conditions. Values:</para>
+        /// <para>The logical relationship between multiple search conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: Indicates an <b>or</b> relationship between multiple search conditions.</description></item>
-        /// <item><description><b>AND</b>: Indicates an <b>and</b> relationship between multiple search conditions.</description></item>
+        /// <item><description><b>OR</b>: The search conditions are in an OR relationship.</description></item>
+        /// <item><description><b>AND</b>: The search conditions are in an AND relationship.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of data entries displayed per page during pagination. The default value is 20.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -165,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the instance is located.</para>
+        /// <para>The ID of the region where the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

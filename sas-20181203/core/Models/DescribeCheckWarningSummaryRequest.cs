@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCheckWarningSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of container clusters.</para>
+        /// <para>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the container field. Valid values:</para>
+        /// <para>The container field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>clusterId</b>: the ID of the cluster</description></item>
-        /// <item><description><b>image</b>: the name of the image</description></item>
-        /// <item><description><b>imageId</b>: the ID of the image</description></item>
-        /// <item><description><b>namespace</b>: the namespace</description></item>
+        /// <item><description><b>clusterId</b>: cluster ID</description></item>
+        /// <item><description><b>image</b>: image name</description></item>
+        /// <item><description><b>imageId</b>: image ID</description></item>
+        /// <item><description><b>namespace</b>: namespace.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerFieldValue { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset group.</para>
+        /// <para>The group ID of the server to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of asset groups.</para>
+        /// <para>Call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the group ID of the server.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the risk item.</para>
+        /// <para>The name of the baseline check risk item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Redis</para>
@@ -108,8 +108,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The status of the baseline check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: failed</description></item>
-        /// <item><description><b>3</b>: passed</description></item>
+        /// <item><description><b>1</b>: failed </description></item>
+        /// <item><description><b>3</b>: passed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,10 +133,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The status of the check item. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: failed</description></item>
-        /// <item><description><b>2</b>: verifying</description></item>
-        /// <item><description><b>3</b>: passed</description></item>
-        /// <item><description><b>5</b>: expired</description></item>
-        /// <item><description><b>6</b>: ignored</description></item>
+        /// <item><description><b>2</b>: verifying </description></item>
+        /// <item><description><b>3</b>: passed </description></item>
+        /// <item><description><b>5</b>: expired </description></item>
+        /// <item><description><b>6</b>: ignored.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,9 +157,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The type of the query condition. Valid values:</para>
+        /// <para>The query type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>uuid</b>: the ID of an asset</description></item>
+        /// <item><description><b>uuid</b>: asset ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -170,9 +170,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The level-1 type of check items.</para>
+        /// <para>The level-1 type of the baseline.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to query the level-1 types of check items.</para>
+        /// <para>Call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The UUID of the asset.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of assets.</para>
+        /// <para>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

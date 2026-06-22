@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListOssBucketScanInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the bucket.</para>
+        /// <para>The bucket name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>iboxpublic****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The name of the bucket that is used for fuzzy match.</para>
+        /// <para>The bucket name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FuzzBucketName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether at-risk objects are detected. Valid values:</para>
+        /// <para>Specifies whether risky files are detected. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: No at-risk objects are detected.</description></item>
-        /// <item><description><b>1</b>: At-risk objects are detected.</description></item>
+        /// <item><description><b>0</b>: No risks detected.</description></item>
+        /// <item><description><b>1</b>: Risky files exist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? HasRisk { get; set; }
 
         /// <summary>
-        /// <para>The language of the content in the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,12 +80,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The check status of the bucket. Valid values:</para>
+        /// <para>The detection status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: The bucket is not checked.</description></item>
-        /// <item><description><b>2</b>: All objects in the bucket are being checked.</description></item>
-        /// <item><description><b>3</b>: Only new objects in the bucket are being checked.</description></item>
-        /// <item><description><b>4</b>: The bucket is checked.</description></item>
+        /// <item><description><b>1</b>: Not scanned.</description></item>
+        /// <item><description><b>2</b>: Full scan in progress.</description></item>
+        /// <item><description><b>3</b>: Incremental scan in progress.</description></item>
+        /// <item><description><b>4</b>: Scanned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

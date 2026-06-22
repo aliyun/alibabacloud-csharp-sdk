@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterCnnfStatusDetailRequest : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the ID of the cluster.</para>
+        /// <para>The list of cluster IDs.</para>
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]

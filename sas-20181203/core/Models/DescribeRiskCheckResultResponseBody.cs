@@ -79,8 +79,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the risks that are detected based on the check item can be fixed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>enabled</b>: yes</description></item>
-            /// <item><description><b>disabled</b>: no</description></item>
+            /// <item><description><para><b>enabled</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>disabled</b>: no</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,6 +111,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public class DescribeRiskCheckResultResponseBodyListRiskItemResources : TeaModel {
                 /// <summary>
                 /// <para>The details about the check results.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{   &quot;type&quot;: &quot;link&quot;,   &quot;value&quot;: &quot;未开启多因素认证，存在风险\n&quot;,   &quot;url&quot;: &quot;https://***.aliyun.com/#/secure\n&quot; }</para>
                 /// </summary>
                 [NameInMap("ContentResource")]
                 [Validation(Required=false)]
@@ -117,10 +122,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The title in the details. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>bestPractice</b>: description</description></item>
-                /// <item><description><b>influence</b>: risk</description></item>
-                /// <item><description><b>suggestion</b>: solution</description></item>
-                /// <item><description><b>helpResource</b>: reference</description></item>
+                /// <item><description><para><b>bestPractice</b>: description</para>
+                /// </description></item>
+                /// <item><description><para><b>influence</b>: risk</para>
+                /// </description></item>
+                /// <item><description><para><b>suggestion</b>: solution</para>
+                /// </description></item>
+                /// <item><description><para><b>helpResource</b>: reference</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -135,9 +144,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The risk level of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b></description></item>
-            /// <item><description><b>medium</b></description></item>
-            /// <item><description><b>low</b></description></item>
+            /// <item><description><para><b>high</b></para>
+            /// </description></item>
+            /// <item><description><para><b>medium</b></para>
+            /// </description></item>
+            /// <item><description><para><b>low</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,8 +172,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the check item is supported by the edition of Security Center that you purchase. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>enabled</b>: yes</description></item>
-            /// <item><description><b>disable</b>: no</description></item>
+            /// <item><description><para><b>enabled</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>disable</b>: no</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -174,12 +188,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The status of the check results. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pass</b></description></item>
-            /// <item><description><b>failed</b></description></item>
-            /// <item><description><b>running</b></description></item>
-            /// <item><description><b>waiting</b></description></item>
-            /// <item><description><b>ignored</b></description></item>
-            /// <item><description><b>falsePositive</b></description></item>
+            /// <item><description><para><b>pass</b></para>
+            /// </description></item>
+            /// <item><description><para><b>failed</b></para>
+            /// </description></item>
+            /// <item><description><para><b>running</b></para>
+            /// </description></item>
+            /// <item><description><para><b>waiting</b></para>
+            /// </description></item>
+            /// <item><description><para><b>ignored</b></para>
+            /// </description></item>
+            /// <item><description><para><b>falsePositive</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -212,12 +232,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the check item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Identity authentication and permissions</description></item>
-            /// <item><description>Network access control</description></item>
-            /// <item><description>Log audit</description></item>
-            /// <item><description>Data security</description></item>
-            /// <item><description>Monitoring and alerting</description></item>
-            /// <item><description>Basic security protection</description></item>
+            /// <item><description><para>Identity authentication and permissions</para>
+            /// </description></item>
+            /// <item><description><para>Network access control</para>
+            /// </description></item>
+            /// <item><description><para>Log audit</para>
+            /// </description></item>
+            /// <item><description><para>Data security</para>
+            /// </description></item>
+            /// <item><description><para>Monitoring and alerting</para>
+            /// </description></item>
+            /// <item><description><para>Basic security protection</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

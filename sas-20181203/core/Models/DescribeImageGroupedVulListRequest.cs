@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the container cluster.</para>
+        /// <para>The ID of the container cluster to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the ID of the container cluster.</para>
+        /// <para>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in the query results. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</para>
+        /// <para>The CVE ID of the vulnerability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CVE-2017-15420</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The SHA-256 value of the image digest.</para>
+        /// <para>The SHA256 value of the image digest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w213412341dfsfasdfafadfasfasf</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ImageTag { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the vulnerabilities in the latest images. If you do not specify this parameter, the vulnerabilities in all images are queried. Valid values:</para>
+        /// <para>Specifies whether to query vulnerabilities of only the latest image. If this parameter is not set, vulnerabilities of all images are queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: does not query the vulnerabilities in the latest images.</description></item>
-        /// <item><description><b>1</b>: queries the vulnerabilities in the latest images.</description></item>
+        /// <item><description><b>0</b>: No.</description></item>
+        /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IsLatest { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,11 +131,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The priority to fix the vulnerability. Valid values:</para>
+        /// <para>The priority level for fixing the vulnerability. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: high. You must fix the vulnerability at the earliest opportunity.</description></item>
-        /// <item><description><b>later</b>: medium. You can fix the vulnerability based on your business requirements.</description></item>
-        /// <item><description><b>nntf</b>: low. You can ignore the vulnerability.</description></item>
+        /// <item><description><b>asap</b>: high-priority vulnerability (typically a high-risk vulnerability)</description></item>
+        /// <item><description><b>later</b>: medium-priority vulnerability (typically a medium-risk vulnerability)</description></item>
+        /// <item><description><b>nntf</b>: low-priority vulnerability (typically a low-risk vulnerability).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of image vulnerabilities to display on each page during a paging query. Default value: <b>20</b>, which indicates that 20 image vulnerabilities are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the patch that is used to fix the vulnerability.</para>
+        /// <para>The ID of the vulnerability patch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1341512412</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the image repository belongs.</para>
+        /// <para>The namespace of the image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>libssh2</para>
@@ -216,9 +216,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
-        /// <para>The tag of this vulnerability. Valid values:</para>
+        /// <para>The vulnerability tag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AI</b>: AI-related components.</description></item>
+        /// <item><description><b>AI</b>: vulnerabilities related to AI components.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -229,17 +229,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleTag { get; set; }
 
         /// <summary>
-        /// <para>An array consisting of the types of the assets that you want to scan.</para>
+        /// <para>The collection of scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
         public List<string> ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability that you want to query. Valid values:</para>
+        /// <para>The type of vulnerability to query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: image system vulnerability</description></item>
-        /// <item><description><b>sca</b>: image application vulnerability</description></item>
+        /// <item><description><b>sca</b>: image application vulnerability.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the asset. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The list of unique IDs of asset instances. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>uuid-13134124****</para>

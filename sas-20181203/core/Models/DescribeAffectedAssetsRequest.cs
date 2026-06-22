@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeAffectedAssetsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Current { get; set; }
 
         /// <summary>
-        /// <para>The severity. Separate multiple severities with commas (,). Valid values:</para>
+        /// <para>The severity level. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>serious</description></item>
-        /// <item><description>suspicious</description></item>
-        /// <item><description>remind</description></item>
+        /// <item><description>serious: urgent</description></item>
+        /// <item><description>suspicious: suspicious</description></item>
+        /// <item><description>remind: reminder.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Levels { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page in a paginated query. Default value: 20. If this parameter is left empty, 20 entries are returned.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

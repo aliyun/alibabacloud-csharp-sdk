@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUuidsByWebPathRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the current page to display in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to display on each page in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,10 +32,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The path type of the web directory. Valid values:</para>
+        /// <para>The type of the web path. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>def</b>: automatically identified</description></item>
-        /// <item><description><b>customize</b>: manually added</description></item>
+        /// <item><description><b>def</b>: automatically identified by the system</description></item>
+        /// <item><description><b>customize</b>: manually added.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The path to the web directory.</para>
+        /// <para>The web path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/www****</para>

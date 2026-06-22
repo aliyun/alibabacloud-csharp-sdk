@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class OperateWebLockFileEventsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to handle all alert events that are generated for web tamper proofing. Valid values:</para>
+        /// <para>Specifies whether to handle all alert events. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><b>0</b>: no.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DealAll { get; set; }
 
         /// <summary>
-        /// <para>The IDs of alert events.</para>
+        /// <para>The list of alert event IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EventIds")]
@@ -33,13 +33,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> EventIds { get; set; }
 
         /// <summary>
-        /// <para>The operation that you want to perform on the alert events. Valid values:</para>
+        /// <para>The method to handle the alert event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>mark_mis_info</b>: marks the alert events as false positives</description></item>
-        /// <item><description><b>rm_mark_mis_info</b>: cancels marking the alerts events as false positives</description></item>
-        /// <item><description><b>offline_handled</b>: marks the alert events as handled offline</description></item>
-        /// <item><description><b>whitelist</b>: adds the alert events to the whitelist</description></item>
-        /// <item><description><b>rm_whitelist</b>: cancels adding the alert events to the whitelist</description></item>
+        /// <item><description><b>mark_mis_info</b>: marks the alert as a false positive</description></item>
+        /// <item><description><b>rm_mark_mis_info</b>: unmarks the false positive</description></item>
+        /// <item><description><b>offline_handled</b>: handled offline</description></item>
+        /// <item><description><b>whitelist</b>: adds to the whitelist</description></item>
+        /// <item><description><b>rm_whitelist</b>: removes from the whitelist.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

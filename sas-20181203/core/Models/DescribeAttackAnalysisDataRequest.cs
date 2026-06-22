@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to encode the value of the <b>client_url</b> field in the query results by using the Base64 algorithm. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +28,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The number of the page to return. Pages start from page <b>1</b>.</para>
         /// <remarks>
-        /// <para> If the Type parameter is set to <b>DETAILS</b>, you must specify the CurrentPage parameter.</para>
+        /// <para>If the Type parameter is set to <b>DETAILS</b>, you must specify the CurrentPage parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The condition that is used to filter attack events.</para>
         /// <remarks>
-        /// <para> The following list describes the valid values of crack_type:</para>
+        /// <para>The following list describes the valid values of crack_type:</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>3: brute-force attack on MySQL</para>
@@ -109,8 +111,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <remarks>
-        /// <para> If the Type parameter is set to <b>DETAILS</b>, you must specify the PageSize parameter.</para>
+        /// <para>If the Type parameter is set to <b>DETAILS</b>, you must specify the PageSize parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -136,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The timestamp at which the attack starts. By default, the statistics of the previous seven days are queried. Unit: seconds.</para>
         /// <remarks>
-        /// <para> The start time that you specify must be within the previous 40 days.</para>
+        /// <para>The start time that you specify must be within the previous 40 days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -150,15 +154,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The details of attack analysis. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TOTAL</b>: number of attacks</description></item>
-        /// <item><description><b>TREND</b>: attack trend</description></item>
-        /// <item><description><b>PIE_CHART</b>: distribution of attacks by type</description></item>
-        /// <item><description><b>SOURCE_TOP</b>: top 5 attack sources</description></item>
-        /// <item><description><b>CLIENT_TOP</b>: top 5 attacked assets</description></item>
-        /// <item><description><b>DETAILS</b>: attack details</description></item>
+        /// <item><description><para><b>TOTAL</b>: number of attacks</para>
+        /// </description></item>
+        /// <item><description><para><b>TREND</b>: attack trend</para>
+        /// </description></item>
+        /// <item><description><para><b>PIE_CHART</b>: distribution of attacks by type</para>
+        /// </description></item>
+        /// <item><description><para><b>SOURCE_TOP</b>: top 5 attack sources</para>
+        /// </description></item>
+        /// <item><description><para><b>CLIENT_TOP</b>: top 5 attacked assets</para>
+        /// </description></item>
+        /// <item><description><para><b>DETAILS</b>: attack details</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If the Type parameter is set to <b>DETAILS</b>, you must specify the CurrentPage and PageSize parameters.</para>
+        /// <para>If the Type parameter is set to <b>DETAILS</b>, you must specify the CurrentPage and PageSize parameters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

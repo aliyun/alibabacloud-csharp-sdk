@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateOpaStrategyNewShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The risks that you want to detect by using the rule.</para>
+        /// <para>The alert content details included in the policy.</para>
         /// </summary>
         [NameInMap("AlarmDetail")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. You can use the Scopes parameter to specify a scope in which cluster parameters take effect.</para>
+        /// <para>Notice: This parameter is deprecated. Use the Scopes parameter to specify the scope of clusters to which the policy applies..</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The cluster name.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>Notice: This parameter is deprecated..</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The rule description.</para>
+        /// <para>The policy description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4566</para>
@@ -53,24 +53,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The image names.</para>
+        /// <para>The list of image names included in the policy.</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public List<string> ImageName { get; set; }
 
         /// <summary>
-        /// <para>The image tags.</para>
+        /// <para>The list of image tags included in the policy.</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public List<string> Label { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the rule supports malicious Internet images. Valid values:</para>
+        /// <para>Specifies whether the policy supports Internet malicious images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,11 +81,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? MaliciousImage { get; set; }
 
         /// <summary>
-        /// <para>The action that is performed when the rule is hit. Valid values:</para>
+        /// <para>The action to take when the policy is hit. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: alert</description></item>
-        /// <item><description><b>2</b>: block</description></item>
-        /// <item><description><b>3</b>: allow</description></item>
+        /// <item><description><b>1</b>: Alert.</description></item>
+        /// <item><description><b>2</b>: Block.</description></item>
+        /// <item><description><b>3</b>: Allow.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,16 +96,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RuleAction { get; set; }
 
         /// <summary>
-        /// <para>The application scope.</para>
+        /// <para>The scope of the policy.</para>
         /// </summary>
         [NameInMap("Scopes")]
         [Validation(Required=false)]
         public List<UpdateOpaStrategyNewShrinkRequestScopes> Scopes { get; set; }
         public class UpdateOpaStrategyNewShrinkRequestScopes : TeaModel {
             /// <summary>
-            /// <para>The ID of the cluster node to which the rule is applied.</para>
+            /// <para>The policy instance ID in the cluster.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to query the ID of the cluster node to which the rule is applied.</para>
+            /// <para>Call the <a href="~~GetOpaStrategyDetailNew~~">GetOpaStrategyDetailNew</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -118,8 +118,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Specifies whether all namespaces are included. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: Not all namespaces are included.</description></item>
-            /// <item><description><b>1</b>: All namespaces are included.</description></item>
+            /// <item><description><b>0</b>: No.</description></item>
+            /// <item><description><b>1</b>: Yes.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,9 +130,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AllNamespace { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>The ID of the container cluster.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the cluster ID.</para>
+            /// <para>Call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -143,9 +143,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The namespaces.</para>
+            /// <para>The list of namespaces.</para>
             /// <remarks>
-            /// <para>This parameter is valid only when the AllNamespace parameter is set to 0.</para>
+            /// <para>Notice: This parameter takes effect only when AllNamespace is set to 0..</para>
             /// </remarks>
             /// </summary>
             [NameInMap("NamespaceList")]
@@ -155,9 +155,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
+        /// <para>The policy ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyId { get; set; }
 
         /// <summary>
-        /// <para>The rule name.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -178,9 +178,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StrategyName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule template.</para>
+        /// <para>The policy template ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to query the ID of the rule template.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2539952.html">GetOpaStrategyTemplateSummary</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -191,10 +191,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StrategyTemplateId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the rule supports unscanned images. Valid values:</para>
+        /// <para>Specifies whether the policy supports unscanned images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? UnScanedImage { get; set; }
 
         /// <summary>
-        /// <para>The whitelists.</para>
+        /// <para>The whitelist.</para>
         /// </summary>
         [NameInMap("WhiteList")]
         [Validation(Required=false)]

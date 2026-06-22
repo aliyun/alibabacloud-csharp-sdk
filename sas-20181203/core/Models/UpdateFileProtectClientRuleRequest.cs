@@ -10,6 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateFileProtectClientRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The alert notification level. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: no alert</para>
+        /// </description></item>
+        /// <item><description><para>1: reminder</para>
+        /// </description></item>
+        /// <item><description><para>2: suspicious</para>
+        /// </description></item>
+        /// <item><description><para>3: high-risk.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -17,11 +29,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? AlertLevel { get; set; }
 
+        /// <summary>
+        /// <para>The list of users excluded from file protection.</para>
+        /// </summary>
         [NameInMap("ExcludeUsers")]
         [Validation(Required=false)]
         public List<string> ExcludeUsers { get; set; }
 
         /// <summary>
+        /// <para>The list of operations performed on the file.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FileOps")]
@@ -29,17 +45,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> FileOps { get; set; }
 
         /// <summary>
+        /// <para>The list of monitored file paths. Wildcards are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FilePaths")]
         [Validation(Required=false)]
         public List<string> FilePaths { get; set; }
 
+        /// <summary>
+        /// <para>The list of protected file types.</para>
+        /// </summary>
         [NameInMap("FileTypes")]
         [Validation(Required=false)]
         public List<string> FileTypes { get; set; }
 
         /// <summary>
+        /// <para>The unique ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The list of process listening paths. Wildcards are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProcPaths")]
@@ -57,6 +79,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> ProcPaths { get; set; }
 
         /// <summary>
+        /// <para>The action of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>block</b>: Block.</para>
+        /// </description></item>
+        /// <item><description><para><b>monitor</b>: Monitor.</para>
+        /// </description></item>
+        /// <item><description><para><b>pass</b>: Allow.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,6 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleAction { get; set; }
 
         /// <summary>
+        /// <para>The name of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,6 +109,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleName { get; set; }
 
         /// <summary>
+        /// <para>The status of the rule. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

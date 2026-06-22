@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetCheckSaleRequest : TeaModel {
         /// <summary>
-        /// <para>The region in which the Security Center instance is deployed. Valid values:</para>
+        /// <para>The region of the Security Center instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> inside China</description></item>
-        /// <item><description>Global <b>ap-southeast-1:</b> outside China</description></item>
+        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

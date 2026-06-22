@@ -127,11 +127,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The states of check items. Multiple states are separated with commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PASS</b>: passed</description></item>
-            /// <item><description><b>NOT_PASS</b>: failed</description></item>
-            /// <item><description><b>CHECKING</b>: being checked</description></item>
-            /// <item><description><b>NOT_CHECK</b>: not checked</description></item>
-            /// <item><description><b>WHITELIST</b>: added to the whitelist</description></item>
+            /// <item><description><para><b>PASS</b>: passed</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_PASS</b>: failed</para>
+            /// </description></item>
+            /// <item><description><para><b>CHECKING</b>: being checked</para>
+            /// </description></item>
+            /// <item><description><para><b>NOT_CHECK</b>: not checked</para>
+            /// </description></item>
+            /// <item><description><para><b>WHITELIST</b>: added to the whitelist</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The exception message of the check item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Task is failed.</para>
+            /// <para>检查任务失败。</para>
             /// </summary>
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
@@ -218,8 +223,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The format of the check result for the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>text</b></description></item>
-                /// <item><description><b>link</b></description></item>
+                /// <item><description><para><b>text</b></para>
+                /// </description></item>
+                /// <item><description><para><b>link</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -244,8 +251,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether the search condition is used. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -278,8 +287,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The type of the check result for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b></description></item>
-            /// <item><description><b>link</b></description></item>
+            /// <item><description><para><b>text</b></para>
+            /// </description></item>
+            /// <item><description><para><b>link</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

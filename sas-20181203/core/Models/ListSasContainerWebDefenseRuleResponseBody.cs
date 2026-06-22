@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListSasContainerWebDefenseRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The rules for container tamper-proofing.</para>
+        /// <para>The list of container file defense rules.</para>
         /// </summary>
         [NameInMap("ContainerWebDefenseRuleList")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The number of the applications.</para>
+            /// <para>The number of configured applications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the rule.</para>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>420336648</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The paths that are protected.</para>
+            /// <para>The list of rule defense paths.</para>
             /// </summary>
             [NameInMap("PathConfDTOList")]
             [Validation(Required=false)]
             public List<ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList> PathConfDTOList { get; set; }
             public class ListSasContainerWebDefenseRuleResponseBodyContainerWebDefenseRuleListPathConfDTOList : TeaModel {
                 /// <summary>
-                /// <para>The backup paths.</para>
+                /// <para>The backup path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/tmp/test</para>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string BackupPath { get; set; }
 
                 /// <summary>
-                /// <para>The prevention mode. Valid values:</para>
+                /// <para>The action to take. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>block</b></description></item>
-                /// <item><description><b>audit</b></description></item>
+                /// <item><description><b>block</b>: Block.</description></item>
+                /// <item><description><b>audit</b>: Alert.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DefenseMode { get; set; }
 
                 /// <summary>
-                /// <para>The protected path.</para>
+                /// <para>The defense path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/usr/test/</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DefensePath { get; set; }
 
                 /// <summary>
-                /// <para>The file that is excluded.</para>
+                /// <para>The excluded file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>php</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ExcludeFile { get; set; }
 
                 /// <summary>
-                /// <para>The path to the file that is excluded.</para>
+                /// <para>The excluded file path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/usr/tt</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ExcludeFilePath { get; set; }
 
                 /// <summary>
-                /// <para>The type of the file that is excluded.</para>
+                /// <para>The excluded file type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>jsp</para>
@@ -138,10 +138,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string ExcludeFileType { get; set; }
 
                 /// <summary>
-                /// <para>The protection mode. Valid values:</para>
+                /// <para>The defense mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: basic mode (whitelist)</description></item>
-                /// <item><description><b>1</b>: complex mode (blacklist)</description></item>
+                /// <item><description><b>0</b>: Basic pattern (whitelist).</description></item>
+                /// <item><description><b>1</b>: Advanced pattern (blacklist).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? GuardType { get; set; }
 
                 /// <summary>
-                /// <para>The file that is included.</para>
+                /// <para>The included file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/usr/test</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string IncludeFile { get; set; }
 
                 /// <summary>
-                /// <para>The type of the file that is included.</para>
+                /// <para>The type of the included file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>php</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string IncludeFileType { get; set; }
 
                 /// <summary>
-                /// <para>The processes that are added to the whitelist.</para>
+                /// <para>The list of whitelisted processes.</para>
                 /// </summary>
                 [NameInMap("ProcessPathList")]
                 [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test2</para>
@@ -191,10 +191,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The status of the rule. Valid values:</para>
+            /// <para>The rule status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled</description></item>
-            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><b>1</b>: Enabled.</description></item>
+            /// <item><description><b>0</b>: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,14 +207,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination information of the query result.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListSasContainerWebDefenseRuleResponseBodyPageInfo PageInfo { get; set; }
         public class ListSasContainerWebDefenseRuleResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is used to query logs and troubleshoot issues.</para>
+        /// <para>The request ID. It is used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C376***AE74FB4</para>

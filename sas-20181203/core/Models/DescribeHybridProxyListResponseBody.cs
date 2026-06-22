@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeHybridProxyListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeHybridProxyListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries returned on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The number of the page to return in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries returned on each page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -59,14 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The information about the proxy clusters.</para>
+        /// <para>The proxy cluster list.</para>
         /// </summary>
         [NameInMap("ProxyList")]
         [Validation(Required=false)]
         public List<DescribeHybridProxyListResponseBodyProxyList> ProxyList { get; set; }
         public class DescribeHybridProxyListResponseBodyProxyList : TeaModel {
             /// <summary>
-            /// <para>The number of servers that are connected to the proxy instance.</para>
+            /// <para>The number of Security Center agents connected to the proxy instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string CurrentVersion { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The instance ID of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-uf61q03boqhhmeai1XXX</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The instance name.</para>
+            /// <para>The name of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the proxy node.</para>
+            /// <para>The unique key that identifies the proxy node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>inet-proxy-3bb11fad-37d6-4aee-9c37-b0ad1612a18e</para>
@@ -136,10 +136,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ProxyUuid { get; set; }
 
             /// <summary>
-            /// <para>The status of the proxy server. Valid values:</para>
+            /// <para>The running status of the proxy machine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b></description></item>
-            /// <item><description><b>offline</b></description></item>
+            /// <item><description><b>online</b>: online</description></item>
+            /// <item><description><b>offline</b>: offline.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,10 +150,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the server that is connected to the proxy instance.</para>
+            /// <para>The UUID of the Security Center agent deployed on the proxy instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>59a9d158-b2f0-4766-a893-ae67b943XXXX</para>
+            /// <para>59a9d158-b2f0-4766-a893-ae67b9432721</para>
             /// </summary>
             [NameInMap("Uuid")]
             [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75801E5D-E2EB-5C1D-B65D-2F7D2B00EF93</para>

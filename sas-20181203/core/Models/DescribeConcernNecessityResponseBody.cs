@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeConcernNecessityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The priorities to fix the vulnerabilities. Valid values:</para>
+        /// <para>The list of vulnerability fix necessity levels. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asap: high</description></item>
-        /// <item><description>later: medium</description></item>
-        /// <item><description>nntf: low</description></item>
+        /// <item><description><para>asap: high.</para>
+        /// </description></item>
+        /// <item><description><para>later: medium.</para>
+        /// </description></item>
+        /// <item><description><para>nntf: low.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ConcernNecessity")]
@@ -22,7 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> ConcernNecessity { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECC6B3E3-D496-512D-B46D-E6996A6B63EE</para>

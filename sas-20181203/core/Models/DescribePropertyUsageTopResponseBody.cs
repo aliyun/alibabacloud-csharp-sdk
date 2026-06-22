@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ItemCount { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16AA5B62-A3C1-520B-B289-4BD971CC17AB</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistical results.</para>
+        /// <para>The collection of statistics results.</para>
         /// </summary>
         [NameInMap("TopStatisticItems")]
         [Validation(Required=false)]
         public List<DescribePropertyUsageTopResponseBodyTopStatisticItems> TopStatisticItems { get; set; }
         public class DescribePropertyUsageTopResponseBodyTopStatisticItems : TeaModel {
             /// <summary>
-            /// <para>The quantity.</para>
+            /// <para>The count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The statistical item.</para>
+            /// <para>The statistics item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>openssl</para>
@@ -59,13 +59,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The type of the asset fingerprint. Valid value:</para>
+        /// <para>The Asset Fingerprints type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>port</b>: port</description></item>
         /// <item><description><b>process</b>: process</description></item>
         /// <item><description><b>software</b>: software</description></item>
         /// <item><description><b>user</b>: account</description></item>
-        /// <item><description><b>sca</b>: middleware</description></item>
+        /// <item><description><b>sca</b>: middleware.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

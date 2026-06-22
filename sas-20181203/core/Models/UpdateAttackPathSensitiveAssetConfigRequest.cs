@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateAttackPathSensitiveAssetConfigRequest : TeaModel {
         /// <summary>
-        /// <para>List of cloud product assets in the attack path.</para>
+        /// <para>The list of cloud service assets for attack path analysis.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AttackPathAssetList")]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<UpdateAttackPathSensitiveAssetConfigRequestAttackPathAssetList> AttackPathAssetList { get; set; }
         public class UpdateAttackPathSensitiveAssetConfigRequestAttackPathAssetList : TeaModel {
             /// <summary>
-            /// <para>Subtype of the cloud product asset.</para>
+            /// <para>The subtype of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud product asset.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud service asset.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetSubType { get; set; }
 
             /// <summary>
-            /// <para>Type of the cloud product asset.</para>
+            /// <para>The type of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud product asset.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud service asset.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AssetType { get; set; }
 
             /// <summary>
-            /// <para>Cloud product asset instance ID.</para>
+            /// <para>The instance ID of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset instance ID.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the instance ID of the cloud service asset.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Region ID of the cloud product asset instance.</para>
+            /// <para>The region ID of the cloud service asset instance.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud product asset instance.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud service asset instance.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -74,9 +74,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Vendor of the cloud product asset.</para>
+            /// <para>The vendor of the cloud service asset.</para>
             /// <remarks>
-            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud product asset.</para>
+            /// <para>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the vendor of the cloud service asset.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>ID of the sensitive asset setting for the attack path.</para>
+        /// <para>The ID of the attack path sensitive asset configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

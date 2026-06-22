@@ -10,64 +10,61 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyLoginBaseConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The details of the configuration that is used to detect unusual logons to your servers. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The detailed configuration of the unusual logon detection rule for the server. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>totalCount</b>: the total number of servers.</description></item>
-        /// <item><description><b>uuidCount</b>: the number of servers to which the configuration is applied.</description></item>
-        /// <item><description><b>id</b>: the ID of the configuration.</description></item>
-        /// <item><description><b>location</b>: the common logon location.</description></item>
+        /// <item><description><b>totalCount</b>: the total number of assets.</description></item>
+        /// <item><description><b>uuidCount</b>: the number of assets on which the rule takes effect.</description></item>
+        /// <item><description><b>id</b>: the ID of the unusual logon detection rule.</description></item>
+        /// <item><description><b>location</b>: the name of the common logon location.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify this field if the Type parameter is set to login_common_location.</para>
+        /// <para>This field is required only when the Type parameter is set to login_common_location.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>ip</b>: the common logon IP address.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify this field if the Type parameter is set to login_common_ip.</para>
+        /// <para>This field is required only when the Type parameter is set to login_common_ip.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>endTime</b>: the end time of the common logon time range.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify this field if the Type parameter is set to login_common_time.</para>
+        /// <para>This field is required only when the Type parameter is set to login_common_time.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>startTime</b>: the start time of the common logon time range.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify this field if the Type parameter is set to login_common_time.</para>
+        /// <para>This field is required only when the Type parameter is set to login_common_time.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description><b>account</b>: the common logon account.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify this field if the Type parameter is set to login_common_account.</para>
+        /// <para>This field is required only when the Type parameter is set to login_common_account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;totalCount&quot;:174,&quot;uuidCount&quot;:4,&quot;location&quot;:&quot;Montenegro&quot;,&quot;id&quot;:0}</para>
+        /// <para>{&quot;totalCount&quot;:174,&quot;uuidCount&quot;:4,&quot;location&quot;:&quot;黑山&quot;,&quot;id&quot;:0}</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The details of the server to which the configuration is applied. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The configuration of the servers on which the unusual logon detection rule takes effect. This parameter is in JSON format and contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Target</b>: the UUID of the server.</para>
-        /// </description></item>
-        /// <item><description><para><b>targetType</b>: the type of the server to which the configuration is applied. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>uuid</b>: a server</description></item>
-        /// <item><description><b>groupId</b>: a server group</description></item>
+        /// <item><description><b>Target</b>: the UUID of the server to add or remove.</description></item>
+        /// <item><description><b>targetType</b>: the mode for adding assets on which the rule takes effect. Valid values:<list type="bullet">
+        /// <item><description><b>uuid</b>: add by individual server.</description></item>
+        /// <item><description><b>groupId</b>: add by server group.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>flag</b>: the operation that you want to perform on the server. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>del</b>: removes the server from the configuration.</description></item>
-        /// <item><description><b>add</b>: adds the server to the configuration.</description></item>
+        /// <item><description><b>flag</b>: the operation to perform on the asset. Valid values:<list type="bullet">
+        /// <item><description><b>del</b>: remove the server from the rule.</description></item>
+        /// <item><description><b>add</b>: add the server to the rule.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -81,12 +78,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>The logon type of the configuration to modify. Valid values:</para>
+        /// <para>The type of unusual logon detection for the server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>login_common_location</b>: common logon location</description></item>
-        /// <item><description><b>login_common_ip</b>: common logon IP address</description></item>
-        /// <item><description><b>login_common_time</b>: common logon time range</description></item>
-        /// <item><description><b>login_common_account</b>: common logon account</description></item>
+        /// <item><description><b>login_common_location</b>: common logon location.</description></item>
+        /// <item><description><b>login_common_ip</b>: common logon IP address.</description></item>
+        /// <item><description><b>login_common_time</b>: common logon time.</description></item>
+        /// <item><description><b>login_common_account</b>: common logon account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

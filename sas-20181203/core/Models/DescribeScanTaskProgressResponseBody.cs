@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeScanTaskProgressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EA15BA8A-D631-4375-8D40-CB7C769B0279</para>
@@ -22,10 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The progress of the virus scan task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b>: The task is being initialized.</description></item>
-        /// <item><description><b>Processing</b>: The task is running.</description></item>
-        /// <item><description><b>Success</b>: The task is complete.</description></item>
-        /// <item><description><b>Failed</b>: The task fails.</description></item>
+        /// <item><description><b>init</b>: The scan task is being initialized.</description></item>
+        /// <item><description><b>Processing</b>: The scan task is in progress.</description></item>
+        /// <item><description><b>Success</b>: The scan task is complete.</description></item>
+        /// <item><description><b>Failed</b>: The scan task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,20 +36,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanTaskProgress { get; set; }
 
         /// <summary>
-        /// <para>The information about the asset on which the virus scan task runs. The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:</para>
+        /// <para>The asset information scanned by the virus scan node. This parameter is a string converted from a JSON array in character format. The following fields are included:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>type</b>: the type of the asset on which you want to perform a virus scan task. Valid values:</para>
-        /// <list type="bullet">
+        /// <item><description><b>type</b>: The Asset Type on which the virus scan is executed. Valid values:<list type="bullet">
         /// <item><description><b>groupId</b>: server group.</description></item>
         /// <item><description><b>uuid</b>: server.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>name</b>: the name of the server group or server.</para>
-        /// </description></item>
-        /// <item><description><para><b>target</b>: the asset on which the virus scan task runs. The value of this field varies based on the value of the type field.</para>
-        /// <list type="bullet">
-        /// <item><description>If the <b>type</b> field is set to <b>groupId</b>, the value of this field is the ID of the server group.</description></item>
-        /// <item><description>If the <b>type</b> field is set to <b>uuid</b>, the value of this field is the universally unique identifier (UUID) of the server.</description></item>
+        /// <item><description><b>name</b>: The name of the server group or server.</description></item>
+        /// <item><description><b>target</b>: The asset on which the virus scan is executed. The following describes the values of this field:<list type="bullet">
+        /// <item><description>If <b>type</b> is set to <b>groupId</b>, this field specifies the server group ID.</description></item>
+        /// <item><description>If <b>type</b> is set to <b>uuid</b>, this field specifies the UUID of the server.</description></item>
         /// </list>
         /// </description></item>
         /// </list>

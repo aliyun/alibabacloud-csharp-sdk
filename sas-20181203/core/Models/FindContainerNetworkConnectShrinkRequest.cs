@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class FindContainerNetworkConnectShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the information that you want to query. Valid values:</para>
+        /// <para>The query type of the element to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>EDGE</b>: connection information</description></item>
+        /// <item><description><b>EDGE</b>: connection information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates that the first page is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The information about the destination node.</para>
+        /// <para>The destination node information, which is used to filter destination nodes.</para>
         /// </summary>
         [NameInMap("DstNode")]
         [Validation(Required=false)]
         public string DstNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>The end time of the network connection.</para>
+        /// <para>The end time of the network connectivity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649260799999</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The information about the source node.</para>
+        /// <para>The source node information, which is used to filter source nodes.</para>
         /// </summary>
         [NameInMap("SrcNode")]
         [Validation(Required=false)]
         public string SrcNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>The start time of the network connection.</para>
+        /// <para>The start time of the network connectivity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1666886400000</para>

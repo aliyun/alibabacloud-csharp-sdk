@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The private IP address of the server on which the quarantined file is located.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.16.XX.XX</para>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]

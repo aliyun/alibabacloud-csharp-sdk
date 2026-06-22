@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeContainerInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the container asset.</para>
+        /// <para>The list of container asset information.</para>
         /// </summary>
         [NameInMap("ContainerInstanceList")]
         [Validation(Required=false)]
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AlarmCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether alerts are generated for the container. Valid values:</para>
+            /// <para>Indicates whether security alerts exist for the container. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b></description></item>
-            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b>: Security alerts exist.</description></item>
+            /// <item><description><b>NO</b>: No security alerts exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba-log-controller</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cfb41a869c71e4678a97021582dd8a****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the container.</para>
+            /// <para>The container ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48a6d9a92435a13ad573372c3f3c63b7e04d106458141df9f92155709d****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the cluster was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the cluster was created, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1670368337000</para>
@@ -91,10 +91,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asset is exposed to the Internet.</para>
+            /// <para>Indicates whether the container is exposed to the Internet. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: exposed</description></item>
-            /// <item><description><b>0</b>: not exposed</description></item>
+            /// <item><description><b>1</b>: exposed.</description></item>
+            /// <item><description><b>0</b>: not exposed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,10 +105,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Exposed { get; set; }
 
             /// <summary>
-            /// <para>The exposure details. The value is a JSON string.</para>
+            /// <para>The exposure details in JSON format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{}]</para>
+            /// <para>[{\&quot;exposedName\&quot;:\&quot;nginx-ingress-lb\&quot;,\&quot;exposedType\&quot;:\&quot;LoadBalancer\&quot;,\&quot;portDOList\&quot;:[{\&quot;name\&quot;:\&quot;http\&quot;,\&quot;nodePort\&quot;:32268,\&quot;port\&quot;:80,\&quot;targetPort\&quot;:80},{\&quot;name\&quot;:\&quot;https\&quot;,\&quot;nodePort\&quot;:32376,\&quot;port\&quot;:443,\&quot;targetPort\&quot;:443}]}]</para>
             /// </summary>
             [NameInMap("ExposedDetail")]
             [Validation(Required=false)]
@@ -125,10 +125,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HcCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether baseline risks are detected. Valid values:</para>
+            /// <para>The baseline risk status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NO</b></description></item>
-            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b>: No baseline risks exist. </description></item>
+            /// <item><description><b>YES</b>: Baseline risks exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HcStatus { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the host.</para>
+            /// <para>The host IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.24.XX.XX</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HostIp { get; set; }
 
             /// <summary>
-            /// <para>The image of the container.</para>
+            /// <para>The container image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>docker.io/library/nginx:latest</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageRepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The tag that is added to the image.</para>
+            /// <para>The tag of the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.3.1.0-dfa2010-aliyun</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUuid { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the asset.</para>
+            /// <para>The asset instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2zegzjyotydfkz9****</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NodeInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -259,7 +259,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The pod.</para>
+            /// <para>The pod name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba-log-controller-6f847f8786-mk2mg</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Pod { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the pod.</para>
+            /// <para>The pod IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.24.XX.XX</para>
@@ -301,8 +301,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>Indicates whether risks exist. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NO</b></description></item>
-            /// <item><description><b>YES</b></description></item>
+            /// <item><description><b>NO</b>: No risks exist.</description></item>
+            /// <item><description><b>YES</b>: Risks exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RiskStatus { get; set; }
 
             /// <summary>
-            /// <para>The update identifier of the container.</para>
+            /// <para>The update identifier of the container asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>79cff74d-e967-5407-8a78-ee03b9****</para>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UpdateMark { get; set; }
 
             /// <summary>
-            /// <para>The number of vulnerabilities that are detected in the container cluster.</para>
+            /// <para>The number of vulnerabilities in the container cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -333,10 +333,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? VulCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether vulnerabilities are detected in the container. Valid values:</para>
+            /// <para>Indicates whether vulnerabilities exist in the container asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>YES</b></description></item>
-            /// <item><description><b>NO</b></description></item>
+            /// <item><description><b>YES</b>: Vulnerabilities exist.</description></item>
+            /// <item><description><b>NO</b>: No vulnerabilities exist.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeContainerInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeContainerInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries on the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -366,7 +366,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use it for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>79CFF74D-E967-5407-8A78-EE03B925FDAA</para>

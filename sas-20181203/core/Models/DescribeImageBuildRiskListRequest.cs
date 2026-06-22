@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageBuildRiskListRequest : TeaModel {
         /// <summary>
-        /// <para>The <b>rule name</b> or <b>type name</b> of the risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the name. Optional parameters:</para>
+        /// <para>The <b>rule name</b> or <b>category name</b> of the build risk. You can call the <a href="~~~~">DescribeImageBuildRiskList</a> operation to obtain the value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>CriteriaType</b> is set to <b>RiskKeyName</b>, you must specify a <b>rule name</b> for this parameter.</description></item>
-        /// <item><description>If <b>CriteriaType</b> is set to<b>RiskClassName</b>, you must specify a <b>type name</b> for this parameter.</description></item>
+        /// <item><description>If <b>CriteriaType</b> is set to <b>RiskKeyName</b>, the value is the <b>rule name</b> of the build risk.</description></item>
+        /// <item><description>If <b>CriteriaType</b> is set to <b>RiskClassName</b>, the value is the <b>category name</b> of the build risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The query type.of the risk. Valid values:</para>
+        /// <para>The query type of the build risk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RiskKeyName</b>: the rule name of the risk</description></item>
-        /// <item><description><b>RiskClassName</b>: the type name of the risk</description></item>
+        /// <item><description><b>RiskKeyName</b>: build risk rule name.</description></item>
+        /// <item><description><b>RiskClassName</b>: build risk category name.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page when paging is used. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,10 +48,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the content in the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The maximum number of entries per page when paging is used. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,9 +77,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The risk level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>high</b></description></item>
-        /// <item><description><b>medium</b></description></item>
-        /// <item><description><b>low</b></description></item>
+        /// <item><description><para><b>high</b>: High.</para>
+        /// </description></item>
+        /// <item><description><para><b>medium</b>: Medium.</para>
+        /// </description></item>
+        /// <item><description><para><b>low</b>: Low.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

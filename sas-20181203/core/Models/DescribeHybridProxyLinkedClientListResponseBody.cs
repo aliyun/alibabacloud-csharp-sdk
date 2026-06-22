@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeHybridProxyLinkedClientListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned list.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Os { get; set; }
 
             /// <summary>
-            /// <para>The name of the operating system for your asset.</para>
+            /// <para>The operating system name of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>centos</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OsName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the server resides.</para>
+            /// <para>The region ID of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the region in which the server resides.</para>
+            /// <para>The region name of the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-qingdao</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RegionName { get; set; }
 
             /// <summary>
-            /// <para>The status of the Security Center agent.</para>
+            /// <para>The status of the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The name of the tag added to the server.</para>
+            /// <para>The tag name of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeHybridProxyLinkedClientListResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeHybridProxyLinkedClientListResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries on the current page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the current page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page when paging is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>149</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique identifier for each request. You can use the request ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B01B804F-947C-5623-B050-1C8FDFA796CF</para>

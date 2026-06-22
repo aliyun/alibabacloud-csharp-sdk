@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The grouping information about the servers.</para>
+        /// <para>The server group information.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The type of the server group. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>0</b>: default group</description></item>
-            /// <item><description><b>1</b>: other groups</description></item>
+            /// <item><description><b>1</b>: other group.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique identifier that Alibaba Cloud generated for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E0618A9-D5EF-4220-9471-C42B5E92719F</para>

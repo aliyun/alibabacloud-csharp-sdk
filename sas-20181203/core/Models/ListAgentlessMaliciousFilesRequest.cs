@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessMaliciousFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
+        /// <para>Specifies whether the alert has been handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: The vulnerability is handled.</description></item>
-        /// <item><description>N: The vulnerability is not handled.</description></item>
+        /// <item><description>Y: handled</description></item>
+        /// <item><description>N: not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EventId { get; set; }
 
         /// <summary>
-        /// <para>The name of the malicious file that you want to query.</para>
+        /// <para>The name of the malicious file to query.</para>
         /// <remarks>
         /// <para>Fuzzy match is supported.</para>
         /// </remarks>
@@ -58,9 +58,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FuzzyMaliciousName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -72,11 +72,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The severities of the malicious files. Separate multiple values with commas (,). Valid values:</para>
+        /// <para>The severity levels. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>serious</description></item>
-        /// <item><description>suspicious</description></item>
-        /// <item><description>remind</description></item>
+        /// <item><description>serious: urgent</description></item>
+        /// <item><description>suspicious: suspicious</description></item>
+        /// <item><description>remind: reminder.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Levels { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash value of the malicious file.</para>
+        /// <para>The MD5 hash of the malicious file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d836968041f7683b5459****</para>
@@ -98,17 +98,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <para>The alert type.</para>
-        /// <para>Valid values when Lang is set to zh:</para>
+        /// <para>If Lang is set to zh, valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WebShell</description></item>
-        /// <item><description>Malicious Software</description></item>
-        /// <item><description>Malicious Script</description></item>
+        /// <item><description>WebShell: WebShell</description></item>
+        /// <item><description>恶意软件: malware</description></item>
+        /// <item><description>恶意脚本: malicious script</description></item>
         /// </list>
-        /// <para>Valid values when Lang is set to en:</para>
+        /// <para>If Lang is set to en, valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WebShell</description></item>
-        /// <item><description>Malicious Software</description></item>
-        /// <item><description>Malicious Script</description></item>
+        /// <item><description>WebShell: WebShell</description></item>
+        /// <item><description>Malicious Software: malware</description></item>
+        /// <item><description>Malicious Script: malicious script.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MaliciousType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return per page in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</para>
+        /// <para>The asset information for the vulnerability query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -140,14 +140,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The source of the malicious file.</para>
+        /// <para>The file source.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
         public List<string> ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the asset.</para>
+        /// <para>The unique identifier of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d2d94e8b-bb25-4744-8004-1e08a53c****</para>

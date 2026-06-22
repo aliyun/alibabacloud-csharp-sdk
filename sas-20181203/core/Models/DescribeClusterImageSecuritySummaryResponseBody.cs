@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterImageSecuritySummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the image-related security events.</para>
+        /// <para>The image security event information.</para>
         /// </summary>
         [NameInMap("ClusterImageEvent")]
         [Validation(Required=false)]
         public DescribeClusterImageSecuritySummaryResponseBodyClusterImageEvent ClusterImageEvent { get; set; }
         public class DescribeClusterImageSecuritySummaryResponseBodyClusterImageEvent : TeaModel {
             /// <summary>
-            /// <para>The information about image baseline risks.</para>
+            /// <para>The image baseline check information.</para>
             /// </summary>
             [NameInMap("ImageBaseline")]
             [Validation(Required=false)]
@@ -36,9 +36,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>high</b></description></item>
-                /// <item><description><b>medium</b></description></item>
-                /// <item><description><b>low</b></description></item>
+                /// <item><description><b>high</b>: High.</description></item>
+                /// <item><description><b>medium</b>: Medium.</description></item>
+                /// <item><description><b>low</b>: Low.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The information about image system vulnerabilities.</para>
+            /// <para>The image system vulnerability information.</para>
             /// </summary>
             [NameInMap("ImageCveVul")]
             [Validation(Required=false)]
@@ -68,11 +68,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The alert level. Valid values:</para>
+                /// <para>The warning level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>asap</b>: high. You must fix the vulnerability at the earliest opportunity.</description></item>
-                /// <item><description><b>nntf</b>: medium. You can fix the vulnerability based on your business requirements.</description></item>
-                /// <item><description><b>later</b>: low. You can ignore the vulnerability.</description></item>
+                /// <item><description><b>asap</b>: High. Fix the vulnerability at the earliest opportunity.</description></item>
+                /// <item><description><b>nntf</b>: Medium. The vulnerability can be temporarily left unfixed.</description></item>
+                /// <item><description><b>later</b>: Low. The vulnerability can be left unfixed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The information about malicious image samples.</para>
+            /// <para>The image malicious sample information.</para>
             /// </summary>
             [NameInMap("ImageMaliciousFile")]
             [Validation(Required=false)]
@@ -104,9 +104,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>high</b></description></item>
-                /// <item><description><b>medium</b></description></item>
-                /// <item><description><b>low</b></description></item>
+                /// <item><description><b>high</b>: High.</description></item>
+                /// <item><description><b>medium</b>: Medium.</description></item>
+                /// <item><description><b>low</b>: Low.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The information about image application vulnerabilities.</para>
+            /// <para>The image application vulnerability information.</para>
             /// </summary>
             [NameInMap("ImageScaVul")]
             [Validation(Required=false)]
             public List<DescribeClusterImageSecuritySummaryResponseBodyClusterImageEventImageScaVul> ImageScaVul { get; set; }
             public class DescribeClusterImageSecuritySummaryResponseBodyClusterImageEventImageScaVul : TeaModel {
                 /// <summary>
-                /// <para>The number of image application vulnerabilities.</para>
+                /// <para>The number of application vulnerabilities.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -136,11 +136,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The alert level. Valid values:</para>
+                /// <para>The warning level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>asap</b>: high. You must fix the vulnerability at the earliest opportunity.</description></item>
-                /// <item><description><b>nntf</b>: medium. You can fix the vulnerability based on your business requirements.</description></item>
-                /// <item><description><b>later</b>: low. You can ignore the vulnerability.</description></item>
+                /// <item><description><b>asap</b>: High. Fix the vulnerability at the earliest opportunity.</description></item>
+                /// <item><description><b>nntf</b>: Medium. The vulnerability can be temporarily left unfixed.</description></item>
+                /// <item><description><b>later</b>: Low. The vulnerability can be left unfixed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

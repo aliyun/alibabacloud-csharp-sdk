@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the cluster that you want to query.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The dimension from which you want to configure the feature. Valid values:</para>
+        /// <para>The operation dimension of the target switch configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Cluster</b>: the ID of the cluster</description></item>
+        /// <item><description><b>Cluster</b>: cluster ID.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>The type of the feature. Valid values:</para>
+        /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>containerNetwork</b>: container network topology</description></item>
-        /// <item><description><b>interceptionSwitch</b>: cluster microsegmentation</description></item>
+        /// <item><description><b>containerNetwork</b>: container network topology switch</description></item>
+        /// <item><description><b>interceptionSwitch</b>: cluster microsegmentation switch.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

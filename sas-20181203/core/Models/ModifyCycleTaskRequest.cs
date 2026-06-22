@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCycleTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the task configuration.</para>
+        /// <para>The ID of the configuration.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to query the IDs of task configurations.</para>
+        /// <para>Call the <a href="~~DescribeCycleTaskList~~">DescribeCycleTaskList</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enables the task.</description></item>
-        /// <item><description><b>0</b>: disables the task.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Enable { get; set; }
 
         /// <summary>
-        /// <para>The time when the task first started.</para>
+        /// <para>The first execution time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1664380800000</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? FirstDateStr { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the task is run.</para>
+        /// <para>The interval period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IntervalPeriod { get; set; }
 
         /// <summary>
-        /// <para>The additional information.</para>
+        /// <para>The extended information field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>The unit of the scan interval. Valid values:</para>
+        /// <para>The unit of the scan cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>day</b></description></item>
-        /// <item><description><b>hour</b></description></item>
+        /// <item><description><b>day</b>: day.</description></item>
+        /// <item><description><b>hour</b>: hour.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The end time of the task. The time must be a time frame.</para>
+        /// <para>The task end time, in hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the task. The start time must be a time frame.</para>
+        /// <para>The task start time, in hours.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -115,40 +115,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetStartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. Valid values:</para>
+        /// <para>The node name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus detection task</description></item>
-        /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
-        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: urgent vulnerability scan task</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>VIRUS_VUL_SCHEDULE_SCAN</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>virus detection task</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>IMAGE_SCAN</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>image scan task</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>EMG_VUL_SCHEDULE_SCAN</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>urgent vulnerability scan task</para>
-        /// <!-- --></description></item>
+        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan.</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scan.</description></item>
+        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: emergency vulnerability scanning.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -159,40 +130,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus detection task</description></item>
-        /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
-        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: urgent vulnerability scan task</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>VIRUS_VUL_SCHEDULE_SCAN</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>virus detection task</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>IMAGE_SCAN</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>image scan task</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>EMG_VUL_SCHEDULE_SCAN</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>urgent vulnerability scan task</para>
-        /// <!-- --></description></item>
+        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan.</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scan.</description></item>
+        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: emergency vulnerability scanning.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

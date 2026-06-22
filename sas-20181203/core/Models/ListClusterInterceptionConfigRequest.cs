@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListClusterInterceptionConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The status of the container firewall feature. Valid values:</para>
+        /// <para>The container firewall status of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>-1</b>: unknown</description></item>
         /// <item><description><b>0</b>: abnormal</description></item>
         /// <item><description><b>1</b>: normal</description></item>
-        /// <item><description><b>2</b>: normal to be confirmed</description></item>
+        /// <item><description><b>2</b>: normal pending confirmation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,9 +26,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ClusterCNNFStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The ID of the container cluster.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeContainerInstances~~">DescribeContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// <para>You can call the <a href="~~DescribeContainerInstances~~">DescribeContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number of the page to return. Default value: 1, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// <para>The maximum number of entries per page in a paged query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

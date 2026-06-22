@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeInstanceVulStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1EE7B150-D67E-53FD-A52D-3E8E669A****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The statistics of the vulnerabilities.</para>
+        /// <para>The vulnerability statistics information.</para>
         /// </summary>
         [NameInMap("VulStat")]
         [Validation(Required=false)]
         public DescribeInstanceVulStatisticsResponseBodyVulStat VulStat { get; set; }
         public class DescribeInstanceVulStatisticsResponseBodyVulStat : TeaModel {
             /// <summary>
-            /// <para>The number of high-risk vulnerabilities.</para>
+            /// <para>The number of high-priority vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AsapCount { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-risk vulnerabilities.</para>
+            /// <para>The number of medium-priority vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LaterCount { get; set; }
 
             /// <summary>
-            /// <para>The number of low-risk vulnerabilities.</para>
+            /// <para>The number of low-priority vulnerabilities.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

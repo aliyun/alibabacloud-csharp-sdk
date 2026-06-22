@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListAgentlessRiskUuidRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the current page when using paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the asset.</para>
+        /// <para>The ID of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bp1g6wxdwps7s9dz****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the asset.</para>
+        /// <para>The name of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca_cpm_****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the asset that you want to query.</para>
+        /// <para>The public IP address of the asset to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.XX.XX</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the asset that you want to query.</para>
+        /// <para>The private IP address of the asset to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.26.XX.XX</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IntranetIp { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oracle-win-001****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page when using paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Risk { get; set; }
 
         /// <summary>
-        /// <para>The name of the detection object.</para>
+        /// <para>The name of the detection target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source-test-obj-0****</para>
@@ -104,12 +104,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetName { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of the object being inspected. Valid values:</para>
+        /// <para>The object type of the detection target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Host Snapshot.</description></item>
-        /// <item><description><b>2</b>: Host Image.</description></item>
-        /// <item><description><b>3</b>: User Snapshot.</description></item>
-        /// <item><description><b>4</b>: User Image.</description></item>
+        /// <item><description><b>1</b>: host snapshot</description></item>
+        /// <item><description><b>2</b>: host image</description></item>
+        /// <item><description><b>3</b>: user snapshot</description></item>
+        /// <item><description><b>4</b>: user custom image</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

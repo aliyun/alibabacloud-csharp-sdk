@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeImageVulListRequest : TeaModel {
         /// <summary>
-        /// <para>The alias of the vulnerability.</para>
+        /// <para>The alias of the vulnerability to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>High severity vulnerability that affects org.eclipse.jetty:jetty-server</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AliasName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster to which the container belongs.</para>
+        /// <para>The ID of the container cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc20a1024011c44b6a8710d6f8b****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return in a paginated query. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,10 +60,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the vulnerability is handled. Valid values:</para>
+        /// <para>Specifies whether the vulnerability has been handled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>y</b>: yes</description></item>
-        /// <item><description><b>n</b>: no</description></item>
+        /// <item><description><b>y</b>: handled</description></item>
+        /// <item><description><b>n</b>: not handled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Dealed { get; set; }
 
         /// <summary>
-        /// <para>The digest of the image.</para>
+        /// <para>The unique identifier of the container image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8f0fbdb41d3d1ade4ffdf21558443f4c03342010563bb8c43ccc09594d507012</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Digest { get; set; }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The name of the container image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>registry.cn-wulanchabu.aliyuncs.com/sas_test/huxin-test-001:nuxeo6-****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the asset.</para>
+        /// <para>The ID of the asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1-qeqewqw****</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type of the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the vulnerability.</para>
+        /// <para>The name of the vulnerability to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>debian:10:CVE-2019-9893</para>
@@ -138,11 +138,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The priority to fix the vulnerability. Valid values:</para>
+        /// <para>The priority level of vulnerability fixing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asap</b>: high. You must fix the vulnerability at the earliest opportunity.</description></item>
-        /// <item><description><b>later</b>: medium. You can fix the vulnerability based on your business requirements.</description></item>
-        /// <item><description><b>nntf</b>: low. You can ignore the vulnerability.</description></item>
+        /// <item><description><b>asap</b>: high-priority vulnerability</description></item>
+        /// <item><description><b>later</b>: medium-priority vulnerability</description></item>
+        /// <item><description><b>nntf</b>: low-priority vulnerability.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Necessity { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>Settings for the number of vulnerabilities to display on each page in a paged query. Default value: <b>10</b>, which indicates that 10 vulnerabilities are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image repository.</para>
+        /// <para>The ID of the container image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qew****</para>
@@ -193,7 +193,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the image repository.</para>
+        /// <para>The instance ID of the container image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-qewqrqcsadf****</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The name of the container image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>libssh2</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoName { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the image repository belongs.</para>
+        /// <para>The namespace of the container image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>libssh2</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoNamespace { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the image repository.</para>
+        /// <para>The region ID of the container image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -233,9 +233,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RepoRegionId { get; set; }
 
         /// <summary>
-        /// <para>The tag of this vulnerability. Valid values:</para>
+        /// <para>The vulnerability tag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AI</b>: AI-related components.</description></item>
+        /// <item><description><b>AI</b>: vulnerability related to AI components.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -246,18 +246,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RuleTag { get; set; }
 
         /// <summary>
-        /// <para>The types of the assets that you want to scan.</para>
+        /// <para>The collection of scan ranges.</para>
         /// </summary>
         [NameInMap("ScanRange")]
         [Validation(Required=false)]
         public List<string> ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The status of the vulnerability. Valid values:</para>
+        /// <para>The fix status of the vulnerability. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: unfixed</description></item>
         /// <item><description><b>4</b>: being fixed</description></item>
-        /// <item><description><b>7</b>: fixed</description></item>
+        /// <item><description><b>7</b>: fixed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatusList { get; set; }
 
         /// <summary>
-        /// <para>The tag that is added to the image vulnerability.</para>
+        /// <para>The tag of the container image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oval</para>
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The type of the vulnerability. Set the value to <b>cve</b>, which indicates image vulnerabilities.</para>
+        /// <para>The type of vulnerability to query. Set the value to <b>cve</b>, which indicates container image vulnerabilities.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -289,7 +289,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the assets. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of asset instances. Separate multiple UUIDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>0004a32a0305a7f6ab5ff9600d47****</para>
