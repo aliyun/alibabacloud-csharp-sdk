@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DataDisk : TeaModel {
         /// <summary>
-        /// <para>磁盘类型。</para>
+        /// <para>The disk type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>cloud_efficiency</c>: Ultra Disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_ssd</c>: Standard SSD.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_essd</c>: ESSD.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud</c>: Basic Disk.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>每个节点磁盘数量。</para>
+        /// <para>The number of data disks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -31,14 +41,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>创建ESSD云盘作为数据盘使用时，设置云盘的性能等级。取值范围：</para>
+        /// <para>The performance level of an ESSD. This parameter applies only when the <c>Category</c> parameter is set to <c>cloud_essd</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0：单盘最高随机读写IOPS 1万。</description></item>
-        /// <item><description>PL1（默认）：单盘最高随机读写IOPS 5万。</description></item>
-        /// <item><description>PL2：单盘最高随机读写IOPS 10万。</description></item>
-        /// <item><description>PL3：单盘最高随机读写IOPS 100万。</description></item>
+        /// <item><description><para>PL0: A maximum of 10,000 random read/write IOPS per disk.</para>
+        /// </description></item>
+        /// <item><description><para>PL1: A maximum of 50,000 random read/write IOPS per disk.</para>
+        /// </description></item>
+        /// <item><description><para>PL2: A maximum of 100,000 random read/write IOPS per disk.</para>
+        /// </description></item>
+        /// <item><description><para>PL3: A maximum of 1,000,000 random read/write IOPS per disk.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：PL1。</para>
+        /// <para>Default value: PL1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -48,7 +62,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string PerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>单位GB。</para>
+        /// <para>The size of each data disk, in GB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

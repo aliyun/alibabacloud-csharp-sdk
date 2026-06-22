@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListApiTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>接口名。</para>
+        /// <para>The API operation name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>一次获取的最大记录数。</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>标记当前开始读取的位置，置空表示从头开始。</para>
+        /// <para>The starting position for the read operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>资源组ID。</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>集群模板id。</para>
+        /// <para>The cluster template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>at-41b4c6a0fc63****</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>集群模板id列表。</para>
+        /// <para>A list of API template IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;AT-****&quot;]</para>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> TemplateIds { get; set; }
 
         /// <summary>
-        /// <para>集群模板名字。</para>
+        /// <para>The name of the cluster template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DATALAKE模板</para>
+        /// <para>DATALAKE template</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ApplicationConfig : TeaModel {
         /// <summary>
-        /// <para>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</para>
+        /// <para>The name of the application. You can view the application names of each EMR version on the cluster creation page in the EMR console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>应用配置文件名。</para>
+        /// <para>The name of the configuration file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigFileName { get; set; }
 
         /// <summary>
-        /// <para>配置项键。</para>
+        /// <para>The key of the configuration item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigItemKey { get; set; }
 
         /// <summary>
-        /// <para>配置项值。</para>
+        /// <para>The value of the configuration item.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600s</para>
@@ -53,12 +53,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigItemValue { get; set; }
 
         /// <summary>
-        /// <para>配置范围。取值范围：</para>
+        /// <para>The level at which you want to apply the configurations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CLUSTER：集群级别。</description></item>
-        /// <item><description>NODE_GROUP：节点组级别。</description></item>
+        /// <item><description>CLUSTER</description></item>
+        /// <item><description>NODE_GROUP</description></item>
         /// </list>
-        /// <para>默认值：CLUSTER。</para>
+        /// <para>Default value: CLUSTER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NODE_GROUP</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigScope { get; set; }
 
         /// <summary>
-        /// <para>节点组ID。ConfigScope取值NODE_GROUP时，该参数生效。NodeGroupId参数优先级高于NodeGroupName。</para>
+        /// <para>The node group ID. This parameter takes effect only when the ConfigScope parameter is set to NODE_GROUP. The NodeGroupId parameter has a higher priority than the NodeGroupName parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-869471354ecd****</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>节点组名称。ConfigScope取值NODE_GROUP时，且参数NodeGroupId为空时生效，该参数生效。</para>
+        /// <para>The name of the node group. This parameter takes effect only when the ConfigScope parameter is set to NODE_GROUP and the NodeGroupId parameter is not configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>core-1</para>

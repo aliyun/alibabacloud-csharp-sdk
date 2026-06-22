@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ScalingRule : TeaModel {
         /// <summary>
-        /// <para>伸缩活动类型。取值范围：</para>
+        /// <para>The type of the scaling activity. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SCALE_OUT：扩容。</description></item>
-        /// <item><description>SCALE_IN：缩容。</description></item>
+        /// <item><description><para>SCALE_OUT: scale-out.</para>
+        /// </description></item>
+        /// <item><description><para>SCALE_IN: scale-in.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ActivityType { get; set; }
 
         /// <summary>
-        /// <para>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</para>
+        /// <para>The adjustment value. This parameter is required and must be a positive integer. It specifies the number of instances to add for a scale-out activity or remove for a scale-in activity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,14 +38,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? AdjustmentValue { get; set; }
 
         /// <summary>
-        /// <para>按照负载伸缩描述。</para>
-        /// <para>
+        /// <para>The configurations for load-based scaling.</para>
         /// </summary>
         [NameInMap("MetricsTrigger")]
         [Validation(Required=false)]
         public MetricsTrigger MetricsTrigger { get; set; }
 
         /// <summary>
+        /// <para>The minimum number of instances to add during a scale-out activity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,29 +55,30 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MinAdjustmentValue { get; set; }
 
         /// <summary>
-        /// <para>规则名称。</para>
+        /// <para>The name of the rule. This parameter is required and cannot be an empty string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>scale-out-memory</para>
+        /// <para>scalingByYarnMemory</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>按照时间伸缩描述。</para>
-        /// <para>
+        /// <para>The configurations for time-based scaling.</para>
         /// </summary>
         [NameInMap("TimeTrigger")]
         [Validation(Required=false)]
         public TimeTrigger TimeTrigger { get; set; }
 
         /// <summary>
-        /// <para>伸缩规则类型。 取值范围：</para>
+        /// <para>The type of the scaling rule. This parameter is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>TIME_TRIGGER: 按时间伸缩。</description></item>
-        /// <item><description>METRICS_TRIGGER: 按负载伸缩。</description></item>
+        /// <item><description><para>TIME_TRIGGER: time-based scaling.</para>
+        /// </description></item>
+        /// <item><description><para>METRICS_TRIGGER: load-based scaling.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

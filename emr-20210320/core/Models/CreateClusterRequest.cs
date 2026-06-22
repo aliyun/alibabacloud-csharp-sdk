@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The service configurations. Number of elements in the array: 1 to 1,000.</para>
+        /// <para>The application configurations. The number of array elements N must be in the range of 1 to 1000.</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ApplicationConfig> ApplicationConfigs { get; set; }
 
         /// <summary>
-        /// <para>The services. Number of elements in the array: 1 to 100.</para>
+        /// <para>The list of applications. The number of array elements N must be in the range of 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Applications")]
@@ -25,14 +25,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<Application> Applications { get; set; }
 
         /// <summary>
-        /// <para>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</para>
+        /// <para>The array of bootstrap scripts. The number of array elements N must be in the range of 1 to 10.</para>
         /// </summary>
         [NameInMap("BootstrapScripts")]
         [Validation(Required=false)]
         public List<Script> BootstrapScripts { get; set; }
 
         /// <summary>
-        /// <para>The idempotent client token. If you call the same ClientToken multiple times, the returned results are the same. Only one cluster can be created with the same ClientToken.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. The results of multiple calls that use the same client token are the same. A maximum of one cluster can be created with the same client token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster. The name must be 1 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The cluster name. The name must be 1 to 128 characters in length. It must start with a letter or a Chinese character. It cannot start with http\:// or https\://. It can contain letters, digits, Chinese characters, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,16 +53,22 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster. Valid values:</para>
+        /// <para>The cluster type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DATALAKE: data lake</description></item>
-        /// <item><description>OLAP: online analytical processing (OLAP)</description></item>
-        /// <item><description>DATAFLOW: Dataflow</description></item>
-        /// <item><description>DATASERVING: DataServing</description></item>
-        /// <item><description>CUSTOM: a custom hybrid cluster.</description></item>
-        /// <item><description>HADOOP: the old data lake. We recommend that you use the new data lake.</description></item>
+        /// <item><description><para>DATALAKE: new data lake.</para>
+        /// </description></item>
+        /// <item><description><para>OLAP: data analytics.</para>
+        /// </description></item>
+        /// <item><description><para>DATAFLOW: real-time data stream.</para>
+        /// </description></item>
+        /// <item><description><para>DATASERVING: data serving.</para>
+        /// </description></item>
+        /// <item><description><para>CUSTOM: custom cluster.</para>
+        /// </description></item>
+        /// <item><description><para>HADOOP: earlier-version data lake. We recommend that you use the new data lake.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you create an EMR cluster for the first time after 17:00 (UTC +8) on December 19, 2022, you cannot select the HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER cluster type.</para>
+        /// <para>If you create an EMR cluster for the first time after 17:00 (UTC+8) on December 19, 2022, you cannot select HADOOP, DATA_SCIENCE, PRESTO, or ZOOKEEPER as the cluster type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,10 +79,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable release protection for the cluster. Valid values:</para>
+        /// <para>Specifies whether to enable deletion protection for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables release protection for the cluster.</description></item>
-        /// <item><description>false: disables release protection for the cluster.</description></item>
+        /// <item><description><para>true: enables deletion protection.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables deletion protection.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -88,10 +96,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The deployment mode of master nodes in the cluster. Valid values:</para>
+        /// <para>The deployment mode of applications in the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.</description></item>
-        /// <item><description>HA: high availability (HA) mode. A cluster that contains three master nodes is created.</description></item>
+        /// <item><description><para>NORMAL (default): non-high availability (HA) deployment. The cluster has one master node.</para>
+        /// </description></item>
+        /// <item><description><para>HA: HA deployment. An HA deployment requires at least three master nodes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +112,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DeployMode { get; set; }
 
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>The description of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Emr cluster for ETL</para>
@@ -112,7 +122,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The node attributes. The basic attributes of all ECS nodes in the cluster.</para>
+        /// <para>The node attributes. This parameter specifies the basic attributes of all Elastic Compute Service (ECS) nodes in the cluster.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
@@ -120,7 +130,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public NodeAttributes NodeAttributes { get; set; }
 
         /// <summary>
-        /// <para>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</para>
+        /// <para>The array of node group configurations. The number of array elements N must be in the range of 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -131,10 +141,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<NodeGroupConfig> NodeGroups { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayAsYouGo: pay-as-you-go</description></item>
-        /// <item><description>Subscription: subscription</description></item>
+        /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para>Subscription: subscription.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PayAsYouGo.</para>
         /// 
@@ -157,18 +169,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The EMR version. You can query available E-MapReduce (EMR) versions in the EMR console.</para>
+        /// <para>The EMR release version. You can find the EMR release versions on the EMR cluster purchase page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EMR-5.8.0</para>
+        /// <para>EMR-5.16.0</para>
         /// </summary>
         [NameInMap("ReleaseVersion")]
         [Validation(Required=false)]
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which to assign the ENI.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -178,10 +190,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The security mode of the cluster. Valid values:</para>
+        /// <para>The Kerberos security mode of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: disables Kerberos authentication for the cluster. This is the default value.</description></item>
-        /// <item><description>KERBEROS: enables Kerberos authentication for the cluster.</description></item>
+        /// <item><description><para>NORMAL (default): normal mode. Kerberos is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>KERBEROS: Kerberos mode. Kerberos is enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,14 +206,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SecurityMode { get; set; }
 
         /// <summary>
-        /// <para>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</para>
+        /// <para>The subscription configurations. This parameter is required if you set PaymentType to Subscription.</para>
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>The tag. Number of elements in the array: 0 to 20.</para>
+        /// <para>The tags. The number of array elements N must be in the range of 0 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7D960FA-6DBA-5E07-8746-A63E3E4D****</para>

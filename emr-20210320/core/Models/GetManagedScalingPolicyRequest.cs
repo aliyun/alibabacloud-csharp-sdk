@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetManagedScalingPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

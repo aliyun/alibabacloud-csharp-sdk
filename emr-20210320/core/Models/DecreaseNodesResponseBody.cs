@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DecreaseNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Operation ID.</para>
+        /// <para>The operation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>op-13c37a77c505****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string OperationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44430037-E59A-3E66-A2B0-97D155346F22</para>

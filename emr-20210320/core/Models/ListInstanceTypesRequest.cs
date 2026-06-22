@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListInstanceTypesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-b933c5aac8fe****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Cluster type.</para>
+        /// <para>The cluster type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>Deployment mode.</para>
+        /// <para>Specifies the deployment mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HA</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DeployMode { get; set; }
 
         /// <summary>
-        /// <para>Instance Type</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.xlarge</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Whether to change the configuration.</para>
+        /// <para>Specifies whether the instance type is for an instance type change. A value of true indicates an instance type change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? IsModification { get; set; }
 
         /// <summary>
-        /// <para>Node group ID.</para>
+        /// <para>The node group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>G-F06C4B47966A****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>Node group type.</para>
+        /// <para>The node group type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupType { get; set; }
 
         /// <summary>
-        /// <para>Payment type.</para>
+        /// <para>The billing method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which you want to create the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,17 +104,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>EMR distribution.</para>
+        /// <para>The EMR release version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EMR-5.8.0</para>
+        /// <para>Released version EMR-5.8.0</para>
         /// </summary>
         [NameInMap("ReleaseVersion")]
         [Validation(Required=false)]
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>Availability Zone ID</para>
+        /// <para>The zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

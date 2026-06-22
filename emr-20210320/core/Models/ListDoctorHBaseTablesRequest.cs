@@ -68,8 +68,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// <para>The order in which you want to sort the query results. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: in ascending order</description></item>
-        /// <item><description>DESC: in descending order</description></item>
+        /// <item><description><para>ASC: in ascending order</para>
+        /// </description></item>
+        /// <item><description><para>DESC: in descending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ScalingConstraints : TeaModel {
         /// <summary>
-        /// <para>最大值。</para>
+        /// <para>The maximum number of nodes in the node group. Default value: 2000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxCapacity { get; set; }
 
         /// <summary>
-        /// <para>最小值。</para>
+        /// <para>The minimum number of nodes in the node group. Default value: 0</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

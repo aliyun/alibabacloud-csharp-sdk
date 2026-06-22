@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListAutoScalingActivitiesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries returned for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scaling activities.</para>
+        /// <para>The list of scaling activities.</para>
         /// </summary>
         [NameInMap("ScalingActivities")]
         [Validation(Required=false)]
@@ -59,10 +59,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <summary>
             /// <para>The status of the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>REJECTED</description></item>
-            /// <item><description>SUCCESSFUL</description></item>
-            /// <item><description>FAILED</description></item>
-            /// <item><description>IN_PROGRESS</description></item>
+            /// <item><description><para>REJECTED: The scaling activity is rejected.</para>
+            /// </description></item>
+            /// <item><description><para>SUCCESSFUL: The scaling activity is successful.</para>
+            /// </description></item>
+            /// <item><description><para>FAILED: The scaling activity failed.</para>
+            /// </description></item>
+            /// <item><description><para>IN_PROGRESS: The scaling activity is in progress.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,8 +79,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <summary>
             /// <para>The type of the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SCALE_OUT</description></item>
-            /// <item><description>SCALE_IN</description></item>
+            /// <item><description><para>SCALE_OUT: Scale-out.</para>
+            /// </description></item>
+            /// <item><description><para>SCALE_IN: Scale-in.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The end time of the scaling. Unit: milliseconds.</para>
+            /// <para>The end time of the scaling activity. The unit is milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639715634819</para>
@@ -117,7 +123,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of added or removed instances.</para>
+            /// <para>The number of instances to be added or removed in this scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -153,7 +159,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public Dictionary<string, int?> InstanceTypeToNum { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node group.</para>
+            /// <para>The node group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ng-869471354ecd****</para>
@@ -201,7 +207,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The start time of the scaling. Unit: milliseconds.</para>
+            /// <para>The start time of the scaling activity. The unit is milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639714634819</para>
@@ -213,7 +219,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

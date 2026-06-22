@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListNodeGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Returns the location of the data that was read. Empty indicates that the data has been read.</para>
+        /// <para>The token to retrieve the next page of results. An empty value indicates that all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The array of node groups.</para>
+        /// <para>An array of node groups.</para>
         /// </summary>
         [NameInMap("NodeGroups")]
         [Validation(Required=false)]
         public List<NodeGroup> NodeGroups { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

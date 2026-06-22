@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling activity.</para>
+        /// <para>The scaling activity ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

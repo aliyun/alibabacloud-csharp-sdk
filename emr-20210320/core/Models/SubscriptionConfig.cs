@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class SubscriptionConfig : TeaModel {
         /// <summary>
-        /// <para>自动续费。取值范围：</para>
+        /// <para>Specifies whether auto-renewal is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：开启启动续费。</description></item>
-        /// <item><description>false：不开启自动续费。
-        /// 默认值：false。</description></item>
+        /// <item><description><para>true: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Auto-renewal is disabled (default).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>自动续费时长。当AutoRenew取值为true时生效。当AutoRenewDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。</para>
+        /// <para>The auto-renewal duration. This parameter takes effect only when AutoRenew is set to true. When AutoRenewDurationUnit is Month, valid values are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -35,8 +36,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? AutoRenewDuration { get; set; }
 
         /// <summary>
+        /// <para>The auto-renewal duration unit. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>Month：月。</description></item>
+        /// <item><description>Month</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string AutoRenewDurationUnit { get; set; }
 
         /// <summary>
-        /// <para>付费时长。PaymentDurationUnit取值为Month时，取值：1、2、3、4、5、6、7、8、9、12、24、36、48、60。</para>
+        /// <para>The payment duration. When PaymentDurationUnit is Month, valid values are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,9 +60,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? PaymentDuration { get; set; }
 
         /// <summary>
-        /// <para>付费时长单位。取值范围：</para>
+        /// <para>The payment duration unit. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>Month：月。</description></item>
+        /// <item><description>Month</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class SpotBidPrice : TeaModel {
         /// <summary>
-        /// <para>实例的每小时最高出价。支持最大3位小数，参数SpotStrategy=SpotWithPriceLimit时，该参数生效。</para>
+        /// <para>The maximum hourly bid price for the instance, with up to three decimal places. This parameter applies only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000.0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public double? BidPrice { get; set; }
 
         /// <summary>
-        /// <para>实例类型。</para>
+        /// <para>The ECS instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g7.2xlarge</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class CreateUsersRequest : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>用户列表。</para>
+        /// <para>The list of users. The number of users must be from 0 to 10.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Users")]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<CreateUsersRequestUsers> Users { get; set; }
         public class CreateUsersRequestUsers : TeaModel {
             /// <summary>
-            /// <para>用户密码。</para>
+            /// <para>The password of the user.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>用户名。</para>
+            /// <para>The username.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

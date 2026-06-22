@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The end timestamp for querying the creation time of scaling activities. The unit is milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1639718634819</para>
@@ -31,12 +31,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>实例付费类型枚举值：</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ONDEMAND: 按量付费实例</description></item>
-        /// <item><description>SPOT: 竞价实例
-        /// 默认为null代表全选
-        /// 举例: [&quot;ONDEMAND&quot;, &quot;SPOT&quot;]</description></item>
+        /// <item><description><para>ONDEMAND: Pay-as-you-go instance.</para>
+        /// </description></item>
+        /// <item><description><para>SPOT: Spot instance.The default value is null, which means all billing methods are selected.Example: [&quot;ONDEMAND&quot;, &quot;SPOT&quot;]</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> InstanceChargeTypes { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results.</para>
+        /// <para>The token that marks the position from which the query starts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node group.</para>
+        /// <para>The node group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-869471354ecd****</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The status of the scaling activity. Number of elements in the array: 1-20.</para>
+        /// <para>The status of the scaling activity. The number of elements in the array can range from 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;REJECTED&quot;,&quot;SUCCESSFUL&quot;]</para>
@@ -100,8 +100,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// <para>The type of the scaling activity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SCALE_OUT</description></item>
-        /// <item><description>SCALE_IN</description></item>
+        /// <item><description><para>SCALE_OUT: Scale-out.</para>
+        /// </description></item>
+        /// <item><description><para>SCALE_IN: Scale-in.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +132,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ScalingRuleName { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The start timestamp for querying the creation time of scaling activities. The unit is milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1639714634819</para>

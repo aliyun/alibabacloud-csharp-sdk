@@ -14,8 +14,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// <para>Indicates whether the user is an admin user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>添加test用户</para>
+            /// <para>Add test user</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

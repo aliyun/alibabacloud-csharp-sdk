@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ExportApplicationConfigsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of exported application configurations.</para>
+        /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
         public List<ExportApplicationConfigsResponseBodyApplicationConfigs> ApplicationConfigs { get; set; }
         public class ExportApplicationConfigsResponseBodyApplicationConfigs : TeaModel {
             /// <summary>
-            /// <para>应用名称。</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YARN</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>文件名称。</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yarn-site.xml</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ConfigFileName { get; set; }
 
             /// <summary>
-            /// <para>文件内容，base64加密。</para>
+            /// <para>The file content. The content is Base64-encoded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>export key=value</para>
@@ -46,7 +49,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of entries returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Returns the location of the data that was read. Empty indicates that the data has been read.</para>
+        /// <para>The token that is used to start the next query. If this parameter is not returned, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>372D4E9B-2509-5EFA-846B-B34FBF143F56</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details about the tag. Contains the resource ID, resource type, and tag key-value information.</para>
+        /// <para>The list of tag resources. It contains the resource ID, resource type, tag key, and tag value.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>Indicates the ID of a resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-b933c5aac8fe****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tag key of the ENI.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Department</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the ENI.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Dev</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

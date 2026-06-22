@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The information about the node group.</para>
+        /// <para>The information about the machine group.</para>
         /// </summary>
         [NameInMap("NodeGroup")]
         [Validation(Required=false)]

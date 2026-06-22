@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateApplicationConfig : TeaModel {
         /// <summary>
-        /// <para>修改描述。</para>
+        /// <para>A description of the modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dfs.namenode.checkpoint.period</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigDescription { get; set; }
 
         /// <summary>
-        /// <para>应用配置文件名。</para>
+        /// <para>The name of the application configuration file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hdfs-site.xml</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigFileName { get; set; }
 
         /// <summary>
-        /// <para>配置项键。</para>
+        /// <para>The configuration item key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dfs.namenode.checkpoint.period</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigItemKey { get; set; }
 
         /// <summary>
-        /// <para>配置项值。</para>
+        /// <para>The configuration item value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600s</para>

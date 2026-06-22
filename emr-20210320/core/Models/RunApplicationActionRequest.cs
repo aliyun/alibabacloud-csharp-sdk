@@ -12,12 +12,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// <para>The name of the action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>start</description></item>
-        /// <item><description>stop</description></item>
-        /// <item><description>config</description></item>
-        /// <item><description>restart</description></item>
-        /// <item><description>refresh_queues</description></item>
-        /// <item><description>refresh_labels</description></item>
+        /// <item><description><para>start</para>
+        /// </description></item>
+        /// <item><description><para>stop</para>
+        /// </description></item>
+        /// <item><description><para>config</para>
+        /// </description></item>
+        /// <item><description><para>restart</para>
+        /// </description></item>
+        /// <item><description><para>refresh_queues</para>
+        /// </description></item>
+        /// <item><description><para>refresh_labels</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>The description of the execution.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>运行描述</para>
+        /// <para>Running description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -70,8 +76,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// <para>The execution policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FAILED_BLOCK: The system stops the execution if the execution fails.</description></item>
-        /// <item><description>FAILED_CONTINUE: The system continues the execution if the execution fails.</description></item>
+        /// <item><description><para>FAILED_BLOCK: The system stops the execution if the execution fails.</para>
+        /// </description></item>
+        /// <item><description><para>FAILED_CONTINUE: The system continues the execution if the execution fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

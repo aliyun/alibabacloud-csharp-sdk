@@ -35,6 +35,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
                 /// <summary>
                 /// <para>The suggestion on executing the job.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <h5>当前节点：container</h5>
+                /// <h5>存在问题：</h5>
+                /// <para>最大内存利用率为7.75%，利用率较低</para>
+                /// <para>尝试减小Tez Container内存，可通过hive.tez.container.size进行设置</para>
                 /// </summary>
                 [NameInMap("Suggestion")]
                 [Validation(Required=false)]

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>The EMR version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>EMR-5.3.0</para>
+            /// <para>EMR-5.8.0</para>
             /// </summary>
             [NameInMap("ReleaseVersion")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>The version series.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>EMR-6.X</para>
+            /// <para>EMR-5.X</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]

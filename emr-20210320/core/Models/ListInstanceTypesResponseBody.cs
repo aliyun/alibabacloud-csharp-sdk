@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<InstanceType> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this request.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Returns the position of the read data.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total amount of data under the conditions of this request.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

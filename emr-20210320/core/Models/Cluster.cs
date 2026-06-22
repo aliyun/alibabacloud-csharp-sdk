@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class Cluster : TeaModel {
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-b933c5aac8fe****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>集群名称。</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emrtest</para>
@@ -30,7 +30,25 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>集群状态。</para>
+        /// <para>The cluster state. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>STARTING</c>: The cluster is starting.</para>
+        /// </description></item>
+        /// <item><description><para><c>START_FAILED</c>: The cluster failed to start.</para>
+        /// </description></item>
+        /// <item><description><para><c>BOOTSTRAPPING</c>: The cluster is running bootstrap actions.</para>
+        /// </description></item>
+        /// <item><description><para><c>RUNNING</c>: The cluster is running.</para>
+        /// </description></item>
+        /// <item><description><para><c>TERMINATING</c>: The cluster is terminating.</para>
+        /// </description></item>
+        /// <item><description><para><c>TERMINATED</c>: The cluster is terminated.</para>
+        /// </description></item>
+        /// <item><description><para><c>TERMINATED_WITH_ERRORS</c>: The cluster terminated due to errors.</para>
+        /// </description></item>
+        /// <item><description><para><c>TERMINATE_FAILED</c>: The cluster failed to terminate.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -40,7 +58,21 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterState { get; set; }
 
         /// <summary>
-        /// <para>集群类型。</para>
+        /// <para>The cluster type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>DATALAKE</c>: New data lake.</para>
+        /// </description></item>
+        /// <item><description><para><c>OLAP</c>: Data analysis.</para>
+        /// </description></item>
+        /// <item><description><para><c>DATAFLOW</c>: Real-time data flow.</para>
+        /// </description></item>
+        /// <item><description><para><c>DATASERVING</c>: Data serving.</para>
+        /// </description></item>
+        /// <item><description><para><c>CUSTOM</c>: Custom cluster.</para>
+        /// </description></item>
+        /// <item><description><para><c>HADOOP</c>: Legacy data lake.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DATALAKE</para>
@@ -50,7 +82,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>创建时间。</para>
+        /// <para>The time when the cluster was created. The time is a Unix timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1592837465784</para>
@@ -60,6 +92,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether deletion protection is enabled for the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -68,7 +102,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>部署模式。</para>
+        /// <para>The application deployment mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>NORMAL</c>: Standard deployment.</para>
+        /// </description></item>
+        /// <item><description><para><c>HA</c>: High-availability deployment.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>HA</para>
@@ -77,12 +117,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string DeployMode { get; set; }
 
+        /// <summary>
+        /// <para>The cluster description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>EMR cluster</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>EMR默认角色。</para>
+        /// <para>The default role for E-MapReduce.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunEMRDefaultRole</para>
@@ -92,7 +138,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string EmrDefaultRole { get; set; }
 
         /// <summary>
-        /// <para>删除时间。</para>
+        /// <para>The time when the cluster was deleted. The time is a Unix timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1592837465784</para>
@@ -102,7 +148,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>过期时间。</para>
+        /// <para>The time when the cluster is scheduled to expire. The time is a Unix timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1592837465784</para>
@@ -112,14 +158,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>节点属性。</para>
+        /// <para>The node attributes.</para>
         /// </summary>
         [NameInMap("NodeAttributes")]
         [Validation(Required=false)]
         public NodeAttributes NodeAttributes { get; set; }
 
         /// <summary>
-        /// <para>付费类型。</para>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>PayAsYouGo</c>: Pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para><c>Subscription</c>: Subscription.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>
@@ -129,7 +181,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>可用时间。</para>
+        /// <para>The time when the cluster became ready. The time is a Unix timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1592837465784</para>
@@ -139,7 +191,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? ReadyTime { get; set; }
 
         /// <summary>
-        /// <para>地域ID。</para>
+        /// <para>The ID of the region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -149,17 +201,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>EMR发行版。</para>
+        /// <para>The release version of E-MapReduce.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EMR-5.3.0</para>
+        /// <para>EMR-5.8.0</para>
         /// </summary>
         [NameInMap("ReleaseVersion")]
         [Validation(Required=false)]
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>资源组ID。</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -169,7 +221,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Kerberos安全模式。</para>
+        /// <para>The security mode of the cluster. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>NORMAL</c>: Kerberos is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>KERBEROS</c>: Kerberos is enabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -178,19 +236,22 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string SecurityMode { get; set; }
 
+        /// <summary>
+        /// <para>The reason for the cluster state change.</para>
+        /// </summary>
         [NameInMap("StateChangeReason")]
         [Validation(Required=false)]
         public ClusterStateChangeReason StateChangeReason { get; set; }
 
         /// <summary>
-        /// <para>预付费配置。</para>
+        /// <para>The subscription configuration.</para>
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>集群标签。</para>
+        /// <para>The cluster tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

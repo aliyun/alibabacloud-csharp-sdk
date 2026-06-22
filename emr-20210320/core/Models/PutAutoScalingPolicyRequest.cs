@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The constraints on the maximum and minimum numbers of nodes in a node group.</para>
+        /// <para>The maximum and minimum size constraints for the node group.</para>
         /// </summary>
         [NameInMap("Constraints")]
         [Validation(Required=false)]
         public ScalingConstraints Constraints { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node group.</para>
+        /// <para>The node group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The description list of auto scaling rules. Number of elements in the array: 0 to 100.</para>
+        /// <para>The scaling rules. The number of elements in the array can be from 0 to 100.</para>
         /// </summary>
         [NameInMap("ScalingRules")]
         [Validation(Required=false)]

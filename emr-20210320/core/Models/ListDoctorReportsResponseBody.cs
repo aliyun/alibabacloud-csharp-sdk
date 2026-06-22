@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>The optimization suggestion.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>block</para>
+                /// <h3>Compute health score: 88. The cluster is in healthy state. Keep it up.</h3><list type="bullet"><item><description><b>Compute task scan</b><list type="bullet"><item><description>Scanned 1518 compute tasks in the cluster: <span style=\\"color: #D93026;\\">209 tasks in unhealthy state</span>, <span style=\\"color: #F1A600;\\">596 tasks in sub-healthy state</span>, <span style=\\"color: #1E8E3E;\\">713 tasks in healthy state</span>.</description></item></list><list type="bullet"><item><description>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1518 Tez tasks with a weighted average score of 88. Memory usage accounts for 100.0% of the cluster, CPU usage accounts for 100.0% of the cluster. 209 tasks are in unhealthy state, 596 tasks are in sub-healthy state.</description></item></list><list type="bullet">Click \\"View Details\\" in the task detail list below to view specific issues and solutions. The \\"Low-Score Task Compute Memory Time (GB*Sec) Top 20\\" table is sorted by memory time usage. Large tasks may have a greater impact on the overall cluster, so prioritize them.</list><item><description><b><span style=\\"color: #D93026;\\">Low memory utilization</span></b><list type="bullet"><item><description>Overall cluster memory utilization is 47.8%, which is relatively low. Compute resources are being wasted. Prioritize optimizing TOP tasks with high memory compute time but low memory utilization.</description></item></list><list type="bullet"><item><description>Tez jobs have an average memory utilization of 47.8%.</description></item></list></description></item></list>
                 /// </summary>
                 [NameInMap("Suggestion")]
                 [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>The summary of the report.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>eastbuy-mse-plugin-auth</para>
+                /// <h4>[Compute Check] Compute health score: 88. Good health. Keep it up.</h4><p style=\\"text-indent:2em\\">Most tasks in the cluster are in healthy state.</para><p style=\\"text-indent:2em\\">Cluster memory utilization: 47.8%, relatively low.</para>
                 /// </summary>
                 [NameInMap("Summary")]
                 [Validation(Required=false)]

@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class StateChangeReason : TeaModel {
         /// <summary>
-        /// <para>状态码。</para>
+        /// <para>The status code. Possible values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>UserRequest: The state change was initiated by the user.</para>
+        /// </description></item>
+        /// <item><description><para>QuotaExceeded: A service or resource quota was exceeded.</para>
+        /// </description></item>
+        /// <item><description><para>InternalError: An internal error occurred.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>MissingParameter</para>
@@ -20,7 +28,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>描述信息。</para>
+        /// <para>A message providing additional details about the status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The instance type is required.</para>

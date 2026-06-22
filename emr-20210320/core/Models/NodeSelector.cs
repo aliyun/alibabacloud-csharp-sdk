@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. Use <c>NodeGroupIds</c> instead.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ng-869471354ecd****</para>
@@ -22,6 +24,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Obsolete]
         public string NodeGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the node groups to select.</para>
+        /// </summary>
         [NameInMap("NodeGroupIds")]
         [Validation(Required=false)]
         public List<string> NodeGroupIds { get; set; }
@@ -29,7 +34,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. Use <c>NodeGroupNames</c> instead.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>master-1</para>
@@ -39,12 +46,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Obsolete]
         public string NodeGroupName { get; set; }
 
+        /// <summary>
+        /// <para>The names of the node groups to select.</para>
+        /// </summary>
         [NameInMap("NodeGroupNames")]
         [Validation(Required=false)]
         public List<string> NodeGroupNames { get; set; }
 
         /// <summary>
-        /// <para>节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。</para>
+        /// <para>The types of node groups to select. This parameter applies only when <c>NodeSelectType</c> is set to <c>NODE_GROUP</c> and <c>NodeGroupIds</c> is not specified. The array can contain up to 10 elements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;CORE&quot;,&quot;TASK&quot;]</para>
@@ -54,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeGroupTypes { get; set; }
 
         /// <summary>
-        /// <para>节点名称列表。当NodeSelectType取值Node时，该参数生效。</para>
+        /// <para>The names of the nodes to select. This parameter applies only when <c>NodeSelectType</c> is set to <c>NODE</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;core1-1&quot;]</para>
@@ -64,11 +74,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>节点选择类型。取值范围：</para>
+        /// <para>The node selection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CLUSTER：集群。</description></item>
-        /// <item><description>NODE_GROUP：节点组。</description></item>
-        /// <item><description>NODE：节点。</description></item>
+        /// <item><description><para><c>CLUSTER</c>: Selects all nodes in the cluster.</para>
+        /// </description></item>
+        /// <item><description><para><c>NODE_GROUP</c>: Selects nodes by their node group.</para>
+        /// </description></item>
+        /// <item><description><para><c>NODE</c>: Selects specific nodes by name.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

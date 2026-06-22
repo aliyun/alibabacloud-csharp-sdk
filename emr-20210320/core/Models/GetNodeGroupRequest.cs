@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which you want to create the instance.</para>
+        /// <para>The ID of the region in which the cluster resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

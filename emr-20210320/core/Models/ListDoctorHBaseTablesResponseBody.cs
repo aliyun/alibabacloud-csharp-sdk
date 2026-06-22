@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>The description of read imbalance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>read request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;</para>
+                /// <para>ead request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;表分区总数量为15，分区平均读请求数量为764361，以下分区存在读请求热点访问：</para>&lt;ul class=\&quot;report-detail-ul\&quot;&gt;&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： f1c922d41529785e21b61cf4c672b98a 读请求数量： 1543919</description></item>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： 5f019e8cf7c16be9768634cb99ccbe05 读请求数量： 1512817</description></item>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： d113992fea3a457f60b8b8aa5d6fa037 读请求数量： 1504293</description></item></list>&lt;p style=\&quot;line-height： 16px; font-size： 16px; margin： 0 auto\&quot;&gt;&nbsp;</para></para>
                 /// </summary>
                 [NameInMap("ReadRequestUnbalanceSuggestion")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>The description of read/write imbalance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>read request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;</para>
+                /// <para>ead request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;表分区总数量为15，分区平均读请求数量为764361，以下分区存在读请求热点访问：</para>&lt;ul class=\&quot;report-detail-ul\&quot;&gt;&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： f1c922d41529785e21b61cf4c672b98a 读请求数量： 1543919</description></item>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： 5f019e8cf7c16be9768634cb99ccbe05 读请求数量： 1512817</description></item>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： d113992fea3a457f60b8b8aa5d6fa037 读请求数量： 1504293</description></item></list>&lt;p style=\&quot;line-height： 16px; font-size： 16px; margin： 0 auto\&quot;&gt;&nbsp;</para></para>
                 /// </summary>
                 [NameInMap("RequestUnbalanceSuggestion")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>The description of write imbalance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>write request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;</para>
+                /// <para>write request unbalance is &lt;p class=\&quot;report-detail-topic\&quot;&gt;表分区总数量为15，分区平均写请求数量为786142，以下分区存在写请求热点访问：</para>&lt;ul class=\&quot;report-detail-ul\&quot;&gt;&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： f1c922d41529785e21b61cf4c672b98a 写请求数量： 1588305</description></item>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： 5f019e8cf7c16be9768634cb99ccbe05 写请求数量： 1556984</description></item>&lt;li class=\&quot;.report-detail-li\&quot;&gt;RegionServer： emr-worker-2 Region Id： d113992fea3a457f60b8b8aa5d6fa037 写请求数量： 1548764</description></item></list>&lt;p style=\&quot;line-height： 16px; font-size： 16px; margin： 0 auto\&quot;&gt;&nbsp;</para></para>
                 /// </summary>
                 [NameInMap("WriteRequestUnbalanceSuggestion")]
                 [Validation(Required=false)]

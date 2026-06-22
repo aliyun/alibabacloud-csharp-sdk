@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class InstanceType : TeaModel {
         /// <summary>
-        /// <para>cpu架构。</para>
+        /// <para>The CPU architecture. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>X86</c>: X86 architecture.</para>
+        /// </description></item>
+        /// <item><description><para><c>ARM</c>: ARM architecture.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>X86</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string CpuArchitecture { get; set; }
 
         /// <summary>
-        /// <para>vCPU内核数目。</para>
+        /// <para>The number of vCPUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -30,23 +36,38 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? CpuCore { get; set; }
 
         /// <summary>
-        /// <para>实例规格分类。取值范围：</para>
+        /// <para>The instance category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>General-purpose： 通用型。</description></item>
-        /// <item><description>Compute-optimized：计算型。</description></item>
-        /// <item><description>Memory-optimized：内存型。</description></item>
-        /// <item><description>Big data：大数据型。</description></item>
-        /// <item><description>Local SSDs ：本地SSD型。</description></item>
-        /// <item><description>High Clock Speed ：高主频型。</description></item>
-        /// <item><description>Enhanced ：增强型。</description></item>
-        /// <item><description>Shared：共享型。</description></item>
-        /// <item><description>Compute-optimized with GPU ：GPU计算型。</description></item>
-        /// <item><description>Visual Compute-optimized ：视觉计算型。</description></item>
-        /// <item><description>Heterogeneous Service ：异构服务型。</description></item>
-        /// <item><description>Compute-optimized with FPGA ：FPGA计算型。</description></item>
-        /// <item><description>Compute-optimized with NPU ：NPU计算型。</description></item>
-        /// <item><description>ECS Bare Metal ：弹性裸金属服务器。</description></item>
-        /// <item><description>Super Computing Cluster：超级计算集群。</description></item>
+        /// <item><description><para><c>General-purpose</c>: A general-purpose instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Compute-optimized</c>: A compute-optimized instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Memory-optimized</c>: A memory-optimized instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Big data</c>: A big data instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Local SSDs</c>: A local SSD instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>High Clock Speed</c>: A high clock speed instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Enhanced</c>: An enhanced instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Shared</c>: A shared instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Compute-optimized with GPU</c>: A compute-optimized instance type with GPUs.</para>
+        /// </description></item>
+        /// <item><description><para><c>Visual Compute-optimized</c>: A visual compute-optimized instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Heterogeneous Service</c>: A heterogeneous service instance type.</para>
+        /// </description></item>
+        /// <item><description><para><c>Compute-optimized with FPGA</c>: A compute-optimized instance type with FPGAs.</para>
+        /// </description></item>
+        /// <item><description><para><c>Compute-optimized with NPU</c>: A compute-optimized instance type with NPUs.</para>
+        /// </description></item>
+        /// <item><description><para><c>ECS Bare Metal</c>: An ECS Bare Metal instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>Super Computing Cluster</c>: A supercomputing cluster instance type.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +78,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string InstanceCategory { get; set; }
 
         /// <summary>
-        /// <para>实例规格。</para>
+        /// <para>The ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance type families</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -67,7 +88,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string InstanceType_ { get; set; }
 
         /// <summary>
-        /// <para>实例规格所属的实例规格族。取值请参见DescribeInstanceTypeFamilies。</para>
+        /// <para>The instance type family. For valid values, see the ECS documentation for <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6</para>
@@ -77,7 +98,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>实例挂载的本地盘的数量。</para>
+        /// <para>The number of local disks attached to the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -87,7 +108,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? LocalStorageAmount { get; set; }
 
         /// <summary>
-        /// <para>实例挂载的本地盘的单盘容量。单位：GiB</para>
+        /// <para>The capacity of each local disk attached to the instance, in GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -101,7 +122,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ModifyType { get; set; }
 
         /// <summary>
-        /// <para>是否IO优化类型。</para>
+        /// <para>Specifies whether the instance type is I/O optimized. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The instance type is I/O optimized.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The instance type is not I/O optimized.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

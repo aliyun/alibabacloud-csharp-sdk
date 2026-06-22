@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class TimeConstraint : TeaModel {
         /// <summary>
-        /// <para>结束时间。取值范围：00:00:00至23:59:59</para>
+        /// <para>The end time. Valid values: 00:00 to 23:59.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>23:59:59</para>
+        /// <para>23:59</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>开始时间。取值范围：00:00:00至23:59:59</para>
+        /// <para>The start time. Valid values: 00:00 to 23:59.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>06:00:00</para>
+        /// <para>06:00</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

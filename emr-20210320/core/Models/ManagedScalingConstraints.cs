@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ManagedScalingConstraints : TeaModel {
         /// <summary>
-        /// <para>最大值。</para>
+        /// <para>The maximum number of nodes in a node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxCapacity { get; set; }
 
         /// <summary>
-        /// <para>最大按量节点数量</para>
+        /// <para>The maximum number of pay-as-you-go task nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxOnDemandCapacity { get; set; }
 
         /// <summary>
-        /// <para>最小值。</para>
+        /// <para>The minimum number of nodes in a node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

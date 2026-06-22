@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class MetricsTrigger : TeaModel {
         /// <summary>
-        /// <para>多指标逻辑关系。默认：Or。取值范围：</para>
+        /// <para>The logical relationship between multiple metrics. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>And:与</description></item>
-        /// <item><description>Or：或</description></item>
+        /// <item><description>And</description></item>
+        /// <item><description>Or (default)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConditionLogicOperator { get; set; }
 
         /// <summary>
-        /// <para>指标触发条件列表。</para>
+        /// <para>The trigger conditions for the metric.</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<TriggerCondition> Conditions { get; set; }
 
         /// <summary>
-        /// <para>冷却时间。 单位为秒</para>
+        /// <para>The cooldown interval. Unit: seconds. Valid values: 0 to 10800.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? CoolDownInterval { get; set; }
 
         /// <summary>
-        /// <para>统计次数。</para>
+        /// <para>The number of times that the statistics are collected. This parameter is required. Valid values: 1 to 5.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? EvaluationCount { get; set; }
 
         /// <summary>
-        /// <para>时间限制。</para>
+        /// <para>The limits on time.</para>
         /// </summary>
         [NameInMap("TimeConstraints")]
         [Validation(Required=false)]
         public List<TimeConstraint> TimeConstraints { get; set; }
 
         /// <summary>
-        /// <para>统计窗口。单位为秒。</para>
+        /// <para>The time window for statistics. This parameter is required. Unit: seconds. Valid values: 30 to 1800.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

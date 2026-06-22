@@ -10,12 +10,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class NodeAttributes : TeaModel {
         /// <summary>
-        /// <para>是否启用云盘加密。取值范围：</para>
+        /// <para>Specifies whether to enable encryption for the data disk. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/zh/ecs/user-guide/encrypt-a-data-disk">Encrypt a data disk</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ecs/user-guide/encryption-overview">Encrypt a data disk</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：启用加密。</description></item>
-        /// <item><description>false：不加密。</description></item>
+        /// <item><description><para>true: Enables encryption.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Disables encryption.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：false，不加密</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? DataDiskEncrypted { get; set; }
 
         /// <summary>
-        /// <para>KMS加密秘钥ID。</para>
+        /// <para>The ID of the KMS key for the data disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DataDiskKMSKeyId { get; set; }
 
         /// <summary>
-        /// <para>ECS ssh登录秘钥。</para>
+        /// <para>The SSH key pair for logging on to the ECS instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr_login</para>
@@ -45,17 +46,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>MASTER节点root密码。</para>
+        /// <para>The password of the root user for the master node. This parameter is left empty in the response of an API call.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Adxefswfd****</para>
+        /// <para>EAQ#86****</para>
         /// </summary>
         [NameInMap("MasterRootPassword")]
         [Validation(Required=false)]
         public string MasterRootPassword { get; set; }
 
         /// <summary>
-        /// <para>ECS访问资源绑定的角色。</para>
+        /// <para>The RAM role that is attached to the ECS instances to access other cloud resources.
+        /// Default value: AliyunECSInstanceForEMRRole.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunECSInstanceForEMRRole</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RamRole { get; set; }
 
         /// <summary>
-        /// <para>安全组ID。EMR只支持普通安全组，不支持企业安全组。</para>
+        /// <para>The ID of the security group. EMR supports only basic security groups and does not support enterprise security groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,12 +78,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>是否启用云盘加密。取值范围：</para>
+        /// <para>Specifies whether to enable disk encryption for the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：启用加密。</description></item>
-        /// <item><description>false：不加密。</description></item>
+        /// <item><description><para>true: Enables encryption.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Disables encryption.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：false，不加密</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? SystemDiskEncrypted { get; set; }
 
         /// <summary>
-        /// <para>KMS加密秘钥ID。</para>
+        /// <para>The ID of the KMS key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SystemDiskKMSKeyId { get; set; }
 
         /// <summary>
-        /// <para>专有网络ID。</para>
+        /// <para>The ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>可用区ID。</para>
+        /// <para>The ID of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

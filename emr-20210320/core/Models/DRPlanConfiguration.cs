@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<DRPlanConfigurationTags> Tags { get; set; }
         public class DRPlanConfigurationTags : TeaModel {
             /// <summary>
-            /// <para>标签键。必填参数，不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或https://。</para>
+            /// <para>The tag key. This parameter is required. The key can be up to 128 characters in length and cannot be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>标签值。非必填，可以为空字符串。最多支持128个字符，不能以acs:开头，不能包含http://或者https://。</para>
+            /// <para>The tag value. This parameter is optional. The value can be up to 128 characters in length and can be an empty string. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IT</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of maximum number of records to obtain at a time.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results. If NextToken is empty, the query starts from the beginning.</para>
+        /// <para>The token to start the query. Leave this parameter empty to start the query from the beginning.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which you want to create the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs. Number of array elements N Valid values: 1 to 1</para>
+        /// <para>The list of resource IDs. The number of elements in the array N must be 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to cluster.</para>
+        /// <para>The resource type. Set the value to \<c>cluster\\</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>An array of tags. The number of elements in the array. Valid values: 1 to 20.</para>
+        /// <para>The tags. The number of elements in the array N can be from 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

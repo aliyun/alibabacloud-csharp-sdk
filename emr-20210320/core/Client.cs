@@ -63,6 +63,21 @@ namespace AlibabaCloud.SDK.Emr20210320
                 {"cn-zhengzhou-nebula-1", "emr.aliyuncs.com"},
                 {"eu-west-1-oxs", "emr.aliyuncs.com"},
                 {"rus-west-1-pop", "emr.aliyuncs.com"},
+                {"us-east-1", "emr.us-east-1.aliyuncs.com"},
+                {"me-east-1", "emr.me-east-1.aliyuncs.com"},
+                {"me-central-1", "emr.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "emr.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "emr.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "emr.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "emr.cn-wulanchabu.aliyuncs.com"},
+                {"cn-qingdao", "emr.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "emr.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "emr.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "emr.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-chengdu", "emr.cn-chengdu.aliyuncs.com"},
+                {"ap-southeast-5", "emr.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "emr.ap-southeast-3.aliyuncs.com"},
+                {"ap-northeast-1", "emr.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("emr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -648,7 +663,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a bootstrap script or a regular cluster script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -706,7 +721,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a bootstrap script or a regular cluster script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -764,7 +779,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a bootstrap script or a regular cluster script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -782,7 +797,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a bootstrap action or a common script of an E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a bootstrap script or a regular cluster script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -800,12 +815,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -855,12 +870,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -910,12 +925,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -933,12 +948,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple users at a time.</para>
+        /// <para>Creates users in a batch.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -956,7 +971,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a scale-out operation on the target node group.</para>
+        /// <para>Scales in a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1022,7 +1037,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a scale-out operation on the target node group.</para>
+        /// <para>Scales in a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1088,7 +1103,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a scale-out operation on the target node group.</para>
+        /// <para>Scales in a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1106,7 +1121,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a scale-out operation on the target node group.</para>
+        /// <para>Scales in a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1266,6 +1281,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await DeleteApiTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pay-as-you-go cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClusterRequest
         /// </param>
@@ -1307,6 +1327,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<DeleteClusterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pay-as-you-go cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClusterRequest
         /// </param>
@@ -1348,6 +1373,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<DeleteClusterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pay-as-you-go cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClusterRequest
         /// </param>
@@ -1361,6 +1391,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return DeleteClusterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a pay-as-you-go cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteClusterRequest
         /// </param>
@@ -1372,6 +1407,150 @@ namespace AlibabaCloud.SDK.Emr20210320
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteClusterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created cluster node group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeGroupResponse
+        /// </returns>
+        public DeleteNodeGroupResponse DeleteNodeGroupWithOptions(DeleteNodeGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                query["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNodeGroup",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNodeGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created cluster node group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeGroupResponse
+        /// </returns>
+        public async Task<DeleteNodeGroupResponse> DeleteNodeGroupWithOptionsAsync(DeleteNodeGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                query["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteNodeGroup",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteNodeGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created cluster node group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeGroupResponse
+        /// </returns>
+        public DeleteNodeGroupResponse DeleteNodeGroup(DeleteNodeGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteNodeGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a created cluster node group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteNodeGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteNodeGroupResponse
+        /// </returns>
+        public async Task<DeleteNodeGroupResponse> DeleteNodeGroupAsync(DeleteNodeGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteNodeGroupWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1692,7 +1871,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出应用服务配置</para>
+        /// <para>Exports the configurations of a specified service in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1762,7 +1941,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出应用服务配置</para>
+        /// <para>Exports the configurations of a specified service in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1832,7 +2011,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出应用服务配置</para>
+        /// <para>Exports the configurations of a specified service in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1850,7 +2029,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出应用服务配置</para>
+        /// <para>Exports the configurations of a specified service in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2001,7 +2180,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用详情。</para>
+        /// <para>Queries the details of an application.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2056,7 +2235,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用详情。</para>
+        /// <para>Queries the details of an application.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2111,7 +2290,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用详情。</para>
+        /// <para>Queries the details of an application.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2134,7 +2313,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用详情。</para>
+        /// <para>Queries the details of an application.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2152,7 +2331,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an auto scaling activity.</para>
+        /// <para>Retrieves the details of an Auto Scaling activity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2202,7 +2381,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an auto scaling activity.</para>
+        /// <para>Retrieves the details of an Auto Scaling activity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2252,7 +2431,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an auto scaling activity.</para>
+        /// <para>Retrieves the details of an Auto Scaling activity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2270,7 +2449,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an auto scaling activity.</para>
+        /// <para>Retrieves the details of an Auto Scaling activity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2288,7 +2467,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom auto scaling rules.</para>
+        /// <para>Retrieves the details of a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2338,7 +2517,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom auto scaling rules.</para>
+        /// <para>Retrieves the details of a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2388,7 +2567,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom auto scaling rules.</para>
+        /// <para>Retrieves the details of a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2406,7 +2585,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom auto scaling rules.</para>
+        /// <para>Retrieves the details of a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2552,7 +2731,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains metadata of the E-MapReduce (EMR) cluster that you want to clone. This helps you call the CreateCluster API operation to quickly create an EMR cluster.</para>
+        /// <para>Retrieves the clone metadata of an E-MapReduce (EMR) cluster. You can use this metadata to quickly create a cluster by calling the CreateCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2598,7 +2777,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains metadata of the E-MapReduce (EMR) cluster that you want to clone. This helps you call the CreateCluster API operation to quickly create an EMR cluster.</para>
+        /// <para>Retrieves the clone metadata of an E-MapReduce (EMR) cluster. You can use this metadata to quickly create a cluster by calling the CreateCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2644,7 +2823,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains metadata of the E-MapReduce (EMR) cluster that you want to clone. This helps you call the CreateCluster API operation to quickly create an EMR cluster.</para>
+        /// <para>Retrieves the clone metadata of an E-MapReduce (EMR) cluster. You can use this metadata to quickly create a cluster by calling the CreateCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2662,7 +2841,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains metadata of the E-MapReduce (EMR) cluster that you want to clone. This helps you call the CreateCluster API operation to quickly create an EMR cluster.</para>
+        /// <para>Retrieves the clone metadata of an E-MapReduce (EMR) cluster. You can use this metadata to quickly create a cluster by calling the CreateCluster operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4778,6 +4957,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await GetDoctorReportComponentSummaryWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a managed scaling policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetManagedScalingPolicyRequest
         /// </param>
@@ -4819,6 +5003,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetManagedScalingPolicyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a managed scaling policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetManagedScalingPolicyRequest
         /// </param>
@@ -4860,6 +5049,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<GetManagedScalingPolicyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a managed scaling policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetManagedScalingPolicyRequest
         /// </param>
@@ -4873,6 +5067,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return GetManagedScalingPolicyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a managed scaling policy.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetManagedScalingPolicyRequest
         /// </param>
@@ -4888,12 +5087,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the details of a node group.</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取节点组详情。</para>
+        /// <para>Queries the details of a node group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4943,12 +5142,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the details of a node group.</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取节点组详情。</para>
+        /// <para>Queries the details of a node group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4998,12 +5197,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the details of a node group.</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取节点组详情。</para>
+        /// <para>Queries the details of a node group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5021,12 +5220,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to obtain the details of a node group.</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取节点组详情。</para>
+        /// <para>Queries the details of a node group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5180,7 +5379,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out the node group.</para>
+        /// <para>Scales out a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5262,7 +5461,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out the node group.</para>
+        /// <para>Scales out a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5344,7 +5543,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out the node group.</para>
+        /// <para>Scales out a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5362,7 +5561,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales out the node group.</para>
+        /// <para>Scales out a target node group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5524,7 +5723,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API模板</para>
+        /// <para>Lists API templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5594,7 +5793,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API模板</para>
+        /// <para>Lists API templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5664,7 +5863,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API模板</para>
+        /// <para>Lists API templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5682,7 +5881,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API模板</para>
+        /// <para>Lists API templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5705,7 +5904,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用配置。</para>
+        /// <para>Queries application configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5788,7 +5987,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用配置。</para>
+        /// <para>Queries application configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5871,7 +6070,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用配置。</para>
+        /// <para>Queries application configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5894,7 +6093,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用配置。</para>
+        /// <para>Queries application configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6064,7 +6263,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of auto scaling activities.</para>
+        /// <para>Lists Auto Scaling activities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6150,7 +6349,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of auto scaling activities.</para>
+        /// <para>Lists Auto Scaling activities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6236,7 +6435,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of auto scaling activities.</para>
+        /// <para>Lists Auto Scaling activities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6254,7 +6453,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of auto scaling activities.</para>
+        /// <para>Lists Auto Scaling activities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6272,7 +6471,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) clusters.</para>
+        /// <para>Lists EMR clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6350,7 +6549,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) clusters.</para>
+        /// <para>Lists EMR clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6428,7 +6627,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) clusters.</para>
+        /// <para>Lists EMR clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6446,7 +6645,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries E-MapReduce (EMR) clusters.</para>
+        /// <para>Lists EMR clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7630,9 +7829,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await ListDoctorHBaseTablesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves batch analysis results for specific directories using EMR Doctor. The directory depth cannot exceed five levels.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HDFSNodes</para>
+        /// <para>Queries the analysis results for HDFS directories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7700,9 +7904,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListDoctorHDFSDirectoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves batch analysis results for specific directories using EMR Doctor. The directory depth cannot exceed five levels.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HDFSNodes</para>
+        /// <para>Queries the analysis results for HDFS directories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7770,9 +7979,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<ListDoctorHDFSDirectoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves batch analysis results for specific directories using EMR Doctor. The directory depth cannot exceed five levels.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HDFSNodes</para>
+        /// <para>Queries the analysis results for HDFS directories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7788,9 +8002,14 @@ namespace AlibabaCloud.SDK.Emr20210320
             return ListDoctorHDFSDirectoriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves batch analysis results for specific directories using EMR Doctor. The directory depth cannot exceed five levels.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>list Doctor HDFSNodes</para>
+        /// <para>Queries the analysis results for HDFS directories.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8992,7 +9211,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists instance types.</para>
+        /// <para>Retrieves a list of EMR instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9074,7 +9293,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists instance types.</para>
+        /// <para>Retrieves a list of EMR instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9156,7 +9375,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists instance types.</para>
+        /// <para>Retrieves a list of EMR instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9174,7 +9393,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists instance types.</para>
+        /// <para>Retrieves a list of EMR instance types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9192,7 +9411,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node groups in an EMR cluster.</para>
+        /// <para>Queries the node groups in an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9266,7 +9485,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node groups in an EMR cluster.</para>
+        /// <para>Queries the node groups in an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9340,7 +9559,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node groups in an EMR cluster.</para>
+        /// <para>Queries the node groups in an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9358,7 +9577,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of node groups in an EMR cluster.</para>
+        /// <para>Queries the node groups in an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9581,7 +9800,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询主版本。</para>
+        /// <para>Queries release versions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9636,7 +9855,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询主版本。</para>
+        /// <para>Queries release versions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9691,7 +9910,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询主版本。</para>
+        /// <para>Queries release versions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9714,7 +9933,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询主版本。</para>
+        /// <para>Queries release versions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9732,7 +9951,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
+        /// <para>Queries the bootstrap or normal scripts of an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9802,7 +10021,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
+        /// <para>Queries the bootstrap or normal scripts of an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9872,7 +10091,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
+        /// <para>Queries the bootstrap or normal scripts of an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9890,7 +10109,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query EMR cluster bootstrap scripts or regular scripts.</para>
+        /// <para>Queries the bootstrap or normal scripts of an EMR cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9908,7 +10127,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to an EMR cluster.</para>
+        /// <para>Queries the tags attached to E-MapReduce (EMR) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9970,7 +10189,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to an EMR cluster.</para>
+        /// <para>Queries the tags attached to E-MapReduce (EMR) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10032,7 +10251,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to an EMR cluster.</para>
+        /// <para>Queries the tags attached to E-MapReduce (EMR) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10050,7 +10269,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are bound to an EMR cluster.</para>
+        /// <para>Queries the tags attached to E-MapReduce (EMR) clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10248,12 +10467,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a custom auto scaling rule.</para>
+        /// <para>Creates a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to configure auto scaling policies.</para>
+        /// <para>Configures an Auto Scaling policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10311,12 +10530,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a custom auto scaling rule.</para>
+        /// <para>Creates a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to configure auto scaling policies.</para>
+        /// <para>Configures an Auto Scaling policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10374,12 +10593,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a custom auto scaling rule.</para>
+        /// <para>Creates a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to configure auto scaling policies.</para>
+        /// <para>Configures an Auto Scaling policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10397,12 +10616,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a custom auto scaling rule.</para>
+        /// <para>Creates a custom Auto Scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to configure auto scaling policies.</para>
+        /// <para>Configures an Auto Scaling policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10670,6 +10889,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await RemoveAutoScalingPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an API template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RunApiTemplateRequest
         /// </param>
@@ -10719,6 +10943,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<RunApiTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an API template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RunApiTemplateRequest
         /// </param>
@@ -10768,6 +10997,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<RunApiTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an API template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RunApiTemplateRequest
         /// </param>
@@ -10781,6 +11015,11 @@ namespace AlibabaCloud.SDK.Emr20210320
             return RunApiTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Runs an API template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RunApiTemplateRequest
         /// </param>
@@ -10980,12 +11219,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. It uses HTTPS POST requests and supports larger parameter values. For complex parameters, such as objects and arrays, RunCluster uses the JSON format. This improves compatibility with command-line interface (CLI) tools.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11135,12 +11374,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. It uses HTTPS POST requests and supports larger parameter values. For complex parameters, such as objects and arrays, RunCluster uses the JSON format. This improves compatibility with command-line interface (CLI) tools.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11290,12 +11529,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. It uses HTTPS POST requests and supports larger parameter values. For complex parameters, such as objects and arrays, RunCluster uses the JSON format. This improves compatibility with command-line interface (CLI) tools.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11313,12 +11552,12 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription E-MapReduce (EMR) cluster.</para>
+        /// <para>Creates a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>RunCluster is an upgraded version of CreateCluster. RunCluster uses HTTPS POST requests and supports more parameters. Complex parameters, such as parameters of the object and array types, are in the JSON format and are more friendly for users who use CLI.</para>
+        /// <para>RunCluster is an upgraded version of CreateCluster. It uses HTTPS POST requests and supports larger parameter values. For complex parameters, such as objects and arrays, RunCluster uses the JSON format. This improves compatibility with command-line interface (CLI) tools.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11637,7 +11876,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改集群模板</para>
+        /// <para>Modifies a cluster template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11704,7 +11943,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改集群模板</para>
+        /// <para>Modifies a cluster template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11771,7 +12010,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改集群模板</para>
+        /// <para>Modifies a cluster template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11794,7 +12033,7 @@ namespace AlibabaCloud.SDK.Emr20210320
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改集群模板</para>
+        /// <para>Modifies a cluster template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11812,7 +12051,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the application configurations.</para>
+        /// <para>Updates the configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11898,7 +12137,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the application configurations.</para>
+        /// <para>Updates the configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11984,7 +12223,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the application configurations.</para>
+        /// <para>Updates the configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12002,7 +12241,7 @@ namespace AlibabaCloud.SDK.Emr20210320
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the application configurations.</para>
+        /// <para>Updates the configurations of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12170,6 +12409,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return await UpdateClusterAttributeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an EMR cluster and its Elastic Compute Service (ECS) instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.d54d281ftXTbvg#/emapreduce/detail/emrpre">pricing</a> of E-MapReduce. Note: Auto-renewal is different from manual renewal. If an instance has expired or will expire the next day, you must perform a manual renewal first.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateClusterAutoRenewRequest
         /// </param>
@@ -12231,6 +12480,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<UpdateClusterAutoRenewResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an EMR cluster and its Elastic Compute Service (ECS) instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.d54d281ftXTbvg#/emapreduce/detail/emrpre">pricing</a> of E-MapReduce. Note: Auto-renewal is different from manual renewal. If an instance has expired or will expire the next day, you must perform a manual renewal first.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateClusterAutoRenewRequest
         /// </param>
@@ -12292,6 +12551,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return TeaModel.ToObject<UpdateClusterAutoRenewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an EMR cluster and its Elastic Compute Service (ECS) instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.d54d281ftXTbvg#/emapreduce/detail/emrpre">pricing</a> of E-MapReduce. Note: Auto-renewal is different from manual renewal. If an instance has expired or will expire the next day, you must perform a manual renewal first.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateClusterAutoRenewRequest
         /// </param>
@@ -12305,6 +12574,16 @@ namespace AlibabaCloud.SDK.Emr20210320
             return UpdateClusterAutoRenewWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables auto-renewal for an EMR cluster and its Elastic Compute Service (ECS) instances.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure you understand the billing methods and <a href="https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.d54d281ftXTbvg#/emapreduce/detail/emrpre">pricing</a> of E-MapReduce. Note: Auto-renewal is different from manual renewal. If an instance has expired or will expire the next day, you must perform a manual renewal first.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateClusterAutoRenewRequest
         /// </param>
@@ -12316,6 +12595,298 @@ namespace AlibabaCloud.SDK.Emr20210320
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateClusterAutoRenewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the attributes of a node group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新节点组基本属性。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNodeGroupAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodeGroupAttributesResponse
+        /// </returns>
+        public UpdateNodeGroupAttributesResponse UpdateNodeGroupAttributesWithOptions(UpdateNodeGroupAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AckConfig))
+            {
+                query["AckConfig"] = request.AckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalSecurityGroupIds))
+            {
+                query["AdditionalSecurityGroupIds"] = request.AdditionalSecurityGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCompensateState))
+            {
+                query["AutoCompensateState"] = request.AutoCompensateState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostOptimizedConfig))
+            {
+                query["CostOptimizedConfig"] = request.CostOptimizedConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsSpotStrategy))
+            {
+                query["EcsSpotStrategy"] = request.EcsSpotStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGracefulDecommission))
+            {
+                query["EnableGracefulDecommission"] = request.EnableGracefulDecommission;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeList))
+            {
+                query["InstanceTypeList"] = request.InstanceTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSize))
+            {
+                query["MaxSize"] = request.MaxSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinSize))
+            {
+                query["MinSize"] = request.MinSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeCount))
+            {
+                query["NodeCount"] = request.NodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                query["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupName))
+            {
+                query["NodeGroupName"] = request.NodeGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeResizeStrategy))
+            {
+                query["NodeResizeStrategy"] = request.NodeResizeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotBidPrices))
+            {
+                query["SpotBidPrices"] = request.SpotBidPrices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotInstanceRemedy))
+            {
+                query["SpotInstanceRemedy"] = request.SpotInstanceRemedy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNodeGroupAttributes",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNodeGroupAttributesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the attributes of a node group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新节点组基本属性。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNodeGroupAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodeGroupAttributesResponse
+        /// </returns>
+        public async Task<UpdateNodeGroupAttributesResponse> UpdateNodeGroupAttributesWithOptionsAsync(UpdateNodeGroupAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AckConfig))
+            {
+                query["AckConfig"] = request.AckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalSecurityGroupIds))
+            {
+                query["AdditionalSecurityGroupIds"] = request.AdditionalSecurityGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCompensateState))
+            {
+                query["AutoCompensateState"] = request.AutoCompensateState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CostOptimizedConfig))
+            {
+                query["CostOptimizedConfig"] = request.CostOptimizedConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsSpotStrategy))
+            {
+                query["EcsSpotStrategy"] = request.EcsSpotStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableGracefulDecommission))
+            {
+                query["EnableGracefulDecommission"] = request.EnableGracefulDecommission;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceTypeList))
+            {
+                query["InstanceTypeList"] = request.InstanceTypeList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSize))
+            {
+                query["MaxSize"] = request.MaxSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinSize))
+            {
+                query["MinSize"] = request.MinSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeCount))
+            {
+                query["NodeCount"] = request.NodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
+            {
+                query["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupName))
+            {
+                query["NodeGroupName"] = request.NodeGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeResizeStrategy))
+            {
+                query["NodeResizeStrategy"] = request.NodeResizeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotBidPrices))
+            {
+                query["SpotBidPrices"] = request.SpotBidPrices;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpotInstanceRemedy))
+            {
+                query["SpotInstanceRemedy"] = request.SpotInstanceRemedy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateNodeGroupAttributes",
+                Version = "2021-03-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateNodeGroupAttributesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the attributes of a node group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新节点组基本属性。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNodeGroupAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodeGroupAttributesResponse
+        /// </returns>
+        public UpdateNodeGroupAttributesResponse UpdateNodeGroupAttributes(UpdateNodeGroupAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateNodeGroupAttributesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the attributes of a node group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新节点组基本属性。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateNodeGroupAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateNodeGroupAttributesResponse
+        /// </returns>
+        public async Task<UpdateNodeGroupAttributesResponse> UpdateNodeGroupAttributesAsync(UpdateNodeGroupAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateNodeGroupAttributesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

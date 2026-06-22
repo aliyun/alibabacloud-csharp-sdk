@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             /// <para>The version of the application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2.8.1</para>
+            /// <para>2.8.5-20230620</para>
             /// </summary>
             [NameInMap("ApplicationVersion")]
             [Validation(Required=false)]

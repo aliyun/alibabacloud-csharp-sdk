@@ -8,28 +8,29 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class UpdateClusterAutoRenewResponseBody : TeaModel {
+    public class DeleteNodeGroupResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9E3A7161-EB7B-172B-8D18-FFB06BA3896A</para>
+        /// <para>64EBE3F5-0498-1578-BEC0-6ACE364E912D</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation to release the node group was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
-        [Obsolete]
         public bool? Success { get; set; }
 
     }

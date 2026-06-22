@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster IDs. Number of elements in the array: 1 to 100.</para>
+        /// <para>A list of cluster IDs. The number of array elements N can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The states of the clusters. Number of elements in the array: 1 to 100.</para>
+        /// <para>An array of cluster states. The number of array elements N can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;HADOOP&quot;]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> ClusterStates { get; set; }
 
         /// <summary>
-        /// <para>The list of cluster types. Number of elements in the array: 1 to 100.</para>
+        /// <para>A list of cluster types. The number of array elements N can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;c-b933c5aac8fe****&quot;]</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> ClusterTypes { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The starting point of the current query. If you do not configure this parameter, the query starts from the beginning.</para>
+        /// <para>The token that specifies the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJlY21OZXh0VG9rZW4iOiIxIiwidGFpaGFvTmV4dFRva2VuIjoiNTYiLCJ0YWloYW9OZXh0VG9rZW5JbnQiOjU2LCJlY21OZXh0VG9rZW5JbnQiOjF9</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The billing methods. You can specify a maximum of 2 items.</para>
+        /// <para>The billing methods. The number of array elements N can be 1 or 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ECS&quot;]</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tag list. Number of elements in the array: 1 to 20.</para>
+        /// <para>A list of tags. The number of array elements N can range from 1 to 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;PayAsYouGo&quot;]</para>

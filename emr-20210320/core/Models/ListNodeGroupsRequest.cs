@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of maximum number of records to obtain at a time. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of records to return in a single request. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Marks the current position where reading starts. If you set this value to null, you can start from the beginning.</para>
+        /// <para>The token that marks the start of the query. Leave this parameter empty to start from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The IDs of node groups. Valid values of the number of array elements N: 1 to 100.</para>
+        /// <para>A list of node group IDs. The number of array elements N can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c-b933c5aac8fe****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The list of node group names. Valid values of the number of array elements N: 1 to 100.</para>
+        /// <para>A list of node group names. The number of array elements N can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeGroupNames { get; set; }
 
         /// <summary>
-        /// <para>The status of the node group. Valid values of the number of array elements N: 1 to 100.</para>
+        /// <para>The state of the node group. The number of array elements N can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;CORE&quot;]</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeGroupStates { get; set; }
 
         /// <summary>
-        /// <para>The list of node group types. Valid values of the number of array elements N: 1 to 100.</para>
+        /// <para>A list of node group types. The number of array elements N can range from 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeGroupTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which you want to create the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

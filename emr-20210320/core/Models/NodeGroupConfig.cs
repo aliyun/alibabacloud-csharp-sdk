@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class NodeGroupConfig : TeaModel {
         /// <summary>
-        /// <para>附加安全组。除集群设置的安全组外，为节点组单独设置的附加安全组。数组元数个数N的取值范围：0~2。</para>
+        /// <para>The IDs of the additional security groups. In addition to the security group of the cluster, you can specify additional security groups for the node group. You can specify up to two security group IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;sg-hp3abbae8lb6lmb1****&quot;]</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public List<string> AdditionalSecurityGroupIds { get; set; }
 
+        /// <summary>
+        /// <para>The auto scaling policy.</para>
+        /// </summary>
         [NameInMap("AutoScalingPolicy")]
         [Validation(Required=false)]
         public AutoScalingPolicy AutoScalingPolicy { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to automatically create pay-as-you-go instances to meet the required capacity when the number of preemptible instances is insufficient. This parameter is effective only when <c>nodeResizeStrategy</c> is set to <c>COST_OPTIMIZED</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -31,32 +36,38 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public bool? CompensateWithOnDemand { get; set; }
 
+        /// <summary>
+        /// <para>A list of custom component tags.</para>
+        /// </summary>
         [NameInMap("ComponentTags")]
         [Validation(Required=false)]
         public List<string> ComponentTags { get; set; }
 
         /// <summary>
-        /// <para>成本优化模式配置。</para>
+        /// <para>The cost optimization settings.</para>
         /// </summary>
         [NameInMap("CostOptimizedConfig")]
         [Validation(Required=false)]
         public CostOptimizedConfig CostOptimizedConfig { get; set; }
 
         /// <summary>
-        /// <para>数据盘。当前数据盘只支持一种磁盘类型，即数组元数个数N的取值范围：1~1。</para>
+        /// <para>The data disks. Currently, the array can contain only one data disk.</para>
         /// </summary>
         [NameInMap("DataDisks")]
         [Validation(Required=false)]
         public List<DataDisk> DataDisks { get; set; }
 
         /// <summary>
-        /// <para>部署集策略。取值范围：</para>
+        /// <para>The deployment set strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NONE：不适用部署集。</description></item>
-        /// <item><description>CLUSTER：使用集群级别部署集。</description></item>
-        /// <item><description>NODE_GROUP：使用节点组级别部署集。</description></item>
+        /// <item><description><para><c>NONE</c>: No deployment sets are used.</para>
+        /// </description></item>
+        /// <item><description><para><c>CLUSTER</c>: The cluster-level deployment set is used.</para>
+        /// </description></item>
+        /// <item><description><para><c>NODE_GROUP</c>: The node group-level deployment set is used.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：NONE。</para>
+        /// <para>Default value: <c>NONE</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NONE</para>
@@ -66,12 +77,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DeploymentSetStrategy { get; set; }
 
         /// <summary>
-        /// <para>节点组上部署的组件是否开启优雅下线。取值范围：</para>
+        /// <para>Specifies whether to enable graceful shutdown for the components in the node group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：开启优雅下线。</description></item>
-        /// <item><description>false：不开启优雅下线。</description></item>
+        /// <item><description><para><c>true</c>: Enables graceful shutdown.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disables graceful shutdown.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：false。</para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -81,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? GracefulShutdown { get; set; }
 
         /// <summary>
-        /// <para>节点实例类型列表。数组元数个数N的取值范围：1~100。</para>
+        /// <para>The instance types. You can specify 1 to 100 instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ecs.g6.xlarge&quot;]</para>
@@ -91,7 +104,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>节点数量。取值范围：1~1000。</para>
+        /// <para>The number of nodes in the node group. Valid values: 1 to 1,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -101,7 +114,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? NodeCount { get; set; }
 
         /// <summary>
-        /// <para>节点组名称。最大长度128个字符。集群内要求节点组名称唯一。</para>
+        /// <para>The name of the node group. The name can be up to 128 characters in length and must be unique within the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>core-1</para>
@@ -111,11 +124,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>节点组类型。取值范围：</para>
+        /// <para>The type of the node group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MASTER：管理类型节点组。</description></item>
-        /// <item><description>CORE：存储类型节点组。</description></item>
-        /// <item><description>TASK：计算类型节点组。</description></item>
+        /// <item><description><para><c>MASTER</c>: a master node group.</para>
+        /// </description></item>
+        /// <item><description><para><c>CORE</c>: a core node group.</para>
+        /// </description></item>
+        /// <item><description><para><c>TASK</c>: a task node group.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -127,12 +143,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupType { get; set; }
 
         /// <summary>
-        /// <para>节点扩容策略。取值范围：</para>
+        /// <para>The node scale-out strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>COST_OPTIMIZED：成本优化策略。</description></item>
-        /// <item><description>PRIORITY：优先级策略。</description></item>
+        /// <item><description><para><c>COST_OPTIMIZED</c>: The cost-optimized strategy.</para>
+        /// </description></item>
+        /// <item><description><para><c>PRIORITY</c>: The priority-based strategy.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：PRIORITY。</para>
+        /// <para>Default value: <c>PRIORITY</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PRIORITY</para>
@@ -142,12 +160,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeResizeStrategy { get; set; }
 
         /// <summary>
-        /// <para>节点组付费类型。不传入时默认和集群付费类型一致。取值范围：</para>
+        /// <para>The billing method of the node group. If you do not specify this parameter, the billing method of the cluster is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayAsYouGo：后付费，按量付费。</description></item>
-        /// <item><description>Subscription：预付费，包年包月。</description></item>
+        /// <item><description><para><c>PayAsYouGo</c>: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para><c>Subscription</c>: subscription.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：PayAsYouGo。</para>
+        /// <para>Default value: <c>PayAsYouGo</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayAsYouGo</para>
@@ -156,24 +176,29 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        /// <summary>
+        /// <para>The private pool options. This parameter is effective only when you create pay-as-you-go instances.</para>
+        /// </summary>
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
         public PrivatePoolOptions PrivatePoolOptions { get; set; }
 
         /// <summary>
-        /// <para>抢占式Spot实例出价价格。参数SpotStrategy取值为SpotWithPriceLimit时生效。数组元数个数N的取值范围：0~100。</para>
+        /// <para>The bid prices for the preemptible instances. This parameter is effective only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>. You can specify up to 100 bid prices.</para>
         /// </summary>
         [NameInMap("SpotBidPrices")]
         [Validation(Required=false)]
         public List<SpotBidPrice> SpotBidPrices { get; set; }
 
         /// <summary>
-        /// <para>开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：</para>
+        /// <para>If enabled, the auto scaling group attempts to create a new instance to replace a spot instance that is about to be reclaimed. This process is triggered when the auto scaling group receives a system message about the impending reclamation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：开启补齐抢占式实例。</description></item>
-        /// <item><description>false：不开启补齐抢占式实例。</description></item>
+        /// <item><description><para><c>true</c>: The auto scaling group attempts to replace a spot instance that is about to be reclaimed.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The auto scaling group does not attempt to replace a spot instance that is about to be reclaimed.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：false。</para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -183,13 +208,16 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? SpotInstanceRemedy { get; set; }
 
         /// <summary>
-        /// <para>抢占式Spot实例策略。取值范围：</para>
+        /// <para>The preemption strategy for preemptible instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot：正常按量付费实例。</description></item>
-        /// <item><description>SpotWithPriceLimit：设置最高出价的抢占式实例。</description></item>
-        /// <item><description>SpotAsPriceGo：系统自动出价，最高按量付费价格的抢占式实例。</description></item>
+        /// <item><description><para><c>NoSpot</c>: pay-as-you-go instances.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotWithPriceLimit</c>: preemptible instances with a user-defined maximum hourly price.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotAsPriceGo</c>: preemptible instances that are automatically bid at the pay-as-you-go price.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：NoSpot。</para>
+        /// <para>Default value: <c>NoSpot</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoSpot</para>
@@ -199,21 +227,21 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>节点组预付费配置。不传入时默认和集群预付费配置一致。</para>
+        /// <para>The subscription settings of the node group. If you do not specify this parameter, the subscription settings of the cluster are used.</para>
         /// </summary>
         [NameInMap("SubscriptionConfig")]
         [Validation(Required=false)]
         public SubscriptionConfig SubscriptionConfig { get; set; }
 
         /// <summary>
-        /// <para>系统盘。</para>
+        /// <para>The system disk.</para>
         /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public SystemDisk SystemDisk { get; set; }
 
         /// <summary>
-        /// <para>虚拟机交换机ID列表。数组元数个数N的取值范围：1~20。</para>
+        /// <para>The vSwitch IDs. You can specify 1 to 20 vSwitch IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;vsw-hp35g7ya5ymw68mmg****&quot;]</para>
@@ -223,12 +251,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>是否开公网IP。取值范围：</para>
+        /// <para>Specifies whether to assign a public IP address to the instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：开公网。</description></item>
-        /// <item><description>false：不开公网。</description></item>
+        /// <item><description><para><c>true</c>: Assigns a public IP address.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Does not assign a public IP address.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：false。</para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

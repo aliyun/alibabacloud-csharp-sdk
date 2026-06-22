@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class NodeGroup : TeaModel {
         /// <summary>
-        /// <para>安全组ID。</para>
+        /// <para>The additional security group IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;sg-hp3abbae8lb6lmb1****&quot;]</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> AdditionalSecurityGroupIds { get; set; }
 
         /// <summary>
+        /// <para>Applies only when <c>NodeResizeStrategy</c> is set to <c>COST_OPTIMIZED</c>. If set to <c>true</c>, the system creates Pay-As-You-Go instances to meet the target capacity if it fails to create enough spot instances due to price or inventory constraints.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -28,27 +30,30 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? CompensateWithOnDemand { get; set; }
 
         /// <summary>
-        /// <para>成本优化模式配置。</para>
+        /// <para>The configurations of the cost-optimized mode.</para>
         /// </summary>
         [NameInMap("CostOptimizedConfig")]
         [Validation(Required=false)]
         public CostOptimizedConfig CostOptimizedConfig { get; set; }
 
         /// <summary>
-        /// <para>数据盘列表。</para>
+        /// <para>The data disks.</para>
         /// </summary>
         [NameInMap("DataDisks")]
         [Validation(Required=false)]
         public List<DataDisk> DataDisks { get; set; }
 
         /// <summary>
-        /// <para>部署集策略。取值范围：</para>
+        /// <para>The Deployment Set strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NONE：不适用部署集。</description></item>
-        /// <item><description>CLUSTER：使用集群级别部署集。</description></item>
-        /// <item><description>NODE_GROUP：使用节点组级别部署集。</description></item>
+        /// <item><description><para>NONE: Does not use a Deployment Set.</para>
+        /// </description></item>
+        /// <item><description><para>CLUSTER: Uses a cluster-level Deployment Set.</para>
+        /// </description></item>
+        /// <item><description><para>NODE_GROUP: Uses a node group-level Deployment Set.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：NONE。</para>
+        /// <para>Default: <c>NONE</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NONE</para>
@@ -58,10 +63,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string DeploymentSetStrategy { get; set; }
 
         /// <summary>
-        /// <para>节点组上部署的组件是否开启优雅下线。取值范围：</para>
+        /// <para>Specifies whether to enable graceful shutdown for components deployed in the node group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：开启优雅下线。</description></item>
-        /// <item><description>false：不开启优雅下线。</description></item>
+        /// <item><description><para>true: Enables graceful shutdown.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables graceful shutdown.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +79,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? GracefulShutdown { get; set; }
 
         /// <summary>
-        /// <para>实例类型列表。</para>
+        /// <para>The instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ecs.g6.4xlarge&quot;]</para>
@@ -82,7 +89,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>节点组ID。</para>
+        /// <para>The node group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-869471354ecd****</para>
@@ -92,7 +99,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>节点组名称。最大长度128个字符。</para>
+        /// <para>The node group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>core-1</para>
@@ -102,25 +109,30 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>节点组状态。</para>
+        /// <para>The state of the node group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CREATED</para>
+        /// <para>RESIZING</para>
         /// </summary>
         [NameInMap("NodeGroupState")]
         [Validation(Required=false)]
         public string NodeGroupState { get; set; }
 
         /// <summary>
-        /// <para>节点组类型。取值范围：</para>
+        /// <para>The type of the node group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MASTER：管理类型节点组。</description></item>
-        /// <item><description>CORE：存储类型节点组。</description></item>
-        /// <item><description>TASK：计算类型节点组。</description></item>
+        /// <item><description><para>MASTER: A master node.</para>
+        /// </description></item>
+        /// <item><description><para>CORE: A core node.</para>
+        /// </description></item>
+        /// <item><description><para>TASK: A task node.</para>
+        /// </description></item>
+        /// <item><description><para>GATEWAY: A gateway node. This value is not applicable to DATALAKE, OLAP, or DATASERVING clusters.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>CORE</para>
+        /// <para>MASTER</para>
         /// </summary>
         [NameInMap("NodeGroupType")]
         [Validation(Required=false)]
@@ -128,8 +140,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>COST_OPTIMIZED：成本优化策略。</description></item>
-        /// <item><description>PRIORITY：优先级策略。</description></item>
+        /// <item><description><para>COST_OPTIMIZED: The cost-optimized strategy.</para>
+        /// </description></item>
+        /// <item><description><para>PRIORITY: The priority-based strategy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,25 +154,24 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeResizeStrategy { get; set; }
 
         /// <summary>
-        /// <para>节点组付费类型。取值范围：</para>
-        /// <list type="bullet">
-        /// <item><description>PayAsYouGo：后付费，按量付费。</description></item>
-        /// <item><description>Subscription：预付费，包年包月。</description></item>
-        /// </list>
+        /// <para>The payment type. Valid values are <c>Subscription</c> for the subscription billing method and <c>PayAsYouGo</c> for the Pay-As-You-Go billing method.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PayAsYouGo</para>
+        /// <para>Subscription</para>
         /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
+        /// <summary>
+        /// <para>The private pool options.</para>
+        /// </summary>
         [NameInMap("PrivatePoolOptions")]
         [Validation(Required=false)]
         public PrivatePoolOptions PrivatePoolOptions { get; set; }
 
         /// <summary>
-        /// <para>存活节点数量。</para>
+        /// <para>The number of running nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -167,27 +180,41 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public int? RunningNodeCount { get; set; }
 
+        /// <summary>
+        /// <para>The bid prices for the spot instances. This parameter is effective only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>. The array can contain 0 to 100 elements.</para>
+        /// </summary>
         [NameInMap("SpotBidPrices")]
         [Validation(Required=false)]
         public List<SpotBidPrice> SpotBidPrices { get; set; }
 
         /// <summary>
-        /// <para>开启补齐抢占式实例后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。取值范围：</para>
+        /// <para>Specifies whether to enable spot instance remedy. If enabled, the scaling group attempts to create a new instance to replace a spot instance that is about to be reclaimed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true：开启补齐抢占式实例。</description></item>
-        /// <item><description>false：不开启补齐抢占式实例。</description></item>
+        /// <item><description><para>true: Enables spot instance remedy.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables spot instance remedy.</para>
+        /// </description></item>
         /// </list>
-        /// <para>默认值：false。</para>
+        /// <para>Default: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SpotInstanceRemedy")]
         [Validation(Required=false)]
         public bool? SpotInstanceRemedy { get; set; }
 
         /// <summary>
-        /// <para>是否支持竞价实例。</para>
+        /// <para>The policy for using spot instances. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>NoSpot: No spot instances are used.</para>
+        /// </description></item>
+        /// <item><description><para>SpotWithPriceLimit: Spot instances are created with a user-defined maximum bid price.</para>
+        /// </description></item>
+        /// <item><description><para>SpotAsPriceGo: The system automatically bids for spot instances. The bid price does not exceed the price of a Pay-As-You-Go instance.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default: <c>NoSpot</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoSpot</para>
@@ -197,13 +224,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>状态变化原因。</para>
+        /// <para>The reason for the state change.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>手动重启</para>
         /// </summary>
         [NameInMap("StateChangeReason")]
         [Validation(Required=false)]
         public NodeGroupStateChangeReason StateChangeReason { get; set; }
 
         /// <summary>
+        /// <para>The node group state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CREATED</para>
         /// </summary>
@@ -212,14 +244,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>系统盘信息。</para>
+        /// <para>The system disk.</para>
         /// </summary>
         [NameInMap("SystemDisk")]
         [Validation(Required=false)]
         public SystemDisk SystemDisk { get; set; }
 
         /// <summary>
-        /// <para>虚拟机交换机ID列表。</para>
+        /// <para>The VSwitch IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;vsw-hp35g7ya5ymw68mmg****&quot;]</para>
@@ -229,24 +261,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>是否开公网IP。取值范围：</para>
-        /// <list type="bullet">
-        /// <item><description>true：开公网。</description></item>
-        /// <item><description>false：不开公网。</description></item>
-        /// </list>
+        /// <para>Specifies whether to assign a public IP address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("WithPublicIp")]
         [Validation(Required=false)]
         public bool? WithPublicIp { get; set; }
 
         /// <summary>
-        /// <para>可用区ID。</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-beijing-h</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

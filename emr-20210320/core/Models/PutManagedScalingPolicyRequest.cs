@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The constrains on the maximum and minimum numbers of nodes in a node group.</para>
+        /// <para>The maximum and minimum value constraints for the cluster.</para>
         /// </summary>
         [NameInMap("Constraints")]
         [Validation(Required=false)]

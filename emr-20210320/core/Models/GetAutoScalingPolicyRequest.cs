@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node group.</para>
+        /// <para>The node group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

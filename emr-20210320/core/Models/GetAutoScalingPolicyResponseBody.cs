@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The auto scaling policy.</para>
+        /// <para>The Auto Scaling policy.</para>
         /// </summary>
         [NameInMap("ScalingPolicy")]
         [Validation(Required=false)]
@@ -37,14 +37,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The maximum and minimum number of nodes in the node group.</para>
+            /// <para>The constraints on the minimum and maximum number of nodes in the node group.</para>
             /// </summary>
             [NameInMap("Constraints")]
             [Validation(Required=false)]
             public GetAutoScalingPolicyResponseBodyScalingPolicyConstraints Constraints { get; set; }
             public class GetAutoScalingPolicyResponseBodyScalingPolicyConstraints : TeaModel {
                 /// <summary>
-                /// <para>The maximum number of nodes in the node group. Default value: 2000.</para>
+                /// <para>The maximum number of nodes in the node group.
+                /// Default value: 2000.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000</para>
@@ -54,7 +55,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public int? MaxCapacity { get; set; }
 
                 /// <summary>
-                /// <para>The minimum number of nodes in the node group. Default value: 0.</para>
+                /// <para>The minimum number of nodes in the node group.
+                /// Default value: 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             }
 
             /// <summary>
-            /// <para>The ID of the node group.</para>
+            /// <para>The node group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ng-869471354ecd****</para>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string NodeGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scaling policy.</para>
+            /// <para>The scaling policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asp-asduwe23znl***</para>
@@ -86,17 +88,19 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ScalingPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The auto scaling rules.</para>
+            /// <para>The list of scaling rules.</para>
             /// </summary>
             [NameInMap("ScalingRules")]
             [Validation(Required=false)]
             public List<GetAutoScalingPolicyResponseBodyScalingPolicyScalingRules> ScalingRules { get; set; }
             public class GetAutoScalingPolicyResponseBodyScalingPolicyScalingRules : TeaModel {
                 /// <summary>
-                /// <para>The scaling type. Valid values:</para>
+                /// <para>The type of the scaling activity. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SCALE_OUT</description></item>
-                /// <item><description>SCALE_IN</description></item>
+                /// <item><description><para>SCALE_OUT: scale-out.</para>
+                /// </description></item>
+                /// <item><description><para>SCALE_IN: scale-in.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string AdjustmentType { get; set; }
 
                 /// <summary>
-                /// <para>The adjustment value. The parameter value must be a positive integer, which indicates the number of instances that you want to add or remove.</para>
+                /// <para>The adjustment value. The value must be a positive integer. It specifies the number of instances to add or remove.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -131,14 +135,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public CollationTimeZone CollationTimeZone { get; set; }
 
                 /// <summary>
-                /// <para>The description of load-based scaling.</para>
+                /// <para>The description of the metric-based scaling rule.</para>
                 /// </summary>
                 [NameInMap("MetricsTrigger")]
                 [Validation(Required=false)]
                 public MetricsTrigger MetricsTrigger { get; set; }
 
                 /// <summary>
-                /// <para>The name of the auto scaling rule.</para>
+                /// <para>The name of the scaling rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>scaling-out-memory</para>
@@ -148,17 +152,19 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The description of time-based scaling.</para>
+                /// <para>The description of the time-based scaling rule.</para>
                 /// </summary>
                 [NameInMap("TimeTrigger")]
                 [Validation(Required=false)]
                 public TimeTrigger TimeTrigger { get; set; }
 
                 /// <summary>
-                /// <para>The type of the auto scaling rule. Valid values:</para>
+                /// <para>The type of the scaling rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>TIME_TRIGGER: time-based scaling</description></item>
-                /// <item><description>METRICS_TRIGGER: load-based scaling</description></item>
+                /// <item><description><para>TIME_TRIGGER: a time-based scaling rule.</para>
+                /// </description></item>
+                /// <item><description><para>METRICS_TRIGGER: a metric-based scaling rule.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

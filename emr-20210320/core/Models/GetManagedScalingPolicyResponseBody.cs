@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class GetManagedScalingPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The elastic scaling policy.</para>
+        /// </summary>
         [NameInMap("ScalingPolicy")]
         [Validation(Required=false)]
         public GetManagedScalingPolicyResponseBodyScalingPolicy ScalingPolicy { get; set; }
         public class GetManagedScalingPolicyResponseBodyScalingPolicy : TeaModel {
             /// <summary>
-            /// <para>集群ID。</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c-b933c5aac8fe****</para>
@@ -34,14 +37,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>最大最小值约束</para>
+            /// <para>The constraints on the maximum and minimum values.</para>
             /// </summary>
             [NameInMap("Constraints")]
             [Validation(Required=false)]
             public GetManagedScalingPolicyResponseBodyScalingPolicyConstraints Constraints { get; set; }
             public class GetManagedScalingPolicyResponseBodyScalingPolicyConstraints : TeaModel {
                 /// <summary>
-                /// <para>最大值</para>
+                /// <para>The maximum value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public int? MaxCapacity { get; set; }
 
                 /// <summary>
-                /// <para>最大按量数量</para>
+                /// <para>The maximum number of pay-as-you-go task nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 public int? MaxOnDemandCapacity { get; set; }
 
                 /// <summary>
-                /// <para>最小值</para>
+                /// <para>The minimum value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             }
 
             /// <summary>
-            /// <para>伸缩策略ID。</para>
+            /// <para>The scaling policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asp-asduwe23znl***</para>

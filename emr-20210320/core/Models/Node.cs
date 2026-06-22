@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class Node : TeaModel {
         /// <summary>
-        /// <para>节点是否自动续费。</para>
+        /// <para>Whether auto-renewal is enabled for the node. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Auto-renewal is disabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>节点自动续费时长。</para>
+        /// <para>The auto-renewal duration for the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +36,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? AutoRenewDuration { get; set; }
 
         /// <summary>
-        /// <para>节点自动续费时长单位。</para>
+        /// <para>The unit of the auto-renewal duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -39,12 +45,18 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         [Validation(Required=false)]
         public string AutoRenewDurationUnit { get; set; }
 
+        /// <summary>
+        /// <para>The creation time of the node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1603728394857</para>
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>节点过期时间。</para>
+        /// <para>The expiration time of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1603728394857</para>
@@ -54,29 +66,31 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>实例类型。</para>
+        /// <para>The instance type of the node. This corresponds to an ECS instance type. You can call the ECS <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the available instance types.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs.g6e.xlarge</para>
+        /// <para>ecs.g7.xlarge</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>运维模式状态。取值范围：</para>
+        /// <para>The maintenance status of the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ON：处于运维模式。</description></item>
-        /// <item><description>OFF：处于非运维模式。</description></item>
+        /// <item><description><para>ON: The node is in maintenance mode.</para>
+        /// </description></item>
+        /// <item><description><para>OFF: The node is not in maintenance mode.</para>
+        /// </description></item>
         /// </list>
-        /// <para>为空表示处于非运维模式。</para>
+        /// <para>If this parameter is empty, the node is not in maintenance mode.</para>
         /// </summary>
         [NameInMap("MaintenanceStatus")]
         [Validation(Required=false)]
         public string MaintenanceStatus { get; set; }
 
         /// <summary>
-        /// <para>节点组ID。</para>
+        /// <para>The ID of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-869471354ecd****</para>
@@ -86,7 +100,15 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>节点组类型。</para>
+        /// <para>The type of the node group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>MASTER: A master node group.</para>
+        /// </description></item>
+        /// <item><description><para>CORE: A core node group.</para>
+        /// </description></item>
+        /// <item><description><para>TASK: A task node group.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CORE</para>
@@ -96,7 +118,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupType { get; set; }
 
         /// <summary>
-        /// <para>节点ID。</para>
+        /// <para>The ID of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1cudc25w2bfwl5****</para>
@@ -106,7 +128,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>节点名称。</para>
+        /// <para>The name of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>core1-1</para>
@@ -116,14 +138,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>节点状态。取值范围：</para>
+        /// <para>The state of the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending：创建中。</description></item>
-        /// <item><description>Starting：启动中。</description></item>
-        /// <item><description>Running：运行中。</description></item>
-        /// <item><description>Stopping：停止中。</description></item>
-        /// <item><description>Stopped：已停止。</description></item>
-        /// <item><description>Terminated：已终止。</description></item>
+        /// <item><description><para>Pending: The node is being created.</para>
+        /// </description></item>
+        /// <item><description><para>Starting: The node is starting up.</para>
+        /// </description></item>
+        /// <item><description><para>Running: The node is operational and running services.</para>
+        /// </description></item>
+        /// <item><description><para>Stopping: The node is shutting down.</para>
+        /// </description></item>
+        /// <item><description><para>Stopped: The node is powered off.</para>
+        /// </description></item>
+        /// <item><description><para>Terminated: The node has been permanently deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,27 +162,27 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeState { get; set; }
 
         /// <summary>
-        /// <para>私网IP。</para>
+        /// <para>The private IP address of the node.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.10.10.1</para>
+        /// <para><c>10.10.**.**</c></para>
         /// </summary>
         [NameInMap("PrivateIp")]
         [Validation(Required=false)]
         public string PrivateIp { get; set; }
 
         /// <summary>
-        /// <para>公网IP。</para>
+        /// <para>The public IP address of the node.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>42.120.75.***</para>
+        /// <para>42.1.1.**</para>
         /// </summary>
         [NameInMap("PublicIp")]
         [Validation(Required=false)]
         public string PublicIp { get; set; }
 
         /// <summary>
-        /// <para>可用区ID。</para>
+        /// <para>The ID of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-h</para>

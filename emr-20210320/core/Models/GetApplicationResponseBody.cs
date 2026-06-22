@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                     /// <para>Description</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>start</para>
+                    /// <para>Decommission action</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         /// <para>Value description.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>描述</para>
+                        /// <para>Set timeout duration</para>
                         /// </summary>
                         [NameInMap("Description")]
                         [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                         /// <para>The unit of the value.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>number</para>
+                        /// <para>Second</para>
                         /// </summary>
                         [NameInMap("ValueUnit")]
                         [Validation(Required=false)]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <para>The description of the action.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>描述</para>
+                /// <para>Description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -164,9 +164,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
                 /// <summary>
                 /// <para>The execution scope. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>APPLICATION: the application scope.</description></item>
-                /// <item><description>COMPONENT: the component scope.</description></item>
-                /// <item><description>COMPONENT_INSTANCE: the component instance scope.</description></item>
+                /// <item><description><para>APPLICATION: the application scope.</para>
+                /// </description></item>
+                /// <item><description><para>COMPONENT: the component scope.</para>
+                /// </description></item>
+                /// <item><description><para>COMPONENT_INSTANCE: the component instance scope.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

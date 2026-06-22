@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class DecreaseNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The cooldown interval between two batches.</para>
+        /// <para>The cooldown time between batches.</para>
         /// </summary>
         [NameInMap("BatchInterval")]
         [Validation(Required=false)]
         public int? BatchInterval { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes to be removed in a single batch.</para>
+        /// <para>The number of nodes to concurrently take offline in a single batch.</para>
         /// </summary>
         [NameInMap("BatchSize")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes to scale out. The number of nodes to be scaled out. The value should be less than the number of surviving nodes in the current node group.</para>
+        /// <para>The number of nodes to remove. The value must be less than the number of active nodes in the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? DecreaseNodeCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node group.</para>
+        /// <para>The node group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>The array of node IDs. Valid values of array element N: 1 to 500.</para>
+        /// <para>An array of node IDs. The array can contain from 1 to 500 elements.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-bp1cudc25w2bfwl5****&quot;]</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which you want to create the instance.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

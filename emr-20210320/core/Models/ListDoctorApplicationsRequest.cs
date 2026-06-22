@@ -64,13 +64,20 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// <para>The field that you use to sort the query results. Valid values:</para>
         /// <ol>
-        /// <item><description>startTime: the time when the job starts</description></item>
-        /// <item><description>endTime: the time when the job ends</description></item>
-        /// <item><description>vcoreUtilization: the vCPU utilization of the job</description></item>
-        /// <item><description>memUtilization: the memory usage of the job</description></item>
-        /// <item><description>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</description></item>
-        /// <item><description>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</description></item>
-        /// <item><description>score: the score of the job</description></item>
+        /// <item><description><para>startTime: the time when the job starts</para>
+        /// </description></item>
+        /// <item><description><para>endTime: the time when the job ends</para>
+        /// </description></item>
+        /// <item><description><para>vcoreUtilization: the vCPU utilization of the job</para>
+        /// </description></item>
+        /// <item><description><para>memUtilization: the memory usage of the job</para>
+        /// </description></item>
+        /// <item><description><para>vcoreSeconds: the aggregated number of vCPUs that are allocated to the job multiplied by the number of seconds the job has been running</para>
+        /// </description></item>
+        /// <item><description><para>memSeconds: the aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running</para>
+        /// </description></item>
+        /// <item><description><para>score: the score of the job</para>
+        /// </description></item>
         /// </ol>
         /// 
         /// <b>Example:</b>
@@ -83,8 +90,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <summary>
         /// <para>The order in which you want to sort the query results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: the ascending order</description></item>
-        /// <item><description>DESC: the descending order</description></item>
+        /// <item><description><para>ASC: the ascending order</para>
+        /// </description></item>
+        /// <item><description><para>DESC: the descending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CreateCluster</para>
+        /// <para>content</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>datalakeTest1</para>
+        /// <para>DATALAKE template</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

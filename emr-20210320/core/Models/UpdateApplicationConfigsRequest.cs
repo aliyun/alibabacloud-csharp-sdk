@@ -10,8 +10,11 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class UpdateApplicationConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>应用配置列表。</para>
+        /// <para>The list of application configurations.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CLUSTER</para>
         /// </summary>
         [NameInMap("ApplicationConfigs")]
         [Validation(Required=false)]
@@ -40,11 +43,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The operation performed on configuration items. Valid values:</para>
+        /// <para>The operation on the configuration items. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ADD</description></item>
-        /// <item><description>UPDATE</description></item>
-        /// <item><description>DELETE</description></item>
+        /// <item><description><para>ADD: Adds configuration items.</para>
+        /// </description></item>
+        /// <item><description><para>UPDATE: Updates configuration items.</para>
+        /// </description></item>
+        /// <item><description><para>DELETE: Deletes configuration items.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,10 +61,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigAction { get; set; }
 
         /// <summary>
-        /// <para>The operation scope. Valid values:</para>
+        /// <para>The scope of the configuration operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CLUSTER</description></item>
-        /// <item><description>NODE_GROUP</description></item>
+        /// <item><description><para>CLUSTER: The cluster level.</para>
+        /// </description></item>
+        /// <item><description><para>NODE_GROUP: The node group level.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +80,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>更新YARN内存配置。</para>
+        /// <para>Description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -99,7 +107,8 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to refresh the configurations. Default value: True.</para>
+        /// <para>Specifies whether to refresh the configurations.
+        /// The default value is true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

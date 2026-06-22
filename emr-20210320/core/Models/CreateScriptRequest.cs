@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the script. Valid values:</para>
+        /// <para>The script type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description>NORMAL: indicates a common script.</description></item>
+        /// <item><description><para>BOOTSTRAP: an ECS instance bootstrap script.</para>
+        /// </description></item>
+        /// <item><description><para>NORMAL: a normal script.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<Script> Scripts { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for a manual execution script. You cannot specify a timeout period for a bootstrap action.</para>
+        /// <para>The timeout period for manually executing the script. This parameter is not supported for bootstrap scripts.</para>
         /// </summary>
         [NameInMap("TimeoutSecs")]
         [Validation(Required=false)]

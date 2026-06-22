@@ -10,13 +10,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ComponentInstanceSelector : TeaModel {
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>The action scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>APPLICATION: The application level.</para>
+        /// </description></item>
+        /// <item><description><para>COMPONENT: The component level.</para>
+        /// </description></item>
+        /// <item><description><para>COMPONENT_INSTANCE: The component instance level.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>APPLICATION</para>
+        /// </summary>
         [NameInMap("ActionScope")]
         [Validation(Required=false)]
         [Obsolete]
         public string ActionScope { get; set; }
 
         /// <summary>
-        /// <para>应用名称。</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HDFS</para>
@@ -26,14 +41,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>组件实例列表。actionScope为COPONENT_INSTANCE时使用。</para>
+        /// <para>A list of component instances. This parameter is used when <c>RunActionScope</c> is set to <c>COMPONENT_INSTANCE</c>.</para>
         /// </summary>
         [NameInMap("ComponentInstances")]
         [Validation(Required=false)]
         public List<ComponentInstanceSelectorComponentInstances> ComponentInstances { get; set; }
         public class ComponentInstanceSelectorComponentInstances : TeaModel {
             /// <summary>
-            /// <para>应用名称。</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HDFS</para>
@@ -43,7 +58,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>组件名称。</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataNode</para>
@@ -53,7 +68,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ComponentName { get; set; }
 
             /// <summary>
-            /// <para>节点ID。</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp1cudc25w2bfwl5****</para>
@@ -65,15 +80,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>组件列表。
-        /// actionScope为COPONENT时使用。</para>
+        /// <para>A list of components. This parameter is used when <c>RunActionScope</c> is set to <c>COMPONENT</c>.</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<ComponentInstanceSelectorComponents> Components { get; set; }
         public class ComponentInstanceSelectorComponents : TeaModel {
             /// <summary>
-            /// <para>应用名称。</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HDFS</para>
@@ -83,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>组件名称。</para>
+            /// <para>The component name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataNode</para>
@@ -95,11 +109,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         }
 
         /// <summary>
-        /// <para>动作执行范围。取值范围：</para>
+        /// <para>The action scope. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>APPLICATION：应用级别。</description></item>
-        /// <item><description>COMPONENT：组件级别。</description></item>
-        /// <item><description>COMPONENT_INSTANCE：组件实例级别。</description></item>
+        /// <item><description><para>APPLICATION: The application level.</para>
+        /// </description></item>
+        /// <item><description><para>COMPONENT: The component level.</para>
+        /// </description></item>
+        /// <item><description><para>COMPONENT_INSTANCE: The component instance level.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

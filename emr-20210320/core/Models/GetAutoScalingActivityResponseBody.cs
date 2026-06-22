@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the scaling activity.</para>
+        /// <para>The details of the scaling activity.</para>
         /// </summary>
         [NameInMap("ScalingActivity")]
         [Validation(Required=false)]
@@ -37,19 +37,23 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ActivityId { get; set; }
 
             /// <summary>
-            /// <para>The instances that correspond to the scaling activity.</para>
+            /// <para>The list of instances involved in the scaling activity.</para>
             /// </summary>
             [NameInMap("ActivityResults")]
             [Validation(Required=false)]
             public List<ScalingActivityResult> ActivityResults { get; set; }
 
             /// <summary>
-            /// <para>The status of the scaling activity. Valid values:</para>
+            /// <para>The state of the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>REJECTED</description></item>
-            /// <item><description>SUCCESSFUL</description></item>
-            /// <item><description>FAILED</description></item>
-            /// <item><description>IN_PROGRESS</description></item>
+            /// <item><description><para>REJECTED: rejected.</para>
+            /// </description></item>
+            /// <item><description><para>SUCCESSFUL: successful.</para>
+            /// </description></item>
+            /// <item><description><para>FAILED: failed.</para>
+            /// </description></item>
+            /// <item><description><para>IN_PROGRESS: in progress.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,10 +64,12 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string ActivityState { get; set; }
 
             /// <summary>
-            /// <para>The type of the scaling activity. Valid value:</para>
+            /// <para>The type of the scaling activity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SCALE_OUT</description></item>
-            /// <item><description>SCALE_IN</description></item>
+            /// <item><description><para>SCALE_OUT: scale-out.</para>
+            /// </description></item>
+            /// <item><description><para>SCALE_IN: scale-in.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when scaling ended.</para>
+            /// <para>The end time of the scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639715634819</para>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The number of added or removed instances.</para>
+            /// <para>The number of instances that are added or removed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -114,7 +120,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public int? ExpectNum { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node group.</para>
+            /// <para>The node group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ng-869471354ecd****</para>
@@ -154,7 +160,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string PolicyType { get; set; }
 
             /// <summary>
-            /// <para>The description of the scaling rule.</para>
+            /// <para>The details of the scaling rule.</para>
             /// </summary>
             [NameInMap("RuleDetail")]
             [Validation(Required=false)]
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The time when scaling started.</para>
+            /// <para>The start time of the scaling activity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1639714634819</para>

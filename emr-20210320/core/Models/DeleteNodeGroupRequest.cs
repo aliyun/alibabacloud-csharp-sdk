@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emr20210320.Models
 {
-    public class GetDoctorReportComponentSummaryRequest : TeaModel {
+    public class DeleteNodeGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,43 +21,28 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Select component filter type. Values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>compute</para>
-        /// </description></item>
-        /// <item><description><para>hive</para>
-        /// </description></item>
-        /// <item><description><para>hdfs</para>
-        /// </description></item>
-        /// <item><description><para>yarn</para>
-        /// </description></item>
-        /// <item><description><para>oss</para>
-        /// </description></item>
-        /// <item><description><para>hbase</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>机器组不再需要</para>
+        /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// <para>The node group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>compute</para>
+        /// <para>ng-869471354ecd****</para>
         /// </summary>
-        [NameInMap("ComponentType")]
+        [NameInMap("NodeGroupId")]
         [Validation(Required=false)]
-        public string ComponentType { get; set; }
+        public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>Report date.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2023-01-01</para>
-        /// </summary>
-        [NameInMap("DateTime")]
-        [Validation(Required=false)]
-        public string DateTime { get; set; }
-
-        /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID. You can call <a href="url">ListRegions</a> to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

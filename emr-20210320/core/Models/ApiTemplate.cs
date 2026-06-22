@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ApiTemplate : TeaModel {
         /// <summary>
-        /// <para>接口名。</para>
+        /// <para>The name of the API operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateCluster</para>
@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>模版接口参数。</para>
+        /// <para>The parameters in the API operation template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>content</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>资源组ID。</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzabjyop****</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>模板状态。</para>
+        /// <para>The status of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>模板ID。</para>
+        /// <para>The template ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AT-Af***</para>
@@ -67,10 +70,10 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>模板ID。</para>
+        /// <para>The name of the template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AT-Af***</para>
+        /// <para>datalakeTest1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

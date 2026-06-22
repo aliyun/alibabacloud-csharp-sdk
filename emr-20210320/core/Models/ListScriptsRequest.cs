@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ListScriptsRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to retrieve at once.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Marks the current position to start reading from.</para>
+        /// <para>The token that marks the position from which to start reading.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dd6b1b2a-5837-5237-abe4-ff0c89568980</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,24 +52,26 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The script ID. Only common scripts are supported.</para>
+        /// <para>The ID of the cluster script. This parameter is valid only for NORMAL scripts.</para>
         /// </summary>
         [NameInMap("ScriptId")]
         [Validation(Required=false)]
         public string ScriptId { get; set; }
 
         /// <summary>
-        /// <para>The name of the script. Only common scripts are supported. Fuzzy search is supported.</para>
+        /// <para>The name of the cluster script. This parameter is valid only for NORMAL scripts and supports fuzzy search.</para>
         /// </summary>
         [NameInMap("ScriptName")]
         [Validation(Required=false)]
         public string ScriptName { get; set; }
 
         /// <summary>
-        /// <para>Type of cluster script. Possible values:</para>
+        /// <para>The type of the cluster script. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BOOTSTRAP: Bootstrap script.</description></item>
-        /// <item><description>NORMAL: Regular cluster script.</description></item>
+        /// <item><description><para>BOOTSTRAP: a bootstrap script.</para>
+        /// </description></item>
+        /// <item><description><para>NORMAL: a normal cluster script.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ScriptType { get; set; }
 
         /// <summary>
-        /// <para>The script status list.</para>
+        /// <para>The list of script statuses.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

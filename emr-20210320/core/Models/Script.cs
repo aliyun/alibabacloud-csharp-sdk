@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class Script : TeaModel {
         /// <summary>
-        /// <para>执行失败策略。</para>
+        /// <para>The execution failure strategy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>FAILED_CONTINUE</c>: If the script fails, cluster creation or scaling continues.</para>
+        /// </description></item>
+        /// <item><description><para><c>FAILED_BLOCK</c>: If the script fails, cluster creation or scaling is blocked.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>FAILED_CONTINUE</para>
@@ -20,7 +26,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ExecutionFailStrategy { get; set; }
 
         /// <summary>
-        /// <para>脚本的执行时机。</para>
+        /// <para>The execution timing for the script. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>BEFORE_INSTALL</c>: The script runs before applications are installed.</para>
+        /// </description></item>
+        /// <item><description><para><c>AFTER_STARTED</c>: The script runs after applications start.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BEFORE_INSTALL</para>
@@ -30,7 +42,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ExecutionMoment { get; set; }
 
         /// <summary>
-        /// <para>节点选择器。</para>
+        /// <para>Specifies the nodes on which the script runs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NodeSelector")]
@@ -40,7 +52,9 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>脚本执行优先级。取值范围：1~100。</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. Scripts run in the order they are defined.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +65,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>脚本执行参数。</para>
+        /// <para>The optional script execution arguments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-host 10.0.10.5 -m 30</para>
@@ -61,7 +75,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ScriptArgs { get; set; }
 
         /// <summary>
-        /// <para>脚本名称。长度为1~64个字符，必须以大小字母或中文开头，不能以http://和https://开头。可以包含中文、英文、数字、下划线（_）、或者短划线（-）</para>
+        /// <para>The required script name. The name must be 1 to 64 characters long and start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. It can contain Chinese characters, letters, numbers, underscores (<c>_</c>), or hyphens (<c>-</c>).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +86,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ScriptName { get; set; }
 
         /// <summary>
-        /// <para>脚本所在OSS路径。</para>
+        /// <para>The required path to the script in Object Storage Service (OSS). The path must start with <c>oss://</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

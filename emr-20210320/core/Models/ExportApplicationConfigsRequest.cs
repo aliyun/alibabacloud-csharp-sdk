@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
 {
     public class ExportApplicationConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>导出应用配置。</para>
+        /// <para>The list of application configurations to export.</para>
         /// </summary>
         [NameInMap("ApplicationConfigFiles")]
         [Validation(Required=false)]
         public List<ApplicationConfigFile> ApplicationConfigFiles { get; set; }
 
         /// <summary>
-        /// <para>集群ID。</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +32,14 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ConfigScope { get; set; }
 
         /// <summary>
+        /// <para>The mode for exporting service configurations. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>MODIFICATION</para>
+        /// </description></item>
+        /// <item><description><para>ALL</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MODIFICATION</para>
         /// </summary>
@@ -40,7 +48,13 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public string ExportMode { get; set; }
 
         /// <summary>
-        /// <para>导出应用配置的文件格式。</para>
+        /// <para>The file format of the exported application configurations. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>JSON</para>
+        /// </description></item>
+        /// <item><description><para>XML</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>XML</para>
@@ -58,7 +72,7 @@ namespace AlibabaCloud.SDK.Emr20210320.Models
         public List<string> NodeIds { get; set; }
 
         /// <summary>
-        /// <para>区域ID。</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
