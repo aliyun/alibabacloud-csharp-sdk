@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
-    public class ValidateMem0APIKeyResponse : TeaModel {
+    public class AddDatasetDataResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Body { get; set; }
+        public AddDatasetDataResponseBody Body { get; set; }
 
     }
 
