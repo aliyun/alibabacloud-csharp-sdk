@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The description of the command.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Command 1.</para>
+            /// <para>Command 1</para>
             /// </summary>
             [NameInMap("CommandDescription")]
             [Validation(Required=false)]

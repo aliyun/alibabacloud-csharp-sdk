@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class FlowBindPhoneRequest : TeaModel {
         /// <summary>
-        /// <para>Message channel Code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +20,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelCode { get; set; }
 
         /// <summary>
-        /// <para>Message channel Type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +30,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>Flow code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,10 +40,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>Flow version</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("FlowVersion")]
         [Validation(Required=false)]
@@ -56,9 +51,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <para>Phone numbers or PageIds under the channel instance, etc.</para>
-        /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
         public List<string> PhoneNumbers { get; set; }
@@ -72,7 +64,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>WABA account ID, or PageId for other channel types, etc.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

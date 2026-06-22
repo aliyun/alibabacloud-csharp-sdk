@@ -9,19 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class FlowBindPhoneResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details of access denial; this field is returned only when RAM verification fails.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>无</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Status code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>
@@ -30,8 +22,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Error description message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>
@@ -40,8 +30,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -50,8 +38,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Model { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -60,8 +46,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Values: true: success; false: failure.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

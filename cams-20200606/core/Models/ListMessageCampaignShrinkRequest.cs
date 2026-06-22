@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMessageCampaignShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Meta ad account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>239**</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the budget.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>233**</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CampaignId { get; set; }
 
         /// <summary>
+        /// <para>The name of the campaign.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-campaign</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CampaignName { get; set; }
 
         /// <summary>
+        /// <para>The Space ID of the ISV sub-customer or the instance ID of the direct customer. You can view this ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The pagination parameters.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
@@ -55,6 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PageShrink { get; set; }
 
         /// <summary>
+        /// <para>The Page ID for Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,6 +82,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The status of the budget.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>
         /// </summary>

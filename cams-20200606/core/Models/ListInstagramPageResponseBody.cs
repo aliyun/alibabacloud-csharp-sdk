@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListInstagramPageResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

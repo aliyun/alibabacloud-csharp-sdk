@@ -42,7 +42,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>waba Id。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

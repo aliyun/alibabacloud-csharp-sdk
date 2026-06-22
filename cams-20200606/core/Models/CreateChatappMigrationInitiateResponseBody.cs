@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappMigrationInitiateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the request denial..</para>
+        /// <para>Details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the request was successful.</description></item>
-        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">API error codes</a>.</description></item>
+        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,34 +36,35 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateChatappMigrationInitiateResponseBodyData Data { get; set; }
         public class CreateChatappMigrationInitiateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the mobile number.</para>
+            /// <para>The ID of the phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>82828893332</para>
+            /// <para>8282889****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The mobile number.</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8613900001234</para>
+            /// <para>861390000****</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>The state of the mobile number. Only MIGRATING may be returned, which indicates that the mobile number is being migrated.</para>
+            /// <para>The status of the phone number.
+            /// Valid value: MIGRATING: The phone number is being migrated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MIGRATING</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>

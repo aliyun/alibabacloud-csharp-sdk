@@ -9,23 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddAuditViberOpenShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The audit record.</para>
+        /// </summary>
         [NameInMap("AuditRecord")]
         [Validation(Required=false)]
         public string AuditRecordShrink { get; set; }
 
         /// <summary>
+        /// <para>The audit result.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>example</para>
         /// </summary>
         [NameInMap("AuditResult")]
         [Validation(Required=false)]
         public string AuditResult { get; set; }
 
         /// <summary>
+        /// <para>The Space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>example</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]

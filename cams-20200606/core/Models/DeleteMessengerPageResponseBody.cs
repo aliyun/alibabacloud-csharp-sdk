@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteMessengerPageResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }

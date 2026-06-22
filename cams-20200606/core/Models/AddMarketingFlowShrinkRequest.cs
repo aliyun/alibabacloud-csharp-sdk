@@ -35,10 +35,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
@@ -81,10 +77,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string ParamFlag { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public string ParamsShrink { get; set; }

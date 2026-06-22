@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Whether to use HTTP to receive receipts. Value:</para>
         /// <list type="bullet">
-        /// <item><description>Y: Yes.</description></item>
-        /// <item><description>N: No.</description></item>
+        /// <item><description><para>Y: Yes.</para>
+        /// </description></item>
+        /// <item><description><para>N: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8613800001234</para>
+        /// <para>861380000****</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -52,8 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Whether to use queue method to receive receipts. Value:</para>
         /// <list type="bullet">
-        /// <item><description>Y: Yes.</description></item>
-        /// <item><description>N: No.</description></item>
+        /// <item><description><para>Y: Yes.</para>
+        /// </description></item>
+        /// <item><description><para>N: No.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

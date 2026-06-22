@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>If OK is returned, the request was successful.</para>
+        /// <para>A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -24,31 +24,31 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFlowResponseBodyData> Data { get; set; }
         public class ListFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The categories of the Flows.</para>
+            /// <para>The categories.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>The Flow ID.</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3939393***</para>
+            /// <para>92675332812643****</para>
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The Flow name.</para>
+            /// <para>The name of the flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flow-02020</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

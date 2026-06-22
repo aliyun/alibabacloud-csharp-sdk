@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListViberServiceMessageResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -63,7 +59,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>25644</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("ServiceId")]
             [Validation(Required=false)]
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>stop</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>successful</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ddhjdn-dnjdnkdjknd**</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

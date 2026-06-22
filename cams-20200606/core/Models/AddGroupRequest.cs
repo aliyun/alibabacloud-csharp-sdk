@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public Dictionary<string, object> BizExtend { get; set; }
@@ -57,10 +53,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Email { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>src/main/resources/config/promql_node.yaml</para>
-        /// </summary>
         [NameInMap("FilePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }

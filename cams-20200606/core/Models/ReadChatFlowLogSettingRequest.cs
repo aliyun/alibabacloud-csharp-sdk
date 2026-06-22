@@ -10,10 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ReadChatFlowLogSettingRequest : TeaModel {
         /// <summary>
-        /// <para>Process code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>f4912c16943b4dfba44bd6fedacf****</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]

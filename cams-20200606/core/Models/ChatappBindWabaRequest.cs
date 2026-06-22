@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WhatsApp Business account.</para>
+        /// <para>The WABA ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2293938222343****</para>
+        /// <para>33993***</para>
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

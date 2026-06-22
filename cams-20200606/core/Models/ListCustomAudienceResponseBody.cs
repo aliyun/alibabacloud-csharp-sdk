@@ -9,11 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListCustomAudienceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The request status code.</para>
+        /// <list type="bullet">
+        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -21,11 +35,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListCustomAudienceResponseBodyData> Data { get; set; }
         public class ListCustomAudienceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Meta ad account ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>339**</para>
             /// </summary>
@@ -34,6 +53,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AdAccountId { get; set; }
 
             /// <summary>
+            /// <para>The time when the audience was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1720356898</para>
             /// </summary>
@@ -42,6 +63,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the custom audience.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>339**</para>
             /// </summary>
@@ -50,6 +73,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CustomAudienceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the custom audience.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>custom audience name</para>
             /// </summary>
@@ -58,6 +83,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CustomAudienceName { get; set; }
 
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -66,6 +93,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The Page ID for Messenger.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>239**</para>
             /// </summary>
@@ -74,14 +103,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PageId { get; set; }
 
             /// <summary>
+            /// <para>The status.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>NONE</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The number of tokens.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>70</para>
             /// </summary>
@@ -90,6 +123,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? TokenTotal { get; set; }
 
             /// <summary>
+            /// <para>The token type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>custom</para>
             /// </summary>
@@ -98,6 +133,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string TokenType { get; set; }
 
             /// <summary>
+            /// <para>The time when the audience was last updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>51</para>
             /// </summary>
@@ -106,6 +143,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The upload type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>excel</para>
             /// </summary>
@@ -116,6 +155,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -124,6 +165,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>39**</para>
         /// </summary>
@@ -132,6 +175,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -140,6 +191,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>69</para>
         /// </summary>

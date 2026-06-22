@@ -10,17 +10,23 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddChatappPhoneNumberResponseBody : TeaModel {
         /// <summary>
-        /// <para>com.alicom.access.oxs.client.channel.aliyun.flow.AyFlowExecuteService</para>
+        /// <para>Details about the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="http://pop_access_slb_sgvpc/#vpc">http://pop_access_slb_sgvpc/#vpc</a></para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The phone number.</para>
+        /// <para>The status code of the request.</para>
+        /// <list type="bullet">
+        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>com.alicom.access.oxs.client.channel.aliyun.flow.dto.AyCommonApiRequest</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>formData</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
@@ -50,7 +56,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>13800000000</para>
+        /// <para>Indicates whether the call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

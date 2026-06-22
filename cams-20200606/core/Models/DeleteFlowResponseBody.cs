@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>If OK is returned, the request was successful.</para>
+        /// <para>A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

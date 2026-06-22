@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class TriggerChatFlowRequest : TeaModel {
         /// <summary>
-        /// <para>The declared occurrence time of the event, usually the time when the request was constructed, in milliseconds timestamp.</para>
+        /// <para>The time when the event occurs. This is when the flow is triggered and is typically the time when the request is created. This is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1731502129000</para>
@@ -20,17 +20,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ClaimTimeMillis { get; set; }
 
         /// <summary>
-        /// <para>Input parameters in Key-Value format. The Key must match the input strategy configured at the start node of your flow.</para>
+        /// <para>The input parameters in a key-value format. The keys must match the input parameter policy configured in the start node of the flow. To view the variable names in the start node, go to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the name of the flow, and open the orchestration canvas.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;my_biz_data_0&quot;: &quot;hi&quot;, &quot;my_biz_data_1&quot;: &quot;1024&quot;}</para>
+        /// <para>{
+        ///   &quot;my_biz_data_0&quot;: &quot;hi&quot;,
+        ///   &quot;my_biz_data_1&quot;: &quot;1024&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>The time when the event should be discarded, i.e., the expiration time. If this field is specified, the message will be discarded if it exceeds this time, in milliseconds timestamp.</para>
+        /// <para>The time when the event expires. If you specify this parameter, the trigger is canceled if the request is not processed before this time. This is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1731502729000</para>
@@ -40,18 +43,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? DiscardTimeMillis { get; set; }
 
         /// <summary>
-        /// <para>Flow code.</para>
+        /// <para>The code of the flow. View the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>f4912c16943b4dfba44bd6fedacf8c70</para>
+        /// <para>9ccc41**************************</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>External system transaction number, used to associate with external business system transactions. You can retrieve this parameter within the flow after triggering.</para>
+        /// <para>A custom serial number from an external system. Use this parameter to associate the trigger with an external business process. After the flow is triggered, you can retrieve this parameter from within the flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8d4acf7e-e360-eb83-6d74-fcf9c4538fda</para>
@@ -73,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Unique event ID used for idempotent triggers. Do not include any business semantics; you can retrieve this parameter within the flow after triggering.</para>
+        /// <para>A custom unique ID for the event, used to ensure idempotence. Do not include business semantics in the ID. After the flow is triggered, you can retrieve this parameter from within the flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c68622e6-5f0d-c8a4-af41-e949c2a7580e</para>

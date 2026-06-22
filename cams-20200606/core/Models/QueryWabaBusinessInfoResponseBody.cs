@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The HTTP status code returned.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of OK indicates that the call is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The Business Manager ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192882828733</para>
+            /// <para>19288282****</para>
             /// </summary>
             [NameInMap("BusinessId")]
             [Validation(Required=false)]
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None.</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -108,8 +110,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

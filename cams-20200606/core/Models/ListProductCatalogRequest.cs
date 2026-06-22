@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>28</para>
+        /// <para>105048970863****</para>
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
@@ -44,15 +44,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>293483938849493</para>
+        /// <para>C29398882929</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The fields. Separate multiple fields with commas (,).
-        /// see  <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></para>
+        /// <para>The fields. Separate multiple fields with commas (,). see <a href="https://help.aliyun.com/document_detail/2579419.html">catalog fields</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>id,name</para>

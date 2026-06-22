@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatappMigrationInitiateRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the country or region.</para>
+        /// <para>The country code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the user within the ISV account.</para>
+        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The mobile number without the country code or region code.</para>
+        /// <para>The phone number. Do not include the country code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>13900001234</para>
+        /// <para>1390000****</para>
         /// </summary>
         [NameInMap("MobileNumber")]
         [Validation(Required=false)]

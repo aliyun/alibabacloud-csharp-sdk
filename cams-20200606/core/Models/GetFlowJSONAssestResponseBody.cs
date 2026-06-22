@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>If OK is returned, the request was successful.</para>
+        /// <para>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The file path.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://url.com/json.json">https://url.com/json.json</a></para>
+            /// <para><a href="https://bucket-*****-ap-southeast-1.aliyuncs.com/9658820125168****.json">https://bucket-*****-ap-southeast-1.aliyuncs.com/9658820125168****.json</a></para>
             /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The Flow ID.</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>flow_id_arms</para>
+            /// <para>92675332812643****</para>
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>Error description information.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

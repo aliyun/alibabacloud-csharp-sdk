@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListProductResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>Details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>Other values indicate that the request failed. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The message returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]
@@ -58,21 +60,21 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<Dictionary<string, object>> Data { get; set; }
 
             /// <summary>
-            /// <para>The pagination details.</para>
+            /// <para>Paging details.</para>
             /// </summary>
             [NameInMap("Paging")]
             [Validation(Required=false)]
             public ListProductResponseBodyModelPaging Paging { get; set; }
             public class ListProductResponseBodyModelPaging : TeaModel {
                 /// <summary>
-                /// <para>The cursors for pagination.</para>
+                /// <para>The cursors for paging.</para>
                 /// </summary>
                 [NameInMap("Cursors")]
                 [Validation(Required=false)]
                 public ListProductResponseBodyModelPagingCursors Cursors { get; set; }
                 public class ListProductResponseBodyModelPagingCursors : TeaModel {
                     /// <summary>
-                    /// <para>The cursor that points to the end of the page of the returned data.</para>
+                    /// <para>The cursor that points to the next page.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sjsuueu83838</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string After { get; set; }
 
                     /// <summary>
-                    /// <para>The cursor that points to the beginning of the page of the returned data.</para>
+                    /// <para>The cursor that points to the previous page.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sjjsjdjjdjd83883</para>
@@ -108,10 +110,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateAccountWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// <para>The space ID of the ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>293483938849493**</para>
+        /// <para>2934839388494****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Specifies whether to use HTTP callbacks to receive message receipts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: indicates that HTTP callbacks are used to receive receipts.</description></item>
-        /// <item><description>N: indicates that HTTP callbacks are not used to receive receipts.</description></item>
+        /// <item><description><para>Y: indicates that HTTP callbacks are used to receive receipts.</para>
+        /// </description></item>
+        /// <item><description><para>N: indicates that HTTP callbacks are not used to receive receipts.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,8 +43,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: indicates that MNS queues are used to receive receipts.</description></item>
-        /// <item><description>N: indicates that MNS queues are not used to receive receipts.</description></item>
+        /// <item><description><para>Y: indicates that MNS queues are used to receive receipts.</para>
+        /// </description></item>
+        /// <item><description><para>N: indicates that MNS queues are not used to receive receipts.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

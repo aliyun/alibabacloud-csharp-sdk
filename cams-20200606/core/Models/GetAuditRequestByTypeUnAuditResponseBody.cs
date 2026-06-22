@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetAuditRequestByTypeUnAuditResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class GetAuditRequestByTypeUnAuditResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>21432</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public class GetAuditRequestByTypeUnAuditResponseBodyDataAuditRecord : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>eighteenUp</para>
+                /// <para>示例值示例值示例值</para>
                 /// </summary>
                 [NameInMap("AgeLimit")]
                 [Validation(Required=false)]
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>bnv</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("ApplyReason")]
                 [Validation(Required=false)]
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>aaa</para>
+                /// <para>示例值</para>
                 /// </summary>
                 [NameInMap("BusinessAccountName")]
                 [Validation(Required=false)]
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public class GetAuditRequestByTypeUnAuditResponseBodyDataAuditRecordCompanyAddress : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>xxxxcompany</para>
+                    /// <para>示例值示例值示例值</para>
                     /// </summary>
                     [NameInMap("CompanyAddress")]
                     [Validation(Required=false)]
@@ -79,7 +75,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>111</para>
+                    /// <para>示例值示例值示例值</para>
                     /// </summary>
                     [NameInMap("CompanyAddressTitle")]
                     [Validation(Required=false)]
@@ -89,7 +85,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>Company English Name</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("CompanyEnglishName")]
                 [Validation(Required=false)]
@@ -97,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>xxxxcompany</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("CompanyLegalName")]
                 [Validation(Required=false)]
@@ -105,7 +101,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>jack</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("CompanyLegalPerson")]
                 [Validation(Required=false)]
@@ -113,7 +109,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>CompanyProfile</para>
+                /// <para>示例值示例值示例值</para>
                 /// </summary>
                 [NameInMap("CompanyProfile")]
                 [Validation(Required=false)]
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public class GetAuditRequestByTypeUnAuditResponseBodyDataAuditRecordCompanyTel : TeaModel {
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>143243**</para>
+                    /// <para>示例值</para>
                     /// </summary>
                     [NameInMap("CompanyTelNumber")]
                     [Validation(Required=false)]
@@ -137,7 +133,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>example</para>
+                    /// <para>示例值</para>
                     /// </summary>
                     [NameInMap("CompanyTelTitle")]
                     [Validation(Required=false)]
@@ -147,7 +143,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para><a href="mailto:qqemail@gmail.com">qqemail@gmail.com</a></para>
+                /// <para>示例值</para>
                 /// </summary>
                 [NameInMap("ContactMail")]
                 [Validation(Required=false)]
@@ -155,7 +151,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>N</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("EnableAutoReply")]
                 [Validation(Required=false)]
@@ -163,7 +159,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>xxx</para>
+                /// <para>示例值示例值示例值</para>
                 /// </summary>
                 [NameInMap("IndustryDescription")]
                 [Validation(Required=false)]
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>it</para>
+                /// <para>示例值</para>
                 /// </summary>
                 [NameInMap("IndustryInvolved")]
                 [Validation(Required=false)]
@@ -179,7 +175,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para><a href="https://www.xxxxxxx">https://www.xxxxxxx</a></para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("LetterGuarantee")]
                 [Validation(Required=false)]
@@ -199,7 +195,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>MessageDialogueIntroduction</para>
+                /// <para>示例值示例值示例值</para>
                 /// </summary>
                 [NameInMap("MessageDialogueIntroduction")]
                 [Validation(Required=false)]
@@ -207,7 +203,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>2025-11-01</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("MessageEnableDate")]
                 [Validation(Required=false)]
@@ -215,7 +211,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>Message Session Name</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("MessageSessionName")]
                 [Validation(Required=false)]
@@ -223,7 +219,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>n</para>
+                /// <para>示例值示例值示例值</para>
                 /// </summary>
                 [NameInMap("NowRecovery")]
                 [Validation(Required=false)]
@@ -231,7 +227,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>2025-111-06</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("RecoveryDate")]
                 [Validation(Required=false)]
@@ -239,17 +235,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>aaaqq</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("ReplyContent")]
                 [Validation(Required=false)]
                 public string ReplyContent { get; set; }
 
                 /// <summary>
-                /// <para>SuspensionDate</para>
-                /// 
                 /// <b>Example:</b>
-                /// <para>SuspensionDate</para>
+                /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("SuspensionDate")]
                 [Validation(Required=false)]
@@ -257,7 +251,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para><a href="http://www.xxxxx">www.xxxxx</a></para>
+                /// <para>示例值</para>
                 /// </summary>
                 [NameInMap("WebAddress")]
                 [Validation(Required=false)]
@@ -267,7 +261,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>pass</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("AuditResult")]
             [Validation(Required=false)]
@@ -275,7 +269,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>20250106</para>
+            /// <para>示例值</para>
             /// </summary>
             [NameInMap("AuditTime")]
             [Validation(Required=false)]
@@ -283,7 +277,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>11</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
@@ -291,7 +285,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1789200</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -299,17 +293,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>20251624</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("GmtModifier")]
             [Validation(Required=false)]
             public string GmtModifier { get; set; }
 
             /// <summary>
-            /// <para>ID</para>
-            /// 
             /// <b>Example:</b>
-            /// <para>id</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -317,7 +309,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>475646</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("MaapServiceNo")]
             [Validation(Required=false)]
@@ -325,7 +317,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("Modifier")]
             [Validation(Required=false)]
@@ -333,7 +325,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>45345435435</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("RequestNo")]
             [Validation(Required=false)]
@@ -341,7 +333,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>viber_open</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("RequestType")]
             [Validation(Required=false)]
@@ -349,7 +341,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>A</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("State")]
             [Validation(Required=false)]
@@ -357,7 +349,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>345436456546</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("SubscriberCode")]
             [Validation(Required=false)]
@@ -367,7 +359,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -375,7 +367,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A9486***</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

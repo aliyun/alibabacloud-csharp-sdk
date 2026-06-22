@@ -11,23 +11,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class GetDownloadExcelListShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>aa</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Condition")]
         [Validation(Required=false)]
@@ -39,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2025-12-01</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>111</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2025-11-01</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("StartDate")]
         [Validation(Required=false)]

@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The review state of the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pass</b>: The template is approved.</description></item>
-        /// <item><description><b>fail</b>: The template is rejected.</description></item>
-        /// <item><description><b>auditing</b>: The template is being reviewed.</description></item>
-        /// <item><description><b>unaudit</b>: The review is suspended.</description></item>
+        /// <item><description><para><b>pass</b>: The template is approved.</para>
+        /// </description></item>
+        /// <item><description><para><b>fail</b>: The template is rejected.</para>
+        /// </description></item>
+        /// <item><description><para><b>auditing</b>: The template is being reviewed.</para>
+        /// </description></item>
+        /// <item><description><para><b>unaudit</b>: The review is suspended.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +30,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AuditStatus { get; set; }
 
         /// <summary>
-        /// <para>The category of the message template.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>AUTHENTICATION</para>
         /// </summary>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</para>
         /// <remarks>
-        /// <para> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
+        /// <para>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,8 +128,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The type of the message template.</para>
         /// <list type="bullet">
-        /// <item><description><b>WHATSAPP</b></description></item>
-        /// <item><description><b>VIBER</b></description></item>
+        /// <item><description><para><b>WHATSAPP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>VIBER</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

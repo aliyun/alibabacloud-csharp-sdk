@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateMessageCampaignRequest : TeaModel {
         /// <summary>
+        /// <para>The Meta ad account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
+        /// <para>The budget, in cents.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? Budget { get; set; }
 
         /// <summary>
+        /// <para>The budget type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BudgetType { get; set; }
 
         /// <summary>
+        /// <para>The space ID of an Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,10 +54,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The budget name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Example</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -64,6 +69,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The Messenger Page ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

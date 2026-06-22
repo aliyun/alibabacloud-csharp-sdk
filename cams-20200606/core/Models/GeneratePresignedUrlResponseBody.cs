@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GeneratePresignedUrlResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -29,6 +25,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public GeneratePresignedUrlResponseBodyData Data { get; set; }
         public class GeneratePresignedUrlResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
             public string Url { get; set; }
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A94866**</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

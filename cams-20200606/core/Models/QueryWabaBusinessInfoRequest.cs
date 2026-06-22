@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryWabaBusinessInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// <para>The space ID of ISV sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>293848822333</para>
+        /// <para>29384882****</para>
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

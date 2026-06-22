@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListCustomAudienceRequest : TeaModel {
         /// <summary>
+        /// <para>The Meta ad account ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>339**</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
+        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of the direct customers. This is the channel ID. Find the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the custom audience.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>239**</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustomAudienceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the custom audience.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -48,6 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The pagination settings.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Page")]
@@ -55,6 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public ListCustomAudienceRequestPage Page { get; set; }
         public class ListCustomAudienceRequestPage : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,6 +74,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? Index { get; set; }
 
             /// <summary>
+            /// <para>The number of entries to return on each page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -77,6 +87,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
+        /// <para>The Page ID for Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,6 +106,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The token type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom</para>
         /// </summary>

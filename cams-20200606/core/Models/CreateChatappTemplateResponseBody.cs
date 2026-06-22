@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>An \<c>OK\\</c> response indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://www.alibabacloud.com/help/en/cams/latest/api-error-codes">API error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;templateCode&quot;: &quot;****4b5c79c9432497a075bdfca36bf5&quot;，&quot;templateName&quot;: &quot;hello_whatsapp&quot;}</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public CreateChatappTemplateResponseBodyData Data { get; set; }
         public class CreateChatappTemplateResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The code of the message template.</para>
+            /// <para>The template code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SMS_232907****</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string TemplateCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the message template.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello_whatsapp</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User not authorized to operate on the specified resource.</para>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866411B2D</para>

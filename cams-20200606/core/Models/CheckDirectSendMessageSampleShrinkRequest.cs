@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CheckDirectSendMessageSampleShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The SpaceId of an ISV sub-customer or the instance ID of a direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// <para>The body of an interactive message.</para>
+        /// </summary>
         [NameInMap("Interactive")]
         [Validation(Required=false)]
         public string InteractiveShrink { get; set; }
 
         /// <summary>
+        /// <para>The body of a text message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;text&quot;: &quot;This is a direct send message&quot;}</para>
         /// </summary>
@@ -32,10 +38,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TextShrink { get; set; }
 
         /// <summary>
+        /// <para>The type of the direct message content. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>interactive</para>
+        /// </description></item>
+        /// <item><description><para>text</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>interactive</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

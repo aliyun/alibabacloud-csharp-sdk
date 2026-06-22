@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddChatappPhoneNumberRequest : TeaModel {
         /// <summary>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>The country code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Cc { get; set; }
 
         /// <summary>
-        /// <para>Adds a phone number for a WhatsApp Business account (WABA).</para>
+        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>AddChatappPhoneNumber</para>
+        /// <para>The phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>cams:ChatappPhoneNumberRegister</para>
+        /// <para>The pre-verified phone number.</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1020****</para>
@@ -68,7 +71,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Private</para>
+        /// <para>The name of the phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

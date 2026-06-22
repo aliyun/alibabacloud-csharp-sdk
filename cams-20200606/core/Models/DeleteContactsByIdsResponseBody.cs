@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteContactsByIdsResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>None</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -33,10 +29,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>True</para>
-        /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]
         public Dictionary<string, object> Model { get; set; }

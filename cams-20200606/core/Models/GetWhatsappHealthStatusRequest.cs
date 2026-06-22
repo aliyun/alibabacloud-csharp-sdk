@@ -34,9 +34,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The node type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>template: message template</description></item>
-        /// <item><description>phone: phone number</description></item>
-        /// <item><description>waba: WhatsApp Business Account (WABA)</description></item>
+        /// <item><description><para>template: message template</para>
+        /// </description></item>
+        /// <item><description><para>phone: phone number</para>
+        /// </description></item>
+        /// <item><description><para>waba: WhatsApp Business Account (WABA)</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

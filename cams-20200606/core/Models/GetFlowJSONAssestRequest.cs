@@ -10,20 +10,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFlowJSONAssestRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>83883873</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The Flow ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>flow_001</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("FlowId")]
         [Validation(Required=false)]

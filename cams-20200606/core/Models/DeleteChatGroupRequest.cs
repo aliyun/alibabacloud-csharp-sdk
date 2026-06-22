@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteChatGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The business phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
+        /// <para>The type. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>WHATSAPP</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Only the WhatsApp channel is supported.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>WHATSAPP</para>
         /// </summary>
@@ -28,6 +37,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// <para>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +49,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

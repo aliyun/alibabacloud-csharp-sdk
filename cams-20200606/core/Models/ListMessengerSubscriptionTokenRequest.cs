@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMessengerSubscriptionTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer or the instance ID. View the ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The custom audience ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>233**</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustomAudienceId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return. Valid values: 1 to 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>67</para>
         /// </summary>
@@ -40,6 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page ID for Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +56,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string PageId { get; set; }
 
         /// <summary>
+        /// <para>The pagination key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2ie**</para>
         /// </summary>
@@ -66,6 +74,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The token type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateMetricRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the RAM user within the ISV account.</para>
+        /// <para>The Space ID or instance ID of the ISV sub-customer. This is the channel ID. View the channel ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>293483938849493</para>
+        /// <para>cams-************</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +31,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? End { get; set; }
 
         /// <summary>
-        /// <para>The granularity of the metric.</para>
-        /// <para>Valid values:</para>
+        /// <para>The metric granularity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DAILY</description></item>
-        /// <item><description>HALF_HOUR</description></item>
+        /// <item><description><para>DAILY: Metrics are collected by day.</para>
+        /// </description></item>
+        /// <item><description><para>HALF_HOUR: Metrics are collected every half an hour.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,17 +47,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.</para>
+        /// <para>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>skdi3kksloslikdkkdk</para>
+        /// <para>skdi3kksloslikd****</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The template language.</para>
+        /// <para>The language of the template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start of the time range to query. This is a UNIX timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,23 +90,24 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? Start { get; set; }
 
         /// <summary>
-        /// <para>The template code.</para>
+        /// <para>The template code. View the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Template Design</b> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>744c4b5c79c9432497a075bdfca36bf5</para>
+        /// <para>1100***************</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The template type. If you do not specify this parameter, the default value WHATSAPP is used.</para>
-        /// <para>Valid values:</para>
+        /// <para>The template type. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>VIBER</description></item>
         /// <item><description>WHATSAPP</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>If you do not pass this parameter, the default value WHATSAPP is used.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>WHATSAPP</para>

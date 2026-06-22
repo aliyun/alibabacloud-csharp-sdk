@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</para>
         /// <remarks>
-        /// <para> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
+        /// <para>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,9 +79,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The type of the message template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WHATSAPP</b></description></item>
-        /// <item><description><b>VIBER</b></description></item>
-        /// <item><description>LINE (developing)</description></item>
+        /// <item><description><para><b>WHATSAPP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>VIBER</b></para>
+        /// </description></item>
+        /// <item><description><para>LINE (developing)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

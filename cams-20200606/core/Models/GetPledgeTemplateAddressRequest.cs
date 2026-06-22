@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class GetPledgeTemplateAddressRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>cams-x***</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>it</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("IndustryType")]
         [Validation(Required=false)]

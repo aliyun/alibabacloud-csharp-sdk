@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>Core</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("GroupCode")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>6</para>
         /// </summary>
         [NameInMap("PageNo")]
         [Validation(Required=false)]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>7</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

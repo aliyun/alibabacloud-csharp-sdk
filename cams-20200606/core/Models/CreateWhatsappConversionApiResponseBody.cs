@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

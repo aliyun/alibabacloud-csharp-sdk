@@ -10,20 +10,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateChatFlowLogSettingRequest : TeaModel {
         /// <summary>
-        /// <para>Flow code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>f4912c16943b4dfba44bd6fedacf****</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>Setting ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>74</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -42,15 +38,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Log enable status, enum values:</para>
-        /// <list type="bullet">
-        /// <item><description>ENABLED: Enabled, enables log writing</description></item>
-        /// <item><description>DISABLED: Create or retain related resources, but do not enable log writing</description></item>
-        /// <item><description>DELETED: Delete, and decide whether to delete related resources based on options</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
-        /// <para>ENABLED</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

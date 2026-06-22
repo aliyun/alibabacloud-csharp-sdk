@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The result returns OK as normal.</para>
+        /// <para>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public UpdatePhoneMessageQrdlResponseBodyData Data { get; set; }
         public class UpdatePhoneMessageQrdlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Deep link address.</para>
+            /// <para>The deep link URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://wa.msg/">https://wa.msg/</a></para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string DeepLinkUrl { get; set; }
 
             /// <summary>
-            /// <para>Generate image types.</para>
+            /// <para>The type of the generated image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PNG</para>
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string GenerateQrImage { get; set; }
 
             /// <summary>
-            /// <para>Number.</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8613800</para>
+            /// <para>86158********</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>Message content.</para>
+            /// <para>The message content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hello</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PrefilledMessage { get; set; }
 
             /// <summary>
-            /// <para>QR code address.</para>
+            /// <para>The URL of the QR code.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://img.png">https://img.png</a></para>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string QrImageUrl { get; set; }
 
             /// <summary>
-            /// <para>QR code encoding.</para>
+            /// <para>The code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>DEDEE998</para>
+            /// <para>D9AA3***</para>
             /// </summary>
             [NameInMap("QrdlCode")]
             [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>Error description information.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>

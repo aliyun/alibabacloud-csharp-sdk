@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The channel type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>whatsapp</b></para>
+        /// </description></item>
+        /// <item><description><para><b>messenger</b></para>
+        /// </description></item>
+        /// <item><description><para><b>instagram</b></para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>viber</b></description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>VIBER</para>
         /// </summary>
@@ -18,6 +32,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// <para>The filter string for the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aa</para>
         /// </summary>
@@ -26,6 +42,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FilterStr { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. Use this parameter for non-Alibaba Cloud hosts only.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>r-uf6wd7pkyjwxvlxfhk</para>
         /// </summary>
@@ -34,6 +52,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>viber_ins</para>
         /// </summary>
@@ -42,6 +62,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The page number to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>92</para>
         /// </summary>
@@ -50,6 +72,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>The number of items to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>87</para>
         /// </summary>
@@ -58,6 +82,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group that contains the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>
@@ -66,6 +92,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The submission time, in <c>YYYY-MM-DD HH:MM:SS</c> format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-12-12 00:00:00</para>
         /// </summary>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ChatappMigrationVerifiedRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>293483938849493</para>
+        /// <para>29348393884****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>861380001234</para>
+        /// <para>86138000****</para>
         /// </summary>
         [NameInMap("PhoneNumber")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>828798</para>
+        /// <para>8287**</para>
         /// </summary>
         [NameInMap("VerifyCode")]
         [Validation(Required=false)]

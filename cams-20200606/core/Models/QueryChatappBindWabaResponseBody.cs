@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryChatappBindWabaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>The access denial details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of <c>OK</c> indicates the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,25 +36,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryChatappBindWabaResponseBodyData Data { get; set; }
         public class QueryChatappBindWabaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The review state of the WhatsApp Business account (WABA).</para>
-            /// <remarks>
-            /// <para> Valid values:</para>
-            /// </remarks>
+            /// <para>The account review status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>PENDING: The WABA is to be reviewed.</para>
+            /// <item><description><para><c>PENDING</c>: The account is under review.</para>
             /// </description></item>
-            /// <item><description><para>APPROVED: The WABA was approved.</para>
+            /// <item><description><para><c>APPROVED</c>: The account is approved.</para>
             /// </description></item>
-            /// <item><description><para>REJECTED: The WABA was rejected.</para>
+            /// <item><description><para><c>REJECTED</c>: The account is rejected.</para>
             /// </description></item>
-            /// <item><description><para>DISABLED: The WABA was forbidden.</para>
+            /// <item><description><para><c>DISABLED</c>: The account is disabled.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -64,14 +63,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AccountReviewStatus { get; set; }
 
             /// <summary>
-            /// <para>WABA related information.</para>
+            /// <para>Details about the WABA account.</para>
             /// </summary>
             [NameInMap("AuthInternationalRateEligibility")]
             [Validation(Required=false)]
             public Dictionary<string, object> AuthInternationalRateEligibility { get; set; }
 
             /// <summary>
-            /// <para>The business ID.</para>
+            /// <para>The Business platform ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19293988***</para>
@@ -81,7 +80,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string BusinessId { get; set; }
 
             /// <summary>
-            /// <para>The business name.</para>
+            /// <para>The Business platform name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba</para>
@@ -101,7 +100,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The ID of the WhatsApp Business account.</para>
+            /// <para>The WABA account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20393988393993***</para>
@@ -119,7 +118,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string IsOnBizApp { get; set; }
 
             /// <summary>
-            /// <para>The Marketing Messaging Lite status.</para>
+            /// <para>The MML status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>
@@ -129,17 +128,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MarketingMessageLiteStatus { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the message template.</para>
+            /// <para>The template namespace.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
+            /// <para>93e6b26e_8a67_4163_a093_ebfe645a66b0</para>
             /// </summary>
             [NameInMap("MessageTemplateNamespace")]
             [Validation(Required=false)]
             public string MessageTemplateNamespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the WhatsApp Business account.</para>
+            /// <para>The WABA account name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alibaba</para>
@@ -149,7 +148,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The start time when the authentication-international rate applies.</para>
+            /// <para>The international rate capability qualification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;start_time&quot;:1721952000</para>
@@ -161,7 +160,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -171,7 +170,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
@@ -181,10 +180,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

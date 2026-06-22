@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetMigrationVerifyCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>Details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,20 +43,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public GetMigrationVerifyCodeResponseBodyData Data { get; set; }
         public class GetMigrationVerifyCodeResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the number.</para>
+            /// <para>The phone number ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>82828893332</para>
+            /// <para>8282889****</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Phone number.</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8613800001234</para>
+            /// <para>861380000****</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>

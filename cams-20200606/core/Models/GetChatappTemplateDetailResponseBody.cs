@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>Access denied details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description>Example: OK. This value indicates that the request is successful.</description></item>
-        /// <item><description>Other codes indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>Example: OK. This value indicates that the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Other codes indicate that the request fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,10 +52,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// <para>The review status of the message template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pass</b>: The message template is approved.</description></item>
-            /// <item><description><b>fail</b>: The message template is rejected.</description></item>
-            /// <item><description><b>auditing</b>: The message template is being reviewed.</description></item>
-            /// <item><description><b>unaudit</b>: The review is suspended.</description></item>
+            /// <item><description><para><b>pass</b>: The message template is approved.</para>
+            /// </description></item>
+            /// <item><description><para><b>fail</b>: The message template is rejected.</para>
+            /// </description></item>
+            /// <item><description><para><b>auditing</b>: The message template is being reviewed.</para>
+            /// </description></item>
+            /// <item><description><para><b>unaudit</b>: The review is suspended.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,28 +72,40 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// <para>The category of the template when the returned value of TemplateType is WHATSAPP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UTILITY</b>: a transactional template</description></item>
-            /// <item><description><b>MARKETING</b>: a marketing template</description></item>
-            /// <item><description><b>AUTHENTICATION</b>: an identity authentication template</description></item>
+            /// <item><description><para><b>UTILITY</b>: a transactional template</para>
+            /// </description></item>
+            /// <item><description><para><b>MARKETING</b>: a marketing template</para>
+            /// </description></item>
+            /// <item><description><para><b>AUTHENTICATION</b>: an identity authentication template</para>
+            /// </description></item>
             /// </list>
             /// <para>The category of the template when the returned value of the TemplateType parameter is VIBER. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b>: a template that contains only text</description></item>
-            /// <item><description><b>image</b>: a template that contains only images</description></item>
-            /// <item><description><b>text_image_button</b>: a template that contains text, images, and buttons</description></item>
-            /// <item><description><b>text_button</b>: a template that contains text and buttons</description></item>
-            /// <item><description><b>document</b>: a template that contains only files</description></item>
-            /// <item><description><b>video</b>: a template that contains only videos</description></item>
-            /// <item><description><b>text_video</b>: a template that contains text and videos</description></item>
-            /// <item><description><b>text_video_button</b>: a template that contains text, videos, and buttons</description></item>
-            /// <item><description><b>text_image</b>: a template that contains text and images</description></item>
+            /// <item><description><para><b>text</b>: a template that contains only text</para>
+            /// </description></item>
+            /// <item><description><para><b>image</b>: a template that contains only images</para>
+            /// </description></item>
+            /// <item><description><para><b>text_image_button</b>: a template that contains text, images, and buttons</para>
+            /// </description></item>
+            /// <item><description><para><b>text_button</b>: a template that contains text and buttons</para>
+            /// </description></item>
+            /// <item><description><para><b>document</b>: a template that contains only files</para>
+            /// </description></item>
+            /// <item><description><para><b>video</b>: a template that contains only videos</para>
+            /// </description></item>
+            /// <item><description><para><b>text_video</b>: a template that contains text and videos</para>
+            /// </description></item>
+            /// <item><description><para><b>text_video_button</b>: a template that contains text, videos, and buttons</para>
+            /// </description></item>
+            /// <item><description><para><b>text_image</b>: a template that contains text and images</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>If Category is set to text_video_button, users cannot open a web page by clicking the button. Users can open only the video in the message. In this case, you do not need to specify the Url parameter for the URL button in the template.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>TRANSACTIONAL</para>
+            /// <para>UTILITY</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -267,7 +285,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     /// <para>The phone number. This parameter is valid only if the Type sub-parameter of the Buttons parameter is set to <b>PHONE_NUMBER</b>.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>861398745****</para>
+                    /// <para>+861398745****</para>
                     /// </summary>
                     [NameInMap("PhoneNumber")]
                     [Validation(Required=false)]
@@ -316,7 +334,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     /// <para>The display name of the button.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Call</para>
+                    /// <para>Make a call</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
@@ -325,11 +343,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     /// <summary>
                     /// <para>The button type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>PHONE_NUMBER</b>: phone call button</description></item>
-                    /// <item><description><b>URL</b>: URL button</description></item>
-                    /// <item><description><b>QUICK_REPLY</b>: quick reply button</description></item>
-                    /// <item><description><b>COPY_CODE</b>: copy code button</description></item>
-                    /// <item><description><b>ONE_TAP</b>: one-tap autofill button if Category is set to AUTHENTICATION</description></item>
+                    /// <item><description><para><b>PHONE_NUMBER</b>: phone call button</para>
+                    /// </description></item>
+                    /// <item><description><para><b>URL</b>: URL button</para>
+                    /// </description></item>
+                    /// <item><description><para><b>QUICK_REPLY</b>: quick reply button</para>
+                    /// </description></item>
+                    /// <item><description><para><b>COPY_CODE</b>: copy code button</para>
+                    /// </description></item>
+                    /// <item><description><para><b>ONE_TAP</b>: one-tap autofill button if Category is set to AUTHENTICATION</para>
+                    /// </description></item>
                     /// </list>
                     /// <remarks>
                     /// </remarks>
@@ -360,8 +383,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     /// <summary>
                     /// <para>The URL type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>static</b></description></item>
-                    /// <item><description><b>dynamic</b></description></item>
+                    /// <item><description><para><b>static</b></para>
+                    /// </description></item>
+                    /// <item><description><para><b>dynamic</b></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -377,7 +402,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <para>The description of the document.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The new file has been uploaded.</para>
+                /// <para>New file already upload</para>
                 /// </summary>
                 [NameInMap("Caption")]
                 [Validation(Required=false)]
@@ -408,7 +433,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                             /// <para>The phone number.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>+86138000</para>
+                            /// <para>+861380005****</para>
                             /// </summary>
                             [NameInMap("PhoneNumber")]
                             [Validation(Required=false)]
@@ -524,7 +549,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <para>The name of the document.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Express file</para>
+                /// <para>Delivery document</para>
                 /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
@@ -623,12 +648,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 /// <summary>
                 /// <para>The component type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>BODY</b></description></item>
-                /// <item><description><b>HEADER</b></description></item>
-                /// <item><description><b>FOOTER</b></description></item>
-                /// <item><description><b>BUTTONS</b></description></item>
-                /// <item><description><b>CAROUSEL</b></description></item>
-                /// <item><description><b>LIMITED_TIME_OFFER</b></description></item>
+                /// <item><description><para><b>BODY</b></para>
+                /// </description></item>
+                /// <item><description><para><b>HEADER</b></para>
+                /// </description></item>
+                /// <item><description><para><b>FOOTER</b></para>
+                /// </description></item>
+                /// <item><description><para><b>BUTTONS</b></para>
+                /// </description></item>
+                /// <item><description><para><b>CAROUSEL</b></para>
+                /// </description></item>
+                /// <item><description><para><b>LIMITED_TIME_OFFER</b></para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
                 /// </remarks>
@@ -740,9 +771,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// <para>The type of the message template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>WHATSAPP</b></description></item>
-            /// <item><description><b>VIBER</b></description></item>
-            /// <item><description>LINE (developing)</description></item>
+            /// <item><description><para><b>WHATSAPP</b></para>
+            /// </description></item>
+            /// <item><description><para><b>VIBER</b></para>
+            /// </description></item>
+            /// <item><description><para>LINE (developing)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -9,19 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatFlowResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Access denied details, this field is returned only when RAM verification fails.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>无</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值</para>
         /// </summary>
@@ -29,16 +21,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>Returned data object.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>
@@ -47,8 +34,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Unique request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值</para>
         /// </summary>
@@ -56,16 +41,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Response data</para>
-        /// </summary>
         [NameInMap("Response")]
         [Validation(Required=false)]
         public Dictionary<string, object> Response { get; set; }
 
         /// <summary>
-        /// <para>Whether the call was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

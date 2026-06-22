@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cams-idk***</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>zh_CN</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>929938***</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WHATSAPP</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("TemplateType")]
         [Validation(Required=false)]

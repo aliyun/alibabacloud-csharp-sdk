@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>If OK is returned, the request was successful.</para>
+        /// <para>The response code. A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public CreateFlowResponseBodyData Data { get; set; }
         public class CreateFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The categories of the Flow.</para>
+            /// <para>The list of categories.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>The Flow ID.</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>333993838***</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Flow.</para>
+            /// <para>The name of the flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class AddCustomAudienceUserShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Meta ad account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether this is the last batch of data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? BatchLastFlag { get; set; }
 
         /// <summary>
+        /// <para>The space ID of the Independent Software Vendor (ISV) sub-customer or the instance ID of a direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the custom audience.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustomAudienceId { get; set; }
 
         /// <summary>
+        /// <para>The estimated total number of users.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>26</para>
         /// </summary>
@@ -60,6 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The Page ID for Messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +86,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>A list of users.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Users")]

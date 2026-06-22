@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e01-in-71cc15xxx</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

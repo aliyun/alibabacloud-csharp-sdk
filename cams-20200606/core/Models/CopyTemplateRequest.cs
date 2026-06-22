@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12456</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("SceneTemplateCode")]
         [Validation(Required=false)]

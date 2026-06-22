@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The HTTP status code returned.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of OK indicates that the call is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,10 +45,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// <para>The review state of the template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pass</b>: The template is approved.</description></item>
-            /// <item><description><b>fail</b>: The template is rejected.</description></item>
-            /// <item><description><b>auditing</b>: The template is being reviewed.</description></item>
-            /// <item><description><b>unaudit</b>: The review is suspended.</description></item>
+            /// <item><description><para><b>pass</b>: The template is approved.</para>
+            /// </description></item>
+            /// <item><description><para><b>fail</b>: The template is rejected.</para>
+            /// </description></item>
+            /// <item><description><para><b>auditing</b>: The template is being reviewed.</para>
+            /// </description></item>
+            /// <item><description><para><b>unaudit</b>: The review is suspended.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,25 +65,37 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <summary>
             /// <para>The category of the WhatsApp message template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UTILITY</b></description></item>
-            /// <item><description><b>MARKETING</b></description></item>
-            /// <item><description><b>AUTHENTICATION</b></description></item>
+            /// <item><description><para><b>UTILITY</b></para>
+            /// </description></item>
+            /// <item><description><para><b>MARKETING</b></para>
+            /// </description></item>
+            /// <item><description><para><b>AUTHENTICATION</b></para>
+            /// </description></item>
             /// </list>
             /// <para>The category of the Viber template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>text</b>: template that contains only text</description></item>
-            /// <item><description><b>image</b>: template that contains only images</description></item>
-            /// <item><description><b>text_image_button</b>: template that contains text, images, and buttons</description></item>
-            /// <item><description><b>text_button</b>: template that contains text and buttons</description></item>
-            /// <item><description><b>document</b>: template that contains only documents</description></item>
-            /// <item><description><b>video</b>: template that contains only videos</description></item>
-            /// <item><description><b>text_video</b>: template that contains text and videos</description></item>
-            /// <item><description><b>text_video_button</b>: template that contains text, videos, and buttons</description></item>
-            /// <item><description><b>text_image</b>: template that contains text and images</description></item>
+            /// <item><description><para><b>text</b>: template that contains only text</para>
+            /// </description></item>
+            /// <item><description><para><b>image</b>: template that contains only images</para>
+            /// </description></item>
+            /// <item><description><para><b>text_image_button</b>: template that contains text, images, and buttons</para>
+            /// </description></item>
+            /// <item><description><para><b>text_button</b>: template that contains text and buttons</para>
+            /// </description></item>
+            /// <item><description><para><b>document</b>: template that contains only documents</para>
+            /// </description></item>
+            /// <item><description><para><b>video</b>: template that contains only videos</para>
+            /// </description></item>
+            /// <item><description><para><b>text_video</b>: template that contains text and videos</para>
+            /// </description></item>
+            /// <item><description><para><b>text_video_button</b>: template that contains text, videos, and buttons</para>
+            /// </description></item>
+            /// <item><description><para><b>text_image</b>: template that contains text and images</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>TRANSACTIONAL</para>
+            /// <para>UTILITY</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
@@ -166,12 +184,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

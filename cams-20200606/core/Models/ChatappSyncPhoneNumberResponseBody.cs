@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The HTTP status code returned.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of OK indicates that the call is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None.</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -188,10 +190,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The verification state of the phone number.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>REVOKED: The review application is revoked.</description></item>
-            /// <item><description>MORE_INFORMATION_REQUESTED: More information needs to be provided.</description></item>
-            /// <item><description>VERIFIED: The phone number passes the verification.</description></item>
-            /// <item><description>REJECTED: The phone number fails to pass the verification.</description></item>
+            /// <item><description><para>REVOKED: The review application is revoked.</para>
+            /// </description></item>
+            /// <item><description><para>MORE_INFORMATION_REQUESTED: More information needs to be provided.</para>
+            /// </description></item>
+            /// <item><description><para>VERIFIED: The phone number passes the verification.</para>
+            /// </description></item>
+            /// <item><description><para>REJECTED: The phone number fails to pass the verification.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,8 +208,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether it is a WhatsApp Official Business Account (OBA).</para>
-            /// 
             /// <b>Example:</b>
             /// <para>N</para>
             /// </summary>
@@ -215,7 +219,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The number of phone numbers to which messages can be sent in a day.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TIER_10</para>
+            /// <para>TIER_10K</para>
             /// </summary>
             [NameInMap("MessagingLimitTier")]
             [Validation(Required=false)]
@@ -245,7 +249,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8613800001234</para>
+            /// <para>861380000****</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
@@ -255,9 +259,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The quality rating of the phone number.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RED</description></item>
-            /// <item><description>YELLOW</description></item>
-            /// <item><description>GREEN</description></item>
+            /// <item><description><para>RED</para>
+            /// </description></item>
+            /// <item><description><para>YELLOW</para>
+            /// </description></item>
+            /// <item><description><para>GREEN</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -271,17 +278,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The state of the phone number.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>MIGRATED</description></item>
-            /// <item><description>FLAGGED</description></item>
-            /// <item><description>DISCONNECTED</description></item>
-            /// <item><description>UNVERIFIED</description></item>
-            /// <item><description>BANNED</description></item>
-            /// <item><description>RATE_LIMITED</description></item>
-            /// <item><description>PENDING</description></item>
-            /// <item><description>CONNECTED</description></item>
-            /// <item><description>UNKNOWN</description></item>
-            /// <item><description>DELETED</description></item>
-            /// <item><description>RESTRICTED</description></item>
+            /// <item><description><para>MIGRATED</para>
+            /// </description></item>
+            /// <item><description><para>FLAGGED</para>
+            /// </description></item>
+            /// <item><description><para>DISCONNECTED</para>
+            /// </description></item>
+            /// <item><description><para>UNVERIFIED</para>
+            /// </description></item>
+            /// <item><description><para>BANNED</para>
+            /// </description></item>
+            /// <item><description><para>RATE_LIMITED</para>
+            /// </description></item>
+            /// <item><description><para>PENDING</para>
+            /// </description></item>
+            /// <item><description><para>CONNECTED</para>
+            /// </description></item>
+            /// <item><description><para>UNKNOWN</para>
+            /// </description></item>
+            /// <item><description><para>DELETED</para>
+            /// </description></item>
+            /// <item><description><para>RESTRICTED</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -305,7 +323,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The status report queue.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>alicom-09399200-queue</para>
+            /// <para>alicom-0939****-queue</para>
             /// </summary>
             [NameInMap("StatusQueue")]
             [Validation(Required=false)]
@@ -325,7 +343,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The mobile originated (MO) message queue.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>alicom-09399200-queue</para>
+            /// <para>alicom-0939****-queue</para>
             /// </summary>
             [NameInMap("UpQueue")]
             [Validation(Required=false)]
@@ -356,8 +374,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The call was successful.</description></item>
-        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

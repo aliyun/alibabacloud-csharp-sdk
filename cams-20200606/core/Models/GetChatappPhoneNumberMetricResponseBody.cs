@@ -10,17 +10,23 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappPhoneNumberMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial.</para>
+        /// <para>Details about the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>NONE</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The value OK indicates that the request was successful.</para>
+        /// <para>The status code of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>OK: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? DeliveredCount { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range that you queried.</para>
+            /// <para>The end time of metric collection. This is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1667196043904</para>
@@ -57,12 +63,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? End { get; set; }
 
             /// <summary>
-            /// <para>The granularity of the metric.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DAILY</description></item>
-            /// <item><description>HALF_HOUR</description></item>
-            /// </list>
+            /// <para>The granularity of the metrics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DAILY</para>
@@ -75,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The business phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>861380000</para>
+            /// <para>861380000****</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
@@ -92,7 +93,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? SentCount { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range that you queried.</para>
+            /// <para>The start time of metric collection. This is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1669619491000</para>
@@ -117,7 +118,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1612C226-E271-4CFE-9F18-4066D******</para>
+        /// <para>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

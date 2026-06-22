@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetViberByRequestNoResponseBody : TeaModel {
         /// <summary>
+        /// <para>Access denial details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>The status code of the request.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>OK</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -25,15 +35,23 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetViberByRequestNoResponseBodyData Data { get; set; }
         public class GetViberByRequestNoResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The audit record details.</para>
+            /// </summary>
             [NameInMap("AuditRecord")]
             [Validation(Required=false)]
             public GetViberByRequestNoResponseBodyDataAuditRecord AuditRecord { get; set; }
             public class GetViberByRequestNoResponseBodyDataAuditRecord : TeaModel {
                 /// <summary>
+                /// <para>The age restriction.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>eighteenUp</para>
                 /// </summary>
@@ -42,6 +60,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string AgeLimit { get; set; }
 
                 /// <summary>
+                /// <para>The reason for the application.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>aaa</para>
                 /// </summary>
@@ -50,6 +70,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string ApplyReason { get; set; }
 
                 /// <summary>
+                /// <para>The name of the business account.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>aaaa</para>
                 /// </summary>
@@ -58,6 +80,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string BusinessAccountName { get; set; }
 
                 /// <summary>
+                /// <para>The business license registration number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>43645465465</para>
                 /// </summary>
@@ -65,11 +89,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public string BusinessLicenseRegistrationNumber { get; set; }
 
+                /// <summary>
+                /// <para>The company addresses.</para>
+                /// </summary>
                 [NameInMap("CompanyAddress")]
                 [Validation(Required=false)]
                 public List<GetViberByRequestNoResponseBodyDataAuditRecordCompanyAddress> CompanyAddress { get; set; }
                 public class GetViberByRequestNoResponseBodyDataAuditRecordCompanyAddress : TeaModel {
                     /// <summary>
+                    /// <para>The company address.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>address</para>
                     /// </summary>
@@ -78,6 +107,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string CompanyAddress { get; set; }
 
                     /// <summary>
+                    /// <para>The title of the company address.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>111</para>
                     /// </summary>
@@ -88,6 +119,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
+                /// <para>The English name of the company.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>english</para>
                 /// </summary>
@@ -96,6 +129,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string CompanyEnglishName { get; set; }
 
                 /// <summary>
+                /// <para>The legal name of the company.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxxxxxcompany</para>
                 /// </summary>
@@ -104,6 +139,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string CompanyLegalName { get; set; }
 
                 /// <summary>
+                /// <para>The name of the company\&quot;s legal representative.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>jack</para>
                 /// </summary>
@@ -112,6 +149,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string CompanyLegalPerson { get; set; }
 
                 /// <summary>
+                /// <para>The company profile.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>new</para>
                 /// </summary>
@@ -120,6 +159,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string CompanyProfile { get; set; }
 
                 /// <summary>
+                /// <para>The country or region where the company is registered.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>beijing</para>
                 /// </summary>
@@ -127,11 +168,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public string CompanyRegisteredCountry { get; set; }
 
+                /// <summary>
+                /// <para>The company telephone numbers.</para>
+                /// </summary>
                 [NameInMap("CompanyTel")]
                 [Validation(Required=false)]
                 public List<GetViberByRequestNoResponseBodyDataAuditRecordCompanyTel> CompanyTel { get; set; }
                 public class GetViberByRequestNoResponseBodyDataAuditRecordCompanyTel : TeaModel {
                     /// <summary>
+                    /// <para>The company telephone number.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>134213213</para>
                     /// </summary>
@@ -140,6 +186,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                     public string CompanyTelNumber { get; set; }
 
                     /// <summary>
+                    /// <para>The title for the telephone number.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>xxx</para>
                     /// </summary>
@@ -150,6 +198,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 }
 
                 /// <summary>
+                /// <para>The complete address of the company\&quot;s headquarters.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>address</para>
                 /// </summary>
@@ -158,6 +208,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string CompleteAddressOfHeadquarters { get; set; }
 
                 /// <summary>
+                /// <para>The contact person\&quot;s email address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>6944**@gmail.com</para>
                 /// </summary>
@@ -166,14 +218,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string ContactEmail { get; set; }
 
                 /// <summary>
+                /// <para>The contact email address.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>示例值示例值</para>
+                /// <para>example</para>
                 /// </summary>
                 [NameInMap("ContactMail")]
                 [Validation(Required=false)]
                 public string ContactMail { get; set; }
 
                 /// <summary>
+                /// <para>The contact person\&quot;s name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>qwq</para>
                 /// </summary>
@@ -182,6 +238,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string ContactName { get; set; }
 
                 /// <summary>
+                /// <para>The contact person\&quot;s phone number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>861151515***</para>
                 /// </summary>
@@ -190,14 +248,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string ContactPhone { get; set; }
 
                 /// <summary>
+                /// <para>The contact person\&quot;s position.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>职员</para>
+                /// <para>example</para>
                 /// </summary>
                 [NameInMap("ContactPosition")]
                 [Validation(Required=false)]
                 public string ContactPosition { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether auto-reply is enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>N</para>
                 /// </summary>
@@ -206,6 +268,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string EnableAutoReply { get; set; }
 
                 /// <summary>
+                /// <para>A description of the industry.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Description</para>
                 /// </summary>
@@ -214,6 +278,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string IndustryDescription { get; set; }
 
                 /// <summary>
+                /// <para>The company\&quot;s industry.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cateringServices</para>
                 /// </summary>
@@ -222,6 +288,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string IndustryInvolved { get; set; }
 
                 /// <summary>
+                /// <para>The URL of the letter of guarantee.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxxxxxxxx">https://xxxxxxxxxx</a></para>
                 /// </summary>
@@ -229,19 +297,30 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [Validation(Required=false)]
                 public string LetterGuarantee { get; set; }
 
+                /// <summary>
+                /// <para>The logo URLs.</para>
+                /// </summary>
                 [NameInMap("Logo")]
                 [Validation(Required=false)]
                 public List<string> Logo { get; set; }
 
+                /// <summary>
+                /// <para>The local destination countries or regions.</para>
+                /// </summary>
                 [NameInMap("MessageDestinationCountry")]
                 [Validation(Required=false)]
                 public List<string> MessageDestinationCountry { get; set; }
 
+                /// <summary>
+                /// <para>The international destination countries or regions.</para>
+                /// </summary>
                 [NameInMap("MessageDestinationInternationalCountry")]
                 [Validation(Required=false)]
                 public List<string> MessageDestinationInternationalCountry { get; set; }
 
                 /// <summary>
+                /// <para>A brief introduction to the business messaging conversation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>aaa</para>
                 /// </summary>
@@ -250,6 +329,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string MessageDialogueIntroduction { get; set; }
 
                 /// <summary>
+                /// <para>The date business messaging is enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-08-05</para>
                 /// </summary>
@@ -258,6 +339,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string MessageEnableDate { get; set; }
 
                 /// <summary>
+                /// <para>The name of the business messaging conversation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
                 /// </summary>
@@ -266,6 +349,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string MessageSessionName { get; set; }
 
                 /// <summary>
+                /// <para>The recovery status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>NowRecovery</para>
                 /// </summary>
@@ -274,6 +359,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string NowRecovery { get; set; }
 
                 /// <summary>
+                /// <para>The URL for supplementary information.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://wwwxxxx">https://wwwxxxx</a></para>
                 /// </summary>
@@ -282,6 +369,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string OtherLetterGuarantee { get; set; }
 
                 /// <summary>
+                /// <para>The date of recovery.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-11-11</para>
                 /// </summary>
@@ -290,6 +379,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string RecoveryDate { get; set; }
 
                 /// <summary>
+                /// <para>The content of the auto-reply message.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>aaa</para>
                 /// </summary>
@@ -298,7 +389,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string ReplyContent { get; set; }
 
                 /// <summary>
-                /// <para>SuspensionDate</para>
+                /// <para>The suspension date.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SuspensionDate</para>
@@ -308,6 +399,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public string SuspensionDate { get; set; }
 
                 /// <summary>
+                /// <para>The company website.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxxxx">https://xxxxxx</a></para>
                 /// </summary>
@@ -318,6 +411,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             }
 
             /// <summary>
+            /// <para>The audit result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pass</para>
             /// </summary>
@@ -326,6 +421,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AuditResult { get; set; }
 
             /// <summary>
+            /// <para>The audit time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1785465</para>
             /// </summary>
@@ -334,6 +431,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AuditTime { get; set; }
 
             /// <summary>
+            /// <para>The creator of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -342,6 +441,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1753236426000</para>
             /// </summary>
@@ -350,6 +451,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17833636</para>
             /// </summary>
@@ -358,7 +461,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string GmtModifier { get; set; }
 
             /// <summary>
-            /// <para>ID。</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -368,6 +471,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The Viber service ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>735221</para>
             /// </summary>
@@ -376,6 +481,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string MaapServiceNo { get; set; }
 
             /// <summary>
+            /// <para>The user who last modified the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -384,6 +491,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Modifier { get; set; }
 
             /// <summary>
+            /// <para>The audit comment.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aa</para>
             /// </summary>
@@ -392,6 +501,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Reason { get; set; }
 
             /// <summary>
+            /// <para>The unique number for the application request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5435435435</para>
             /// </summary>
@@ -400,6 +511,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string RequestNo { get; set; }
 
             /// <summary>
+            /// <para>The type of the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>viberOpen</para>
             /// </summary>
@@ -408,6 +521,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string RequestType { get; set; }
 
             /// <summary>
+            /// <para>The status of the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>A</para>
             /// </summary>
@@ -416,6 +531,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string State { get; set; }
 
             /// <summary>
+            /// <para>The subscriber code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4534**</para>
             /// </summary>
@@ -426,6 +543,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -434,6 +553,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID for the request. You can use this Aliyun-generated ID for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8**9-A94866411B2O</para>
         /// </summary>
@@ -442,6 +563,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates if the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

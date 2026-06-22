@@ -9,19 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class FlowUnbindPhoneResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Access denied details, this field is returned only when RAM verification fails.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>无</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Request status code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>
@@ -30,8 +22,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -40,8 +30,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request result data.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -54,8 +42,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the operation was successful. Values: true: success; false: failure.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

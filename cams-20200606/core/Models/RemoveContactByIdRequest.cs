@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3456456346**</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("ContactId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>46546546546**</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

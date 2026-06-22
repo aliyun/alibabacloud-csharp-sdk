@@ -10,11 +10,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SendChatappMassMessageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the channel. Valid values:</para>
+        /// <para>The channel type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>whatsapp</b></description></item>
+        /// <item><description><para><b>whatsapp</b></para>
+        /// </description></item>
+        /// <item><description><para><b>messenger</b></para>
+        /// </description></item>
+        /// <item><description><para><b>instagram</b></para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
         /// <item><description><b>viber</b></description></item>
-        /// <item><description><b>line</b> (under development)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,10 +33,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the user.</para>
+        /// <para>The Space ID of the ISV sub-customer, or the instance ID for a direct customer. View it on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>28251486512358****</para>
+        /// <para>cams-8c8*********</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -38,13 +45,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</para>
-        /// <remarks>
-        /// <para> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
-        /// </remarks>
+        /// <para>The WhatsApp Business Account (WABA) ID of the Independent Software Vendor (ISV) customer. This is a deprecated parameter. Use CustSpaceId instead, which is the direct customer\&quot;s instance ID. View the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>65921621816****</para>
+        /// <para>cams-8c8*********</para>
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
@@ -52,17 +56,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The content of the fallback message.</para>
+        /// <para>The custom fallback content. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Fallback message</para>
+        /// <para>Fallback SMS</para>
         /// </summary>
         [NameInMap("FallBackContent")]
         [Validation(Required=false)]
         public string FallBackContent { get; set; }
 
         /// <summary>
-        /// <para>Specifies the period of time after which the fallback message is sent if the message receipt that indicates the message is delivered to clients is not received. If this parameter is left empty, the fallback message is sent only when the message fails to be sent or the message receipt that indicates the message is not delivered to clients is received. Unit: seconds. Valid values: 60 to 43200.</para>
+        /// <para>The time to trigger a fallback. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).&lt;props=&quot;intl&quot;&gt;If a delivery receipt is not returned within the specified time, a fallback is triggered. If you leave this parameter empty, the fallback is not determined by time. A fallback is triggered only when the message fails to be sent or a failed status report is received. Unit: seconds. Minimum value: 60. Maximum value: 43200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -72,20 +76,24 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public int? FallBackDuration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the fallback policy.</para>
+        /// <para>The fallback policy ID. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).&lt;props=&quot;intl&quot;&gt;View the policy ID on the <a href="https://chatapp.console.alibabacloud.com/FallbackStrategy"><b>Fallback Policy</b></a> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>S00001</para>
+        /// <para>S0****</para>
         /// </summary>
         [NameInMap("FallBackId")]
         [Validation(Required=false)]
         public string FallBackId { get; set; }
 
         /// <summary>
-        /// <para>The fallback rule. Valid values:</para>
+        /// <para>The fallback rule. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com). &lt;props=&quot;intl&quot;&gt;Valid values:</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><b>undelivered</b>: A fallback is triggered if the message is not delivered to clients. When the message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</description></item>
-        /// <item><description><b>sentFailed</b>: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</description></item>
+        /// <item><description><b>undelivered</b>: A fallback is triggered if the message cannot be delivered to the recipient. This rule requires that the template and parameters pass verification before sending. The rule does not apply if the message is blocked from sending, for example, due to a blacklisted template or phone number. This is the default rule if this parameter is empty.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>sentFailed</b>: A fallback is triggered if the template, template variables, or other parameters fail verification. Only the channelType, type, messageType, to, and the existence of the from parameter are strictly verified.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +104,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FallBackRule { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone number of the message sender.</para>
+        /// <para>The sender\&quot;s number.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If ChannelType is <b>whatsapp</b>, this is the phone number registered and bound with WhatsApp. View the number on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</para>
+        /// </description></item>
+        /// <item><description><para>If ChannelType is <b>messenger</b>, this is the Page ID. View the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Facebook Homepage</b> page.</para>
+        /// </description></item>
+        /// <item><description><para>If ChannelType is <b>instagram</b>, this is the Instagram professional account ID. View the ID on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Professional Account</b> page.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>If ChannelType is <b>viber</b>, this is the Viber service ID. View the ID on the <a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Service Number Management&#x20;</b>&#x70;age.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,10 +129,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</para>
+        /// <para>ISV verification code, used to verify if the user is authorized by an ISV. This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>skdi3kksloslikdkkdk</para>
+        /// <para>skdi3kksloslikd****</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
@@ -120,10 +140,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The type of the Viber message. Valid values:</para>
+        /// <para>The Viber message type. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com). &lt;props=&quot;intl&quot;&gt;Valid values:</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><b>promotion</b></description></item>
-        /// <item><description><b>transaction</b></description></item>
+        /// <item><description><b>promotion</b>: marketing messages.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>transaction</b>: notification messages.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,7 +158,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The language. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -157,44 +181,44 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The mobile phone numbers of the message receivers.</para>
+        /// <para>A list of recipients.</para>
         /// </summary>
         [NameInMap("SenderList")]
         [Validation(Required=false)]
         public string SenderListShrink { get; set; }
 
         /// <summary>
-        /// <para>The tag information when the ChannelType parameter is set to viber.</para>
+        /// <para>A custom tag for a Viber message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tag</para>
+        /// <para>Tag</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The custom task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100000001</para>
+        /// <para>10000****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The template code.</para>
+        /// <para>The template code. View the template code on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Template Design</b> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>744c4b5c79c9432497a075bdfca36bf5</para>
+        /// <para>1119***************</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the message template.</para>
+        /// <para>The template name. View the template name on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Template Design</b> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -204,10 +228,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for sending messages when the ChannelType parameter is set to viber. Valid values: 30 to 1209600. Unit: seconds.</para>
+        /// <para>The timeout period for sending a Viber message. This parameter is for the international site (alibabacloud.com). You can ignore it for the China site (aliyun.com).&lt;props=&quot;intl&quot;&gt;Unit: seconds. Valid values: 30 to 1209600.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>50</para>
+        /// <para>46</para>
         /// </summary>
         [NameInMap("Ttl")]
         [Validation(Required=false)]

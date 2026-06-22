@@ -14,11 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
-        /// <list type="bullet">
-        /// <item><description>The value OK indicates that the request was successful.</description></item>
-        /// <item><description>For more information about other response codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
-        /// </list>
+        /// <para>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -38,25 +34,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The public key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>-----BEGIN PUBLIC KEY-----
-            /// AAA
-            /// BBB
-            /// CCC
-            /// DDD
-            /// EEE
-            /// FFF
-            /// GGG
-            /// -----END PUBLIC KEY-----</para>
+            /// <para>-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt+PMrYw4zUDEk+VeTrp0\n8LZaoVpiVFErX7iuoDjUs4F9vkxMQuIABjcXw\/swzTMEopLORQV28uqN\/2\/x9hjU\****\/Zwa\/Vk5Svp4\niVY4e22FsJCCWUEMvayO8Q+3UGq0eXXQ+8SlUWEMq1VaJ4pwCLsMnmgybA+VmJxi\nkwIDAQAB\n-----END PUBLIC KEY-----&quot;</para>
             /// </summary>
             [NameInMap("EncryptionPublicKey")]
             [Validation(Required=false)]
             public string EncryptionPublicKey { get; set; }
 
             /// <summary>
-            /// <para>The validity state of the public key. Valid values:</para>
+            /// <para>The status of the public key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>MISMATCH: The public key is invalid.</description></item>
-            /// <item><description>VALID: The public key is valid.</description></item>
+            /// <item><description><para>MISMATCH: The public key is invalid.</para>
+            /// </description></item>
+            /// <item><description><para>VALID: The public key is valid.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +60,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>86138000**</para>
+            /// <para>861526377****</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
@@ -79,7 +69,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>Error description information.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -92,7 +82,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
+        /// <para>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

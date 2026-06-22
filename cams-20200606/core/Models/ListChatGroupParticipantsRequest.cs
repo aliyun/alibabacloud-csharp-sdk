@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatGroupParticipantsRequest : TeaModel {
         /// <summary>
+        /// <para>The business number. You can call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to obtain the business number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
+        /// <para>The channel type. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>WHATSAPP</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This operation supports only the WhatsApp channel.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>WHATSAPP</para>
         /// </summary>
@@ -28,6 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// <para>This is the instance ID for direct customers or the SpaceId for ISV sub-customers. You can find the ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +48,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The group ID. You can call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation to obtain the group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,11 +62,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The paging information.</para>
+        /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
         public ListChatGroupParticipantsRequestPage Page { get; set; }
         public class ListChatGroupParticipantsRequestPage : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -64,6 +80,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? Index { get; set; }
 
             /// <summary>
+            /// <para>The page size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>

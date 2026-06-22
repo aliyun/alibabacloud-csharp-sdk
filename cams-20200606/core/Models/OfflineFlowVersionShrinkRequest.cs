@@ -10,40 +10,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class OfflineFlowVersionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Business tenant code, default is “ALICOM_OPAAS”.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <para>Business extension information, default is “{}”.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
-        /// <para>Flow code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>f4912c16943b4dfba44bd6fedacf****</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>Flow version</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("FlowVersion")]
         [Validation(Required=false)]
@@ -54,10 +42,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Flow remarks</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>We don\&quot;t need this old version.</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

@@ -9,59 +9,35 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatFlowMetricResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details of access denial.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>无</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Status code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>Returned data object.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>无</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>Unique request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Values: true: success; false: failure.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

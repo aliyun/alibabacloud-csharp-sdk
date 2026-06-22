@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>If OK is returned, the request was successful.</para>
+        /// <para>A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListPhoneMessageQrdlResponseBodyData> Data { get; set; }
         public class ListPhoneMessageQrdlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the deep link.</para>
+            /// <para>The deep link URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://wa.msg/">https://wa.msg/</a></para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string DeepLinkUrl { get; set; }
 
             /// <summary>
-            /// <para>The format of the generated image.</para>
+            /// <para>The type of the generated image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PNG</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8613800</para>
+            /// <para>86138009****</para>
             /// </summary>
             [NameInMap("PhoneNumber")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string QrImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The mode of the quick-response (QR) code.</para>
+            /// <para>The code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IUIED999</para>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>Error description information.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateCommerceSettingRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to display the shopping cart button. Valid values:</para>
+        /// <para>Specifies whether to enable the shopping cart. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enable the shopping cart.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disable the shopping cart.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,10 +27,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? CartEnable { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the catalog button. Valid values:</para>
+        /// <para>Specifies whether to enable the product catalog. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enable the product catalog.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disable the product catalog.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,11 +44,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? CatalogVisible { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the user within the independent software vendor (ISV) account.</para>
+        /// <para>The Space ID of the Independent Software Vendor (ISV) sub-customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>293483938849493</para>
+        /// <para>29348393884****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]

@@ -11,16 +11,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class GetGroupExistShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
@@ -29,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aaa</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

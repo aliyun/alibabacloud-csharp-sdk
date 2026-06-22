@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Cams20200606
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-southeast-1", "cams.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cams", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -211,7 +215,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册viber账号，开户</para>
+        /// <para>Signs up for a Viber account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -279,7 +283,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册viber账号，开户</para>
+        /// <para>Signs up for a Viber account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -347,7 +351,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册viber账号，开户</para>
+        /// <para>Signs up for a Viber account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -365,7 +369,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册viber账号，开户</para>
+        /// <para>Signs up for a Viber account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -383,8 +387,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroup</para>
+        /// <para>Creates an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can only create an IM group by calling this API.</description></item>
+        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
+        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupRequest
@@ -457,8 +474,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroup</para>
+        /// <para>Creates an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can only create an IM group by calling this API.</description></item>
+        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
+        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupRequest
@@ -531,8 +561,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroup</para>
+        /// <para>Creates an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can only create an IM group by calling this API.</description></item>
+        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
+        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupRequest
@@ -549,8 +592,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroup</para>
+        /// <para>Creates an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Creating IM groups via the API is a feature in closed beta testing by Meta. Please contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You can only create an IM group by calling this API.</description></item>
+        /// <item><description>After creating an IM group, you can call the <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> API to generate an invite link.</description></item>
+        /// <item><description>For the WhatsApp channel type, an IM group is limited to eight members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupRequest
@@ -567,8 +623,23 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroupInviteLink</para>
+        /// <para>Adds an invite link for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// The API for adding invite links to IM groups is in beta testing on Meta. Contact your account manager to add your account to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IM group has been created.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>After you add an invite link by calling this operation, you can use the link to invite members to the group.</description></item>
+        /// <item><description>Currently, members can join an IM group only using an invite link.</description></item>
+        /// <item><description>A WhatsApp group can have a maximum of 8 members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupInviteLinkRequest
@@ -633,8 +704,23 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroupInviteLink</para>
+        /// <para>Adds an invite link for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// The API for adding invite links to IM groups is in beta testing on Meta. Contact your account manager to add your account to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IM group has been created.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>After you add an invite link by calling this operation, you can use the link to invite members to the group.</description></item>
+        /// <item><description>Currently, members can join an IM group only using an invite link.</description></item>
+        /// <item><description>A WhatsApp group can have a maximum of 8 members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupInviteLinkRequest
@@ -699,8 +785,23 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroupInviteLink</para>
+        /// <para>Adds an invite link for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// The API for adding invite links to IM groups is in beta testing on Meta. Contact your account manager to add your account to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IM group has been created.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>After you add an invite link by calling this operation, you can use the link to invite members to the group.</description></item>
+        /// <item><description>Currently, members can join an IM group only using an invite link.</description></item>
+        /// <item><description>A WhatsApp group can have a maximum of 8 members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupInviteLinkRequest
@@ -717,8 +818,23 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddChatGroupInviteLink</para>
+        /// <para>Adds an invite link for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// The API for adding invite links to IM groups is in beta testing on Meta. Contact your account manager to add your account to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, make sure that an IM group has been created.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// <item><description>After you add an invite link by calling this operation, you can use the link to invite members to the group.</description></item>
+        /// <item><description>Currently, members can join an IM group only using an invite link.</description></item>
+        /// <item><description>A WhatsApp group can have a maximum of 8 members.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatGroupInviteLinkRequest
@@ -735,8 +851,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number for a WhatsApp Business account (WABA).</para>
+        /// <para>Adds a phone number to a WhatsApp Business Account (WABA).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatappPhoneNumberRequest
@@ -805,8 +926,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number for a WhatsApp Business account (WABA).</para>
+        /// <para>Adds a phone number to a WhatsApp Business Account (WABA).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatappPhoneNumberRequest
@@ -875,8 +1001,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number for a WhatsApp Business account (WABA).</para>
+        /// <para>Adds a phone number to a WhatsApp Business Account (WABA).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatappPhoneNumberRequest
@@ -893,8 +1024,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a phone number for a WhatsApp Business account (WABA).</para>
+        /// <para>Adds a phone number to a WhatsApp Business Account (WABA).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddChatappPhoneNumberRequest
@@ -1139,8 +1275,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加自定义受众(这个接口需要从镇元直接配置）</para>
+        /// <para>Adds users to a custom audience.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddCustomAudienceUserRequest
@@ -1223,8 +1364,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加自定义受众(这个接口需要从镇元直接配置）</para>
+        /// <para>Adds users to a custom audience.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddCustomAudienceUserRequest
@@ -1307,8 +1453,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加自定义受众(这个接口需要从镇元直接配置）</para>
+        /// <para>Adds users to a custom audience.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCustomAudienceUserRequest
@@ -1325,8 +1476,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加自定义受众(这个接口需要从镇元直接配置）</para>
+        /// <para>Adds users to a custom audience.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After users are submitted to a custom audience, Meta matches them. If fewer than 100 users are matched, Meta discards the data. This prevents phone numbers from being linked directly to user tokens. Each API call supports up to 10,000 user records.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddCustomAudienceUserRequest
@@ -2451,12 +2607,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the WhatsApp Business account with ChatApp.</para>
+        /// <para>Binds a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2510,12 +2666,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the WhatsApp Business account with ChatApp.</para>
+        /// <para>Binds a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2569,12 +2725,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the WhatsApp Business account with ChatApp.</para>
+        /// <para>Binds a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2592,12 +2748,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds the WhatsApp Business account with ChatApp.</para>
+        /// <para>Binds a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2787,12 +2943,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a specified phone number for migration.</para>
+        /// <para>Verifies a phone number for migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2854,12 +3010,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a specified phone number for migration.</para>
+        /// <para>Verifies a phone number for migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2921,12 +3077,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a specified phone number for migration.</para>
+        /// <para>Verifies a phone number for migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2944,12 +3100,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies a specified phone number for migration.</para>
+        /// <para>Verifies a phone number for migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2967,12 +3123,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from a WhatsApp Business account (WABA).</para>
+        /// <para>Deregisters a phone number from a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) per user. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3030,12 +3186,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from a WhatsApp Business account (WABA).</para>
+        /// <para>Deregisters a phone number from a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) per user. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3093,12 +3249,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from a WhatsApp Business account (WABA).</para>
+        /// <para>Deregisters a phone number from a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) per user. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3116,12 +3272,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deregisters a phone number from a WhatsApp Business account (WABA).</para>
+        /// <para>Deregisters a phone number from a WhatsApp Business Account (WABA).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) per user. If you exceed this limit, API calls are throttled, which may affect your business. Call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3144,7 +3300,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3207,7 +3363,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3270,7 +3426,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3293,7 +3449,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3316,7 +3472,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3375,7 +3531,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3434,7 +3590,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3457,7 +3613,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3480,7 +3636,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3547,7 +3703,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3614,7 +3770,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3637,7 +3793,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3655,7 +3811,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直发消息检查</para>
+        /// <para>Validates direct message content for WhatsApp.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3719,7 +3875,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直发消息检查</para>
+        /// <para>Validates direct message content for WhatsApp.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3783,7 +3939,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直发消息检查</para>
+        /// <para>Validates direct message content for WhatsApp.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3801,7 +3957,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>直发消息检查</para>
+        /// <para>Validates direct message content for WhatsApp.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3987,7 +4143,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Chatflow</para>
+        /// <para>创建Chatflow</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4063,7 +4219,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Chatflow</para>
+        /// <para>创建Chatflow</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4139,7 +4295,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Chatflow</para>
+        /// <para>创建Chatflow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4157,7 +4313,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Chatflow</para>
+        /// <para>创建Chatflow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4175,7 +4331,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import and create flow</para>
+        /// <para>导入并创建flow</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4251,7 +4407,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import and create flow</para>
+        /// <para>导入并创建flow</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4327,7 +4483,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import and create flow</para>
+        /// <para>导入并创建flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4345,7 +4501,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import and create flow</para>
+        /// <para>导入并创建flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4363,7 +4519,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create chatFlow log setting</para>
+        /// <para>创建chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4417,7 +4573,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create chatFlow log setting</para>
+        /// <para>创建chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4471,7 +4627,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create chatFlow log setting</para>
+        /// <para>创建chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4489,7 +4645,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create chatFlow log setting</para>
+        /// <para>创建chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4507,12 +4663,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the number.</para>
+        /// <para>Initiates the migration of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The status of the phone number.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4574,12 +4730,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the number.</para>
+        /// <para>Initiates the migration of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The status of the phone number.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4641,12 +4797,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the number.</para>
+        /// <para>Initiates the migration of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The status of the phone number.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4664,12 +4820,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the number.</para>
+        /// <para>Initiates the migration of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The status of the phone number.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4687,15 +4843,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.
-        /// \\\\*   Example: OK. This parameter indicates that the request is successful.
-        /// \\\\*   Other values indicate that the request fails. For more information, see \\\[Error codes]\\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</para>
+        /// <para>Creates a message template. After a template is approved, you can use it to send messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API operation is 50 for a single user. If you exceed the limit, API calls are rate-limited, which may affect your business. We recommend that you call this operation at a reasonable frequency.</para>
+        /// <h3>Status change</h3>
+        /// <para>You can monitor template status and quality changes using Message Service (MNS) or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4791,15 +4947,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.
-        /// \\\\*   Example: OK. This parameter indicates that the request is successful.
-        /// \\\\*   Other values indicate that the request fails. For more information, see \\\[Error codes]\\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</para>
+        /// <para>Creates a message template. After a template is approved, you can use it to send messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API operation is 50 for a single user. If you exceed the limit, API calls are rate-limited, which may affect your business. We recommend that you call this operation at a reasonable frequency.</para>
+        /// <h3>Status change</h3>
+        /// <para>You can monitor template status and quality changes using Message Service (MNS) or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4895,15 +5051,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.
-        /// \\\\*   Example: OK. This parameter indicates that the request is successful.
-        /// \\\\*   Other values indicate that the request fails. For more information, see \\\[Error codes]\\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</para>
+        /// <para>Creates a message template. After a template is approved, you can use it to send messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API operation is 50 for a single user. If you exceed the limit, API calls are rate-limited, which may affect your business. We recommend that you call this operation at a reasonable frequency.</para>
+        /// <h3>Status change</h3>
+        /// <para>You can monitor template status and quality changes using Message Service (MNS) or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4921,15 +5077,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code.
-        /// \\\\*   Example: OK. This parameter indicates that the request is successful.
-        /// \\\\*   Other values indicate that the request fails. For more information, see \\\[Error codes]\\\(<a href="https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes">https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes</a>).</para>
+        /// <para>Creates a message template. After a template is approved, you can use it to send messages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h3>QPS limit</h3>
+        /// <para>The queries per second (QPS) limit for this API operation is 50 for a single user. If you exceed the limit, API calls are rate-limited, which may affect your business. We recommend that you call this operation at a reasonable frequency.</para>
+        /// <h3>Status change</h3>
+        /// <para>You can monitor template status and quality changes using Message Service (MNS) or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4947,7 +5103,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义受众</para>
+        /// <para>Creates a custom audience.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5025,7 +5181,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义受众</para>
+        /// <para>Creates a custom audience.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5103,7 +5259,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义受众</para>
+        /// <para>Creates a custom audience.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5121,7 +5277,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义受众</para>
+        /// <para>Creates a custom audience.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5139,12 +5295,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Flow.</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>The queries per second (QPS) limit for this operation is 5 for each user. API calls that exceed this limit are throttled. Because throttling may affect your business, we recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5216,12 +5372,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Flow.</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>The queries per second (QPS) limit for this operation is 5 for each user. API calls that exceed this limit are throttled. Because throttling may affect your business, we recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5293,12 +5449,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Flow.</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>The queries per second (QPS) limit for this operation is 5 for each user. API calls that exceed this limit are throttled. Because throttling may affect your business, we recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5316,12 +5472,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Flow.</para>
+        /// <para>Creates a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>The queries per second (QPS) limit for this operation is 5 for each user. API calls that exceed this limit are throttled. Because throttling may affect your business, we recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5527,7 +5683,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5605,7 +5761,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5683,7 +5839,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5701,7 +5857,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建实例</para>
+        /// <para>Creates an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5719,7 +5875,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5793,7 +5949,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5867,7 +6023,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5885,7 +6041,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Creates a budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6091,8 +6247,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quick-response (QR) code that contains a message.</para>
+        /// <para>Creates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a QR code is created, users can scan it with WhatsApp to start a chat with your business number.</description></item>
+        /// <item><description>Before calling this API, make sure you have a WhatsApp channel.</description></item>
+        /// <item><description>If you do not have a WhatsApp channel, create one on the
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneMessageQrdlRequest
@@ -6157,8 +6325,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quick-response (QR) code that contains a message.</para>
+        /// <para>Creates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a QR code is created, users can scan it with WhatsApp to start a chat with your business number.</description></item>
+        /// <item><description>Before calling this API, make sure you have a WhatsApp channel.</description></item>
+        /// <item><description>If you do not have a WhatsApp channel, create one on the
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneMessageQrdlRequest
@@ -6223,8 +6403,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quick-response (QR) code that contains a message.</para>
+        /// <para>Creates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a QR code is created, users can scan it with WhatsApp to start a chat with your business number.</description></item>
+        /// <item><description>Before calling this API, make sure you have a WhatsApp channel.</description></item>
+        /// <item><description>If you do not have a WhatsApp channel, create one on the
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneMessageQrdlRequest
@@ -6241,8 +6433,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a quick-response (QR) code that contains a message.</para>
+        /// <para>Creates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a QR code is created, users can scan it with WhatsApp to start a chat with your business number.</description></item>
+        /// <item><description>Before calling this API, make sure you have a WhatsApp channel.</description></item>
+        /// <item><description>If you do not have a WhatsApp channel, create one on the
+        /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreatePhoneMessageQrdlRequest
@@ -6431,7 +6635,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Process</para>
+        /// <para>删除流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6499,7 +6703,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Process</para>
+        /// <para>删除流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6567,7 +6771,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Process</para>
+        /// <para>删除流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6585,7 +6789,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Process</para>
+        /// <para>删除流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6603,8 +6807,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroup</para>
+        /// <para>Deletes an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created one, create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>After an IM group is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupRequest
@@ -6669,8 +6886,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroup</para>
+        /// <para>Deletes an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created one, create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>After an IM group is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupRequest
@@ -6735,8 +6965,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroup</para>
+        /// <para>Deletes an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created one, create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>After an IM group is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupRequest
@@ -6753,8 +6996,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroup</para>
+        /// <para>Deletes an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you have not created one, create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation.</description></item>
+        /// <item><description>After an IM group is deleted, it cannot be recovered. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupRequest
@@ -6771,8 +7027,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupInviteLink</para>
+        /// <para>Deletes an IM group invitation link.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Deleting an IM group invitation link via the API is a feature in beta testing for Meta. To use this feature, contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure an invitation link has been added to your IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create one and add an invitation link.</description></item>
+        /// <item><description>After deleting the invitation link, you can no longer invite members to the IM group. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupInviteLinkRequest
@@ -6837,8 +7106,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupInviteLink</para>
+        /// <para>Deletes an IM group invitation link.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Deleting an IM group invitation link via the API is a feature in beta testing for Meta. To use this feature, contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure an invitation link has been added to your IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create one and add an invitation link.</description></item>
+        /// <item><description>After deleting the invitation link, you can no longer invite members to the IM group. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupInviteLinkRequest
@@ -6903,8 +7185,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupInviteLink</para>
+        /// <para>Deletes an IM group invitation link.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Deleting an IM group invitation link via the API is a feature in beta testing for Meta. To use this feature, contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure an invitation link has been added to your IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create one and add an invitation link.</description></item>
+        /// <item><description>After deleting the invitation link, you can no longer invite members to the IM group. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupInviteLinkRequest
@@ -6921,8 +7216,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupInviteLink</para>
+        /// <para>Deletes an IM group invitation link.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Deleting an IM group invitation link via the API is a feature in beta testing for Meta. To use this feature, contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure an invitation link has been added to your IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations to create one and add an invitation link.</description></item>
+        /// <item><description>After deleting the invitation link, you can no longer invite members to the IM group. Proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupInviteLinkRequest
@@ -6939,8 +7247,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupParticipants</para>
+        /// <para>Removes members from an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteChatGroupParticipantsRequest
@@ -7015,8 +7336,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupParticipants</para>
+        /// <para>Removes members from an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteChatGroupParticipantsRequest
@@ -7091,8 +7425,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupParticipants</para>
+        /// <para>Removes members from an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupParticipantsRequest
@@ -7109,8 +7456,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteChatGroupParticipants</para>
+        /// <para>Removes members from an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is a beta feature from Meta. Contact your account manager to add your account to the allowlist before use.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation requires an existing IM group that members have joined via an invitation link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// <item><description>Removed members no longer receive messages from the group. Use this operation with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatGroupParticipantsRequest
@@ -7133,7 +7493,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7217,7 +7577,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7301,7 +7661,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7325,7 +7685,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7683,12 +8043,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow. Only Flows in the DRAFT state can be deleted.</para>
+        /// <para>Deletes a WhatsApp flow. Only flows in the draft state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7746,12 +8106,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow. Only Flows in the DRAFT state can be deleted.</para>
+        /// <para>Deletes a WhatsApp flow. Only flows in the draft state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7809,12 +8169,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow. Only Flows in the DRAFT state can be deleted.</para>
+        /// <para>Deletes a WhatsApp flow. Only flows in the draft state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7832,12 +8192,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Flow. Only Flows in the DRAFT state can be deleted.</para>
+        /// <para>Deletes a WhatsApp flow. Only flows in the draft state can be deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7855,7 +8215,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Flow Version</para>
+        /// <para>删除流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7927,7 +8287,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Flow Version</para>
+        /// <para>删除流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7999,7 +8359,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Flow Version</para>
+        /// <para>删除流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8017,7 +8377,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Flow Version</para>
+        /// <para>删除流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8331,7 +8691,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8373,7 +8733,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8415,7 +8775,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8433,7 +8793,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例</para>
+        /// <para>Deletes the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8603,7 +8963,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes the budget for a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8669,7 +9029,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes the budget for a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8735,7 +9095,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes the budget for a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8753,7 +9113,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除预算</para>
+        /// <para>Deletes the budget for a marketing campaign.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8923,8 +9283,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quick-response (QR) code that contains a message.</para>
+        /// <para>Deletes a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a message QR code is deleted, users can no longer scan the QR code to start a chat with your business number. Proceed with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limits</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePhoneMessageQrdlRequest
@@ -8985,8 +9355,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quick-response (QR) code that contains a message.</para>
+        /// <para>Deletes a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a message QR code is deleted, users can no longer scan the QR code to start a chat with your business number. Proceed with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limits</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePhoneMessageQrdlRequest
@@ -9047,8 +9427,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quick-response (QR) code that contains a message.</para>
+        /// <para>Deletes a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a message QR code is deleted, users can no longer scan the QR code to start a chat with your business number. Proceed with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limits</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePhoneMessageQrdlRequest
@@ -9065,8 +9455,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a quick-response (QR) code that contains a message.</para>
+        /// <para>Deletes a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a message QR code is deleted, users can no longer scan the QR code to start a chat with your business number. Proceed with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limits</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeletePhoneMessageQrdlRequest
@@ -9083,8 +9483,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deprecates a Flow.</para>
+        /// <para>Deprecates a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeprecateFlowRequest
@@ -9141,8 +9546,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deprecates a Flow.</para>
+        /// <para>Deprecates a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeprecateFlowRequest
@@ -9199,8 +9609,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deprecates a Flow.</para>
+        /// <para>Deprecates a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeprecateFlowRequest
@@ -9217,8 +9632,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deprecates a Flow.</para>
+        /// <para>Deprecates a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeprecateFlowRequest
@@ -9235,12 +9655,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the statistics on the metrics that are related to WhatsApp.</para>
+        /// <para>Enables statistics for WhatsApp metrics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before retrieving metrics for messages sent through WhatsApp channels or for Marketing templates, call this operation to enable statistics for WhatsApp Return on Investment (ROI) metrics.</description></item>
+        /// <item><description>After you enable statistics for WhatsApp ROI metrics, it takes at least one day for data to become available. Metrics for messages sent and for Marketing templates used before you enabled this feature are not collected.</description></item>
+        /// <item><description>After you enable it, you can call the <a href="https://help.aliyun.com/document_detail/2557788.html">GetChatappPhoneNumberMetric</a> operation to query metrics for messages sent from a phone number, or the <a href="https://help.aliyun.com/document_detail/2557790.html">GetChatappTemplateMetric</a> operation to query metrics for Marketing templates.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9298,12 +9724,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the statistics on the metrics that are related to WhatsApp.</para>
+        /// <para>Enables statistics for WhatsApp metrics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before retrieving metrics for messages sent through WhatsApp channels or for Marketing templates, call this operation to enable statistics for WhatsApp Return on Investment (ROI) metrics.</description></item>
+        /// <item><description>After you enable statistics for WhatsApp ROI metrics, it takes at least one day for data to become available. Metrics for messages sent and for Marketing templates used before you enabled this feature are not collected.</description></item>
+        /// <item><description>After you enable it, you can call the <a href="https://help.aliyun.com/document_detail/2557788.html">GetChatappPhoneNumberMetric</a> operation to query metrics for messages sent from a phone number, or the <a href="https://help.aliyun.com/document_detail/2557790.html">GetChatappTemplateMetric</a> operation to query metrics for Marketing templates.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9361,12 +9793,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the statistics on the metrics that are related to WhatsApp.</para>
+        /// <para>Enables statistics for WhatsApp metrics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before retrieving metrics for messages sent through WhatsApp channels or for Marketing templates, call this operation to enable statistics for WhatsApp Return on Investment (ROI) metrics.</description></item>
+        /// <item><description>After you enable statistics for WhatsApp ROI metrics, it takes at least one day for data to become available. Metrics for messages sent and for Marketing templates used before you enabled this feature are not collected.</description></item>
+        /// <item><description>After you enable it, you can call the <a href="https://help.aliyun.com/document_detail/2557788.html">GetChatappPhoneNumberMetric</a> operation to query metrics for messages sent from a phone number, or the <a href="https://help.aliyun.com/document_detail/2557790.html">GetChatappTemplateMetric</a> operation to query metrics for Marketing templates.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9384,12 +9822,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the statistics on the metrics that are related to WhatsApp.</para>
+        /// <para>Enables statistics for WhatsApp metrics.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before retrieving metrics for messages sent through WhatsApp channels or for Marketing templates, call this operation to enable statistics for WhatsApp Return on Investment (ROI) metrics.</description></item>
+        /// <item><description>After you enable statistics for WhatsApp ROI metrics, it takes at least one day for data to become available. Metrics for messages sent and for Marketing templates used before you enabled this feature are not collected.</description></item>
+        /// <item><description>After you enable it, you can call the <a href="https://help.aliyun.com/document_detail/2557788.html">GetChatappPhoneNumberMetric</a> operation to query metrics for messages sent from a phone number, or the <a href="https://help.aliyun.com/document_detail/2557790.html">GetChatappTemplateMetric</a> operation to query metrics for Marketing templates.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9407,7 +9851,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind phone numbers to flow</para>
+        /// <para>flow绑定号码</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9487,7 +9931,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind phone numbers to flow</para>
+        /// <para>flow绑定号码</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9567,7 +10011,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind phone numbers to flow</para>
+        /// <para>flow绑定号码</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9585,7 +10029,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind phone numbers to flow</para>
+        /// <para>flow绑定号码</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9603,7 +10047,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebind phone number for flow</para>
+        /// <para>flow重绑定手机号</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9683,7 +10127,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebind phone number for flow</para>
+        /// <para>flow重绑定手机号</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9763,7 +10207,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebind phone number for flow</para>
+        /// <para>flow重绑定手机号</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9781,7 +10225,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebind phone number for flow</para>
+        /// <para>flow重绑定手机号</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9799,7 +10243,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind phone number from flow</para>
+        /// <para>flow解绑手机号</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9871,7 +10315,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind phone number from flow</para>
+        /// <para>flow解绑手机号</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9943,7 +10387,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind phone number from flow</para>
+        /// <para>flow解绑手机号</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9961,7 +10405,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind phone number from flow</para>
+        /// <para>flow解绑手机号</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10275,7 +10719,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动生成的模板</para>
+        /// <para>Retrieves auto-generated templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10325,7 +10769,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动生成的模板</para>
+        /// <para>Retrieves auto-generated templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10375,7 +10819,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动生成的模板</para>
+        /// <para>Retrieves auto-generated templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10393,7 +10837,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自动生成的模板</para>
+        /// <para>Retrieves auto-generated templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10411,7 +10855,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get ChatFlow Runtime Data</para>
+        /// <para>获取ChatFlow运行数据</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10503,7 +10947,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get ChatFlow Runtime Data</para>
+        /// <para>获取ChatFlow运行数据</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10595,7 +11039,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get ChatFlow Runtime Data</para>
+        /// <para>获取ChatFlow运行数据</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10613,7 +11057,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get ChatFlow Runtime Data</para>
+        /// <para>获取ChatFlow运行数据</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10631,7 +11075,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query chatFlow template</para>
+        /// <para>查询chatFlow模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10689,7 +11133,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query chatFlow template</para>
+        /// <para>查询chatFlow模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10747,7 +11191,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query chatFlow template</para>
+        /// <para>查询chatFlow模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10765,7 +11209,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query chatFlow template</para>
+        /// <para>查询chatFlow模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10919,12 +11363,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of messages that are sent by using a phone number by a specific metric.</para>
+        /// <para>Queries the message sending metrics for a phone number in a WhatsApp channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query message sending metrics. Alternatively, you can query the metrics in the ChatApp console by choosing &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Daily Statistics Reports for Customers</b>.</description></item>
+        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> operation to enable return on investment (ROI) metric collection for WhatsApp. Statistics are available at least one day after you enable this feature. Message sending metrics generated before you enable the feature are not collected.</description></item>
+        /// <item><description>After you enable ROI metric collection for WhatsApp, make sure that messages are successfully sent from your channel. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation allows a maximum of 50 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10998,12 +11448,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of messages that are sent by using a phone number by a specific metric.</para>
+        /// <para>Queries the message sending metrics for a phone number in a WhatsApp channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query message sending metrics. Alternatively, you can query the metrics in the ChatApp console by choosing &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Daily Statistics Reports for Customers</b>.</description></item>
+        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> operation to enable return on investment (ROI) metric collection for WhatsApp. Statistics are available at least one day after you enable this feature. Message sending metrics generated before you enable the feature are not collected.</description></item>
+        /// <item><description>After you enable ROI metric collection for WhatsApp, make sure that messages are successfully sent from your channel. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation allows a maximum of 50 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11077,12 +11533,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of messages that are sent by using a phone number by a specific metric.</para>
+        /// <para>Queries the message sending metrics for a phone number in a WhatsApp channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query message sending metrics. Alternatively, you can query the metrics in the ChatApp console by choosing &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Daily Statistics Reports for Customers</b>.</description></item>
+        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> operation to enable return on investment (ROI) metric collection for WhatsApp. Statistics are available at least one day after you enable this feature. Message sending metrics generated before you enable the feature are not collected.</description></item>
+        /// <item><description>After you enable ROI metric collection for WhatsApp, make sure that messages are successfully sent from your channel. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation allows a maximum of 50 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11100,12 +11562,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of messages that are sent by using a phone number by a specific metric.</para>
+        /// <para>Queries the message sending metrics for a phone number in a WhatsApp channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query message sending metrics. Alternatively, you can query the metrics in the ChatApp console by choosing &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Daily Statistics Reports for Customers</b>.</description></item>
+        /// <item><description>Before you call this operation, call the <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> operation to enable return on investment (ROI) metric collection for WhatsApp. Statistics are available at least one day after you enable this feature. Message sending metrics generated before you enable the feature are not collected.</description></item>
+        /// <item><description>After you enable ROI metric collection for WhatsApp, make sure that messages are successfully sent from your channel. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>This operation allows a maximum of 50 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11275,13 +11743,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a message template.</para>
+        /// <para>Queries the details of a message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11347,13 +11815,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a message template.</para>
+        /// <para>Queries the details of a message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11419,13 +11887,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a message template.</para>
+        /// <para>Queries the details of a message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11443,13 +11911,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a message template.</para>
+        /// <para>Queries the details of a message template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this API operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11467,12 +11935,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics about a marketing template.</para>
+        /// <para>Queries the metrics for a marketing template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This API queries metrics only for marketing templates of WhatsApp channels.</description></item>
+        /// <item><description>Before you call this operation, call <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> to enable metric statistics for WhatsApp Return on Investment (ROI). It takes at least one day for the data to become available after you enable this feature. Metrics are not collected for marketing templates that were used before this feature was enabled.</description></item>
+        /// <item><description>After you enable metric statistics for WhatsApp ROI, ensure that messages have been sent using the marketing templates of your channels. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This API is limited to 50 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11554,12 +12028,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics about a marketing template.</para>
+        /// <para>Queries the metrics for a marketing template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This API queries metrics only for marketing templates of WhatsApp channels.</description></item>
+        /// <item><description>Before you call this operation, call <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> to enable metric statistics for WhatsApp Return on Investment (ROI). It takes at least one day for the data to become available after you enable this feature. Metrics are not collected for marketing templates that were used before this feature was enabled.</description></item>
+        /// <item><description>After you enable metric statistics for WhatsApp ROI, ensure that messages have been sent using the marketing templates of your channels. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This API is limited to 50 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11641,12 +12121,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics about a marketing template.</para>
+        /// <para>Queries the metrics for a marketing template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This API queries metrics only for marketing templates of WhatsApp channels.</description></item>
+        /// <item><description>Before you call this operation, call <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> to enable metric statistics for WhatsApp Return on Investment (ROI). It takes at least one day for the data to become available after you enable this feature. Metrics are not collected for marketing templates that were used before this feature was enabled.</description></item>
+        /// <item><description>After you enable metric statistics for WhatsApp ROI, ensure that messages have been sent using the marketing templates of your channels. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This API is limited to 50 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11664,12 +12150,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics about a marketing template.</para>
+        /// <para>Queries the metrics for a marketing template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 50 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>This API queries metrics only for marketing templates of WhatsApp channels.</description></item>
+        /// <item><description>Before you call this operation, call <a href="https://help.aliyun.com/document_detail/2557789.html">EnableWhatsAppROIMetric</a> to enable metric statistics for WhatsApp Return on Investment (ROI). It takes at least one day for the data to become available after you enable this feature. Metrics are not collected for marketing templates that were used before this feature was enabled.</description></item>
+        /// <item><description>After you enable metric statistics for WhatsApp ROI, ensure that messages have been sent using the marketing templates of your channels. To send messages, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> page, select a WhatsApp channel, and choose <b>Message Sending</b>. You can also call <a href="https://help.aliyun.com/document_detail/432208.html">SendChatappMessage</a> or <a href="https://help.aliyun.com/document_detail/447926.html">SendChatappMassMessage</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <para>This API is limited to 50 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11692,7 +12184,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11751,7 +12243,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11810,7 +12302,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11833,7 +12325,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11851,12 +12343,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a verification code.</para>
+        /// <para>Requests a verification code to be sent to the specified phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11922,12 +12414,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a verification code.</para>
+        /// <para>Requests a verification code to be sent to the specified phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11993,12 +12485,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a verification code.</para>
+        /// <para>Requests a verification code to be sent to the specified phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12016,12 +12508,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a verification code.</para>
+        /// <para>Requests a verification code to be sent to the specified phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12044,7 +12536,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12107,7 +12599,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12170,7 +12662,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12193,7 +12685,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12211,14 +12703,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures welcoming messages, opening remarks, and commands.</para>
+        /// <para>Queries the conversational automation settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12276,14 +12768,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures welcoming messages, opening remarks, and commands.</para>
+        /// <para>Queries the conversational automation settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12341,14 +12833,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures welcoming messages, opening remarks, and commands.</para>
+        /// <para>Queries the conversational automation settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12366,14 +12858,14 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures welcoming messages, opening remarks, and commands.</para>
+        /// <para>Queries the conversational automation settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13059,12 +13551,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Flow.</para>
+        /// <para>Queries the details of a WhatsApp flow, including its status, name, categories, and preview URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13122,12 +13619,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Flow.</para>
+        /// <para>Queries the details of a WhatsApp flow, including its status, name, categories, and preview URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13185,12 +13687,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Flow.</para>
+        /// <para>Queries the details of a WhatsApp flow, including its status, name, categories, and preview URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13208,12 +13715,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Flow.</para>
+        /// <para>Queries the details of a WhatsApp flow, including its status, name, categories, and preview URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13231,8 +13743,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JSON content of a Flow.</para>
+        /// <para>Queries the JSON content of a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlowJSONAssestRequest
@@ -13289,8 +13811,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JSON content of a Flow.</para>
+        /// <para>Queries the JSON content of a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlowJSONAssestRequest
@@ -13347,8 +13879,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JSON content of a Flow.</para>
+        /// <para>Queries the JSON content of a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlowJSONAssestRequest
@@ -13365,8 +13907,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JSON content of a Flow.</para>
+        /// <para>Queries the JSON content of a WhatsApp flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetFlowJSONAssestRequest
@@ -13383,12 +13935,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the preview URL of a Flow.</para>
+        /// <para>Generates a temporary preview URL for a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After you create a WhatsApp flow, call this operation to generate a temporary preview URL for the flow.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you do not have a WhatsApp flow, you can call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13446,12 +14004,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the preview URL of a Flow.</para>
+        /// <para>Generates a temporary preview URL for a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After you create a WhatsApp flow, call this operation to generate a temporary preview URL for the flow.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you do not have a WhatsApp flow, you can call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13509,12 +14073,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the preview URL of a Flow.</para>
+        /// <para>Generates a temporary preview URL for a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After you create a WhatsApp flow, call this operation to generate a temporary preview URL for the flow.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you do not have a WhatsApp flow, you can call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13532,12 +14102,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the preview URL of a Flow.</para>
+        /// <para>Generates a temporary preview URL for a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>After you create a WhatsApp flow, call this operation to generate a temporary preview URL for the flow.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you do not have a WhatsApp flow, you can call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13727,7 +14303,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算指标</para>
+        /// <para>Retrieves campaign metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13793,7 +14369,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算指标</para>
+        /// <para>Retrieves campaign metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13859,7 +14435,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算指标</para>
+        /// <para>Retrieves campaign metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13877,7 +14453,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算指标</para>
+        /// <para>Retrieves campaign metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13895,12 +14471,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the verification code for the migration number.</para>
+        /// <para>Gets the verification code for phone number migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single user QPS limit for this interface is 10 times per second. Exceeding the limit may result in restricted API calls, which may affect your business. Please make reasonable calls.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13966,12 +14542,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the verification code for the migration number.</para>
+        /// <para>Gets the verification code for phone number migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single user QPS limit for this interface is 10 times per second. Exceeding the limit may result in restricted API calls, which may affect your business. Please make reasonable calls.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14037,12 +14613,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the verification code for the migration number.</para>
+        /// <para>Gets the verification code for phone number migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single user QPS limit for this interface is 10 times per second. Exceeding the limit may result in restricted API calls, which may affect your business. Please make reasonable calls.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14060,12 +14636,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the verification code for the migration number.</para>
+        /// <para>Gets the verification code for phone number migration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The single user QPS limit for this interface is 10 times per second. Exceeding the limit may result in restricted API calls, which may affect your business. Please make reasonable calls.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14083,8 +14659,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains permissions based on the authorization code obtained from embedded signup.</para>
+        /// <para>Gets permissions using the code obtained from the embeded signup flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetPermissionByCodeRequest
@@ -14151,8 +14732,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains permissions based on the authorization code obtained from embedded signup.</para>
+        /// <para>Gets permissions using the code obtained from the embeded signup flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetPermissionByCodeRequest
@@ -14219,8 +14805,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains permissions based on the authorization code obtained from embedded signup.</para>
+        /// <para>Gets permissions using the code obtained from the embeded signup flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPermissionByCodeRequest
@@ -14237,8 +14828,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains permissions based on the authorization code obtained from embedded signup.</para>
+        /// <para>Gets permissions using the code obtained from the embeded signup flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPermissionByCodeRequest
@@ -14255,8 +14851,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption public key of a phone number.</para>
+        /// <para>Retrieves the public key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have added a verified phone number to your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If no phone number is added to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to get a verification code to register and verify the phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPhoneEncryptionPublicKeyRequest
@@ -14313,8 +14919,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption public key of a phone number.</para>
+        /// <para>Retrieves the public key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have added a verified phone number to your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If no phone number is added to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to get a verification code to register and verify the phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPhoneEncryptionPublicKeyRequest
@@ -14371,8 +14987,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption public key of a phone number.</para>
+        /// <para>Retrieves the public key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have added a verified phone number to your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If no phone number is added to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to get a verification code to register and verify the phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPhoneEncryptionPublicKeyRequest
@@ -14389,8 +15015,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the encryption public key of a phone number.</para>
+        /// <para>Retrieves the public key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, make sure that you have added a verified phone number to your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If no phone number is added to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to get a verification code to register and verify the phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPhoneEncryptionPublicKeyRequest
@@ -14407,12 +15043,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification status of a phone number.</para>
+        /// <para>Retrieves the verification status of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the status on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
+        /// <item><description>Before calling this operation, add a phone number to your WhatsApp Business Account (WABA) and submit it for verification.</description></item>
+        /// <item><description>If you have not added a phone number to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and register the number.
+        /// This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14470,12 +15111,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification status of a phone number.</para>
+        /// <para>Retrieves the verification status of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the status on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
+        /// <item><description>Before calling this operation, add a phone number to your WhatsApp Business Account (WABA) and submit it for verification.</description></item>
+        /// <item><description>If you have not added a phone number to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and register the number.
+        /// This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14533,12 +15179,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification status of a phone number.</para>
+        /// <para>Retrieves the verification status of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the status on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
+        /// <item><description>Before calling this operation, add a phone number to your WhatsApp Business Account (WABA) and submit it for verification.</description></item>
+        /// <item><description>If you have not added a phone number to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and register the number.
+        /// This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14556,12 +15207,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification status of a phone number.</para>
+        /// <para>Retrieves the verification status of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to retrieve the verification status of a phone number. You can also view the status on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Phone Number Management</b> page.</description></item>
+        /// <item><description>Before calling this operation, add a phone number to your WhatsApp Business Account (WABA) and submit it for verification.</description></item>
+        /// <item><description>If you have not added a phone number to your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and register the number.
+        /// This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -14731,12 +15387,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ID of a pre-registered phone number used for embedded signup without the need to re-obtain a verification code.</para>
+        /// <para>Gets the ID for a pre-validated phone number. Use this ID to select the number in the Embedded Signup flow without obtaining a new verification code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14782,12 +15438,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ID of a pre-registered phone number used for embedded signup without the need to re-obtain a verification code.</para>
+        /// <para>Gets the ID for a pre-validated phone number. Use this ID to select the number in the Embedded Signup flow without obtaining a new verification code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14833,12 +15489,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ID of a pre-registered phone number used for embedded signup without the need to re-obtain a verification code.</para>
+        /// <para>Gets the ID for a pre-validated phone number. Use this ID to select the number in the Embedded Signup flow without obtaining a new verification code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14856,12 +15512,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the ID of a pre-registered phone number used for embedded signup without the need to re-obtain a verification code.</para>
+        /// <para>Gets the ID for a pre-validated phone number. Use this ID to select the number in the Embedded Signup flow without obtaining a new verification code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14879,7 +15535,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过requestNo查询申请单</para>
+        /// <para>Retrieves the application by its requestNo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14937,7 +15593,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过requestNo查询申请单</para>
+        /// <para>Retrieves the application by its requestNo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14995,7 +15651,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过requestNo查询申请单</para>
+        /// <para>Retrieves the application by its requestNo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15013,7 +15669,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过requestNo查询申请单</para>
+        /// <para>Retrieves the application by its requestNo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15180,7 +15836,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15243,7 +15899,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15306,7 +15962,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15329,7 +15985,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15497,8 +16153,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15578,8 +16234,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15659,8 +16315,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15684,8 +16340,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15703,12 +16359,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application ID under the ISV account.</para>
+        /// <para>Gets the App ID for an Independent Software Vendor (ISV).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15770,12 +16426,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application ID under the ISV account.</para>
+        /// <para>Gets the App ID for an Independent Software Vendor (ISV).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15837,12 +16493,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application ID under the ISV account.</para>
+        /// <para>Gets the App ID for an Independent Software Vendor (ISV).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15860,12 +16516,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application ID under the ISV account.</para>
+        /// <para>Gets the App ID for an Independent Software Vendor (ISV).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16191,17 +16847,8 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Bound List Based on flowCode</para>
+        /// <para>根据flowCode查询已绑定列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can call this interface to query the list of phone numbers or merchant account IDs bound to a process, or you can view the list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface.</description></item>
-        /// <item><description>Before calling this interface, make sure that the process you created has already been bound to a phone number or merchant account ID.</description></item>
-        /// <item><description>If the process you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface, or bind it through the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> interface.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBindingRelationsForFlowVersionRequest
@@ -16258,17 +16905,8 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Bound List Based on flowCode</para>
+        /// <para>根据flowCode查询已绑定列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can call this interface to query the list of phone numbers or merchant account IDs bound to a process, or you can view the list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface.</description></item>
-        /// <item><description>Before calling this interface, make sure that the process you created has already been bound to a phone number or merchant account ID.</description></item>
-        /// <item><description>If the process you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface, or bind it through the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> interface.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBindingRelationsForFlowVersionRequest
@@ -16325,17 +16963,8 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Bound List Based on flowCode</para>
+        /// <para>根据flowCode查询已绑定列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can call this interface to query the list of phone numbers or merchant account IDs bound to a process, or you can view the list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface.</description></item>
-        /// <item><description>Before calling this interface, make sure that the process you created has already been bound to a phone number or merchant account ID.</description></item>
-        /// <item><description>If the process you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface, or bind it through the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> interface.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBindingRelationsForFlowVersionRequest
@@ -16352,17 +16981,8 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Bound List Based on flowCode</para>
+        /// <para>根据flowCode查询已绑定列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>You can call this interface to query the list of phone numbers or merchant account IDs bound to a process, or you can view the list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface.</description></item>
-        /// <item><description>Before calling this interface, make sure that the process you created has already been bound to a phone number or merchant account ID.</description></item>
-        /// <item><description>If the process you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><b>Flow Editor</b></a> &gt; <b>Settings</b> interface, or bind it through the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> interface.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBindingRelationsForFlowVersionRequest
@@ -16379,7 +16999,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flows</para>
+        /// <para>列举流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16467,7 +17087,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flows</para>
+        /// <para>列举流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16555,7 +17175,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flows</para>
+        /// <para>列举流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16573,7 +17193,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flows</para>
+        /// <para>列举流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16591,7 +17211,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChatFlow Template List</para>
+        /// <para>chatFlow模板列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16661,7 +17281,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChatFlow Template List</para>
+        /// <para>chatFlow模板列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16731,7 +17351,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChatFlow Template List</para>
+        /// <para>chatFlow模板列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16749,7 +17369,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ChatFlow Template List</para>
+        /// <para>chatFlow模板列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16767,8 +17387,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroup</para>
+        /// <para>Retrieves a list of IM groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Retrieving the IM group list via the API is a beta feature. Contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You must have an IM group before you call this operation.</description></item>
+        /// <item><description>If you do not have an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> API.</description></item>
+        /// <item><description>The optional parameters for this operation filter the IM group list. If you do not specify any filters, the operation returns the complete IM group list.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListChatGroupRequest
@@ -16855,8 +17488,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroup</para>
+        /// <para>Retrieves a list of IM groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Retrieving the IM group list via the API is a beta feature. Contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You must have an IM group before you call this operation.</description></item>
+        /// <item><description>If you do not have an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> API.</description></item>
+        /// <item><description>The optional parameters for this operation filter the IM group list. If you do not specify any filters, the operation returns the complete IM group list.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListChatGroupRequest
@@ -16943,8 +17589,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroup</para>
+        /// <para>Retrieves a list of IM groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Retrieving the IM group list via the API is a beta feature. Contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You must have an IM group before you call this operation.</description></item>
+        /// <item><description>If you do not have an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> API.</description></item>
+        /// <item><description>The optional parameters for this operation filter the IM group list. If you do not specify any filters, the operation returns the complete IM group list.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatGroupRequest
@@ -16961,8 +17620,21 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroup</para>
+        /// <para>Retrieves a list of IM groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Retrieving the IM group list via the API is a beta feature. Contact your account manager to be added to the allowlist.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>You must have an IM group before you call this operation.</description></item>
+        /// <item><description>If you do not have an IM group, you can only create one by calling the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> API.</description></item>
+        /// <item><description>The optional parameters for this operation filter the IM group list. If you do not specify any filters, the operation returns the complete IM group list.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatGroupRequest
@@ -16979,8 +17651,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroupParticipants</para>
+        /// <para>Lists the members of an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is an internal preview feature. Contact your account manager to request access.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure you have created an IM group with an invitation link, and that members have joined by using that link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListChatGroupParticipantsRequest
@@ -17055,8 +17739,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroupParticipants</para>
+        /// <para>Lists the members of an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is an internal preview feature. Contact your account manager to request access.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure you have created an IM group with an invitation link, and that members have joined by using that link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListChatGroupParticipantsRequest
@@ -17131,8 +17827,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroupParticipants</para>
+        /// <para>Lists the members of an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is an internal preview feature. Contact your account manager to request access.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure you have created an IM group with an invitation link, and that members have joined by using that link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatGroupParticipantsRequest
@@ -17149,8 +17857,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListChatGroupParticipants</para>
+        /// <para>Lists the members of an IM group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is an internal preview feature. Contact your account manager to request access.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, ensure you have created an IM group with an invitation link, and that members have joined by using that link.</description></item>
+        /// <item><description>To create an IM group and add an invitation link, call the <a href="https://help.aliyun.com/document_detail/2998429.html">AddChatGroup</a> and <a href="https://help.aliyun.com/document_detail/3019211.html">AddChatGroupInviteLink</a> operations.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatGroupParticipantsRequest
@@ -17433,7 +18153,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17535,7 +18255,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17637,7 +18357,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17661,7 +18381,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17679,7 +18399,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义受众组列表</para>
+        /// <para>Queries a list of custom audiences.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17763,7 +18483,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义受众组列表</para>
+        /// <para>Queries a list of custom audiences.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17847,7 +18567,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义受众组列表</para>
+        /// <para>Queries a list of custom audiences.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17865,7 +18585,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义受众组列表</para>
+        /// <para>Queries a list of custom audiences.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18355,12 +19075,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Flows.</para>
+        /// <para>Retrieves a list of WhatsApp flows.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18428,12 +19148,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Flows.</para>
+        /// <para>Retrieves a list of WhatsApp flows.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18501,12 +19221,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Flows.</para>
+        /// <para>Retrieves a list of WhatsApp flows.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18524,12 +19244,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Flows.</para>
+        /// <para>Retrieves a list of WhatsApp flows.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second (RPS) per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18547,7 +19267,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举流程组件分组</para>
+        /// <para>ListFlowNodeGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18605,7 +19325,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举流程组件分组</para>
+        /// <para>ListFlowNodeGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18663,7 +19383,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举流程组件分组</para>
+        /// <para>ListFlowNodeGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18681,7 +19401,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列举流程组件分组</para>
+        /// <para>ListFlowNodeGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18875,7 +19595,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flow Versions</para>
+        /// <para>列举流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18955,7 +19675,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flow Versions</para>
+        /// <para>列举流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19035,7 +19755,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flow Versions</para>
+        /// <para>列举流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19053,7 +19773,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Flow Versions</para>
+        /// <para>列举流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19359,7 +20079,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19429,7 +20149,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19499,7 +20219,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19517,7 +20237,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Lists instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19755,7 +20475,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Retrieves a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19839,7 +20559,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Retrieves a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19923,7 +20643,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Retrieves a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19941,7 +20661,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Retrieves a list of budgets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19959,7 +20679,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅token</para>
+        /// <para>Queries custom audiences and subscription tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20033,7 +20753,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅token</para>
+        /// <para>Queries custom audiences and subscription tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20107,7 +20827,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅token</para>
+        /// <para>Queries custom audiences and subscription tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20125,7 +20845,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅token</para>
+        /// <para>Queries custom audiences and subscription tokens.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20295,8 +21015,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a list of quick-response (QR) codes that contain messages.</para>
+        /// <para>Queries message QR codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneMessageQrdlRequest
@@ -20353,8 +21078,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a list of quick-response (QR) codes that contain messages.</para>
+        /// <para>Queries message QR codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneMessageQrdlRequest
@@ -20411,8 +21141,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a list of quick-response (QR) codes that contain messages.</para>
+        /// <para>Queries message QR codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneMessageQrdlRequest
@@ -20429,8 +21164,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a list of quick-response (QR) codes that contain messages.</para>
+        /// <para>Queries message QR codes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListPhoneMessageQrdlRequest
@@ -20447,12 +21187,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries products in a product catalog.</para>
+        /// <para>Retrieves products in a catalog.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20530,12 +21270,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries products in a product catalog.</para>
+        /// <para>Retrieves products in a catalog.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20613,12 +21353,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries products in a product catalog.</para>
+        /// <para>Retrieves products in a catalog.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20636,12 +21376,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries products in a product catalog.</para>
+        /// <para>Retrieves products in a catalog.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20664,7 +21404,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20743,7 +21483,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20822,7 +21562,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20845,7 +21585,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second (RPS) per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21007,7 +21747,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板列表查询</para>
+        /// <para>Lists message templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21053,7 +21793,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板列表查询</para>
+        /// <para>Lists message templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21099,7 +21839,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板列表查询</para>
+        /// <para>Lists message templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21117,7 +21857,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模板列表查询</para>
+        /// <para>Lists message templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21135,12 +21875,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>Modifies a message template. You can modify only templates that are unreviewed or have been rejected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the message template.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 calls per second for each user. If you exceed this limit, your API calls are subject to rate limiting. This may affect your business. Make sure that you call this API within the specified limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can monitor changes in template status and quality through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -21236,12 +21979,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>Modifies a message template. You can modify only templates that are unreviewed or have been rejected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the message template.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 calls per second for each user. If you exceed this limit, your API calls are subject to rate limiting. This may affect your business. Make sure that you call this API within the specified limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can monitor changes in template status and quality through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -21337,12 +22083,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>Modifies a message template. You can modify only templates that are unreviewed or have been rejected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the message template.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 calls per second for each user. If you exceed this limit, your API calls are subject to rate limiting. This may affect your business. Make sure that you call this API within the specified limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can monitor changes in template status and quality through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21360,12 +22109,15 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>Modifies a message template. You can modify only templates that are unreviewed or have been rejected.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The name of the message template.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this API is 50 calls per second for each user. If you exceed this limit, your API calls are subject to rate limiting. This may affect your business. Make sure that you call this API within the specified limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can monitor changes in template status and quality through MNS or HTTP. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">Receipt messages</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21567,12 +22319,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a Flow.</para>
+        /// <para>Modifies a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 5 queries per second (QPS) per account. Calls that exceed this limit trigger flow control, which can affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -21648,12 +22400,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a Flow.</para>
+        /// <para>Modifies a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 5 queries per second (QPS) per account. Calls that exceed this limit trigger flow control, which can affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -21729,12 +22481,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a Flow.</para>
+        /// <para>Modifies a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 5 queries per second (QPS) per account. Calls that exceed this limit trigger flow control, which can affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21752,12 +22504,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic information about a Flow.</para>
+        /// <para>Modifies a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 5 queries per second (QPS) per account. Calls that exceed this limit trigger flow control, which can affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22203,7 +22955,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offline Flow Version</para>
+        /// <para>下线流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22279,7 +23031,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offline Flow Version</para>
+        /// <para>下线流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22355,7 +23107,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offline Flow Version</para>
+        /// <para>下线流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22373,7 +23125,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Offline Flow Version</para>
+        /// <para>下线流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22391,7 +23143,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Flow Version</para>
+        /// <para>上线流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22467,7 +23219,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Flow Version</para>
+        /// <para>上线流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22543,7 +23295,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Flow Version</para>
+        /// <para>上线流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22561,7 +23313,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Online Flow Version</para>
+        /// <para>上线流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22867,12 +23619,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Flow.</para>
+        /// <para>Publishes a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22930,12 +23687,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Flow.</para>
+        /// <para>Publishes a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22993,12 +23755,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Flow.</para>
+        /// <para>Publishes a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23016,12 +23783,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes a Flow.</para>
+        /// <para>Publishes a WhatsApp flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created a WhatsApp flow.</description></item>
+        /// <item><description>If you have not created a WhatsApp flow, call the <a href="https://help.aliyun.com/document_detail/2638742.html">CreateFlow</a> operation to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23039,12 +23811,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the WhatsApp Business account you associate with ChatApp.</para>
+        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23102,12 +23874,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the WhatsApp Business account you associate with ChatApp.</para>
+        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23165,12 +23937,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the WhatsApp Business account you associate with ChatApp.</para>
+        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23188,12 +23960,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the WhatsApp Business account you associate with ChatApp.</para>
+        /// <para>Queries the WhatsApp Business Account (WABA) that is bound to a customer account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API has a per-user QPS limit of 10. Calls that exceed this limit are subject to flow control, which may impact your business. Make API calls at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23211,12 +23983,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries phone numbers that receive messages and statuses of these numbers under a specified user.</para>
+        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23278,12 +24050,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries phone numbers that receive messages and statuses of these numbers under a specified user.</para>
+        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23345,12 +24117,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries phone numbers that receive messages and statuses of these numbers under a specified user.</para>
+        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23368,12 +24140,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries phone numbers that receive messages and statuses of these numbers under a specified user.</para>
+        /// <para>Queries all phone numbers used for sending messages and their statuses for a customer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23391,7 +24163,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23433,7 +24205,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23475,7 +24247,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23493,7 +24265,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Gets the details of a specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23655,12 +24427,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the business information of the account to which a specified phone number is bound.</para>
+        /// <para>Queries the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23718,12 +24490,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the business information of the account to which a specified phone number is bound.</para>
+        /// <para>Queries the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23781,12 +24553,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the business information of the account to which a specified phone number is bound.</para>
+        /// <para>Queries the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23804,12 +24576,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the business information of the account to which a specified phone number is bound.</para>
+        /// <para>Queries the business information of a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23832,7 +24604,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23895,7 +24667,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23958,7 +24730,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23981,7 +24753,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23999,7 +24771,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve Flow</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24067,7 +24839,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve Flow</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24135,7 +24907,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve Flow</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24153,7 +24925,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve Flow</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24171,7 +24943,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View chatFlow log settings</para>
+        /// <para>查看chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24225,7 +24997,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View chatFlow log settings</para>
+        /// <para>查看chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24279,7 +25051,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View chatFlow log settings</para>
+        /// <para>查看chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24297,7 +25069,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View chatFlow log settings</para>
+        /// <para>查看chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24315,7 +25087,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Flow Version</para>
+        /// <para>获取流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24391,7 +25163,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Flow Version</para>
+        /// <para>获取流程版本</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24467,7 +25239,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Flow Version</para>
+        /// <para>获取流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24485,7 +25257,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Flow Version</para>
+        /// <para>获取流程版本</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24655,8 +25427,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求Whatsapp Conversion api</para>
+        /// <para>Sends a request to the WhatsApp Conversions API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RequestWhatsappConversionApiRequest
@@ -24723,8 +25500,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求Whatsapp Conversion api</para>
+        /// <para>Sends a request to the WhatsApp Conversions API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RequestWhatsappConversionApiRequest
@@ -24791,8 +25573,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求Whatsapp Conversion api</para>
+        /// <para>Sends a request to the WhatsApp Conversions API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RequestWhatsappConversionApiRequest
@@ -24809,8 +25596,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求Whatsapp Conversion api</para>
+        /// <para>Sends a request to the WhatsApp Conversions API.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The China-specific QPS limit for a single user of this API operation is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your business. Call this operation as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RequestWhatsappConversionApiRequest
@@ -24827,13 +25619,27 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a message to multiple phone numbers by using ChatAPP at a time.</para>
+        /// <para>Sends bulk messages to multiple recipients.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// You can send messages to up to 1,000 phone numbers in a single request.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to send messages in bulk. You can also send messages in the console. To do so, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>, click a channel, and then choose <b>Message Sending</b>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="t2012827.xdita#">register and bind a WABA</a> and <a href="t2012827.xdita#">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="t2746072.xdita#">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 numbers.</description></item>
+        /// </list>
+        /// <h3>Status changes</h3>
+        /// <para>Message sending status can be monitored via Simple Message Service or HTTP callback. For details, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -24957,13 +25763,27 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a message to multiple phone numbers by using ChatAPP at a time.</para>
+        /// <para>Sends bulk messages to multiple recipients.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// You can send messages to up to 1,000 phone numbers in a single request.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to send messages in bulk. You can also send messages in the console. To do so, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>, click a channel, and then choose <b>Message Sending</b>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="t2012827.xdita#">register and bind a WABA</a> and <a href="t2012827.xdita#">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="t2746072.xdita#">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 numbers.</description></item>
+        /// </list>
+        /// <h3>Status changes</h3>
+        /// <para>Message sending status can be monitored via Simple Message Service or HTTP callback. For details, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -25087,13 +25907,27 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a message to multiple phone numbers by using ChatAPP at a time.</para>
+        /// <para>Sends bulk messages to multiple recipients.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// You can send messages to up to 1,000 phone numbers in a single request.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to send messages in bulk. You can also send messages in the console. To do so, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>, click a channel, and then choose <b>Message Sending</b>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="t2012827.xdita#">register and bind a WABA</a> and <a href="t2012827.xdita#">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="t2746072.xdita#">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 numbers.</description></item>
+        /// </list>
+        /// <h3>Status changes</h3>
+        /// <para>Message sending status can be monitored via Simple Message Service or HTTP callback. For details, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25111,13 +25945,27 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a message to multiple phone numbers by using ChatAPP at a time.</para>
+        /// <para>Sends bulk messages to multiple recipients.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// You can send messages to up to 1,000 phone numbers in a single request.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to send messages in bulk. You can also send messages in the console. To do so, go to the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a>, click a channel, and then choose <b>Message Sending</b>.</description></item>
+        /// <item><description>Before you call this operation, make sure that you have created a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="t2012827.xdita#">register and bind a WABA</a> and <a href="t2012827.xdita#">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="t2746072.xdita#">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="t2746079.xdita#">connect to an Instagram professional account</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limits</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</description></item>
+        /// <item><description>A single request supports a maximum of 1,000 numbers.</description></item>
+        /// </list>
+        /// <h3>Status changes</h3>
+        /// <para>Message sending status can be monitored via Simple Message Service or HTTP callback. For details, see <a href="https://help.aliyun.com/document_detail/421545.html">Message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25135,12 +25983,24 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends messages by using ChatAPP.</para>
+        /// <para>Sends a ChatApp message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Call this operation to send messages. You can also send messages manually in the console at &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b>.</description></item>
+        /// <item><description>Before calling this operation, you must create a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="https://help.aliyun.com/document_detail/172335.html">register and bind a WABA</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="https://help.aliyun.com/document_detail/2837713.html">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="https://help.aliyun.com/document_detail/2837720.html">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="https://help.aliyun.com/document_detail/2807995.html">apply for a service ID</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 250 per user. API calls that exceed this limit are throttled. To prevent service disruptions, ensure your calls stay within this limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can receive notifications about message status changes by using MNS or HTTP callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -25332,12 +26192,24 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends messages by using ChatAPP.</para>
+        /// <para>Sends a ChatApp message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Call this operation to send messages. You can also send messages manually in the console at &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b>.</description></item>
+        /// <item><description>Before calling this operation, you must create a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="https://help.aliyun.com/document_detail/172335.html">register and bind a WABA</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="https://help.aliyun.com/document_detail/2837713.html">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="https://help.aliyun.com/document_detail/2837720.html">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="https://help.aliyun.com/document_detail/2807995.html">apply for a service ID</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 250 per user. API calls that exceed this limit are throttled. To prevent service disruptions, ensure your calls stay within this limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can receive notifications about message status changes by using MNS or HTTP callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -25529,12 +26401,24 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends messages by using ChatAPP.</para>
+        /// <para>Sends a ChatApp message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Call this operation to send messages. You can also send messages manually in the console at &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b>.</description></item>
+        /// <item><description>Before calling this operation, you must create a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="https://help.aliyun.com/document_detail/172335.html">register and bind a WABA</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="https://help.aliyun.com/document_detail/2837713.html">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="https://help.aliyun.com/document_detail/2837720.html">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="https://help.aliyun.com/document_detail/2807995.html">apply for a service ID</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 250 per user. API calls that exceed this limit are throttled. To prevent service disruptions, ensure your calls stay within this limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can receive notifications about message status changes by using MNS or HTTP callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25552,12 +26436,24 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends messages by using ChatAPP.</para>
+        /// <para>Sends a ChatApp message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 200 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>Call this operation to send messages. You can also send messages manually in the console at &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList"><b>Channel Management</b></a> &gt; <b>Manage</b> &gt; <b>Message Sending</b>.</description></item>
+        /// <item><description>Before calling this operation, you must create a channel and have an approved template.</description></item>
+        /// <item><description>For a WhatsApp channel, you must <a href="https://help.aliyun.com/document_detail/172335.html">register and bind a WABA</a> and <a href="https://help.aliyun.com/document_detail/2656131.html">add a phone number</a>.</description></item>
+        /// <item><description>For a Messenger channel, you must <a href="https://help.aliyun.com/document_detail/2837713.html">connect to a Facebook Page</a>.</description></item>
+        /// <item><description>For an Instagram channel, you must <a href="https://help.aliyun.com/document_detail/2837720.html">connect to an Instagram professional account</a>.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>For a Viber channel, you must <a href="https://help.aliyun.com/document_detail/2807995.html">apply for a service ID</a>.</description></item>
+        /// </list>
+        /// <h3>QPS limit</h3>
+        /// <para>The QPS limit for this operation is 250 per user. API calls that exceed this limit are throttled. To prevent service disruptions, ensure your calls stay within this limit.</para>
+        /// <h3>Status changes</h3>
+        /// <para>You can receive notifications about message status changes by using MNS or HTTP callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/421545.html">message receipts</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25575,8 +26471,152 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步business app历史记录等</para>
+        /// <para>Submits the result of a verification code check.</para>
         /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVerifyCodeResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVerifyCodeResultResponse
+        /// </returns>
+        public SubmitVerifyCodeResultResponse SubmitVerifyCodeResultWithOptions(SubmitVerifyCodeResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                query["MessageId"] = request.MessageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Result))
+            {
+                query["Result"] = request.Result;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["To"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVerifyCodeResult",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVerifyCodeResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits the result of a verification code check.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVerifyCodeResultRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVerifyCodeResultResponse
+        /// </returns>
+        public async Task<SubmitVerifyCodeResultResponse> SubmitVerifyCodeResultWithOptionsAsync(SubmitVerifyCodeResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageId))
+            {
+                query["MessageId"] = request.MessageId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Result))
+            {
+                query["Result"] = request.Result;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.To))
+            {
+                query["To"] = request.To;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitVerifyCodeResult",
+                Version = "2020-06-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitVerifyCodeResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits the result of a verification code check.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVerifyCodeResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVerifyCodeResultResponse
+        /// </returns>
+        public SubmitVerifyCodeResultResponse SubmitVerifyCodeResult(SubmitVerifyCodeResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitVerifyCodeResultWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits the result of a verification code check.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitVerifyCodeResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitVerifyCodeResultResponse
+        /// </returns>
+        public async Task<SubmitVerifyCodeResultResponse> SubmitVerifyCodeResultAsync(SubmitVerifyCodeResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitVerifyCodeResultWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Synchronizes the business app history.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must configure a webhook for messages and receipts by calling <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, history synchronization will fail because the system cannot find the configured webhook URL.</description></item>
+        /// <item><description>This is a one-time operation. Subsequent calls have no effect.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncBusinessAppHistoryRequest
@@ -25633,8 +26673,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步business app历史记录等</para>
+        /// <para>Synchronizes the business app history.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must configure a webhook for messages and receipts by calling <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, history synchronization will fail because the system cannot find the configured webhook URL.</description></item>
+        /// <item><description>This is a one-time operation. Subsequent calls have no effect.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncBusinessAppHistoryRequest
@@ -25691,8 +26739,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步business app历史记录等</para>
+        /// <para>Synchronizes the business app history.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must configure a webhook for messages and receipts by calling <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, history synchronization will fail because the system cannot find the configured webhook URL.</description></item>
+        /// <item><description>This is a one-time operation. Subsequent calls have no effect.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncBusinessAppHistoryRequest
@@ -25709,8 +26765,16 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步business app历史记录等</para>
+        /// <para>Synchronizes the business app history.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, you must configure a webhook for messages and receipts by calling <a href="https://help.aliyun.com/document_detail/600763.html">UpdatePhoneWebhook</a> and <a href="https://help.aliyun.com/document_detail/600765.html">UpdateAccountWebhook</a>. Otherwise, history synchronization will fail because the system cannot find the configured webhook URL.</description></item>
+        /// <item><description>This is a one-time operation. Subsequent calls have no effect.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SyncBusinessAppHistoryRequest
@@ -25871,7 +26935,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步查询预算</para>
+        /// <para>Synchronously queries the budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25929,7 +26993,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步查询预算</para>
+        /// <para>Synchronously queries the budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25987,7 +27051,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步查询预算</para>
+        /// <para>Synchronously queries the budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26005,7 +27069,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步查询预算</para>
+        /// <para>Synchronously queries the budget.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26023,7 +27087,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Messenger订阅token</para>
+        /// <para>Retrieves the Messenger subscription token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26089,7 +27153,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Messenger订阅token</para>
+        /// <para>Retrieves the Messenger subscription token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26155,7 +27219,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Messenger订阅token</para>
+        /// <para>Retrieves the Messenger subscription token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26173,7 +27237,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Messenger订阅token</para>
+        /// <para>Retrieves the Messenger subscription token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26191,12 +27255,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger an Online ChatFlow</para>
+        /// <para>Triggers an online chat flow that has a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After triggering an online flow, if your flow contains components that incur costs for cloud products, such as message sending or function calls, please ensure you fully understand the billing methods and prices of the related products before using this interface.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
+        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
+        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
+        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26276,12 +27345,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger an Online ChatFlow</para>
+        /// <para>Triggers an online chat flow that has a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After triggering an online flow, if your flow contains components that incur costs for cloud products, such as message sending or function calls, please ensure you fully understand the billing methods and prices of the related products before using this interface.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
+        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
+        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
+        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -26361,12 +27435,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger an Online ChatFlow</para>
+        /// <para>Triggers an online chat flow that has a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After triggering an online flow, if your flow contains components that incur costs for cloud products, such as message sending or function calls, please ensure you fully understand the billing methods and prices of the related products before using this interface.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
+        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
+        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
+        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -26384,12 +27463,17 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Trigger an Online ChatFlow</para>
+        /// <para>Triggers an online chat flow that has a manual trigger.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After triggering an online flow, if your flow contains components that incur costs for cloud products, such as message sending or function calls, please ensure you fully understand the billing methods and prices of the related products before using this interface.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to trigger a published version of a flow that has a manual trigger. You can also trigger the flow from the <a href="https://chatapp.console.aliyun.com/MarketingActivityManagement">Marketing Campaign Management</a> page if the flow is associated with a marketing campaign.</description></item>
+        /// <item><description>Before you call this operation, make sure that the flow has a manual trigger and is published.</description></item>
+        /// <item><description>If a flow with a manual trigger does not have a published version, you must publish it. In <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Chat Flow</a>, you can click the flow name to open the canvas and publish the version. Alternatively, you can call the <a href="https://help.aliyun.com/document_detail/2937203.html">OnlineFlowVersion</a> API to publish the version.</description></item>
+        /// <item><description>If your flow contains components that incur costs, such as message sending or function invocations, make sure that you understand the billing methods and pricing for these products before you trigger the flow.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -26556,7 +27640,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26627,7 +27711,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26698,7 +27782,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26721,7 +27805,7 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 10 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26739,7 +27823,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改viber申请单</para>
+        /// <para>Modifies a Viber application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26811,7 +27895,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改viber申请单</para>
+        /// <para>Modifies a Viber application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26883,7 +27967,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改viber申请单</para>
+        /// <para>Modifies a Viber application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26901,7 +27985,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改viber申请单</para>
+        /// <para>Modifies a Viber application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26919,7 +28003,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Process</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26995,7 +28079,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Process</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -27071,7 +28155,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Process</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27089,7 +28173,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Process</para>
+        /// <para>获取流程</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27107,7 +28191,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify chatFlow log settings</para>
+        /// <para>修改chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27169,7 +28253,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify chatFlow log settings</para>
+        /// <para>修改chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27231,7 +28315,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify chatFlow log settings</para>
+        /// <para>修改chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27249,7 +28333,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify chatFlow log settings</para>
+        /// <para>修改chatFlow日志设置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27267,8 +28351,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateChatGroup</para>
+        /// <para>Updates the information for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatGroupRequest
@@ -27345,8 +28441,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateChatGroup</para>
+        /// <para>Updates the information for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatGroupRequest
@@ -27423,8 +28531,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateChatGroup</para>
+        /// <para>Updates the information for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatGroupRequest
@@ -27441,8 +28561,20 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateChatGroup</para>
+        /// <para>Updates the information for an Instant Messaging (IM) group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation is in beta testing for Meta. Contact your account manager to be added to the allowlist before using this endpoint.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before you call this operation, ensure that you have created an IM group.</description></item>
+        /// <item><description>If you do not have an IM group, call the <a href="https://help.aliyun.com/document_detail/2932518.html">AddChatGroup</a> operation to create one.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatGroupRequest
@@ -27459,12 +28591,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the business settings of a phone number.</para>
+        /// <para>Updates the commerce settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27530,12 +28662,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the business settings of a phone number.</para>
+        /// <para>Updates the commerce settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27601,12 +28733,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the business settings of a phone number.</para>
+        /// <para>Updates the commerce settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27624,12 +28756,12 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the business settings of a phone number.</para>
+        /// <para>Updates the commerce settings for a phone number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is limited to 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27865,8 +28997,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -27952,8 +29084,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -28039,8 +29171,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28064,8 +29196,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3><a href="#qps-"></a>QPS limit</h3>
-        /// <para>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-        /// This operation will directly obtain data from Facebook, which sets an upper limit on the total number of calls for operations. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled, which may affect your business. Stay within the specified limit.
+        /// This operation retrieves data directly from Meta. Meta imposes its own rate limits on the total number of calls. Stay within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -28083,8 +29215,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Flow by using JSON content.</para>
+        /// <para>Updates the content of a WhatsApp flow by using a JSON definition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateFlowJSONAssetRequest
@@ -28145,8 +29282,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Flow by using JSON content.</para>
+        /// <para>Updates the content of a WhatsApp flow by using a JSON definition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateFlowJSONAssetRequest
@@ -28207,8 +29349,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Flow by using JSON content.</para>
+        /// <para>Updates the content of a WhatsApp flow by using a JSON definition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateFlowJSONAssetRequest
@@ -28225,8 +29372,13 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a Flow by using JSON content.</para>
+        /// <para>Updates the content of a WhatsApp flow by using a JSON definition.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation allows a maximum of 5 requests per second per account. Excess requests are throttled and may result in service interruptions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateFlowJSONAssetRequest
@@ -28243,7 +29395,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// <para>更新流程版本，用于画布更新流程dsl</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28323,7 +29475,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// <para>更新流程版本，用于画布更新流程dsl</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -28403,7 +29555,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// <para>更新流程版本，用于画布更新流程dsl</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28421,7 +29573,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update flow version, used for updating the flow DSL on the canvas</para>
+        /// <para>更新流程版本，用于画布更新流程dsl</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28591,7 +29743,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>Updates the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28665,7 +29817,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>Updates the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28739,7 +29891,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>Updates the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28757,7 +29909,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例</para>
+        /// <para>Updates the specified instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29027,8 +30179,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the encryption public key of a phone number.</para>
+        /// <para>Updates the encryption key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, you must add and verify a phone number for your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If you do not have a phone number for your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and verifythe phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneEncryptionPublicKeyRequest
@@ -29089,8 +30251,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the encryption public key of a phone number.</para>
+        /// <para>Updates the encryption key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, you must add and verify a phone number for your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If you do not have a phone number for your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and verifythe phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneEncryptionPublicKeyRequest
@@ -29151,8 +30323,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the encryption public key of a phone number.</para>
+        /// <para>Updates the encryption key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, you must add and verify a phone number for your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If you do not have a phone number for your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and verifythe phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneEncryptionPublicKeyRequest
@@ -29169,8 +30351,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the encryption public key of a phone number.</para>
+        /// <para>Updates the encryption key for a phone number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you call this API, you must add and verify a phone number for your WhatsApp Business Account (WABA).</description></item>
+        /// <item><description>If you do not have a phone number for your WABA, call the <a href="https://help.aliyun.com/document_detail/600746.html">GetChatappVerifyCode</a> and <a href="https://help.aliyun.com/document_detail/600770.html">ChatappVerifyAndRegister</a> APIs to obtain a verification code and verifythe phone number.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneEncryptionPublicKeyRequest
@@ -29187,8 +30379,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quick-response (QR) code that contains a message.</para>
+        /// <para>Updates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you update a message QR code, users can no longer scan the original QR code to start a chat with the associated business phone number. Use this operation with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneMessageQrdlRequest
@@ -29257,8 +30459,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quick-response (QR) code that contains a message.</para>
+        /// <para>Updates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you update a message QR code, users can no longer scan the original QR code to start a chat with the associated business phone number. Use this operation with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneMessageQrdlRequest
@@ -29327,8 +30539,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quick-response (QR) code that contains a message.</para>
+        /// <para>Updates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you update a message QR code, users can no longer scan the original QR code to start a chat with the associated business phone number. Use this operation with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneMessageQrdlRequest
@@ -29345,8 +30567,18 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a quick-response (QR) code that contains a message.</para>
+        /// <para>Updates a message QR code.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After you update a message QR code, users can no longer scan the original QR code to start a chat with the associated business phone number. Use this operation with caution.</description></item>
+        /// <item><description>If you have not created a message QR code, call the <a href="https://help.aliyun.com/document_detail/2638749.html">CreatePhoneMessageQrdl</a> API to create one.</description></item>
+        /// </list>
+        /// <h4>QPS limit</h4>
+        /// <para>This API is limited to 5 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled, which can affect your business. Call this API within the specified limit.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdatePhoneMessageQrdlRequest
@@ -29364,8 +30596,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>The HTTP status code returned.
-        /// \*   A value of OK indicates that the call is successful.
-        /// \*   Other values indicate that the call fails. For more information, see [Error codes]\(<del>196974</del>).</para>
+        /// \\* A value of OK indicates that the call is successful.
+        /// \\* Other values indicate that the call fails. For more information, see \[Error codes]\\(<del>196974</del>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29445,8 +30677,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>The HTTP status code returned.
-        /// \*   A value of OK indicates that the call is successful.
-        /// \*   Other values indicate that the call fails. For more information, see [Error codes]\(<del>196974</del>).</para>
+        /// \\* A value of OK indicates that the call is successful.
+        /// \\* Other values indicate that the call fails. For more information, see \[Error codes]\\(<del>196974</del>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29526,8 +30758,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>The HTTP status code returned.
-        /// \*   A value of OK indicates that the call is successful.
-        /// \*   Other values indicate that the call fails. For more information, see [Error codes]\(<del>196974</del>).</para>
+        /// \\* A value of OK indicates that the call is successful.
+        /// \\* Other values indicate that the call fails. For more information, see \[Error codes]\\(<del>196974</del>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29551,8 +30783,8 @@ namespace AlibabaCloud.SDK.Cams20200606
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>The HTTP status code returned.
-        /// \*   A value of OK indicates that the call is successful.
-        /// \*   Other values indicate that the call fails. For more information, see [Error codes]\(<del>196974</del>).</para>
+        /// \\* A value of OK indicates that the call is successful.
+        /// \\* Other values indicate that the call fails. For more information, see \[Error codes]\\(<del>196974</del>).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29735,7 +30967,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Whatsapp 语音电话</para>
+        /// <para>Places, answers, or ends WhatsApp voice calls.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29815,7 +31047,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Whatsapp 语音电话</para>
+        /// <para>Places, answers, or ends WhatsApp voice calls.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -29895,7 +31127,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Whatsapp 语音电话</para>
+        /// <para>Places, answers, or ends WhatsApp voice calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29913,7 +31145,7 @@ namespace AlibabaCloud.SDK.Cams20200606
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Whatsapp 语音电话</para>
+        /// <para>Places, answers, or ends WhatsApp voice calls.</para>
         /// </summary>
         /// 
         /// <param name="request">

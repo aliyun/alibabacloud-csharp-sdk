@@ -11,16 +11,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class ListAllGroupsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public Dictionary<string, object> BizExtend { get; set; }

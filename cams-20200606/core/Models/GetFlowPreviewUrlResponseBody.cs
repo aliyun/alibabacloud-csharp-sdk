@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>If OK is returned, the request was successful.</para>
+        /// <para>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFlowPreviewUrlResponseBodyData Data { get; set; }
         public class GetFlowPreviewUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Flow ID.</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>6dd31e1b7cc940fc99e293d9952b5b79</para>
+            /// <para>92675332812643****</para>
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The temporary preview URL.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://url">https://url</a></para>
+            /// <para><a href="https://business.facebook.com/">https://business.facebook.com/</a>****</para>
             /// </summary>
             [NameInMap("PreviewUrl")]
             [Validation(Required=false)]
             public string PreviewUrl { get; set; }
 
             /// <summary>
-            /// <para>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The expiration time of the preview URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700617436633</para>

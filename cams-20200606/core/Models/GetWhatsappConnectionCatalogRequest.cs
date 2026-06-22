@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The space ID of the user within the ISV account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>C2020939922929292</para>
+        /// <para>C20209399229****</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>292939399393</para>
+        /// <para>29293939****</para>
         /// </summary>
         [NameInMap("WabaId")]
         [Validation(Required=false)]

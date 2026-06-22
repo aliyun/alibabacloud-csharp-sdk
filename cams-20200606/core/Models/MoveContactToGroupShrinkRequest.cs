@@ -11,16 +11,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class MoveContactToGroupShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
@@ -29,7 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;id&quot;:1}]</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Contacts")]
         [Validation(Required=false)]
@@ -37,7 +33,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>[{&quot;id&quot;:1}]</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("LinkExistGroups")]
         [Validation(Required=false)]
@@ -45,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>[{&quot;groupName&quot;:&quot;aaa&quot;}]</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("LinkNewGroups")]
         [Validation(Required=false)]

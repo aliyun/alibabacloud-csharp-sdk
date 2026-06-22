@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SendChatappMessageResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>A value of OK indicates a successful request.</para>
+        /// </description></item>
+        /// <item><description><para>For other status codes, see <a href="https://help.aliyun.com/document_detail/196974.html">error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User not authorized to operate on the specified resource.</para>
@@ -38,7 +46,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the message that was sent.</para>
+        /// <para>The ID of the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61851ccb2f1365b16aee****</para>
@@ -51,7 +59,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
+        /// <para>90E63D28-E31D-1EB2-8939-A94866******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

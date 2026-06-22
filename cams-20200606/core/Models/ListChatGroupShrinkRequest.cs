@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatGroupShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The business number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
+        /// <para>The channel type. Valid value: <b>WHATSAPP</b>.</para>
+        /// <remarks>
+        /// <para>Only the WhatsApp channel is supported.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>WHATSAPP</para>
         /// </summary>
@@ -28,6 +34,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// <para>The instance ID (or SpaceId) of an ISV sub-customer, which also serves as the channel ID. You can find it on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,14 +45,32 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The Telegram group link.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>example</para>
         /// </summary>
         [NameInMap("GroupLink")]
         [Validation(Required=false)]
         public string GroupLink { get; set; }
 
         /// <summary>
+        /// <para>The group status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ACTIVE: In use.</para>
+        /// </description></item>
+        /// <item><description><para>INACTIVE: Not activated.</para>
+        /// </description></item>
+        /// <item><description><para>SUSPENDED: Suspended.</para>
+        /// </description></item>
+        /// <item><description><para>CREATING: Being created.</para>
+        /// </description></item>
+        /// <item><description><para>DELETING: Being deleted.</para>
+        /// </description></item>
+        /// <item><description><para>UPDATING: Being updated.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
         /// </summary>
@@ -54,8 +79,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string GroupStatus { get; set; }
 
         /// <summary>
+        /// <para>The Telegram group type.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>example</para>
         /// </summary>
         [NameInMap("GroupType")]
         [Validation(Required=false)]
@@ -66,7 +93,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The paging information.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Example value</para>
         /// </summary>
         [NameInMap("Page")]
         [Validation(Required=false)]
@@ -81,6 +112,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The group title.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

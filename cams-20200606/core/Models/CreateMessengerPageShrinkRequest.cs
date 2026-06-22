@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EAA****</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("AuthenticationCode")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>293***</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cams-s***</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>19283***</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("PageId")]
         [Validation(Required=false)]

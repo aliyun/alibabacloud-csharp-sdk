@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteGroupByIdResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>None</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1223-1111</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

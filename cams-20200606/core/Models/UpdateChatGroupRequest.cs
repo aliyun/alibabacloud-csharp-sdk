@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateChatGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The business number. To view the business numbers, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
+        /// <para>The channel type. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>WHATSAPP</b>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>Only the WhatsApp channel is supported.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>WHATSAPP</para>
         /// </summary>
@@ -28,6 +37,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
+        /// <para>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,14 +49,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>The group description.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The group ID. To view the group IDs, call the <a href="https://help.aliyun.com/document_detail/2932629.html">ListChatGroup</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,8 +74,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para><a href="https://aliyun.com/img.jpg">https://aliyun.com/img.jpg</a></para>
+        /// <para>The group profile picture.</para>
+        /// <remarks>
+        /// <para>Image requirements</para>
+        /// <list type="bullet">
+        /// <item><description><para>Supported MIME type: image/jpeg.</para>
+        /// </description></item>
+        /// <item><description><para>Maximum file size: 5 MB.</para>
+        /// </description></item>
+        /// <item><description><para>The image must be square. Minimum dimensions: 192x192 pixels.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("ProfilePictureFile")]
         [Validation(Required=false)]
@@ -76,8 +100,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The group title.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>This is a test title.</para>
         /// </summary>
         [NameInMap("Subject")]
         [Validation(Required=false)]

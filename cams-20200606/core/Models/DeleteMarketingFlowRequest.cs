@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class DeleteMarketingFlowRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1111</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("ActivityCode")]
         [Validation(Required=false)]

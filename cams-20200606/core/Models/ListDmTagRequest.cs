@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class ListDmTagRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>a</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>82</para>
         /// </summary>
         [NameInMap("PageIndex")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>89</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListAllGroupsResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class ListAllGroupsResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1789000</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -39,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>aaa</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>5435</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -57,7 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -65,7 +61,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>608F9CCA-B5EB-3D72-XXXXB25D6D75BDEC</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

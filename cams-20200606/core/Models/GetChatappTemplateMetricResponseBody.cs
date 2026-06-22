@@ -20,7 +20,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The value OK indicates that the request was successful.</para>
+        /// <para>The status code of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>OK: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,24 +36,24 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The list of returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetChatappTemplateMetricResponseBodyData> Data { get; set; }
         public class GetChatappTemplateMetricResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The statistics on button clicks.</para>
+            /// <para>The statistics about button clicks.</para>
             /// </summary>
             [NameInMap("Cliented")]
             [Validation(Required=false)]
             public List<GetChatappTemplateMetricResponseBodyDataCliented> Cliented { get; set; }
             public class GetChatappTemplateMetricResponseBodyDataCliented : TeaModel {
                 /// <summary>
-                /// <para>The text on the button.</para>
+                /// <para>The button text.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Open url</para>
+                /// <para>reply</para>
                 /// </summary>
                 [NameInMap("ButtonContent")]
                 [Validation(Required=false)]
@@ -64,12 +70,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 public int? Count { get; set; }
 
                 /// <summary>
-                /// <para>The button type.</para>
-                /// <para>Valid values:</para>
+                /// <para>The button type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>phone_number_button</description></item>
-                /// <item><description>url_button</description></item>
-                /// <item><description>quick_relpy_button</description></item>
+                /// <item><description><para>phone_number_button: The call button.</para>
+                /// </description></item>
+                /// <item><description><para>url_button: The URL button.</para>
+                /// </description></item>
+                /// <item><description><para>quick_reply_button: The auto-reply button.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -92,7 +100,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? DeliveredCount { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range you queried.</para>
+            /// <para>The end time for metric collection. This is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1668138331485</para>
@@ -102,7 +110,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? End { get; set; }
 
             /// <summary>
-            /// <para>The template language.</para>
+            /// <para>The language of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>en</para>
@@ -132,7 +140,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public int? SentCount { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range you queried.</para>
+            /// <para>The start time for metric collection. This is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1673919240001</para>
@@ -145,7 +153,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The template code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>83837774838*****</para>
+            /// <para>1100***************</para>
             /// </summary>
             [NameInMap("TemplateCode")]
             [Validation(Required=false)]
@@ -167,7 +175,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
+        /// <para>608F9CCA-B5EB-3D72-8047-B25D6D75BDEC</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

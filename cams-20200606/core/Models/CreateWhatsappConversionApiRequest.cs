@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class CreateWhatsappConversionApiRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>code</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>131</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

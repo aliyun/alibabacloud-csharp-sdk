@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class MoveContactToGroupResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>None</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]

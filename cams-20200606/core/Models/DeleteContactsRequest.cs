@@ -11,23 +11,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class DeleteContactsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1507486****</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("ContactDetails")]
         [Validation(Required=false)]
@@ -35,7 +31,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>hahaha</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]
@@ -43,7 +39,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>China</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Country")]
         [Validation(Required=false)]
@@ -51,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>http://****</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("FilePath")]
         [Validation(Required=false)]

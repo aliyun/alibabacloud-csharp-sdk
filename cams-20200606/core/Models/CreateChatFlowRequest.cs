@@ -10,30 +10,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatFlowRequest : TeaModel {
         /// <summary>
-        /// <para>Business tenant code, default is “ALICOM_OPAAS”.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <para>Business extension information, default is “{}”.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
-        /// <para>Flow trigger type</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>TriggeredByWhatsApp</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("FlowTriggerType")]
         [Validation(Required=false)]
@@ -44,10 +34,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Flow remarks</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ChatFlow for WhatsApp Customer Service Auto-Reply.</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -62,10 +50,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Flow title</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Auto Reply</para>
+        /// <para>示例值</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

@@ -9,17 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListMarketingFlowResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>2993***</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -31,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public class ListMarketingFlowResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>3243243***</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("ActivityCode")]
             [Validation(Required=false)]
@@ -39,7 +35,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>aaa</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("ActivityDesc")]
             [Validation(Required=false)]
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>aaa</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("ActivityName")]
             [Validation(Required=false)]
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>active</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("ActivityStatus")]
             [Validation(Required=false)]
@@ -63,23 +59,19 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>{}</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("BizCode")]
             [Validation(Required=false)]
             public string BizCode { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>{}</para>
-            /// </summary>
             [NameInMap("BizExtend")]
             [Validation(Required=false)]
             public Dictionary<string, object> BizExtend { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>0 0 4 1/1 * ?</para>
+            /// <para>示例值</para>
             /// </summary>
             [NameInMap("CronExpression")]
             [Validation(Required=false)]
@@ -87,7 +79,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>2025-01-01 XX1:11:11</para>
+            /// <para>示例值</para>
             /// </summary>
             [NameInMap("EndDate")]
             [Validation(Required=false)]
@@ -103,7 +95,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>2025-XX-01 11:11:11</para>
+            /// <para>示例值</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -111,7 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>示例值</para>
             /// </summary>
             [NameInMap("GmtModifier")]
             [Validation(Required=false)]
@@ -133,17 +125,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             [Validation(Required=false)]
             public string ParamFlag { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>{\&quot;CustomerLimit\&quot;:false}</para>
-            /// </summary>
             [NameInMap("Params")]
             [Validation(Required=false)]
             public Dictionary<string, object> Params { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>dsafdsf***</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("RelatedFlowCode")]
             [Validation(Required=false)]
@@ -151,7 +139,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>aaa</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("RelatedFlowName")]
             [Validation(Required=false)]
@@ -159,7 +147,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>54354**</para>
+            /// <para>示例值</para>
             /// </summary>
             [NameInMap("RelatedGroupId")]
             [Validation(Required=false)]
@@ -167,7 +155,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>AAA</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("RelatedGroupName")]
             [Validation(Required=false)]
@@ -183,7 +171,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>2025-01-XX 11:11:11</para>
+            /// <para>示例值示例值</para>
             /// </summary>
             [NameInMap("StartDate")]
             [Validation(Required=false)]
@@ -191,7 +179,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>1111</para>
+            /// <para>示例值示例值示例值</para>
             /// </summary>
             [NameInMap("TenantCode")]
             [Validation(Required=false)]
@@ -209,7 +197,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>CB6122C9-09B5-5926-**476A96CB0</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListWhatAppTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2983883892</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is reserved for internal use.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

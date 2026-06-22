@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The contact email address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:123@alibaba.com">123@alibaba.com</a></para>
         /// </summary>
@@ -18,6 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactMail { get; set; }
 
         /// <summary>
+        /// <para>The country code.</para>
+        /// <remarks>
+        /// <para>For a list of country codes, see <a href="https://help.aliyun.com/document_detail/608210.html">Country Codes</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,16 +33,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CountryId { get; set; }
 
         /// <summary>
-        /// <para>fb bmId</para>
+        /// <para>The Facebook Business Manager ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3939982828</para>
+        /// <para>393998****</para>
         /// </summary>
         [NameInMap("FacebookBmId")]
         [Validation(Required=false)]
         public string FacebookBmId { get; set; }
 
         /// <summary>
+        /// <para>The description of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ins</para>
         /// </summary>
@@ -44,6 +53,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceDescription { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +64,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +75,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable automatic audit confirmation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -72,6 +85,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsConfirmAudit { get; set; }
 
         /// <summary>
+        /// <para>The URL of the Independent Software Vendor (ISV) agreement file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://aa.com/a.pdf">https://aa.com/a.pdf</a></para>
         /// </summary>
@@ -80,8 +95,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvTerms { get; set; }
 
         /// <summary>
+        /// <para>The company address.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>长沙麓谷</para>
+        /// <para>example</para>
         /// </summary>
         [NameInMap("OfficeAddress")]
         [Validation(Required=false)]

@@ -10,61 +10,46 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatFlowMetricShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Business tenant code, default is “ALICOM_OPAAS”.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ALICOM_OPAAS</para>
+        /// <para>示例值示例值示例值</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
-        /// <summary>
-        /// <para>Business extension information, default is “{}”.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{}</para>
-        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
-        /// <para>Flow code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>f4912c16943b4dfba44bd6fedacf****</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("FlowCode")]
         [Validation(Required=false)]
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>Flow version.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("FlowVersion")]
         [Validation(Required=false)]
         public string FlowVersion { get; set; }
 
         /// <summary>
-        /// <para>Start timestamp in seconds.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1751299200</para>
+        /// <para>31</para>
         /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>Metric name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nodeUsageStatistics</para>
+        /// <para>示例值示例值</para>
         /// </summary>
         [NameInMap("MetricName")]
         [Validation(Required=false)]
@@ -87,10 +72,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>End timestamp in seconds.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1751385599</para>
+        /// <para>81</para>
         /// </summary>
         [NameInMap("To")]
         [Validation(Required=false)]

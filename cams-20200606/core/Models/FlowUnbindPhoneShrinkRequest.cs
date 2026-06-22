@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class FlowUnbindPhoneShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Message channel type</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>
@@ -20,7 +18,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>Flow code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,8 +28,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>Flow version</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值示例值</para>
         /// </summary>
@@ -44,9 +39,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
-        /// <summary>
-        /// <para>Phone numbers or PageIds under the channel instance, etc.</para>
-        /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]
         public string PhoneNumbersShrink { get; set; }

@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code of the request.</para>
         /// <list type="bullet">
-        /// <item><description>A value of OK indicates that the call is successful.</description></item>
-        /// <item><description>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</description></item>
+        /// <item><description><para>OK indicates that the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +36,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public QueryPhoneBusinessProfileResponseBodyData Data { get; set; }
         public class QueryPhoneBusinessProfileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Regarding.</para>
+            /// <para>The business profile.</para>
             /// 
             /// <b>Example:</b>
             /// <para>business profile</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="mailto:aa@aliyun.com">aa@aliyun.com</a></para>
+            /// <para><a href="mailto:example@aliyun.com">example@aliyun.com</a></para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             /// <para>The profile picture.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>https://....img</para>
+            /// <para><a href="https://example.img">https://example.img</a></para>
             /// </summary>
             [NameInMap("ProfilePictureUrl")]
             [Validation(Required=false)]
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Vertical { get; set; }
 
             /// <summary>
-            /// <para>The website.</para>
+            /// <para>The websites.</para>
             /// </summary>
             [NameInMap("Websites")]
             [Validation(Required=false)]
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A94866411B2O</para>
@@ -130,10 +132,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

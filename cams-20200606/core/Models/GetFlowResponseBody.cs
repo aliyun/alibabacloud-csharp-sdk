@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>If OK is returned, the request was successful.</para>
+        /// <para>The error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public GetFlowResponseBodyData Data { get; set; }
         public class GetFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The categories of the Flow.</para>
+            /// <para>The list of categories.</para>
             /// </summary>
             [NameInMap("Categories")]
             [Validation(Required=false)]
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>The version number of the API.</para>
+            /// <para>The API version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.0</para>
@@ -56,20 +56,20 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string EndpointUri { get; set; }
 
             /// <summary>
-            /// <para>The Flow ID.</para>
+            /// <para>The flow ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>flow_id_arms</para>
+            /// <para>92675332812643****</para>
             /// </summary>
             [NameInMap("FlowId")]
             [Validation(Required=false)]
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The Flow name.</para>
+            /// <para>The flow name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>dnjn</para>
+            /// <para>flow_001</para>
             /// </summary>
             [NameInMap("FlowName")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PreviewUrl { get; set; }
 
             /// <summary>
-            /// <para>The time when the preview URL expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The expiration time of the preview URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700617436633</para>
@@ -106,30 +106,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? PreviewUrlExpires { get; set; }
 
             /// <summary>
-            /// <para>The state of the Flow.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>PUBLISHED</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>DRAFT</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>DEPRECATED</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The status of the flow.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DRAFT</para>
@@ -154,7 +131,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
+        /// <para>DAC72B08-3327-33EF-BEDC-8EC3E83A6575</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
