@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class AllocateClusterPublicConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the endpoint that is used to connect to the database. Set the value to the cluster ID.</para>
+        /// <para>The prefix of the public endpoint. The value is the cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-bp108z124a8o7****</para>

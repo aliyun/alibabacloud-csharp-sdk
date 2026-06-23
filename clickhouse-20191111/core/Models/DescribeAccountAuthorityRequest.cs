@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeAccountAuthorityRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The database account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the latest region list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

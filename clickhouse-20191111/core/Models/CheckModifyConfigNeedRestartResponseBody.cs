@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckModifyConfigNeedRestartResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the cluster was restarted after you modified the configuration parameters. Valid values:</para>
+        /// <para>变更配置参数后是否重启。取值说明：</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The cluster was restarted.</description></item>
-        /// <item><description><b>false</b>: The cluster was not restarted.</description></item>
+        /// <item><description><para><b>true</b>：重启。</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>：不重启。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? NeedRestart { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求 ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>06798FEE-BEF2-5FAF-A30D-728973BBE97C</para>

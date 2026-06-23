@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyDBClusterDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster name. When you set the cluster name, take note of the following rules:</para>
+        /// <para>The cluster description. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The cluster name cannot start with http:// or https://.</description></item>
-        /// <item><description>The cluster name must be 2 to 256 characters in length.</description></item>
+        /// <item><description><para>It cannot start with http\:// or https\://.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 256 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CancelAppointmentElectZookeeperLeaderResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1F488A93-83FD-540F-9B67-0333AF64E6A0</para>
         /// </summary>

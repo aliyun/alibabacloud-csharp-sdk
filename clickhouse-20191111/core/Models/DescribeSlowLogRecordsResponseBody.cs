@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details about the slow query logs.</para>
+        /// <para>The details of the slow query logs.</para>
         /// </summary>
         [NameInMap("SlowLogRecords")]
         [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Rows { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RowsBeforeLimitAtLeast { get; set; }
 
             /// <summary>
-            /// <para>The statistics of the results.</para>
+            /// <para>The statistics of the query results.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics Statistics { get; set; }
             public class DescribeSlowLogRecordsResponseBodySlowLogRecordsStatistics : TeaModel {
                 /// <summary>
-                /// <para>The total size of data that were read. Unit: bytes.</para>
+                /// <para>The amount of data read, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public int? BytesRead { get; set; }
 
                 /// <summary>
-                /// <para>The time consumed by the slow query. Unit: milliseconds.</para>
+                /// <para>The time elapsed for the slow query, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>21.35</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public float? ElapsedTime { get; set; }
 
                 /// <summary>
-                /// <para>The total number of rows that were read.</para>
+                /// <para>The number of rows read.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2016722</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cc-bp108z124a8o7****</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the information about all clusters is queried.</para>
+        /// <para>If you do not specify this parameter, information about all clusters is queried by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,11 +35,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The state of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Preparing</b>: The cluster is being prepared.</description></item>
-        /// <item><description><b>Creating</b>: The cluster is being created.</description></item>
-        /// <item><description><b>Running</b>: The cluster is running.</description></item>
-        /// <item><description><b>Deleting</b>: The cluster is being deleted.</description></item>
-        /// <item><description><b>SCALING_OUT</b>: The storage capacity of the cluster is being expanded.</description></item>
+        /// <item><description><para><b>Preparing</b>: The cluster is being prepared.</para>
+        /// </description></item>
+        /// <item><description><para><b>Creating</b>: The cluster is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Running</b>: The cluster is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The cluster is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>SCALING_OUT</b>: The cluster is being scaled out.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,11 +73,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (Default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,7 +91,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +127,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public List<DescribeDBClustersRequestTag> Tag { get; set; }
         public class DescribeDBClustersRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag name.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>department</para>
@@ -129,7 +137,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>it</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The retention period for the backup data. Valid values: 7 to 730. Unit: days.</para>
+        /// <para>The number of days to retain data backups. Valid values: 7 to 730.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -39,15 +39,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The day of a week when the system regularly backs up data. If you specify multiple days of a week, separate them with commas (,). Valid values:</para>
+        /// <para>The backup cycle. If you specify multiple values, separate them with commas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><para><b>Monday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Tuesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Wednesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Thursday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Friday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Saturday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Sunday</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,8 +66,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup window. Specify the time in the ISO 8601 standard in the HH:mmZ-HH:mmZ format. The time must be in Coordinated Universal Time (UTC).</para>
-        /// <para>For example, if you set the backup window to 00:00Z-01:00Z, the data of the cluster can be backed up from 08:00 (UTC+8) to 09:00 (UTC+8).</para>
+        /// <para>The backup time in UTC. The format is HH:mmZ-HH:mmZ.</para>
+        /// <para>Example: 00:00Z-01:00Z. This means that data backup can be performed from 00:00 to 01:00 UTC. This corresponds to 08:00 to 09:00 UTC+8.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

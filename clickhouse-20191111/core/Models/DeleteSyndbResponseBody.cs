@@ -21,8 +21,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value <b>true</b> is returned for the <b>Status</b> parameter, the system does not return the ErrorMsg parameter.</description></item>
-        /// <item><description>If the value <b>false</b> is returned for the <b>Status</b> parameter, the system returns the deletion failure cause for the ErrorMsg parameter.</description></item>
+        /// <item><description><para>This parameter is not returned if <b>Status</b> is <b>true</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>Status</b> is <b>false</b>, this parameter indicates the reason for the failure.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,10 +45,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the database used for data synchronization was deleted. Valid values:</para>
+        /// <para>Indicates whether the deletion was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The deletion was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The deletion failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

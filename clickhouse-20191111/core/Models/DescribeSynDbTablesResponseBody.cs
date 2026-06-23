@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried tables.</para>
+        /// <para>The tables.</para>
         /// </summary>
         [NameInMap("Tables")]
         [Validation(Required=false)]

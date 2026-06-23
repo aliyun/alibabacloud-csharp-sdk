@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The O\&amp;M task IDs. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to immediately execute the O\&amp;M task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: Execute immediately.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Execute at the specified time.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -48,6 +57,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The time to initiate the switch operation. The time is in UTC and the format is YYYY-MM-DDTHH:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyAccountAuthorityRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The databases to which you want to grant permissions. Separate databases with commas (,).</para>
+        /// <para>The list of databases to authorize. Separate multiple database names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AllowDatabases { get; set; }
 
         /// <summary>
-        /// <para>The dictionaries to which you want to grant permissions. Separate dictionaries with commas (,).</para>
+        /// <para>The list of dictionaries to authorize. Separate multiple dictionary names with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Specifies whether to grant DDL permissions to the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: grants DDL permissions to the database account.</description></item>
-        /// <item><description><b>false</b>: does not grant DDL permissions to the database account.</description></item>
+        /// <item><description><para><b>true</b>: Allows DDL operations.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Denies DDL operations.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,10 +71,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? DdlAuthority { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to grant DML permissions to the database account. Valid values:</para>
+        /// <para>The DML permissions granted to the database account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b></description></item>
-        /// <item><description><b>readonly,modify</b></description></item>
+        /// <item><description><para><b>all</b>: Grants read, write, and modify permissions.</para>
+        /// </description></item>
+        /// <item><description><para><b>readonly,modify</b>: Grants read and modify permissions.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>All databases. Separate databases with commas (,).</para>
+        /// <para>All databases in the cluster. Separate multiple database names with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>db1,db2</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string TotalDatabases { get; set; }
 
         /// <summary>
-        /// <para>All dictionaries. Separate dictionaries with commas (,).</para>
+        /// <para>All dictionaries in the cluster. Separate multiple dictionary names with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>dt1,dt2</para>

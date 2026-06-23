@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The check result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>400</b>: The cluster failed the check.</description></item>
-        /// <item><description><b>200</b>: The cluster passed the check.</description></item>
+        /// <item><description><b>400</b>: The check failed.</description></item>
+        /// <item><description><b>200</b>: The check succeeded.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string CheckCode { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page. Valid values:</para>
+        /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>30</b> (default)</description></item>
         /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><b>100</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// <para>The amount of time that is required for the migration and scale-out. Unit: minutes.</para>
+        /// <para>The time required for the migration scale-out. Unit: minutes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string TimeDuration { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that are returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

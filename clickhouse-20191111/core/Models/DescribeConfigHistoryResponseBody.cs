@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeConfigHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The change records of the configuration parameters.</para>
+        /// <para>The change history of the configuration parameters.</para>
         /// </summary>
         [NameInMap("ConfigHistoryItems")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ChangeId { get; set; }
 
             /// <summary>
-            /// <para>The user ID (UID) of the Alibaba Cloud account.</para>
+            /// <para>The UID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>253460731706911258</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The reason for the setting modification of the configuration parameters.</para>
+            /// <para>The reason for the parameter change.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the setting modification of the configuration parameters took effect. Valid values:</para>
+            /// <para>Indicates whether the parameter change took effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The change took effect.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The change did not take effect.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public bool? Success { get; set; }
 
             /// <summary>
-            /// <para>The time when the values of the configuration parameters were changed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the change was made. Use the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-22T10:00:00Z</para>

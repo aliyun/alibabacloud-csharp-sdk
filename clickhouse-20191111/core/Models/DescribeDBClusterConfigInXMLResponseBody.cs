@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClusterConfigInXMLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The values of the configuration parameters.</para>
+        /// <para>The configuration parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <?xml version="1.0"?>

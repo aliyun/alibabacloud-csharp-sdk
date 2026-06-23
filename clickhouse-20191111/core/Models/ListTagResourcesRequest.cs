@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to retrieve the next page of results. You do not need to specify this parameter for the first query. If a query does not return all results, a NextToken value is returned. You can use this token in a subsequent query to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707ec21345</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource ID.</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
@@ -54,24 +57,27 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>CLUSTER</b>.</para>
+        /// <para>The resource type. Set the value to <b>DBCLUSTER</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CLUSTER</para>
+        /// <para>DBCLUSTER</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The list of tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that is added to the resource. You can specify N tag keys at a time. N is an integer. Valid values of N: <b>1 to 20</b>.</para>
+            /// <para>The tag key. You can specify from 1 to <b>20</b> tag keys.</para>
             /// <remarks>
-            /// <para> If you specify <b>ResourceId.N</b>, this parameter can be left empty.</para>
+            /// <para>If you specify the <b>ResourceId.N</b> parameter, you can leave this parameter empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -82,9 +88,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag that is added to the resource. You can specify N tag values at a time. N is an integer. Valid values of N: <b>1 to 20</b>.</para>
+            /// <para>The value of the tag. You can specify from 1 to <b>20</b> tag values.</para>
             /// <remarks>
-            /// <para> This parameter can be left empty.</para>
+            /// <para>You can leave this parameter empty.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

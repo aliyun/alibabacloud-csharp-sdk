@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class RestartInstanceNodeListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>36E3AB2E-E0DA-5C7B-8E29-89EE44926515</para>
         /// </summary>

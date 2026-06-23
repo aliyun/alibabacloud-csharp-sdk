@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CancelActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The O\&amp;M task IDs. Separate multiple IDs with a comma (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

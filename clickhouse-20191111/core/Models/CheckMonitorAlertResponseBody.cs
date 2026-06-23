@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckMonitorAlertResponseBody : TeaModel {
         /// <summary>
-        /// <para>The parameters that are used to configure the monitoring and alerting feature.</para>
+        /// <para>The parameters for alert monitoring.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{   &quot;monitor&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   },   &quot;alert&quot;:{     &quot;key1&quot;:&quot;value1&quot;,     &quot;key2&quot;:&quot;value2&quot;   } }</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the monitoring and alerting feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the alert monitoring feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b>: The monitoring and alerting feature is enabled.</description></item>
-        /// <item><description><b>disable</b>: The monitoring and alerting feature is disabled.</description></item>
+        /// <item><description><para><b>enable</b>: The feature is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: The feature is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

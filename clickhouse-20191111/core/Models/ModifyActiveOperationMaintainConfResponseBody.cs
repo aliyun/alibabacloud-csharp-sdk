@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyActiveOperationMaintainConfResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2FED790E-FB61-4721-8C1C-07C627FA5A19</para>
         /// </summary>

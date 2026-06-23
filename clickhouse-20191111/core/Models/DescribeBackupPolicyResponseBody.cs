@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</para>
+        /// <para>The backup retention period. Default value: 7. Valid values: 7 to 730. Unit: day.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The size of the backup data. Unit: MB.</para>
+        /// <para>The backup size. Unit: MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123124</para>
@@ -30,15 +30,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string BackupSize { get; set; }
 
         /// <summary>
-        /// <para>The day of a week when the system regularly backs up data. Valid values:</para>
+        /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><para><b>Monday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Tuesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Wednesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Thursday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Friday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Saturday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Sunday</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +56,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup window. The time is displayed in Coordinated Universal Time (UTC).</para>
+        /// <para>The backup time in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15:00Z-16:00Z</para>
@@ -71,8 +78,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Indicates whether the backup feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The backup feature is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The backup feature is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

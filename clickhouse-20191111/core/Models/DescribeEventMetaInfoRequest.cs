@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeEventMetaInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The codes of O\&amp;M event types. Separate multiple codes with commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Event.EventCode</para>
         /// </summary>

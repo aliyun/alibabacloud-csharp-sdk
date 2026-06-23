@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The name of the database account.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the information about all database accounts in the ApsaraDB for ClickHouse cluster is queried by default.</para>
+        /// <para>If this parameter is not specified, the operation queries information about all database accounts.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>testAccount</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,11 +52,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

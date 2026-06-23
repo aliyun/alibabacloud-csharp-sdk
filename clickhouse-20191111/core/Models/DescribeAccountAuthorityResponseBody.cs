@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeAccountAuthorityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The database account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,24 +20,26 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>Databases to which permissions have been granted.</para>
+        /// <para>The list of authorized databases.</para>
         /// </summary>
         [NameInMap("AllowDatabases")]
         [Validation(Required=false)]
         public List<string> AllowDatabases { get; set; }
 
         /// <summary>
-        /// <para>Dictionaries to which permissions have been granted.</para>
+        /// <para>The list of authorized dictionaries.</para>
         /// </summary>
         [NameInMap("AllowDictionaries")]
         [Validation(Required=false)]
         public List<string> AllowDictionaries { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the database account has DDL permissions. Valid values:</para>
+        /// <para>Indicates whether the account has DDL permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: has DDL permissions.</description></item>
-        /// <item><description><b>false</b>: does not have DDL permissions.</description></item>
+        /// <item><description><para><b>true</b>: DDL permissions are granted.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: DDL permissions are denied.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,10 +50,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? DdlAuthority { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the database account has DML permissions. Valid values:</para>
+        /// <para>The DML permission level for the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b></description></item>
-        /// <item><description><b>readOnly,modify</b></description></item>
+        /// <item><description><para><b>all</b>: read, write, and settings permissions.</para>
+        /// </description></item>
+        /// <item><description><para><b>readOnly,modify</b>: read and settings permissions.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,14 +76,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>All databases.</para>
+        /// <para>A list of all databases in the cluster.</para>
         /// </summary>
         [NameInMap("TotalDatabases")]
         [Validation(Required=false)]
         public List<string> TotalDatabases { get; set; }
 
         /// <summary>
-        /// <para>All dictionaries.</para>
+        /// <para>A list of all dictionaries in the cluster.</para>
         /// </summary>
         [NameInMap("TotalDictionaries")]
         [Validation(Required=false)]

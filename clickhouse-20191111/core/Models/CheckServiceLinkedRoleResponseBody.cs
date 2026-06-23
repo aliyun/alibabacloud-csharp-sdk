@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckServiceLinkedRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether a service-linked role is created for ApsaraDB for ClickHouse.</para>
+        /// <para>Indicates whether the service-linked role exists.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("HasServiceLinkedRole")]
         [Validation(Required=false)]
         public bool? HasServiceLinkedRole { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx</para>
+        /// <para>66428721-xxxx-xxxx-xxxx-3BD1B67837E0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

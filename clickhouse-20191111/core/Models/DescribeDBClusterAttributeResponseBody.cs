@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClusterAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the cluster.</para>
+        /// <para>Details about the cluster.</para>
         /// </summary>
         [NameInMap("DBCluster")]
         [Validation(Required=false)]
         public DescribeDBClusterAttributeResponseBodyDBCluster DBCluster { get; set; }
         public class DescribeDBClusterAttributeResponseBodyDBCluster : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>140692647406****</para>
@@ -26,24 +26,54 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string AliUid { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to stop write operations during a primary/secondary switchover. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>true</c>: Write operations are stopped for the instance during the switchover.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Write operations are not stopped for the instance during the switchover.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AppointmentElectZookeeperDisableWrite")]
             [Validation(Required=false)]
             public bool? AppointmentElectZookeeperDisableWrite { get; set; }
 
+            /// <summary>
+            /// <para>The scheduled time for a primary/secondary switchover. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and is in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-11-06T12:00:00Z</para>
+            /// </summary>
             [NameInMap("AppointmentElectZookeeperTime")]
             [Validation(Required=false)]
             public string AppointmentElectZookeeperTime { get; set; }
 
+            /// <summary>
+            /// <para>A list of nodes that are scheduled for a restart.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ck-k1a976p3n********-<b><b>-clickhouse-s-0-r-0,ck-k1a976p3n</b></b><b><b>-</b></b>-clickhouse-s-0-r-1</para>
+            /// </summary>
             [NameInMap("AppointmentRestartNodeList")]
             [Validation(Required=false)]
             public string AppointmentRestartNodeList { get; set; }
 
+            /// <summary>
+            /// <para>The scheduled time to restart specific nodes. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and is in UTC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2023-11-06T12:00:00Z</para>
+            /// </summary>
             [NameInMap("AppointmentRestartNodeTime")]
             [Validation(Required=false)]
             public string AppointmentRestartNodeTime { get; set; }
 
             /// <summary>
-            /// <para>The scheduled restart time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</para>
+            /// <para>The scheduled restart time. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-06T12:00:00Z</para>
@@ -53,7 +83,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string AppointmentRestartTime { get; set; }
 
             /// <summary>
-            /// <para>The major engine versions available for upgrades.</para>
+            /// <para>The available major versions to which the cluster can be upgraded, and their latest minor versions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;MajorVersion&quot;:&quot;MinorVersion&quot;}</para>
@@ -65,8 +95,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <summary>
             /// <para>The site ID. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>26842</b>: the China site (aliyun.com)</description></item>
-            /// <item><description><b>26888</b>: the international site (alibabacloud.com)</description></item>
+            /// <item><description><para><c>26842</c>: China site (aliyun.com).</para>
+            /// </description></item>
+            /// <item><description><para><c>26888</c>: international site (alibabacloud.com).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,8 +111,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <summary>
             /// <para>The edition of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Basic</b>: Single-replica Edition</description></item>
-            /// <item><description><b>HighAvailability</b>: Double-replica Edition</description></item>
+            /// <item><description><para><c>Basic</c>: single-replica edition.</para>
+            /// </description></item>
+            /// <item><description><para><c>HighAvailability</c>: dual-replica edition.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +125,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The commodity code of the cluster.</para>
+            /// <para>The commodity code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>clickhouse_go_public_cn</para>
@@ -101,7 +135,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The VPC endpoint of the cluster.</para>
+            /// <para>The VPC endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cc-bp1qx68m06981****.ads.rds.aliyuncs.com</para>
@@ -111,10 +145,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The version of the ApsaraDB for ClickHouse console that is used to manage the cluster. Valid values:</para>
+            /// <para>The version of the backend management system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>v1</b></description></item>
-            /// <item><description><b>v2</b></description></item>
+            /// <item><description><para><c>v1</c></para>
+            /// </description></item>
+            /// <item><description><para><c>v2</c></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +161,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ControlVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster was created. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The creation time of the cluster, in <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-13T11:33:11Z</para>
@@ -135,7 +171,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the cluster.</para>
+            /// <para>The cluster description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cc-bp108z124a8o7****</para>
@@ -155,7 +191,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
-            /// <para>The network type of the cluster. Only VPC is supported.</para>
+            /// <para>The network type. Only VPC is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc</para>
@@ -165,13 +201,18 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DBClusterNetworkType { get; set; }
 
             /// <summary>
-            /// <para>The cluster state. Valid values:</para>
+            /// <para>The cluster status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Preparing</b>: The cluster is being prepared.</description></item>
-            /// <item><description><b>Creating</b>: The cluster is being created.</description></item>
-            /// <item><description><b>Running</b>: The cluster is running.</description></item>
-            /// <item><description><b>Deleting</b>: The cluster is being deleted.</description></item>
-            /// <item><description><b>SCALING_OUT</b>: The storage capacity of the cluster is being expanded.</description></item>
+            /// <item><description><para><c>Preparing</c>: The cluster is being prepared.</para>
+            /// </description></item>
+            /// <item><description><para><c>Creating</c>: The cluster is being created.</para>
+            /// </description></item>
+            /// <item><description><para><c>Running</c>: The cluster is running.</para>
+            /// </description></item>
+            /// <item><description><para><c>Deleting</c>: The cluster is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><c>SCALING_OUT</c>: The cluster is being scaled out.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,11 +223,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DBClusterStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. Valid values:</para>
+            /// <para>The cluster type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Common</b>: a common cluster</description></item>
-            /// <item><description><b>Readonly</b>: a read-only cluster</description></item>
-            /// <item><description><b>Guard</b>: a disaster recovery cluster</description></item>
+            /// <item><description><para><c>Common</c>: a standard cluster.</para>
+            /// </description></item>
+            /// <item><description><para><c>Readonly</c>: a read-only cluster.</para>
+            /// </description></item>
+            /// <item><description><para><c>Guard</c>: a disaster recovery cluster.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -197,26 +241,38 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DBClusterType { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the cluster.</para>
+            /// <para>The instance type of the cluster nodes.</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values when the cluster is of Single-replica Edition:</para>
+            /// <item><description><para>Valid values for a single-replica edition:</para>
             /// <list type="bullet">
-            /// <item><description><b>S4-NEW</b></description></item>
-            /// <item><description><b>S8</b></description></item>
-            /// <item><description><b>S16</b></description></item>
-            /// <item><description><b>S32</b></description></item>
-            /// <item><description><b>S64</b></description></item>
-            /// <item><description><b>S104</b></description></item>
+            /// <item><description><para><c>S4-NEW</c></para>
+            /// </description></item>
+            /// <item><description><para><c>S8</c></para>
+            /// </description></item>
+            /// <item><description><para><c>S16</c></para>
+            /// </description></item>
+            /// <item><description><para><c>S32</c></para>
+            /// </description></item>
+            /// <item><description><para><c>S64</c></para>
+            /// </description></item>
+            /// <item><description><para><c>S104</c></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Valid values when the cluster is of Double-replica Edition:</para>
+            /// <item><description><para>Valid values for a dual-replica edition:</para>
             /// <list type="bullet">
-            /// <item><description><b>C4-NEW</b></description></item>
-            /// <item><description><b>C8</b></description></item>
-            /// <item><description><b>C16</b></description></item>
-            /// <item><description><b>C32</b></description></item>
-            /// <item><description><b>C64</b></description></item>
-            /// <item><description><b>C104</b></description></item>
+            /// <item><description><para><c>C4-NEW</c></para>
+            /// </description></item>
+            /// <item><description><para><c>C8</c></para>
+            /// </description></item>
+            /// <item><description><para><c>C16</c></para>
+            /// </description></item>
+            /// <item><description><para><c>C32</c></para>
+            /// </description></item>
+            /// <item><description><para><c>C64</c></para>
+            /// </description></item>
+            /// <item><description><para><c>C104</c></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -229,10 +285,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string DBNodeClass { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes.</para>
+            /// <para>The number of nodes in the cluster.</para>
             /// <list type="bullet">
-            /// <item><description>Valid values when the cluster is of Single-replica Edition: 1 to 48.</description></item>
-            /// <item><description>Valid values when the cluster is of Double-replica Edition: 1 to 24.</description></item>
+            /// <item><description><para>For a single-replica edition, the value range is 1 to 48.</para>
+            /// </description></item>
+            /// <item><description><para>For a dual-replica edition, the value range is 1 to 24.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -243,10 +301,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public long? DBNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of a single node of the cluster. Unit: GB.</para>
-            /// <para>Valid values: 100 to 32000.</para>
+            /// <para>The storage capacity per node, in GB.</para>
+            /// <para>The value can range from 100 to 32000.</para>
             /// <remarks>
-            /// <para> This value is a multiple of 100.</para>
+            /// <para>The value must be a multiple of 100.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -257,9 +315,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public long? DBNodeStorage { get; set; }
 
             /// <summary>
-            /// <para>The Key Management Service (KMS) key that is used to encrypt data.</para>
+            /// <para>The Key Management Service (KMS) key ID.</para>
             /// <remarks>
-            /// <para> If the value of the EncryptionType parameter is off, an empty string is returned for this parameter.</para>
+            /// <para>This parameter is empty if <c>EncryptionType</c> is set to <c>off</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -272,8 +330,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <summary>
             /// <para>The encryption type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CloudDisk</b>: Disk encryption is enabled.</description></item>
-            /// <item><description><b>off</b>: Data is not encrypted.</description></item>
+            /// <item><description><para><c>CloudDisk</c>: disk encryption.</para>
+            /// </description></item>
+            /// <item><description><para><c>off</c>: Encryption is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -284,7 +344,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string EncryptionType { get; set; }
 
             /// <summary>
-            /// <para>The type of the database engine.</para>
+            /// <para>The database engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ClickHouse</para>
@@ -294,7 +354,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The latest minor version to which the cluster can be updated.</para>
+            /// <para>The latest minor version to which the cluster can be upgraded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.34.0</para>
@@ -304,7 +364,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string EngineLatestMinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The current minor version.</para>
+            /// <para>The engine\&quot;s current minor version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.6.0</para>
@@ -324,9 +384,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The time when the cluster expired. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The expiration time of the cluster, in <c>yyyy-MM-ddTHH:mm:ssZ</c> format (UTC).</para>
             /// <remarks>
-            /// <para> Pay-as-you-go clusters never expire. If the cluster is a pay-as-you-go cluster, an empty string is returned for this parameter.</para>
+            /// <para>This parameter is empty for pay-as-you-go clusters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -337,7 +397,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The extended storage space. Unit: GB.</para>
+            /// <para>The extended storage capacity, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -348,11 +408,18 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
             /// <summary>
             /// <para>The extended storage type. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description><b>CloudESSD</b>: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</description></item>
-            /// <item><description><b>CloudESSD_PL2</b>: The cluster uses an ESSD of PL 2.</description></item>
-            /// <item><description><b>CloudESSD_PL3</b>: The cluster uses an ESSD of PL 3.</description></item>
-            /// <item><description><b>CloudEfficiency</b>: The cluster uses an ultra disk.</description></item>
+            /// <item><description><para><c>CloudESSD_PL0</c>: ESSD PL0 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudESSD</c>: ESSD PL1 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudESSD_PL2</c>: ESSD PL2 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudESSD_PL3</c>: ESSD PL3 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudEfficiency</c>: Ultra disk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -363,10 +430,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ExtStorageType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cluster has expired. Valid values:</para>
+            /// <para>Whether the cluster has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><c>true</c>: The cluster has expired.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The cluster has not expired.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -376,6 +445,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public string IsExpired { get; set; }
 
+            /// <summary>
+            /// <para>The type of the load balancer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>clb</para>
+            /// </summary>
             [NameInMap("LbKind")]
             [Validation(Required=false)]
             public string LbKind { get; set; }
@@ -383,11 +458,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             /// <summary>
             /// <para>The lock mode of the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Unlock</b>: The cluster is not locked.</description></item>
-            /// <item><description><b>ManualLock</b>: The cluster is manually locked.</description></item>
-            /// <item><description><b>LockByExpiration</b>: The cluster is automatically locked due to cluster expiration.</description></item>
-            /// <item><description><b>LockByRestoration</b>: The cluster is automatically locked because the cluster is about to be rolled back.</description></item>
-            /// <item><description><b>LockByDiskQuota</b>: The cluster is automatically locked because the disk space is exhausted.</description></item>
+            /// <item><description><para><c>Unlock</c>: The cluster is not locked.</para>
+            /// </description></item>
+            /// <item><description><para><c>ManualLock</c>: The cluster is manually locked.</para>
+            /// </description></item>
+            /// <item><description><para><c>LockByExpiration</c>: The cluster is automatically locked upon expiration.</para>
+            /// </description></item>
+            /// <item><description><para><c>LockByRestoration</c>: The cluster is automatically locked before a rollback.</para>
+            /// </description></item>
+            /// <item><description><para><c>LockByDiskQuota</c>: The cluster is automatically locked because the storage is full.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -398,9 +478,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The cause why the cluster was locked.</para>
+            /// <para>The reason the cluster was locked.</para>
             /// <remarks>
-            /// <para> If the value of the LockMode parameter is Unlock, an empty string is returned for this parameter.</para>
+            /// <para>This parameter is empty if <c>LockMode</c> is set to <c>Unlock</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -411,7 +491,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string LockReason { get; set; }
 
             /// <summary>
-            /// <para>The update type. If the value of the parameter is <b>false</b>, it indicates a manual update.</para>
+            /// <para>The upgrade method. A value of <c>false</c> indicates that upgrades must be performed manually.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -421,8 +501,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public bool? MaintainAutoType { get; set; }
 
             /// <summary>
-            /// <para>The maintenance window of the cluster. The value is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.</para>
-            /// <para>For example, if you set the maintenance window to 00:00Z-01:00Z, the cluster can be maintained from 08:00 (UTC+8) to 09:00 (UTC+8).</para>
+            /// <para>The maintenance window of the cluster. The time is in the <c>HH:mmZ-HH:mmZ</c> format and is in UTC.</para>
+            /// <para>For example, <c>00:00Z-01:00Z</c> indicates that the maintenance window is from 00:00 to 01:00 (UTC), which corresponds to 08:00 to 09:00 in Beijing time (UTC+8).</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00Z-01:00Z</para>
@@ -432,10 +512,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string MaintainTime { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the cluster. Valid values:</para>
+            /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Postpaid</b>: indicates the pay-as-you-go billing method.</description></item>
-            /// <item><description><b>Prepaid</b>: indicates the subscription billing method.</description></item>
+            /// <item><description><para><c>Postpaid</c>: pay-as-you-go.</para>
+            /// </description></item>
+            /// <item><description><para><c>Prepaid</c>: subscription.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -446,7 +528,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The HTTP port number.</para>
+            /// <para>The HTTP port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8123</para>
@@ -466,7 +548,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string PublicConnectionString { get; set; }
 
             /// <summary>
-            /// <para>The IP address that is used to connect to the cluster over the Internet.</para>
+            /// <para>The IP address of the public endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>121.40.xx.xx</para>
@@ -476,7 +558,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string PublicIpAddr { get; set; }
 
             /// <summary>
-            /// <para>The TCP port number in the public endpoint.</para>
+            /// <para>The public TCP port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3306</para>
@@ -506,16 +588,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the data migration task.</para>
+            /// <para>The data migration status.</para>
             /// </summary>
             [NameInMap("ScaleOutStatus")]
             [Validation(Required=false)]
             public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus ScaleOutStatus { get; set; }
             public class DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus : TeaModel {
                 /// <summary>
-                /// <para>The progress of the data migration task in percentage.</para>
+                /// <para>The data migration progress, as a percentage.</para>
                 /// <remarks>
-                /// <para> This parameter is returned only when the cluster is in the SCALING_OUT state.</para>
+                /// <para>This parameter is returned only when the cluster is in the <c>SCALING_OUT</c> state.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -526,9 +608,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string Progress { get; set; }
 
                 /// <summary>
-                /// <para>The progress of the data migration task. This value is displayed in the following format: Data volume that has been migrated/Total data volume.</para>
+                /// <para>The data migration progress, displayed as <c>Amount of data migrated/Total data amount</c>.</para>
                 /// <remarks>
-                /// <para> This parameter is returned only when the cluster is in the SCALING_OUT state.</para>
+                /// <para>This parameter is returned only when the cluster is in the <c>SCALING_OUT</c> state.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -541,12 +623,19 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             }
 
             /// <summary>
-            /// <para>The storage type of the cluster. Valid values:</para>
+            /// <para>The storage type. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description><b>CloudESSD</b>: The cluster uses an enhanced SSD (ESSD) of performance level (PL) 1.</description></item>
-            /// <item><description><b>CloudESSD_PL2</b>: The cluster uses an ESSD of PL 2.</description></item>
-            /// <item><description><b>CloudESSD_PL3</b>: The cluster uses an ESSD of PL 3.</description></item>
-            /// <item><description><b>CloudEfficiency</b>: The cluster uses an ultra disk.</description></item>
+            /// <item><description><para><c>CloudESSD_PL0</c>: ESSD PL0 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudESSD</c>: ESSD PL1 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudESSD_PL2</c>: ESSD PL2 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudESSD_PL3</c>: ESSD PL3 disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>CloudEfficiency</c>: Ultra disk.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -557,10 +646,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether data backup is supported. Valid values:</para>
+            /// <para>Whether the cluster supports data backup. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Data backup is supported.</description></item>
-            /// <item><description><b>2</b>: Data backup is not supported.</description></item>
+            /// <item><description><para><c>1</c>: Supported.</para>
+            /// </description></item>
+            /// <item><description><para><c>2</c>: Not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -571,10 +662,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public int? SupportBackup { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether HTTPS ports are supported. Valid values:</para>
+            /// <para>Whether the HTTPS port is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><c>true</c>: Supported.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -585,10 +678,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public bool? SupportHttpsPort { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the cluster supports a MySQL port. Valid values:</para>
+            /// <para>Whether the MySQL port is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: A MySQL port is supported.</description></item>
-            /// <item><description><b>false</b>: A MySQL port is not supported.</description></item>
+            /// <item><description><para><c>true</c>: Supported.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -599,10 +694,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public bool? SupportMysqlPort { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether tiered storage of hot data and cold data is supported. Valid values:</para>
+            /// <para>Whether the cluster supports tiered storage for hot and cold data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Tiered storage of hot data and cold data is supported.</description></item>
-            /// <item><description><b>2</b>: Tiered storage of hot data and cold data is not supported.</description></item>
+            /// <item><description><para><c>1</c>: Supported.</para>
+            /// </description></item>
+            /// <item><description><para><c>2</c>: Not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -612,6 +709,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public int? SupportOss { get; set; }
 
+            /// <summary>
+            /// <para>The tags of the cluster.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public DescribeDBClusterAttributeResponseBodyDBClusterTags Tags { get; set; }
@@ -643,7 +743,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC in which the cluster is deployed.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp10tr8k9qasioaty****</para>
@@ -653,7 +753,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string VpcCloudInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp10tr8k9qasioaty****</para>
@@ -663,7 +763,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The IP address that is used to connect to the cluster over the VPC.</para>
+            /// <para>The IP address of the VPC endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.xx.xx</para>
@@ -699,7 +799,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The list of vSwitch IDs in multi-zone clusters.</para>
+            /// <para>A map of zone IDs to vSwitch IDs for a multi-zone cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-f: vsw-zm0n42d5vvuo****</para>
@@ -709,7 +809,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public Dictionary<string, object> ZoneIdVswitchMap { get; set; }
 
             /// <summary>
-            /// <para>The ZooKeeper specifications.</para>
+            /// <para>The specifications of the ZooKeeper nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4 Core 8 GB</para>

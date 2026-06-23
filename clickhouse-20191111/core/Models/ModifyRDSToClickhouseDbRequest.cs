@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyRDSToClickhouseDbRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The password of the ApsaraDB for ClickHouse database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string CkPassword { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The database account of the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DbClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows that can be synchronized per second.</para>
+        /// <para>The maximum number of rows to sync per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The instance ID of the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsId { get; set; }
 
         /// <summary>
-        /// <para>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The password of the ApsaraDB RDS for MySQL database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsSynDb { get; set; }
 
         /// <summary>
-        /// <para>The table in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The tables in the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsSynTables { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The database account of the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsUserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.</para>
+        /// <para>The VPC ID of the ApsaraDB RDS for MySQL instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1v9dtwmqqjhwwg****</para>
@@ -156,8 +156,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Specifies whether to ignore databases that do not support synchronization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Ignore the databases.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Do not ignore the databases.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

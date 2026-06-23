@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Specifies whether to remove all tags from the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is valid only when <b>TagKey.N</b> is left empty.</para>
+        /// <para>This parameter is valid only when the <b>TagKey.N</b> parameter is empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,6 +51,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -64,16 +67,19 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>CLUSTER</b>.</para>
+        /// <para>The resource type. Set the value to <b>DBCLUSTER</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CLUSTER</para>
+        /// <para>DBCLUSTER</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The tag key.</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

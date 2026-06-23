@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database account.</para>
+        /// <para>The database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

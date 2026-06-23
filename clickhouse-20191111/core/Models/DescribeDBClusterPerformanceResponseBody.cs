@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in Coordinated Universal Time (UTC).</para>
+        /// <para>The end of the time range that was queried. The time is in UTC, formatted as <c>yyyy-MM-ddTHH:mmZ</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-27T16:38Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The values of the queried performance metrics of the cluster.</para>
+        /// <para>The list of performance metrics for the cluster.</para>
         /// </summary>
         [NameInMap("Performances")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The name of the performance metric value.</para>
+            /// <para>The name of the performance metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mem_usage</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The queried performance pamaters.</para>
+            /// <para>The time series data for the metric.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
             public List<DescribeDBClusterPerformanceResponseBodyPerformancesSeries> Series { get; set; }
             public class DescribeDBClusterPerformanceResponseBodyPerformancesSeries : TeaModel {
                 /// <summary>
-                /// <para>The name of the list of performance metric values.</para>
+                /// <para>The name of the time series.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cc-bp125e3uu94wo1s0k16****</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The values of the performance parameter. Each value of the performance parameter is collected at a point in time.</para>
+                /// <para>The values of the performance metrics, each associated with a sampling timestamp.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeDBClusterPerformanceResponseBodyPerformancesSeriesValues> Values { get; set; }
                 public class DescribeDBClusterPerformanceResponseBodyPerformancesSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>The values of a metric.</para>
+                    /// <para>The value of the performance metric.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             }
 
             /// <summary>
-            /// <para>The unit of the performance metric.</para>
+            /// <para>The unit of the metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>%</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</para>
+        /// <para>The beginning of the time range that was queried. The time is in UTC, formatted as <c>yyyy-MM-ddTHH:mmZ</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-27T16:37Z</para>

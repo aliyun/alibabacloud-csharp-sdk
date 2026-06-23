@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeEventMetaInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The metadata of O\&amp;M tasks.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeEventMetaInfoResponseBodyItems> Items { get; set; }
         public class DescribeEventMetaInfoResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The code of the O\&amp;M task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The type of the O\&amp;M task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Task.TaskStatus</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>94F92113-FF63-5E57-8401-6FE123AD11DD</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

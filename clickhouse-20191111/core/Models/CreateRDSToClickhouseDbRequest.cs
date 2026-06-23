@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CreateRDSToClickhouseDbRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The password for the database account of the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string CkPassword { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The database account of the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DbClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows that can be synchronized per second.</para>
+        /// <para>The maximum number of rows to sync per second.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsId { get; set; }
 
         /// <summary>
-        /// <para>The password of the account that is used to log on to the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The password for the database account of the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? RdsPort { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The database account of the ApsaraDB RDS for MySQL instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsUserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) to which the ApsaraDB RDS for MySQL instance belongs.</para>
+        /// <para>The VPC ID of the ApsaraDB RDS for MySQL instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zen93xryil99jsfy****</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsVpcId { get; set; }
 
         /// <summary>
-        /// <para>The private endpoint of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The internal endpoint of the ApsaraDB RDS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp16t9h3999xb0a7****.mysql.rds.aliyuncs.com</para>
@@ -142,10 +142,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to ignore the table schemas that do not support synchronization. Valid values:</para>
+        /// <para>Specifies whether to skip unsupported table schemas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Skip.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Do not skip.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -157,7 +159,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? SkipUnsupported { get; set; }
 
         /// <summary>
-        /// <para>The tables whose data you want to synchronize.</para>
+        /// <para>The tables to sync.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

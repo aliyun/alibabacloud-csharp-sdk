@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeOSSStorageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether tiered storage of hot data and cold data is supported. Valid values:</para>
+        /// <para>Indicates whether tiered storage for hot and cold data can be enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Tiered storage of hot data and cold data is supported.</description></item>
-        /// <item><description><b>false</b>: Tiered storage of hot data and cold data is not supported.</description></item>
+        /// <item><description><para><b>true</b>: Tiered storage can be enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Tiered storage cannot be enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? ColdStorage { get; set; }
 
         /// <summary>
-        /// <para>The parameters for tiered storage of hot data and cold data.</para>
+        /// <para>The parameters of the tiered storage policy for hot and cold data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{ &quot;currentValue&quot;:&quot;0.1&quot;, &quot;defaultValue&quot;:&quot;0.1&quot;, &quot;desc&quot;:&quot;Ratio of free disk space. When the ratio exceeds the value of configuration parameter, ClickHouse start to move data to the cold storage&quot;, &quot;name&quot;:&quot;move_factor&quot;, &quot;restart&quot;:true, &quot;valueRange&quot;:&quot;(0, 1]&quot; },{ &quot;currentValue&quot;:&quot;true&quot;, &quot;defaultValue&quot;:&quot;true&quot;, &quot;desc&quot;:&quot;Disables merging of data parts on cold storage&quot;, &quot;name&quot;:&quot;prefer_not_to_merge&quot;, &quot;restart&quot;:true, &quot;valueRange&quot;:&quot;true|false&quot; }]</para>
@@ -44,11 +46,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of tiered storage of hot data and cold data. Valid values:</para>
+        /// <para>The status of tiered storage for hot and cold data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CREATING</b>: Tiered storage of hot data and cold data is being enabled.</description></item>
-        /// <item><description><b>DISABLE</b>: Tiered storage of hot data and cold data is not enabled.</description></item>
-        /// <item><description><b>ENABLE</b>: Tiered storage of hot data and cold data is enabled.</description></item>
+        /// <item><description><para><b>CREATING</b>: Tiered storage is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>DISABLE</b>: Tiered storage is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>ENABLE</b>: Tiered storage is enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +64,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The space used for tiered storage of hot data and cold data. Unit: GB.</para>
+        /// <para>The cold storage space used. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.00</para>

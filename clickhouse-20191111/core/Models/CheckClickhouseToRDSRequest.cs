@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class CheckClickhouseToRDSRequest : TeaModel {
         /// <summary>
-        /// <para>The password of the account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The password for the ApsaraDB for ClickHouse database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string CkPassword { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database in the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The database account for the ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ClickhousePort { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The ID of the community-compatible ApsaraDB for ClickHouse cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The ID of the ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsId { get; set; }
 
         /// <summary>
-        /// <para>The password of the account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The password for the ApsaraDB RDS database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsPassword { get; set; }
 
         /// <summary>
-        /// <para>The port number of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The port number of the ApsaraDB RDS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? RdsPort { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database in the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The database account for the ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsUserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC in which the ApsaraDB RDS for MySQL instance is deployed.</para>
+        /// <para>The VPC ID of the ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RdsVpcId { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The internal endpoint of the ApsaraDB RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal.</para>
         /// <remarks>
-        /// <para> This parameter is valid only if the value of PayType is set to Prepaid.</para>
+        /// <para>This parameter applies only when <c>PayType</c> is set to <c>Prepaid</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/360339.html">DescribeBackups</a> operation to query the backup sets.</para>
+        /// <para>The ID of the backup set. You can call the <a href="https://help.aliyun.com/document_detail/360339.html">DescribeBackups</a> API to query backup set IDs.</para>
         /// <remarks>
-        /// <para> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</para>
+        /// <para>This parameter is required when restoring data to an ApsaraDB for ClickHouse cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string BackupSetID { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. The value is a string and can be up to 64 ASCII characters in length.</para>
+        /// <para>A client token used to ensure request idempotence. The value must be a string of no more than 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AB</para>
@@ -46,10 +46,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The edition of the cluster. Valid values:</para>
+        /// <para>The replica configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Basic</b>: Single-replica Edition</description></item>
-        /// <item><description><b>HighAvailability</b>: Double-replica Edition</description></item>
+        /// <item><description><para><b>Basic</b>: single-replica</para>
+        /// </description></item>
+        /// <item><description><para><b>HighAvailability</b>: high availability (dual-replica)</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,24 +63,81 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterCategory { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the cluster.</para>
+        /// <para>The instance type.&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for a Single-replica Edition cluster:</para>
+        /// <item><description><para>For single-replica clusters, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><b>S8</b>: 8 cores and 32 GB of memory</description></item>
-        /// <item><description><b>S16</b>: 16 cores and 64 GB of memory</description></item>
-        /// <item><description><b>S32</b>: 32 cores and 128 GB of memory</description></item>
-        /// <item><description><b>S64</b>: 64 cores and 256 GB of memory</description></item>
-        /// <item><description><b>S104</b>: 104 cores and 384 GB of memory</description></item>
+        /// <item><description><para><b>LS20</b>: Large-storage, 20 cores, 88 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>LS40</b>: Large-storage, 40 cores, 176 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>LS80</b>: Large-storage, 80 cores, 352 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S8</b>: Standard, 8 cores, 32 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S16</b>: Standard, 16 cores, 64 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S32</b>: Standard, 32 cores, 128 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S64</b>: Standard, 64 cores, 256 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S80</b>: Standard, 80 cores, 384 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S104</b>: Standard, 104 cores, 384 GB</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for a Double-replica Edition cluster:</para>
+        /// <item><description><para>For high availability clusters, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><b>C8</b>: 8 cores and 32 GB of memory</description></item>
-        /// <item><description><b>C16</b>: 16 cores and 64 GB of memory</description></item>
-        /// <item><description><b>C32</b>: 32 cores and 128 GB of memory</description></item>
-        /// <item><description><b>C64</b>: 64 cores and 256 GB of memory</description></item>
-        /// <item><description><b>C104</b>: 104 cores and 384 GB of memory</description></item>
+        /// <item><description><para><b>LC20</b>: Large-storage, 20 cores, 88 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>LC40</b>: Large-storage, 40 cores, 176 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>LC80</b>: Large-storage, 80 cores, 352 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C8</b>: Standard, 8 cores, 32 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C16</b>: Standard, 16 cores, 64 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C32</b>: Standard, 32 cores, 128 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C64</b>: Standard, 64 cores, 256 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C80</b>: Standard, 80 cores, 384 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C104</b>: Standard, 104 cores, 384 GB</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para>For single-replica clusters, valid values are:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>S8</b>: 8 cores, 32 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S16</b>: 16 cores, 64 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S32</b>: 32 cores, 128 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S64</b>: 64 cores, 256 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>S104</b>: 104 cores, 384 GB</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>For high availability clusters, valid values are:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>C8</b>: 8 cores, 32 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C16</b>: 16 cores, 64 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C32</b>: 32 cores, 128 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C64</b>: 64 cores, 256 GB</para>
+        /// </description></item>
+        /// <item><description><para><b>C104</b>: 104 cores, 384 GB</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -92,7 +151,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterClass { get; set; }
 
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -102,7 +161,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The network type of the cluster. Only Virtual Private Cloud (VPC) is supported.</para>
+        /// <para>The network type. Currently, only VPC is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,15 +172,17 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The kernel version. Valid values:</para>
+        /// <para>The engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>21.8.10.19</b></description></item>
-        /// <item><description><b>22.8.5.29</b></description></item>
+        /// <item><description><para><b>21.8.10.19</b></para>
+        /// </description></item>
+        /// <item><description><para><b>22.8.5.29</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>21.8.10.19</para>
+        /// <para>22.8.5.29</para>
         /// </summary>
         [NameInMap("DBClusterVersion")]
         [Validation(Required=false)]
@@ -130,8 +191,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         /// <summary>
         /// <para>The number of nodes.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when the cluster is of Single-replica Edition: 1 to 48.</description></item>
-        /// <item><description>Valid values when the cluster is of Double-replica Edition: 1 to 24.</description></item>
+        /// <item><description><para>For single-replica clusters, the valid range is 1–48.</para>
+        /// </description></item>
+        /// <item><description><para>For high availability clusters, the valid range is 1–24.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -143,9 +206,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBNodeGroupCount { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of a single node. Valid values: 100 to 32000. Unit: GB.</para>
+        /// <para>The storage capacity per node, in GB. The valid range is 100–32,000.</para>
         /// <remarks>
-        /// <para> This value is a multiple of 100.</para>
+        /// <para>The value must be a multiple of 100.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -157,12 +220,19 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBNodeStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the cluster. Valid values:</para>
+        /// <para>The storage type. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><b>CloudESSD</b>: The cluster uses an enhanced SSD (ESSD) of performance level 1 (PL1).</description></item>
-        /// <item><description><b>CloudESSD_PL2</b>: The cluster uses an ESSD of PL2.</description></item>
-        /// <item><description><b>CloudESSD_PL3</b>: The cluster uses an ESSD of PL3.</description></item>
-        /// <item><description><b>CloudEfficiency</b>: The cluster uses an ultra disk.</description></item>
+        /// <item><description><para><b>CloudESSD_PL0</b>: ESSD PL0 cloud disk</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudESSD</b>: ESSD PL1 cloud disk</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudESSD_PL2</b>: ESSD PL2 cloud disk</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudESSD_PL3</b>: ESSD PL3 cloud disk</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudEfficiency</b>: Ultra Disk</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -174,10 +244,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DbNodeStorageType { get; set; }
 
         /// <summary>
-        /// <para>You must specify this parameter when EncryptionType is set to CloudDisk.</para>
-        /// <para>The ID of the key that is used to encrypt data on disks. You can obtain the ID of the key from the Key Management Service (KMS) console. You can also create a key.</para>
+        /// <para>This parameter is required when <c>EncryptionType</c> is set to <c>CloudDisk</c>.</para>
+        /// <para>The ID of the cloud disk encryption key. You can create and manage keys in the Key Management Service console.</para>
         /// <remarks>
-        /// <para> If EncryptionType is empty, you do not need to specify this parameter.</para>
+        /// <para>If <c>EncryptionType</c> is not specified, you do not need to specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -188,9 +258,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The encryption type. Set the value to <b>CloudDisk</b>, which indicates that only disk encryption is supported.</para>
+        /// <para>The encryption type. Only cloud disk encryption is supported. Set this value to <b>CloudDisk</b>.</para>
         /// <remarks>
-        /// <para> If this parameter is not specified, data is not encrypted.</para>
+        /// <para>If you do not specify this parameter, encryption is disabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -209,10 +279,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cluster. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: The cluster uses the pay-as-you-go billing method.</description></item>
-        /// <item><description><b>Prepaid</b>: The cluster uses the subscription billing method.</description></item>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -224,13 +296,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration for the cluster. Valid values:</para>
+        /// <para>The subscription duration unit.</para>
         /// <remarks>
-        /// <para> This parameter is required only when PayType is set to Prepaid.</para>
+        /// <para>Notice: This parameter is required only when <c>PayType</c> is set to <c>Prepaid</c>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><para><b>Year</b>: Measured in years.</para>
+        /// </description></item>
+        /// <item><description><para><b>Month</b>: Measured in months.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -241,7 +315,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> API to query the latest region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -252,7 +326,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the cluster belongs.</para>
+        /// <para>The ID of the resource group that contains the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>
@@ -270,9 +344,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query backup set IDs.</para>
+        /// <para>The ID of the source cluster. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> API to query cluster IDs.</para>
         /// <remarks>
-        /// <para> If you want to restore the data of an ApsaraDB for ClickHouse cluster, this parameter is required.</para>
+        /// <para>This parameter is required when restoring data to an ApsaraDB for ClickHouse cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -282,11 +356,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string SourceDBClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The tags to add to the cluster.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateDBInstanceRequestTags> Tags { get; set; }
         public class CreateDBInstanceRequestTags : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user123</para>
             /// </summary>
@@ -295,8 +374,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>示例字符串</para>
+            /// <para>Example string</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]
@@ -305,13 +386,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         }
 
         /// <summary>
-        /// <para>The subscription duration of the subscription cluster.</para>
+        /// <para>The subscription duration.</para>
         /// <remarks>
-        /// <para> This parameter is required only when PayType is set to Prepaid.</para>
+        /// <para>Notice: This parameter is required only when <c>PayType</c> is set to <c>Prepaid</c>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Valid values when Period is set to Year: 1 to 3 (integer)</description></item>
-        /// <item><description>Valid values when Period is set to Month: 1 to 9 (integer)</description></item>
+        /// <item><description><para>If <c>Period</c> is <c>Year</c>, the valid range is 1–3.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>Period</c> is <c>Month</c>, the valid range is 1–9.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -333,7 +416,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch in the secondary zone for the VPC.</para>
+        /// <para>The ID of the secondary VSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1gzt31twhlo0sa5****</para>
@@ -343,7 +426,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string VSwitchBak { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch in secondary zone 2 for the VPC.</para>
+        /// <para>The ID of the second standby VSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1gzt31twhlo0sa5****</para>
@@ -353,7 +436,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string VSwitchBak2 { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID.</para>
+        /// <para>The VSwitch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -364,7 +447,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone 2 of the instance.</para>
+        /// <para>The ID of the second standby availability zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-j</para>
@@ -374,7 +457,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string ZondIdBak2 { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent zone list.</para>
+        /// <para>The availability zone ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> API to query the latest availability zone list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
@@ -384,7 +467,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The secondary zone.</para>
+        /// <para>The ID of the secondary availability zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-k</para>

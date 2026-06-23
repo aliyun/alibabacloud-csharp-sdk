@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeProcessListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queries.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("ProcessList")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string Rows { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The page size in rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -73,14 +73,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             public string RowsBeforeLimitAtLeast { get; set; }
 
             /// <summary>
-            /// <para>The statistics of the results.</para>
+            /// <para>The statistics of the query result.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public DescribeProcessListResponseBodyProcessListStatistics Statistics { get; set; }
             public class DescribeProcessListResponseBodyProcessListStatistics : TeaModel {
                 /// <summary>
-                /// <para>The size of the data that was scanned. Unit: bytes.</para>
+                /// <para>The size of the scanned data, in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9141300000</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public int? BytesRead { get; set; }
 
                 /// <summary>
-                /// <para>The average response time.</para>
+                /// <para>The elapsed time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4156</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 public float? ElapsedTime { get; set; }
 
                 /// <summary>
-                /// <para>The number of scanned rows.</para>
+                /// <para>The number of rows scanned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000000</para>

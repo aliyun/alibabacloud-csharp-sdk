@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeSlowLogTrendRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID. Call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all clusters in a specific region, including cluster IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. Specify the time in the \<c>yyyy-MM-dd hh:mm:ss\\</c> format. The time is in UTC.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time. The time range cannot exceed 7 days.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +43,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The execution duration of slow SQL queries. Minimum value: <b>1000</b>. Default value: <b>1000</b>. Unit: milliseconds. Slow SQL queries that last longer than the specified duration are returned in response parameters.</para>
+        /// <para>The execution duration of a slow SQL query, in milliseconds. The minimum value is <b>1000</b>. The default value is <b>1000</b>. The operation returns slow SQL queries that take longer than this duration to execute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? QueryDurationMs { get; set; }
 
         /// <summary>
+        /// <para>The region ID. Call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query region IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -64,6 +71,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. Specify the time in the \<c>yyyy-MM-dd hh:mm:ss\\</c> format. The time is in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

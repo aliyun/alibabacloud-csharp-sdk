@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DeleteDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the pay-as-you-go ApsaraDB for ClickHouse cluster.</para>
+        /// <para>The ID of the pay-as-you-go cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

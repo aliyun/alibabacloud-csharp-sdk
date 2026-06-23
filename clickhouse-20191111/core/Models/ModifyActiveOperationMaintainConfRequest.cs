@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyActiveOperationMaintainConfRequest : TeaModel {
         /// <summary>
+        /// <para>The day of the recurrence cycle.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If CycleType is set to Month, this parameter specifies the day of the month. Valid values are 1 to 28. Use a comma (,) to separate multiple days.</para>
+        /// </description></item>
+        /// <item><description><para>If CycleType is set to Week, this parameter specifies the day of the week. Valid values are 1 to 7. Use a comma (,) to separate multiple days.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +26,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string CycleTime { get; set; }
 
         /// <summary>
+        /// <para>The recurrence cycle. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Month: monthly</para>
+        /// </description></item>
+        /// <item><description><para>Week: weekly</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Week</para>
         /// </summary>
@@ -26,6 +42,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string CycleType { get; set; }
 
         /// <summary>
+        /// <para>The end time of the maintenance window. Use the HH:mmZ format. The time is in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20:00Z</para>
         /// </summary>
@@ -34,6 +52,8 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the maintenance window. Use the HH:mmZ format. The time is in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>07:00Z</para>
         /// </summary>
@@ -62,6 +82,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the configuration is enabled. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

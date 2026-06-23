@@ -37,13 +37,15 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to update the minor engine version of the ApsaraDB for ClickHouse cluster immediately. Valid values:</para>
+        /// <para>Specifies whether to upgrade the minor engine version immediately. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: updates the minor engine version of the ApsaraDB for ClickHouse cluster immediately.</description></item>
-        /// <item><description><b>false</b>: updates the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time or within the specified maintenance window.</description></item>
+        /// <item><description><para><b>true</b>: The minor engine version is upgraded immediately.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The minor engine version is upgraded at a specified time or within the maintenance window.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you want to update the minor engine version of the ApsaraDB for ClickHouse cluster at the specified time, <b>UpgradeTime</b> is required.</para>
+        /// <para>The <b>UpgradeTime</b> parameter is required if you want to upgrade the minor engine version at a specified time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,9 +57,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public bool? UpgradeImmediately { get; set; }
 
         /// <summary>
-        /// <para>The update time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in Coordinated Universal Time (UTC).</para>
+        /// <para>The time to perform the upgrade. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the minor engine version of an ApsaraDB for ClickHouse cluster is updated within the specified maintenance window.</para>
+        /// <para>If you do not specify this parameter, the ApsaraDB for ClickHouse cluster is upgraded within the maintenance window.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,9 +70,9 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string UpgradeTime { get; set; }
 
         /// <summary>
-        /// <para>The minor engine version to which you want to update.</para>
+        /// <para>The minor engine version to which you want to upgrade.</para>
         /// <remarks>
-        /// <para> By default, UpgradeVersion is not set and the minor engine version of the ApsaraDB for ClickHouse cluster is updated to the latest version.</para>
+        /// <para>If you do not specify this parameter, the cluster is upgraded to the latest minor engine version.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

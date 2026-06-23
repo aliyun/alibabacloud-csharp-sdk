@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeDBClusterNetInfoItemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The network type of the cluster. Only VPC is supported.</para>
+        /// <para>The network type. Only VPC is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string ClusterNetworkType { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Server Load Balancer (SLB) is activated in the VPC. Valid values:</para>
+        /// <para>Indicates whether Server Load Balancer (SLB) is enabled in the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: disabled.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>The name of the ApsaraDB RDS for MySQL database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

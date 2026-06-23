@@ -10,31 +10,41 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The specifications of the cluster.</para>
+        /// <para>The cluster specifications.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values when the cluster is of Single-replica Edition:</para>
+        /// <item><description><para>For single-replica editions, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><b>S8</b></description></item>
-        /// <item><description><b>S16</b></description></item>
-        /// <item><description><b>S32</b></description></item>
-        /// <item><description><b>S64</b></description></item>
-        /// <item><description><b>S104</b></description></item>
+        /// <item><description><para><b>S8</b></para>
+        /// </description></item>
+        /// <item><description><para><b>S16</b></para>
+        /// </description></item>
+        /// <item><description><para><b>S32</b></para>
+        /// </description></item>
+        /// <item><description><para><b>S64</b></para>
+        /// </description></item>
+        /// <item><description><para><b>S104</b></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values when the cluster is of Double-replica Edition:</para>
+        /// <item><description><para>For dual-replica editions, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description><b>C8</b></description></item>
-        /// <item><description><b>C16</b></description></item>
-        /// <item><description><b>C32</b></description></item>
-        /// <item><description><b>C64</b></description></item>
-        /// <item><description><b>C104</b></description></item>
+        /// <item><description><para><b>C8</b></para>
+        /// </description></item>
+        /// <item><description><para><b>C16</b></para>
+        /// </description></item>
+        /// <item><description><para><b>C32</b></para>
+        /// </description></item>
+        /// <item><description><para><b>C64</b></para>
+        /// </description></item>
+        /// <item><description><para><b>C104</b></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>S4-NEW</para>
+        /// <para>S8</para>
         /// </summary>
         [NameInMap("DBClusterClass")]
         [Validation(Required=false)]
@@ -51,10 +61,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes in the cluster.</para>
+        /// <para>The number of nodes.</para>
         /// <list type="bullet">
-        /// <item><description>If the cluster is of Single-replica Edition, the value must be an integer that ranges from 1 to 48.</description></item>
-        /// <item><description>If the cluster is of Double-replica Edition, the value must be an integer that ranges from 1 to 24.</description></item>
+        /// <item><description><para>For single-replica editions, the valid values are integers from 1 to 48.</para>
+        /// </description></item>
+        /// <item><description><para>For dual-replica editions, the valid values are integers from 1 to 24.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,10 +78,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBNodeGroupCount { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of a single node of the cluster. Unit: GB.</para>
+        /// <para>The storage space of a single node. Unit: GB.</para>
         /// <para>Valid values: 100 to 32000.</para>
         /// <remarks>
-        /// <para> This value is a multiple of 100.</para>
+        /// <para>The step size is 100 GB.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -81,13 +93,18 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBNodeStorage { get; set; }
 
         /// <summary>
-        /// <para>The storage type of the cluster. Valid values:</para>
+        /// <para>The storage class. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CloudESSD</b>: The cluster uses an Enterprise SSD (ESSD) of performance level 1 (PL1).</description></item>
-        /// <item><description><b>CloudESSD_PL2</b>: The cluster uses an ESSD of PL2.</description></item>
-        /// <item><description><b>CloudESSD_PL3</b>: The cluster uses an ESSD of PL3.</description></item>
-        /// <item><description><b>CloudEfficiency</b>: The cluster uses an ultra disk.</description></item>
-        /// <item><description><b>CloudSSD</b>: The cluster uses a standard SSD.</description></item>
+        /// <item><description><para><b>CloudESSD</b>: ESSD PL1 disk.</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudESSD_PL2</b>: ESSD PL2 disk.</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudESSD_PL3</b>: ESSD PL3 disk.</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudEfficiency</b>: ultra disk.</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudSSD</b>: standard SSD.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +115,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DbNodeStorageType { get; set; }
 
         /// <summary>
-        /// <para>The time window during which write operations are stopped. Separate the start time and end time with commas (,). Specify the time in the ISO 8601 standard.</para>
+        /// <para>The write-inaccessible window. Separate the start time and the end time with a comma. Use the ISO 8601 format for the time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-09T20:00:00+08:00,2024-07-09T21:00:00+08:00</para>
@@ -116,7 +133,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

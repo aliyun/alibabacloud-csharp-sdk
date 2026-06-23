@@ -11,8 +11,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
     public class CheckClickhouseToRDSResponseBody : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>When the value <b>true</b> is returned for the <b>Status</b> parameter, the system does not return the ErrorCode parameter.</description></item>
-        /// <item><description>When the value <b>false</b> is returned for the <b>Status</b> parameter, the system returns for the ErrorCode parameter the reason why the ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</description></item>
+        /// <item><description><para>This parameter is returned only if the connection fails (<b>Status</b> is <b>false</b>).</para>
+        /// </description></item>
+        /// <item><description><para>It indicates the reason for the connection failure.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,10 +35,12 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</para>
+        /// <para>Indicates whether a connection can be established. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The ApsaraDB for ClickHouse cluster can be connected to the ApsaraDB RDS for MySQL instance.</description></item>
-        /// <item><description><b>false</b>: The ApsaraDB for ClickHouse cluster cannot be connected to the ApsaraDB RDS for MySQL instance.</description></item>
+        /// <item><description><para><b>true</b>: A connection can be established.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: A connection cannot be established.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

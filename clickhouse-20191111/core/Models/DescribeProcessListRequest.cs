@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeProcessListRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</para>
+        /// <para>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to find information about all clusters in the destination region, including the cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the query statement.</para>
+        /// <para>The ID of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6c69d508-f05f-4c74-857c-d982b7e7e79f</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string InitialQueryId { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to log on to the database.</para>
+        /// <para>The database account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string InitialUser { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used to query.</para>
+        /// <para>The keyword for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>join</para>
@@ -51,12 +51,16 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Sorting by the specified column name. Valid values:</para>
+        /// <para>The column to use for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>elapsed: the cumulative execution time</description></item>
-        /// <item><description>written_rows: the number of written rows</description></item>
-        /// <item><description>read_rows: the number of read rows</description></item>
-        /// <item><description>memory_usage: the memory usage</description></item>
+        /// <item><description><para>elapsed: The total running time.</para>
+        /// </description></item>
+        /// <item><description><para>written_rows: The number of rows written.</para>
+        /// </description></item>
+        /// <item><description><para>read_rows: The number of rows read.</para>
+        /// </description></item>
+        /// <item><description><para>memory_usage: The amount of memory used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,11 +89,14 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Default value: 30. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (Default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +107,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The minimum query duration. The minimum value is <b>1000</b>, and the default value is <b>1000</b>. Unit: milliseconds. Queries that last longer than this duration are returned in response parameters.</para>
+        /// <para>The shortest query duration. The minimum value is <b>1000</b>. The default value is <b>1000</b>. The unit is milliseconds. The response returns queries that run longer than this duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -110,7 +117,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         public int? QueryDurationMs { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to find the region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
