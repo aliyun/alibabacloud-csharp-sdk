@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>Specifies the category of the hosts that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Authorized</b>: queries the hosts that the user is authorized to manage. This is the default value.</description></item>
-        /// <item><description><b>Unauthorized</b>: queries the hosts that the user is not authorized to manage.</description></item>
+        /// <item><description><para><b>Authorized</b>: queries the hosts that the user is authorized to manage. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>Unauthorized</b>: queries the hosts that the user is not authorized to manage.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The operating system of the host that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Linux</b></description></item>
-        /// <item><description><b>Windows</b></description></item>
+        /// <item><description><para><b>Linux</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Windows</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.\
+        /// <para>The number of entries per page.<br>
         /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
         /// <remarks>
         /// <para>We recommend that you do not leave this parameter empty.</para>

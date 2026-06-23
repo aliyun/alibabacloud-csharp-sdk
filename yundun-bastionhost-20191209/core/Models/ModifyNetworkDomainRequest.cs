@@ -57,8 +57,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The new connection mode of the network domain. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Direct</b></description></item>
-        /// <item><description><b>Proxy</b></description></item>
+        /// <item><description><para><b>Direct</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Proxy</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,8 +90,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The node type of the proxy server to modify. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Master</b>: primary proxy server.</description></item>
-            /// <item><description><b>Slave</b>: secondary proxy server.</description></item>
+            /// <item><description><para><b>Master</b>: primary proxy server.</para>
+            /// </description></item>
+            /// <item><description><para><b>Slave</b>: secondary proxy server.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,9 +126,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The new proxy mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SSHProxy</b></description></item>
-            /// <item><description><b>HTTPProxy</b></description></item>
-            /// <item><description><b>Socks5Proxy</b></description></item>
+            /// <item><description><para><b>SSHProxy</b></para>
+            /// </description></item>
+            /// <item><description><para><b>HTTPProxy</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Socks5Proxy</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -66,11 +66,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <summary>
                 /// <para>The return code that indicates whether the user was authorized to manage the host accounts. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>OK</b>: The call was successful.</description></item>
-                /// <item><description><b>UNEXPECTED</b>: An unknown error occurred.</description></item>
-                /// <item><description><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</description></item>
-                /// <item><description><b>OBJECT_NOT_FOUND</b>: The specified object on which you want to perform the operation does not exist.</description></item>
-                /// <item><description><b>OBJECT_AlREADY_EXISTS</b>: The specified object on which you want to perform the operation already exists.</description></item>
+                /// <item><description><para><b>OK</b>: The call was successful.</para>
+                /// </description></item>
+                /// <item><description><para><b>UNEXPECTED</b>: An unknown error occurred.</para>
+                /// </description></item>
+                /// <item><description><para><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</para>
+                /// </description></item>
+                /// <item><description><para><b>OBJECT_NOT_FOUND</b>: The specified object on which you want to perform the operation does not exist.</para>
+                /// </description></item>
+                /// <item><description><para><b>OBJECT_AlREADY_EXISTS</b>: The specified object on which you want to perform the operation already exists.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -92,6 +97,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
                 /// <summary>
                 /// <para>This parameter is deprecated.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -111,6 +119,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
             /// <summary>
             /// <para>This parameter is deprecated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

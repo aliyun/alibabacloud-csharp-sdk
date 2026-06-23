@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetExportConfigJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The download link of the configuration backup file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://bastionhost-cn-hangzhou-164***.oss-cn-hangzhou.aliyuncs.com/bastionhost-cn-2">https://bastionhost-cn-hangzhou-164***.oss-cn-hangzhou.aliyuncs.com/bastionhost-cn-2</a>******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the configuration backup download link. (In seconds, UNIX timestamp format)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1679393152</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the configuration backup export job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>message</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier that Alibaba Cloud generates for this request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>98DBE5C2-7D7A-5393-9E5A-71074336D33B</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the configuration backup export job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsForUserGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</para>
+        /// <para>The address of the host. You can set this parameter to a domain name or an IP address. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the host that you want to query. Only exact match is supported.</para>
+        /// <para>The name of the host. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host on which you want to query the hosts that the user group is authorized or not authorized to manage.</para>
+        /// <para>The ID of the bastion host instance that contains the user group.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the category of the hosts that you want to query. Valid values:</para>
+        /// <para>Specifies whether to query for authorized or unauthorized hosts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Authorized</b>: queries the hosts that the user group is authorized to manage. This is the default value.</description></item>
-        /// <item><description><b>Unauthorized</b>: queries the hosts that the user group is not authorized to manage.</description></item>
+        /// <item><description><para><b>Authorized</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>Unauthorized</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +60,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the host that you want to query. Valid values:</para>
+        /// <para>The operating system of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Linux</b></description></item>
-        /// <item><description><b>Windows</b></description></item>
+        /// <item><description><para><b>Linux</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Windows</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OSType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page. Default value: 1.</para>
+        /// <para>The page number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,10 +86,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.\
-        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</para>
+        /// <para>The number of entries to return on each page.<br>Maximum value: 100. Default value: 20.<br></para>
         /// <remarks>
-        /// <para>We recommend that you do not leave this parameter empty.</para>
+        /// <para>We recommend that you specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,9 +99,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host on which you want to query the hosts that the user group is authorized or not authorized to manage.</para>
+        /// <para>The ID of the region where the bastion host instance is located.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about regions and their corresponding IDs, see <a href="https://help.aliyun.com/document_detail/40654.html">regions and availability zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,9 +112,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user group for which you want to query hosts.</para>
+        /// <para>The ID of the user group whose hosts you want to list.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to obtain the user group ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

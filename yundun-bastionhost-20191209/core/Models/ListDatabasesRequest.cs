@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The engine of the database to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>SQLServer</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SQLServer</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,9 +106,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The type of the database to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Local</b>: on-premises database.</description></item>
-        /// <item><description><b>Rds</b>: ApsaraDB for RDS instance.</description></item>
-        /// <item><description><b>PolarDB</b>: PolarDB cluster</description></item>
+        /// <item><description><para><b>Local</b>: on-premises database.</para>
+        /// </description></item>
+        /// <item><description><para><b>Rds</b>: ApsaraDB for RDS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDB</b>: PolarDB cluster</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the host account that you want to query. The name can be up to 128 characters in length. Only exact match is supported.</para>
+        /// <para>The name of the host account that you want to query. The name can be up to 128 characters in length. This parameter supports only term queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the specified host whose accounts you want to query.</para>
+        /// <para>The ID of the host for which you want to query host accounts.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to query the ID of the host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the host ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,14 +33,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string HostId { get; set; }
 
+        /// <summary>
+        /// <para>The array of host IDs for which you want to query host accounts.</para>
+        /// <remarks>
+        /// <para>This parameter takes effect only when the value of the HostId parameter is 0. If the HostId parameter is specified with a non-zero value, this parameter is ignored.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;2&quot;,&quot;3&quot;]</para>
+        /// </summary>
         [NameInMap("HostIds")]
         [Validation(Required=false)]
         public string HostIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host in which you want to query accounts of the specified host.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> You can call the DescribeInstances operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,10 +71,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The number of entries to return on each page.<br> The maximum value of the PageSize parameter is 100. The default value is 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>We recommend that you do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,11 +84,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The protocol used by the host whose accounts you want to query.</para>
-        /// <para>Valid values:</para>
+        /// <para>The protocol of the host account that you want to query.<br> Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SSH</description></item>
-        /// <item><description>RDP</description></item>
+        /// <item><description><para>SSH</para>
+        /// </description></item>
+        /// <item><description><para>RDP</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,9 +100,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ProtocolName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host in which you want to query accounts of the specified host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

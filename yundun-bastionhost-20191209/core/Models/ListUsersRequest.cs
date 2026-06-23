@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <para>The display name of the user that you want to query. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>abc</para>
+        /// <para>testuser</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the bastion host whose users you want to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.\
+        /// <para>The number of entries per page.<br>
         /// Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>We recommend that you do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the bastion host whose users you want to query.</para>
         /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,10 +83,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The type of the user that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Local</b>: a local user.</description></item>
-        /// <item><description><b>Ram</b>: a Resource Access Management (RAM) user.</description></item>
-        /// <item><description><b>AD</b>: an Active Directory (AD)-authenticated user.</description></item>
-        /// <item><description><b>LDAP</b>: a Lightweight Directory Access Protocol (LDAP)-authenticated user.</description></item>
+        /// <item><description><para><b>Local</b>: a local user.</para>
+        /// </description></item>
+        /// <item><description><para><b>Ram</b>: a Resource Access Management (RAM) user.</para>
+        /// </description></item>
+        /// <item><description><para><b>AD</b>: an Active Directory (AD)-authenticated user.</para>
+        /// </description></item>
+        /// <item><description><para><b>LDAP</b>: a Lightweight Directory Access Protocol (LDAP)-authenticated user.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The unique ID of the user that you want to query. Only exact match is supported.</para>
         /// <remarks>
-        /// <para> This parameter uniquely identifies a RAM user of the bastion host. This parameter is valid if <b>Source</b> is set to <b>Ram</b>. You can call the <a href="https://help.aliyun.com/document_detail/28684.html">ListUsers</a> operation in RAM to obtain the unique ID of the user from the <b>UserId</b> response parameter.</para>
+        /// <para>This parameter uniquely identifies a RAM user of the bastion host. This parameter is valid if <b>Source</b> is set to <b>Ram</b>. You can call the <a href="https://help.aliyun.com/document_detail/28684.html">ListUsers</a> operation in RAM to obtain the unique ID of the user from the <b>UserId</b> response parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,7 +116,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the user group to which the user you want to query belongs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the user group ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the user group ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -135,9 +139,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The state of the user that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: The user is in normal state.</description></item>
-        /// <item><description><b>Frozen</b>: The user is locked.</description></item>
-        /// <item><description><b>Expired</b>: The user has expired.</description></item>
+        /// <item><description><para><b>Normal</b>: The user is in normal state.</para>
+        /// </description></item>
+        /// <item><description><para><b>Frozen</b>: The user is locked.</para>
+        /// </description></item>
+        /// <item><description><para><b>Expired</b>: The user has expired.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

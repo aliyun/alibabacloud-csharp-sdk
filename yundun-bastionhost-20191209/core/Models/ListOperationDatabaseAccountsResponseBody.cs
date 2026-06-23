@@ -69,8 +69,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The logon attribute. One of the following values is returned if the database engine is Oracle:</para>
             /// <list type="bullet">
-            /// <item><description><b>SERVICENAME</b></description></item>
-            /// <item><description><b>SID</b></description></item>
+            /// <item><description><para><b>SERVICENAME</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SID</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The bastion host ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the control policy that you want to modify.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,9 +53,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The scope of users to whom the control policy applies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: The control policy applies to all users.</description></item>
-        /// <item><description><b>User</b>: The control policy applies to specified users.</description></item>
-        /// <item><description><b>UserGroup</b>: The control policy applies to specified user groups.</description></item>
+        /// <item><description><para><b>All</b>: The control policy applies to all users.</para>
+        /// </description></item>
+        /// <item><description><para><b>User</b>: The control policy applies to specified users.</para>
+        /// </description></item>
+        /// <item><description><para><b>UserGroup</b>: The control policy applies to specified user groups.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

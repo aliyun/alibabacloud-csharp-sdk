@@ -20,8 +20,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The mode of access control on source IP addresses. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>black</b>: blacklist mode.</description></item>
-            /// <item><description><b>white</b>: whitelist mode.</description></item>
+            /// <item><description><para><b>black</b>: blacklist mode.</para>
+            /// </description></item>
+            /// <item><description><para><b>white</b>: whitelist mode.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -67,7 +69,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the control policy that you want to modify.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

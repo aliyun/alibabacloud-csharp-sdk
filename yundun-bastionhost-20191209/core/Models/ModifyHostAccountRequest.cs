@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ModifyHostAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the host account whose information you want to modify.</para>
+        /// <para>Specifies the ID of the host account to be modified.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAccountId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the host account. The name can be up to 128 characters in length.</para>
+        /// <para>Specifies the modified host account name, which can contain up to 128 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shared key that is associated with the host.</para>
+        /// <para>The host shared key ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</para>
+        /// <para>You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostShareKeyId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host in which you want to modify the information about the host account.</para>
+        /// <para>Specifies the ID of the Bastionhost instance where the host account to be modified resides.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,49 +61,66 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The passphrase for the new private key of the host account.</para>
+        /// <para>Specifies the modified security token of the host account\&quot;s private key.</para>
         /// <remarks>
-        /// <para> This parameter is valid only if the protocol used by the host is SSH. You do not need to configure this parameter if the protocol used by the host is Remote Desktop Protocol (RDP).</para>
+        /// <para>This parameter takes effect when the host account protocol is SSH. This parameter is not required when the host account protocol is RDP.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("PassPhrase")]
         [Validation(Required=false)]
         public string PassPhrase { get; set; }
 
         /// <summary>
-        /// <para>The new password of the host account.</para>
+        /// <para>Specifies the modified password of the host account.</para>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>123456</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The new private key of the host account. Specify a Base64-encoded string.</para>
+        /// <para>Specifies the modified private key of the host account, which is a Base64-encoded string.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if the protocol used by the host is SSH. You do not need to configure this parameter if the protocol used by the host is Remote Desktop Protocol (RDP). You can call the <a href="https://help.aliyun.com/document_detail/204391.html">GetHostAccount</a> operation to query the protocol used by the host. You can configure a password and a private key for the host account at the same time. If both a password and a private key are configured for the host account, Bastionhost preferentially uses the private key for logon.</para>
+        /// <para>This parameter takes effect when the host account protocol is SSH. This parameter is not required when the host account protocol is RDP. You can call the <a href="https://help.aliyun.com/document_detail/204391.html">GetHostAccount</a> operation to query the protocol used by the host account. You can configure both a password and a private key for a host account. When connecting to an asset, Bastionhost preferentially uses the private key for connection.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <hr>
+        /// <para>-----BEGIN RSA PRIVATE KEY-----
+        /// ......
+        /// -----END RSA PRIVATE KEY-----</para>
         /// </summary>
         [NameInMap("PrivateKey")]
         [Validation(Required=false)]
         public string PrivateKey { get; set; }
 
+        /// <summary>
+        /// <para>Account permission type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Privileged</b>: privileged account</para>
+        /// </description></item>
+        /// <item><description><para><b>Normal</b>: regular account</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is supported only in V3.2.47 and later versions.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
+        /// </summary>
         [NameInMap("PrivilegeType")]
         [Validation(Required=false)]
         public string PrivilegeType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host in which you want to query the details of the host account.</para>
+        /// <para>Specifies the region ID of the Bastionhost instance where the host account to be queried resides.</para>
         /// <remarks>
-        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -113,6 +130,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>Account password rotation mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Privileged</b>: Use a privileged account to change the password</para>
+        /// </description></item>
+        /// <item><description><para><b>Self</b>: Do not use a privileged account to change the password</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is supported only in V3.2.47 and later versions.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Self</para>
+        /// </summary>
         [NameInMap("RotationMode")]
         [Validation(Required=false)]
         public string RotationMode { get; set; }

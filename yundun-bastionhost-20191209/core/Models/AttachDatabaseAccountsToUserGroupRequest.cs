@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class AttachDatabaseAccountsToUserGroupRequest : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the database objects.</para>
+        /// <para>An array of database objects.</para>
         /// <remarks>
-        /// <para> You can specify up to 10 databases and 10 database accounts. The database accounts are not required. If you do not specify a database account, the user group is authorized to manage only the databases.</para>
+        /// <para>You can specify up to 10 databases and 10 database accounts. If you do not specify any database accounts, permissions are granted on the entire database.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Databases")]
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<AttachDatabaseAccountsToUserGroupRequestDatabases> Databases { get; set; }
         public class AttachDatabaseAccountsToUserGroupRequestDatabases : TeaModel {
             /// <summary>
-            /// <para>An array that consists of database account IDs.</para>
+            /// <para>An array of database account IDs.</para>
             /// </summary>
             [NameInMap("DatabaseAccountIds")]
             [Validation(Required=false)]
             public List<string> DatabaseAccountIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database that you want to authorize the user group to manage.</para>
+            /// <para>The ID of the database instance on which you want to grant permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>58</para>
@@ -39,9 +39,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,6 +66,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user group to which to grant the permissions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

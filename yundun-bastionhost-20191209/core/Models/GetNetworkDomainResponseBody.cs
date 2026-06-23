@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetNetworkDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed information about the network domain.</para>
+        /// <para>The details of the network domain.</para>
         /// </summary>
         [NameInMap("NetworkDomain")]
         [Validation(Required=false)]
         public GetNetworkDomainResponseBodyNetworkDomain NetworkDomain { get; set; }
         public class GetNetworkDomainResponseBodyNetworkDomain : TeaModel {
             /// <summary>
-            /// <para>The remarks of the network domain.</para>
+            /// <para>The comment for the network domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the network domain is a built-in network domain.</para>
+            /// <para>Specifies whether the network domain is built-in. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: No</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? Default { get; set; }
 
             /// <summary>
-            /// <para>The network domain ID.</para>
+            /// <para>The ID of the network domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -61,10 +63,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string NetworkDomainName { get; set; }
 
             /// <summary>
-            /// <para>The connection mode of the network domain. Valid values:</para>
+            /// <para>The type of the network domain. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Direct</description></item>
-            /// <item><description>Proxy</description></item>
+            /// <item><description><para>Direct: direct connection</para>
+            /// </description></item>
+            /// <item><description><para>Proxy: proxy</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,14 +79,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string NetworkDomainType { get; set; }
 
             /// <summary>
-            /// <para>The information about the proxy servers.</para>
+            /// <para>A list of proxy servers.</para>
             /// </summary>
             [NameInMap("Proxies")]
             [Validation(Required=false)]
             public List<GetNetworkDomainResponseBodyNetworkDomainProxies> Proxies { get; set; }
             public class GetNetworkDomainResponseBodyNetworkDomainProxies : TeaModel {
                 /// <summary>
-                /// <para>The IP address of the proxy server.</para>
+                /// <para>The address of the proxy server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><c>47.102.**.**</c></para>
@@ -92,10 +96,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the proxy server has a password. Valid values:</para>
+                /// <para>Specifies whether a password is set for the proxy server. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: A password is set.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: No password is set.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -108,8 +114,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <summary>
                 /// <para>The node type of the proxy server. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Master</b>: primary proxy server.</description></item>
-                /// <item><description><b>Slave</b>: secondary proxy server.</description></item>
+                /// <item><description><para>Master: primary proxy server</para>
+                /// </description></item>
+                /// <item><description><para>Slave: secondary proxy server</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -130,10 +138,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The status of the proxy server.</para>
+                /// <para>The status of the proxy server. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Available</b></description></item>
-                /// <item><description><b>Unavailable</b></description></item>
+                /// <item><description><para><b>Available</b>: available</para>
+                /// </description></item>
+                /// <item><description><para><b>Unavailable</b>: unavailable</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,12 +154,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string ProxyState { get; set; }
 
                 /// <summary>
-                /// <para>The error code that indicates the status of the proxy server.</para>
+                /// <para>The error code that is returned if the proxy server is unavailable. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>CHECK_PWD_FAILED</b>: The password is invalid.</description></item>
-                /// <item><description><b>CHECK_PWD_TIMEOUT</b>: The password verification session timed out.</description></item>
-                /// <item><description><b>CHECK_PWD_NETWORK_ERR</b>: A network error occurred.</description></item>
-                /// <item><description><b>UNEXPECTED</b>: An unknown error occurred.</description></item>
+                /// <item><description><para><b>CHECK_PWD_FAILED</b>: Incorrect password.</para>
+                /// </description></item>
+                /// <item><description><para><b>CHECK_PWD_TIMEOUT</b>: Password verification timeout.</para>
+                /// </description></item>
+                /// <item><description><para><b>CHECK_PWD_NETWORK_ERR</b>: Network error.</para>
+                /// </description></item>
+                /// <item><description><para><b>UNEXPECTED</b>: Unknown error.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -160,11 +174,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string ProxyStateErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The proxy type. Valid values:</para>
+                /// <para>The proxy method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SSHProxy</b></description></item>
-                /// <item><description><b>HTTPProxy</b></description></item>
-                /// <item><description><b>Socks5Proxy</b></description></item>
+                /// <item><description><para>SSHProxy: SSH proxy</para>
+                /// </description></item>
+                /// <item><description><para>HTTPProxy: HTTP proxy</para>
+                /// </description></item>
+                /// <item><description><para>Socks5Proxy: SOCKS5 proxy</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -189,7 +206,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>05F59944-2E24-595C-B21A-8C9955E60FAF</para>

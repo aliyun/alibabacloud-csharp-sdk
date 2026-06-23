@@ -34,11 +34,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <item><description><para><b>UNEXPECTED</b>: An unknown error occurred.</para>
             /// </description></item>
             /// <item><description><para><b>INVALID_ARGUMENT</b>: A request parameter is invalid.</para>
-            /// <para>**</para>
+            /// <para>\<em>\</em></para>
             /// <para><b>Note</b>Make sure that the request parameters are valid and call the operation again.</para>
             /// </description></item>
             /// <item><description><para><b>OBJECT_NOT_FOUND</b>: The specified object on which you want to perform the operation does not exist.</para>
-            /// <para>**</para>
+            /// <para>\<em>\</em></para>
             /// <para><b>Note</b>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</para>
             /// </description></item>
             /// <item><description><para><b>OBJECT_AlREADY_EXISTS</b>: The specified object on which you want to perform the operation already exists.</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

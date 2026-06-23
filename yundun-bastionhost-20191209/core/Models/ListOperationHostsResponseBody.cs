@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationHostsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The hosts returned.</para>
+        /// <para>A list of the hosts.</para>
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
         public List<ListOperationHostsResponseBodyHosts> Hosts { get; set; }
         public class ListOperationHostsResponseBodyHosts : TeaModel {
             /// <summary>
-            /// <para>The address type of the host. Valid values:</para>
+            /// <para>The address type of the host.</para>
             /// <list type="bullet">
-            /// <item><description><b>Public</b></description></item>
-            /// <item><description><b>Private</b></description></item>
+            /// <item><description><para><b>Public</b>: The public endpoint is used.</para>
+            /// </description></item>
+            /// <item><description><para><b>Private</b>: The private endpoint is used.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ActiveAddressType { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the host.</para>
+            /// <para>The comments on the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The host ID.</para>
+            /// <para>The ID of the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>The host name.</para>
+            /// <para>The name of the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>host1</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the host.</para>
+            /// <para>The private address of the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// <para>The public IP address of the host.</para>
+            /// <para>The public address of the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.158.XX.XX</para>
@@ -81,10 +83,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPublicAddress { get; set; }
 
             /// <summary>
-            /// <para>The host OS.</para>
+            /// <para>The operating system of the host.</para>
             /// <list type="bullet">
-            /// <item><description><b>Linux</b></description></item>
-            /// <item><description><b>Windows</b></description></item>
+            /// <item><description><para><b>Linux</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Windows</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,10 +99,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string OSType { get; set; }
 
             /// <summary>
-            /// <para>The host type. Valid values:</para>
+            /// <para>The source of the host.</para>
             /// <list type="bullet">
-            /// <item><description><b>Local</b>: on-premises host.</description></item>
-            /// <item><description><b>Ecs</b>: Elastic Compute Service (ECS) instance.</description></item>
+            /// <item><description><para><b>Local</b>: a local host</para>
+            /// </description></item>
+            /// <item><description><para><b>Ecs</b>: an ECS instance</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +115,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The ECS instance ID.</para>
+            /// <para>The ID of the ECS instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp19ienyt0yax748****</para>
@@ -119,10 +125,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SourceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The host status. Valid values:</para>
+            /// <para>The state of the host.</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b></description></item>
-            /// <item><description><b>Release</b></description></item>
+            /// <item><description><para><b>Normal</b>: The host is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>Release</b>: The host is released.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +143,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4F6C075F-FC86-476E-943B-097BD4E12948</para>
@@ -145,7 +153,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of hosts returned.</para>
+        /// <para>The total number of hosts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

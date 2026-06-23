@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public class ListPoliciesResponseBodyPolicies : TeaModel {
             /// <summary>
             /// <para>The remarks of the control policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Comment</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]

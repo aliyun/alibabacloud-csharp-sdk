@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GenerateAssetOperationTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The asset operation token.</para>
         /// </summary>
         [NameInMap("AssetOperationToken")]
         [Validation(Required=false)]
         public GenerateAssetOperationTokenResponseBodyAssetOperationToken AssetOperationToken { get; set; }
         public class GenerateAssetOperationTokenResponseBodyAssetOperationToken : TeaModel {
             /// <summary>
-            /// <para>The remaining number of times that you can use the O\&amp;M token.</para>
+            /// <para>The number of remaining uses for the token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? CountLeft { get; set; }
 
             /// <summary>
-            /// <para>The time when the O\&amp;M token expires. The value is a UNIX timestamp.</para>
+            /// <para>The expiration time of the token. This value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709110797</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the number of times that you can use the O\&amp;M token is limited.</para>
+            /// <para>Indicates whether the token has a use limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? HasCountLimit { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of renewals. A value of 0 indicates that renewal is not supported.</para>
+            /// <para>The maximum number of times the token can be renewed. A value of 0 indicates that the token cannot be renewed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? MaxRenewCount { get; set; }
 
             /// <summary>
-            /// <para>The number of times the O\&amp;M token is renewed.</para>
+            /// <para>The number of times the token has been renewed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string SsoUrl { get; set; }
 
             /// <summary>
-            /// <para>The O\&amp;M token that you apply for.</para>
+            /// <para>The O\&amp;M token that is requested.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NmYyMmEzNmMwYzljNGY******</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>

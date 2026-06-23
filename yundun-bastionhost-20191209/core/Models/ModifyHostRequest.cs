@@ -93,8 +93,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The new operating system of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Linux</b></description></item>
-        /// <item><description><b>Windows</b></description></item>
+        /// <item><description><para><b>Linux</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Windows</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,10 +109,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The preferred key exchange algorithm of the host. If you set OSType to Linux, you can modify this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>default</b></description></item>
-        /// <item><description><b>diffie-hellman-group1-sha1</b></description></item>
-        /// <item><description><b>diffie-hellman-group14-sha1</b></description></item>
-        /// <item><description><b>diffie-hellman-group-exchange-sha1</b></description></item>
+        /// <item><description><para><b>default</b></para>
+        /// </description></item>
+        /// <item><description><para><b>diffie-hellman-group1-sha1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>diffie-hellman-group14-sha1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>diffie-hellman-group-exchange-sha1</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

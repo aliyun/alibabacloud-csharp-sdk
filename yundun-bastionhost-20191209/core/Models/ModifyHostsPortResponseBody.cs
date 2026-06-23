@@ -68,9 +68,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

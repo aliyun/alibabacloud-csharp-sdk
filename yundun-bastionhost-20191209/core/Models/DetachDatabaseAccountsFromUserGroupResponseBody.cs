@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <para>The error message that is returned.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>N/A</para>
+                /// <para>None</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The error message that is returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>N/A</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

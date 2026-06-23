@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the bastion hosts returned.</para>
+        /// <para>An array of Bastionhost instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
+            /// <summary>
+            /// <para>The default bandwidth of the instance, in Mbit/s.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60M</para>
+            /// </summary>
             [NameInMap("BandWidth")]
             [Validation(Required=false)]
             public long? BandWidth { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the bastion host.</para>
+            /// <para>The custom description of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test API</para>
@@ -31,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the bastion host expires. Unit: milliseconds.</para>
+            /// <para>The expiration time of the Bastionhost instance, specified as a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578326400000</para>
@@ -41,17 +47,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The image version of the bastion host.</para>
+            /// <para>The image version of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3.0.0</para>
+            /// <para>3.2.41</para>
             /// </summary>
             [NameInMap("ImageVersion")]
             [Validation(Required=false)]
             public string ImageVersion { get; set; }
 
             /// <summary>
-            /// <para>The bastion host ID.</para>
+            /// <para>The ID of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bastionhost-cn-78v1gh****</para>
@@ -61,15 +67,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the bastion host. Valid values:</para>
+            /// <para>The status of the Bastionhost instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PENDING</b>: The bastion host is not initialized.</description></item>
-            /// <item><description><b>CREATING</b>: The bastion host is being created.</description></item>
-            /// <item><description><b>RUNNING</b>: The bastion host is running.</description></item>
-            /// <item><description><b>EXPIRED</b>: The bastion host expired.</description></item>
-            /// <item><description><b>CREATE_FAILED</b>: The bastion host fails to be created.</description></item>
-            /// <item><description><b>UPGRADING</b>: The configurations of the bastion host are being changed.</description></item>
-            /// <item><description><b>UPGRADE_FAILED</b>: The configurations of the bastion host fail to be changed.</description></item>
+            /// <item><description><para><b>PENDING</b>: Not initialized</para>
+            /// </description></item>
+            /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The instance is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>EXPIRED</b>: The instance has expired.</para>
+            /// </description></item>
+            /// <item><description><para><b>CREATE_FAILED</b>: Instance creation failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>UPGRADING</b>: The instance is being upgraded.</para>
+            /// </description></item>
+            /// <item><description><para><b>UPGRADE_FAILED</b>: Instance upgrade failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,30 +93,32 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The public O\&amp;M address of the bastion host.</para>
+            /// <para>The public domain name of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>drawvxalwb-public.bastionhost.aliyuncs.com</para>
+            /// <para>******lwb-public.bastionhost.aliyuncs.com</para>
             /// </summary>
             [NameInMap("InternetEndpoint")]
             [Validation(Required=false)]
             public string InternetEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The private O\&amp;M address of the bastion host.</para>
+            /// <para>The private domain name of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>drawvxalwb.bastionhost.aliyuncs.com</para>
+            /// <para>******lwb.bastionhost.aliyuncs.com</para>
             /// </summary>
             [NameInMap("IntranetEndpoint")]
             [Validation(Required=false)]
             public string IntranetEndpoint { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the bastion host runs an earlier version. Valid values:</para>
+            /// <para>Indicates whether the Bastionhost instance is a legacy instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The bastion host runs V2 or V3.1.</description></item>
-            /// <item><description><b>false</b>: The bastion host runs V3.2.</description></item>
+            /// <item><description><para><b>true</b>: The instance is of the V2 or V3.1 series.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The instance is of the V3.2 series.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,7 +129,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? Legacy { get; set; }
 
             /// <summary>
-            /// <para>The license code of the bastion host.</para>
+            /// <para>The license code of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bhah_ent_50_asset</para>
@@ -124,10 +139,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string LicenseCode { get; set; }
 
             /// <summary>
-            /// <para>The edition of the bastion host. Valid values:</para>
+            /// <para>The edition of the Bastionhost instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>cloudbastion</b>: Basic Edition.</description></item>
-            /// <item><description><b>cloudbastion_ha</b>: Enterprise Edition.</description></item>
+            /// <item><description><para><b>cloudbastion</b>: Basic Edition</para>
+            /// </description></item>
+            /// <item><description><para><b>cloudbastion_ha</b>: Enterprise Edition</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,10 +155,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string PlanCode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the bastion host can be accessed from the Internet. Valid values:</para>
+            /// <para>Indicates whether the Bastionhost instance is accessible over the Internet. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The instance is accessible over the Internet.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The instance is not accessible over the Internet.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -152,7 +171,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? PublicNetworkAccess { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the bastion host.</para>
+            /// <para>The region ID of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -162,7 +181,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the bastion host belongs.</para>
+            /// <para>The ID of the resource group to which the Bastionhost instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-acfm26ougi****</para>
@@ -171,12 +190,18 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the standby vSwitch to which the Bastionhost instance is attached.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-uf6j0u49poi8qr****</para>
+            /// </summary>
             [NameInMap("SlaveVswitchId")]
             [Validation(Required=false)]
             public string SlaveVswitchId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the bastion host is purchased or renewed. Unit: milliseconds.</para>
+            /// <para>The purchase or renewal time of the Bastionhost instance, specified as a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1577681345000</para>
@@ -186,7 +211,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC) to which the bastion host belongs.</para>
+            /// <para>The ID of the VPC to which the Bastionhost instance is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1c85tzgqu1bf5b****</para>
@@ -196,7 +221,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the bastion host belongs.</para>
+            /// <para>The ID of the vSwitch to which the Bastionhost instance is attached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1xfwzzfti0kjbf****</para>
@@ -208,7 +233,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for troubleshooting purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61D36C55-AAFC-4678-8FAD-34FEF9E7182E</para>
@@ -218,7 +243,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of bastion hosts that are queried.</para>
+        /// <para>The total number of Bastionhost instances returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

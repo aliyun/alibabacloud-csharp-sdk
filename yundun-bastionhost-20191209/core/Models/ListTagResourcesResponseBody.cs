@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for starting the next query.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</para>
@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about Bastionhost instances and the tags bound to Bastionhost instances.</para>
-        /// <para>The following information is included: instance ID, resource type, tag key, and tag value.</para>
+        /// <para>A list of Bastionhost instances and their tags.</para>
+        /// <para>This list includes the instance ID, resource type, tag key, and tag value.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bastionhost-cn-78v1gc****</para>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
-            /// <para>The returned value is INSTANCE, which indicates that the resource is a Bastionhost instance.</para>
+            /// <para>The resource type.</para>
+            /// <para>The only valid value is INSTANCE, which indicates a Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INSTANCE</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testapi</para>

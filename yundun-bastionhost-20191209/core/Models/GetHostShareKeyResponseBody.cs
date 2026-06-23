@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The fingerprint of the private key.</para>
             /// 
             /// <b>Example:</b>
-            /// <hr>
+            /// <para>aa:10:f5:21:7f:8b:3e:86:b0:8b:f0:******</para>
             /// </summary>
             [NameInMap("PrivateKeyFingerPrint")]
             [Validation(Required=false)]

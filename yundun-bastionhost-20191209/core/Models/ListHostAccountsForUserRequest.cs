@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.\
+        /// <para>The number of entries to return on each page.<br>
         /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
         /// <para>We recommend that you do not leave this parameter empty.</para>

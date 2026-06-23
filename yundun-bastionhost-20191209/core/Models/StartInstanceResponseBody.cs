@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class StartInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the bastion host that you enable.</para>
+        /// <para>The ID of the bastion host that is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bastionhost-cn-78v1gh****</para>

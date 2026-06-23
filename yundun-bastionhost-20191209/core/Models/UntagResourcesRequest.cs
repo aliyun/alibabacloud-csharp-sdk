@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete all tags that are added to the bastion host.</para>
+        /// <para>Specifies whether to remove all tags from the Bastionhost instance.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify TagKey.N, the value of this parameter can only be <b>false</b>, which indicates that only a specified tag is deleted.</description></item>
-        /// <item><description>If you do not specify TagKey.N and the value of this parameter is <b>true</b>, all tags are deleted. If you do not specify TagKey.N and the value of this parameter is <b>false</b>, no tags are deleted.</description></item>
+        /// <item><description><para>If you specify \<c>TagKey.N\\</c>, you must set \<c>All\\</c> to <b>false</b> to remove specific tags.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify \<c>TagKey.N\\</c>, set \<c>All\\</c> to <b>true</b> to remove all tags. If you set \<c>All\\</c> to <b>false</b>, no tags are removed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host to query.</para>
+        /// <para>The ID of the region where the Bastionhost instance resides.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
@@ -38,10 +40,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of IDs of bastion hosts.</para>
-        /// <para>Valid values: 1 to 20.</para>
+        /// <para>The ID of the instance.</para>
+        /// <para>The value of N can be from 1 to 20.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the ID of the Bastionhost instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The type of the resource.</para>
-        /// <para>Set the value to <b>INSTANCE</b>, which indicates that the resource is a bastion host.</para>
+        /// <para>The only valid value is <b>INSTANCE</b>. This value indicates a Bastionhost instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,8 +64,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The key of tag N.</para>
-        /// <para>Valid values of N: 1 to 20.</para>
+        /// <para>The key of the tag.</para>
+        /// <para>The value of N can be from 1 to 20.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

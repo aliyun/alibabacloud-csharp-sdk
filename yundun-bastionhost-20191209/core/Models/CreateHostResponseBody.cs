@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the host.</para>
+        /// <para>The ID of the new host.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListNetworkDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The network domains that are returned.</para>
+        /// <para>The list of network domains.</para>
         /// </summary>
         [NameInMap("NetworkDomains")]
         [Validation(Required=false)]
         public List<ListNetworkDomainsResponseBodyNetworkDomains> NetworkDomains { get; set; }
         public class ListNetworkDomainsResponseBodyNetworkDomains : TeaModel {
             /// <summary>
-            /// <para>The remarks of the network domain.</para>
+            /// <para>The comments on the network domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the network domain is built-in.</para>
+            /// <para>Indicates whether the network domain is a built-in domain.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: no</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? Default { get; set; }
 
             /// <summary>
-            /// <para>The network domain ID.</para>
+            /// <para>The ID of the network domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -61,10 +63,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string NetworkDomainName { get; set; }
 
             /// <summary>
-            /// <para>The connection mode of the network domain. Valid values:</para>
+            /// <para>The type of the network domain. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Direct</b></description></item>
-            /// <item><description><b>Proxy</b></description></item>
+            /// <item><description><para><b>Direct</b>: direct connection</para>
+            /// </description></item>
+            /// <item><description><para><b>Proxy</b>: proxy connection</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,6 +78,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string NetworkDomainType { get; set; }
 
+            /// <summary>
+            /// <para>The information about the proxy servers.</para>
+            /// </summary>
             [NameInMap("ProxiesState")]
             [Validation(Required=false)]
             public List<ListNetworkDomainsResponseBodyNetworkDomainsProxiesState> ProxiesState { get; set; }
@@ -81,8 +88,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <summary>
                 /// <para>The node type of the proxy server. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Master</b>: primary proxy server.</description></item>
-                /// <item><description><b>Slave</b>: secondary proxy server.</description></item>
+                /// <item><description><para><b>Master</b>: the master proxy server</para>
+                /// </description></item>
+                /// <item><description><para><b>Slave</b>: the slave proxy server</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -93,10 +102,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The status of the proxy server.</para>
+                /// <para>The status of the proxy server. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Available</b></description></item>
-                /// <item><description><b>Unavailable</b></description></item>
+                /// <item><description><para><b>Available</b></para>
+                /// </description></item>
+                /// <item><description><para><b>Unavailable</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -111,7 +122,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -121,7 +132,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of network domains that are returned.</para>
+        /// <para>The total number of network domains.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
             /// <summary>
             /// <para>The error message that is returned.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

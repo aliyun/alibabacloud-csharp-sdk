@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <para>The name of the host group that you want to query. Only exact match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Host group 1</para>
+        /// <para>HostGroup1</para>
         /// </summary>
         [NameInMap("HostGroupName")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the bastion host to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to query the bastion host ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>We recommend that you do not leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

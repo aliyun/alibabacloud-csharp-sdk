@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token for starting the next query.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6EwFJmScBXFFC3nf.9Rq7HzA7APx7GWLbkZbjHrR6Pq39w</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of instances.</para>
+        /// <para>The resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bastionhost-cn-78v1gcxxxxx</para>
@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
-        /// <para>Set the value to INSTANCE, which indicates that the resource is a Bastionhost instance.</para>
+        /// <para>The type of resource.</para>
+        /// <para>The only valid value is INSTANCE, which indicates a Bastionhost instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.</para>
+            /// <para>The tag key.</para>
             /// <para>Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.</para>
+            /// <para>The tag value.</para>
             /// <para>Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>

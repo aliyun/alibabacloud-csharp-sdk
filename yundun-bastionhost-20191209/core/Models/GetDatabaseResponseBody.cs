@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The address type of the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Public</description></item>
-            /// <item><description>Private</description></item>
+            /// <item><description><para>Public</para>
+            /// </description></item>
+            /// <item><description><para>Private</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +95,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The database engine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>mysql</b></description></item>
-            /// <item><description><b>sqlserver</b></description></item>
-            /// <item><description><b>postgresql</b></description></item>
-            /// <item><description><b>oracle</b></description></item>
+            /// <item><description><para><b>mysql</b></para>
+            /// </description></item>
+            /// <item><description><para><b>sqlserver</b></para>
+            /// </description></item>
+            /// <item><description><para><b>postgresql</b></para>
+            /// </description></item>
+            /// <item><description><para><b>oracle</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,9 +125,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The database type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Local</b>: on-premises database.</description></item>
-            /// <item><description><b>Rds</b>: ApsaraDB RDS instance.</description></item>
-            /// <item><description><b>PolarDB</b>: PolarDB cluster.</description></item>
+            /// <item><description><para><b>Local</b>: on-premises database.</para>
+            /// </description></item>
+            /// <item><description><para><b>Rds</b>: ApsaraDB RDS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>PolarDB</b>: PolarDB cluster.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,8 +166,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The status of the database. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b></description></item>
-            /// <item><description><b>Release</b></description></item>
+            /// <item><description><para><b>Normal</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Release</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

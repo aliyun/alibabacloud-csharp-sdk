@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListOperationHostsRequest : TeaModel {
         /// <summary>
-        /// <para>The address of the host that you want to query. You can set this parameter to a domain name or an IP address. Only exact match is supported.</para>
+        /// <para>The address of the host. You can specify a domain name or an IP address. Only exact matches are supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.162.172.132</para>
+        /// <para>10.162.XX.XX</para>
         /// </summary>
         [NameInMap("HostAddress")]
         [Validation(Required=false)]
         public string HostAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the host that you want to query. Only exact match is supported.</para>
+        /// <para>The name of the host. Only exact matches are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the host that you want to query. Valid values:</para>
+        /// <para>The operating system of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Linux</b></description></item>
-        /// <item><description><b>Windows</b></description></item>
+        /// <item><description><para><b>Linux</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Windows</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OSType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The number of the page to return. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,10 +70,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.\
-        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The number of entries to return on each page.<br> The maximum value is 100. The default value is 20. If you do not specify this parameter, the default value is used.<br></para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Specify a value for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,9 +83,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The ID of the region where the Bastionhost instance resides.</para>
         /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about regions and zones, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -95,10 +96,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The source of the host that you want to query. Valid values:</para>
+        /// <para>The source of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Local</b></description></item>
-        /// <item><description><b>Ecs</b></description></item>
+        /// <item><description><para><b>Local</b>: a local host</para>
+        /// </description></item>
+        /// <item><description><para><b>Ecs</b>: an ECS instance</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,7 +112,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Elastic Compute Service (ECS) instance. Exact match is supported.</para>
+        /// <para>The ID of the ECS instance. Only exact matches are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp19ienyt0yax748****</para>
@@ -119,10 +122,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string SourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the host that you want to query. Valid values:</para>
+        /// <para>The state of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>Release</b></description></item>
+        /// <item><description><para><b>Normal</b>: The host is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Release</b>: The host is released.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

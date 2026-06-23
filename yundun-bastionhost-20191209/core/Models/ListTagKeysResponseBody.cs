@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The returned page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50177258-E817-4D2F-A5C6-3FD7BC4806E3</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of tags.</para>
+        /// <para>An array of tag keys.</para>
         /// </summary>
         [NameInMap("TagKeys")]
         [Validation(Required=false)]
         public List<ListTagKeysResponseBodyTagKeys> TagKeys { get; set; }
         public class ListTagKeysResponseBodyTagKeys : TeaModel {
             /// <summary>
-            /// <para>The total number of tag keys.</para>
+            /// <para>The number of resources with this tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public int? TagCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the tag key.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key2</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The total number of tags returned.</para>
+        /// <para>The total number of tag keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

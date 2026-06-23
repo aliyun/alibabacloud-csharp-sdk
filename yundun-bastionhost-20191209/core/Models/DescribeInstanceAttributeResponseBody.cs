@@ -10,25 +10,31 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstanceAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The attribute information about the bastion host.</para>
+        /// <para>The attributes of the instance.</para>
         /// </summary>
         [NameInMap("InstanceAttribute")]
         [Validation(Required=false)]
         public DescribeInstanceAttributeResponseBodyInstanceAttribute InstanceAttribute { get; set; }
         public class DescribeInstanceAttributeResponseBodyInstanceAttribute : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether the application O\&amp;M module is enabled. Valid values are <c>Enable</c> and <c>Disable</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enable</para>
+            /// </summary>
             [NameInMap("AppOperationModule")]
             [Validation(Required=false)]
             public string AppOperationModule { get; set; }
 
             /// <summary>
-            /// <para>The IDs of authorized security groups.</para>
+            /// <para>A list of authorized security group IDs.</para>
             /// </summary>
             [NameInMap("AuthorizedSecurityGroups")]
             [Validation(Required=false)]
             public List<string> AuthorizedSecurityGroups { get; set; }
 
             /// <summary>
-            /// <para>The total bandwidth of the bastion host.</para>
+            /// <para>The total bandwidth of the Bastionhost instance, in Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth plan ID.</para>
+            /// <para>The extra bandwidth package of the Bastionhost instance, in Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -48,7 +54,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string BandwidthPackage { get; set; }
 
             /// <summary>
-            /// <para>The status of the database O&amp;M feature.</para>
+            /// <para>The status of the database O\&amp;M feature.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Enable</b>: The database O\&amp;M feature is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disable</b>: The database O\&amp;M feature is disabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Disable</para>
@@ -59,13 +71,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
             /// <summary>
             /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test API</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Elastic Network Interface (ENI).</para>
+            /// <para>The ID of the elastic network interface (ENI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp1455jrzwm7moaxxxxx</para>
@@ -75,7 +90,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string EniInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance expires.</para>
+            /// <para>The expiration timestamp, in milliseconds, of the Bastionhost instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1578326400000</para>
@@ -84,10 +99,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the Bastionhost instance is integrated with a Hardware Security Module (HSM).</para>
+            /// </summary>
             [NameInMap("HSMModule")]
             [Validation(Required=false)]
             public string HSMModule { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the IDaaS integration module is enabled. Valid values are <c>Enable</c> and <c>Disable</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enable</para>
+            /// </summary>
             [NameInMap("IDaaSModule")]
             [Validation(Required=false)]
             public string IDaaSModule { get; set; }
@@ -105,13 +129,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PENDING: The instance is not initialized.</description></item>
-            /// <item><description>CREATING: The instance is being created.</description></item>
-            /// <item><description>RUNNING: The instance is running.</description></item>
-            /// <item><description>EXPIRED: The instance expired.</description></item>
-            /// <item><description>CREATE_FAILED: The instance fails to be created.</description></item>
-            /// <item><description>UPGRADING: The configurations of the instance are being changed.</description></item>
-            /// <item><description>UPGRADE_FAILED: The configurations of the instance fail to be changed.</description></item>
+            /// <item><description><para><b>PENDING</b>: The instance is being initialized.</para>
+            /// </description></item>
+            /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The instance is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>EXPIRED</b>: The instance has expired.</para>
+            /// </description></item>
+            /// <item><description><para><b>CREATE_FAILED</b>: Instance creation failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>UPGRADING</b>: The instance is being upgraded.</para>
+            /// </description></item>
+            /// <item><description><para><b>UPGRADE_FAILED</b>: Instance upgrade failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,25 +153,31 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint.</para>
+            /// <para>The public domain name of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>drawvxalwb-public.bastionhost.aliyuncs.com</para>
+            /// <para>******lwb-public.bastionhost.aliyuncs.com</para>
             /// </summary>
             [NameInMap("InternetEndpoint")]
             [Validation(Required=false)]
             public string InternetEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The private endpoint.</para>
+            /// <para>The internal endpoint of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>drawvxalwb.bastionhost.aliyuncs.com</para>
+            /// <para>******xalwb.bastionhost.aliyuncs.com</para>
             /// </summary>
             [NameInMap("IntranetEndpoint")]
             [Validation(Required=false)]
             public string IntranetEndpoint { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the instance is integrated with Key Management Service (KMS) and Secrets Manager. Valid values are <c>Enable</c> and <c>Disable</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enable</para>
+            /// </summary>
             [NameInMap("KmsSecretModule")]
             [Validation(Required=false)]
             public string KmsSecretModule { get; set; }
@@ -156,10 +193,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string LicenseCode { get; set; }
 
             /// <summary>
-            /// <para>The status of the automatic password change feature.</para>
+            /// <para>The status of the password change feature.</para>
             /// <list type="bullet">
-            /// <item><description><b>Enable</b></description></item>
-            /// <item><description><b>Disable</b></description></item>
+            /// <item><description><para><b>Enable</b>: The feature is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disable</b>: The feature is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,10 +209,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ModifyPasswordModule { get; set; }
 
             /// <summary>
-            /// <para>The status of the network domain feature.</para>
+            /// <para>The status of the network domain proxy feature.</para>
             /// <list type="bullet">
-            /// <item><description><b>Enable</b></description></item>
-            /// <item><description><b>Disable</b></description></item>
+            /// <item><description><para><b>Enable</b>: The network domain proxy feature is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disable</b>: The network domain proxy feature is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,16 +225,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string NetworkProxyModule { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the O&amp;M ports of the bastion host.</para>
+            /// <para>The O\&amp;M ports of the Bastionhost instance.</para>
             /// </summary>
             [NameInMap("Ports")]
             [Validation(Required=false)]
             public List<DescribeInstanceAttributeResponseBodyInstanceAttributePorts> Ports { get; set; }
             public class DescribeInstanceAttributeResponseBodyInstanceAttributePorts : TeaModel {
                 /// <summary>
-                /// <para>The custom port.</para>
+                /// <para>The custom O\&amp;M port.</para>
                 /// <remarks>
-                /// <para>Only the SSH and RDP ports can be changed. If no custom O\&amp;M port is specified for the bastion host, the value of StandardPort is returned.</para>
+                /// <para>Only SSH and RDP ports can be customized. If no custom port is set, this parameter returns the value of the <c>StandardPort</c> parameter.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -204,11 +245,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public int? CustomPort { get; set; }
 
                 /// <summary>
-                /// <para>The standard port of the bastion host. Valid values:</para>
+                /// <para>The standard O\&amp;M port number. The following are the default standard ports for specific protocols:</para>
                 /// <list type="bullet">
-                /// <item><description><b>SSH</b>: 60022.</description></item>
-                /// <item><description><b>RDP</b>: 63389.</description></item>
-                /// <item><description><b>HTTPS</b>: 443.</description></item>
+                /// <item><description><para><b>SSH</b>: 60022</para>
+                /// </description></item>
+                /// <item><description><para><b>RDP</b>: 63389</para>
+                /// </description></item>
+                /// <item><description><para><b>HTTPS</b>: 443</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -221,35 +265,41 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// <para>An array that consists of the egress private IP addresses of the bastion host.</para>
+            /// <para>A list of private egress IP addresses of the Bastionhost instance.</para>
             /// </summary>
             [NameInMap("PrivateExportIps")]
             [Validation(Required=false)]
             public List<string> PrivateExportIps { get; set; }
 
             /// <summary>
-            /// <para>The private IP addresses that are allowed to access the instance.</para>
+            /// <para>The private whitelist of the instance.</para>
             /// </summary>
             [NameInMap("PrivateWhiteList")]
             [Validation(Required=false)]
             public List<string> PrivateWhiteList { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the egress public IP addresses of the bastion host.</para>
+            /// <para>A list of public egress IP addresses of the Bastionhost instance.</para>
             /// </summary>
             [NameInMap("PublicExportIps")]
             [Validation(Required=false)]
             public List<string> PublicExportIps { get; set; }
 
             /// <summary>
-            /// <para>The public IP address.</para>
+            /// <para>A list of public IP addresses of the Bastionhost instance.</para>
             /// </summary>
             [NameInMap("PublicIps")]
             [Validation(Required=false)]
             public List<string> PublicIps { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Bastionhost instance can be accessed over the Internet.</para>
+            /// <para>Indicates whether the Bastionhost instance is accessible over the public network. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: The Bastionhost instance is accessible over the public network.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The Bastionhost instance is not accessible over the public network.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -259,18 +309,24 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public bool? PublicNetworkAccess { get; set; }
 
             /// <summary>
-            /// <para>The public IP addresses that are allowed to access the instance.</para>
+            /// <para>The public whitelist of the Bastionhost instance.</para>
             /// </summary>
             [NameInMap("PublicWhiteList")]
             [Validation(Required=false)]
             public List<string> PublicWhiteList { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the multi-account module is enabled. Valid values are <c>Enable</c> and <c>Disable</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enable</para>
+            /// </summary>
             [NameInMap("RDModule")]
             [Validation(Required=false)]
             public string RDModule { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance.</para>
+            /// <para>The ID of the region where the Bastionhost instance is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -280,36 +336,51 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the instance belongs.</para>
+            /// <para>The ID of the instance\&quot;s resource group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-aekzc427dbl2shy</para>
+            /// <para>rg-aekzc427db******</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
+            /// <summary>
+            /// <para>A list of routing rules for the Bastionhost instance.</para>
+            /// </summary>
             [NameInMap("RouterRules")]
             [Validation(Required=false)]
             public List<string> RouterRules { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the script-based O\&amp;M module is enabled. Valid values are <c>Enable</c> and <c>Disable</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Enable</para>
+            /// </summary>
             [NameInMap("ScriptDeliverModule")]
             [Validation(Required=false)]
             public string ScriptDeliverModule { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the security groups to which the instance belongs.</para>
+            /// <para>A list of the instance\&quot;s security group IDs.</para>
             /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the standby VSwitch for the Bastionhost instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-uf6cmnae7hu5****</para>
+            /// </summary>
             [NameInMap("SlaveVswitchId")]
             [Validation(Required=false)]
             public string SlaveVswitchId { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance started.</para>
+            /// <para>The timestamp, in milliseconds, when the Bastionhost instance was purchased or renewed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1577681345000</para>
@@ -319,7 +390,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The storage capacity of the bastion host. Unit: bytes.</para>
+            /// <para>The total storage capacity of the Bastionhost instance, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2199023255552</para>
@@ -329,7 +400,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? Storage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC to which the instance belongs.</para>
+            /// <para>The ID of the instance\&quot;s Virtual Private Cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1c85tzgqu1bf5bxxxxx</para>
@@ -339,7 +410,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the instance connects.</para>
+            /// <para>The ID of the instance\&quot;s VSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1xfwzzfti0kjbfxxxxx</para>
@@ -351,8 +422,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The status of the web terminal.</para>
             /// <list type="bullet">
-            /// <item><description><b>Enable</b></description></item>
-            /// <item><description><b>Disable</b></description></item>
+            /// <item><description><para><b>Enable</b>: Supports web-based remote connections.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disable</b>: Does not support web-based remote connections.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -362,14 +435,29 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string WebTerminalModule { get; set; }
 
+            /// <summary>
+            /// <para>The configured IP address whitelist policies.</para>
+            /// </summary>
             [NameInMap("WhiteListPolicies")]
             [Validation(Required=false)]
             public List<DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies> WhiteListPolicies { get; set; }
             public class DescribeInstanceAttributeResponseBodyInstanceAttributeWhiteListPolicies : TeaModel {
+                /// <summary>
+                /// <para>The description of the whitelist rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>description</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
+                /// <summary>
+                /// <para>An IP address or CIDR block in the whitelist.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>94.74.xx.xx/32</para>
+                /// </summary>
                 [NameInMap("Entry")]
                 [Validation(Required=false)]
                 public string Entry { get; set; }
@@ -379,7 +467,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>082FAB35-6AB9-4FD5-8750-D36673548E76</para>

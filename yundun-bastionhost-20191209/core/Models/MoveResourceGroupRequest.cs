@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the bastion host is moved.</para>
+        /// <para>The ID of the destination resource group.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the resource group ID of the bastion host.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the resource group ID of the Bastionhost instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,9 +35,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host for which you want to change the resource group.</para>
+        /// <para>The ID of the Bastionhost instance whose resource group you want to change.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the ID of the Bastionhost instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>INSTANCE</b>, which indicates that the resource is a bastion host.</para>
+        /// <para>The resource type. Set the value to <b>INSTANCE</b>, which indicates that the resource is a Bastionhost instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <summary>
                 /// <para>The scope of database accounts to which the control policy applies. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>All</b>: The control policy applies to all database accounts of the database.</description></item>
-                /// <item><description><b>AccountId</b>: The control policy applies to specified database accounts of the database.</description></item>
+                /// <item><description><para><b>All</b>: The control policy applies to all database accounts of the database.</para>
+                /// </description></item>
+                /// <item><description><para><b>AccountId</b>: The control policy applies to specified database accounts of the database.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -73,8 +75,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <summary>
                 /// <para>The scope of asset accounts to which the control policy applies. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>All</b>: The control policy applies to all accounts in the asset group.</description></item>
-                /// <item><description><b>AccountName</b>: The control policy applies to specified accounts in the asset group.</description></item>
+                /// <item><description><para><b>All</b>: The control policy applies to all accounts in the asset group.</para>
+                /// </description></item>
+                /// <item><description><para><b>AccountName</b>: The control policy applies to specified accounts in the asset group.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -106,8 +110,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <summary>
                 /// <para>The scope of host accounts to which the control policy applies. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>All</b>: The control policy applies to all accounts of the host.</description></item>
-                /// <item><description><b>AccountId</b>: The control policy applies to specified accounts of the host.</description></item>
+                /// <item><description><para><b>All</b>: The control policy applies to all accounts of the host.</para>
+                /// </description></item>
+                /// <item><description><para><b>AccountId</b>: The control policy applies to specified accounts of the host.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

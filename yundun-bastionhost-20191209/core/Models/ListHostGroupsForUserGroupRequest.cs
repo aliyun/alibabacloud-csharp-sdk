@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>Specifies the category of the host group that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Authorized</b>: queries the host groups that the user group is authorized to manage. This is the default value.</description></item>
-        /// <item><description><b>Unauthorized</b>: queries the host groups that the user group is not authorized to manage.</description></item>
+        /// <item><description><para><b>Authorized</b>: queries the host groups that the user group is authorized to manage. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>Unauthorized</b>: queries the host groups that the user group is not authorized to manage.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.\
+        /// <para>The number of entries to return on each page.<br>
         /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
         /// <remarks>
         /// <para>We recommend that you do not leave this parameter empty.</para>

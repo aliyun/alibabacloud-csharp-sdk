@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The number of users in the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5</para>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("MemberCount")]
             [Validation(Required=false)]

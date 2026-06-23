@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>Indicates whether a password is configured for the host account.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,8 +85,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The protocol that is used by the host account.</para>
             /// <list type="bullet">
-            /// <item><description><b>SSH</b></description></item>
-            /// <item><description><b>RDP</b></description></item>
+            /// <item><description><para><b>SSH</b></para>
+            /// </description></item>
+            /// <item><description><para><b>RDP</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

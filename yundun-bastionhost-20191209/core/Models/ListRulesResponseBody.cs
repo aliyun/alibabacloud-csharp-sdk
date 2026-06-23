@@ -79,8 +79,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The state of the authorization rule.</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b></description></item>
-            /// <item><description><b>Disabled</b></description></item>
+            /// <item><description><para><b>Enabled</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Disabled</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

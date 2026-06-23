@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ResetHostAccountCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the logon credential that you want to delete. Valid values:</para>
+        /// <para>The type of logon credential to clear. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Password</b></description></item>
-        /// <item><description><b>PrivateKey</b></description></item>
+        /// <item><description><para><b>Password</b>: The password.</para>
+        /// </description></item>
+        /// <item><description><para><b>PrivateKey</b>: The SSH private key.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +27,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string CredentialType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the host account for which the logon credential is to be deleted.</para>
+        /// <para>The ID of the host account. The logon credential of this account will be cleared.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the ID of the host account.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,23 +41,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostAccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host from which you want to delete the logon credential for the host account.</para>
+        /// <para>The ID of the Bastionhost instance. The instance contains the host account.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>bastionhost-cn-st220aw****</para>
+        /// <para>bastionhost-cn-rp640dg****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host from which you want to delete the logon credential for the host account.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For information about region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

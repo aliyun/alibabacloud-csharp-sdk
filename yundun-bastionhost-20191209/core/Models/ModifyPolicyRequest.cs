@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
     public class ModifyPolicyRequest : TeaModel {
         /// <summary>
         /// <para>The new remarks of the control policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

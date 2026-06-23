@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ConfigInstanceWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the bastion host for which you want to configure a whitelist of public IP addresses.</para>
+        /// <para>The ID of the Bastionhost instance to configure.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist that you want to configure.</para>
+        /// <para>The list of IP addresses to add to the whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.162.XX.XX</para>
@@ -43,14 +43,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public List<string> WhiteList { get; set; }
 
+        /// <summary>
+        /// <para>The policies for the public IP address whitelist.</para>
+        /// </summary>
         [NameInMap("WhiteListPolicies")]
         [Validation(Required=false)]
         public List<ConfigInstanceWhiteListRequestWhiteListPolicies> WhiteListPolicies { get; set; }
         public class ConfigInstanceWhiteListRequestWhiteListPolicies : TeaModel {
+            /// <summary>
+            /// <para>The description of this whitelist rule.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The IP addresses to add to the whitelist. You can specify up to 50 IP addresses, separated by a comma.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.162.XX.XX,192.168.XX.XX</para>
+            /// </summary>
             [NameInMap("Entry")]
             [Validation(Required=false)]
             public string Entry { get; set; }

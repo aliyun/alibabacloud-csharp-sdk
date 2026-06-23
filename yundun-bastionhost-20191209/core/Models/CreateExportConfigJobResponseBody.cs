@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateExportConfigJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the configuration backup export task.</para>
+        /// <remarks>
+        /// <para>You can call the GetExportConfigJob operation to obtain the details of this task. Make sure to record the task ID.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +23,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier that Alibaba Cloud generates for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ListHostsForUserGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The hosts returned.</para>
+        /// <para>A list of hosts.</para>
         /// </summary>
         [NameInMap("Hosts")]
         [Validation(Required=false)]
@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The address type of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Public</b>: public endpoint</description></item>
-            /// <item><description><b>Private</b>: internal endpoint</description></item>
+            /// <item><description><para><b>Public</b>: a public IP address</para>
+            /// </description></item>
+            /// <item><description><para><b>Private</b>: a private IP address</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string ActiveAddressType { get; set; }
 
             /// <summary>
-            /// <para>The description of the host.</para>
+            /// <para>The remarks of the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The internal endpoint of the host. The value is a domain name or an IP address.</para>
+            /// <para>The private IP address of the host. This can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPrivateAddress { get; set; }
 
             /// <summary>
-            /// <para>The public endpoint of the host. The value is a domain name or an IP address.</para>
+            /// <para>The public IP address of the host. This can be a domain name or an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.158.XX.XX</para>
@@ -81,10 +83,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostPublicAddress { get; set; }
 
             /// <summary>
-            /// <para>The operating system of the host. Valid values:</para>
+            /// <para>The OS type of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Linux</b></description></item>
-            /// <item><description><b>Windows</b></description></item>
+            /// <item><description><para><b>Linux</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Windows</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of hosts returned.</para>
+        /// <para>The total number of hosts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

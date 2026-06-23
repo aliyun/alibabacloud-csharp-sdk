@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID of the bastion hosts to which you want to create and add tags.</para>
+        /// <para>The ID of the region where the Bastionhost instance resides.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of IDs of bastion hosts.</para>
-        /// <para>Valid values: 1 to 20.</para>
+        /// <para>The IDs of the Bastionhost instances. You can specify up to 20 instance IDs.</para>
+        /// <para>N can be from 1 to 20.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query IDs of bastion hosts.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the IDs of Bastionhost instances.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 
         /// <summary>
         /// <para>The type of the resource.</para>
-        /// <para>Set the value to <b>INSTANCE</b>, which indicates that the resource is a bastion host.</para>
+        /// <para>Set the value to <c>INSTANCE</c>. This value indicates a Bastionhost instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,18 +51,20 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags to add to the instances. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the bastion host. You can specify up to 20 tags for the bastion host.</para>
+            /// <para>The key of the tag.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>Thekey cannot be an empty string. The key can be up to 128 characters in length. </description></item>
-            /// <item><description>It cannot start with <b>aliyun</b> or <b>acs:</b>, and cannot contain <b>http://</b> or <b>https://</b>.</description></item>
+            /// <item><description><para>The tag key cannot be an empty string. It can be up to 128 characters in length.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key cannot start with <b>aliyun</b> or <b>acs:</b>. It cannot contain <b>http\://</b> or <b>https\://</b>.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -74,12 +76,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the bastion host.\
-            /// You can specify up to 20 tags for the bastion host.</para>
+            /// <para>The value of the tag.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>The value can be a string of up to 128 characters or an empty string.</description></item>
-            /// <item><description>It cannot start with <b>aliyun</b> or <b>acs:</b>, and cannot contain <b>http://</b> or <b>https://</b>.</description></item>
+            /// <item><description><para>The tag value can be an empty string. It can be up to 128 characters in length.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value cannot start with <b>aliyun</b> or <b>acs:</b>. It cannot contain <b>http\://</b> or <b>https\://</b>.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 

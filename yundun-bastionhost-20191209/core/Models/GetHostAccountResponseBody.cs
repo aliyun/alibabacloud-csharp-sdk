@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class GetHostAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the host account that was queried.</para>
+        /// <para>The detailed information about the queried host account.</para>
         /// </summary>
         [NameInMap("HostAccount")]
         [Validation(Required=false)]
         public GetHostAccountResponseBodyHostAccount HostAccount { get; set; }
         public class GetHostAccountResponseBodyHostAccount : TeaModel {
             /// <summary>
-            /// <para>Indicates whether a password is configured for the host account. Valid values:</para>
+            /// <para>Indicates whether a password is set for the host account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: A password is set.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: No password is set.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the shared key.</para>
+            /// <para>The ID of the shared key for the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the shared key.</para>
+            /// <para>The name of the shared key for the host.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string HostShareKeyName { get; set; }
 
             /// <summary>
-            /// <para>The fingerprint of the private key.</para>
+            /// <para>The fingerprint information of the private key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fe:ca:37:42:30:00:9d:95:e6:73:e5:b0:32:0a:<b>:</b></para>
@@ -90,15 +92,32 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string PrivateKeyFingerprint { get; set; }
 
+            /// <summary>
+            /// <para>The permission type of the account.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Privileged</b>: Privileged account</para>
+            /// </description></item>
+            /// <item><description><para><b>Normal</b>: Regular account</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is supported only in V3.2.47 and later.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal</para>
+            /// </summary>
             [NameInMap("PrivilegeType")]
             [Validation(Required=false)]
             public string PrivilegeType { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used by the host. Valid values:</para>
+            /// <para>The protocol name of the host account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SSH</b></description></item>
-            /// <item><description><b>RDP</b></description></item>
+            /// <item><description><para><b>SSH</b></para>
+            /// </description></item>
+            /// <item><description><para><b>RDP</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,6 +127,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             [Validation(Required=false)]
             public string ProtocolName { get; set; }
 
+            /// <summary>
+            /// <para>The password rotation mode of the account.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Privileged</b>: Use a privileged account to rotate passwords</para>
+            /// </description></item>
+            /// <item><description><para><b>Self</b>: Do not use a privileged account to rotate passwords</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is supported only in V3.2.47 and later.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Privileged</para>
+            /// </summary>
             [NameInMap("RotationMode")]
             [Validation(Required=false)]
             public string RotationMode { get; set; }
@@ -115,7 +149,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The unique identifier generated by Alibaba Cloud for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>

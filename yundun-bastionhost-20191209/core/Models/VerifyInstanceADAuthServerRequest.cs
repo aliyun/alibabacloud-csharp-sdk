@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class VerifyInstanceADAuthServerRequest : TeaModel {
         /// <summary>
+        /// <para>The account of the server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Account { get; set; }
 
         /// <summary>
+        /// <para>The Base DN.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string BaseDN { get; set; }
 
         /// <summary>
+        /// <para>The domain on the Active Directory server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The filter condition for users.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(objectClass=top)</para>
         /// </summary>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Filter { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +64,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether SSL is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: supported</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: not supported</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string IsSSL { get; set; }
 
         /// <summary>
+        /// <para>The password of the server account.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -76,6 +91,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The port.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,6 +102,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Port { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -94,6 +112,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The address of the server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,6 +123,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Server { get; set; }
 
         /// <summary>
+        /// <para>The address of the standby server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
         /// </summary>

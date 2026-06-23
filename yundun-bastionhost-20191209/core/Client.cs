@@ -80,6 +80,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
                 {"cn-zhengzhou-nebula-1", "yundun-bastionhost.aliyuncs.com"},
                 {"eu-west-1-oxs", "yundun-bastionhost.aliyuncs.com"},
                 {"rus-west-1-pop", "yundun-bastionhost.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "yundun-bastionhost.aliyuncs.com"},
+                {"ap-southeast-6", "bastionhost.ap-southeast-6.aliyuncs.com"},
+                {"ap-northeast-2", "bastionhost.ap-northeast-2.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("yundun-bastionhost", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -101,12 +104,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -157,12 +160,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -213,12 +216,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -237,12 +240,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval field on the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve the request to run a command of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -261,12 +264,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\&amp;M application.</para>
+        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -333,12 +336,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\&amp;M application.</para>
+        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -405,12 +408,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\&amp;M application.</para>
+        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -429,12 +432,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approves an O\\\\\\\\\\&amp;M application.</para>
+        /// <para>Approves an O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to approve an O\&amp;M application of an O\&amp;M engineer.
+        /// <para>Approves an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -602,7 +605,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
@@ -663,7 +666,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
@@ -724,7 +727,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
@@ -749,7 +752,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add one or more hosts to a host group. You can add multiple hosts to a host group to manage and grant permissions on the hosts in a centralized manner.</para>
+        /// <para>Adds multiple hosts to a host group. By adding multiple hosts to a host group, you can centrally manage these hosts and grant permissions in batch.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
@@ -769,7 +772,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加RD成员账号</para>
+        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -819,7 +822,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加RD成员账号</para>
+        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -869,7 +872,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加RD成员账号</para>
+        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -887,7 +890,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加RD成员账号</para>
+        /// <para>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -911,7 +914,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1></h1>
-        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
         /// <h1>Limit</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -973,7 +976,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1></h1>
-        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
         /// <h1>Limit</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -1035,7 +1038,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1></h1>
-        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
         /// <h1>Limit</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -1061,7 +1064,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1></h1>
-        /// <para>You can call this operation to add one or more users to a user group. After you call the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation to create a user group, you can call the AddUsersToGroup operation to add multiple users to the user group. Then, you can manage and grant permissions to the users at a time.</para>
+        /// <para>Adds one or more users to a user group. After creating a user group with the <a href="https://help.aliyun.com/document_detail/204596.html">CreateUserGroup</a> operation, use this operation to add multiple users at once for centralized permission management.</para>
         /// <h1>Limit</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -1077,6 +1080,142 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUsersToGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O&amp;M task request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllowOperationTaskApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllowOperationTaskApprovalResponse
+        /// </returns>
+        public AllowOperationTaskApprovalResponse AllowOperationTaskApprovalWithOptions(AllowOperationTaskApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApproveId))
+            {
+                query["ApproveId"] = request.ApproveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllowOperationTaskApproval",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllowOperationTaskApprovalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O&amp;M task request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllowOperationTaskApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllowOperationTaskApprovalResponse
+        /// </returns>
+        public async Task<AllowOperationTaskApprovalResponse> AllowOperationTaskApprovalWithOptionsAsync(AllowOperationTaskApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApproveId))
+            {
+                query["ApproveId"] = request.ApproveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AllowOperationTaskApproval",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AllowOperationTaskApprovalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O&amp;M task request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllowOperationTaskApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllowOperationTaskApprovalResponse
+        /// </returns>
+        public AllowOperationTaskApprovalResponse AllowOperationTaskApproval(AllowOperationTaskApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AllowOperationTaskApprovalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Approves an O&amp;M task request.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AllowOperationTaskApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AllowOperationTaskApprovalResponse
+        /// </returns>
+        public async Task<AllowOperationTaskApprovalResponse> AllowOperationTaskApprovalAsync(AllowOperationTaskApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AllowOperationTaskApprovalWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1225,7 +1364,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// <para>Grants permissions on databases and database accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1279,7 +1418,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// <para>Grants permissions on databases and database accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1333,7 +1472,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// <para>Grants permissions on databases and database accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1351,7 +1490,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a user group to manage databases and database accounts.</para>
+        /// <para>Grants permissions on databases and database accounts to a user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1513,7 +1652,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\&amp;M operations on the assets.</para>
+        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1567,7 +1706,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\&amp;M operations on the assets.</para>
+        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1621,7 +1760,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\&amp;M operations on the assets.</para>
+        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1639,7 +1778,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\&amp;M operations on the assets.</para>
+        /// <para>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2109,7 +2248,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security groups for a bastion host.</para>
+        /// <para>Configures the security groups that control inbound and outbound network traffic for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2163,7 +2302,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security groups for a bastion host.</para>
+        /// <para>Configures the security groups that control inbound and outbound network traffic for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2217,7 +2356,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security groups for a bastion host.</para>
+        /// <para>Configures the security groups that control inbound and outbound network traffic for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2235,7 +2374,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures security groups for a bastion host.</para>
+        /// <para>Configures the security groups that control inbound and outbound network traffic for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2253,15 +2392,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
+        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2315,15 +2452,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
+        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2377,15 +2512,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
+        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2403,15 +2536,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a whitelist of public IP addresses for a bastion host.</para>
+        /// <para>After enabling public network access for a Bastionhost instance, you can add IP addresses to a whitelist to control access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to configure a whitelist of public IP addresses for a bastion host. By default, a bastion host is accessible from all public IP addresses. If you want to allow the requests from specific public IP addresses, you can call this operation to add trusted IP addresses to the whitelist of the bastion host.  </para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 30 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation configures a public IP address whitelist for a Bastionhost instance. By default, instances accept traffic from all public IP addresses. To restrict access, add IP addresses to the whitelist. This ensures only traffic from whitelisted IP addresses can reach the instance.
+        /// Each user is limited to 30 queries per second (QPS) for this operation. The system throttles API calls that exceed this limit. This may affect your services, so plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2429,7 +2560,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2527,7 +2658,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2625,7 +2756,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2643,7 +2774,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports an ApsaraDB RDS for MySQL instance, ApsaraDB RDS for SQL Server instance, ApsaraDB RDS for PostgreSQL instance, PolarDB for MySQL cluster, PolarDB for PostgreSQL cluster, PolarDB for PostgreSQL (Compatible with Oracle) cluster, self-managed MySQL database, self-managed SQL Server database, self-managed PostgreSQL database, or self-managed Oracle database to a bastion host.</para>
+        /// <para>Imports a database into a Bastionhost instance for centralized O&amp;M management. Supported databases include ApsaraDB RDS, PolarDB, and self-managed MySQL, SQL Server, PostgreSQL, and Oracle databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2661,7 +2792,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2727,7 +2858,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2793,7 +2924,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2811,7 +2942,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the database.</para>
+        /// <para>After a database is created, you can create a database account for the database. After the account is created, O\\\\\\&amp;M engineers can use the account to log on to and perform O\\\\\\&amp;M operations on the database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2829,7 +2960,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration backup export task. You can run only one configuration backup export task on a bastion host at a time.</para>
+        /// <para>Creates a configuration backup export task. Only one configuration backup export task can run at a time for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2875,7 +3006,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration backup export task. You can run only one configuration backup export task on a bastion host at a time.</para>
+        /// <para>Creates a configuration backup export task. Only one configuration backup export task can run at a time for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2921,7 +3052,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration backup export task. You can run only one configuration backup export task on a bastion host at a time.</para>
+        /// <para>Creates a configuration backup export task. Only one configuration backup export task can run at a time for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2939,7 +3070,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration backup export task. You can run only one configuration backup export task on a bastion host at a time.</para>
+        /// <para>Creates a configuration backup export task. Only one configuration backup export task can run at a time for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2957,7 +3088,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost allows you to perform O\\\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\\\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3047,7 +3178,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost allows you to perform O\\\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\\\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3137,7 +3268,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost allows you to perform O\\\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\\\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3155,7 +3286,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bastionhost allows you to perform O\\\&amp;M operations on hosts from different sources, such as Alibaba Cloud Elastic Compute Service (ECS) instances, servers in on-premises data centers, and servers on other cloud platforms. Before you perform O\\\&amp;M operations on hosts by using a bastion host, you must import the hosts to the bastion host. You can call this operation to import a host to a bastion host.</para>
+        /// <para>Creates a host in a Bastionhost instance. You can import Elastic Compute Service (ECS) instances, on-premises servers, and third-party cloud servers as hosts for centralized O&amp;M management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3173,7 +3304,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the host by using the bastion host.</para>
+        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3255,7 +3386,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the host by using the bastion host.</para>
+        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3337,7 +3468,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the host by using the bastion host.</para>
+        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3355,7 +3486,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you import a host to a bastion host, you must add an account of the host to the bastion host. This way, O\\\&amp;M engineers can use the account to log on to and perform O\\\&amp;M operations on the host by using the bastion host.</para>
+        /// <para>Creates a host account for a host managed by a Bastionhost instance. After you create the host account, Operations and Maintenance (O&amp;M) engineers can use it to log on to the host through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3669,7 +3800,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3731,7 +3862,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3793,7 +3924,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3811,7 +3942,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you want to perform O\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\&amp;M operations on the assets by using the bastion host.</para>
+        /// <para>If you want to perform O\\\\\\\\\\\\&amp;M operations on assets that reside in different networks or assets that cannot communicate with the virtual private cloud (VPC) of your bastion host in a centralized manner, we recommend that you use the network domain feature of Bastionhost. You can configure a proxy server for these assets, create a network domain for a bastion host, and then connect the network domain to the proxy server. This way, you can perform O\\\\\\\\\\\\&amp;M operations on the assets by using the bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3829,7 +3960,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator turns on O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3903,7 +4034,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator turns on O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3977,7 +4108,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator turns on O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3995,7 +4126,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator turns on O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>Creates an O&amp;M ticket for a host or database that requires approval before access. If a control policy requires O&amp;M approval, you must create and get a ticket approved before you can perform O&amp;M operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4013,7 +4144,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\&amp;M security.</para>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4071,7 +4202,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\&amp;M security.</para>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4129,7 +4260,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\&amp;M security.</para>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4147,7 +4278,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\&amp;M security.</para>
+        /// <para>Configures a command control, command approval, protocol control, or access control policy to manage O\\\\\\\\\\\\&amp;M operations. This effectively prevents users from performing high-risk operations or accidental operations to ensure O\\\\\\\\\\\\&amp;M security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4370,7 +4501,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// <para>Adds local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After adding a user, O\&amp;M engineers can log on to the bastion host with that account to perform O\&amp;M operations on authorized hosts.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
         /// 
@@ -4486,7 +4617,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// <para>Adds local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After adding a user, O\&amp;M engineers can log on to the bastion host with that account to perform O\&amp;M operations on authorized hosts.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
         /// 
@@ -4602,7 +4733,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// <para>Adds local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After adding a user, O\&amp;M engineers can log on to the bastion host with that account to perform O\&amp;M operations on authorized hosts.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
         /// 
@@ -4626,7 +4757,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the CreateUser operation to add local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After a Bastionhost administrator adds a user to a bastion host, O\&amp;M engineers can log on to the bastion host as the user to perform O\&amp;M operations on the hosts that the user is authorized to manage.
+        /// <para>Adds local users, Resource Access Management (RAM) users, Active Directory (AD)-authenticated users, or Lightweight Directory Access Protocol (LDAP)-authenticated users to a bastion host. After adding a user, O\&amp;M engineers can log on to the bastion host with that account to perform O\&amp;M operations on authorized hosts.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.</para>
         /// </description>
         /// 
@@ -4650,7 +4781,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -4710,7 +4841,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -4770,7 +4901,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -4794,7 +4925,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a user group for a bastion host as an administrator. Then, you can call the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add users to the user group at a time. After you add the users to the user group, you can authorize and manage the users in a centralized manner.
+        /// <para>Creates a user group for a bastion host as an administrator. After creating the group, use the <a href="https://help.aliyun.com/document_detail/204600.html">AddUsersToGroup</a> operation to add multiple users at once, enabling centralized user authorization and management.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -4813,7 +4944,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\&amp;M client.</para>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4880,7 +5011,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\&amp;M client.</para>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4947,7 +5078,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\&amp;M client.</para>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4970,7 +5101,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\&amp;M client.</para>
+        /// <para>Creates a public key for a bastion host user and hosts the public key in the bastion host. This way, O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M engineers can use the private key that corresponds to the public key to log on to the bastion host from an O\\\\\\\\\\\\\\\\\\\\\\\\&amp;M client.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5409,7 +5540,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h2>Usage notes</h2>
         /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
         /// <remarks>
-        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
         /// </remarks>
         /// <h2>QPS Limit</h2>
         /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
@@ -5470,7 +5601,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h2>Usage notes</h2>
         /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
         /// <remarks>
-        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
         /// </remarks>
         /// <h2>QPS Limit</h2>
         /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
@@ -5531,7 +5662,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h2>Usage notes</h2>
         /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
         /// <remarks>
-        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
         /// </remarks>
         /// <h2>QPS Limit</h2>
         /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
@@ -5560,7 +5691,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <h2>Usage notes</h2>
         /// <para>This interface is used to delete individual host accounts. If a host account is no longer in use, you can invoke this interface to delete the host account for that host that has been configured on the bastion.</para>
         /// <remarks>
-        /// <para> After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.  </para>
+        /// <para>After you remove the host account, you must enter the username and password of the host when you log on to the host in Bastionhost.</para>
         /// </remarks>
         /// <h2>QPS Limit</h2>
         /// <para>The single-user QPS limit of this interface is 10 times/second. If the limit is exceeded, the API call will be stream-limited, which may affect your business, please call reasonably.</para>
@@ -5586,7 +5717,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
         /// <h3>Limits</h3>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -5643,7 +5774,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
         /// <h3>Limits</h3>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -5700,7 +5831,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
         /// <h3>Limits</h3>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -5725,7 +5856,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to delete a single host group. If you no longer need to perform O\&amp;M operations on all hosts in a host group, you can call this operation to delete the host group.</para>
+        /// <para>Deletes a single host group. If all hosts in a host group no longer need to be managed through Bastionhost, you can delete the host group using this operation.</para>
         /// <h3>Limits</h3>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -6717,13 +6848,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
@@ -6768,13 +6894,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
@@ -6819,13 +6940,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
@@ -6842,13 +6958,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attribute information about the specified bastion host. The information includes the ID and remarks of the bastion host.</para>
+        /// <para>Returns all instance attributes, such as its instance ID and description.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInstanceAttributeRequest
@@ -6865,7 +6976,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bastion hosts.</para>
+        /// <para>Retrieves a list of Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6935,7 +7046,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bastion hosts.</para>
+        /// <para>Retrieves a list of Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7005,7 +7116,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bastion hosts.</para>
+        /// <para>Retrieves a list of Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7023,7 +7134,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries bastion hosts.</para>
+        /// <para>Retrieves a list of Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7041,7 +7152,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7087,7 +7198,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7133,7 +7244,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7151,7 +7262,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions where you can create bastion hosts.</para>
+        /// <para>Queries the Alibaba Cloud regions that support Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8036,11 +8147,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DetachHostGroupAccountsFromUserGroupRequest
         /// </param>
@@ -8094,11 +8200,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <summary>
         /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
         /// 
         /// <param name="request">
         /// DetachHostGroupAccountsFromUserGroupRequest
@@ -8154,11 +8255,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DetachHostGroupAccountsFromUserGroupRequest
         /// </param>
@@ -8177,11 +8273,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <para>Revokes permissions on one or more host groups and host accounts from a user group.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// </description>
-        /// 
         /// <param name="request">
         /// DetachHostGroupAccountsFromUserGroupRequest
         /// </param>
@@ -8197,7 +8288,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables Internet access to a bastion host.</para>
+        /// <para>Disables public network access for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8243,7 +8334,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables Internet access to a bastion host.</para>
+        /// <para>Disables public network access for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8289,7 +8380,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables Internet access to a bastion host.</para>
+        /// <para>Disables public network access for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8307,7 +8398,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables Internet access to a bastion host.</para>
+        /// <para>Disables public network access for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8461,7 +8552,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables Internet access to a bastion host.</para>
+        /// <para>Enables public network access for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8507,7 +8598,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables Internet access to a bastion host.</para>
+        /// <para>Enables public network access for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8553,7 +8644,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables Internet access to a bastion host.</para>
+        /// <para>Enables public network access for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8571,7 +8662,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables Internet access to a bastion host.</para>
+        /// <para>Enables public network access for a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8725,7 +8816,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an O\\\&amp;M token.</para>
+        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8815,7 +8906,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an O\\\&amp;M token.</para>
+        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8905,7 +8996,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an O\\\&amp;M token.</para>
+        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8923,7 +9014,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for an O\\\&amp;M token.</para>
+        /// <para>Call this operation to request O&amp;M tokens for bastions or databases, which allows you to manage assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8937,6 +9028,146 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateAssetOperationTokenWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoOpsTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoOpsTaskResponse
+        /// </returns>
+        public GetAutoOpsTaskResponse GetAutoOpsTaskWithOptions(GetAutoOpsTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutoOpsTask",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutoOpsTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoOpsTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoOpsTaskResponse
+        /// </returns>
+        public async Task<GetAutoOpsTaskResponse> GetAutoOpsTaskWithOptionsAsync(GetAutoOpsTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutoOpsTask",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutoOpsTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoOpsTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoOpsTaskResponse
+        /// </returns>
+        public GetAutoOpsTaskResponse GetAutoOpsTask(GetAutoOpsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAutoOpsTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a specified O&amp;M task for an administrator.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoOpsTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoOpsTaskResponse
+        /// </returns>
+        public async Task<GetAutoOpsTaskResponse> GetAutoOpsTaskAsync(GetAutoOpsTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAutoOpsTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9213,7 +9444,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null</para>
+        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9263,7 +9494,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null</para>
+        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9313,7 +9544,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null</para>
+        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9331,7 +9562,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>null</para>
+        /// <para>Retrieves the details of a configuration export task for a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9349,7 +9580,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9399,7 +9630,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9449,7 +9680,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9467,7 +9698,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a host, such as the name, source, address, protocol, and service port of the host.</para>
+        /// <para>Retrieves the details of a host, such as the name, source, address, protocol, and service port.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9485,7 +9716,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host account.</para>
+        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9535,7 +9766,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host account.</para>
+        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9585,7 +9816,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host account.</para>
+        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9603,7 +9834,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host account.</para>
+        /// <para>Retrieves the details of a host account on a host managed by a Bastionhost instance, such as the protocol type and account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9621,7 +9852,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host group.</para>
+        /// <para>Retrieves the details of a host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9671,7 +9902,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host group.</para>
+        /// <para>Retrieves the details of a host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9721,7 +9952,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host group.</para>
+        /// <para>Retrieves the details of a host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9739,7 +9970,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified host group.</para>
+        /// <para>Retrieves the details of a host group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9899,9 +10130,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3></h3>
-        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9953,9 +10184,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3></h3>
-        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10007,9 +10238,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3></h3>
-        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10033,9 +10264,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3></h3>
-        /// <para>You can call this operation to query the settings of AD authentication on a bastion host. After you configure AD authentication on a bastion host, you can import AD-authenticated users into the bastion host. After the AD-authenticated users are imported into the bastion host, the AD-authenticated users can log on to the bastion host to perform O\&amp;M operations on servers.</para>
+        /// <para>Queries the Active Directory (AD) authentication settings of a bastion host. After you configure AD authentication, you can import AD-authenticated users into the bastion host. The imported users can then log on to the bastion host to perform O\&amp;M operations on servers.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10181,7 +10412,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage of a bastion host.</para>
+        /// <para>Queries the storage usage of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10227,7 +10458,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage of a bastion host.</para>
+        /// <para>Queries the storage usage of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10273,7 +10504,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage of a bastion host.</para>
+        /// <para>Queries the storage usage of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10291,7 +10522,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage usage of a bastion host.</para>
+        /// <para>Queries the storage usage of a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10314,9 +10545,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <para>Queries the two-factor authentication settings of a bastion host. When two-factor authentication is enabled, Bastionhost sends a verification code to a local user who logs on to the bastion host. The local user must enter a valid username, password, and verification code to log on, which reduces the security risks of account information leaks.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10367,9 +10598,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <para>Queries the two-factor authentication settings of a bastion host. When two-factor authentication is enabled, Bastionhost sends a verification code to a local user who logs on to the bastion host. The local user must enter a valid username, password, and verification code to log on, which reduces the security risks of account information leaks.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10420,9 +10651,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <para>Queries the two-factor authentication settings of a bastion host. When two-factor authentication is enabled, Bastionhost sends a verification code to a local user who logs on to the bastion host. The local user must enter a valid username, password, and verification code to log on, which reduces the security risks of account information leaks.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10445,9 +10676,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the settings of two-factor authentication on a bastion host. After you enable two-factor authentication, Bastionhost sends a verification code to a local user when the local user logs on to a bastion host. A local user can log on to the bastion host only when the local user enters the valid username and password and the verification code. This reduces the security risks caused by account information leaks.</para>
+        /// <para>Queries the two-factor authentication settings of a bastion host. When two-factor authentication is enabled, Bastionhost sends a verification code to a local user who logs on to the bastion host. The local user must enter a valid username, password, and verification code to log on, which reduces the security risks of account information leaks.</para>
         /// <h3>Limit</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation can be called up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered and your business may be affected. Take note of this limit when you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10465,7 +10696,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a network domain.</para>
+        /// <para>Retrieves the details of a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10519,7 +10750,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a network domain.</para>
+        /// <para>Retrieves the details of a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10573,7 +10804,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a network domain.</para>
+        /// <para>Retrieves the details of a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10591,7 +10822,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a network domain.</para>
+        /// <para>Retrieves the details of a specified network domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10609,7 +10840,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a control policy.</para>
+        /// <para>Gets the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10659,7 +10890,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a control policy.</para>
+        /// <para>Gets the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10709,7 +10940,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a control policy.</para>
+        /// <para>Gets the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10727,7 +10958,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a control policy.</para>
+        /// <para>Gets the details of a specified control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11153,7 +11384,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// <para>Retrieves the details of a user of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11203,7 +11434,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// <para>Retrieves the details of a user of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11253,7 +11484,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// <para>Retrieves the details of a user of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11271,7 +11502,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user of the specified bastion host.</para>
+        /// <para>Retrieves the details of a user of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11289,7 +11520,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a user group in a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11339,7 +11570,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a user group in a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11389,7 +11620,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a user group in a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11407,7 +11638,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a user group in a bastion host.</para>
+        /// <para>Retrieves the details of a user group in a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11425,7 +11656,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前主机导入 KMS 凭据</para>
+        /// <para>Imports KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11485,7 +11716,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前主机导入 KMS 凭据</para>
+        /// <para>Imports KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11545,7 +11776,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前主机导入 KMS 凭据</para>
+        /// <para>Imports KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11563,7 +11794,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前主机导入 KMS 凭据</para>
+        /// <para>Imports KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11586,7 +11817,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// <para>Queries commands pending review as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -11646,7 +11877,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// <para>Queries commands pending review as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -11706,7 +11937,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// <para>Queries commands pending review as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -11730,7 +11961,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query commands to be reviewed by a Bastionhost administrator.
+        /// <para>Queries commands pending review as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -12605,7 +12836,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12679,7 +12910,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12753,7 +12984,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12771,7 +13002,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the databases that a user group is authorized to manage.</para>
+        /// <para>Lists the databases that a user group is authorized to manage through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12789,7 +13020,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts.</para>
+        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12859,7 +13090,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts.</para>
+        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12929,7 +13160,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts.</para>
+        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12947,7 +13178,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of host accounts.</para>
+        /// <para>Lists the host accounts that are configured for a host in a Bastionhost instance. Host accounts are the credentials used by O&amp;M engineers to log on to the host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14757,7 +14988,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14831,7 +15062,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14905,7 +15136,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14923,7 +15154,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hosts that a user group is authorized or not authorized to manage.</para>
+        /// <para>Lists the authorized or unauthorized hosts for a bastion host user group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14941,7 +15172,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定主机所有可导入的 KMS 凭据</para>
+        /// <para>Lists all importable KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15003,7 +15234,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定主机所有可导入的 KMS 凭据</para>
+        /// <para>Lists all importable KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15065,7 +15296,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定主机所有可导入的 KMS 凭据</para>
+        /// <para>Lists all importable KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15083,7 +15314,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出指定主机所有可导入的 KMS 凭据</para>
+        /// <para>Lists all importable KMS secrets for a specified host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15101,7 +15332,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RD成员账号列表</para>
+        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15155,7 +15386,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RD成员账号列表</para>
+        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15209,7 +15440,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RD成员账号列表</para>
+        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15227,7 +15458,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RD成员账号列表</para>
+        /// <para>Lists the member accounts in a Resource Directory (RD).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15245,7 +15476,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network domains created in a bastion host.</para>
+        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15307,7 +15538,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network domains created in a bastion host.</para>
+        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15369,7 +15600,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network domains created in a bastion host.</para>
+        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15387,7 +15618,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the network domains created in a bastion host.</para>
+        /// <para>Lists the network domains configured in a Bastionhost instance. Network domains define the connectivity between Bastionhost and the hosts or databases that it manages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15565,7 +15796,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15643,7 +15874,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15721,7 +15952,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15739,7 +15970,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of databases that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the databases that the current Resource Access Management (RAM) user is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15917,7 +16148,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15995,7 +16226,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16073,7 +16304,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16091,7 +16322,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of hosts that the current Resource Access Management (RAM) user is authorized to manage.</para>
+        /// <para>Lists the hosts that the current Resource Access Management (RAM) user is authorized to perform O&amp;M operations on through a Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16109,13 +16340,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\\\\\\&amp;M applications to be reviewed.</para>
+        /// <para>Lists the O&amp;M requests that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
+        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16173,13 +16404,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\\\\\\&amp;M applications to be reviewed.</para>
+        /// <para>Lists the O&amp;M requests that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
+        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16237,13 +16468,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\\\\\\&amp;M applications to be reviewed.</para>
+        /// <para>Lists the O&amp;M requests that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
+        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16261,13 +16492,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\\\\\\&amp;M applications to be reviewed.</para>
+        /// <para>Lists the O&amp;M requests that require approval.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the O\&amp;M applications to be reviewed by a Bastionhost administrator.
-        /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Queries the operations and maintenance (O\&amp;M) requests that require administrator approval.
+        /// The queries per second (QPS) limit for this operation is 10 per user. Exceeding this limit triggers throttling, which can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16597,7 +16828,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to a resource.</para>
+        /// <para>Queries the tag keys on resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16655,7 +16886,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to a resource.</para>
+        /// <para>Queries the tag keys on resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16713,7 +16944,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to a resource.</para>
+        /// <para>Queries the tag keys on resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16731,7 +16962,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to a resource.</para>
+        /// <para>Queries the tag keys on resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16749,7 +16980,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added for one or more bastion hosts.</para>
+        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16811,7 +17042,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added for one or more bastion hosts.</para>
+        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16873,7 +17104,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added for one or more bastion hosts.</para>
+        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16891,7 +17122,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added for one or more bastion hosts.</para>
+        /// <para>Lists the tags that are attached to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16905,6 +17136,166 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTodoOpsTaskApprovalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTodoOpsTaskApprovalsResponse
+        /// </returns>
+        public ListTodoOpsTaskApprovalsResponse ListTodoOpsTaskApprovalsWithOptions(ListTodoOpsTaskApprovalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleType))
+            {
+                query["ScheduleType"] = request.ScheduleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTodoOpsTaskApprovals",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTodoOpsTaskApprovalsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTodoOpsTaskApprovalsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTodoOpsTaskApprovalsResponse
+        /// </returns>
+        public async Task<ListTodoOpsTaskApprovalsResponse> ListTodoOpsTaskApprovalsWithOptionsAsync(ListTodoOpsTaskApprovalsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleType))
+            {
+                query["ScheduleType"] = request.ScheduleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTodoOpsTaskApprovals",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTodoOpsTaskApprovalsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTodoOpsTaskApprovalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTodoOpsTaskApprovalsResponse
+        /// </returns>
+        public ListTodoOpsTaskApprovalsResponse ListTodoOpsTaskApprovals(ListTodoOpsTaskApprovalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTodoOpsTaskApprovalsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves pending automated O&amp;M approval requests.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTodoOpsTaskApprovalsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTodoOpsTaskApprovalsResponse
+        /// </returns>
+        public async Task<ListTodoOpsTaskApprovalsResponse> ListTodoOpsTaskApprovalsAsync(ListTodoOpsTaskApprovalsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTodoOpsTaskApprovalsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17061,7 +17452,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all public keys of the specified user.</para>
+        /// <para>Lists the SSH public keys that are configured for a Bastionhost user. Users can use these public keys for key-based authentication when logging on to hosts through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17119,7 +17510,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all public keys of the specified user.</para>
+        /// <para>Lists the SSH public keys that are configured for a Bastionhost user. Users can use these public keys for key-based authentication when logging on to hosts through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17177,7 +17568,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all public keys of the specified user.</para>
+        /// <para>Lists the SSH public keys that are configured for a Bastionhost user. Users can use these public keys for key-based authentication when logging on to hosts through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17195,7 +17586,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all public keys of the specified user.</para>
+        /// <para>Lists the SSH public keys that are configured for a Bastionhost user. Users can use these public keys for key-based authentication when logging on to hosts through Bastionhost.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17419,7 +17810,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Description</h1>
-        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <para>Locks one or more bastion host users to prevent them from performing O\&amp;M operations. If a user does not need to use a bastion host within a specific period of time, lock the user account. Locked users cannot log on to or perform O\&amp;M operations on the hosts on which they have permissions. To unlock users later, use the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -17477,7 +17868,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Description</h1>
-        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <para>Locks one or more bastion host users to prevent them from performing O\&amp;M operations. If a user does not need to use a bastion host within a specific period of time, lock the user account. Locked users cannot log on to or perform O\&amp;M operations on the hosts on which they have permissions. To unlock users later, use the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -17535,7 +17926,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Description</h1>
-        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <para>Locks one or more bastion host users to prevent them from performing O\&amp;M operations. If a user does not need to use a bastion host within a specific period of time, lock the user account. Locked users cannot log on to or perform O\&amp;M operations on the hosts on which they have permissions. To unlock users later, use the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -17561,7 +17952,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h1>Description</h1>
-        /// <para>You can call this operation to lock one or more users of a bastion host. If a user does not need to use a bastion host to perform O\&amp;M operations within a specific period of time, you can lock the user. The locked user can no longer log on to or perform O\&amp;M operations on the hosts on which the user is granted permissions. If you want to unlock the user later, you can call the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
+        /// <para>Locks one or more bastion host users to prevent them from performing O\&amp;M operations. If a user does not need to use a bastion host within a specific period of time, lock the user account. Locked users cannot log on to or perform O\&amp;M operations on the hosts on which they have permissions. To unlock users later, use the <a href="https://help.aliyun.com/document_detail/204590.html">UnlockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -18165,7 +18556,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// <para>Modifies a host account on a host managed by a Bastionhost instance. You can update the account name, password, or SSH private key used for host logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18243,7 +18634,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// <para>Modifies a host account on a host managed by a Bastionhost instance. You can update the account name, password, or SSH private key used for host logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18321,7 +18712,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// <para>Modifies a host account on a host managed by a Bastionhost instance. You can update the account name, password, or SSH private key used for host logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18339,7 +18730,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a host account, such as the username, password, and private key of the host account.</para>
+        /// <para>Modifies a host account on a host managed by a Bastionhost instance. You can update the account name, password, or SSH private key used for host logon.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18669,7 +19060,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18723,7 +19114,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18777,7 +19168,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18795,7 +19186,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the endpoint type of one or more hosts for O\\\&amp;M. Public and private IP addresses are supported.</para>
+        /// <para>Changes the endpoint type of one or more hosts for O\\\\\\\\\\\\&amp;M. Public and private IP addresses are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18813,15 +19204,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
         /// <remarks>
-        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
         /// </remarks>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
@@ -18882,15 +19273,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
         /// <remarks>
-        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
         /// </remarks>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
@@ -18951,15 +19342,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
         /// <remarks>
-        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
         /// </remarks>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
@@ -18980,15 +19371,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the port for the O\\\\\\&amp;M protocol on one or more hosts.</para>
+        /// <para>Changes the port for the O\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\&amp;M protocol on one or more hosts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Usage notes</h2>
-        /// <para>You can call this operation to change the port for the O&amp;M protocol on one or more hosts. If the standard port for the O&amp;M protocol on your host is vulnerable to attacks, you can call this operation to specify a custom port. For example, the standard port for SSH is port 22.  </para>
+        /// <para>Changes the port for the O\&amp;M protocol on one or more hosts. If the standard port for your O\&amp;M protocol is vulnerable to attacks, specify a custom port instead. For example, the standard SSH port is port 22.</para>
         /// <remarks>
-        /// <para> Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O&amp;M protocol to a reserved port.  </para>
+        /// <para>Ports 0 to 1024 are reserved for Bastionhost. Do not change the port for the O\&amp;M protocol to a reserved port.</para>
         /// </remarks>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
@@ -19009,7 +19400,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19103,7 +19494,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19197,7 +19588,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19215,7 +19606,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Active Directory (AD) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Active Directory (AD) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19233,7 +19624,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a bastion host.</para>
+        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19283,7 +19674,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a bastion host.</para>
+        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19333,7 +19724,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a bastion host.</para>
+        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19351,7 +19742,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about a bastion host.</para>
+        /// <para>Modifies the attributes of a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19369,7 +19760,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19463,7 +19854,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19557,7 +19948,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19575,7 +19966,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
+        /// <para>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21121,7 +21512,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// <para>Moves a Bastionhost instance to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21175,7 +21566,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// <para>Moves a Bastionhost instance to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21229,7 +21620,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// <para>Moves a Bastionhost instance to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21247,7 +21638,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a bastion host from one resource group to another resource group.</para>
+        /// <para>Moves a Bastionhost instance to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21265,12 +21656,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21321,12 +21712,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21377,12 +21768,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21401,12 +21792,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If an O\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
+        /// <para>If an O\\\\\\&amp;M engineer attempts to run a command specified in the Command Approval section of the Create Control Policy page, the administrator is notified to review the command in the Bastionhost console. The command can be run only after it is approved by the administrator.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation as a Bastionhost administrator to reject the request to run a command of an O\&amp;M engineer.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s command execution request as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21425,12 +21816,148 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>Rejects an O&amp;M task approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTaskApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTaskApprovalResponse
+        /// </returns>
+        public RejectOperationTaskApprovalResponse RejectOperationTaskApprovalWithOptions(RejectOperationTaskApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApproveId))
+            {
+                query["ApproveId"] = request.ApproveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectOperationTaskApproval",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectOperationTaskApprovalResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects an O&amp;M task approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTaskApprovalRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTaskApprovalResponse
+        /// </returns>
+        public async Task<RejectOperationTaskApprovalResponse> RejectOperationTaskApprovalWithOptionsAsync(RejectOperationTaskApprovalRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApproveId))
+            {
+                query["ApproveId"] = request.ApproveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectOperationTaskApproval",
+                Version = "2019-12-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectOperationTaskApprovalResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects an O&amp;M task approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTaskApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTaskApprovalResponse
+        /// </returns>
+        public RejectOperationTaskApprovalResponse RejectOperationTaskApproval(RejectOperationTaskApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RejectOperationTaskApprovalWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Rejects an O&amp;M task approval.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectOperationTaskApprovalRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectOperationTaskApprovalResponse
+        /// </returns>
+        public async Task<RejectOperationTaskApprovalResponse> RejectOperationTaskApprovalAsync(RejectOperationTaskApprovalRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RejectOperationTaskApprovalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21485,12 +22012,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21545,12 +22072,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21569,12 +22096,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If a Bastionhost administrator enables O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</para>
+        /// <para>If a Bastionhost administrator enables O\\\\\\\\\\\\&amp;M Approval on the Create Control Policy page, O\\\\\\\\\\\\&amp;M engineers can log on to assets to perform O\\\\\\\\\\\\&amp;M operations only after the administrator approves their O\\\\\\\\\\\\&amp;M applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to reject an O\&amp;M application of an O\&amp;M engineer as a Bastionhost administrator.
+        /// <para>Rejects an O\&amp;M engineer\&quot;s O\&amp;M application as a Bastionhost administrator.
         /// You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
@@ -21742,7 +22269,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
         /// <h1><a href="#qps-"></a>QPS limit</h1>
         /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
@@ -21803,7 +22330,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
         /// <h1><a href="#qps-"></a>QPS limit</h1>
         /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
@@ -21864,7 +22391,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
         /// <h1><a href="#qps-"></a>QPS limit</h1>
         /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
@@ -21889,7 +22416,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call the RemoveHostsFromGroup operation to remove multiple hosts from an asset group at a time. If you no longer need to manage some hosts in an asset group, you can call this operation to remove the hosts from the asset group.</para>
+        /// <para>Removes multiple hosts from an asset group. If certain hosts no longer need to be managed through an asset group, you can use this operation to remove them.</para>
         /// <h1><a href="#qps-"></a>QPS limit</h1>
         /// <para>You can call this API operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
         /// </description>
@@ -21909,8 +22436,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除RD成员账号</para>
+        /// <para>Removes a Resource Directory (RD) member account from a Bastionhost instance. You must remove all assets of the member account from Bastionhost before you call this operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before removing a member account, you must purge the ECS, RDS, and PolarDB instance assets that belong to the member account from Bastionhost.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveInstanceRdMemberRequest
@@ -21959,8 +22491,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除RD成员账号</para>
+        /// <para>Removes a Resource Directory (RD) member account from a Bastionhost instance. You must remove all assets of the member account from Bastionhost before you call this operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before removing a member account, you must purge the ECS, RDS, and PolarDB instance assets that belong to the member account from Bastionhost.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveInstanceRdMemberRequest
@@ -22009,8 +22546,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除RD成员账号</para>
+        /// <para>Removes a Resource Directory (RD) member account from a Bastionhost instance. You must remove all assets of the member account from Bastionhost before you call this operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before removing a member account, you must purge the ECS, RDS, and PolarDB instance assets that belong to the member account from Bastionhost.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveInstanceRdMemberRequest
@@ -22027,8 +22569,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移除RD成员账号</para>
+        /// <para>Removes a Resource Directory (RD) member account from a Bastionhost instance. You must remove all assets of the member account from Bastionhost before you call this operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before removing a member account, you must purge the ECS, RDS, and PolarDB instance assets that belong to the member account from Bastionhost.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveInstanceRdMemberRequest
@@ -22050,7 +22597,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -22111,7 +22658,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -22172,7 +22719,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -22197,7 +22744,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to remove one or more users from a user group. When users in a user group are transferred to a new position, resign, or are switched to another user group, you can call this operation to remove the users from the current user group at a time.  </para>
+        /// <para>Removes one or more users from a user group at once. Use this operation when users transfer to new positions, resign, or switch to another user group.</para>
         /// <h2>QPS limit</h2>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -22217,7 +22764,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22267,7 +22814,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22317,7 +22864,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22335,7 +22882,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews an O\\\&amp;M token for one hour.</para>
+        /// <para>Renews an O\\\\\\&amp;M token for one hour.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22353,7 +22900,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22407,7 +22954,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22461,7 +23008,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22479,7 +23026,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the logon credential of a specified host account. The logon credential can be the password or Secure Shell (SSH) private key.</para>
+        /// <para>Clears the credential (password or SSH private key) for a specified host account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22653,7 +23200,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22713,7 +23260,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -22773,7 +23320,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22791,7 +23338,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the O\&amp;M approval setting in a control policy.</para>
+        /// <para>Configures the O\\&amp;M approval setting in a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23289,7 +23836,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the Remote Desktop Protocol (RDP) options, SSH options, and SSH Fine Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23349,7 +23896,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the Remote Desktop Protocol (RDP) options, SSH options, and SSH Fine Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -23409,7 +23956,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the Remote Desktop Protocol (RDP) options, SSH options, and SSH Fine Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23427,7 +23974,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures the Remote Desktop Protocol (RDP) options, SSH options, and SSH Fine Transfer Protocol (SFTP) options for a control policy.</para>
+        /// <para>Sets the Remote Desktop Protocol (RDP), Secure Shell (SSH), and SSH File Transfer Protocol (SFTP) options for a control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23605,7 +24152,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a bastion host.</para>
+        /// <para>Starts a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23671,7 +24218,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a bastion host.</para>
+        /// <para>Starts a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23737,7 +24284,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a bastion host.</para>
+        /// <para>Starts a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23755,7 +24302,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a bastion host.</para>
+        /// <para>Starts a specified Bastionhost instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23773,7 +24320,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23827,7 +24374,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23881,7 +24428,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23899,7 +24446,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to specified bastion hosts.</para>
+        /// <para>Creates and attaches tags to one or more Bastionhost instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23922,7 +24469,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <para>Unlocks previously locked bastion host users, allowing them to resume O\&amp;M operations. Use this operation after locking users with the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -23979,7 +24526,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <para>Unlocks previously locked bastion host users, allowing them to resume O\&amp;M operations. Use this operation after locking users with the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -24036,7 +24583,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <para>Unlocks previously locked bastion host users, allowing them to resume O\&amp;M operations. Use this operation after locking users with the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -24061,7 +24608,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation to lock one or more users of a bastion host, you can call this operation to unlock the users. After the users are unlocked, the users can perform O\&amp;M operations by using the bastion host.</para>
+        /// <para>Unlocks previously locked bastion host users, allowing them to resume O\&amp;M operations. Use this operation after locking users with the <a href="https://help.aliyun.com/document_detail/204591.html">LockUsers</a> operation.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -24081,7 +24628,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// <para>Removes tags from one or more Bastionhost instances. You can remove specific tag key-value pairs or all tags at once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24139,7 +24686,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// <para>Removes tags from one or more Bastionhost instances. You can remove specific tag key-value pairs or all tags at once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24197,7 +24744,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// <para>Removes tags from one or more Bastionhost instances. You can remove specific tag key-value pairs or all tags at once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24215,7 +24762,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from the specified bastion host and deletes the tags at a time.</para>
+        /// <para>Removes tags from one or more Bastionhost instances. You can remove specific tag key-value pairs or all tags at once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24233,7 +24780,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例AD服务配置。</para>
+        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24315,7 +24862,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例AD服务配置。</para>
+        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24397,7 +24944,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例AD服务配置。</para>
+        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24415,7 +24962,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例AD服务配置。</para>
+        /// <para>Tests the connectivity to the Active Directory (AD) authentication server configured for a Bastionhost instance. Use this operation to validate your AD settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24433,7 +24980,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例LDAP服务配置。</para>
+        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24511,7 +25058,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例LDAP服务配置。</para>
+        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24589,7 +25136,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例LDAP服务配置。</para>
+        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24607,7 +25154,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>验证实例LDAP服务配置。</para>
+        /// <para>Tests the connectivity to the Lightweight Directory Access Protocol (LDAP) authentication server configured for a Bastionhost instance. Use this operation to validate your LDAP settings before you save them.</para>
         /// </summary>
         /// 
         /// <param name="request">

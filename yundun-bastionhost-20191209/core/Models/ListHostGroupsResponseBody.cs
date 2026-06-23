@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The remarks of the asset group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Description</para>
+            /// <para>Comment</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The name of the asset group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Host group 1</para>
+            /// <para>HostGroup1</para>
             /// </summary>
             [NameInMap("HostGroupName")]
             [Validation(Required=false)]

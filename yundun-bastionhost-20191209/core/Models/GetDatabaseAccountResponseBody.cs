@@ -50,8 +50,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>Indicates whether the database account has a password.
             /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,8 +66,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The logon attribute. A value is returned for this parameter if the database engine is Oracle. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SERVICENAME</description></item>
-            /// <item><description>SID</description></item>
+            /// <item><description><para>SERVICENAME</para>
+            /// </description></item>
+            /// <item><description><para>SID</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

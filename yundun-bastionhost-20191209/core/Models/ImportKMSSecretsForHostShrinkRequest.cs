@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ImportKMSSecretsForHostShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the host to import the KMS secrets to.</para>
+        /// <remarks>
+        /// <para>Only ECS hosts can import KMS secrets. You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? HostId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Bastionhost instance.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>bastionhost-cn-st220aw****</para>
         /// </summary>
@@ -28,6 +37,11 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the Bastionhost instance.</para>
+        /// <remarks>
+        /// <para>For more information about region IDs and names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and availability zones</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -35,6 +49,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The KMS secrets to import.</para>
+        /// </summary>
         [NameInMap("Secrets")]
         [Validation(Required=false)]
         public string SecretsShrink { get; set; }

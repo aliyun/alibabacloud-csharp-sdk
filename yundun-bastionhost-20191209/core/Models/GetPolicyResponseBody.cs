@@ -17,28 +17,28 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public GetPolicyResponseBodyPolicy Policy { get; set; }
         public class GetPolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>The details of the logon period restrictions.</para>
+            /// <para>The time-based access control settings.</para>
             /// </summary>
             [NameInMap("AccessTimeRangeConfig")]
             [Validation(Required=false)]
             public GetPolicyResponseBodyPolicyAccessTimeRangeConfig AccessTimeRangeConfig { get; set; }
             public class GetPolicyResponseBodyPolicyAccessTimeRangeConfig : TeaModel {
                 /// <summary>
-                /// <para>The details of the periods during which logons are allowed.</para>
+                /// <para>The allowed access time slots.</para>
                 /// </summary>
                 [NameInMap("EffectiveTime")]
                 [Validation(Required=false)]
                 public List<GetPolicyResponseBodyPolicyAccessTimeRangeConfigEffectiveTime> EffectiveTime { get; set; }
                 public class GetPolicyResponseBodyPolicyAccessTimeRangeConfigEffectiveTime : TeaModel {
                     /// <summary>
-                    /// <para>The days of a week on which logons are allowed.</para>
+                    /// <para>The days of the week when access is allowed.</para>
                     /// </summary>
                     [NameInMap("Days")]
                     [Validation(Required=false)]
                     public List<string> Days { get; set; }
 
                     /// <summary>
-                    /// <para>The time periods during which logons are allowed.</para>
+                    /// <para>The hours of the day when access is allowed.</para>
                     /// </summary>
                     [NameInMap("Hours")]
                     [Validation(Required=false)]
@@ -49,17 +49,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// <para>The O\&amp;M approval setting.</para>
+            /// <para>The O\&amp;M approval settings.</para>
             /// </summary>
             [NameInMap("ApprovalConfig")]
             [Validation(Required=false)]
             public GetPolicyResponseBodyPolicyApprovalConfig ApprovalConfig { get; set; }
             public class GetPolicyResponseBodyPolicyApprovalConfig : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether O\&amp;M approval is enabled in the control policy. Valid values:</para>
+                /// <para>Indicates whether O\&amp;M approval is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>On</b>: O\&amp;M approval is enabled.</description></item>
-                /// <item><description><b>Off</b>: O\&amp;M approval is disabled.</description></item>
+                /// <item><description><para><b>On</b>: O\&amp;M approval is enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>Off</b>: O\&amp;M approval is disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -72,21 +74,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// <para>The details of the command policy.</para>
+            /// <para>The command control policy.</para>
             /// </summary>
             [NameInMap("CommandConfig")]
             [Validation(Required=false)]
             public GetPolicyResponseBodyPolicyCommandConfig CommandConfig { get; set; }
             public class GetPolicyResponseBodyPolicyCommandConfig : TeaModel {
                 /// <summary>
-                /// <para>The details of the command approval settings.</para>
+                /// <para>The command approval settings.</para>
                 /// </summary>
                 [NameInMap("Approval")]
                 [Validation(Required=false)]
                 public GetPolicyResponseBodyPolicyCommandConfigApproval Approval { get; set; }
                 public class GetPolicyResponseBodyPolicyCommandConfigApproval : TeaModel {
                     /// <summary>
-                    /// <para>An array of commands that can be run only after approval.</para>
+                    /// <para>The commands that require approval.</para>
                     /// </summary>
                     [NameInMap("Commands")]
                     [Validation(Required=false)]
@@ -95,17 +97,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 }
 
                 /// <summary>
-                /// <para>The details of the command control setting.</para>
+                /// <para>The command control settings.</para>
                 /// </summary>
                 [NameInMap("Deny")]
                 [Validation(Required=false)]
                 public GetPolicyResponseBodyPolicyCommandConfigDeny Deny { get; set; }
                 public class GetPolicyResponseBodyPolicyCommandConfigDeny : TeaModel {
                     /// <summary>
-                    /// <para>The type of command control. Valid values:</para>
+                    /// <para>The command control mode. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>white: whitelist mode.</description></item>
-                    /// <item><description>black: blacklist mode.</description></item>
+                    /// <item><description><para><c>white</c>: allowlist.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>black</c>: denylist.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string AclType { get; set; }
 
                     /// <summary>
-                    /// <para>An array of controlled commands.</para>
+                    /// <para>The commands in the list.</para>
                     /// </summary>
                     [NameInMap("Commands")]
                     [Validation(Required=false)]
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// <para>The description of the control policy.</para>
+            /// <para>The remarks on the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>comment</para>
@@ -137,17 +141,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The access control settings on source IP addresses.</para>
+            /// <para>The source IP address-based access control settings.</para>
             /// </summary>
             [NameInMap("IPAclConfig")]
             [Validation(Required=false)]
             public GetPolicyResponseBodyPolicyIPAclConfig IPAclConfig { get; set; }
             public class GetPolicyResponseBodyPolicyIPAclConfig : TeaModel {
                 /// <summary>
-                /// <para>The mode of access control on source IP addresses. Valid values:</para>
+                /// <para>The source IP address-based access control mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>white: whitelist mode.</description></item>
-                /// <item><description>black: blacklist mode.</description></item>
+                /// <item><description><para><c>white</c>: allowlist.</para>
+                /// </description></item>
+                /// <item><description><para><c>black</c>: denylist.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string AclType { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses from which logons are not allowed.</para>
+                /// <para>The IP addresses in the ACL.</para>
                 /// </summary>
                 [NameInMap("IPs")]
                 [Validation(Required=false)]
@@ -197,24 +203,26 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public long? Priority { get; set; }
 
             /// <summary>
-            /// <para>The details of protocol control.</para>
+            /// <para>The protocol control settings.</para>
             /// </summary>
             [NameInMap("ProtocolConfig")]
             [Validation(Required=false)]
             public GetPolicyResponseBodyPolicyProtocolConfig ProtocolConfig { get; set; }
             public class GetPolicyResponseBodyPolicyProtocolConfig : TeaModel {
                 /// <summary>
-                /// <para>The configuration details of Remote Desktop Protocol (RDP) options.</para>
+                /// <para>The RDP security settings.</para>
                 /// </summary>
                 [NameInMap("RDP")]
                 [Validation(Required=false)]
                 public GetPolicyResponseBodyPolicyProtocolConfigRDP RDP { get; set; }
                 public class GetPolicyResponseBodyPolicyProtocolConfigRDP : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether downloading from the clipboard is enabled. Valid values:</para>
+                    /// <para>Indicates whether clipboard download is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -225,10 +233,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string ClipboardDownload { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether file uploading from the clipboard is enabled. Valid values:</para>
+                    /// <para>Indicates whether clipboard upload is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -239,10 +249,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string ClipboardUpload { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether driver mapping is enabled. Valid values:</para>
+                    /// <para>Indicates whether drive redirection and printer mapping are enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -271,8 +283,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     /// <summary>
                     /// <para>Indicates whether keyboard recording is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -285,7 +299,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 }
 
                 /// <summary>
-                /// <para>The configuration details of SSH and SSH File Transfer Protocol (SFTP) options.</para>
+                /// <para>The SSH and SFTP security settings.</para>
                 /// </summary>
                 [NameInMap("SSH")]
                 [Validation(Required=false)]
@@ -310,8 +324,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     /// <summary>
                     /// <para>Indicates whether remote command execution is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -322,10 +338,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string ExecCommand { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the SFTP channel option is enabled. Valid values:</para>
+                    /// <para>Indicates whether the SFTP channel is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -336,10 +354,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string SFTPChannel { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether file downloading is enabled in SFTP-based O\&amp;M. Valid values:</para>
+                    /// <para>Indicates whether file downloads over SFTP are enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -350,10 +370,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string SFTPDownloadFile { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether folder creation is enabled in SFTP-based O\&amp;M. Valid values:</para>
+                    /// <para>Indicates whether directory creation over SFTP is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -364,10 +386,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string SFTPMkdir { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether file deletion is enabled in SFTP-based O\&amp;M. Valid values:</para>
+                    /// <para>Indicates whether file deletion over SFTP is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -378,10 +402,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string SFTPRemoveFile { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether file renaming is enabled in SFTP-based O\&amp;M. Valid values:</para>
+                    /// <para>Indicates whether file renaming over SFTP is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -392,10 +418,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string SFTPRenameFile { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether folder deletion is enabled in SFTP-based O\&amp;M. Valid values:</para>
+                    /// <para>Indicates whether directory deletion over SFTP is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -406,10 +434,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string SFTPRmdir { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether file uploading is enabled in SFTP-based O\&amp;M. Valid values:</para>
+                    /// <para>Indicates whether file uploads over SFTP are enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -420,10 +450,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string SFTPUploadFile { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the SSH channel option is enabled. Valid values:</para>
+                    /// <para>Indicates whether the SSH channel is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -444,8 +476,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     /// <summary>
                     /// <para>Indicates whether X11 forwarding is enabled. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Enable</description></item>
-                    /// <item><description>Disable</description></item>
+                    /// <item><description><para><c>Enable</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>Disable</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

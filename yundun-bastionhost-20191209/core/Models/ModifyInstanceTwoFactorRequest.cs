@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>Specifies whether to enable two-factor authentication. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,11 +65,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The method used to send a verification code for two-factor authentication. If EnableTwoFactor is set to true, you must specify at least one method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sms:</b> text message.</description></item>
-        /// <item><description><b>email</b>: email.</description></item>
-        /// <item><description><b>dingtalk</b>: notice in DingTalk.</description></item>
-        /// <item><description><b>totp</b>: one-time password (OTP) token.</description></item>
-        /// <item><description><b>gmusbkey</b>: SM-based USB key.</description></item>
+        /// <item><description><para><b>sms:</b> text message.</para>
+        /// </description></item>
+        /// <item><description><para><b>email</b>: email.</para>
+        /// </description></item>
+        /// <item><description><para><b>dingtalk</b>: notice in DingTalk.</para>
+        /// </description></item>
+        /// <item><description><para><b>totp</b>: one-time password (OTP) token.</para>
+        /// </description></item>
+        /// <item><description><para><b>gmusbkey</b>: SM-based USB key.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

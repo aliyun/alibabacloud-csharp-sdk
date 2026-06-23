@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <para>The address of the database.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10.167.66.167</para>
+        /// <para>10.167.XX.XX</para>
         /// </summary>
         [NameInMap("DatabaseAddress")]
         [Validation(Required=false)]
         public string DatabaseAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the database instance. The system supports exact search.</para>
+        /// <para>The name of the database. This parameter supports only exact matches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aaa</para>
@@ -30,12 +30,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseName { get; set; }
 
         /// <summary>
-        /// <para>The type of the database. Valid values:</para>
+        /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>SQLServer</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SQLServer</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,21 +50,21 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string DatabaseType { get; set; }
 
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>bastionhost-cn-tl32wloo90y</para>
+        /// <para>bastionhost-cn-tl32wdd</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,10 +74,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.\
-        /// Maximum value: 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</para>
+        /// <para>The number of entries to return on each page.<br>The maximum value is 100. The default value is 20. If you do not specify this parameter, 20 entries are returned.<br></para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Specify a value for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,9 +87,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The region ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,11 +100,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The source of the database instance. Valid values:</para>
+        /// <para>The source of the database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Local</b></description></item>
-        /// <item><description><b>Rds</b></description></item>
-        /// <item><description><b>PolarDB</b></description></item>
+        /// <item><description><para><b>Local</b>: a local database</para>
+        /// </description></item>
+        /// <item><description><para><b>Rds</b>: an ApsaraDB RDS database</para>
+        /// </description></item>
+        /// <item><description><para><b>PolarDB</b>: a PolarDB database</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,7 +118,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraDB RDS instance. The system supports exact search.</para>
+        /// <para>The ID of the source instance. This parameter supports only exact matches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp19ienyt0yax748****</para>
@@ -122,10 +128,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string SourceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance state.</para>
+        /// <para>The status of the source instance. You can use this parameter to filter the results.</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>RemoteRelease</b></description></item>
+        /// <item><description><para><b>Normal</b>: The instance is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>RemoteRelease</b>: The instance is released.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

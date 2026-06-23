@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The endpoint type of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Public</b>: public endpoint</description></item>
-            /// <item><description><b>Private</b>: internal endpoint</description></item>
+            /// <item><description><para><b>Public</b>: public endpoint</para>
+            /// </description></item>
+            /// <item><description><para><b>Private</b>: internal endpoint</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,8 +85,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The operating system of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Linux</b></description></item>
-            /// <item><description><b>Windows</b></description></item>
+            /// <item><description><para><b>Linux</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Windows</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

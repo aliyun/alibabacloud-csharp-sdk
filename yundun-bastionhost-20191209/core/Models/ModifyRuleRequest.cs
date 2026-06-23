@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
     public class ModifyRuleRequest : TeaModel {
         /// <summary>
         /// <para>The new remarks of the authorization rule. It can be up to 500 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TEST</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
@@ -34,11 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The database ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[
-            ///     {
-            ///         &quot;DatabaseId&quot;: &quot;1&quot;
-            ///     }
-            /// ]</para>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("DatabaseId")]
             [Validation(Required=false)]
@@ -84,7 +83,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The asset group ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;HostGroupId&quot;:&quot;1&quot;}]</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostGroupId")]
             [Validation(Required=false)]
@@ -110,7 +109,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <para>The host ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>[{&quot;HostId&quot;:&quot;1&quot;}]</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("HostId")]
             [Validation(Required=false)]

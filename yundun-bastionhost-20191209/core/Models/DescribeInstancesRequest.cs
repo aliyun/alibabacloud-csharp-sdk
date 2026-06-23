@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class DescribeInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the IDs of the bastion hosts.</para>
+        /// <para>The IDs of the bastion host instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bastionhost-cn-78v1ghxxxxx</para>
@@ -20,15 +20,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public List<string> InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the bastion host. Valid values:</para>
+        /// <para>The status of the bastion host instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PENDING</b>: The bastion host is not initialized.</description></item>
-        /// <item><description><b>CREATING</b>: The bastion host is being created.</description></item>
-        /// <item><description><b>RUNNING</b>: The bastion host is running.</description></item>
-        /// <item><description><b>EXPIRED</b>: The bastion host expired.</description></item>
-        /// <item><description><b>CREATE_FAILED</b>: The bastion host fails to be created.</description></item>
-        /// <item><description><b>UPGRADING</b>: The configurations of the bastion host are being changed.</description></item>
-        /// <item><description><b>UPGRADE_FAILED</b>: The configurations of the bastion host fail to be changed.</description></item>
+        /// <item><description><para><b>PENDING</b>: The instance is not initialized.</para>
+        /// </description></item>
+        /// <item><description><para><b>CREATING</b>: The instance is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>RUNNING</b>: The instance is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>EXPIRED</b>: The instance is expired.</para>
+        /// </description></item>
+        /// <item><description><para><b>CREATE_FAILED</b>: The instance creation failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>UPGRADING</b>: The instance is being upgraded.</para>
+        /// </description></item>
+        /// <item><description><para><b>UPGRADE_FAILED</b>: The instance upgrade failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +46,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number to return. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -49,7 +56,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of bastion host instances to return on each page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +66,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The ID of the region in which the bastion host instances reside.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -69,7 +76,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the bastion host belongs.</para>
+        /// <para>The ID of the resource group to which the bastion host instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm26ougi****</para>
@@ -79,7 +86,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>An array consisting of the tags that are added to the bastion hosts.</para>
+        /// <para>The tags attached to the bastion host instances.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

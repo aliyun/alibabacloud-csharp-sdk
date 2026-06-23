@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class SetPolicyProtocolConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The bastion host ID.</para>
+        /// <para>The ID of the Bastionhost instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the control policy that you want to modify.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to query the control policy ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2758876.html">ListPolicies</a> operation to obtain the policy ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The protocol control settings.</para>
+        /// <para>The protocol control configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProtocolConfig")]
@@ -46,20 +46,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public SetPolicyProtocolConfigRequestProtocolConfig ProtocolConfig { get; set; }
         public class SetPolicyProtocolConfigRequestProtocolConfig : TeaModel {
             /// <summary>
-            /// <para>The settings of the Remote Desktop Protocol (RDP) options.</para>
+            /// <para>The RDP options.</para>
             /// </summary>
             [NameInMap("RDP")]
             [Validation(Required=false)]
             public SetPolicyProtocolConfigRequestProtocolConfigRDP RDP { get; set; }
             public class SetPolicyProtocolConfigRequestProtocolConfigRDP : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable downloading from the clipboard. Valid values:</para>
+                /// <para>Specifies whether to allow clipboard content to be downloaded. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -70,13 +72,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string ClipboardDownload { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable uploading from the clipboard. Valid values:</para>
+                /// <para>Specifies whether to allow clipboard content to be uploaded. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -87,13 +91,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string ClipboardUpload { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable driver mapping. Valid values:</para>
+                /// <para>Specifies whether to enable drive and printer mapping. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -120,13 +126,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string DiskRedirectionUpload { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable keyboard operation recording. Valid values:</para>
+                /// <para>Specifies whether to record keyboard input. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             }
 
             /// <summary>
-            /// <para>The settings of the SSH and SSH Fine Transfer Protocol (SFTP) options.</para>
+            /// <para>The SSH and SFTP options.</para>
             /// </summary>
             [NameInMap("SSH")]
             [Validation(Required=false)]
@@ -162,13 +170,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string AllowTcpForwarding { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable remote command execution. Valid values:</para>
+                /// <para>Specifies whether to allow remote command execution. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -179,21 +189,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string ExecCommand { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable SFTP channels. Valid values:</para>
+                /// <para>Specifies whether to enable the SFTP channel. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <item><description><para>The default value is Disable.</para>
                 /// </description></item>
-                /// <item><description><para>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel.</para>
+                /// <item><description><para>At least one of the SSH channel and the SFTP channel must be enabled.</para>
                 /// </description></item>
-                /// <item><description><para>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</para>
+                /// <item><description><para>If you grant only SFTP permissions to a host account, do not disable the SSH and SFTP channels for that account in the control policy. Otherwise, you cannot use the host account to access the target server through Bastionhost.</para>
                 /// </description></item>
                 /// </list>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enable</para>
@@ -203,13 +215,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SFTPChannel { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable file downloading during SFTP-based O\&amp;M. Valid values:</para>
+                /// <para>Specifies whether to allow file downloads over SFTP. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -220,13 +234,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SFTPDownloadFile { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable folder creation during SFTP-based O\&amp;M. Valid values:</para>
+                /// <para>Specifies whether to allow folder creation over SFTP. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -237,13 +253,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SFTPMkdir { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable file deletion during SFTP-based O\&amp;M. Valid values:</para>
+                /// <para>Specifies whether to allow file deletions over SFTP. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -254,13 +272,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SFTPRemoveFile { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable file renaming during SFTP-based O\&amp;M. Valid values:</para>
+                /// <para>Specifies whether to allow file renames over SFTP. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -271,13 +291,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SFTPRenameFile { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable folder deletion during SFTP-based O\&amp;M. Valid values:</para>
+                /// <para>Specifies whether to allow folder deletion over SFTP. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -288,13 +310,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SFTPRmdir { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable file uploading during SFTP-based O\&amp;M. Valid values:</para>
+                /// <para>Specifies whether to allow file uploads over SFTP. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -305,21 +329,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SFTPUploadFile { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable SSH channels. Valid values:</para>
+                /// <para>Specifies whether to enable the SSH channel. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// </remarks>
                 /// <list type="bullet">
-                /// <item><description><para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <item><description><para>The default value is Disable.</para>
                 /// </description></item>
-                /// <item><description><para>You must set at least one of the following parameters to Enable: SSHChannel and SFTPChannel. If you set SSHChannel to Disable, SSH-based logon is disabled for the asset account. Proceed with caution.</para>
+                /// <item><description><para>At least one of the SSH channel and the SFTP channel must be enabled. If you disable the SSH channel, you cannot use SSH permissions to log on to the asset account. Configure this parameter with caution.</para>
                 /// </description></item>
-                /// <item><description><para>If you select Enable Only SFTP Permission for a host account, do not set SSHChannel and SFTPChannel to Disable for the account. Otherwise, users of the bastion host cannot use the account to access the host.</para>
+                /// <item><description><para>If you grant only SFTP permissions to a host account, do not disable the SSH and SFTP channels for that account in the control policy. Otherwise, you cannot use the host account to access the target server through Bastionhost.</para>
                 /// </description></item>
                 /// </list>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Enable</para>
@@ -339,11 +365,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 /// <summary>
                 /// <para>Specifies whether to enable X11 forwarding. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Enable</description></item>
-                /// <item><description>Disable</description></item>
+                /// <item><description><para>Enable</para>
+                /// </description></item>
+                /// <item><description><para>Disable</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>If you do not specify this parameter, the default value Disable is used.</para>
+                /// <para>The default value is Disable.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -358,7 +386,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the bastion host.</para>
+        /// <para>The ID of the region where the Bastionhost instance resides.</para>
         /// <remarks>
         /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>

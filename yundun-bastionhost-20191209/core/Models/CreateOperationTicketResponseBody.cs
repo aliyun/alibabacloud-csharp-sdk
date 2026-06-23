@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateOperationTicketResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the O\&amp;M ticket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OperationTicketId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0ECCC399-4D35-48A7-8379-5C6180E66235</para>
         /// </summary>

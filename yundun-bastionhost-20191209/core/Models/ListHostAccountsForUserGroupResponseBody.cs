@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>Indicates whether the user group is authorized to manage the host account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: no</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,8 +65,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             /// <summary>
             /// <para>The protocol that is used by the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SSH</b></description></item>
-            /// <item><description><b>RDP</b></description></item>
+            /// <item><description><para><b>SSH</b></para>
+            /// </description></item>
+            /// <item><description><para><b>RDP</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

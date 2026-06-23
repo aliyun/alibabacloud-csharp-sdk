@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The operating system of the host that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Linux</b></description></item>
-        /// <item><description><b>Windows</b></description></item>
+        /// <item><description><para><b>Linux</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Windows</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,9 +111,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The source of the host that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Local</b>: a host in a data center</description></item>
-        /// <item><description><b>Ecs</b>: an Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description><b>Rds</b>: a host in an ApsaraDB MyBase dedicated cluster</description></item>
+        /// <item><description><para><b>Local</b>: a host in a data center</para>
+        /// </description></item>
+        /// <item><description><para><b>Ecs</b>: an Elastic Compute Service (ECS) instance</para>
+        /// </description></item>
+        /// <item><description><para><b>Rds</b>: a host in an ApsaraDB MyBase dedicated cluster</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,8 +139,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The status of the host that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: normal</description></item>
-        /// <item><description><b>Release</b>: released</description></item>
+        /// <item><description><para><b>Normal</b>: normal</para>
+        /// </description></item>
+        /// <item><description><para><b>Release</b>: released</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

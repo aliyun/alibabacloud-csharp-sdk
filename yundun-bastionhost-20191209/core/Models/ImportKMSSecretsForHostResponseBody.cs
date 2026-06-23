@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class ImportKMSSecretsForHostResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The import result for each secret.</para>
+        /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<ImportKMSSecretsForHostResponseBodyResults> Results { get; set; }
         public class ImportKMSSecretsForHostResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The status code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The result message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>success</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>The name of the secret.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test1</para>
             /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         }
 
         /// <summary>
+        /// <para>The number of secrets that were successfully imported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

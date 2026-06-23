@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The new remarks of the user. The remarks can be up to 500 characters in length.</para>
         /// <remarks>
-        /// <para> Leave this parameter empty if you do not want to change the remarks of the user.</para>
+        /// <para>Leave this parameter empty if you do not want to change the remarks of the user.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The new display name of the user. The display name can be up to 128 characters in length.</para>
         /// <remarks>
-        /// <para> Leave this parameter empty if you do not want to change the display name of the user.</para>
+        /// <para>Leave this parameter empty if you do not want to change the display name of the user.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The end time of the validity period of the user. Specify a UNIX timestamp. Unit: seconds.</para>
         /// <remarks>
-        /// <para> Leave this parameter empty if you do not want to change the end time of the validity period.</para>
+        /// <para>Leave this parameter empty if you do not want to change the end time of the validity period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The start time of the validity period of the user. Specify a UNIX timestamp. Unit: seconds.</para>
         /// <remarks>
-        /// <para> Leave this parameter empty if you do not want to change the start time of the validity period.</para>
+        /// <para>Leave this parameter empty if you do not want to change the start time of the validity period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the bastion host on which you want to modify the information about the user.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -98,8 +98,10 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>This parameter is required if LanguageStatus is set to Custom.</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-cn</b>: simplified Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh-cn</b>: simplified Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,11 +114,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>Specifies whether to send notifications in the language specified in the global settings or a custom language.</para>
         /// <list type="bullet">
-        /// <item><description><b>Global</b></description></item>
-        /// <item><description><b>Custom</b></description></item>
+        /// <item><description><para><b>Global</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Custom</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Leave this parameter empty if you do not want to change the natural language used to notify the user.</para>
+        /// <para>Leave this parameter empty if you do not want to change the natural language used to notify the user.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,26 +153,46 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The country where the new mobile number of the user is registered. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CN:</b> the Chinese mainland, whose country calling code is +86</description></item>
-        /// <item><description><b>HK:</b> Hong Kong (China), whose country calling code is +852</description></item>
-        /// <item><description><b>MO:</b> Macao (China), whose country calling code is +853</description></item>
-        /// <item><description><b>TW:</b> Taiwan (China), whose country calling code is +886</description></item>
-        /// <item><description><b>RU:</b> Russia, whose country calling code is +7</description></item>
-        /// <item><description><b>SG:</b> Singapore, whose country calling code is +65</description></item>
-        /// <item><description><b>MY:</b> Malaysia, whose country calling code is +60</description></item>
-        /// <item><description><b>ID:</b> Indonesia, whose country calling code is +62</description></item>
-        /// <item><description><b>DE:</b> Germany, whose country calling code is +49</description></item>
-        /// <item><description><b>AU:</b> Australia, whose country calling code is +61</description></item>
-        /// <item><description><b>US:</b> US, whose country calling code is +1</description></item>
-        /// <item><description><b>AE:</b> United Arab Emirates, whose country calling code is +971</description></item>
-        /// <item><description><b>JP:</b> Japan, whose country calling code is +81</description></item>
-        /// <item><description><b>GB:</b> UK, whose country calling code is +44</description></item>
-        /// <item><description><b>IN:</b> India, whose country calling code is +91</description></item>
-        /// <item><description><b>KR:</b> Republic of Korea, whose country calling code is +82</description></item>
-        /// <item><description><b>PH:</b> Philippines, whose country calling code is +63</description></item>
-        /// <item><description><b>CH:</b> Switzerland, whose country calling code is +41</description></item>
-        /// <item><description><b>SE:</b> Sweden, whose country calling code is +46</description></item>
-        /// <item><description><b>SA:</b> Saudi Arabia, whose country calling code is +966</description></item>
+        /// <item><description><para><b>CN:</b> the Chinese mainland, whose country calling code is +86</para>
+        /// </description></item>
+        /// <item><description><para><b>HK:</b> Hong Kong (China), whose country calling code is +852</para>
+        /// </description></item>
+        /// <item><description><para><b>MO:</b> Macao (China), whose country calling code is +853</para>
+        /// </description></item>
+        /// <item><description><para><b>TW:</b> Taiwan (China), whose country calling code is +886</para>
+        /// </description></item>
+        /// <item><description><para><b>RU:</b> Russia, whose country calling code is +7</para>
+        /// </description></item>
+        /// <item><description><para><b>SG:</b> Singapore, whose country calling code is +65</para>
+        /// </description></item>
+        /// <item><description><para><b>MY:</b> Malaysia, whose country calling code is +60</para>
+        /// </description></item>
+        /// <item><description><para><b>ID:</b> Indonesia, whose country calling code is +62</para>
+        /// </description></item>
+        /// <item><description><para><b>DE:</b> Germany, whose country calling code is +49</para>
+        /// </description></item>
+        /// <item><description><para><b>AU:</b> Australia, whose country calling code is +61</para>
+        /// </description></item>
+        /// <item><description><para><b>US:</b> US, whose country calling code is +1</para>
+        /// </description></item>
+        /// <item><description><para><b>AE:</b> United Arab Emirates, whose country calling code is +971</para>
+        /// </description></item>
+        /// <item><description><para><b>JP:</b> Japan, whose country calling code is +81</para>
+        /// </description></item>
+        /// <item><description><para><b>GB:</b> UK, whose country calling code is +44</para>
+        /// </description></item>
+        /// <item><description><para><b>IN:</b> India, whose country calling code is +91</para>
+        /// </description></item>
+        /// <item><description><para><b>KR:</b> Republic of Korea, whose country calling code is +82</para>
+        /// </description></item>
+        /// <item><description><para><b>PH:</b> Philippines, whose country calling code is +63</para>
+        /// </description></item>
+        /// <item><description><para><b>CH:</b> Switzerland, whose country calling code is +41</para>
+        /// </description></item>
+        /// <item><description><para><b>SE:</b> Sweden, whose country calling code is +46</para>
+        /// </description></item>
+        /// <item><description><para><b>SA:</b> Saudi Arabia, whose country calling code is +966</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -181,11 +205,13 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>Specifies whether password reset is required upon the next logon. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Leave this parameter empty if you do not want to change the password reset settings for the user.</para>
+        /// <para>Leave this parameter empty if you do not want to change the password reset settings for the user.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -211,7 +237,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The region ID of the bastion host on which you want to modify the information about the user.</para>
         /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -224,17 +250,23 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The two-factor authentication method. You can select only one method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>sms</b>: text message-based two-factor authentication.</description></item>
-        /// <item><description><b>email</b>: email-based two-factor authentication.</description></item>
-        /// <item><description><b>dingtalk</b>: DingTalk-based two-factor authentication.</description></item>
-        /// <item><description><b>totp OTP:</b> one-time password (OTP) token-based two-factor authentication.</description></item>
+        /// <item><description><para><b>sms</b>: text message-based two-factor authentication.</para>
+        /// </description></item>
+        /// <item><description><para><b>email</b>: email-based two-factor authentication.</para>
+        /// </description></item>
+        /// <item><description><para><b>dingtalk</b>: DingTalk-based two-factor authentication.</para>
+        /// </description></item>
+        /// <item><description><para><b>totp OTP:</b> one-time password (OTP) token-based two-factor authentication.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If TwoFactorStatus is set to Enable, you must specify one of the valid values as TwoFactorMethods.</para>
+        /// <para>If TwoFactorStatus is set to Enable, you must specify one of the valid values as TwoFactorMethods.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>sms</para>
+        /// <para>[
+        ///       &quot;sms&quot;
+        /// ]</para>
         /// </summary>
         [NameInMap("TwoFactorMethods")]
         [Validation(Required=false)]
@@ -243,12 +275,15 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>Specifies whether two-factor authentication is enabled for the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Global</b>: The global settings apply.</description></item>
-        /// <item><description><b>Disable</b>: Two-factor authentication is disabled.</description></item>
-        /// <item><description><b>Enable</b>: Two-factor authentication is enabled and user-specific settings apply.</description></item>
+        /// <item><description><para><b>Global</b>: The global settings apply.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disable</b>: Two-factor authentication is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Enable</b>: Two-factor authentication is enabled and user-specific settings apply.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Leave this parameter empty if you do not want to change the two-factory authentication settings for the user.</para>
+        /// <para>Leave this parameter empty if you do not want to change the two-factory authentication settings for the user.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -261,7 +296,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         /// <summary>
         /// <para>The ID of the user whose information you want to modify.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to query the user ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

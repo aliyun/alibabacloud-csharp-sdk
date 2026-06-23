@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
 {
     public class CreateHostRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint type of the host that you want to create. Valid values:</para>
+        /// <para>The address type of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Public</b>: public endpoint</description></item>
-        /// <item><description><b>Private</b>: internal endpoint</description></item>
+        /// <item><description><para><b>Public</b>: a public address</para>
+        /// </description></item>
+        /// <item><description><para><b>Private</b>: a private address</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string ActiveAddressType { get; set; }
 
         /// <summary>
-        /// <para>The description of the host that you want to create. The value can be up to 500 characters in length.</para>
+        /// <para>The comment for the host. The comment can be up to 500 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Local Host</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The name of the host that you want to create. The name can be up to 128 characters in length.</para>
+        /// <para>The name of the host. The name can be up to 128 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,9 +48,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</para>
+        /// <para>The private address of the host. You can use a domain name or an IP address.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>ActiveAddressType</b> parameter is set to <b>Private</b>.</para>
+        /// <para>This parameter is required when <b>ActiveAddressType</b> is set to <b>Private</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,9 +61,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostPrivateAddress { get; set; }
 
         /// <summary>
-        /// <para>The public endpoint of the host that you want to create. You can set this parameter to a domain name or an IP address.</para>
+        /// <para>The public address of the host. You can use a domain name or an IP address.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>ActiveAddressType</b> parameter is set to <b>Public</b>.</para>
+        /// <para>This parameter is required when <b>ActiveAddressType</b> is set to <b>Public</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,9 +74,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string HostPublicAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the bastion host in which you want to create the host.</para>
+        /// <para>The ID of the Bastionhost instance where you want to create the host.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -86,17 +88,19 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account to which the ECS instance belongs.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>1605494xxxx</para>
         /// </summary>
         [NameInMap("InstanceMemberId")]
         [Validation(Required=false)]
         public long? InstanceMemberId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the ECS instance or the host in an ApsaraDB MyBase dedicated cluster belongs.</para>
+        /// <para>The region ID of the ECS instance or the host in the dedicated cluster.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>Source</b> parameter is set to <b>Ecs</b> or <b>Rds</b>.</para>
+        /// <para>This parameter is required when <b>Source</b> is set to <b>Ecs</b> or <b>Rds</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,9 +111,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string InstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network domain to which the host to be imported belongs.</para>
+        /// <para>The ID of the network domain to which the host belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains</a> operation to query the network domain ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2758827.html">ListNetworkDomains </a>operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,10 +124,12 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string NetworkDomainId { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the host that you want to create. Valid values:</para>
+        /// <para>The operating system of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Linux</b></description></item>
-        /// <item><description><b>Windows</b></description></item>
+        /// <item><description><para><b>Linux</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Windows</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -135,9 +141,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string OSType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host to which you want to import the host.</para>
+        /// <para>The region ID of the Bastionhost instance where you want to create the host.</para>
         /// <remarks>
-        /// <para>For information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
+        /// <para>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -148,11 +154,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The source of the host that you want to create. Valid values:</para>
+        /// <para>The source of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Local</b>: a host in a data center</description></item>
-        /// <item><description><b>Ecs</b>: an Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description><b>Rds</b>: a host in an ApsaraDB MyBase dedicated cluster</description></item>
+        /// <item><description><para><b>Local</b>: a local host</para>
+        /// </description></item>
+        /// <item><description><para><b>Ecs</b>: an ECS instance</para>
+        /// </description></item>
+        /// <item><description><para><b>Rds</b>: a host in an ApsaraDB RDS dedicated cluster</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -164,9 +173,9 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ECS instance or the host in an ApsaraDB MyBase dedicated cluster.</para>
+        /// <para>The ID of the ECS instance or the host in the dedicated cluster.</para>
         /// <remarks>
-        /// <para>This parameter is required if the <b>Source</b> parameter is set to <b>Ecs</b> or <b>Rds</b>.</para>
+        /// <para>This parameter is required when <b>Source</b> is set to <b>Ecs</b> or <b>Rds</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
