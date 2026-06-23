@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
     public class QueryMcubeHotpatchTaskDetailRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ALIPUBE5C3F6D091419</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>6071959</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
@@ -31,9 +25,6 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ZXCXMAHQ</para>
         /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
@@ -41,9 +32,6 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>default</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

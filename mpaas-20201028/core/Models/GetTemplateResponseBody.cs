@@ -79,9 +79,6 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public string Msg { get; set; }
 
-        /// <summary>
-        /// <para>Id of the request</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

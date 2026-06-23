@@ -18289,6 +18289,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             {
                 body["CustomId"] = request.CustomId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemId))
+            {
+                body["ItemId"] = request.ItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemTitle))
+            {
+                body["ItemTitle"] = request.ItemTitle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramId))
             {
                 body["MiniProgramId"] = request.MiniProgramId;
@@ -18374,6 +18382,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomId))
             {
                 body["CustomId"] = request.CustomId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemId))
+            {
+                body["ItemId"] = request.ItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemTitle))
+            {
+                body["ItemTitle"] = request.ItemTitle;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramId))
             {

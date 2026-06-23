@@ -9,20 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class UpdateLinkResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>100</para>
-        /// </summary>
         [NameInMap("ResultCode")]
         [Validation(Required=false)]
         public string ResultCode { get; set; }
@@ -31,36 +21,20 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public UpdateLinkResponseBodyResultContent ResultContent { get; set; }
         public class UpdateLinkResponseBodyResultContent : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para><a href="https://xxx/xxx">https://xxx/xxx</a></para>
-            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para><a href="https://xxx/xxx/xxx">https://xxx/xxx/xxx</a></para>
-            /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
             public string Target { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>success</para>
-        /// </summary>
         [NameInMap("ResultMessage")]
         [Validation(Required=false)]
         public string ResultMessage { get; set; }

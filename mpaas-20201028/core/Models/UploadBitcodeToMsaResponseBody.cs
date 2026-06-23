@@ -9,18 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.MPaaS20201028.Models
 {
     public class UploadBitcodeToMsaResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>OK</para>
-        /// </summary>
         [NameInMap("ResultCode")]
         [Validation(Required=false)]
         public string ResultCode { get; set; }
@@ -29,44 +21,24 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public UploadBitcodeToMsaResponseBodyResultContent ResultContent { get; set; }
         public class UploadBitcodeToMsaResponseBodyResultContent : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>200</para>
-            /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1234</para>
-            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public string Data { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>Normal</para>
-            /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>True</para>
-            /// </summary>
             [NameInMap("Success")]
             [Validation(Required=false)]
             public bool? Success { get; set; }
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>SYSTEM_ERROR</para>
-        /// </summary>
         [NameInMap("ResultMessage")]
         [Validation(Required=false)]
         public string ResultMessage { get; set; }
