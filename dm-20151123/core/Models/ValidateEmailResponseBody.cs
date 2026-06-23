@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ValidateEmailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain part of the email address parsed from the syntax check. The domain part is converted to lowercase.</para>
+        /// <para>The domain part of the email address parsed from syntax validation (lowercased)</para>
         /// 
         /// <b>Example:</b>
         /// <para>yyy.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string DomainPart { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the address is from a free email service.</para>
+        /// <para>Indicates whether the address is a free email</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? IsFreeMail { get; set; }
 
         /// <summary>
-        /// <para>The local part of the email address parsed from the syntax check. The local part is converted to lowercase and the content after the plus sign (+) is removed.</para>
+        /// <para>The local part of the email address parsed from syntax validation (lowercased with the plus sign portion removed)</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string LocalPart { get; set; }
 
         /// <summary>
-        /// <para>The email service provider of the address.</para>
+        /// <para>Email provider classification of the address</para>
         /// 
         /// <b>Example:</b>
         /// <para>Gmail</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The validation status of the email address.</para>
+        /// <para>The email address status obtained from validation</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The detailed validation status of the email address. This provides more information about the Status.</para>
+        /// <para>The email address sub-status obtained from validation, which provides a detailed description of the status</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

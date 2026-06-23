@@ -18,7 +18,14 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-east-1", "dm.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "dm.eu-central-1.aliyuncs.com"},
+                {"cn-hangzhou", "dm.aliyuncs.com"},
+                {"ap-southeast-1", "dm.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dm", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -12576,7 +12583,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>Validate an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12600,6 +12607,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
             {
                 query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProbeType))
+            {
+                query["ProbeType"] = request.ProbeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
             {
@@ -12626,7 +12637,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>Validate an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12650,6 +12661,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Email))
             {
                 query["Email"] = request.Email;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProbeType))
+            {
+                query["ProbeType"] = request.ProbeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
             {
@@ -12676,7 +12691,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>Validate an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12694,7 +12709,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>Validate an email address.</para>
         /// </summary>
         /// 
         /// <param name="request">
