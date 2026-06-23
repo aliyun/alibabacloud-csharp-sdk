@@ -41,6 +41,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public long? ConsumerCount { get; set; }
 
+            [NameInMap("consumers")]
+            [Validation(Required=false)]
+            public List<GetGatewayQuotaRuleResponseBodyDataConsumers> Consumers { get; set; }
+            public class GetGatewayQuotaRuleResponseBodyDataConsumers : TeaModel {
+                [NameInMap("id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>day</para>

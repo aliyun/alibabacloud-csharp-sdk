@@ -17,12 +17,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ConflictHash { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>group1,group2</para>
         /// </summary>
         [NameInMap("consumerGroupIds")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> ConsumerGroupIds { get; set; }
 
         /// <summary>
@@ -48,6 +52,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("overwrite")]
         [Validation(Required=false)]
         public bool? Overwrite { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("periodMultiplier")]
+        [Validation(Required=false)]
+        public long? PeriodMultiplier { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

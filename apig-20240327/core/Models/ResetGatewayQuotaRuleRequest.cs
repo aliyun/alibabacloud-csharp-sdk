@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public bool? Overwrite { get; set; }
 
+        [NameInMap("periodMultiplier")]
+        [Validation(Required=false)]
+        public long? PeriodMultiplier { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>week</para>
@@ -38,8 +42,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PeriodType { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -54,6 +56,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("timezone")]
         [Validation(Required=false)]
         public string Timezone { get; set; }
+
+        [NameInMap("windowAlignment")]
+        [Validation(Required=false)]
+        public string WindowAlignment { get; set; }
 
     }
 

@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public List<UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
+                    [NameInMap("conflictPeriodType")]
+                    [Validation(Required=false)]
+                    public string ConflictPeriodType { get; set; }
+
+                    [NameInMap("conflictType")]
+                    [Validation(Required=false)]
+                    public string ConflictType { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>cs-d82n1g6m1hkm375xxxxx</para>

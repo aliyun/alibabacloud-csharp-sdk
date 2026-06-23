@@ -25,12 +25,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ConflictHash { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
+        /// 
         /// <b>Example:</b>
         /// <para>group1,group2</para>
         /// </summary>
         [NameInMap("consumerGroupIds")]
         [Validation(Required=false)]
+        [Obsolete]
         public List<string> ConsumerGroupIds { get; set; }
 
         /// <summary>
@@ -46,8 +50,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Overwrite { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -64,8 +66,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> RemoveIds { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>team-rule</para>
         /// </summary>

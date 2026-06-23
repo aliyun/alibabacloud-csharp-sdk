@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// </summary>
             [NameInMap("accepted")]
             [Validation(Required=false)]
-            public string Accepted { get; set; }
+            public bool? Accepted { get; set; }
 
             [NameInMap("conflictPreview")]
             [Validation(Required=false)]
@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 [Validation(Required=false)]
                 public List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
+                    [NameInMap("conflictPeriodType")]
+                    [Validation(Required=false)]
+                    public string ConflictPeriodType { get; set; }
+
+                    [NameInMap("conflictType")]
+                    [Validation(Required=false)]
+                    public string ConflictType { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>cs-xxxxxx</para>

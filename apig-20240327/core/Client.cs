@@ -135,6 +135,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["overwrite"] = request.Overwrite;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodMultiplier))
+            {
+                body["periodMultiplier"] = request.PeriodMultiplier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {
                 body["periodType"] = request.PeriodType;
@@ -248,6 +252,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
             {
                 body["overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodMultiplier))
+            {
+                body["periodMultiplier"] = request.PeriodMultiplier;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {
@@ -13885,6 +13893,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["overwrite"] = request.Overwrite;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodMultiplier))
+            {
+                body["periodMultiplier"] = request.PeriodMultiplier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {
                 body["periodType"] = request.PeriodType;
@@ -13896,6 +13908,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
             {
                 body["timezone"] = request.Timezone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowAlignment))
+            {
+                body["windowAlignment"] = request.WindowAlignment;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13979,6 +13995,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["overwrite"] = request.Overwrite;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodMultiplier))
+            {
+                body["periodMultiplier"] = request.PeriodMultiplier;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
             {
                 body["periodType"] = request.PeriodType;
@@ -13990,6 +14010,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
             {
                 body["timezone"] = request.Timezone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowAlignment))
+            {
+                body["windowAlignment"] = request.WindowAlignment;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
