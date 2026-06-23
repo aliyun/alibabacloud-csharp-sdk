@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.SMQProxy20260409.Models
         [Validation(Required=false)]
         public int? StatusCode { get; set; }
 
+        [NameInMap("body")]
+        [Validation(Required=false)]
+        public BatchSendMessageResponseBody Body { get; set; }
+
     }
 
 }

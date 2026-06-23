@@ -8,18 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SMQProxy20260409.Models
 {
-    public class SendMessageResponse : TeaModel {
-        [NameInMap("headers")]
+    public class SendMessageResponseBody : TeaModel {
+        [NameInMap("MessageBodyMD5")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Headers { get; set; }
+        public string MessageBodyMD5 { get; set; }
 
-        [NameInMap("statusCode")]
+        [NameInMap("MessageId")]
         [Validation(Required=false)]
-        public int? StatusCode { get; set; }
+        public string MessageId { get; set; }
 
-        [NameInMap("body")]
+        [NameInMap("ReceiptHandle")]
         [Validation(Required=false)]
-        public SendMessageResponseBody Body { get; set; }
+        public string ReceiptHandle { get; set; }
 
     }
 
