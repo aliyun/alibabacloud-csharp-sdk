@@ -205,6 +205,14 @@ namespace AlibabaCloud.SDK.BailianControl20240816
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
             {
                 query["skip"] = request.Skip;
@@ -274,6 +282,14 @@ namespace AlibabaCloud.SDK.BailianControl20240816
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
             {

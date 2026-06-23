@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.BailianControl20240816.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
-        /// <summary>
-        /// <para>apiKey</para>
-        /// </summary>
         [NameInMap("apiKeys")]
         [Validation(Required=false)]
         public List<ListApiKeysResponseBodyApiKeys> ApiKeys { get; set; }
@@ -96,9 +93,6 @@ namespace AlibabaCloud.SDK.BailianControl20240816.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
-        /// <summary>
-        /// <para>Id of the request</para>
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

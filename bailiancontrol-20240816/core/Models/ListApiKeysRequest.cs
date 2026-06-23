@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.BailianControl20240816.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        [NameInMap("order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        [NameInMap("orderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
         [NameInMap("skip")]
         [Validation(Required=false)]
         public int? Skip { get; set; }

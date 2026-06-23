@@ -129,9 +129,6 @@ namespace AlibabaCloud.SDK.BailianControl20240816.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>Id of the request</para>
-        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
