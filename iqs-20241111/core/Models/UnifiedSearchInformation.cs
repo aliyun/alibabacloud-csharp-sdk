@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedSearchInformation : TeaModel {
+        /// <summary>
+        /// <para>The search duration, in ms.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1028</para>
+        /// </summary>
         [NameInMap("searchTime")]
         [Validation(Required=false)]
         public long? SearchTime { get; set; }

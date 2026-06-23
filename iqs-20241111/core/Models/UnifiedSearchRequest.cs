@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedSearchRequest : TeaModel {
+        /// <summary>
+        /// <para>The search request parameters.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UnifiedSearchInput Body { get; set; }

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string CallerId { get; set; }
 
         /// <summary>
+        /// <para>End Date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20241017</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string EndDate { get; set; }
 
         /// <summary>
+        /// <para>Start Date.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20241011</para>
         /// </summary>

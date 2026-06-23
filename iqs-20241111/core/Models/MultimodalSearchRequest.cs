@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class MultimodalSearchRequest : TeaModel {
+        /// <summary>
+        /// <para>Query parameters and site blocking parameters</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public MultimodalSearchBody Body { get; set; }

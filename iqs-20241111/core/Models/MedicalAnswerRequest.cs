@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class MedicalAnswerRequest : TeaModel {
+        /// <summary>
+        /// <para>Search information</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public MedicalAnswerInput Body { get; set; }

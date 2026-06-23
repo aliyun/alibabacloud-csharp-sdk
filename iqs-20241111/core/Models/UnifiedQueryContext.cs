@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class UnifiedQueryContext : TeaModel {
         /// <summary>
+        /// <para>The search engine used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Generic</para>
         /// </summary>
@@ -17,10 +19,16 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         [Validation(Required=false)]
         public string EngineType { get; set; }
 
+        /// <summary>
+        /// <para>The initial request.</para>
+        /// </summary>
         [NameInMap("originalQuery")]
         [Validation(Required=false)]
         public UnifiedOriginalQuery OriginalQuery { get; set; }
 
+        /// <summary>
+        /// <para>The rewritten result.</para>
+        /// </summary>
         [NameInMap("rewrite")]
         [Validation(Required=false)]
         public UnifiedRewrite Rewrite { get; set; }

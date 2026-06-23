@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class ValueAddedCredits : TeaModel {
         /// <summary>
+        /// <para>The value-added package - enhanced search.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? Advanced { get; set; }
 
         /// <summary>
+        /// <para>The value-added package - enhanced summary.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

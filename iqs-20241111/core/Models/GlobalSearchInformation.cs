@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class GlobalSearchInformation : TeaModel {
         /// <summary>
+        /// <para>The search time, in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public long? SearchTime { get; set; }
 
         /// <summary>
+        /// <para>The total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10339</para>
         /// </summary>

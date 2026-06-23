@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
 {
     public class ScanFileInfo : TeaModel {
         /// <summary>
+        /// <para>The image rotation angle.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? Angle { get; set; }
 
         /// <summary>
+        /// <para>The image height.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public int? Height { get; set; }
 
         /// <summary>
+        /// <para>The Base64 encoding of the image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>erwre</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         public string ImageBase64 { get; set; }
 
         /// <summary>
+        /// <para>The image width.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
