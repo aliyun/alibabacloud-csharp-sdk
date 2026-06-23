@@ -8,38 +8,36 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DescribeDBInstanceAttributeRequest : TeaModel {
+    public class CreateGatewayConsumerForPolarDBXResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the instance.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pxc-********</para>
+        /// <para>pxc-**************</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>A501A191-BD70-5E50-98A9-C2A486A82****</para>
         /// </summary>
-        [NameInMap("RegionId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RegionId { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The backend task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekzaxhezhs5***</para>
+        /// <para>422922413</para>
         /// </summary>
-        [NameInMap("ResourceGroupId")]
+        [NameInMap("TaskId")]
         [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
+        public int? TaskId { get; set; }
 
     }
 

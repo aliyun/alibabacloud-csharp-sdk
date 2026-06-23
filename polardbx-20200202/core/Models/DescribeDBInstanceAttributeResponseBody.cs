@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public DescribeDBInstanceAttributeResponseBodyDBInstance DBInstance { get; set; }
         public class DescribeDBInstanceAttributeResponseBodyDBInstance : TeaModel {
+            [NameInMap("AiGatewayEnabled")]
+            [Validation(Required=false)]
+            public string AiGatewayEnabled { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the In-Memory Column Index feature is supported.</para>
             /// 
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CpuType { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-08-31T08:56:25.000+0000</para>
@@ -293,7 +297,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBType { get; set; }
 
             /// <summary>
-            /// <para>The database engine version.</para>
+            /// <para>The database version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5.5</para>
@@ -303,7 +307,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the instance.</para>
+            /// <para>The instance description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test instance</para>
@@ -364,7 +368,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? DnNodeCount { get; set; }
 
             /// <summary>
-            /// <para>The disk space of the DN data nodes, in GB.</para>
+            /// <para>The disk space of the DN data node, in GB.</para>
             /// </summary>
             [NameInMap("DnStorageSpace")]
             [Validation(Required=false)]
@@ -385,7 +389,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EngineVersion { get; set; }
 
             /// <summary>
-            /// <para>The expiration time. The time is in the yyyy-MM-ddTHH:mm:ss.sss+0000 format (UTC).</para>
+            /// <para>The expiration time. Format: yyyy-MM-ddTHH:mm:ss.sss+0000 (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-31T16:00:00.000+0000</para>
@@ -397,8 +401,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>Indicates whether the instance has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The instance has expired.</description></item>
-            /// <item><description><b>false</b>: The instance is running normally.</description></item>
+            /// <item><description><b>true</b>: Expired.</description></item>
+            /// <item><description><b>false</b>: Not expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -445,7 +449,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The instance DPI engine version code. This is an internal parameter.</para>
+            /// <para>The engine version of the instance. This is an internal parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18</para>
@@ -462,7 +466,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<string> LTSVersions { get; set; }
 
             /// <summary>
-            /// <para>The latest kernel version supported by the instance.</para>
+            /// <para>The latest minor engine version supported by the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx-kernel_5.4.11-16301083_xcluster-20210805</para>
@@ -474,12 +478,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <summary>
             /// <para>The lock mode of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Unlock</b>: The instance is running normally.</description></item>
-            /// <item><description><b>ManualLock</b>: The instance is manually locked.</description></item>
-            /// <item><description><b>LockByExpiration</b>: The instance is automatically locked due to expiration.</description></item>
-            /// <item><description><b>LockByRestoration</b>: The instance is automatically locked before a rollback.</description></item>
-            /// <item><description><b>LockByDiskQuota</b>: The instance is automatically locked because the storage is full.</description></item>
-            /// <item><description><b>LockReadInstanceByDiskQuota</b>: The read-only instance is automatically locked because the storage is full.</description></item>
+            /// <item><description><b>Unlock</b>: Normal.</description></item>
+            /// <item><description><b>ManualLock</b>: Manually locked.</description></item>
+            /// <item><description><b>LockByExpiration</b>: Automatically locked due to instance expiration.</description></item>
+            /// <item><description><b>LockByRestoration</b>: Automatically locked before instance rollback.</description></item>
+            /// <item><description><b>LockByDiskQuota</b>: Automatically locked due to insufficient disk space.</description></item>
+            /// <item><description><b>LockReadInstanceByDiskQuota</b>: Read-only instance automatically locked due to insufficient disk space.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -510,7 +514,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
-            /// <para>The current kernel version.</para>
+            /// <para>The current minor engine version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx-kernel_5.4.11-16301083_xcluster-20210805</para>
@@ -520,7 +524,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MinorVersion { get; set; }
 
             /// <summary>
-            /// <para>The network type of the instance. Only VPC is supported, which indicates a virtual private cloud (VPC).</para>
+            /// <para>The network type of the instance. Only VPC is supported, which indicates Virtual Private Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC</para>
@@ -586,7 +590,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-*********</para>
@@ -615,7 +619,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             /// <item><description><b>disabled</b>: Disabled.</description></item>
             /// <item><description><b>enabled</b>: Enabled.</description></item>
             /// <item><description><b>processing</b>: Being processed.</description></item>
-            /// <item><description><b>unknown</b>: Unknown. The instance may be disconnected.</description></item>
+            /// <item><description><b>unknown</b>: Unknown. This may be caused by the instance being unreachable.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -707,7 +711,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
-            /// <para>The third zone.</para>
+            /// <para>The tertiary zone for Three-zone deployment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen-e</para>

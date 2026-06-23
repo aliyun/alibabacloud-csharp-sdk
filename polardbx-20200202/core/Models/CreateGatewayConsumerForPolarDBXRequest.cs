@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class DescribeDBInstanceAttributeRequest : TeaModel {
+    public class CreateGatewayConsumerForPolarDBXRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,16 +30,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>The resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-aekzaxhezhs5***</para>
-        /// </summary>
-        [NameInMap("ResourceGroupId")]
-        [Validation(Required=false)]
-        public string ResourceGroupId { get; set; }
 
     }
 

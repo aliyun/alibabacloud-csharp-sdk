@@ -2879,6 +2879,154 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an AI gateway consumer for a PolarDB-X instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayConsumerForPolarDBXRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayConsumerForPolarDBXResponse
+        /// </returns>
+        public CreateGatewayConsumerForPolarDBXResponse CreateGatewayConsumerForPolarDBXWithOptions(CreateGatewayConsumerForPolarDBXRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayConsumerForPolarDBX",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayConsumerForPolarDBXResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AI gateway consumer for a PolarDB-X instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayConsumerForPolarDBXRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayConsumerForPolarDBXResponse
+        /// </returns>
+        public async Task<CreateGatewayConsumerForPolarDBXResponse> CreateGatewayConsumerForPolarDBXWithOptionsAsync(CreateGatewayConsumerForPolarDBXRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGatewayConsumerForPolarDBX",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGatewayConsumerForPolarDBXResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AI gateway consumer for a PolarDB-X instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayConsumerForPolarDBXRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayConsumerForPolarDBXResponse
+        /// </returns>
+        public CreateGatewayConsumerForPolarDBXResponse CreateGatewayConsumerForPolarDBX(CreateGatewayConsumerForPolarDBXRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateGatewayConsumerForPolarDBXWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AI gateway consumer for a PolarDB-X instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGatewayConsumerForPolarDBXRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGatewayConsumerForPolarDBXResponse
+        /// </returns>
+        public async Task<CreateGatewayConsumerForPolarDBXResponse> CreateGatewayConsumerForPolarDBXAsync(CreateGatewayConsumerForPolarDBXRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateGatewayConsumerForPolarDBXWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a Global Database Network (GDN) instance.</para>
         /// </summary>
         /// 
