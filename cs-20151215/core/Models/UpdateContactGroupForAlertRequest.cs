@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateContactGroupForAlertRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the alert contact group.</para>
+        /// <para>The name of the alert metric contact group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<long?> ContactGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the container registry instance.</para>
+        /// <para>The name of the CR instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample</para>

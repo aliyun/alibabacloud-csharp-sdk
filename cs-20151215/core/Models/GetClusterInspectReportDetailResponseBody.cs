@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterInspectReportDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The results.</para>
+        /// <para>The list of results.</para>
         /// </summary>
         [NameInMap("checkItemResults")]
         [Validation(Required=false)]
@@ -19,11 +19,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The category of the inspection item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>security: Security compliance</description></item>
-            /// <item><description>performance: Performance efficiency</description></item>
-            /// <item><description>stability: Business stability</description></item>
-            /// <item><description>limitation: Service limits</description></item>
-            /// <item><description>cost: Cost optimization</description></item>
+            /// <item><description>security: security and compliance</description></item>
+            /// <item><description>performance: performance and efficiency </description></item>
+            /// <item><description>stability: business stability</description></item>
+            /// <item><description>limitation: service limits </description></item>
+            /// <item><description>cost: cost optimization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CheckItemUid { get; set; }
 
             /// <summary>
-            /// <para>The description of the inspection item.</para>
+            /// <para>The description of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>集群API Server负载均衡实例异常会影响集群可用性，请检查负载均衡实例状态是否正常。</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The fixing suggestion.</para>
+            /// <para>The fix suggestion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>请提交工单处理。</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The level of the inspection item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>advice: Suggestions</description></item>
-            /// <item><description>warning: Low severity</description></item>
-            /// <item><description>error: Medium severity</description></item>
-            /// <item><description>critical: High severity</description></item>
+            /// <item><description>advice: suggestion</description></item>
+            /// <item><description>warning: low-risk</description></item>
+            /// <item><description>error: medium-risk</description></item>
+            /// <item><description>critical: high-risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The name of the inspection item.</para>
+            /// <para>The name of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>API Server CLB 实例状态异常</para>
@@ -90,11 +90,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The inspection results. Valid values:</para>
+            /// <para>The check result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The inspection item is abnormal.</description></item>
-            /// <item><description>false: The inspection item is normal.</description></item>
-            /// <item><description>disable: The inspection item is not enabled.</description></item>
+            /// <item><description>true: The check item is abnormal.</description></item>
+            /// <item><description>false: The check item is normal.</description></item>
+            /// <item><description>disable: The check item is not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the inspection object.</para>
+            /// <para>The resource type of the check target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CLB</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>The inspection objects.</para>
+            /// <para>The list of check targets.</para>
             /// </summary>
             [NameInMap("targets")]
             [Validation(Required=false)]
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to display the returned tags on multiple pages.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AK8uQQrxgFK8sbARvnCj6w9R3kPme4I3</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the inspection report.</para>
+        /// <para>The inspection report ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>782df89346054a0000562063a****</para>
@@ -174,10 +174,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the inspection report. Valid values:</para>
+        /// <para>The generation status of the inspection report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>completed: The inspection report is generated.</description></item>
-        /// <item><description>running: The inspection report is generating.</description></item>
+        /// <item><description>completed: Completed.</description></item>
+        /// <item><description>running: In progress.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,14 +188,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Overview of inspection reports.</para>
+        /// <para>The inspection report summary.</para>
         /// </summary>
         [NameInMap("summary")]
         [Validation(Required=false)]
         public GetClusterInspectReportDetailResponseBodySummary Summary { get; set; }
         public class GetClusterInspectReportDetailResponseBodySummary : TeaModel {
             /// <summary>
-            /// <para>The number of check items whose inspection result is advice.</para>
+            /// <para>The number of check items with a result of advice.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? AdviceCount { get; set; }
 
             /// <summary>
-            /// <para>Check the status code of the inspection task.</para>
+            /// <para>The status code of the check task result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>warning</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The number of check items whose inspection result is error.</para>
+            /// <para>The number of check items with a result of error.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? ErrorCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items whose inspection result is normal.</para>
+            /// <para>The number of check items with a result of normal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? NormalCount { get; set; }
 
             /// <summary>
-            /// <para>The number of check items whose inspection result is warning.</para>
+            /// <para>The number of check items with a result of warning.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

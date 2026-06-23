@@ -10,20 +10,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class AttachInstancesToNodePoolRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to store container data and images on data disks. Valid values:</para>
+        /// <para>Specifies whether to store container data and images on a data cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: stores container data and images on data disks.</description></item>
-        /// <item><description><c>false</c>: does not store container data or images on data disks.</description></item>
+        /// <item><description><para><c>true</c>: Stores container data and images on a data cloud disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Does not store container data and images on a data cloud disk.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
-        /// <para>How to mount a data disk:</para>
+        /// <para>Data cloud disk mounting rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the ECS instances are already mounted with data disks and the file system of the last data disk is not initialized, the system automatically formats this data disk to ext4 and mounts it to /var/lib/docker and /var/lib/kubelet.</description></item>
-        /// <item><description>If no data disk is attached to the ECS instances, the system does not purchase a new data disk.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you choose to store container data and images on a data disk and the data disk is already mounted to the ECS instance, the existing data on the data disk will be cleared. You can back up the disk to avoid data loss.</para>
+        /// <item><description>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk as EXT4 to store /var/lib/docker and /var/lib/kubelet.</description></item>
+        /// <item><description>If the ECS instance has no data cloud disks attached, no new data cloud disk is mounted.<remarks>
+        /// <para>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, existing data on the data cloud disk is lost. Back up your data in advance.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -33,17 +35,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? FormatDisk { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances to be added.</para>
+        /// <para>The list of ECS instances to be added.</para>
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
         public List<string> Instances { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain the instance name. Valid values:</para>
+        /// <para>Specifies whether to retain the original instance name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: retains the instance name.</description></item>
-        /// <item><description><c>false</c>: does not retain the instance name.</description></item>
+        /// <item><description><para><c>true</c>: Retains the instance name.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Does not retain the instance name.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The SSH password that is used to log on to the instance.</para>
+        /// <para>The SSH logon password of the instances to be added.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>

@@ -20,21 +20,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The cluster specification. This parameter is valid only when <c>cluster_type</c> is set to <c>ManagedKubernetes</c> and the <c>profile</c> parameter is specified. Valid values:</para>
+        /// <para>The cluster specification when <c>cluster_type</c> is set to <c>ManagedKubernetes</c> and <c>profile</c> is configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ack.standard</c>: Standard</para>
-        /// </description></item>
-        /// <item><description><para><c>ack.pro.small</c>: Pro</para>
-        /// </description></item>
-        /// <item><description><para><c>ack.pro.xlarge</c>: Pro XL</para>
-        /// </description></item>
-        /// <item><description><para><c>ack.pro.2xlarge</c>: Pro 2XL</para>
-        /// </description></item>
-        /// <item><description><para><c>ack.pro.4xlarge</c>: Pro 4XL (Contact customer service to enable this option.)</para>
-        /// </description></item>
+        /// <item><description><c>ack.standard</c>: Basic</description></item>
+        /// <item><description><c>ack.pro.small</c>: Pro</description></item>
+        /// <item><description><c>ack.pro.xlarge</c>: Pro XL</description></item>
+        /// <item><description><c>ack.pro.2xlarge</c>: Pro 2XL</description></item>
+        /// <item><description><c>ack.pro.4xlarge</c>: Pro 4XL (contact customer service to add your account to the whitelist)</description></item>
         /// </list>
-        /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro provisioned control plane</a>. These tiers pre-allocate and dedicate control plane resources to ensure a consistently high, predictable level of performance for API concurrency and pod scheduling. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
-        /// <para>For information about the cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fee</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fee</a>.</para>
+        /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. By pre-allocating and dedicating control plane resources, these tiers ensure that API concurrency and Pod scheduling capabilities remain at a deterministic high level, suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
+        /// <para>For information about cluster management fees for Pro and provisioned control plane editions, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
@@ -44,14 +39,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The cluster type.</para>
+        /// <para>The cluster type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Kubernetes</c>: an ACK dedicated cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>ManagedKubernetes</c>: an ACK managed cluster. This type includes ACK managed clusters (Pro and Standard), ACK Serverless clusters (Pro and Standard), ACK Edge clusters (Pro and Standard), and ACK Lingjun clusters (Pro).</para>
-        /// </description></item>
-        /// <item><description><para><c>ExternalKubernetes</c>: a registered cluster.</para>
-        /// </description></item>
+        /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
+        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster types, including ACK managed clusters (Pro and Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</description></item>
+        /// <item><description><c>ExternalKubernetes</c>: registered cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The name of the cluster.</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster-demo</para>
@@ -72,7 +64,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,7 +74,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -92,15 +84,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>When <c>cluster_type</c> is set to <c>ManagedKubernetes</c>, you can further specify a sub-type of the cluster.</para>
+        /// <para>When you set <c>cluster_type</c> to <c>ManagedKubernetes</c> (ACK managed cluster types), you can further specify the cluster subtype. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>Default</c>: an ACK managed cluster. This includes ACK Pro and ACK Standard clusters.</para>
+        /// <item><description><para><c>Default</c>: ACK managed cluster, including ACK cluster Pro and ACK cluster Basic.</para>
         /// </description></item>
-        /// <item><description><para><c>Edge</c>: an ACK Edge cluster. This includes ACK Edge Pro and ACK Edge Standard clusters.</para>
+        /// <item><description><para><c>Edge</c>: ACK Edge cluster, including ACK Edge cluster Pro and ACK Edge cluster Basic.</para>
         /// </description></item>
-        /// <item><description><para><c>Serverless</c>: an ACK Serverless cluster. This includes ACK Serverless Pro and ACK Serverless Standard clusters.</para>
+        /// <item><description><para><c>Serverless</c>: ACK Serverless cluster, including ACK Serverless cluster Pro and ACK Serverless cluster Basic.</para>
         /// </description></item>
-        /// <item><description><para><c>Lingjun</c>: an ACK Lingjun cluster (Pro edition).</para>
+        /// <item><description><para><c>Lingjun</c>: ACK Lingjun cluster, available in Pro.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -112,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the clusters belong.</para>
+        /// <para>The region of the cluster. Specify this parameter to filter clusters in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

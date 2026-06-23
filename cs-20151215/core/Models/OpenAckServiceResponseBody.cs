@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class OpenAckServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID of the service activation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2067*******0374</para>

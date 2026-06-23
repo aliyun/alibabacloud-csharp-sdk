@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterChecksRequest : TeaModel {
         /// <summary>
-        /// <para>The targets to check.</para>
+        /// <para>The check target to filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp19ay6nnvd4cexxxx</para>
@@ -20,7 +20,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>The check method.</para>
+        /// <para>The check type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ClusterMigrate: cluster migration.</para>
+        /// </description></item>
+        /// <item><description><para>MasterUpgrade: cluster control plane upgrade.</para>
+        /// </description></item>
+        /// <item><description><para>NodePoolUpgrade: node pool upgrade.</para>
+        /// </description></item>
+        /// <item><description><para>ClusterUpgrade: cluster upgrade.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ClusterUpgrade</para>

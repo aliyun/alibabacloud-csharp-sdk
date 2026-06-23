@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class QuotasValue : TeaModel {
         /// <summary>
-        /// <para>The value of the quota. If the quota limit is reached, submit an application in the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center console</a> to increase the quota.</para>
+        /// <para>The quota value. To request a quota increase beyond the current value, submit a request on the <a href="https://quotas.console.aliyun.com/products/csk/quotas">Quota Center</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class MigrateClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint of the OSS bucket.</para>
+        /// <para>The bucket endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>*******.oss-cn-hangzhou.aliyuncs.com</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string OssBucketEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The name of the Object Storage Service (OSS) bucket.</para>
+        /// <para>The bucket name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bucket-****</para>

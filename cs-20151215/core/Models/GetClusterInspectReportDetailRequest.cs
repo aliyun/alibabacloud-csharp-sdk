@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The category of the inspection item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>security: Security compliance</description></item>
-        /// <item><description>performance: Performance efficiency</description></item>
-        /// <item><description>stability: Business stability</description></item>
-        /// <item><description>limitation: Service limits</description></item>
-        /// <item><description>cost: Cost optimization</description></item>
+        /// <item><description>security: security and compliance</description></item>
+        /// <item><description>performance: performance and efficiency </description></item>
+        /// <item><description>stability: business stability</description></item>
+        /// <item><description>limitation: service limits </description></item>
+        /// <item><description>cost: cost optimization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Inspection results filtering. If this parameter is set to true, only abnormal inspection items are returned.</para>
+        /// <para>Specifies whether to filter check items. If set to true, only abnormal check items with result=true are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? EnableFilter { get; set; }
 
         /// <summary>
-        /// <para>The query language.</para>
+        /// <para>The query language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh_CN</description></item>
-        /// <item><description>en_US</description></item>
+        /// <item><description>en_US.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <summary>
         /// <para>The level of the inspection item. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>advice: Suggestions</description></item>
-        /// <item><description>warning: Low severity</description></item>
-        /// <item><description>error: Medium severity</description></item>
-        /// <item><description>critical: High severity</description></item>
+        /// <item><description>advice: suggestion</description></item>
+        /// <item><description>warning: low-risk</description></item>
+        /// <item><description>error: medium-risk</description></item>
+        /// <item><description>critical: high-risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to display the returned tags on multiple pages.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bb41e2bcb47b747389dce6c0d2</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the inspection object. Only items that meet the targetType parameter are returned.</para>
+        /// <para>The object type of the inspection target. Only check items that match the specified targetType are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NodePool</para>

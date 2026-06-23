@@ -28,8 +28,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The maximum number of results to return per page.</para>
+        /// <para>Valid values: [1,100].</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The task ID. If specified, only events associated with this task are returned.</para>
+        /// <para>The ID of the task to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T-6823f946ffadbb0106****</para>

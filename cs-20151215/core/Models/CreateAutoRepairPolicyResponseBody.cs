@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateAutoRepairPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The auto-repair policy ID.</para>
+        /// <para>The self-healing rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-xxxxxxx</para>

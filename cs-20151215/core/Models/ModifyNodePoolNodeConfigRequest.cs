@@ -17,35 +17,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ContainerdConfig ContainerdConfig { get; set; }
 
         /// <summary>
-        /// <para>The kubelet configurations.</para>
+        /// <para>The kubelet parameter configuration.</para>
         /// </summary>
         [NameInMap("kubelet_config")]
         [Validation(Required=false)]
         public KubeletConfig KubeletConfig { get; set; }
 
         /// <summary>
-        /// <para>List of nodes to upgrade.</para>
+        /// <para>The list of specified nodes to upgrade.</para>
         /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The OS configuration.</para>
+        /// <para>The operating system parameter configuration.</para>
         /// </summary>
         [NameInMap("os_config")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
         public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
             /// <summary>
-            /// <para>Hugepage configuration.</para>
+            /// <para>The Hugepage configuration.</para>
             /// </summary>
             [NameInMap("hugepage")]
             [Validation(Required=false)]
             public Hugepage Hugepage { get; set; }
 
             /// <summary>
-            /// <para>The sysctl configuration.</para>
+            /// <para>The custom sysctl parameter configuration.</para>
             /// </summary>
             [NameInMap("sysctl")]
             [Validation(Required=false)]
@@ -54,14 +54,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The rolling policy configuration.</para>
+        /// <para>The rolling update configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestRollingPolicy RollingPolicy { get; set; }
         public class ModifyNodePoolNodeConfigRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The maximum number of unavailable nodes.</para>
+            /// <para>Node updates in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be updated in parallel per batch.</para>
+            /// <para>Valid values: [1,10].</para>
+            /// <para>Default value: 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterCheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster check task.</para>
+        /// <para>The check ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CheckId { get; set; }
 
         /// <summary>
-        /// <para>A list of check items.</para>
+        /// <para>The check items.</para>
         /// </summary>
         [NameInMap("check_items")]
         [Validation(Required=false)]
         public Dictionary<string, List<Dictionary<string, object>>> CheckItems { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster check task was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-16T08:31:20.292030178Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster check task was completed.</para>
+        /// <para>The completion time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-16T08:35:20.292030178Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string FinishedAt { get; set; }
 
         /// <summary>
-        /// <para>The message that indicates the status of the cluster check task.</para>
+        /// <para>The check status message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task succeed</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The status of the cluster check.</para>
+        /// <para>The check status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The check method.</para>
+        /// <para>The check type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ClusterUpgrade</para>

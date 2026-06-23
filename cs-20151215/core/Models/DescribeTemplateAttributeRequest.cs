@@ -10,13 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeTemplateAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The type of template. The value can be a custom value.</para>
+        /// <para>The templatetype.</para>
         /// <list type="bullet">
-        /// <item><description>If the parameter is set to <c>kubernetes</c>, the template is displayed on the Templates page in the console.</description></item>
-        /// <item><description>If the parameter is set to <c>compose</c>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</description></item>
-        /// <item><description>If the value of the parameter is not <c>kubernetes</c>, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to <c>kubernetes</c>.</description></item>
+        /// <item><description><para>If you set this parameter to <c>kubernetes</c>, the template is displayed on the Orchestration Templates page in the console.</para>
+        /// </description></item>
+        /// <item><description><para>If you leave this parameter empty or set it to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <c>kubernetes</c>.</para>
+        /// <para>Settings this parameter to <c>kubernetes</c> is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes</para>

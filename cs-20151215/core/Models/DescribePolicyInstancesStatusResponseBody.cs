@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribePolicyInstancesStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of policy instances that are deployed in the cluster at different severity levels.</para>
+        /// <para>The number of policy instances deployed in the cluster at different governance levels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;high&quot;: 11,     &quot;medium&quot;: 1  }</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, object> InstancesSeverityCount { get; set; }
 
         /// <summary>
-        /// <para>The number of policy instances of each policy type.</para>
+        /// <para>The list of policy instance counts for different policy types.</para>
         /// </summary>
         [NameInMap("policy_instances")]
         [Validation(Required=false)]
         public List<DescribePolicyInstancesStatusResponseBodyPolicyInstances> PolicyInstances { get; set; }
         public class DescribePolicyInstancesStatusResponseBodyPolicyInstances : TeaModel {
             /// <summary>
-            /// <para>The type of the policy. For more information about different types of policies and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</para>
+            /// <para>The policy type. For more information about supported policy types and their descriptions, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rule library</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>compliance</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyCategory { get; set; }
 
             /// <summary>
-            /// <para>The description of the policy.</para>
+            /// <para>The policy description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Restricts use of the cluster-admin role.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyDescription { get; set; }
 
             /// <summary>
-            /// <para>The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.</para>
+            /// <para>The number of deployed policy instances. If this field is empty, no policy instances of this type are deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PolicyInstancesCount { get; set; }
 
             /// <summary>
-            /// <para>The name of the policy.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACKRestrictRoleBindings</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the policy.</para>
+            /// <para>The governance level of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>medium</para>

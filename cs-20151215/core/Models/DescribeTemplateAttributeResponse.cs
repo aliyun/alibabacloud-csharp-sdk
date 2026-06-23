@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTemplateAttributeResponseBody> Body { get; set; }
         public class DescribeTemplateAttributeResponseBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the template. When you update a template, a new template ID is generated.</para>
+            /// <para>编排模板ID，每次变更都会有一个模板ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>72d20cf8-a533-4ea9-a10d-e7630d3d****</para>
@@ -32,7 +32,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The access control policy of the template.</para>
+            /// <para>编排模板的访问权限，取值：</para>
+            /// <list type="bullet">
+            /// <item><description><c>private</c>：私有。</description></item>
+            /// <item><description><c>public</c>：公共。</description></item>
+            /// <item><description><c>shared</c>：可共享。</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Acl { get; set; }
 
             /// <summary>
-            /// <para>The name of the template.</para>
+            /// <para>编排模板名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>web</para>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The template content in the YAML format.</para>
+            /// <para>编排模板YAML内容。</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiVersion: V1\n***</para>
@@ -62,13 +67,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Template { get; set; }
 
             /// <summary>
-            /// <para>The type of template. The value can be a custom value.</para>
+            /// <para>模板类型。</para>
             /// <list type="bullet">
-            /// <item><description>If the parameter is set to <c>kubernetes</c>, the template is displayed on the Templates page in the console.</description></item>
-            /// <item><description>If the parameter is set to <c>compose</c>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</description></item>
-            /// <item><description>If the value of the parameter is not <c>kubernetes</c>, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to <c>kubernetes</c>.</description></item>
+            /// <item><description><para>当取值为kubernetes时将在控制台的编排模板页面展示该模板。</para>
+            /// </description></item>
+            /// <item><description><para>该参数不填写或者取值为其他值时，控制台的编排模板页面将不会展示该模板。</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: <c>kubernetes</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kubernetes</para>
@@ -78,7 +83,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// <para>The description of the template.</para>
+            /// <para>编排模板描述信息。</para>
             /// 
             /// <b>Example:</b>
             /// <para>test template</para>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The label of the template.</para>
+            /// <para>部署模板的标签。</para>
             /// 
             /// <b>Example:</b>
             /// <para>sa</para>
@@ -98,7 +103,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Tags { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the template. The value remains unchanged after the template is updated.</para>
+            /// <para>编排模板唯一ID，不随模板更新而改变。</para>
             /// 
             /// <b>Example:</b>
             /// <para>874ec485-e7e6-4373-8a3b-47bde8ae****</para>
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TemplateWithHistId { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was created.</para>
+            /// <para>编排模板创建时间。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T16:56:33+08:00</para>
@@ -118,7 +123,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was updated.</para>
+            /// <para>编排模板更新时间。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T16:56:33+08:00</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterAddonInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of components that are installed in the cluster.</para>
+        /// <para>The list of installed component instances.</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
@@ -27,12 +27,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The status of the component. Valid values:</para>
+            /// <para>The component status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>active: The component is installed.</description></item>
-            /// <item><description>updating: The component is being modified.</description></item>
-            /// <item><description>upgrading: The component is being updated.</description></item>
-            /// <item><description>deleting: The component is being uninstalled.</description></item>
+            /// <item><description>active: installed</description></item>
+            /// <item><description>updating: being modified</description></item>
+            /// <item><description>upgrading: being upgraded</description></item>
+            /// <item><description>deleting: being uninstalled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The version of the component.</para>
+            /// <para>The component version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1.9.3.10-7dfca203-aliyun</para>

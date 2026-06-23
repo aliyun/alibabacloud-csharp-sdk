@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateTriggerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The actions performed by the trigger.</para>
+        /// <para>The trigger action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redeploy</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c93095129fc41463aa455d89444fd****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the trigger project.</para>
+        /// <para>The trigger project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/test-app</para>

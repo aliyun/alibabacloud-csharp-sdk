@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterUserKubeconfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The kubeconfig file of the cluster.</para>
+        /// <para>The KubeConfig of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apiVersion: v1\nclusters:\n- cluster:\n    server: <a href="https://114.55.xx.xx:6443%5C%5Cn">https://114.55.xx.xx:6443\\n</a>    certificate-authority-data: LS0tLS****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the kubeconfig file. Format: the UTC time in the RFC3339 format.</para>
+        /// <para>The expiration time of the KubeConfig. Format: UTC time in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-10T09:56:17Z</para>

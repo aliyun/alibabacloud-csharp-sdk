@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RemoveNodePoolNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to remove concurrently.</para>
+        /// <para>Specifies whether to remove nodes concurrently.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Nodes are concurrently removed from the scaling group.</para>
+        /// </description></item>
+        /// <item><description><para>false: Nodes are sequentially removed from the scaling group.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,10 +27,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Concurrency { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to drain the nodes that you want to remove. Valid values:</para>
+        /// <para>Specifies whether to drain the nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: drain the nodes that you want to remove.</description></item>
-        /// <item><description>false: do not drain the nodes that you want to remove.</description></item>
+        /// <item><description>true: Drain the nodes.</description></item>
+        /// <item><description>false: Do not drain the nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// <para>A list of instances that you want to remove.</para>
+        /// <para>The list of instances to remove.</para>
         /// </summary>
         [NameInMap("instance_ids")]
         [Validation(Required=false)]
@@ -43,10 +50,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
-        /// <para>A list of nodes that you want to remove.</para>
+        /// <para>[This parameter is deprecated]</para>
+        /// <para>The list of nodes to remove.</para>
         /// <remarks>
-        /// <para> This parameter is deprecated. Use instance_ids instead.</para>
+        /// <para>Danger: This parameter is deprecated. Use <c>instance_ids</c> instead.</danger>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("nodes")]
@@ -55,10 +62,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the nodes after they are removed. Valid values:</para>
+        /// <para>Specifies whether to release the nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: release the nodes after they are removed.</description></item>
-        /// <item><description>false: do not release the nodes after they are removed.</description></item>
+        /// <item><description>true: Release the nodes.</description></item>
+        /// <item><description>false: Do not release the nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

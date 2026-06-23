@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic ID.</para>
+        /// <para>The diagnosis ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6f719f23098240818eb26fe3a37d****</para>

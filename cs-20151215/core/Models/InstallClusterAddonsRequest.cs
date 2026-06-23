@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class InstallClusterAddonsRequest : TeaModel {
         /// <summary>
-        /// <para>请求体参数。</para>
+        /// <para>The request body parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ags-metrics-collector</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<InstallClusterAddonsRequestBody> Body { get; set; }
         public class InstallClusterAddonsRequestBody : TeaModel {
             /// <summary>
-            /// <para>组件自定义参数，使用JSON字符串编码。</para>
+            /// <para>The custom parameters of the component, encoded as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;,\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>组件名称。您可以通过<a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a>接口查询可用组件的信息，包括组件名称及版本等。</para>
+            /// <para>The component name. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>组件版本。您可以通过<a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a>接口查询可用组件的信息，包括组件名称及版本等。</para>
+            /// <para>The component version. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

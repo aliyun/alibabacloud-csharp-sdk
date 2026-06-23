@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region in which the resource resides.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs.</para>
+        /// <para>The list of resource IDs. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resource_ids")]
@@ -29,7 +29,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of resources that you want to label. Set the value to <c>CLUSTER</c>.</para>
+        /// <para>The resource type.</para>
+        /// <para>CLUSTER: cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,11 +41,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to the resources in key-value pairs. You can add up to 20 key-value pairs. Note:</para>
+        /// <para>The tag key-value pairs of the resource. You can specify up to 20 tag key-value pairs. Note:</para>
         /// <list type="bullet">
-        /// <item><description>The values cannot be empty strings. A value must be 1 to 128 characters in length.</description></item>
-        /// <item><description>A key or value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
-        /// <item><description>A key or value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>If you specify this parameter, the value cannot be an empty string and can contain up to 128 characters.</description></item>
+        /// <item><description>The value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+        /// <item><description>The value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>

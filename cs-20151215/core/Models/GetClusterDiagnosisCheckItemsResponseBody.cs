@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterDiagnosisCheckItemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The check item.</para>
+        /// <para>The check items.</para>
         /// </summary>
         [NameInMap("check_items")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Display { get; set; }
 
             /// <summary>
-            /// <para>The name of the group to which the check item belongs.</para>
+            /// <para>The check item group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Node</para>
@@ -47,13 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the check result.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>normal</description></item>
-            /// <item><description>warning</description></item>
-            /// <item><description>error</description></item>
-            /// </list>
+            /// <para>The assessment result of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -63,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The check result.</para>
+            /// <para>The check result message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -73,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The name of the check item.</para>
+            /// <para>The check item name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HostDNS</para>
@@ -93,7 +87,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Refer { get; set; }
 
             /// <summary>
-            /// <para>The value of the check item.</para>
+            /// <para>The check item value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>

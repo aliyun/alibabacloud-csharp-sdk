@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeployPolicyInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The governance action. Valid values:</para>
+        /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>deny</c>: Denies deployments that violate the rule.</para>
-        /// </description></item>
-        /// <item><description><para><c>warn</c>: Generates an alert for deployments that violate the rule.</para>
-        /// </description></item>
+        /// <item><description><c>deny</c>: blocks non-compliant deployments.</description></item>
+        /// <item><description><c>warn</c>: generates alerts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +24,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The namespaces where the policy applies. If you omit this parameter, the policy applies to all namespaces.</para>
+        /// <para>The namespaces to which the policy is restricted. An empty value indicates all namespaces.</para>
         /// </summary>
         [NameInMap("namespaces")]
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// <para>For details on the parameters supported by each policy governance rule, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Container security policy rules</a>.</para>
+        /// <para>The parameter settings of the current rule instance. For the parameters supported by each policy governance rule and the corresponding metric description, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Security policy rule library</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{   &quot;repos&quot;: [     &quot;registry-vpc.cn-hangzhou.aliyuncs.com/acs/&quot;,     &quot;registry.cn-hangzhou.aliyuncs.com/acs/&quot;   ] }</para>

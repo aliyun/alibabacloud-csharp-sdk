@@ -17,19 +17,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClusterVulsResponseBodyVulRecords> VulRecords { get; set; }
         public class DescribeClusterVulsResponseBodyVulRecords : TeaModel {
             /// <summary>
-            /// <para>The CVE list.</para>
+            /// <para>The list of CVEs.</para>
             /// </summary>
             [NameInMap("cve_list")]
             [Validation(Required=false)]
             public List<string> CveList { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the vulnerability.</para>
-            /// <para>Valid values:</para>
+            /// <para>The severity level of the vulnerability. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>nntf: low</description></item>
-            /// <item><description>later: medium     </description></item>
-            /// <item><description>asap: high</description></item>
+            /// <item><description>later: medium</description></item>
+            /// <item><description>asap: high.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +39,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Necessity { get; set; }
 
             /// <summary>
-            /// <para>The number of nodes that have the vulnerability.</para>
+            /// <para>The number of nodes that have this vulnerability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -90,15 +89,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string VulName { get; set; }
 
             /// <summary>
-            /// <para>The type of vulnerability.</para>
-            /// <para>Valid values:</para>
+            /// <para>The type of the vulnerability. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>app: application vulnerabilities</description></item>
-            /// <item><description>sca: application vulnerabilities (software component analysis)</description></item>
-            /// <item><description>cve: Linux vulnerabilities</description></item>
-            /// <item><description>cms: Web-CMS vulnerabilities</description></item>
-            /// <item><description>sys: Windows vulnerabilities</description></item>
-            /// <item><description>emg:  emergency vulnerabilities</description></item>
+            /// <item><description>app: application vulnerability</description></item>
+            /// <item><description>sca: application vulnerability (Software Composition Analysis)</description></item>
+            /// <item><description>cve: Linux vulnerability</description></item>
+            /// <item><description>cms: WebCMS vulnerability</description></item>
+            /// <item><description>sys: Windows vulnerability</description></item>
+            /// <item><description>emg: emergency vulnerability.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

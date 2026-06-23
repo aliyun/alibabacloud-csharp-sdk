@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The status list of the kubeconfig files associated with the cluster.</para>
+        /// <para>The list of KubeConfig states associated with the cluster.</para>
         /// </summary>
         [NameInMap("states")]
         [Validation(Required=false)]
         public List<ListClusterKubeconfigStatesResponseBodyStates> States { get; set; }
         public class ListClusterKubeconfigStatesResponseBodyStates : TeaModel {
             /// <summary>
-            /// <para>The displayed name or role name of the RAM user.</para>
+            /// <para>The display name of the Resource Access Management (RAM) user or the role name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tom</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of an Alibaba Cloud account, RAM user, or RAM role.</para>
+            /// <para>The Alibaba Cloud account, Resource Access Management (RAM) user, or role ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>22855*****************</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The logon name or role name of the RAM user.</para>
+            /// <para>The logon name of the Resource Access Management (RAM) user or the role name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tom</para>
@@ -86,11 +86,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The status of the account.</para>
+            /// <para>The account status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Active: The account is active.</description></item>
-            /// <item><description>InActive: The account is locked.</description></item>
-            /// <item><description>Deleted: The account is deleted.</description></item>
+            /// <item><description><para>Active: The account is active.</para>
+            /// </description></item>
+            /// <item><description><para>InActive: The account is frozen.</para>
+            /// </description></item>
+            /// <item><description><para>Deleted: The account is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,10 +104,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountState { get; set; }
 
             /// <summary>
-            /// <para>The type of the account.</para>
+            /// <para>The account type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>RootAccount: Alibaba Cloud account.</description></item>
-            /// <item><description>RamUser: RAM user.</description></item>
+            /// <item><description>RamUser: Resource Access Management (RAM) user.</description></item>
             /// <item><description>RamRole: RAM role.</description></item>
             /// </list>
             /// 
@@ -116,7 +119,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the client certificate for the kubeconfig file.</para>
+            /// <para>The expiration time of the KubeConfig client certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2027-07-15T01:32:20Z</para>
@@ -126,11 +129,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CertExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the client certificate for the kubeconfig file.</para>
+            /// <para>The status of the KubeConfig client certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Unexpired: The certificate is not expired.</description></item>
-            /// <item><description>Expired: The certificate is expired.</description></item>
-            /// <item><description>Unknown: The status of the certificate is unknown.</description></item>
+            /// <item><description><para>Unexpired: The certificate has not expired.</para>
+            /// </description></item>
+            /// <item><description><para>Expired: The certificate has expired.</para>
+            /// </description></item>
+            /// <item><description><para>Unknown: The certificate status is unknown (abnormal state).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CertState { get; set; }
 
             /// <summary>
-            /// <para>Cloud service name.</para>
+            /// <para>The name of the cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cs/ecs/sls</para>
@@ -151,17 +157,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CloudServiceName { get; set; }
 
             /// <summary>
-            /// <para>List of cluster roles associated with the cluster cloud product service roles.</para>
+            /// <para>The list of cluster roles associated with the cloud service role.</para>
             /// </summary>
             [NameInMap("cloud_service_roles")]
             [Validation(Required=false)]
             public List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> CloudServiceRoles { get; set; }
             public class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the content matches the default cluster role template.  </para>
+                /// <para>Indicates whether the content matches the default cluster role template. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Matches  </description></item>
-                /// <item><description>false: Does not match</description></item>
+                /// <item><description>true: The content matches the default template.</description></item>
+                /// <item><description>false: The content does not match the default template.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("is_default_template")]
@@ -169,7 +175,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? IsDefaultTemplate { get; set; }
 
                 /// <summary>
-                /// <para>Name of the cluster role associated with the cluster cloud product service role.</para>
+                /// <para>The name of the cluster role associated with the cloud service role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cluster-admin</para>
@@ -179,7 +185,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RoleName { get; set; }
 
                 /// <summary>
-                /// <para>Namespace of the cluster role associated with the cluster cloud product service role.</para>
+                /// <para>The namespace of the cluster role associated with the cloud service role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kube-system</para>
@@ -189,7 +195,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string RoleNamespace { get; set; }
 
                 /// <summary>
-                /// <para>The type of the cluster role associated with the cloud service role of the cluster.</para>
+                /// <para>The type of the cluster role associated with the cloud service role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ClusterRole</para>
@@ -201,7 +207,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the client certificate for the kubeconfig file can be revoked.</para>
+            /// <para>Indicates whether the KubeConfig client certificate can be revoked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

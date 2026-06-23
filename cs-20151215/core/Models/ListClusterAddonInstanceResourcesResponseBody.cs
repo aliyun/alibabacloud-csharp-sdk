@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterAddonInstanceResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information about the Helm release instance corresponding to the add-on.</para>
+        /// <para>The Helm release instance information of the component.</para>
         /// </summary>
         [NameInMap("helm_release")]
         [Validation(Required=false)]
         public ListClusterAddonInstanceResourcesResponseBodyHelmRelease HelmRelease { get; set; }
         public class ListClusterAddonInstanceResourcesResponseBodyHelmRelease : TeaModel {
             /// <summary>
-            /// <para>The name of the Helm chart.</para>
+            /// <para>The Helm chart name of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack-node-problem-detector</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ChartName { get; set; }
 
             /// <summary>
-            /// <para>The version of the Helm chart.</para>
+            /// <para>The Helm chart version of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.2.28</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ChartVersion { get; set; }
 
             /// <summary>
-            /// <para>The namespace where the Helm release is located.</para>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kube-system</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>A list of Kubernetes objects associated with the add-on.</para>
+        /// <para>The list of Kubernetes objects contained in the component.</para>
         /// </summary>
         [NameInMap("kubernetes_objects")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes API type to which the object belongs.</para>
+            /// <para>The Kubernetes API kind of the object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ClusterRole</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The name of the Kubernetes object.</para>
+            /// <para>The name of the object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>terway-pod-reader</para>

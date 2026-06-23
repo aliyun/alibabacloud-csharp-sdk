@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListAddonsRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID. If you specify a cluster ID, only components used in the specified cluster are queried. Other parameters are ignored.</para>
+        /// <para>The cluster ID.
+        /// If you specify a cluster ID, the system queries the list of available components for the specified cluster, and all other parameters are ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c02b3e03be10643e8a644a843ffcb****</para>
@@ -20,7 +21,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>The cluster specification.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
@@ -30,7 +33,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>The cluster type.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ManagedKubernetes</para>
@@ -40,7 +45,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>The cluster version.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.32.1-aliyun.1</para>
@@ -50,7 +57,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterVersion { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>The cluster subtype.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Default</para>
@@ -60,7 +69,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>The region of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>The region.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The region_id, cluster_type, profile, cluster_spec, and cluster_version parameters must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

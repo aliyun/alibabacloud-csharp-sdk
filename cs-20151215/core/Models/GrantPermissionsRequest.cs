@@ -17,9 +17,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<GrantPermissionsRequestBody> Body { get; set; }
         public class GrantPermissionsRequestBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the target cluster.</para>
+            /// <para>The ID of the cluster to be authorized.</para>
             /// <list type="bullet">
-            /// <item><description>If you set the <c>role_type</c> parameter to <c>all-clusters</c>, set this parameter to an empty string.</description></item>
+            /// <item><description>If the value of the <c>role_type</c> parameter is <c>all-clusters</c>, set this parameter to an empty string.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Cluster { get; set; }
 
             /// <summary>
-            /// <para>Set to true if <c>role_name</c> specifies a custom ClusterRole.</para>
+            /// <para>Specifies whether the authorization is a custom authorization, which means <c>role_name</c> uses a custom ClusterRole name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsCustom { get; set; }
 
             /// <summary>
-            /// <para>Set to true if you are granting permissions to a RAM role.</para>
+            /// <para>Specifies whether the authorization is for a RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsRamRole { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace. This parameter is required only when <c>role_type</c> is set to <c>namespace</c>.</para>
+            /// <para>The namespace name. This parameter is empty by default for cluster-level authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -61,29 +61,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The name of the role to grant. Valid values:</para>
+            /// <para>The name of the preset role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>admin</c>: The administrator role.</para>
-            /// </description></item>
-            /// <item><description><para><c>admin-view</c>: The read-only administrator role.</para>
-            /// </description></item>
-            /// <item><description><para><c>ops</c>: The operations role.</para>
-            /// </description></item>
-            /// <item><description><para><c>dev</c>: The developer role.</para>
-            /// </description></item>
-            /// <item><description><para><c>restricted</c>: The restricted role.</para>
-            /// </description></item>
-            /// <item><description><para>The name of a custom ClusterRole.</para>
-            /// </description></item>
+            /// <item><description><c>admin</c>: administrator.</description></item>
+            /// <item><description><c>admin-view</c>: read-only administrator.</description></item>
+            /// <item><description><c>ops</c>: O&amp;M engineer.</description></item>
+            /// <item><description><c>dev</c>: developer.</description></item>
+            /// <item><description><c>restricted</c>: restricted user.</description></item>
+            /// <item><description>Custom ClusterRole name.</description></item>
             /// </list>
             /// <remarks>
             /// <para>Notice: </para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><para>The <c>admin</c>, <c>admin-view</c>, and <c>ops</c> roles cannot be granted at the namespace scope.</para>
-            /// </description></item>
-            /// <item><description><para>The <c>admin-view</c> role is not currently supported for the all-clusters scope.</para>
-            /// </description></item>
+            /// <item><description><c>admin</c>, <c>admin-view</c>, <c>ops</c>: cannot be granted at the namespace level.</description></item>
+            /// <item><description><c>admin-view</c>: cannot be granted at the all-clusters level.
+            /// .</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -95,14 +88,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The authorization scope. Valid values:</para>
+            /// <para>The authorization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>cluster</c>: Grants permissions at the cluster scope.</para>
-            /// </description></item>
-            /// <item><description><para><c>namespace</c>: Grants permissions at the namespace scope.</para>
-            /// </description></item>
-            /// <item><description><para><c>all-clusters</c>: Grants permissions at the all-clusters scope.</para>
-            /// </description></item>
+            /// <item><description><c>cluster</c>: cluster level.</description></item>
+            /// <item><description><c>namespace</c>: namespace level.</description></item>
+            /// <item><description><c>all-clusters</c>: all-clusters level.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

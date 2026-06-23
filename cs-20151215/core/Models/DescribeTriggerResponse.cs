@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeTriggerResponseBody> Body { get; set; }
         public class DescribeTriggerResponseBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the trigger.</para>
+            /// <para>触发器ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>75973497486******</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the trigger.</para>
+            /// <para>触发器名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated cluster.</para>
+            /// <para>集群ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>c259f563386444ebb8d7****</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the project.</para>
-            /// <para>The name consists of the namespace where the application is deployed and the name of the application. The format is <c>${namespace}/${name}</c>. Example: default/test-app.</para>
+            /// <para>触发器项目名称。</para>
+            /// <para>由应用所在命名空间及应用名称组成，格式为<c>${namespace}/${name}</c>，取值示例：default/test-app。</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/test-app</para>
@@ -63,13 +63,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The type of trigger.</para>
-            /// <para>Valid values:</para>
+            /// <para>触发器类型。</para>
+            /// <para>取值：</para>
             /// <list type="bullet">
-            /// <item><description><c>deployment</c>: performs actions on Deployments.</description></item>
-            /// <item><description><c>application</c>: performs actions on applications that are deployed in Application Center.</description></item>
+            /// <item><description><para><c>deployment</c>：针对无状态应用的触发器。 </para>
+            /// </description></item>
+            /// <item><description><para><c>application</c>：针对应用中心应用的触发器。</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: <c>deployment</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deployment</para>
@@ -79,8 +80,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The action that the trigger performs. The value is set to redeploy.</para>
-            /// <para><c>redeploy</c>: redeploys the resource specified by project_id.</para>
+            /// <para>触发器行为，取值：</para>
+            /// <para><c>redeploy</c>: 重新部署应用。</para>
             /// 
             /// <b>Example:</b>
             /// <para>redeploy</para>
@@ -90,7 +91,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The token information.</para>
+            /// <para>Token信息。</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJhbGci***</para>

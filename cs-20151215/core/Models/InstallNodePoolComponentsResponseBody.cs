@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class InstallNodePoolComponentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the asynchronous task. You can use this ID to track the installation progress.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c8155823d057948c69a****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49511F2D-D56A-5C24-B9AE-C8491E09B***</para>

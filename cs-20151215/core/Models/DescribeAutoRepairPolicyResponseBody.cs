@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeAutoRepairPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the auto-repair rule.</para>
+        /// <para>The auto-repair rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-xxx</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources affected by the auto-repair rule.</para>
+        /// <para>The list of resources associated with the auto-repair rule.</para>
         /// </summary>
         [NameInMap("resource_ids")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the resource affected by the auto-repair rule.</para>
+        /// <para>The sub-type of resource associated with the auto-repair rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ess</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceSubType { get; set; }
 
         /// <summary>
-        /// <para>The resource type affected by the auto-repair rule.</para>
+        /// <para>The type of resource associated with the auto-repair rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nodepool</para>
@@ -57,21 +57,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of rules.</para>
+        /// <para>The list of auto-repair sub-rules.</para>
         /// </summary>
         [NameInMap("rules")]
         [Validation(Required=false)]
         public List<DescribeAutoRepairPolicyResponseBodyRules> Rules { get; set; }
         public class DescribeAutoRepairPolicyResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The detected incidents that trigger the rule.</para>
+            /// <para>The list of identified faults.</para>
             /// </summary>
             [NameInMap("incidents")]
             [Validation(Required=false)]
             public List<DescribeAutoRepairPolicyResponseBodyRulesIncidents> Incidents { get; set; }
             public class DescribeAutoRepairPolicyResponseBodyRulesIncidents : TeaModel {
                 /// <summary>
-                /// <para>The incident name.</para>
+                /// <para>The fault name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node.FaultNeedReboot.HOST</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The incident type.</para>
+                /// <para>The fault type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>system</para>
@@ -93,35 +93,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The repair procedure, which contains a list of repair actions.</para>
+            /// <para>The repair procedure.</para>
             /// </summary>
             [NameInMap("repair_procedure")]
             [Validation(Required=false)]
             public List<DescribeAutoRepairPolicyResponseBodyRulesRepairProcedure> RepairProcedure { get; set; }
             public class DescribeAutoRepairPolicyResponseBodyRulesRepairProcedure : TeaModel {
                 /// <summary>
-                /// <para>The configuration parameters for the repair action.</para>
+                /// <para>The configuration parameters of the procedure.</para>
                 /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Config { get; set; }
 
                 /// <summary>
-                /// <para>The manual approval configuration.</para>
+                /// <para>The configuration for manual intervention in the procedure.</para>
                 /// </summary>
                 [NameInMap("intervention")]
                 [Validation(Required=false)]
                 public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureIntervention Intervention { get; set; }
                 public class DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureIntervention : TeaModel {
                     /// <summary>
-                    /// <para>The label you add to a node to approve a repair action. When ACK detects this label, it proceeds with the current repair step. After the action is complete, ACK automatically removes both the inquiring and approved labels. If you do not add this label promptly, the repair procedure is paused, and the node may remain unhealthy.</para>
+                    /// <para>The label configuration for authorization approval. When you add the following label to the node, you authorize ACK to perform the action of this stage. After completing the action, ACK automatically removes the authorization inquiry and approval labels for this stage. If you do not add the following label for authorization in a timely manner, ACK will not perform the action of this stage or subsequent actions, and the node may remain in a damaged state.</para>
                     /// </summary>
                     [NameInMap("approved_label")]
                     [Validation(Required=false)]
                     public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureInterventionApprovedLabel ApprovedLabel { get; set; }
                     public class DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureInterventionApprovedLabel : TeaModel {
                         /// <summary>
-                        /// <para>The label\&quot;s <c>key</c>.</para>
+                        /// <para>The key of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The label\&quot;s value.</para>
+                        /// <para>The value of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>approved</para>
@@ -153,14 +153,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>When a repair procedure reaches this step, ACK applies this label to the affected node and pauses until you grant approval.</para>
+                    /// <para>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following label to your node and waits for your authorization to perform the action of this stage.</para>
                     /// </summary>
                     [NameInMap("inquiring_label")]
                     [Validation(Required=false)]
                     public DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureInterventionInquiringLabel InquiringLabel { get; set; }
                     public class DescribeAutoRepairPolicyResponseBodyRulesRepairProcedureInterventionInquiringLabel : TeaModel {
                         /// <summary>
-                        /// <para>The label key.</para>
+                        /// <para>The key of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The label value.</para>
+                        /// <para>The value of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>inquiring</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     }
 
                     /// <summary>
-                    /// <para>The manual approval type.</para>
+                    /// <para>The type of manual approval.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>label</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the repair action.</para>
+                /// <para>The name of the procedure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>QuarantineGPU</para>

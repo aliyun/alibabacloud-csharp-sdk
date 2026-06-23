@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to return.</para>
+        /// <para>The maximum number of results returned per request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> returned by the previous API call.</para>
+        /// <para>The query token. Set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5c0a1c0f91c14c6****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number for the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results per page.</para>
+        /// <para>The maximum number of results to return per page.</para>
         /// <para>Valid values: [1,100].</para>
-        /// <para>Default: 50.</para>
+        /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -62,40 +62,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The event type. If you do not specify this parameter, events of all types are returned. Valid values:</para>
+        /// <para>The event type. If you do not set this parameter, all types of events are queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>cluster_create</c>: Create a cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_scaleout</c>: Scale out a cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_attach</c>: Attach an existing node.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_delete</c>: Delete a cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_upgrade</c>: Upgrade a cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_migrate</c>: Migrate a cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_node_delete</c>: Remove a node.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_node_drain</c>: Drain a node.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_modify</c>: Modify a cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_configuration_modify</c>: Modify the control plane configuration of a cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_addon_install</c>: Install an add-on.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_addon_upgrade</c>: Upgrade an add-on.</para>
-        /// </description></item>
-        /// <item><description><para><c>cluster_addon_uninstall</c>: Uninstall an add-on.</para>
-        /// </description></item>
-        /// <item><description><para><c>runtime_upgrade</c>: Upgrade the runtime.</para>
-        /// </description></item>
-        /// <item><description><para><c>nodepool_upgrade</c>: Upgrade a node pool.</para>
-        /// </description></item>
-        /// <item><description><para><c>nodepool_update</c>: Update a node pool.</para>
-        /// </description></item>
+        /// <item><description><c>cluster_create</c>: creates a cluster.</description></item>
+        /// <item><description><c>cluster_scaleout</c>: scales out a cluster.</description></item>
+        /// <item><description><c>cluster_attach</c>: adds existing nodes.</description></item>
+        /// <item><description><c>cluster_delete</c>: deletes a cluster.</description></item>
+        /// <item><description><c>cluster_upgrade</c>: upgrades a cluster.</description></item>
+        /// <item><description><c>cluster_migrate</c>: migrates a cluster.</description></item>
+        /// <item><description><c>cluster_node_delete</c>: removes nodes.</description></item>
+        /// <item><description><c>cluster_node_drain</c>: drains nodes.</description></item>
+        /// <item><description><c>cluster_modify</c>: modifies a cluster.</description></item>
+        /// <item><description><c>cluster_configuration_modify</c>: modifies cluster management configurations.</description></item>
+        /// <item><description><c>cluster_addon_install</c>: installs a component.</description></item>
+        /// <item><description><c>cluster_addon_upgrade</c>: upgrades a component.</description></item>
+        /// <item><description><c>cluster_addon_uninstall</c>: uninstalls a component.</description></item>
+        /// <item><description><c>runtime_upgrade</c>: upgrades the runtime.</description></item>
+        /// <item><description><c>nodepool_upgrade</c>: upgrades a node pool.</description></item>
+        /// <item><description><c>nodepool_update</c>: updates a node pool.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

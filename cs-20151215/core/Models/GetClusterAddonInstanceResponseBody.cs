@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterAddonInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The custom configurations of the component.</para>
+        /// <para>The custom parameter settings of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;sls_project_name&quot;:&quot;&quot;}</para>
@@ -20,14 +20,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The status of Simple Log Service.</para>
+        /// <para>The logging feature status of the component.</para>
         /// </summary>
         [NameInMap("logging")]
         [Validation(Required=false)]
         public GetClusterAddonInstanceResponseBodyLogging Logging { get; set; }
         public class GetClusterAddonInstanceResponseBodyLogging : TeaModel {
             /// <summary>
-            /// <para>Indicates whether Simple Log Service is supported by the component.</para>
+            /// <para>Indicates whether the component supports the logging feature.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Supported.</para>
+            /// </description></item>
+            /// <item><description><para>false: Not supported.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +43,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Capable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Simple Log Service is enabled for the component.</para>
+            /// <para>Indicates whether the logging feature is enabled for the component.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Not enabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -47,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project that is used to collect logs for the component.</para>
+            /// <para>The Log Service project used by the logging feature of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-log-c02b3e03be10643e8a644a843ffcb****</para>
@@ -57,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LogProject { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service Logstore that is used to collect logs for the component.</para>
+            /// <para>The Log Service Logstore used by the logging feature of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-logstore</para>
@@ -69,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The name of the component instance.</para>
+        /// <para>The component instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack-node-problem-detector</para>
@@ -79,12 +91,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The status of the component. Valid values:</para>
+        /// <para>The component status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>active: The component is installed.</description></item>
-        /// <item><description>updating: The component is being modified.</description></item>
-        /// <item><description>upgrading: The component is being updated.</description></item>
-        /// <item><description>deleting: The component is being uninstalled.</description></item>
+        /// <item><description>active: installed.</description></item>
+        /// <item><description>updating: being modified.</description></item>
+        /// <item><description>upgrading: being upgraded.</description></item>
+        /// <item><description>deleting: being uninstalled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +107,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The version of the component instance.</para>
+        /// <para>The component instance version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.2.16</para>

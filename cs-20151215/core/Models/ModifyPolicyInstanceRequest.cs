@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyPolicyInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The action of the policy. Valid values:</para>
+        /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deny</c>: Deployments that match the policy are denied.</description></item>
-        /// <item><description><c>warn</c>: Alerts are generated for deployments that match the policy.</description></item>
+        /// <item><description><c>deny</c>: Blocks non-compliant deployments.</description></item>
+        /// <item><description><c>warn</c>: Generates an alert.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy instance.</para>
+        /// <para>The instance ID of the policy rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>allowed-repos-cbhhb</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.</para>
+        /// <para>The namespaces to which the policy applies. If this parameter is empty, the policy applies to all namespaces.</para>
         /// </summary>
         [NameInMap("namespaces")]
         [Validation(Required=false)]
         public List<string> Namespaces { get; set; }
 
         /// <summary>
-        /// <para>The parameters of the policy instance. For more information, see <a href="https://help.aliyun.com/document_detail/359819.html">Predefined security policies of ACK</a>.</para>
+        /// <para>The configuration parameters of the current rule instance. For more information about parameter settings rules, see <a href="https://help.aliyun.com/document_detail/359819.html">Container security policy rules</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</para>

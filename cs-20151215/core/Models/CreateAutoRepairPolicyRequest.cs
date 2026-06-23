@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateAutoRepairPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the auto repair policy.</para>
+        /// <para>The name of the self-healing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The resource subtype to which the auto repair policy applies.</para>
+        /// <para>The resource subtype that the self-healing rule can be bound to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ess</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceSubType { get; set; }
 
         /// <summary>
-        /// <para>The resource type to which the auto repair policy applies.</para>
+        /// <para>The resource type that the self-healing rule can be bound to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nodepool</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The sub-rules for the auto repair policy.</para>
+        /// <para>The list of self-healing sub-rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;np-xxx&quot;]</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<CreateAutoRepairPolicyRequestRules> Rules { get; set; }
         public class CreateAutoRepairPolicyRequestRules : TeaModel {
             /// <summary>
-            /// <para>The incidents that the rule detects.</para>
+            /// <para>The list of identified faults.</para>
             /// </summary>
             [NameInMap("incidents")]
             [Validation(Required=false)]
             public List<CreateAutoRepairPolicyRequestRulesIncidents> Incidents { get; set; }
             public class CreateAutoRepairPolicyRequestRulesIncidents : TeaModel {
                 /// <summary>
-                /// <para>The incident name.</para>
+                /// <para>The name of the fault.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node.FaultNeedReboot.HOST</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The incident type.</para>
+                /// <para>The type of the fault.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>system</para>
@@ -86,28 +86,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<CreateAutoRepairPolicyRequestRulesRepairProcedure> RepairProcedure { get; set; }
             public class CreateAutoRepairPolicyRequestRulesRepairProcedure : TeaModel {
                 /// <summary>
-                /// <para>Configuration parameters for the repair step.</para>
+                /// <para>The configuration parameters of the repair procedure.</para>
                 /// </summary>
                 [NameInMap("config")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> Config { get; set; }
 
                 /// <summary>
-                /// <para>Settings for manual intervention.</para>
+                /// <para>The configuration for manual intervention in the procedure.</para>
                 /// </summary>
                 [NameInMap("intervention")]
                 [Validation(Required=false)]
                 public CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention Intervention { get; set; }
                 public class CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention : TeaModel {
                     /// <summary>
-                    /// <para>The label that grants authorization for the repair step. To approve the step, add this label to the node. After the action is complete, ACK automatically removes both the inquiry and approval labels for this step. If this label is not added promptly, the repair procedure halts and the node remains impaired.</para>
+                    /// <para>The label configuration for authorization confirmation. When you add the following label to the node, you authorize ACK to execute the action in this stage. After completing the action in this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels for this stage. If you do not add the following label to authorize the action promptly, ACK does not execute the action in this stage or subsequent actions, and the node may remain in a damaged state.</para>
                     /// </summary>
                     [NameInMap("approved_label")]
                     [Validation(Required=false)]
                     public CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel ApprovedLabel { get; set; }
                     public class CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel : TeaModel {
                         /// <summary>
-                        /// <para>The label key.</para>
+                        /// <para>The key of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The label value.</para>
+                        /// <para>The value of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>approved</para>
@@ -139,14 +139,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The label used to request authorization for the repair step. When this step begins, ACK applies this label to the node and waits for approval before performing the action.</para>
+                    /// <para>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following label to your node and waits for you to authorize the execution of the action in this stage.</para>
                     /// </summary>
                     [NameInMap("inquiring_label")]
                     [Validation(Required=false)]
                     public CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel InquiringLabel { get; set; }
                     public class CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel : TeaModel {
                         /// <summary>
-                        /// <para>The label key.</para>
+                        /// <para>The key of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>k8s.aliyun.com/incident</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                         public string Key { get; set; }
 
                         /// <summary>
-                        /// <para>The label value.</para>
+                        /// <para>The value of the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>inquiring</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                     }
 
                     /// <summary>
-                    /// <para>The manual approval type.</para>
+                    /// <para>The type of manual approval.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>label</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 }
 
                 /// <summary>
-                /// <para>The name of the repair step.</para>
+                /// <para>The name of the procedure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Drain</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<UpgradeClusterAddonsRequestBody> Body { get; set; }
         public class UpgradeClusterAddonsRequestBody : TeaModel {
             /// <summary>
-            /// <para>The name of the component.</para>
+            /// <para>The component name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ComponentName { get; set; }
 
             /// <summary>
-            /// <para>The custom component settings that you want to use. The value is a JSON string.</para>
+            /// <para>The custom parameters of the component, encoded as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;CpuRequest&quot;:&quot;800m&quot;}</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The version to which the component can be updated. You can call the <c>DescribeClusterAddonsVersion</c> operation to query the version to which the component can be updated.</para>
+            /// <para>The target version to which you want to upgrade. You can call the <c>DescribeAddon</c> operation to query the versions to which the component can be upgraded.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NextVersion { get; set; }
 
             /// <summary>
-            /// <para>The update policy. Valid values:</para>
+            /// <para>The component upgrade policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>overwrite</description></item>
-            /// <item><description>canary</description></item>
+            /// <item><description>overwrite: overwrites the existing version.</description></item>
+            /// <item><description>canary: performs a canary upgrade.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The current version of the component.</para>
+            /// <para>The current component version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1.11.3.2-f57ea7ed6-aliyun</para>

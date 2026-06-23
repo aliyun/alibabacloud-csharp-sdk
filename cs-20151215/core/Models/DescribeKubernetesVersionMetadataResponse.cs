@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeKubernetesVersionMetadataResponseBody> Body { get; set; }
         public class DescribeKubernetesVersionMetadataResponseBody : TeaModel {
             /// <summary>
-            /// <para>Features of the queried Kubernetes version.</para>
+            /// <para>The feature capabilities of the Kubernetes version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public Dictionary<string, object> Capabilities { get; set; }
 
             /// <summary>
-            /// <para>The OS images that are returned.</para>
+            /// <para>The list of system images.</para>
             /// </summary>
             [NameInMap("images")]
             [Validation(Required=false)]
             public List<DescribeKubernetesVersionMetadataResponseBodyImages> Images { get; set; }
             public class DescribeKubernetesVersionMetadataResponseBodyImages : TeaModel {
                 /// <summary>
-                /// <para>The ID of the image.</para>
+                /// <para>The image ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun_3_x64_20G_alibase_20241218.vhd</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageName { get; set; }
 
                 /// <summary>
-                /// <para>The OS platform. You can obtain the terminal ID by calling one of the following operations:</para>
+                /// <para>The operating system platform. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>AliyunLinux</c></description></item>
                 /// <item><description><c>CentOS</c></description></item>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Platform { get; set; }
 
                 /// <summary>
-                /// <para>The version of the image.</para>
+                /// <para>The image version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3.2104</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string OsVersion { get; set; }
 
                 /// <summary>
-                /// <para>The type of operating system distribution that you want to use. We recommend that you use this parameter to specify the node operating system. You can obtain the terminal ID by calling one of the following operations:</para>
+                /// <para>The type of the operating system distribution. We recommend that you use this field to specify the node operating system. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><c>CentOS</c></description></item>
                 /// <item><description><c>AliyunLinux</c></description></item>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageType { get; set; }
 
                 /// <summary>
-                /// <para>The type of OS. Examples:</para>
+                /// <para>The operating system type. Examples:</para>
                 /// <list type="bullet">
                 /// <item><description><c>Windows</c></description></item>
                 /// <item><description><c>Linux</c></description></item>
@@ -123,12 +123,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string OsType { get; set; }
 
                 /// <summary>
-                /// <para>The type of image. Valid values:</para>
+                /// <para>The image category. Partial valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>system</c>: public image</description></item>
-                /// <item><description><c>self</c>: custom image</description></item>
-                /// <item><description><c>others</c>: shared image from other Alibaba Cloud accounts</description></item>
-                /// <item><description><c>marketplace</c>: image from the marketplace</description></item>
+                /// <item><description><c>system</c>: public image.</description></item>
+                /// <item><description><c>self</c>: custom image.</description></item>
+                /// <item><description><c>others</c>: shared image from other users.</description></item>
+                /// <item><description><c>marketplace</c>: Alibaba Cloud Marketplace image.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ImageCategory { get; set; }
 
                 /// <summary>
-                /// <para>The architecture of the image.</para>
+                /// <para>The image architecture.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>x86_64</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<Runtime> Runtimes { get; set; }
 
             /// <summary>
-            /// <para>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
+            /// <para>The Kubernetes version released by ACK. For more information about versions, see <a href="https://help.aliyun.com/document_detail/185269.html">Kubernetes version release overview</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.31.1-aliyun.1</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ExpirationDate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you can create clusters that run the Kubernetes version.</para>
+            /// <para>Indicates whether the Kubernetes version can be used to create clusters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Creatable { get; set; }
 
             /// <summary>
-            /// <para>The list of available Kubernetes versions for updates.</para>
+            /// <para>The list of upgradable versions.</para>
             /// </summary>
             [NameInMap("upgradable_versions")]
             [Validation(Required=false)]

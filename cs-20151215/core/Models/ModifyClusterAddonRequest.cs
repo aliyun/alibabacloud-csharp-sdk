@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ModifyClusterAddonRequest : TeaModel {
         /// <summary>
-        /// <para>The custom parameter settings that you want to use.</para>
+        /// <para>The custom parameter settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;CpuRequest&quot;:&quot;800m&quot;}</para>

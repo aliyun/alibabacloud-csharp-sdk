@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the template.</para>
+        /// <para>The description of the deployment template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>web server cluster</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the template.</para>
+        /// <para>The name of the deployment template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>webserver01</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The label of the template.</para>
+        /// <para>The tags of the deployment template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>web</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The YAML content of the template.</para>
+        /// <para>The template content in YAML format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apiVersion: apps/v1\\nkind: Deployment\\nmetadata:\\n  name: nginx-deployment-basic\\n  labels:\\n    app: nginx\\nspec:\\n  replicas: 2\\n  selector:\\n    matchLabels:\\n      app: nginx\\n  template:\\n    metadata:\\n      labels:\\n        app: nginx\\n    spec:\\n      containers:\\n      - name: nginx\\n        image: busybox:latest\\n        ports:\\n        - containerPort: 8080</para>
@@ -50,11 +50,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Template { get; set; }
 
         /// <summary>
-        /// <para>The type of template. This parameter can be set to a custom value.</para>
+        /// <para>The templatetype.</para>
         /// <list type="bullet">
-        /// <item><description>If the parameter is set to <c>kubernetes</c>, the template is displayed on the Templates page in the console.</description></item>
-        /// <item><description>If the parameter is set to <c>compose</c>, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</description></item>
+        /// <item><description><para>If you set this parameter to <c>kubernetes</c>, the template is displayed on the Orchestration Templates page in the console.</para>
+        /// </description></item>
+        /// <item><description><para>If you leave this parameter empty or set it to other values, the template is not displayed on the Orchestration Templates page in the console.</para>
+        /// </description></item>
         /// </list>
+        /// <para>Settings this parameter to <c>kubernetes</c> is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes</para>

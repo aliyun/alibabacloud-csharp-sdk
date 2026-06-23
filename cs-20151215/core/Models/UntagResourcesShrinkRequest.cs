@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all custom labels. This parameter takes effect only when <c>tag_keys</c> is left empty. Valid values:</para>
+        /// <para>Specifies whether to delete all custom tags. This parameter takes effect only when <c>tag_keys</c> is empty. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Remove all custom labels.</description></item>
-        /// <item><description><c>false</c>: Do not remove all custom labels.</description></item>
+        /// <item><description><c>true</c>: Delete all tags.</description></item>
+        /// <item><description><c>false</c>: Do not delete all tags.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resources.</para>
+        /// <para>The region ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs.</para>
+        /// <para>The list of resource IDs. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resource_ids")]
@@ -43,7 +43,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of resource. Set the value to <c>CLUSTER</c>.</para>
+        /// <para>The resource type.</para>
+        /// <para>CLUSTER: cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of keys of the labels that you want to remove.</para>
+        /// <para>The list of tag keys for the resource. You can specify up to 20 tag keys.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("tag_keys")]

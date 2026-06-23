@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the nodes in the cluster.</para>
+        /// <para>The list of node details.</para>
         /// </summary>
         [NameInMap("nodes")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The expiration date of the node.</para>
+            /// <para>The time when the node expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2099-12-31T15:59:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the host.</para>
+            /// <para>The hostname of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iZ2vcckdmxp7u0urj2k****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string HostName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the system image that is used by the node.</para>
+            /// <para>The ID of the system image used by the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_3_x64_20G_alibase_20241218.vhd</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The billing method of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PrePaid</c>: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an <c>InvalidPayMethod</c> error is returned.</description></item>
-            /// <item><description><c>PostPaid</c>: the pay-as-you-go billing method.</description></item>
+            /// <item><description><c>PrePaid</c>: subscription.</description></item>
+            /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceChargeType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2vcckdmxp7u0urj2****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance on which the node is deployed.</para>
+            /// <para>The name of the node in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>worker-k8s-for-cs-c5cdf7e3938bc4f8eb0e44b21a80f****</para>
@@ -101,10 +101,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The role of the node. Valid values:</para>
+            /// <para>The role type of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Master: master node</description></item>
-            /// <item><description>Worker: worker node</description></item>
+            /// <item><description>Master: a master node of the cluster.</description></item>
+            /// <item><description>Worker: a worker node of the cluster.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceRole { get; set; }
 
             /// <summary>
-            /// <para>The status of the node.</para>
+            /// <para>The ECS status of the node. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>Pending</c>: being created.</description></item>
+            /// <item><description><c>Running</c>: running.</description></item>
+            /// <item><description><c>Starting</c>: being started.</description></item>
+            /// <item><description><c>Stopping</c>: being stopped.</description></item>
+            /// <item><description><c>Stopped</c>: stopped.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -125,7 +132,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the node.</para>
+            /// <para>The node specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.c5.xlarge</para>
@@ -135,7 +142,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The ECS instance family of the node.</para>
+            /// <para>The name of the ECS instance family to which the node belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.c5</para>
@@ -145,17 +152,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the node.</para>
+            /// <para>The IP addresses of the node.</para>
             /// </summary>
             [NameInMap("ip_address")]
             [Validation(Required=false)]
             public List<string> IpAddress { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance on which the node is deployed is provided by Alibaba Cloud. Valid values:</para>
+            /// <para>Indicates whether the node is an Alibaba Cloud instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The instance is provided by Alibaba Cloud.</description></item>
-            /// <item><description><c>false</c>: The instance is not provided by Alibaba Cloud.</description></item>
+            /// <item><description><para><c>true</c>: The node is an Alibaba Cloud instance.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The node is not an Alibaba Cloud instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +175,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsAliyunNode { get; set; }
 
             /// <summary>
-            /// <para>The name of the node. This name is the identifier of the node in the cluster.</para>
+            /// <para>The node name, which is the identifier of the node in the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-chengdu.192.168xx.xx</para>
@@ -178,10 +187,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Indicates whether the node is ready. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Ready</c>: The node is ready.</description></item>
-            /// <item><description><c>NotReady</c>: The node is not ready.</description></item>
-            /// <item><description><c>Unknown</c>: The status of the node is unknown.</description></item>
-            /// <item><description><c>Offline</c>: The node is offline.</description></item>
+            /// <item><description><para><c>Ready</c>: The node is ready.</para>
+            /// </description></item>
+            /// <item><description><para><c>NotReady</c>: The node is not ready.</para>
+            /// </description></item>
+            /// <item><description><para><c>Unknown</c>: The node status is unknown.</para>
+            /// </description></item>
+            /// <item><description><para><c>Offline</c>: The node is offline.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,7 +215,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodepoolId { get; set; }
 
             /// <summary>
-            /// <para>Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).</para>
+            /// <para>The method used to initialize the node, such as manual creation or Resource Orchestration Service (ROS) creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ess</para>
@@ -212,11 +225,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The type of preemptible instance. Valid values:</para>
+            /// <para>The spot instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoSpot: a non-preemptible instance.</description></item>
-            /// <item><description>SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</description></item>
-            /// <item><description>SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.</description></item>
+            /// <item><description>NoSpot: a non-spot instance.</description></item>
+            /// <item><description>SpotWithPriceLimit: a spot instance with a price limit.</description></item>
+            /// <item><description>SpotAsPriceGo: a spot instance priced at the market price at the time of purchase.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -227,13 +240,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <para>The status of the node. Valid values:</para>
+            /// <para>The running status of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>pending</c>: The node is being created.</description></item>
-            /// <item><description><c>running</c>: The node is running.</description></item>
-            /// <item><description><c>starting</c>: The node is being started.</description></item>
-            /// <item><description><c>stopping</c>: The node is being stopped.</description></item>
-            /// <item><description><c>stopped</c>: The node is stopped.</description></item>
+            /// <item><description><para><c>pending</c>: being created.</para>
+            /// </description></item>
+            /// <item><description><para><c>running</c>: running.</para>
+            /// </description></item>
+            /// <item><description><para><c>starting</c>: being started.</para>
+            /// </description></item>
+            /// <item><description><para><c>stopping</c>: being stopped.</para>
+            /// </description></item>
+            /// <item><description><para><c>stopped</c>: stopped.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -253,7 +271,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public DescribeClusterNodesResponseBodyPage Page { get; set; }
         public class DescribeClusterNodesResponseBodyPage : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -263,7 +281,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of records that can be displayed on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -273,7 +291,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

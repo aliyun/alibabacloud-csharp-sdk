@@ -10,12 +10,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all pods from the nodes you want to remove. Valid values:</para>
+        /// <para>Whether to automatically drain Pods on the node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: removes all pods automatically.</description></item>
-        /// <item><description><c>false</c>: skips removing pods.</description></item>
+        /// <item><description><c>true</c>: Automatically drain Pods on the node.</description></item>
+        /// <item><description><c>false</c>: Do not automatically drain Pods on the node.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c></para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? DrainNode { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes to remove. You must specify the node names used in the cluster, for example, <c>cn-hangzhou.192.168.xx.xx</c>.</para>
+        /// <para>List of nodes to remove. The node names must be the names of the nodes in the cluster, for example: <c>cn-hangzhou.192.168.xx.xx</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("nodes")]
@@ -33,14 +33,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Nodes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the ECS instances. Valid values:</para>
+        /// <para>Whether to simultaneously remove ECS instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: releases the ECS instances.</description></item>
-        /// <item><description><c>false</c>: retains the ECS instances.</description></item>
+        /// <item><description><c>true</c>: Simultaneously remove ECS instances.</description></item>
+        /// <item><description><c>false</c>: Retain ECS instances.</description></item>
         /// </list>
-        /// <para>Default value: <c>false</c></para>
-        /// <para>**</para>
-        /// <para><b>Notes</b> Unsupported for subscription ECS instances.</para>
+        /// <para>Default value: <c>false</c>.</para>
+        /// <remarks>
+        /// <para>Simultaneous removal of ECS instances is not supported when the nodes are subscription instances.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

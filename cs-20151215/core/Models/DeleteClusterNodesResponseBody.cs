@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>Cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c104d5d5f301c4e2a8ee578c37******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A9891419-D125-4D89-AFCA-688466******</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>Task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T-60fea8ad2e27000ae9******</para>

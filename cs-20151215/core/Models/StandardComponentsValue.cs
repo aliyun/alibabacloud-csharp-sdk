@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StandardComponentsValue : TeaModel {
         /// <summary>
-        /// <para>The name of the component.</para>
+        /// <para>The component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack-arena</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The version of the component.</para>
+        /// <para>The component version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.5.0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The description of the component.</para>
+        /// <para>The description of the component features.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the component is a required component. Valid values:</para>
+        /// <para>Indicates whether the component is required by the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The component is required and must be installed when a cluster is created.</description></item>
-        /// <item><description><c>false</c>: The component is optional. After a cluster is created, you can go to the <c>Add-ons</c> page to install the component.</description></item>
+        /// <item><description><para><c>true</c>: The component is required and must be installed when the cluster is created.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The component is optional and can be installed through Component Management after the cluster is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +56,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Required { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:</para>
+        /// <para>Indicates whether default installation is disabled. When a cluster is created, in addition to the components required by the cluster, some logging or routing-related components (such as Ingress) are also installed by default. If you do not want to install them by default, you can set this field to disable default installation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: disables automatic component installation.</description></item>
-        /// <item><description><c>false</c>: enables automatic component installation.</description></item>
+        /// <item><description><c>true</c>: Default installation is disabled.</description></item>
+        /// <item><description><c>false</c>: Default installation is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateControlPlaneLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>162981*****</para>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Aliuid { get; set; }
 
         /// <summary>
-        /// <para>The control plane components for which you want to enable log collection.</para>
+        /// <para>The list of components for which control plane logging is enabled.</para>
         /// </summary>
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<string> Components { get; set; }
 
         /// <summary>
-        /// <para>The name of the Simple Log Service Project that you want to use to store the logs of control plane components.</para>
+        /// <para>The name of the SLS project used to store control plane component logs.</para>
         /// <para>Default value: k8s-log-$Cluster ID.</para>
         /// 
         /// <b>Example:</b>
@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LogProject { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the log data stored in the Logstore. Valid values: 1 to 3000. Unit: days.</para>
-        /// <para>Default value: 30.</para>
+        /// <para>The retention period of logs in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</para>
+        /// <para>Default value: 30 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

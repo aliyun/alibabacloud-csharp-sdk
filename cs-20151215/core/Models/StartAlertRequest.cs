@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class StartAlertRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the alert rule group.</para>
+        /// <para>The alert rule group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string AlertRuleGroupName { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert rule.</para>
+        /// <para>The alert rule name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample</para>

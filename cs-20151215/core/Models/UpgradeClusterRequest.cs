@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. No need to pass values.</para>
+        /// <para>[This parameter is deprecated] No value is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -23,10 +23,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to upgrade only master nodes. Valid values:</para>
+        /// <para>Specifies whether to upgrade only the control plane. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: upgrades master nodes only.</description></item>
-        /// <item><description>false: upgrades both master and worker nodes.</description></item>
+        /// <item><description>true: upgrades only the control plane.</description></item>
+        /// <item><description>false: upgrades both the control plane and worker nodes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? MasterOnly { get; set; }
 
         /// <summary>
-        /// <para>The target Kubernetes version for cluster upgrade.</para>
+        /// <para>The target version to which the cluster is upgraded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.32.1-aliyun.1</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The rolling update configuration.</para>
+        /// <para>The rolling upgrade configuration.</para>
         /// </summary>
         [NameInMap("rolling_policy")]
         [Validation(Required=false)]
@@ -59,7 +59,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The maximum number of nodes concurrently upgraded per batch.</para>
+            /// <para>The maximum number of worker nodes that can be upgraded in parallel per batch.</para>
+            /// <para>During the worker node upgrade, nodes are upgraded in batches based on the specified maximum parallelism. The number of nodes upgraded in each batch increases as follows: 1, 2, 4, 8, and so on until the maximum parallelism is reached. After the maximum parallelism is reached, each subsequent batch upgrades the maximum number of nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -74,7 +75,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</para>
+        /// <para>[This parameter is deprecated] Use the <c>next_version</c> parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

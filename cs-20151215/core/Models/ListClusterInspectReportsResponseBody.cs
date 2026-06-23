@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of inspection reports.</para>
+        /// <para>The inspection reports.</para>
         /// </summary>
         [NameInMap("reports")]
         [Validation(Required=false)]
         public List<ListClusterInspectReportsResponseBodyReports> Reports { get; set; }
         public class ListClusterInspectReportsResponseBodyReports : TeaModel {
             /// <summary>
-            /// <para>The report completion time.</para>
+            /// <para>The completion time of the inspection report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-18T19:40:16.778333+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>An inspection report ID.</para>
+            /// <para>The inspection report ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>782df89346054a0000562063a6****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ReportId { get; set; }
 
             /// <summary>
-            /// <para>The report start time.</para>
+            /// <para>The start time of the inspection report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-18T19:40:16.778333+08:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The inspection report status.</para>
+            /// <para>The generation status of the inspection report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>completed</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The inspection summary.</para>
+            /// <para>The inspection report summary.</para>
             /// </summary>
             [NameInMap("summary")]
             [Validation(Required=false)]
             public ListClusterInspectReportsResponseBodyReportsSummary Summary { get; set; }
             public class ListClusterInspectReportsResponseBodyReportsSummary : TeaModel {
                 /// <summary>
-                /// <para>The number of items whose result is advice.</para>
+                /// <para>The number of check items with a result of advice.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public int? AdviceCount { get; set; }
 
                 /// <summary>
-                /// <para>Aggregated inspection task result code.</para>
+                /// <para>The status code of the check task result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>warning</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The number of items whose result is error.</para>
+                /// <para>The number of check items with a result of error.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public int? ErrorCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of items whose result is normal.</para>
+                /// <para>The number of check items with a result of normal.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public int? NormalCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of items whose result is warning.</para>
+                /// <para>The number of check items with a result of warning.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

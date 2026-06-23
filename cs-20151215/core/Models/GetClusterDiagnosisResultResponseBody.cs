@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GetClusterDiagnosisResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code that indicates the diagnostic result. Valid values:</para>
+        /// <para>The diagnosis result code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: the diagnostic is completed.</description></item>
-        /// <item><description>1: the diagnostic failed.</description></item>
+        /// <item><description>0: diagnosis completed.</description></item>
+        /// <item><description>1: diagnosis failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The time when the diagnostic is initiated.</para>
+        /// <para>The time when the diagnosis was initiated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-28T11:29Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Created { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic ID.</para>
+        /// <para>The diagnosis ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6cf6b62e334e4583bdfd26707516****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string DiagnosisId { get; set; }
 
         /// <summary>
-        /// <para>The time when the diagnostic is completed.</para>
+        /// <para>The time when the diagnosis was completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-28T11:29Z</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Finished { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic status information.</para>
+        /// <para>The diagnosis status message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic result.</para>
+        /// <para>The diagnosis result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;phase&quot;:5,&quot;version&quot;:&quot;20240101&quot;}</para>
@@ -74,11 +74,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Result { get; set; }
 
         /// <summary>
-        /// <para>The status of the diagnostic. Valid values:</para>
+        /// <para>The diagnosis status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The diagnostic is created.</description></item>
-        /// <item><description>1: The diagnostic is running.</description></item>
-        /// <item><description>2: The diagnostic is completed.</description></item>
+        /// <item><description>0: diagnosis created.</description></item>
+        /// <item><description>1: diagnosis running.</description></item>
+        /// <item><description>2: diagnosis completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Status { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic object.</para>
+        /// <para>The diagnosis target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;name&quot;:&quot;cn-hongkong.10.0.0.246&quot;}</para>
@@ -99,17 +99,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Target { get; set; }
 
         /// <summary>
-        /// <para>The type of the diagnostic.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>node</description></item>
-        /// <item><description>ingress</description></item>
-        /// <item><description>cluster</description></item>
-        /// <item><description>memory</description></item>
-        /// <item><description>pod</description></item>
-        /// <item><description>service</description></item>
-        /// <item><description>network</description></item>
-        /// </list>
+        /// <para>The diagnosis type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Node</para>

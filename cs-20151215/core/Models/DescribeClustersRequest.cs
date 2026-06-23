@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The cluster name based on which the system performs fuzzy searches among the clusters that belong to the current Alibaba Cloud account.</para>
+        /// <para>Perform a fuzzy match query based on the cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

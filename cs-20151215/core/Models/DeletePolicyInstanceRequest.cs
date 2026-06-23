@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeletePolicyInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the policy instance.</para>
+        /// <para>The instance ID of the policy rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>allowed-repos-mqdsf</para>

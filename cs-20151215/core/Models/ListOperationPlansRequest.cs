@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The operation plan type.</para>
+        /// <para>The execution plan type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster_upgrade</para>

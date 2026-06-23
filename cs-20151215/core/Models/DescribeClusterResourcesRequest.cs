@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to query resources created by cluster add-ons.</para>
+        /// <para>Specifies whether to also query resources created by cluster components.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Add-on resources are included.</para>
+        /// <item><description><para>true: queries the resources.</para>
         /// </description></item>
-        /// <item><description><para>false: Add-on resources are not included.</para>
+        /// <item><description><para>false: does not query the resources.</para>
         /// </description></item>
         /// </list>
         /// 

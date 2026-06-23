@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeSubaccountK8sClusterUserConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster kubeconfig file. For more information about how to view the kubeconfig file content, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</para>
+        /// <para>The KubeConfig of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The expiration date of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</para>
+        /// <para>The expiration time of the KubeConfig. Format: UTC time in RFC 3339 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2028-04-09T06:20:47Z</para>

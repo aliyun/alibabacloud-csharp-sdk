@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that determines the start point of the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c374bf4864448****</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the queried labels and resources.</para>
+        /// <para>The collection of tag resources.</para>
         /// </summary>
         [NameInMap("tag_resources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The resource and label.</para>
+            /// <para>The tag resource.</para>
             /// </summary>
             [NameInMap("tag_resource")]
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
-                /// <para>The ID of the resource.</para>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c2e39566adf23481fa1164ed510****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource. For more information, see <a href="https://help.aliyun.com/document_detail/110425.html">Labels</a>.</para>
+                /// <para>The resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::CS::CLUSTER</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The key of the label.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ack.aliyun.com</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the label.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c71cf3d796c374bf48644482cb0c3****</para>

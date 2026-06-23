@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class FixNodePoolVulsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the CVE patching task.</para>
+        /// <para>The fix task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T-60fea8ad2e277f087900****</para>

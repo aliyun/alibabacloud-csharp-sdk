@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateResourcesDeleteProtectionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.</para>
+        /// <para>Specifies whether to enable deletion protection for the resource. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Enables deletion protection. After deletion protection is enabled, you must manually disable deletion protection before you can delete the specified resource.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables deletion protection.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +27,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The namespace to which the resource belongs.</para>
+        /// <para>The namespace of the resource.</para>
+        /// <para>Default value: default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -33,7 +41,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.</para>
+        /// <para>The type of resource to update. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>namespaces: namespace.</para>
+        /// </description></item>
+        /// <item><description><para>services: service.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>services</para>
@@ -43,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The resources list.</para>
+        /// <para>The list of target resources.</para>
         /// </summary>
         [NameInMap("resources")]
         [Validation(Required=false)]

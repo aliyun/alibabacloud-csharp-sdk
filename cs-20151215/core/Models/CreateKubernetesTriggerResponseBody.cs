@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateKubernetesTriggerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The action that the trigger performs. For example, a value of <c>redeploy</c> indicates that the trigger redeploys the application.</para>
+        /// <para>The trigger action. For example, <c>redeploy</c>: redeploy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>redeploy</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c5cdf7e3938bc4f8eb0e44b21a80f****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trigger.</para>
+        /// <para>The trigger ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the trigger project.</para>
+        /// <para>The trigger project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default/test-app</para>
@@ -50,11 +50,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of trigger.</para>
+        /// <para>The trigger type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deployment</c>: performs actions on Deployments.</description></item>
-        /// <item><description><c>application</c>: performs actions on applications that are deployed in Application Center.</description></item>
+        /// <item><description><para><c>deployment</c>: a trigger for stateless applications. </para>
+        /// </description></item>
+        /// <item><description><para><c>application</c>: a trigger for Application Center applications.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

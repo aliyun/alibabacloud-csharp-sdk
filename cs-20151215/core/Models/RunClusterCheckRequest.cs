@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RunClusterCheckRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster check parameters.</para>
+        /// <para>The check options.</para>
         /// </summary>
         [NameInMap("options")]
         [Validation(Required=false)]
@@ -18,7 +18,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The check target.</para>
-        /// <para>If you set <c>type=NodePoolUpgrade</c>, you must set this parameter to the node pool ID. Otherwise, this parameter is optional.</para>
+        /// <para>If the type parameter is set to NodePoolUpgrade, this parameter must be set to the node pool ID.</para>
+        /// <para>If other check types are selected, this parameter does not need to be set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np1f6779297c4444a3a1cdd29be8******</para>
@@ -29,13 +30,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <para>The check type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ClusterMigrate: cluster migration.</description></item>
-        /// <item><description>MasterUpgrade: control plane upgrade.</description></item>
-        /// <item><description>NodePoolUpgrade: node pool upgrade.</description></item>
-        /// <item><description>ClusterUpgrade: cluster upgrade.</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

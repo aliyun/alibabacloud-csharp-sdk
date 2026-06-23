@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The options for deleting the resources that are associated with the cluster.</para>
+        /// <para>The deletion options for cluster-associated resources.</para>
         /// </summary>
         [NameInMap("delete_options")]
         [Validation(Required=false)]
@@ -19,15 +19,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Whether to retain SLB resources. Valid values:</para>
+        /// <para>Specifies whether to retain SLB resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Retains the SLB resources that are created for the cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: Does not retain the SLB resources that are created for the cluster.</para>
-        /// </description></item>
+        /// <item><description><c>true</c>: retains the created SLB resources.</description></item>
+        /// <item><description><c>false</c>: does not retain the created SLB resources.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.
-        /// Use the <c>delete_options</c> parameter to manage <c>SLB</c> resources instead.</para>
+        /// Use <c>SLB</c> in <c>delete_options</c> to manage this setting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,12 +36,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepSlb { get; set; }
 
         /// <summary>
-        /// <para>Whether to retain all associated resources. If you set this parameter to <c>true</c>, the <c>retain_resources</c> parameter is ignored, and all cloud resources that are created with the cluster and can be queried by calling <c>DescribeClusterResources</c> are retained. If you set this parameter to <c>false</c>, note that resources that are configured to be retained by default in the <c>delete_options</c> parameter are still retained. To delete these resources, you must explicitly set the <c>delete_mode</c> parameter to <c>delete</c> for them in <c>delete_options</c>.</para>
+        /// <para>Specifies whether to retain all resources. If this parameter is set to <c>true</c>, <c>retain_resources</c> is ignored, and cloud resources created through the cluster that are queried by the <c>DescribeClusterResources</c> operation are retained. If this parameter is set to <c>false</c>, resources that are retained by default in <c>delete_options</c> are still retained. To delete these resources, set <c>delete_mode</c> to <c>delete</c> in <c>delete_options</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: Retains all associated cloud resources that are created with the cluster.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: Does not retain all associated cloud resources. Resources that are configured to be retained by default in the <c>delete_options</c> parameter, such as <c>ALB</c>, are still retained when this parameter is set to <c>false</c>.</para>
-        /// </description></item>
+        /// <item><description><c>true</c>: retains all resources, including all cloud resources created through the cluster.</description></item>
+        /// <item><description><c>false</c>: does not retain all resources, except resources defined as retained by default in <c>delete_options</c>. For example, <c>ALB</c> resources are still retained when this parameter is set to <c>false</c>.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? RetainAllResources { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources to retain when the cluster is deleted.</para>
+        /// <para>The resource list. To retain resources when you delete a cluster, specify the IDs of the resources to retain.</para>
         /// </summary>
         [NameInMap("retain_resources")]
         [Validation(Required=false)]

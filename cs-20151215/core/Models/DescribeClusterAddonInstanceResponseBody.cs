@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterAddonInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration of the component.</para>
+        /// <para>The component configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NetworkPolicy&quot;:&quot;true&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Config { get; set; }
 
         /// <summary>
-        /// <para>The name of the component.</para>
+        /// <para>The component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>terway-eniip</para>
@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The status of the component. Valid values:</para>
+        /// <para>The component status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>initial: The component is being installed.</description></item>
-        /// <item><description>active: The component has been installed.</description></item>
-        /// <item><description>unhealthy: The component is in an abnormal state.</description></item>
-        /// <item><description>upgrading: The component is undergoing an upgrade.</description></item>
-        /// <item><description>updating: Component configuration changes are being applied.</description></item>
-        /// <item><description>deleting: The component is being uninstalled.</description></item>
-        /// <item><description>deleted: The component has been deleted.</description></item>
+        /// <item><description>initial: installing</description></item>
+        /// <item><description>active: installed</description></item>
+        /// <item><description>unhealthy: abnormal</description></item>
+        /// <item><description>upgrading: upgrading</description></item>
+        /// <item><description>updating: updating</description></item>
+        /// <item><description>deleting: uninstalling</description></item>
+        /// <item><description>deleted: deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The version of the component.</para>
+        /// <para>The component version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1.4.3</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeSubaccountK8sClusterUserConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to obtain the kubeconfig file used to connect to the cluster over the internal network. Valid values:</para>
+        /// <para>Specifies whether to obtain the internal network connection configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: Obtain the kubeconfig file used to connect to the cluster over the internal network.</description></item>
-        /// <item><description><c>false</c>: Obtain the kubeconfig file used to connect to the cluster over the Internet.</description></item>
+        /// <item><description><c>true</c>: Obtains only the KubeConfig credentials for internal network connections.</description></item>
+        /// <item><description><c>false</c>: Obtains only the KubeConfig credentials for public network connections.</description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -25,10 +25,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the temporary kubeconfig file. Unit: minutes.</para>
-        /// <para>Valid values: 15 to 4320 (three days).</para>
+        /// <para>The validity period of the temporary KubeConfig. Unit: minutes.</para>
+        /// <para>Valid values: [15, 4320], which is up to 3 days.</para>
         /// <remarks>
-        /// <para>If you leave this parameter empty, the system sets a longer validity period and returns the value in the expiration parameter of the response.</para>
+        /// <para>If this parameter is not set, the system automatically determines a longer validity period. The specific expiration time is indicated by the value of the expiration field in the response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

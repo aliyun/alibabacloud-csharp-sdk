@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListOperationPlansForRegionRequest : TeaModel {
         /// <summary>
-        /// <para>Filter by cluster ID.</para>
+        /// <para>Filters results by cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c02b3e03be10643e8a644a843ffcb****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Filter by execution plan status.</para>
+        /// <para>Filters results by execution plan state.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Scheduled</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>Filter by execution plan type.</para>
+        /// <para>Filters results by execution plan type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CLUSTER_UPGRADE_MASTER</para>

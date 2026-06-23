@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribePolicyInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the policy instance that you want to query.</para>
+        /// <para>The name of the policy instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>allowed-repos-cz4s2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy that you want to query.</para>
+        /// <para>The name of the policy governance rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACKPSPCapabilities</para>

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeResourcesDeleteProtectionResponseBody> Body { get; set; }
         public class DescribeResourcesDeleteProtectionResponseBody : TeaModel {
             /// <summary>
-            /// <para>The resource name.</para>
+            /// <para>The name of the queried resource.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace to which the resource belongs.</para>
+            /// <para>The namespace of the queried resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
+            /// <para>The type of the queried resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namespaces</para>
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Indicates whether deletion protection is enabled.</para>
             /// <list type="bullet">
-            /// <item><description>true: deletion protection is enabled.</description></item>
-            /// <item><description>false: deletion protection is disabled.</description></item>
+            /// <item><description>true: enabled.</description></item>
+            /// <item><description>false: disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

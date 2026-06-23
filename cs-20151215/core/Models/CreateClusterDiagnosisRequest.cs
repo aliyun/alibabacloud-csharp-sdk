@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterDiagnosisRequest : TeaModel {
         /// <summary>
-        /// <para>The parameter used to specify the diagnostic object. Examples of parameters for different types of diagnostic objects:</para>
+        /// <para>The parameters that specify the diagnosis target. The following examples show the parameters for different diagnosis types:</para>
         /// <para>node:</para>
         /// <pre><c>{&quot;name&quot;: &quot;cn-shanghai.10.10.10.107&quot;}
         /// </c></pre>
@@ -24,10 +24,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <pre><c>{&quot;url&quot;: &quot;https://example.com&quot;}
         /// </c></pre>
         /// <para>memory</para>
-        /// <pre><c>{&quot;node&quot;:&quot;cn-hangzhou.172.16.9.240&quot;}
+        /// <pre><c>{&quot;node&quot;:&quot;ap-southeast-1.172.16.9.240&quot;}
         /// </c></pre>
         /// <para>service</para>
         /// <pre><c>{&quot;namespace&quot;: &quot;kube-system&quot;, &quot;name&quot;: &quot;nginx-ingress-lb&quot;}
+        /// ```.
         /// </c></pre>
         /// 
         /// <b>Example:</b>
@@ -38,17 +39,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Dictionary<string, object> Target { get; set; }
 
         /// <summary>
-        /// <para>The type of the diagnostic.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>node</description></item>
-        /// <item><description>ingress</description></item>
-        /// <item><description>cluster</description></item>
-        /// <item><description>memory</description></item>
-        /// <item><description>pod</description></item>
-        /// <item><description>service</description></item>
-        /// <item><description>network</description></item>
-        /// </list>
+        /// <para>The diagnosis type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node</para>

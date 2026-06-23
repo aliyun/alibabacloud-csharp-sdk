@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateKubernetesTriggerRequest : TeaModel {
         /// <summary>
-        /// <para>The action that the trigger performs. Set the value to redeploy.</para>
-        /// <para><c>redeploy</c>: redeploys the resources specified by <c>project_id</c>.</para>
+        /// <para>The trigger action. Valid values:</para>
+        /// <para><c>redeploy</c>: redeploys the resources defined in project_id.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the trigger project.</para>
-        /// <para>The name consists of the namespace where the application is deployed and the name of the application. The format is <c>${namespace}/${name}</c>.</para>
+        /// <para>The trigger project name.</para>
+        /// <para>The value consists of the namespace and application name in the format of <c>${namespace}/${name}</c>.</para>
         /// <para>Example: <c>default/test-app</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,10 +46,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The type of trigger. Valid values:</para>
+        /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>deployment</c>: performs actions on Deployments.</description></item>
-        /// <item><description><c>application</c>: performs actions on applications that are deployed in Application Center.</description></item>
+        /// <item><description><para><c>deployment</c>: a trigger for stateless applications. </para>
+        /// </description></item>
+        /// <item><description><para><c>application</c>: a trigger for Application Center applications.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>deployment</c>.</para>
         /// 

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CleanUserPermissionsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster IDs. If you specify a list of cluster IDs, only the kubeconfig files and RBAC permissions of the clusters that belong to the current user in the list are revoked.</para>
+        /// <para>The list of cluster IDs. If this list is specified, only the KubeConfig credentials and RBAC permissions of the current user in the specified clusters are cleaned up.</para>
         /// </summary>
         [NameInMap("ClusterIds")]
         [Validation(Required=false)]
         public string ClusterIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully delete the specified kubeconfig files. Valid values:</para>
+        /// <para>Specifies whether to force delete the specified KubeConfig. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.</description></item>
-        /// <item><description>true: forcefully deletes the kubeconfig files without checking the cluster access records.</description></item>
+        /// <item><description>false (default): Before deleting the KubeConfig, the system checks whether cluster access records exist within the last seven days. If access records exist or cannot be retrieved, the deletion is not allowed.</description></item>
+        /// <item><description>true: Force deletes the KubeConfig without checking cluster access records.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

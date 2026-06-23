@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<GetKubernetesTriggerResponseBody> Body { get; set; }
         public class GetKubernetesTriggerResponseBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the trigger.</para>
+            /// <para>The trigger ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the trigger.</para>
+            /// <para>The trigger name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c259f563386444ebb8d7**</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the project.</para>
-            /// <para>The name consists of the namespace where the application is deployed and the name of the application. The format is <c>${namespace}/${name}</c>. Example: default/test-app.</para>
+            /// <para>The trigger project name.</para>
+            /// <para>The value consists of the namespace and application name in the format of <c>${namespace}/${name}</c>. Example: default/test-app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default/test-app</para>
@@ -63,11 +63,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The type of trigger.</para>
+            /// <para>The trigger type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>deployment</c>: performs actions on Deployments.</description></item>
-            /// <item><description><c>application</c>: performs actions on applications that are deployed in Application Center.</description></item>
+            /// <item><description><para><c>deployment</c>: a trigger for a stateless application. </para>
+            /// </description></item>
+            /// <item><description><para><c>application</c>: a trigger for an application center application.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>deployment</c>.</para>
             /// 
@@ -79,8 +81,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The action that the trigger performs. The value is set to redeploy.</para>
-            /// <para><c>redeploy</c>: redeploys the resource specified by project_id.</para>
+            /// <para>The trigger action. Valid values:</para>
+            /// <para><c>redeploy</c>: redeploys the resources defined in project_id.</para>
             /// 
             /// <b>Example:</b>
             /// <para>redeploy</para>

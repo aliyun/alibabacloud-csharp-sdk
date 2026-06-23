@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class AttachInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the added nodes.</para>
+        /// <para>The list of node addition information.</para>
         /// </summary>
         [NameInMap("list")]
         [Validation(Required=false)]
         public List<AttachInstancesResponseBodyList> List { get; set; }
         public class AttachInstancesResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The code that indicates the task result.</para>
+            /// <para>The status code of the node addition result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ECS instance.</para>
+            /// <para>The ECS instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-2ze0lgm3y6iylcbt****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the ECS instance is successfully added to the ACK cluster.</para>
+            /// <para>The description of the node addition result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>successful</para>

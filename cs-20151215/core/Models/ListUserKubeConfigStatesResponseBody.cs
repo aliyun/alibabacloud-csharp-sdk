@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public ListUserKubeConfigStatesResponseBodyPage Page { get; set; }
         public class ListUserKubeConfigStatesResponseBodyPage : TeaModel {
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of records returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The status of the kubeconfig files.</para>
+        /// <para>The KubeConfig status details of the user.</para>
         /// </summary>
         [NameInMap("states")]
         [Validation(Required=false)]
         public List<ListUserKubeConfigStatesResponseBodyStates> States { get; set; }
         public class ListUserKubeConfigStatesResponseBodyStates : TeaModel {
             /// <summary>
-            /// <para>The expiration date of the certificate used in a kubeconfig file. Format: the UTC time in the RFC3339 format.</para>
+            /// <para>The expiration time of the KubeConfig certificate. Format: UTC time in RFC 3339 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2028-04-09T06:20:47Z</para>
@@ -66,13 +66,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CertExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The current status of the certificate used in a kubeconfig file. Valid values:</para>
+            /// <para>The current status of the KubeConfig certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Expired: The certificate is expired.</description></item>
-            /// <item><description>Unexpired: The certificate is not expired.</description></item>
-            /// <item><description>Unissued: The certificate is not issued.</description></item>
-            /// <item><description>Unknown: The status of the certificate is unknown.</description></item>
-            /// <item><description>Removed: The certificate is removed. An issue record is found for the certificate.</description></item>
+            /// <item><description><para>Expired: The certificate has expired.</para>
+            /// </description></item>
+            /// <item><description><para>Unexpired: The certificate has not expired.</para>
+            /// </description></item>
+            /// <item><description><para>Unissued: The certificate has not been issued.</para>
+            /// </description></item>
+            /// <item><description><para>Unknown: The status is unknown.</para>
+            /// </description></item>
+            /// <item><description><para>Removed: The certificate has been revoked. An issuance record exists for the certificate.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,8 +98,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
-            /// <para>The name must be 1 to 63 characters in length, and can contain digits, underscores (_), and hyphens (-). The name must start with a letter or number.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster-demo</para>
@@ -104,17 +108,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>The status of the cluster. Valid values:</para>
+            /// <para>The cluster status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>initial</c>: The cluster is being created.</description></item>
             /// <item><description><c>failed</c>: The cluster failed to be created.</description></item>
             /// <item><description><c>running</c>: The cluster is running.</description></item>
             /// <item><description><c>updating</c>: The cluster is being upgraded.</description></item>
-            /// <item><description><c>updating_failed</c>: The cluster failed to be updated.</description></item>
+            /// <item><description><c>updating_failed</c>: The cluster failed to be upgraded.</description></item>
             /// <item><description><c>scaling</c>: The cluster is being scaled.</description></item>
-            /// <item><description><c>stopped</c>: The cluster is stopped.</description></item>
+            /// <item><description><c>stopped</c>: The cluster has stopped running.</description></item>
             /// <item><description><c>deleting</c>: The cluster is being deleted.</description></item>
-            /// <item><description><c>deleted</c>: The cluster is deleted.</description></item>
+            /// <item><description><c>deleted</c>: The cluster has been deleted.</description></item>
             /// <item><description><c>delete_failed</c>: The cluster failed to be deleted.</description></item>
             /// </list>
             /// 

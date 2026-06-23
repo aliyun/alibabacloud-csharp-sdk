@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClusterLogsResponseBody> Body { get; set; }
         public class DescribeClusterLogsResponseBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the log entry.</para>
+            /// <para>日志ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>73117232145******</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? ID { get; set; }
 
             /// <summary>
-            /// <para>The cluster ID.</para>
+            /// <para>集群ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>c23421cfa74454bc8b37163fd19af***</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The log content.</para>
+            /// <para>日志内容。</para>
             /// 
             /// <b>Example:</b>
             /// <para>start to update cluster status to CREATE_COMPLETE</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterLog { get; set; }
 
             /// <summary>
-            /// <para>The time when the log entry was generated.</para>
+            /// <para>日志产生时间。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-10T17:54:26+08:00</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The time when the log entry was updated.</para>
+            /// <para>日志更新时间。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-10T17:54:26+08:00</para>

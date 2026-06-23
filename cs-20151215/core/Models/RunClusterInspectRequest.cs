@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class RunClusterInspectRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotency token that ensures an API request completes no more than one time.</para>
+        /// <para>The idempotence token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c82e6987e2961451182edacd74faf</para>

@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribePolicyInstancesResponseBody> Body { get; set; }
         public class DescribePolicyInstancesResponseBody : TeaModel {
             /// <summary>
-            /// <para>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</para>
+            /// <para>策略实例实施者UID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>16298168****</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>目标集群ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>c8155823d057948c69a****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The name of the policy instance.</para>
+            /// <para>规则实例名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>no-env-var-secrets-****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The name of the policy.</para>
+            /// <para>策略治理规则名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACKPSPCapabilities</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The type of the policy.</para>
+            /// <para>策略类型名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>k8s-general</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyCategory { get; set; }
 
             /// <summary>
-            /// <para>The description of the policy template.</para>
+            /// <para>规则模板描述。</para>
             /// 
             /// <b>Example:</b>
             /// <para>Restricts secrets used in pod envs</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyDescription { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the policy instance.</para>
+            /// <para>当前规则实例的配置参数。</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;restrictedNamespaces&quot;: [ &quot;test&quot; ]</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyParameters { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the policy instance.</para>
+            /// <para>规则实例治理等级。</para>
             /// 
             /// <b>Example:</b>
             /// <para>low</para>
@@ -102,9 +102,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicySeverity { get; set; }
 
             /// <summary>
-            /// <para>The applicable scope of the policy instance.</para>
-            /// <para>A value of \* indicates all namespaces in the cluster. This is the default value.</para>
-            /// <para>Multiple namespaces are separated by commas (,).</para>
+            /// <para>策略实例实施范围：</para>
+            /// <para>默认&quot;*&quot;代表集群所有命名空间。</para>
+            /// <para>否则返回作用Namespaces名称，多个Namespaces以逗号（,）分隔。</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -116,10 +116,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PolicyScope { get; set; }
 
             /// <summary>
-            /// <para>The action of the policy. Valid values:</para>
+            /// <para>规则治理动作，取值：</para>
             /// <list type="bullet">
-            /// <item><description><c>deny</c>: Deployments that match the policy are denied.</description></item>
-            /// <item><description><c>warn</c>: Alerts are generated for deployments that match the policy.</description></item>
+            /// <item><description><para><c>deny</c>：拦截违规部署。</para>
+            /// </description></item>
+            /// <item><description><para><c>warn</c>：告警。</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The creation time of the instance. This parameter is deprecated.</para>
+            /// <para>创建时间（已废弃，请勿使用）。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T18:09:12+08:00</para>
@@ -145,7 +147,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The update time of the instance. This parameter is deprecated.</para>
+            /// <para>更新时间（已废弃，请勿使用）。</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T18:09:12+08:00</para>
@@ -158,7 +160,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The ID of the resource. This parameter is deprecated.</para>
+            /// <para>资源ID（已废弃，请勿使用）。</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456***</para>
@@ -171,7 +173,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The number of violations processed in the cluster. This parameter is deprecated.</para>
+            /// <para>集群中处理违规计数（已废弃，请勿使用）。</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -184,7 +186,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The status of the deletion. This parameter is deprecated.</para>
+            /// <para>删除状态（已废弃，请勿使用）。</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

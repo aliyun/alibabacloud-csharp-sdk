@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeAddonResponseBody : TeaModel {
         /// <summary>
-        /// <para>The CPU architecture supported by the component.</para>
+        /// <para>CPU architectures supported by the component.</para>
         /// </summary>
         [NameInMap("architecture")]
         [Validation(Required=false)]
         public List<string> Architecture { get; set; }
 
         /// <summary>
-        /// <para>The category of the component.</para>
+        /// <para>Component category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>network</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The custom parameter schema of the component.</para>
+        /// <para>Custom parameter schema of the component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ConfigSchema { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the component is automatically installed by default.</para>
+        /// <para>Whether it is installed by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? InstallByDefault { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the component is fully managed.</para>
+        /// <para>Whether it is a managed component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Managed { get; set; }
 
         /// <summary>
-        /// <para>The name of the component.</para>
+        /// <para>Component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>coredns</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The latest version information of the component.</para>
+        /// <para>Information about the latest component versions.</para>
         /// </summary>
         [NameInMap("newer_versions")]
         [Validation(Required=false)]
         public List<DescribeAddonResponseBodyNewerVersions> NewerVersions { get; set; }
         public class DescribeAddonResponseBodyNewerVersions : TeaModel {
             /// <summary>
-            /// <para>The minimum cluster version required by the component version.</para>
+            /// <para>The minimum cluster version required by this component version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.20.4</para>
@@ -84,10 +84,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string MinimumClusterVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the component can be updated to the version.</para>
+            /// <para>Whether the component can be upgraded to this version.</para>
             /// <list type="bullet">
-            /// <item><description>true: yes</description></item>
-            /// <item><description>false: no</description></item>
+            /// <item><description><para>true: Upgrade is supported.</para>
+            /// </description></item>
+            /// <item><description><para>false: Upgrade is not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,14 +112,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The operations supported by the component.</para>
+        /// <para>Operations supported by the component.</para>
         /// </summary>
         [NameInMap("supported_actions")]
         [Validation(Required=false)]
         public List<string> SupportedActions { get; set; }
 
         /// <summary>
-        /// <para>The version of the component.</para>
+        /// <para>Component version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1.9.3.6-32932850-aliyun</para>

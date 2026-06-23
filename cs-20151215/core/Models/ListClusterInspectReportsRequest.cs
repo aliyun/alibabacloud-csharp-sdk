@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterInspectReportsRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of returned results. Maximum value: 50.</para>
+        /// <para>The maximum number of results to return. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

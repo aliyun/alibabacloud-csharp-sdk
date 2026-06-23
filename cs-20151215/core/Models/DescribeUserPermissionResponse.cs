@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeUserPermissionResponseBody> Body { get; set; }
         public class DescribeUserPermissionResponseBody : TeaModel {
             /// <summary>
-            /// <para>The authorization setting. Valid values:</para>
+            /// <para>集群访问配置，格式为：</para>
             /// <list type="bullet">
-            /// <item><description><c>{cluster_id}</c> is returned if the permissions are scoped to a cluster.</description></item>
-            /// <item><description><c>{cluster_id}/{namespace}</c> is returned if the permissions are scoped to a namespace of a cluster.</description></item>
-            /// <item><description><c>all-clusters</c> is returned if the permissions are scoped to all clusters.</description></item>
+            /// <item><description>当是集群维度授权时，格式为：<c>{cluster_id}</c>。</description></item>
+            /// <item><description>当是命名空间维度授权时，格式为：<c>{cluster_id}/{namespace}</c>。</description></item>
+            /// <item><description>当是所有集群授权时，值固定为：<c>all-clusters</c>。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The authorization type. Valid values:</para>
+            /// <para>授权类型，取值：</para>
             /// <list type="bullet">
-            /// <item><description><c>cluster</c>: indicates that the permissions are scoped to a cluster.</description></item>
-            /// <item><description><c>namespace</c>: indicates that the permissions are scoped to a namespace of a cluster.</description></item>
-            /// <item><description><c>console</c>: indicates that the permissions are scoped to all clusters.</description></item>
+            /// <item><description><c>cluster</c>：集群维度。</description></item>
+            /// <item><description><c>namespace</c>：命名空间维度。</description></item>
+            /// <item><description><c>console</c>：所有集群维度的授权。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.</para>
+            /// <para>自定义角色名称，当授权自定义角色时，该字段为指定的自定义集群管理角色名称。</para>
             /// 
             /// <b>Example:</b>
             /// <para>terway-pod-reader</para>
@@ -62,13 +62,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The type of predefined role. Valid values:</para>
+            /// <para>预置的角色类型，取值：</para>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>: administrator</description></item>
-            /// <item><description><c>ops</c>: O\&amp;M engineer</description></item>
-            /// <item><description><c>dev</c>: developer</description></item>
-            /// <item><description><c>restricted</c>: restricted user</description></item>
-            /// <item><description><c>custom</c>: custom role</description></item>
+            /// <item><description><c>admin</c>：管理员。</description></item>
+            /// <item><description><c>ops</c>：运维人员。</description></item>
+            /// <item><description><c>dev</c>：开发人员。</description></item>
+            /// <item><description><c>restricted</c>：受限用户。</description></item>
+            /// <item><description><c>custom</c>：使用自定义的集群管理角色。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RoleType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the permissions are granted to the cluster owner.</para>
+            /// <para>是否为集群创建者的授权，取值：</para>
             /// <list type="bullet">
-            /// <item><description><c>0</c>: indicates that the permissions are not granted to the cluster owner.</description></item>
-            /// <item><description><c>1</c>: indicates that the permissions are granted to the cluster owner. The cluster owner is the administrator.</description></item>
+            /// <item><description><c>0</c>：代表不是集群创建者的授权记录。</description></item>
+            /// <item><description><c>1</c>：代表该授权记录为集群创建者的管理员权限。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? IsOwner { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the permissions are granted to the RAM role. Valid values:</para>
+            /// <para>是否为RAM角色授权，取值：</para>
             /// <list type="bullet">
-            /// <item><description><c>0</c>: indicates that the permissions are not granted to the RAM role.</description></item>
-            /// <item><description><c>1</c>: indicates that the permissions are granted to the RAM role.</description></item>
+            /// <item><description><c>0</c>：代表当前记录不是RAM角色授权。</description></item>
+            /// <item><description><c>1</c>：代表当前记录是RAM角色授权。</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

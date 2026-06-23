@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> DisabledCheckItems { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable cluster inspection.</para>
+        /// <para>Specifies whether to enable inspection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The inspection period defined using RFC5545 Recurrence Rule. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT or UNTIL is not supported.</para>
+        /// <para>The inspection cycle defined using RFC 5545 Recurrence Rule syntax. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT and UNTIL are not supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The maximum number of results to return on each page.</para>
+        /// <para>Valid values: [1,100].</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>

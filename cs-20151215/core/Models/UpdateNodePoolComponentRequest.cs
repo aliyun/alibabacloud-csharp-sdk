@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpdateNodePoolComponentRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration details for the component update.</para>
+        /// <para>The node component configuration.</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentRequestConfig Config { get; set; }
         public class UpdateNodePoolComponentRequestConfig : TeaModel {
             /// <summary>
-            /// <para>Custom configuration parameters for the component.</para>
+            /// <para>The custom configuration of the component.</para>
             /// </summary>
             [NameInMap("customConfig")]
             [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to disable rolling updates. Default: false. If set to false, nodes will be rolled automatically to apply the new configuration.</para>
+        /// <para>Specifies whether to disable rolling updates. Default value: false. When set to false, updating the baseline configuration triggers a rolling update of nodes.</para>
         /// </summary>
         [NameInMap("disableRolling")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>A list of specific nodes to be rolled. If not specified, all nodes in the node pool will be updated.</para>
+        /// <para>The list of nodes to be included in the rolling update. By default, all nodes are included.</para>
         /// </summary>
         [NameInMap("nodeNames")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public UpdateNodePoolComponentRequestRollingPolicy RollingPolicy { get; set; }
         public class UpdateNodePoolComponentRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The time interval between update batches, in seconds.</para>
+            /// <para>The interval between batches during the upgrade. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can be updated concurrently. Default: 1.</para>
+            /// <para>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The automatic pause strategy during the update process. Valid values: NotPause, FirstBatchPause, EveryBatchPause.</para>
+            /// <para>The automatic pause policy during node upgrades.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The version of the node component to be updated to.</para>
+        /// <para>The version of the node component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.28.9-aliyun.1</para>

@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeAddonRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster. If you specify a cluster ID, only components used in the cluster are queried. Other parameters are ignored.</para>
+        /// <para>Cluster ID.
+        /// When a cluster ID is specified, the list of available components for the cluster is queried, and other parameters are ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c02b3e03be10643e8a644a843ffcb****</para>
@@ -20,7 +21,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>Cluster specification.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
@@ -30,7 +33,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>Cluster type.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ManagedKubernetes</para>
@@ -40,7 +45,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>Cluster version.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.26.3-aliyun.1</para>
@@ -50,7 +57,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterVersion { get; set; }
 
         /// <summary>
-        /// <para>The subtype of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>Cluster subtype.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Default</para>
@@ -60,7 +69,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>The region ID. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
+        /// <para>Region.
+        /// If cluster_id is specified, this parameter is ignored.
+        /// The five parameters region_id, cluster_type, profile, cluster_spec, and cluster_version must be specified together.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -70,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The version of the component. If you do not specify this parameter, the latest version of the component is queried.</para>
+        /// <para>Component version. If not specified, the latest available version of the component is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1.9.3.10-7dfca203-aliyun</para>

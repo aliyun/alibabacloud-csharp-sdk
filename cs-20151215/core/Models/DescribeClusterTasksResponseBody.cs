@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -63,14 +63,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The task array.</para>
         /// </summary>
         [NameInMap("tasks")]
         [Validation(Required=false)]
         public List<DescribeClusterTasksResponseBodyTasks> Tasks { get; set; }
         public class DescribeClusterTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-03T10:11:33+08:00</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
+            /// <para>The node fault error message.</para>
             /// </summary>
             [NameInMap("error")]
             [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The task state.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-03T10:12:03.482+08:00</para>

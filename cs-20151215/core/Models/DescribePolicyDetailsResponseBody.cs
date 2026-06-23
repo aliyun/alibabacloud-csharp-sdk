@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribePolicyDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The action of the policy. Valid values:</para>
+        /// <para>The governance action of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>enforce</c>: blocks deployments that match the policy.</description></item>
-        /// <item><description><c>inform</c>: generates alerts for deployments that match the policy.</description></item>
+        /// <item><description><c>enforce</c>: blocks non-compliant deployments.</description></item>
+        /// <item><description><c>inform</c>: generates alerts.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The type of the policy.</para>
+        /// <para>The rule templatetype.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k8s-general</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The description of the policy.</para>
+        /// <para>The description of the rule template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Requires container images to begin with a repo string from a specified list</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the policy is deleted. Valid values:</para>
+        /// <para>Indicates whether the rule is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The policy is not deleted.</description></item>
-        /// <item><description>1: The policy is deleted.</description></item>
+        /// <item><description>0: The rule is not deleted.</description></item>
+        /// <item><description>1: The rule is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? IsDeleted { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The name of the policy governance rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACKAllowedRepos</para>
@@ -68,10 +68,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether parameters are required. Valid values:</para>
+        /// <para>Indicates whether policy configuration is required. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>0: Parameters are required.</description></item>
-        /// <item><description>1: Parameters are optional.</description></item>
+        /// <item><description>0: Parameter settings are required.</description></item>
+        /// <item><description>1: No parameter settings are required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,11 +82,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public int? NoConfig { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the policy. Valid values:</para>
+        /// <para>The governance severity level of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>high</c></description></item>
-        /// <item><description><c>medium</c></description></item>
-        /// <item><description><c>low</c></description></item>
+        /// <item><description><c>high</c>: high risk.</description></item>
+        /// <item><description><c>medium</c>: medium risk.</description></item>
+        /// <item><description><c>low</c>: low risk.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The content of the policy.</para>
+        /// <para>The details of the rule template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>详情请参见请求示例</para>
