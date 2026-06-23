@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListKvsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of key-value pairs returned by this traversal.</para>
+        /// <para>The list of key-value pairs retrieved in this traversal.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the key was last updated.</para>
+            /// <para>The time when the key was last updated, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-13T07:46:03Z</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on each page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

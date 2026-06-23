@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PurgeCachesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Content to be refreshed.</para>
+        /// <para>The refresh content.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public string ContentShrink { get; set; }
 
         /// <summary>
-        /// <para>Used for refreshing cached resources in edge computing, such as allowing the refresh of content cached using the CacheAPI interface of an edge function.</para>
+        /// <para>Specifies whether to refresh edge computing cached resources. For example, this allows you to refresh content cached by the Edge Routine CacheAPI API operation using the edge function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -27,13 +27,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? EdgeComputePurge { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to refresh all resources under the directory when the content from the origin and the source resource are inconsistent. The default is false.</para>
+        /// <para>Specifies whether to refresh all resources under the corresponding directory when the back-to-origin content is inconsistent with the origin server resources. Default value: false.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Refreshes all resources under the specified directory.</description></item>
-        /// <item><description><b>false</b>: Refreshes only the changed resources under the specified directory.</description></item>
+        /// <item><description><b>true</b>: Refreshes all resources under the corresponding directory.</description></item>
+        /// <item><description><b>false</b>: Refreshes only the changed resources under the corresponding directory.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> Applies to: Directory refresh, cachetag refresh, ignoreParams refresh, hostname refresh, and purge all cache of the site.</para>
+        /// <para> This parameter takes effect for directory refresh, cache tag refresh, parameter-ignored refresh, hostname refresh, and full site refresh.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,15 +55,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The type of refresh task. Possible values:</para>
+        /// <para>The type of the refresh node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>file</b> (default): File refresh.</description></item>
-        /// <item><description><b>cachekey</b>: Cachekey refresh.</description></item>
-        /// <item><description><b>cachetag</b>: Cachetag refresh.</description></item>
-        /// <item><description><b>directory</b>: Directory refresh.</description></item>
-        /// <item><description><b>ignoreParams</b>: Ignore parameters refresh. Ignoring parameters means removing the ? and everything after it in the request URL. When performing an ignore parameters refresh, the user first submits the URL without parameters through the interface. The submitted URLs to be refreshed will then be matched against the cached resource URLs with the parameters removed. If the cached resource URL, after removing the parameters, matches the URL to be refreshed, the CDN node will refresh the cached resources.</description></item>
-        /// <item><description><b>hostname</b>: Hostname refresh.</description></item>
-        /// <item><description><b>purgeall</b>: Purge all cache under the site.</description></item>
+        /// <item><description><b>file</b> (default): file refresh.</description></item>
+        /// <item><description><b>cachekey</b>: cache key refresh.</description></item>
+        /// <item><description><b>cachetag</b>: cache label refresh.</description></item>
+        /// <item><description><b>directory</b>: folder refresh.</description></item>
+        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh. This refers to removing the question mark (?) and all parameters after it from the request URL. When you commit a parameter-stripped URL through this API operation, the committed URL is matched against cached resource URLs after their parameters are also stripped. If a cached resource URL matches the committed URL after parameter stripping, the point of presence executes the refresh on the cached resource.</description></item>
+        /// <item><description><b>hostname</b>: hostname refresh.</description></item>
+        /// <item><description><b>purgeall</b>: refreshes all cached content under the site.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

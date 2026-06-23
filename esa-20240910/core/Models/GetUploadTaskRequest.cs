@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetUploadTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter is required when querying an upload task..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -20,7 +23,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file upload task. This field is assigned after you call the <a href="https://help.aliyun.com/document_detail/2850466.html">UploadFile</a> operation.</para>
+        /// <para>The file upload task ID, which is assigned when you call the <a href="https://help.aliyun.com/document_detail/2850466.html">UploadFile</a> operation.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter is required and must be a valid task ID returned by the UploadFile operation. If this parameter is not provided or the specified ID does not exist, an InvalidParameters (400) error is returned..</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>159253299357****</para>

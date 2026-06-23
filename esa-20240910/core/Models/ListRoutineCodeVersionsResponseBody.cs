@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The time when the code version was created.</para>
+            /// <para>The time when the code version was created, in RFC 3339 format in the UTC time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-16T09:42:47Z</para>

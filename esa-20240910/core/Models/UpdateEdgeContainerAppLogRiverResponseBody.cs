@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateEdgeContainerAppLogRiverResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log path of the container.</para>
+        /// <para>The log file of the container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/hello.log</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the standard output of the container is collected.</para>
+        /// <para>Specifies whether to enable standard output collection for the container.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

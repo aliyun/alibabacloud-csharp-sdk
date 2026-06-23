@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AliUid { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the task.</para>
+        /// <para>The time when the task was created, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-02T02:23:26Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The list of domain names to preload.</para>
+        /// <para>The list of domain names for prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testurl.com</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ErrorInfo { get; set; }
 
         /// <summary>
-        /// <para>The URL of the OSS file that contains the URLs that failed to preload.</para>
+        /// <para>The OSS address of the failed file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FailedFileOss { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file that contains the list of URLs. You can use this ID to download the file.</para>
+        /// <para>The ID of the URL list file, used for downloading.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3b48621bccf3fe29e1a7</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The method used to submit the URLs.</para>
+        /// <para>The URL insertion method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The number of URLs submitted for the preload task.</para>
+        /// <para>The number of URLs that have been submitted to the system for prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TaskSubmitted { get; set; }
 
         /// <summary>
-        /// <para>The task type. Valid values are <c>preload</c> and <c>refresh</c>.</para>
+        /// <para>The task type (refresh or prefetch).</para>
         /// 
         /// <b>Example:</b>
         /// <para>preload</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The total number of URLs in the task.</para>
+        /// <para>The total number of URLs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

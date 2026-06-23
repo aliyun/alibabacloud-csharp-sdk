@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetScheduledPreloadJobRequest : TeaModel {
         /// <summary>
-        /// <para>The task ID of the scheduled preload job.</para>
+        /// <para>The ID of the scheduled prefetch task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

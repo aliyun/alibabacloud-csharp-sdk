@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchDeleteKvWithHighCapacityAdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>The name specified when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
+        /// <para>The namespace name specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The download URL that stores the key-value pairs to be batch deleted, such as an OSS download URL with read permission.</para>
+        /// <para>The download URL that contains the key-value pairs to be batch deleted, such as an OSS download URL with read permissions.</para>
         /// <list type="bullet">
-        /// <item><description><para>When you call this operation by using an SDK, the SDK automatically uploads the submitted content to OSS and passes in the corresponding URL.</para>
+        /// <item><description><para>When you call this operation by using the SDK, the SDK automatically uploads the content to OSS and passes the corresponding URL.</para>
         /// </description></item>
-        /// <item><description><para>To call this operation directly, you must upload the JSON payload (in the same format as the BatchDeleteKv body: {&quot;Namespace&quot;:&quot;...&quot;,&quot;Keys&quot;:[...]}) to an OSS bucket and generate a signed HTTPS GET URL.</para>
+        /// <item><description><para>To call this operation directly, upload the JSON payload (in the same format as the BatchDeleteKv body: {&quot;Namespace&quot;:&quot;...&quot;,&quot;Keys&quot;:[...]}) to an OSS bucket and generate a signed HTTPS GET URL.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

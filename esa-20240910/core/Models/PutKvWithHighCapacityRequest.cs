@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PutKvWithHighCapacityRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the key to set. It cannot exceed 512 characters and cannot contain spaces or backslashes (/).</para>
+        /// <para>The key name to set. The key name can be up to 512 characters in length and cannot contain spaces or backslashes (/).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The name specified when calling <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a>.</para>
+        /// <para>The name specified when you called the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The download link for the key-value pair to set. This parameter is automatically generated when you call the SDK. Use the SDK to call it.</para>
+        /// <para>A publicly accessible HTTP or HTTPS URL that points to a JSON file containing the key-value pair to set. The server actively downloads the content from this URL.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you use an SDK, the SDK automatically uploads the file and generates the URL.</para>
+        /// </description></item>
+        /// <item><description><para>In non-SDK scenarios, upload the JSON payload to any publicly accessible HTTP service and specify the URL.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>The file content pointed to by the URL must be in the following JSON format: {&quot;Namespace&quot;:&quot;<namespace>&quot;,&quot;Key&quot;:&quot;<key>&quot;,&quot;Value&quot;:&quot;<value>&quot;}.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
+        /// <para><a href="https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

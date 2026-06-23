@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The content of the key. If the length exceeds 256 characters, the first 100 and last 100 characters are displayed, with the middle omitted.</para>
+        /// <para>The content of the key. If the content exceeds 256 characters, the first 100 and last 100 characters are returned with the middle portion omitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

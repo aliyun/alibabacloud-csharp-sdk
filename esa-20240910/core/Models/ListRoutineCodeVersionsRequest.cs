@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineCodeVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Edge Routine program.</para>
+        /// <para>The name of the Edge Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy match.</para>
+        /// <para>The keyword for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello</para>

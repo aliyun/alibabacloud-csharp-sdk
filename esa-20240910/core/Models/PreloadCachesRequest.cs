@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PreloadCachesRequest : TeaModel {
         /// <summary>
-        /// <para>The files to be prefetched.</para>
+        /// <para>The prefetch objects.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public List<string> Content { get; set; }
 
         /// <summary>
-        /// <para>By default, prefetch requests include the Accept-Encoding:gzip header. If you want a prefetch request to include other headers or implement multi-replica prefetch, you can specify a custom prefetch header by configuring the Headers parameter.</para>
+        /// <para>The default header carried in a prefetch request is Accept-Encoding:gzip. If you want the prefetch request to carry other headers or implement multi-copy prefetching, use this parameter to specify custom prefetch headers.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
 
         /// <summary>
-        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789****</para>

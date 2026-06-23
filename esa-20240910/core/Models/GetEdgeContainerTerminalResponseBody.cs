@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Container { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The namespace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The name of the container group.</para>
+        /// <para>The pod name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1775b9e0-8463-457e-89e8-fb7b6d125b2e</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the shared token.</para>
+        /// <para>The sharing token information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>af22f4-xxxxx-xxxx-xxxx-xxxx</para>

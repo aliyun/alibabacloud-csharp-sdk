@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The discount amount of the order.</para>
+            /// <para>The order discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TargetPlanCode { get; set; }
 
             /// <summary>
-            /// <para>The original order price, which equals the actual transaction price plus the discount amount.</para>
+            /// <para>The original order price. Original order price = actual transaction price + discount amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

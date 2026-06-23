@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerStagingDeployStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the container is ready.</para>
+        /// <para>Indicates whether the container status is ready. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ok</description></item>
-        /// <item><description>unready</description></item>
+        /// <item><description><para><b>ok</b>: Ready.</para>
+        /// </description></item>
+        /// <item><description><para><b>unready</b>: Not ready.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ContainersReady { get; set; }
 
         /// <summary>
-        /// <para>The time when the container was created. The value is a timestamp.</para>
+        /// <para>The creation time (UNIX timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-09-24T06:46:35Z</para>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreationTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The initialization status of the container.</para>
+        /// <para>The container initialization status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ok</description></item>
-        /// <item><description>unready</description></item>
+        /// <item><description><para><b>ok</b>: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>unready</b>: Not completed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,11 +52,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Initialized { get; set; }
 
         /// <summary>
-        /// <para>The status of the container in the staging environment.</para>
+        /// <para>The status of the container in the staging environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoContainer: created.</description></item>
+        /// <item><description>NoContainer: no container.</description></item>
+        /// <item><description>Pending: pending deployment.</description></item>
+        /// <item><description>ContainerCreating: the container is being created.</description></item>
         /// <item><description>Running: running.</description></item>
-        /// <item><description>Failed: abnormal.</description></item>
+        /// <item><description>Succeeded: completed.</description></item>
+        /// <item><description>ImagePullBackOff: image pull failed.</description></item>
+        /// <item><description>CrashLoopBackOff: abnormal container startup.</description></item>
+        /// <item><description>Failed: failed.</description></item>
+        /// <item><description>Unknown: unknown.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>The details of container restart.</para>
+        /// <para>The container restart status.</para>
         /// </summary>
         [NameInMap("PodRestartState")]
         [Validation(Required=false)]
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string LastTerminatedReason { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the container restarted.</para>
+            /// <para>The number of restarts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -92,10 +102,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether domain names are associated with the container.</para>
+        /// <para>Indicates whether the container is ready to receive traffic. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ok</description></item>
-        /// <item><description>unready</description></item>
+        /// <item><description><para><b>ok</b>: Ready.</para>
+        /// </description></item>
+        /// <item><description><para><b>unready</b>: Not ready.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,10 +128,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling status of the container.</para>
+        /// <para>The container scheduling status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ok</description></item>
-        /// <item><description>unready</description></item>
+        /// <item><description><para><b>ok</b>: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>unready</b>: Not completed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +144,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Scheduled { get; set; }
 
         /// <summary>
-        /// <para>The virtual IP addresses.</para>
+        /// <para>The list of VIPs.</para>
         /// </summary>
         [NameInMap("VIPs")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The logs.</para>
+        /// <para>The log list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]

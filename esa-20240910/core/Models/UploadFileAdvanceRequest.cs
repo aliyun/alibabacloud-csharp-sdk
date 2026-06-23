@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UploadFileAdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The type of the purge or prefetch task. Valid values:</para>
+        /// <para>The type of the refresh or prefetch task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>file</b> (default): purges the cache by file.</description></item>
-        /// <item><description><b>preload</b>: prefetches the file.</description></item>
-        /// <item><description><b>directory</b>: purges the cache by directory.</description></item>
-        /// <item><description><b>ignoreParams</b>: purges the cache by URL with specified parameters ignored.</description></item>
+        /// <item><description><b>file</b> (default): file refresh.</description></item>
+        /// <item><description><b>preload</b>: file prefetch.</description></item>
+        /// <item><description><b>directory</b>: directory refresh.</description></item>
+        /// <item><description><b>ignoreParams</b>: parameter-ignored refresh.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,11 +49,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string UploadTaskName { get; set; }
 
         /// <summary>
-        /// <para>The OSS URL of the file that contains resources to be purged or prefetched.</para>
+        /// <para>The URL of the refresh or prefetch file stored in OSS. The Url parameter accepts URLs in two formats:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Transit URL (recommended): automatically generated through the file transfer feature of the ESA console or SDK.</para>
+        /// </description></item>
+        /// <item><description><para>OSS pre-signed HTTPS URL: generated after you upload the file to an authorized OSS bucket. The isFileTransferUrl field specifies whether to use the transit URL mode.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://xxxxx.oss-cn-shenzhen.aliyuncs.com/test_oss_file?Expires=1708659191&OSSAccessKeyId=**********&Signature=">https://xxxxx.oss-cn-shenzhen.aliyuncs.com/test_oss_file?Expires=1708659191&amp;OSSAccessKeyId=**********&amp;Signature=</a>**********</para>
+        /// <para><a href="https://XXXXXX.oss-cn-hangzhou.aliyuncs.com/%7Bprefix%7D_%7Baccount_uid%7D_%7Bhash%7D">https://XXXXXX.oss-cn-hangzhou.aliyuncs.com/{prefix}_{account_uid}_{hash}</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

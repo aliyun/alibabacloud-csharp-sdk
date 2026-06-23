@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerAppLogRiverResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log path of the container. It must be an absolute path that starts with a forward slash (/). You can use asterisks (\*) and question marks (?) as wildcards.</para>
+        /// <para>The log file path of the container. The path must be an absolute path that starts with a forward slash (/). Asterisks (*) and question marks (?) can be used as wildcards.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/hello.log</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the standard output of the container is collected.</para>
+        /// <para>Indicates whether standard output collection is enabled for the container.</para>
         /// </summary>
         [NameInMap("Stdout")]
         [Validation(Required=false)]

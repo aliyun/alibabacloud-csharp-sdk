@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The prefetch task ID.</para>
+        /// <para>The task ID. A task ID is returned when you create a prefetch task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16401427840</para>

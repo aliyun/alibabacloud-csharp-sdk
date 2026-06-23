@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ResetScheduledPreloadJobRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the scheduled prefetch task.</para>
+        /// <para>The scheduled preload job ID.</para>
+        /// <remarks>
+        /// <para>Notice: The scheduled preload job ID. This parameter is required. You can obtain the ID from the response of CreateScheduledPreloadJob after creating a job, or query existing job IDs by calling GetScheduledPreloadJob or ListScheduledPreloadJobs.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>665d3af3621bccf3fe29e1a4</para>

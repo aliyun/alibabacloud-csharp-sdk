@@ -363,8 +363,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Version Management</para>
+        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites for enabling site version management:</para>
+        /// <ol>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateVersionManagementRequest
@@ -405,8 +413,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Version Management</para>
+        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites for enabling site version management:</para>
+        /// <ol>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateVersionManagementRequest
@@ -447,8 +463,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Version Management</para>
+        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites for enabling site version management:</para>
+        /// <ol>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateVersionManagementRequest
@@ -465,8 +489,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Version Management</para>
+        /// <para>Enables version management. This allows a site to support multiple configuration versions and multiple deployment environments, providing more flexible management of site traffic and configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Prerequisites for enabling site version management:</para>
+        /// <ol>
+        /// <item><description>The site plan must include the version management quota item <c>version_management_available</c>, and its value must be <c>true</c>.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateVersionManagementRequest
@@ -1231,14 +1263,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs in the specified KV namespace based on a specified list of key names. The maximum request body size allowed is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. When the request body is small, we recommend that you directly use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. Take the Golang SDK as an example. You need to use the BatchDeleteKvWithHighCapacityAdvance function to call it.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize configuration
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1246,8 +1282,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for the key-value pairs to be batch deleted
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the batch delete request for key-value pairs
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1259,8 +1295,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to perform deletion
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1270,7 +1306,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -1317,14 +1353,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs in the specified KV namespace based on a specified list of key names. The maximum request body size allowed is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. When the request body is small, we recommend that you directly use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. Take the Golang SDK as an example. You need to use the BatchDeleteKvWithHighCapacityAdvance function to call it.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize configuration
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1332,8 +1372,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for the key-value pairs to be batch deleted
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the batch delete request for key-value pairs
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1345,8 +1385,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to perform deletion
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1356,7 +1396,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -1403,14 +1443,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs in the specified KV namespace based on a specified list of key names. The maximum request body size allowed is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. When the request body is small, we recommend that you directly use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. Take the Golang SDK as an example. You need to use the BatchDeleteKvWithHighCapacityAdvance function to call it.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize configuration
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1418,8 +1462,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for the key-value pairs to be batch deleted
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the batch delete request for key-value pairs
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1431,8 +1475,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to perform deletion
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1442,7 +1486,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -1461,14 +1505,18 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes key-value pairs in the specified KV namespace based on a specified list of key names. The maximum request body size allowed is 100 MB.</para>
+        /// <para>Batch deletes key-value pairs from a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. When the request body is small, we recommend that you directly use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. Take the Golang SDK as an example. You need to use the BatchDeleteKvWithHighCapacityAdvance function to call it.</para>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Prerequisites for non-SDK calls: (1) You must have an OSS bucket with read and write permissions. (2) You must be able to generate a pre-signed HTTPS GET URL by using the OSS SDK or API. (3) The uploaded JSON file must use the same format as the BatchDeleteKv request body..
+        /// This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a>, but allows a larger request body. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850204.html">BatchDeleteKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchDeleteKvWithHighCapacityAdvance function.</para>
+        /// </remarks>
         /// <pre><c>func TestBatchDeleteWithHighCapacity() error {
-        ///     // Initialize configuration
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -1476,8 +1524,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for the key-value pairs to be batch deleted
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the batch delete request for key-value pairs
         ///     namespace := &quot;test_batch_put&quot;
         ///     rawReq := BatchDeleteKvRequest{
         ///         Namespace: &amp;namespace,
@@ -1489,8 +1537,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity operation to perform deletion
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to delete the key-value pairs
         ///     reqHighCapacity := BatchDeleteKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -1500,7 +1548,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -2031,14 +2079,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes key-value pairs in a batch to a specified namespace. This API supports a request body of up to 100 MB.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is similar to the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API but supports a larger request body. For smaller request bodies, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API for faster server-side processing. You must use an SDK to call this API. For example, if you use the Go SDK, you must call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration.
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2046,8 +2094,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for batch-uploading key-value pairs.
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pairs for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2063,12 +2111,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }
+        ///     }.
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity API to upload it.
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2078,7 +2126,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -2125,14 +2173,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes key-value pairs in a batch to a specified namespace. This API supports a request body of up to 100 MB.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is similar to the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API but supports a larger request body. For smaller request bodies, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API for faster server-side processing. You must use an SDK to call this API. For example, if you use the Go SDK, you must call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration.
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2140,8 +2188,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for batch-uploading key-value pairs.
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pairs for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2157,12 +2205,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }
+        ///     }.
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity API to upload it.
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2172,7 +2220,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -2219,14 +2267,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes key-value pairs in a batch to a specified namespace. This API supports a request body of up to 100 MB.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is similar to the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API but supports a larger request body. For smaller request bodies, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API for faster server-side processing. You must use an SDK to call this API. For example, if you use the Go SDK, you must call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration.
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2234,8 +2282,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for batch-uploading key-value pairs.
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pairs for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2251,12 +2299,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }
+        ///     }.
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity API to upload it.
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2266,7 +2314,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -2285,14 +2333,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Writes key-value pairs in a batch to a specified namespace. This API supports a request body of up to 100 MB.</para>
+        /// <para>Batch sets key-value pairs in a specified KV namespace based on a specified list of key names. The maximum request body size is 100 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is similar to the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API but supports a larger request body. For smaller request bodies, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> API for faster server-side processing. You must use an SDK to call this API. For example, if you use the Go SDK, you must call the BatchPutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a>, but allows larger request bodies. If the request body is small, use the <a href="https://help.aliyun.com/document_detail/2850203.html">BatchPutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when using the Golang SDK, call the BatchPutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestBatchPutKvWithHighCapacity() error {
-        ///     // Initialize the configuration.
+        ///     // Initialize the configuration
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -2300,8 +2348,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the request for batch-uploading key-value pairs.
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pairs for batch upload
         ///     namespace := &quot;test_batch_put&quot;
         ///     numKv := 10000
         ///     kvList := make([]*BatchPutKvRequestKvList, numKv)
@@ -2317,12 +2365,12 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     rawReq := BatchPutKvRequest{
         ///         Namespace: &amp;namespace,
         ///         KvList:    kvList,
-        ///     }
+        ///     }.
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity API to upload it.
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := BatchPutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         UrlObject: bytes.NewReader(payload),
@@ -2332,7 +2380,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -3315,7 +3363,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the test (unstable) version code of an edge function (Routine) and generates a formal version.</para>
+        /// <para>Submits the test version (unstable) code of an Edge Routine and generates a production version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3365,7 +3413,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the test (unstable) version code of an edge function (Routine) and generates a formal version.</para>
+        /// <para>Submits the test version (unstable) code of an Edge Routine and generates a production version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3415,7 +3463,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the test (unstable) version code of an edge function (Routine) and generates a formal version.</para>
+        /// <para>Submits the test version (unstable) code of an Edge Routine and generates a production version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3433,7 +3481,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits the test (unstable) version code of an edge function (Routine) and generates a formal version.</para>
+        /// <para>Submits the test version (unstable) code of an Edge Routine and generates a production version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3943,7 +3991,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a compression rule for a site.</para>
+        /// <para>Creates a compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4017,7 +4065,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a compression rule for a site.</para>
+        /// <para>Creates a compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4091,7 +4139,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a compression rule for a site.</para>
+        /// <para>Creates a compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4109,7 +4157,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a compression rule for a site.</para>
+        /// <para>Creates a compression rule configuration for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4127,14 +4175,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom hostname for a site.</para>
+        /// <para>Creates a SaaS domain name for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you set the acceleration region to <b>Chinese mainland only</b> or <b>global</b>, your site must have an ICP filing.</description></item>
-        /// <item><description>Each user can call this operation up to 100 times per hour.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4209,14 +4257,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom hostname for a site.</para>
+        /// <para>Creates a SaaS domain name for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you set the acceleration region to <b>Chinese mainland only</b> or <b>global</b>, your site must have an ICP filing.</description></item>
-        /// <item><description>Each user can call this operation up to 100 times per hour.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4291,14 +4339,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom hostname for a site.</para>
+        /// <para>Creates a SaaS domain name for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you set the acceleration region to <b>Chinese mainland only</b> or <b>global</b>, your site must have an ICP filing.</description></item>
-        /// <item><description>Each user can call this operation up to 100 times per hour.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4317,14 +4365,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom hostname for a site.</para>
+        /// <para>Creates a SaaS domain name for a site.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>If you set the acceleration region to <b>Chinese mainland only</b> or <b>global</b>, your site must have an ICP filing.</description></item>
-        /// <item><description>Each user can call this operation up to 100 times per hour.</description></item>
+        /// <item><description>If the acceleration area is set to the Chinese mainland only or global, the site domain name must have a valid China Internet Content Provider (ICP) filing.</description></item>
+        /// <item><description>Each user can invoke this operation up to 100 times per hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4343,7 +4391,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a custom response code configuration for a site.</para>
+        /// <para>Creates a custom response code rule for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4413,7 +4461,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a custom response code configuration for a site.</para>
+        /// <para>Creates a custom response code rule for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4483,7 +4531,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a custom response code configuration for a site.</para>
+        /// <para>Creates a custom response code rule for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4501,7 +4549,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a custom response code configuration for a site.</para>
+        /// <para>Creates a custom response code rule for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5339,7 +5387,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a configuration for modifying a site\&quot;s HTTP inbound request headers.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound request headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5411,7 +5459,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a configuration for modifying a site\&quot;s HTTP inbound request headers.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound request headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5483,7 +5531,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a configuration for modifying a site\&quot;s HTTP inbound request headers.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound request headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5501,7 +5549,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a configuration for modifying a site\&quot;s HTTP inbound request headers.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound request headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5519,7 +5567,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration to modify HTTP inbound response headers for a site.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound response headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5591,7 +5639,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration to modify HTTP inbound response headers for a site.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound response headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5663,7 +5711,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration to modify HTTP inbound response headers for a site.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound response headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5681,7 +5729,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration to modify HTTP inbound response headers for a site.</para>
+        /// <para>Creates a configuration for modifying HTTP inbound response headers for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9755,7 +9803,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Plan to batch add scheduled prefetch tasks.</para>
+        /// <para>Creates execution plans for batch scheduled prefetch tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9809,7 +9857,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Plan to batch add scheduled prefetch tasks.</para>
+        /// <para>Creates execution plans for batch scheduled prefetch tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9863,7 +9911,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Plan to batch add scheduled prefetch tasks.</para>
+        /// <para>Creates execution plans for batch scheduled prefetch tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9881,7 +9929,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Plan to batch add scheduled prefetch tasks.</para>
+        /// <para>Creates execution plans for batch scheduled prefetch tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9899,7 +9947,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scheduled prefetch task.</para>
+        /// <para>Add a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9957,7 +10005,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scheduled prefetch task.</para>
+        /// <para>Add a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10015,7 +10063,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scheduled prefetch task.</para>
+        /// <para>Add a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10033,7 +10081,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a scheduled prefetch task.</para>
+        /// <para>Add a scheduled prefetch task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12231,7 +12279,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a site waiting room.</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12343,7 +12391,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a site waiting room.</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12455,7 +12503,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a site waiting room.</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12473,7 +12521,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a site waiting room.</para>
+        /// <para>Creates a waiting room for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12491,12 +12539,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a waiting room event with options for queuing method and type.</para>
+        /// <para>Creates a waiting room event. You can specify the queuing method and type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Your site plan must be Advanced Edition or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
+        /// <para>Your site plan must be Advanced or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12614,12 +12662,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a waiting room event with options for queuing method and type.</para>
+        /// <para>Creates a waiting room event. You can specify the queuing method and type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Your site plan must be Advanced Edition or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
+        /// <para>Your site plan must be Advanced or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12737,12 +12785,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a waiting room event with options for queuing method and type.</para>
+        /// <para>Creates a waiting room event. You can specify the queuing method and type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Your site plan must be Advanced Edition or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
+        /// <para>Your site plan must be Advanced or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12760,12 +12808,12 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a waiting room event with options for queuing method and type.</para>
+        /// <para>Creates a waiting room event. You can specify the queuing method and type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Your site plan must be Advanced Edition or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
+        /// <para>Your site plan must be Advanced or higher to use this feature. The number of configurations for this feature cannot exceed the quota included in your site plan.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20063,7 +20111,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeCacheReservePrice to query the query cache reserve instance price.</para>
+        /// <para>Invokes DescribeCacheReservePrice to query the price of a query cache reserve instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20113,7 +20161,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeCacheReservePrice to query the query cache reserve instance price.</para>
+        /// <para>Invokes DescribeCacheReservePrice to query the price of a query cache reserve instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20163,7 +20211,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeCacheReservePrice to query the query cache reserve instance price.</para>
+        /// <para>Invokes DescribeCacheReservePrice to query the price of a query cache reserve instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20181,7 +20229,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invokes DescribeCacheReservePrice to query the query cache reserve instance price.</para>
+        /// <para>Invokes DescribeCacheReservePrice to query the price of a query cache reserve instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20731,6 +20779,254 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDDoSBpsListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSBpsMaxRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSBpsMaxResponse
+        /// </returns>
+        public DescribeDDoSBpsMaxResponse DescribeDDoSBpsMaxWithOptions(DescribeDDoSBpsMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSBpsMax",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSBpsMaxResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSBpsMaxRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSBpsMaxResponse
+        /// </returns>
+        public async Task<DescribeDDoSBpsMaxResponse> DescribeDDoSBpsMaxWithOptionsAsync(DescribeDDoSBpsMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSBpsMax",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSBpsMaxResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSBpsMaxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSBpsMaxResponse
+        /// </returns>
+        public DescribeDDoSBpsMaxResponse DescribeDDoSBpsMax(DescribeDDoSBpsMaxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDDoSBpsMaxWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak bits per second (BPS) and packets per second (PPS) data of DDoS attacks at the network layer.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSBpsMaxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSBpsMaxResponse
+        /// </returns>
+        public async Task<DescribeDDoSBpsMaxResponse> DescribeDDoSBpsMaxAsync(DescribeDDoSBpsMaxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDDoSBpsMaxWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak values of DDoS attack events within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSEventMaxRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSEventMaxResponse
+        /// </returns>
+        public DescribeDDoSEventMaxResponse DescribeDDoSEventMaxWithOptions(DescribeDDoSEventMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSEventMax",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSEventMaxResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak values of DDoS attack events within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSEventMaxRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSEventMaxResponse
+        /// </returns>
+        public async Task<DescribeDDoSEventMaxResponse> DescribeDDoSEventMaxWithOptionsAsync(DescribeDDoSEventMaxRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
+            {
+                query["SiteId"] = request.SiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDDoSEventMax",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDDoSEventMaxResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak values of DDoS attack events within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSEventMaxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSEventMaxResponse
+        /// </returns>
+        public DescribeDDoSEventMaxResponse DescribeDDoSEventMax(DescribeDDoSEventMaxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDDoSEventMaxWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the peak values of DDoS attack events within a specified time range.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDDoSEventMaxRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDDoSEventMaxResponse
+        /// </returns>
+        public async Task<DescribeDDoSEventMaxResponse> DescribeDDoSEventMaxAsync(DescribeDDoSEventMaxRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDDoSEventMaxWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21975,7 +22271,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries purge tasks.</para>
+        /// <para>Queries the execution status of a refresh task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22013,7 +22309,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries purge tasks.</para>
+        /// <para>Queries the execution status of a refresh task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22051,7 +22347,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries purge tasks.</para>
+        /// <para>Queries the execution status of a refresh task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22069,7 +22365,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries purge tasks.</para>
+        /// <para>Queries the execution status of a refresh task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23171,13 +23467,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Please ensure that the Layer 4 acceleration service is activated before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Notice: Make sure you have activated the Layer 4 acceleration service before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23224,13 +23520,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Please ensure that the Layer 4 acceleration service is activated before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Notice: Make sure you have activated the Layer 4 acceleration service before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23277,13 +23573,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Please ensure that the Layer 4 acceleration service is activated before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Notice: Make sure you have activated the Layer 4 acceleration service before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -23302,13 +23598,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Get diagnostic report details. 1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: Please ensure that the Layer 4 acceleration service is activated before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain TaskId/TraceId. 4. Call this API to get the report.</para>
+        /// <para>Notice: Make sure you have activated the Layer 4 acceleration service before using this API.1. Call GenerateTraceDiagnose to obtain the diagnostic link. 2. Open the link in a browser to complete client-side diagnosis. 3. Call ListTraceTasks to obtain the TaskId/TraceId. 4. Call this API to get the report.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -26327,7 +26623,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection configuration of a containerized application.</para>
+        /// <para>Retrieves the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26365,7 +26661,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection configuration of a containerized application.</para>
+        /// <para>Retrieves the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26403,7 +26699,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection configuration of a containerized application.</para>
+        /// <para>Retrieves the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26421,7 +26717,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection configuration of a containerized application.</para>
+        /// <para>Retrieves the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26439,7 +26735,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource capacity of a containerized application at the edge.</para>
+        /// <para>Get the resource capacity of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26481,7 +26777,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource capacity of a containerized application at the edge.</para>
+        /// <para>Get the resource capacity of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26523,7 +26819,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource capacity of a containerized application at the edge.</para>
+        /// <para>Get the resource capacity of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26541,7 +26837,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource capacity of a containerized application at the edge.</para>
+        /// <para>Get the resource capacity of an edge container application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26559,7 +26855,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the resource reservation configuration of the edge container.</para>
+        /// <para>Retrieves the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26601,7 +26897,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the resource reservation configuration of the edge container.</para>
+        /// <para>Retrieves the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26643,7 +26939,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the resource reservation configuration of the edge container.</para>
+        /// <para>Retrieves the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26661,7 +26957,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the resource reservation configuration of the edge container.</para>
+        /// <para>Retrieves the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27039,7 +27335,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
+        /// <para>Retrieves the deployment regions of an edge container application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27077,7 +27373,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
+        /// <para>Retrieves the deployment regions of an edge container application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27115,7 +27411,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
+        /// <para>Retrieves the deployment regions of an edge container application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27133,7 +27429,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries regions where a containerized application is deployed based on the application ID.</para>
+        /// <para>Retrieves the deployment regions of an edge container application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27151,7 +27447,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Edge Container logs.</para>
+        /// <para>Retrieves log information for an edge container. You can specify the number of output lines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27189,7 +27485,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Edge Container logs.</para>
+        /// <para>Retrieves log information for an edge container. You can specify the number of output lines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27227,7 +27523,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Edge Container logs.</para>
+        /// <para>Retrieves log information for an edge container. You can specify the number of output lines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27245,7 +27541,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Edge Container logs.</para>
+        /// <para>Retrieves log information for an edge container. You can specify the number of output lines.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27263,7 +27559,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
+        /// <para>Retrieves the staging environment deployment status of an application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27301,7 +27597,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
+        /// <para>Retrieves the staging environment deployment status of an application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27339,7 +27635,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
+        /// <para>Retrieves the staging environment deployment status of an application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27357,7 +27653,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment status of an application in the staging environment by using the application ID.</para>
+        /// <para>Retrieves the staging environment deployment status of an application by application ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27375,7 +27671,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the terminal information of a containerized application.</para>
+        /// <para>Retrieves terminal information of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27417,7 +27713,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the terminal information of a containerized application.</para>
+        /// <para>Retrieves terminal information of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27459,7 +27755,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the terminal information of a containerized application.</para>
+        /// <para>Retrieves terminal information of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27477,7 +27773,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the terminal information of a containerized application.</para>
+        /// <para>Retrieves terminal information of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30107,7 +30403,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the origin protection settings for a site. These settings include the origin protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP address whitelist requires an update. The response also includes details about the whitelist, such as the current list, the latest list, and the differences between them.</para>
+        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30145,7 +30441,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the origin protection settings for a site. These settings include the origin protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP address whitelist requires an update. The response also includes details about the whitelist, such as the current list, the latest list, and the differences between them.</para>
+        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30183,7 +30479,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the origin protection settings for a site. These settings include the origin protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP address whitelist requires an update. The response also includes details about the whitelist, such as the current list, the latest list, and the differences between them.</para>
+        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30201,7 +30497,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the origin protection settings for a site. These settings include the origin protection switch, the back-to-origin convergence switch, and whether the back-to-origin IP address whitelist requires an update. The response also includes details about the whitelist, such as the current list, the latest list, and the differences between them.</para>
+        /// <para>Queries site origin protection configurations, including the origin protection switch, the origin convergence switch, whether the origin IP whitelist needs to be updated, and detailed information about the origin IP whitelist, including the current origin IP whitelist used by the site, the latest origin IP whitelist, and the differences between them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30451,7 +30747,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Collection Configuration for Data Quality.</para>
+        /// <para>Queries the data quality collection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30493,7 +30789,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Collection Configuration for Data Quality.</para>
+        /// <para>Queries the data quality collection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30535,7 +30831,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Collection Configuration for Data Quality.</para>
+        /// <para>Queries the data quality collection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30553,7 +30849,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the Collection Configuration for Data Quality.</para>
+        /// <para>Queries the data quality collection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30571,7 +30867,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total and used quota for different purge types.</para>
+        /// <para>Retrieves the quota and used quota for different refresh types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30617,7 +30913,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total and used quota for different purge types.</para>
+        /// <para>Retrieves the quota and used quota for different refresh types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30663,7 +30959,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total and used quota for different purge types.</para>
+        /// <para>Retrieves the quota and used quota for different refresh types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30681,7 +30977,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the total and used quota for different purge types.</para>
+        /// <para>Retrieves the quota and used quota for different refresh types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31515,6 +31811,158 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the status and other information of a specific code version of a specified Edge Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>By calling this API operation, you can retrieve detailed information about a specific Edge Routine at a specified version, including but not limited to the version status, creation time, and whether the version contains asset resource files. You must provide the Edge Routine name and the specific code version number as request parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRoutineCodeVersionInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineCodeVersionInfoResponse
+        /// </returns>
+        public GetRoutineCodeVersionInfoResponse GetRoutineCodeVersionInfoWithOptions(GetRoutineCodeVersionInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersion))
+            {
+                body["CodeVersion"] = request.CodeVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRoutineCodeVersionInfo",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRoutineCodeVersionInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status and other information of a specific code version of a specified Edge Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>By calling this API operation, you can retrieve detailed information about a specific Edge Routine at a specified version, including but not limited to the version status, creation time, and whether the version contains asset resource files. You must provide the Edge Routine name and the specific code version number as request parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRoutineCodeVersionInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineCodeVersionInfoResponse
+        /// </returns>
+        public async Task<GetRoutineCodeVersionInfoResponse> GetRoutineCodeVersionInfoWithOptionsAsync(GetRoutineCodeVersionInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeVersion))
+            {
+                body["CodeVersion"] = request.CodeVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRoutineCodeVersionInfo",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRoutineCodeVersionInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status and other information of a specific code version of a specified Edge Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>By calling this API operation, you can retrieve detailed information about a specific Edge Routine at a specified version, including but not limited to the version status, creation time, and whether the version contains asset resource files. You must provide the Edge Routine name and the specific code version number as request parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRoutineCodeVersionInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineCodeVersionInfoResponse
+        /// </returns>
+        public GetRoutineCodeVersionInfoResponse GetRoutineCodeVersionInfo(GetRoutineCodeVersionInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetRoutineCodeVersionInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the status and other information of a specific code version of a specified Edge Routine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>By calling this API operation, you can retrieve detailed information about a specific Edge Routine at a specified version, including but not limited to the version status, creation time, and whether the version contains asset resource files. You must provide the Edge Routine name and the specific code version number as request parameters.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetRoutineCodeVersionInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRoutineCodeVersionInfoResponse
+        /// </returns>
+        public async Task<GetRoutineCodeVersionInfoResponse> GetRoutineCodeVersionInfoAsync(GetRoutineCodeVersionInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetRoutineCodeVersionInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a specific edge function route configuration.</para>
         /// </summary>
         /// 
@@ -31979,7 +32427,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single scheduled preload job by its task ID.</para>
+        /// <para>Queries a single scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32017,7 +32465,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single scheduled preload job by its task ID.</para>
+        /// <para>Queries a single scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32055,7 +32503,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single scheduled preload job by its task ID.</para>
+        /// <para>Queries a single scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32073,7 +32521,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single scheduled preload job by its task ID.</para>
+        /// <para>Queries a single scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33567,7 +34015,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
+        /// <para>Queries the execution status and runtime information of a file upload task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33605,7 +34053,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
+        /// <para>Queries the execution status and runtime information of a file upload task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33643,7 +34091,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
+        /// <para>Queries the execution status and runtime information of a file upload task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33661,7 +34109,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of a file upload task based on the task ID.</para>
+        /// <para>Queries the execution status and runtime information of a file upload task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34963,7 +35411,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cache configurations.</para>
+        /// <para>Queries multiple cache configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35001,7 +35449,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cache configurations.</para>
+        /// <para>Queries multiple cache configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35039,7 +35487,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cache configurations.</para>
+        /// <para>Queries multiple cache configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35057,7 +35505,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cache configurations.</para>
+        /// <para>Queries multiple cache configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36599,7 +37047,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of image secrets for edge container applications</para>
+        /// <para>Retrieves the list of image secrets for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36641,7 +37089,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of image secrets for edge container applications</para>
+        /// <para>Retrieves the list of image secrets for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36683,7 +37131,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of image secrets for edge container applications</para>
+        /// <para>Retrieves the list of image secrets for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36701,7 +37149,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of image secrets for edge container applications</para>
+        /// <para>Retrieves the list of image secrets for an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38587,7 +39035,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified namespace.</para>
+        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38625,7 +39073,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified namespace.</para>
+        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38663,7 +39111,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified namespace.</para>
+        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38681,7 +39129,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all key-value pairs in a specified namespace.</para>
+        /// <para>Lists all key-value pairs in a specified KV storage namespace under your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40659,13 +41107,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the code version information of a specified Edge Routine program.</para>
+        /// <para>Queries the code version information of a specified Edge Routine program by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paged query and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy match on code version descriptions.
-        /// The response includes details of each code version, such as the revision number, description, and creation time.</para>
+        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paging and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy matching against code version descriptions.
+        /// The response includes detailed information about each code version, such as the revision number, description, and creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40719,13 +41167,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the code version information of a specified Edge Routine program.</para>
+        /// <para>Queries the code version information of a specified Edge Routine program by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paged query and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy match on code version descriptions.
-        /// The response includes details of each code version, such as the revision number, description, and creation time.</para>
+        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paging and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy matching against code version descriptions.
+        /// The response includes detailed information about each code version, such as the revision number, description, and creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40779,13 +41227,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the code version information of a specified Edge Routine program.</para>
+        /// <para>Queries the code version information of a specified Edge Routine program by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paged query and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy match on code version descriptions.
-        /// The response includes details of each code version, such as the revision number, description, and creation time.</para>
+        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paging and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy matching against code version descriptions.
+        /// The response includes detailed information about each code version, such as the revision number, description, and creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40803,13 +41251,13 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve the code version information of a specified Edge Routine program.</para>
+        /// <para>Queries the code version information of a specified Edge Routine program by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paged query and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy match on code version descriptions.
-        /// The response includes details of each code version, such as the revision number, description, and creation time.</para>
+        /// <para>Queries the code version list of a specified Edge Routine program. This operation supports paging and fuzzy search. You can set the Name parameter to specify the Edge Routine program name, use PageNumber and PageSize for paging control, and use SearchKeyWord for fuzzy matching against code version descriptions.
+        /// The response includes detailed information about each code version, such as the revision number, description, and creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41127,7 +41575,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists execution plans for a scheduled preload task.</para>
+        /// <para>Lists the execution plans of a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41165,7 +41613,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists execution plans for a scheduled preload task.</para>
+        /// <para>Lists the execution plans of a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41203,7 +41651,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists execution plans for a scheduled preload task.</para>
+        /// <para>Lists the execution plans of a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41221,7 +41669,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists execution plans for a scheduled preload task.</para>
+        /// <para>Lists the execution plans of a specified scheduled prefetch task by task ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41239,7 +41687,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch jobs for a site.</para>
+        /// <para>Lists scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41277,7 +41725,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch jobs for a site.</para>
+        /// <para>Lists scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41315,7 +41763,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch jobs for a site.</para>
+        /// <para>Lists scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41333,7 +41781,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists scheduled prefetch jobs for a site.</para>
+        /// <para>Lists scheduled prefetch tasks for a site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42323,7 +42771,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
+        /// <para>Lists the execution status and runtime information of file upload tasks by time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42361,7 +42809,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
+        /// <para>Lists the execution status and runtime information of file upload tasks by time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42399,7 +42847,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
+        /// <para>Lists the execution status and runtime information of file upload tasks by time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42417,7 +42865,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution status and running information of file upload tasks based on the task time and type.</para>
+        /// <para>Lists the execution status and runtime information of file upload tasks by time and type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44719,6 +45167,126 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Activates the edge container service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenEdgeContainerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenEdgeContainerResponse
+        /// </returns>
+        public OpenEdgeContainerResponse OpenEdgeContainerWithOptions(OpenEdgeContainerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenEdgeContainer",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenEdgeContainerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the edge container service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenEdgeContainerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenEdgeContainerResponse
+        /// </returns>
+        public async Task<OpenEdgeContainerResponse> OpenEdgeContainerWithOptionsAsync(OpenEdgeContainerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenEdgeContainer",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenEdgeContainerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the edge container service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenEdgeContainerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenEdgeContainerResponse
+        /// </returns>
+        public OpenEdgeContainerResponse OpenEdgeContainer(OpenEdgeContainerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OpenEdgeContainerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the edge container service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenEdgeContainerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenEdgeContainerResponse
+        /// </returns>
+        public async Task<OpenEdgeContainerResponse> OpenEdgeContainerAsync(OpenEdgeContainerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OpenEdgeContainerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>OpenErService</para>
         /// </summary>
         /// 
@@ -44839,7 +45407,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache.</para>
+        /// <para>Prefetches resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44899,7 +45467,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache.</para>
+        /// <para>Prefetches resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -44959,7 +45527,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache.</para>
+        /// <para>Prefetches resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44977,7 +45545,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Prefetches cache.</para>
+        /// <para>Prefetches resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45195,7 +45763,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Publishes a specific version of Edge Routine code to the staging or production environment. When publishing to the production environment, you can choose canary release to specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45245,7 +45813,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Publishes a specific version of Edge Routine code to the staging or production environment. When publishing to the production environment, you can choose canary release to specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45295,7 +45863,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Publishes a specific version of Edge Routine code to the staging or production environment. When publishing to the production environment, you can choose canary release to specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45313,7 +45881,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布Routine某版本代码</para>
+        /// <para>Publishes a specific version of Edge Routine code to the staging or production environment. When publishing to the production environment, you can choose canary release to specific regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45723,7 +46291,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
+        /// <para>Refreshes file content on nodes. Supports refreshing by file, directory, cache tag, ignored parameters, hostname, and entire site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45787,7 +46355,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
+        /// <para>Refreshes file content on nodes. Supports refreshing by file, directory, cache tag, ignored parameters, hostname, and entire site.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45851,7 +46419,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
+        /// <para>Refreshes file content on nodes. Supports refreshing by file, directory, cache tag, ignored parameters, hostname, and entire site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45869,7 +46437,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Purges resources cached on points of presence (POPs). You can purge the cache by file URL, directory, cache tag, hostname, or URL with specified parameters ignored, or purge all the cache.</para>
+        /// <para>Refreshes file content on nodes. Supports refreshing by file, directory, cache tag, ignored parameters, hostname, and entire site.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46051,14 +46619,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set a single high-capacity key-value pair in a KV namespace. This operation supports values up to 25 MB.</para>
+        /// <para>Sets a single large-capacity key-value pair in a KV namespace. The maximum value size is 25 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but supports larger request bodies. If your request body is small, use the <a href="~~PutKv~~">PutKv</a> interface instead to reduce server-side processing time. Call this interface using an SDK. For example, with the Go SDK, call the PutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="~~PutKv~~">PutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when you use the Golang SDK, call the PutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestPutKvWithHighCapacity() {
-        ///     // Configure initialization
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -46066,8 +46634,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the key-value pair request to be uploaded
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pair request to upload
         ///     namespace := &quot;test-put-kv&quot;
         ///     key := &quot;test_PutKvWithHighCapacity_0&quot;
         ///     value := strings.Repeat(&quot;t&quot;, 10*1024*1024)
@@ -46079,19 +46647,19 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity interface to upload
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         Key:       &amp;key,
         ///         UrlObject: bytes.NewReader([]byte(payload)),
-        ///     }
+        ///     }.
         ///     resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
         ///     if err != nil {
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -46142,14 +46710,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set a single high-capacity key-value pair in a KV namespace. This operation supports values up to 25 MB.</para>
+        /// <para>Sets a single large-capacity key-value pair in a KV namespace. The maximum value size is 25 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but supports larger request bodies. If your request body is small, use the <a href="~~PutKv~~">PutKv</a> interface instead to reduce server-side processing time. Call this interface using an SDK. For example, with the Go SDK, call the PutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="~~PutKv~~">PutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when you use the Golang SDK, call the PutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestPutKvWithHighCapacity() {
-        ///     // Configure initialization
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -46157,8 +46725,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the key-value pair request to be uploaded
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pair request to upload
         ///     namespace := &quot;test-put-kv&quot;
         ///     key := &quot;test_PutKvWithHighCapacity_0&quot;
         ///     value := strings.Repeat(&quot;t&quot;, 10*1024*1024)
@@ -46170,19 +46738,19 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity interface to upload
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         Key:       &amp;key,
         ///         UrlObject: bytes.NewReader([]byte(payload)),
-        ///     }
+        ///     }.
         ///     resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
         ///     if err != nil {
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -46233,14 +46801,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set a single high-capacity key-value pair in a KV namespace. This operation supports values up to 25 MB.</para>
+        /// <para>Sets a single large-capacity key-value pair in a KV namespace. The maximum value size is 25 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but supports larger request bodies. If your request body is small, use the <a href="~~PutKv~~">PutKv</a> interface instead to reduce server-side processing time. Call this interface using an SDK. For example, with the Go SDK, call the PutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="~~PutKv~~">PutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when you use the Golang SDK, call the PutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestPutKvWithHighCapacity() {
-        ///     // Configure initialization
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -46248,8 +46816,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the key-value pair request to be uploaded
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pair request to upload
         ///     namespace := &quot;test-put-kv&quot;
         ///     key := &quot;test_PutKvWithHighCapacity_0&quot;
         ///     value := strings.Repeat(&quot;t&quot;, 10*1024*1024)
@@ -46261,19 +46829,19 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity interface to upload
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         Key:       &amp;key,
         ///         UrlObject: bytes.NewReader([]byte(payload)),
-        ///     }
+        ///     }.
         ///     resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
         ///     if err != nil {
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -46292,14 +46860,14 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set a single high-capacity key-value pair in a KV namespace. This operation supports values up to 25 MB.</para>
+        /// <para>Sets a single large-capacity key-value pair in a KV namespace. The maximum value size is 25 MB.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but supports larger request bodies. If your request body is small, use the <a href="~~PutKv~~">PutKv</a> interface instead to reduce server-side processing time. Call this interface using an SDK. For example, with the Go SDK, call the PutKvWithHighCapacityAdvance function.</para>
+        /// <para>This operation provides the same functionality as <a href="~~PutKv~~">PutKv</a>, but allows you to upload a larger request body. If the request body is small, use the <a href="~~PutKv~~">PutKv</a> operation to reduce server-side processing time. This operation must be called by using an SDK. For example, when you use the Golang SDK, call the PutKvWithHighCapacityAdvance function.</para>
         /// <pre><c>func TestPutKvWithHighCapacity() {
-        ///     // Configure initialization
+        ///     // Configuration initialization
         ///     cfg := new(openapi.Config)
         ///     cfg.SetAccessKeyId(&quot;xxxxxxxxx&quot;)
         ///     cfg.SetAccessKeySecret(&quot;xxxxxxxxxx&quot;)
@@ -46307,8 +46875,8 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     if err != nil {
         ///         return err
         ///     }
-        ///     runtime := &amp;util.RuntimeOptions{}
-        ///     // Construct the key-value pair request to be uploaded
+        ///     runtime := &amp;util.RuntimeOptions{}.
+        ///     // Construct the key-value pair request to upload
         ///     namespace := &quot;test-put-kv&quot;
         ///     key := &quot;test_PutKvWithHighCapacity_0&quot;
         ///     value := strings.Repeat(&quot;t&quot;, 10*1024*1024)
@@ -46320,19 +46888,19 @@ namespace AlibabaCloud.SDK.ESA20240910
         ///     payload, err := json.Marshal(rawReq)
         ///     if err != nil {
         ///         return err
-        ///     }
-        ///     // If the payload is larger than 2 MB, call the high-capacity interface to upload
+        ///     }.
+        ///     // If the payload is larger than 2 MB, call the high-capacity operation to upload it
         ///     reqHighCapacity := &amp;PutKvWithHighCapacityAdvanceRequest{
         ///         Namespace: &amp;namespace,
         ///         Key:       &amp;key,
         ///         UrlObject: bytes.NewReader([]byte(payload)),
-        ///     }
+        ///     }.
         ///     resp, err := cli.PutKvWithHighCapacityAdvance(reqHighCapacity, runtime)
         ///     if err != nil {
         ///         return err
         ///     }
         ///     return nil
-        /// }
+        /// }.
         /// </c></pre>
         /// </description>
         /// 
@@ -46543,7 +47111,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebuilds the staging environment for containerized applications.</para>
+        /// <para>Rebuild the staging environment of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46585,7 +47153,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebuilds the staging environment for containerized applications.</para>
+        /// <para>Rebuild the staging environment of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46627,7 +47195,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebuilds the staging environment for containerized applications.</para>
+        /// <para>Rebuild the staging environment of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46645,7 +47213,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rebuilds the staging environment for containerized applications.</para>
+        /// <para>Rebuild the staging environment of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46783,8 +47351,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the progress of a scheduled prefetch task and restarts the prefetch from the beginning.
-        /// Prerequisites: You must first create a scheduled prefetch task by calling CreateScheduledPreloadJob to obtain a valid task ID, and then pass the ID to this operation to reset the task.</para>
+        /// <para>Resets the progress of a scheduled preload job and restarts the preload from the beginning.
+        /// Prerequisite: You must first create a scheduled preload job by calling CreateScheduledPreloadJob to obtain a valid job ID, and then pass it to this API for resetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46826,8 +47394,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the progress of a scheduled prefetch task and restarts the prefetch from the beginning.
-        /// Prerequisites: You must first create a scheduled prefetch task by calling CreateScheduledPreloadJob to obtain a valid task ID, and then pass the ID to this operation to reset the task.</para>
+        /// <para>Resets the progress of a scheduled preload job and restarts the preload from the beginning.
+        /// Prerequisite: You must first create a scheduled preload job by calling CreateScheduledPreloadJob to obtain a valid job ID, and then pass it to this API for resetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46869,8 +47437,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the progress of a scheduled prefetch task and restarts the prefetch from the beginning.
-        /// Prerequisites: You must first create a scheduled prefetch task by calling CreateScheduledPreloadJob to obtain a valid task ID, and then pass the ID to this operation to reset the task.</para>
+        /// <para>Resets the progress of a scheduled preload job and restarts the preload from the beginning.
+        /// Prerequisite: You must first create a scheduled preload job by calling CreateScheduledPreloadJob to obtain a valid job ID, and then pass it to this API for resetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46888,8 +47456,8 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the progress of a scheduled prefetch task and restarts the prefetch from the beginning.
-        /// Prerequisites: You must first create a scheduled prefetch task by calling CreateScheduledPreloadJob to obtain a valid task ID, and then pass the ID to this operation to reset the task.</para>
+        /// <para>Resets the progress of a scheduled preload job and restarts the preload from the beginning.
+        /// Prerequisite: You must first create a scheduled preload job by calling CreateScheduledPreloadJob to obtain a valid job ID, and then pass it to this API for resetting.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48827,7 +49395,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start a scheduled prefetch using a prefetch plan ID.</para>
+        /// <para>Starts a scheduled prefetch based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48869,7 +49437,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start a scheduled prefetch using a prefetch plan ID.</para>
+        /// <para>Starts a scheduled prefetch based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48911,7 +49479,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start a scheduled prefetch using a prefetch plan ID.</para>
+        /// <para>Starts a scheduled prefetch based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48929,7 +49497,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start a scheduled prefetch using a prefetch plan ID.</para>
+        /// <para>Starts a scheduled prefetch based on the prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48948,7 +49516,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
-        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the site to which it belongs has passed the access verification (site Status=active).</para>
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48991,7 +49559,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
-        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the site to which it belongs has passed the access verification (site Status=active).</para>
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49034,7 +49602,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
-        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the site to which it belongs has passed the access verification (site Status=active).</para>
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49053,7 +49621,7 @@ namespace AlibabaCloud.SDK.ESA20240910
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Stops a single scheduled prefetch plan by prefetch plan ID.
-        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the site to which it belongs has passed the access verification (site Status=active).</para>
+        /// Prerequisites: (1) This operation takes effect only when the execution plan is in the running state. Execution plans in the waiting or failed state cannot be stopped. (2) Whether an execution plan can reach the running state depends on whether the associated site has passed the access verification (site Status=active).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51223,7 +51791,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log collection configuration of a containerized application.</para>
+        /// <para>Updates the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51273,7 +51841,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log collection configuration of a containerized application.</para>
+        /// <para>Updates the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51323,7 +51891,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log collection configuration of a containerized application.</para>
+        /// <para>Updates the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51341,7 +51909,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the log collection configuration of a containerized application.</para>
+        /// <para>Updates the log collection configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51359,7 +51927,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource reservation configuration of an edge container.</para>
+        /// <para>Updates the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51423,7 +51991,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource reservation configuration of an edge container.</para>
+        /// <para>Updates the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -51487,7 +52055,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource reservation configuration of an edge container.</para>
+        /// <para>Updates the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51505,7 +52073,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource reservation configuration of an edge container.</para>
+        /// <para>Updates the resource reservation configuration of an edge container application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56015,7 +56583,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled preload task based on the preload plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56075,7 +56643,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled preload task based on the preload plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56135,7 +56703,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled preload task based on the preload plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56153,7 +56721,7 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a scheduled preload task based on the preload plan ID.</para>
+        /// <para>Updates a scheduled prefetch plan by prefetch plan ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -59819,16 +60387,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
+        /// <para>Uploads a refresh or prefetch file to improve access speed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>The maximum file size is 10 MB.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -59882,16 +60450,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
+        /// <para>Uploads a refresh or prefetch file to improve access speed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>The maximum file size is 10 MB.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -59945,16 +60513,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
+        /// <para>Uploads a refresh or prefetch file to improve access speed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>The maximum file size is 10 MB.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -59972,16 +60540,16 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the file that contains resources to be purged or prefetched.</para>
+        /// <para>Uploads a refresh or prefetch file to improve access speed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The file can be up to 10 MB in size.</description></item>
+        /// <item><description>The maximum file size is 10 MB.</description></item>
         /// </list>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">

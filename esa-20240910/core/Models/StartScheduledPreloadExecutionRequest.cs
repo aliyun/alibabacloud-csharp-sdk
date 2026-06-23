@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class StartScheduledPreloadExecutionRequest : TeaModel {
         /// <summary>
-        /// <para>Prefetch plan ID.</para>
+        /// <para>The prefetch plan ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

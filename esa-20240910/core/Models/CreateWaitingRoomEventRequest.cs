@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateWaitingRoomEventRequest : TeaModel {
         /// <summary>
-        /// <para>The custom waiting room page content. This parameter is required when the waiting room type is custom. The content must use Base64 encoding.</para>
+        /// <para>The custom waiting room page content. This parameter is required when the waiting room type is set to custom. The content must use Base64 encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SGVsbG8gd29ybGQ=</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The description of the waiting room.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试等候室</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to disable session renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +46,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The waiting room switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,8 +72,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to enable JSON response. When enabled, requests with an Accept header containing &quot;application/json&quot; return JSON data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string JsonResponseEnable { get; set; }
 
         /// <summary>
-        /// <para>The language of the waiting room page. This parameter is required when the waiting room type is default. Valid values:</para>
+        /// <para>The language of the waiting room page. This parameter is required when the waiting room type is set to default. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>enus</b>: English.</description></item>
         /// <item><description><b>zhcn</b>: Simplified Chinese.</description></item>
@@ -123,8 +123,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to enable pre-queuing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,8 +180,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to enable random pre-queuing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: Enabled.</description></item>
-        /// <item><description><b>off</b>: Disabled.</description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string WaitingRoomId { get; set; }
 
         /// <summary>
-        /// <para>The waiting room type. Valid values:</para>
+        /// <para>The type of the waiting room. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>default</b>: default type.</description></item>
         /// <item><description><b>custom</b>: custom type.</description></item>

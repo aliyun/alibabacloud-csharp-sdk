@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListScheduledPreloadJobsRequest : TeaModel {
         /// <summary>
-        /// <para>End of the time range for querying job creation time, in milliseconds since the UNIX epoch.</para>
+        /// <para>The end of the time range to query based on task creation time, in millisecond timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717225277000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Page number to retrieve.</para>
+        /// <para>The page number to retrieve.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page.</para>
+        /// <para>The page size, indicating the number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>Site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Start of the time range for querying job creation time, in milliseconds since the UNIX epoch.</para>
+        /// <para>The beginning of the time range to query based on task creation time, in millisecond timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717225276000</para>

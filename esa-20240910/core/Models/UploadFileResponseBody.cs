@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file upload task. You can use this ID for task submission or query subsequently.</para>
+        /// <para>The ID of the file upload task. You can use this ID to submit or query the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>159253299357****</para>

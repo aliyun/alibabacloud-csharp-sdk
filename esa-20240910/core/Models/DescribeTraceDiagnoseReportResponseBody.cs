@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ClientIp { get; set; }
 
         /// <summary>
-        /// <para>Creation time. Format: yyyy-MM-dd HH:mm:ss, timezone: +08:00.</para>
+        /// <para>Creation time. Format: yyyy-MM-dd HH:mm:ss. Time zone: +08:00.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-03-11T01:23:21Z</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ExpireTime { get; set; }
 
         /// <summary>
-        /// <para>Remaining available diagnosis count.</para>
+        /// <para>Remaining available diagnostic attempts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -199,9 +199,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>Report generation status.</para>
-        /// <para>0: Success.
-        /// 1: Failure.
-        /// 2: Timeout.
+        /// <para>0: Successful.
+        /// 1: Failed.
+        /// 2: Timed out.
         /// 3: Running.
         /// 4: Waiting.</para>
         /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Quota { get; set; }
 
         /// <summary>
-        /// <para>The total quota available in a 30-day period. A value of 0 indicates that this quota is not configured.</para>
+        /// <para>The total quota at 30-day granularity. A value of 0 indicates that this quota is not configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Usage { get; set; }
 
         /// <summary>
-        /// <para>The quota used within the 30-day period.</para>
+        /// <para>The used quota at 30-day granularity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

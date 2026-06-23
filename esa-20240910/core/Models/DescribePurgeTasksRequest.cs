@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribePurgeTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The content to purge. Exact match is supported.</para>
+        /// <para>The query content. Exact match is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 100000.</para>
+        /// <para>The page number to return. Valid values: <b>1 to 100000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 50.</para>
+        /// <para>The number of entries per page. Default value: <b>20</b>. Maximum value: <b>50</b>. Valid values: any integer from <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789****</para>
@@ -73,14 +73,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The task status. Valid values:</para>
+        /// <para>The task execution status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Complete</b>: The task is complete.</para>
-        /// </description></item>
-        /// <item><description><para><b>Refreshing</b>: The task is in progress.</para>
-        /// </description></item>
-        /// <item><description><para><b>Failed</b>: The task failed.</para>
-        /// </description></item>
+        /// <item><description><b>Complete</b>: The task is complete.</description></item>
+        /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
+        /// <item><description><b>Failed</b>: The task failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,18 +90,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>file</b> (default): purges the cache by file.</para>
-        /// </description></item>
-        /// <item><description><para><b>cachetag</b>: purges the cache by cache tag.</para>
-        /// </description></item>
-        /// <item><description><para><b>directory</b>: purges the cache by directory.</para>
-        /// </description></item>
-        /// <item><description><para><b>ignoreParams</b>: purges the cache by URL with specified parameters ignored.</para>
-        /// </description></item>
-        /// <item><description><para><b>hostname</b>: purges the cache by hostname.</para>
-        /// </description></item>
-        /// <item><description><para><b>purgeall</b>: purges all cache.</para>
-        /// </description></item>
+        /// <item><description><b>file</b> (default): file refresh.</description></item>
+        /// <item><description><b>cachetag</b>: cache tag refresh.</description></item>
+        /// <item><description><b>directory</b>: directory refresh.</description></item>
+        /// <item><description><b>ignoreParams</b>: parameter-stripped refresh.</description></item>
+        /// <item><description><b>hostname</b>: hostname refresh.</description></item>
+        /// <item><description><b>purgeall</b>: refresh all cached content of the site.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

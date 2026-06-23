@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tasks.</para>
+        /// <para>The task list.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<DescribePurgeTasksResponseBodyTasks> Tasks { get; set; }
         public class DescribePurgeTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The purged content.</para>
+            /// <para>The refresh object.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://a.com/1.jpg?b=1">http://a.com/1.jpg?b=1</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time, in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-26T01:56:15Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error description returned when the purge task failed.</para>
+            /// <para>The error description returned when the refresh task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Internal Error</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The progress of the task, in percentage.</para>
+            /// <para>The task completion progress in percentage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100%</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Process { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>Complete</b>: The task is complete.</para>
             /// </description></item>
@@ -115,20 +115,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The type of the purge task. Valid values:</para>
+            /// <para>The refresh task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>file</b> (default): purges the cache by file.</para>
-            /// </description></item>
-            /// <item><description><para><b>cachetag</b>: purges the cache by cache tag.</para>
-            /// </description></item>
-            /// <item><description><para><b>directory</b>: purges the cache by directory.</para>
-            /// </description></item>
-            /// <item><description><para><b>ignoreParams</b>: purges the cache by URL with specified parameters ignored.</para>
-            /// </description></item>
-            /// <item><description><para><b>hostname</b>: purges the cache by hostname.</para>
-            /// </description></item>
-            /// <item><description><para><b>purgeall</b>: purges all cache.</para>
-            /// </description></item>
+            /// <item><description><b>file</b> (default): file refresh.</description></item>
+            /// <item><description><b>cachetag</b>: cache tag refresh.</description></item>
+            /// <item><description><b>directory</b>: directory refresh.</description></item>
+            /// <item><description><b>ignoreParams</b>: parameter-stripped refresh.</description></item>
+            /// <item><description><b>hostname</b>: hostname refresh.</description></item>
+            /// <item><description><b>purgeall</b>: refresh all cached content of the site.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +135,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

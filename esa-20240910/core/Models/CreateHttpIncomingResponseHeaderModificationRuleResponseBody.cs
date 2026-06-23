@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateHttpIncomingResponseHeaderModificationRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the created rule.</para>
+        /// <para>The configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>434497172875264</para>

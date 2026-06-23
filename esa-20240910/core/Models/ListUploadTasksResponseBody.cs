@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUploadTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB1A380B-09F0-41BB-A198-72F8FD6D****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The file upload tasks.</para>
+        /// <para>The list of file upload tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListUploadTasksResponseBodyTasks> Tasks { get; set; }
         public class ListUploadTasksResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
+            /// <para>The creation time in ISO 8601 format (for example, 2024-01-01T00:00:00+Z).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-07-26T01:56:15Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error message returned when the file upload task failed.</para>
+            /// <para>The error message returned when the file upload task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>invalid url</para>
@@ -47,12 +47,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The error code. Multiple error codes are separated by commas (,).</para>
+            /// <para>The error code. Multiple error codes are separated by commas. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>InvalidUrl</b>: The URL format is incorrect.</description></item>
-            /// <item><description><b>InvalidDomain</b>: The domain ownership fails to be verified.</description></item>
-            /// <item><description><b>QuotaExcess</b>: The quota limit has been reached.</description></item>
-            /// <item><description><b>OtherErrors</b>: Other errors.</description></item>
+            /// <item><description><b>InvalidUrl</b>: The URL format is invalid.</description></item>
+            /// <item><description><b>InvalidDomain</b>: The domain name ownership verification failed.</description></item>
+            /// <item><description><b>QuotaExcess</b>: The quota limit is exceeded.</description></item>
+            /// <item><description><b>OtherErrors</b>: Other errors occurred.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The task status.</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Complete</b>: The task is complete.</description></item>
             /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
@@ -80,10 +80,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>file</b>: purges the cache by file URL.</description></item>
-            /// <item><description><b>preload</b>: prefetches files.</description></item>
-            /// <item><description><b>directory</b>: purges the cache by directory.</description></item>
-            /// <item><description><b>ignoreparams</b>: purges the cache by URL with specified parameters ignored.</description></item>
+            /// <item><description><b>file</b>: URL file purge.</description></item>
+            /// <item><description><b>preload</b>: resource prefetch.</description></item>
+            /// <item><description><b>directory</b>: directory purge.</description></item>
+            /// <item><description><b>ignoreparams</b>: purge with parameters ignored.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

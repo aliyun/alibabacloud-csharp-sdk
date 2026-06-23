@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPurgeQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,20 +21,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The type of the purge task. Valid values:</para>
+        /// <para>The refresh task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>file</b> (default): File purge.</para>
-        /// </description></item>
-        /// <item><description><para><b>cachetag</b>: Cache tag purge.</para>
-        /// </description></item>
-        /// <item><description><para><b>directory</b>: Directory purge.</para>
-        /// </description></item>
-        /// <item><description><para><b>ignoreParams</b>: Purge by ignoring parameters.</para>
-        /// </description></item>
-        /// <item><description><para><b>hostname</b>: Hostname purge.</para>
-        /// </description></item>
-        /// <item><description><para><b>purgeall</b>: Purges all cached content for the site.</para>
-        /// </description></item>
+        /// <item><description><b>file</b> (default): file refresh.</description></item>
+        /// <item><description><b>cachetag</b>: cache tag refresh.</description></item>
+        /// <item><description><b>directory</b>: directory refresh.</description></item>
+        /// <item><description><b>ignoreParams</b>: ignore-parameters refresh.</description></item>
+        /// <item><description><b>hostname</b>: hostname refresh.</description></item>
+        /// <item><description><b>purgeall</b>: purge all cache under the site.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
