@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnCrossAccountAuthorizationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cross-account authorization information about the IPsec-VPN connection.</para>
+        /// <para>The list of cross-account authorization information for the IPsec-VPN connection.</para>
         /// </summary>
         [NameInMap("CrossAccountAuthorizations")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The instance ID of the CEN instance to which the IPsec-VPN connection authorization is granted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-vv8h0t3klfpaae****</para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string BindInstance { get; set; }
 
             /// <summary>
-            /// <para>The type of resource that can be associated with the IPsec-VPN connection.</para>
-            /// <para>Only <b>CEN</b> can be returned, which indicates that the IPsec-VPN connection is authorized to be associated with the transit router of a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</para>
+            /// <para>The type of resource to which the IPsec-VPN connection is authorized.</para>
+            /// <para>The value is <b>CEN</b> only, which indicates that the IPsec-VPN connection is authorized to a cross-account Cloud Enterprise Network (CEN) instance. The IPsec-VPN connection can be attached to a transit router instance under the cross-account CEN instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CEN</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string BindProduct { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account whose resources the IPsec-VPN connection is authorized to be associated with.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the IPsec-VPN connection is authorized.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1210123456123456</para>
@@ -58,8 +58,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? BindUid { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization for the IPsec-VPN connection was created.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the cross-account authorization was created for the IPsec-VPN connection.</para>
+            /// <para>The timestamp is in the UNIX format and represents the total number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the cross-account authorization was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1658201810000</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("IcmpReplyEnabled")]
         [Validation(Required=false)]

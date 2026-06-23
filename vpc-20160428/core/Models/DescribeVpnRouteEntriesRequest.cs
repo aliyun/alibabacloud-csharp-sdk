@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPN gateway is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPN gateway instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,21 +58,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the route entry. Valid values:</para>
+        /// <para>The destination type of the routing entry. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Custom</b>: custom</description></item>
-        /// <item><description><b>System</b>: system</description></item>
+        /// <item><description><b>custom</b> (default): queries the destination routes of the VPN gateway instance.</description></item>
+        /// <item><description><b>bgp</b>: queries the BGP routes of the VPN gateway instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>System</para>
+        /// <para>custom</para>
         /// </summary>
         [NameInMap("RouteEntryType")]
         [Validation(Required=false)]
         public string RouteEntryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

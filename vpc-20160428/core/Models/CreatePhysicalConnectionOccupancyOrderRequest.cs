@@ -23,10 +23,26 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable auto-renewal. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>false</b> (<b>default</b>): disable auto-renewal.</description></item>
+        /// <item><description><b>true</b>: enable auto-renewal.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>The auto-renewal duration. Unit: months. Valid values: <b>0</b> to <b>2147483647</b>. Default Value: <b>1</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("AutoRenewDuration")]
         [Validation(Required=false)]
         public int? AutoRenewDuration { get; set; }

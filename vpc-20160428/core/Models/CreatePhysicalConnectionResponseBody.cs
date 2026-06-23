@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreatePhysicalConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>The instance ID of the Express Connect circuit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp1ciz7ekd2grn1as****</para>

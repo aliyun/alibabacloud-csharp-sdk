@@ -11,14 +11,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class AllocateIpv6InternetBandwidthRequest : TeaModel {
         /// <summary>
         /// <para>The Internet bandwidth of the IPv6 address. Unit: Mbit/s.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If you set <b>InternetChargeType</b> to <b>PayByTraffic</b>, valid values are <b>1</b> to <b>1000</b>.</description></item>
-        /// <item><description>If you set <b>InternetChargeType</b> to <b>PayByBandwidth</b>, valid values are <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByTraffic</b>, the valid values are <b>1</b> to <b>1000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, the valid values are <b>1</b> to <b>2000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByOld95</b>, the valid values are <b>1</b> to <b>2000</b>.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByTraffic</b>, the valid values are <b>1</b> to <b>1000</b>.</description></item>
+        /// <item><description>If <b>InternetChargeType</b> is set to <b>PayByBandwidth</b>, the valid values are <b>1</b> to <b>2000</b>.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -26,9 +33,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,10 +46,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: sends the API request. After the request passes the check, a 2XX HTTP status code is returned and the route table is associated. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run without associating a prefix list with a route table. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <c>DryRunOperation</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the prefix list is associated with the route table.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,10 +62,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The metering method of the Internet bandwidth for the IPv6 address. Valid values:</para>
+        /// <para>The billing method for IPv6 Internet bandwidth. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer</description></item>
-        /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth</description></item>
+        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer.</description></item>
+        /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth.</description></item>
+        /// <item><description><b>PayByOld95</b>: traditional 95th percentile billing. IPv6 Internet bandwidth does not support traditional 95th percentile billing by default. To use this billing method, contact your account manager.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>PayByTraffic</b>: pay-by-data-transfer.</description></item>
+        /// <item><description><b>PayByBandwidth</b> (default): pay-by-bandwidth.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the IPv6 gateway is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the IPv6 gateway. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

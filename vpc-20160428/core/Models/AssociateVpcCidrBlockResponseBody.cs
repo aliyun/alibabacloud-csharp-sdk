@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateVpcCidrBlockResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IPv4 CIDR block to be added.</para>
+        /// <para>The secondary CIDR block added to the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/16</para>
@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The version of the IP address. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>IPV4</b>: the IPv4 address.</description></item>
-        /// <item><description><b>IPV6</b>: the IPv6 address.</description></item>
-        /// </list>
+        /// <para>The IP address type of the secondary CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPV4</para>

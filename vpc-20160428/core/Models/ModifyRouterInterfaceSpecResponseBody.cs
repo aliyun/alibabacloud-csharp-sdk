@@ -22,18 +22,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The specification of the router interface. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Mini.2</b>: 2 Mbit/s</description></item>
-        /// <item><description><b>Mini.5</b>: 5 Mbit/s</description></item>
-        /// <item><description><b>Small.1</b>: 10 Mbit/s</description></item>
-        /// <item><description><b>Small.2</b>: 20 Mbit/s</description></item>
-        /// <item><description><b>Small.5</b>: 50 Mbit/s</description></item>
-        /// <item><description><b>Middle.1</b>: 100 Mbit/s</description></item>
-        /// <item><description><b>Middle.2</b>: 200 Mbit/s</description></item>
-        /// <item><description><b>Middle.5</b>: 500 Mbit/s</description></item>
-        /// <item><description><b>Large.1</b>: 1,000 Mbit/s</description></item>
-        /// <item><description><b>Large.2</b>: 2,000 Mbit/s</description></item>
-        /// <item><description><b>Large.5</b>: 5,000 Mbit/s</description></item>
-        /// <item><description><b>Xlarge.1</b>: 10,000 Mbit/s</description></item>
+        /// <item><description><para><b>Mini.2</b>: 2 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Mini.5</b>: 5 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Small.1</b>: 10 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Small.2</b>: 20 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Small.5</b>: 50 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Middle.1</b>: 100 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Middle.2</b>: 200 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Middle.5</b>: 500 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Large.1</b>: 1000 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Large.2</b>: 2000 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Large.5</b>: 5000 Mbps</para>
+        /// </description></item>
+        /// <item><description><para><b>Xlarge.1</b>: 10000 Mbps.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

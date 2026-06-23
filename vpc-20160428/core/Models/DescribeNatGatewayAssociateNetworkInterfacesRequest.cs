@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribeNatGatewayAssociateNetworkInterfacesRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the value of <b>RequestId</b> is used.**** The <b>RequestId</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,32 +24,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The filter information. You can specify a filter key and a filter value.</para>
+        /// <para>The filter information. You can specify key-value pairs to filter the query results.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeNatGatewayAssociateNetworkInterfacesRequestFilter> Filter { get; set; }
         public class DescribeNatGatewayAssociateNetworkInterfacesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter key.</para>
+            /// <para>The key of the filter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ResourceId</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> Specify the service resource ID in the Value field.</para>
+            /// <item><description>ResourceId<remarks>
+            /// <para>Set Value to the ID of the EPS resource that you want to query.</para>
             /// </remarks>
-            /// <list type="bullet">
-            /// <item><description>NetworkInterfaceId</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> Specify the ENI ID in the Value field.</para>
+            /// </description></item>
+            /// <item><description>NetworkInterfaceId<remarks>
+            /// <para>Set Value to the ID of the elastic network interface (ENI) that you want to query.</para>
             /// </remarks>
-            /// <list type="bullet">
-            /// <item><description>ResourceOwnerId</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> Specify the UID of the account to which the service resource belongs.</para>
+            /// </description></item>
+            /// <item><description>ResourceOwnerId<remarks>
+            /// <para>Set Value to the UID of the user to whom the EPS resource belongs for resource ownership query.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ResourceId</para>
@@ -59,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Separate multiple values with commas (,).</para>
+            /// <para>The filter value. You can specify multiple values separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ep-8psre8c8936596cd****</para>
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The ID of the NAT gateway to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,10 +88,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid value:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for NetToken, you do not need to specify this parameter.</description></item>
-        /// <item><description>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// <item><description><para>If this is the first query or no subsequent query is required, you do not need to specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a subsequent query is required, set the value to the <b>NextToken</b> value returned in the previous API call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,8 +112,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Internet NAT gateway.</para>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</para>
+        /// <para>The region ID of the NAT gateway.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -144,15 +142,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The information about resource tags.</para>
+        /// <para>The list of resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeNatGatewayAssociateNetworkInterfacesRequestTag> Tag { get; set; }
         public class DescribeNatGatewayAssociateNetworkInterfacesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key You can specify at most 20 tag keys. It cannot be an empty string,</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -162,8 +160,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key of the instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

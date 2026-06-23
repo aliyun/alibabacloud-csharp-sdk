@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not set this parameter, the system uses <b>RequestId</b> as <b>ClientToken</b>. <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new destination port range of the inbound or outbound traffic.</para>
         /// <remarks>
-        /// <para> If you set <b>Protocol</b> to <b>ICMP</b>, you cannot change the port range.</para>
+        /// <para>If you set <b>Protocol</b> to <b>ICMP</b>, you cannot change the port range.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to check the request without performing the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b>: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</description></item>
+        /// <item><description><para><b>true</b>: only checks the API request. The configuration of the inbound or outbound rule is not modified. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the precheck, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: sends the request. This is the default value. If the request passes the check, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,10 +83,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new protocol that is used by the traffic to be mirrored by the inbound or outbound rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: all protocols</description></item>
-        /// <item><description><b>ICMP</b>: Internet Control Message Protocol (ICMP)</description></item>
-        /// <item><description><b>TCP</b>: TCP</description></item>
-        /// <item><description><b>UDP</b>: User Datagram Protocol (UDP)</description></item>
+        /// <item><description><para><b>ALL</b>: all protocols</para>
+        /// </description></item>
+        /// <item><description><para><b>ICMP</b>: Internet Control Message Protocol (ICMP)</para>
+        /// </description></item>
+        /// <item><description><para><b>TCP</b>: TCP</para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b>: User Datagram Protocol (UDP)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,8 +123,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new action of the inbound or outbound rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: accepts network traffic.</description></item>
-        /// <item><description><b>drop</b>: drops network traffic.</description></item>
+        /// <item><description><para><b>accept</b>: accepts network traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>drop</b>: drops network traffic.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new source port range of the inbound or outbound traffic.</para>
         /// <remarks>
-        /// <para> If you set <b>Protocol</b> to <b>ICMP</b>, you cannot change the port range.</para>
+        /// <para>If you set <b>Protocol</b> to <b>ICMP</b>, you cannot change the port range.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

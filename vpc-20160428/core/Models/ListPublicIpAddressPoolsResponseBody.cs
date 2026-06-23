@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The Alibaba Cloud account to which the IP address pool belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>121012345612****</para>
+            /// <para>121012345612*****</para>
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]

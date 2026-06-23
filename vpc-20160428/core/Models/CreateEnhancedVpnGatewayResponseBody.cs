@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateEnhancedVpnGatewayResponseBody : TeaModel {
         /// <summary>
+        /// <para>The name of the enhanced VPN gateway.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MYVPN</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EB2C156A-41F8-49CC-A756-D55AFC8BFD69</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the enhanced VPN gateway instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpn-uf68lxhgr7ftbqr3p****</para>
         /// </summary>

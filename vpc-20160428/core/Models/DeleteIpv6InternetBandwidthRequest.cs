@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteIpv6InternetBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.
+        /// -.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,10 +24,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run without actually deleting the IPsec server. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error message is returned. If the check passes, <c>DryRunOperation</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and then sends the request. If the check passes, the IPsec server is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The ID of the IPv6 address.</para>
         /// <remarks>
-        /// <para> You must specify one of <b>Ipv6AddressId</b> and <b>Ipv6InternetBandwidthId</b>.</para>
+        /// <para>You must specify either <b>Ipv6AddressId</b> or <b>Ipv6InternetBandwidthId</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6AddressId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Internet bandwidth of the IPv6 address.</para>
+        /// <para>The Internet bandwidth instance ID of the IPv6 address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6bw-uf6hcyzu65v98v3du****</para>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the IPv6 gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

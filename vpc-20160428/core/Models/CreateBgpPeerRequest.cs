@@ -11,9 +11,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateBgpPeerRequest : TeaModel {
         /// <summary>
         /// <para>The BFD hop count. Valid values: <b>1</b> to <b>255</b>.</para>
-        /// <para>This parameter is required only if you enable BFD. The parameter specifies the maximum number of network devices that a packet can traverse from the source to the destination. Set a value based on your network topology.</para>
+        /// <para>This parameter is required when BFD is enabled.
+        /// Specify the BFD hop count, which is the maximum number of devices that data passes through from the source to the destination. You can configure different hop counts based on actual physical link factors.</para>
         /// <remarks>
-        /// <para>If you use BFD in a multi-cloud environment or a fiber-optic direct connection network without any bridge device, you need to change the default BFD hop count from <b>255</b> to <b>1</b>.</para>
+        /// <para>When you use BFD in a multi-cloud environment or a fiber direct connect network without any bridging devices in between, you need to change the default BFD hop count from <b>255</b> to <b>1</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,9 +37,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client generates the value of this parameter. Make sure that the value is unique among different requests. The maximum length is 64 ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not set this parameter, the system uses the value of <b>RequestId</b> as <b>ClientToken</b>. The value of <b>RequestId</b> for each API request is different.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request is different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,10 +50,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</para>
+        /// <para>Specifies whether to enable Bidirectional Forwarding Detection (BFD). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables BFD.</description></item>
-        /// <item><description><b>false</b>: disables BFD.</description></item>
+        /// <item><description><para><b>true</b>: enables BFD.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables BFD.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,8 +68,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The IP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPv4</b>: This is the default value.</description></item>
-        /// <item><description><b>IPv6</b>: IPv6 is supported only if the VBR for which you want to create the BGP group has IPv6 enabled.</description></item>
+        /// <item><description><b>IPv4</b> (default): IPv4.</description></item>
+        /// <item><description><b>IPv6</b>: IPv6. IPv6 is supported only when the VBR on which the BGP group is created has IPv6 enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,8 +98,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PeerIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the BGP group belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the BGP group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> API to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qos-2giu0a6vd5x0mv4700</para>
+        /// <para>qos-2giu0a6vd5x0mv****</para>
         /// </summary>
         [NameInMap("QosId")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qos-queue-9nyx2u7n71s2rcy4n5</para>
+        /// <para>qos-queue-9nyx2u7n71s2rc****</para>
         /// </summary>
         [NameInMap("QueueId")]
         [Validation(Required=false)]

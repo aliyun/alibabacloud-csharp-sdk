@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyTunnelAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the customer gateway associated with the customer gateway.</para>
+        /// <para>The instance ID of the customer gateway associated with the tunnel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cgw-p0wx48ayhrygitm80****</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CustomerGatewayId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether DPD is enabled. Valid values:</para>
+        /// <para>Indicates whether the Dead Peer Detection (DPD) feature is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b>: disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether NAT traversal is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b>: disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableNatTraversal { get; set; }
 
         /// <summary>
-        /// <para>The tunnel IP address.</para>
+        /// <para>The IP address of the tunnel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.XX.XX.87</para>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The peer CA certificate when a VPN gateway that uses an SM certificate is used to create the IPsec connection.</para>
+        /// <para>The CA certificate of the peer when an IPsec-VPN connection is created with a Chinese SM VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</para>
@@ -78,10 +82,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tunnel role. Valid values:</para>
+        /// <para>The role of the tunnel.</para>
         /// <list type="bullet">
-        /// <item><description><b>master</b></description></item>
-        /// <item><description><b>slave</b></description></item>
+        /// <item><description><b>master</b>: the active tunnel.</description></item>
+        /// <item><description><b>slave</b>: the standby tunnel.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,11 +96,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The tunnel status. Valid values:</para>
+        /// <para>The status of the tunnel.</para>
         /// <list type="bullet">
-        /// <item><description><b>active</b></description></item>
-        /// <item><description><b>updating</b></description></item>
-        /// <item><description><b>deleting</b></description></item>
+        /// <item><description><b>active</b>: available.</description></item>
+        /// <item><description><b>updating</b>: being updated.</description></item>
+        /// <item><description><b>deleting</b>: being deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,17 +111,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The BGP configuration.</para>
+        /// <para>The BGP configuration of the tunnel.</para>
         /// </summary>
         [NameInMap("TunnelBgpConfig")]
         [Validation(Required=false)]
         public ModifyTunnelAttributeResponseBodyTunnelBgpConfig TunnelBgpConfig { get; set; }
         public class ModifyTunnelAttributeResponseBodyTunnelBgpConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the BGP feature is enabled. Valid values:</para>
+            /// <para>The enabling status of BGP.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public bool? EnableBgp { get; set; }
 
             /// <summary>
-            /// <para>The local ASN.</para>
+            /// <para>The autonomous system number (ASN) of the local end of the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65530</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? LocalAsn { get; set; }
 
             /// <summary>
-            /// <para>The BGP IP address of the tunnel.</para>
+            /// <para>The BGP IP address of the local end of the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169.254.11.1</para>
@@ -148,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LocalBgpIp { get; set; }
 
             /// <summary>
-            /// <para>The peer ASN.</para>
+            /// <para>The autonomous system number (ASN) of the peer end of the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>65531</para>
@@ -158,7 +164,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? PeerAsn { get; set; }
 
             /// <summary>
-            /// <para>The BGP IP address of the peer.</para>
+            /// <para>The BGP IP address of the peer end of the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169.254.11.2</para>
@@ -168,7 +174,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PeerBgpIp { get; set; }
 
             /// <summary>
-            /// <para>The CIDR block to which the tunnel BGP IP address belongs.</para>
+            /// <para>The CIDR block of the tunnel BGP IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169.254.11.0/30</para>
@@ -190,7 +196,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TunnelId { get; set; }
 
         /// <summary>
-        /// <para>The Phase 1 configuration.</para>
+        /// <para>The IKE phase (Phase 1) configuration of the tunnel.</para>
         /// </summary>
         [NameInMap("TunnelIkeConfig")]
         [Validation(Required=false)]
@@ -229,8 +235,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The IKE negotiation mode.</para>
             /// <list type="bullet">
-            /// <item><description><b>main:</b> This mode offers higher security during negotiations.</description></item>
-            /// <item><description><b>aggressive</b>: This mode is faster and has a higher success rate.</description></item>
+            /// <item><description><b>main</b>: main mode. This mode offers high security during negotiations.</description></item>
+            /// <item><description><b>aggressive</b>: aggressive mode. This mode supports fast negotiations and a higher success rate.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -251,12 +257,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkePfs { get; set; }
 
             /// <summary>
-            /// <para>The IKE version.</para>
+            /// <para>The IKE protocol version.</para>
             /// <list type="bullet">
             /// <item><description><b>ikev1</b></description></item>
             /// <item><description><b>ikev2</b></description></item>
             /// </list>
-            /// <para>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for scenarios with multiple CIDR blocks.</para>
+            /// <para>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and provides better support for multi-CIDR-block scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ikev2</para>
@@ -266,7 +272,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IkeVersion { get; set; }
 
             /// <summary>
-            /// <para>The tunnel identifier. The identifier supports FQDNs and IP addresses. The default value is the tunnel IP address.</para>
+            /// <para>The identifier of the local end of the tunnel. It supports FQDN and IP formats. Default value: the IP address of the current tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.XX.XX.87</para>
@@ -286,7 +292,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Psk { get; set; }
 
             /// <summary>
-            /// <para>The peer identifier. The identifier supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.</para>
+            /// <para>The identifier of the peer end of the tunnel. It supports FQDN and IP formats. Default value: the IP address of the customer gateway instance associated with the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.XX.XX.207</para>
@@ -298,7 +304,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The configurations of IPsec Phase 2.</para>
+        /// <para>The IPsec phase (Phase 2) configuration of the tunnel.</para>
         /// </summary>
         [NameInMap("TunnelIpsecConfig")]
         [Validation(Required=false)]
@@ -347,7 +353,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The tunnel zone.</para>
+        /// <para>The zone of the tunnel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>

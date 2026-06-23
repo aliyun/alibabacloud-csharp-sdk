@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpnRouteEntryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The timestamp when the destination-based route was created. Unit: milliseconds.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp when the destination route was created. Unit: milliseconds.</para>
+        /// <para>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492747187000</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the destination-based route.</para>
+        /// <para>The description of the destination route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mytest</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The next hop of the destination-based route.</para>
+        /// <para>The next hop of the destination route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vco-bp15oes1py4i66rmd****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHop { get; set; }
 
         /// <summary>
-        /// <para>The tunneling protocol. The value is set to <b>Ipsec</b>, which indicates the IPsec tunneling protocol.</para>
+        /// <para>The tunneling protocol. Set the value to <b>Ipsec</b> (IPsec tunneling protocol).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ipsec</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the destination-based route.</para>
+        /// <para>The destination CIDR block of the destination route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.0/24</para>
@@ -71,10 +71,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteDest { get; set; }
 
         /// <summary>
-        /// <para>The status of the destination-based route.</para>
+        /// <para>The publish status of the destination route.</para>
         /// <list type="bullet">
-        /// <item><description><b>published</b>: advertised to the VPC route table.</description></item>
-        /// <item><description><b>normal</b>: not advertised to the VPC route table.</description></item>
+        /// <item><description><para><b>published</b>: The destination route has been published to the route table of the VPC.</para>
+        /// </description></item>
+        /// <item><description><para><b>normal</b>: The destination route has not been published to the route table of the VPC.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string State { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1a3kqjiiq9legfx****</para>
@@ -95,10 +97,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The weight of the destination-based route. Valid values:</para>
+        /// <para>The weight of the destination route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100</b>: a high priority</description></item>
-        /// <item><description><b>0</b>: a low priority</description></item>
+        /// <item><description><b>100</b>: The destination route has a high priority.</description></item>
+        /// <item><description><b>0</b>: The destination route has a low priority.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

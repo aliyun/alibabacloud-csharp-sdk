@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh-CN</b>: Chinese</description></item>
-        /// <item><description><b>en-US</b> (default): English</description></item>
+        /// <item><description><para><b>zh-CN</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en-US</b> (default): English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,8 +50,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the access point.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the access point is located.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

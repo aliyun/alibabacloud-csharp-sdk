@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyTunnelAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the value of <b>RequestId</b> as the <b>client token</b>. The value of <b>RequestId</b> is different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the IPsec connection is established.</para>
+        /// <para>The region ID of the IPsec-VPN connection.</para>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
@@ -62,14 +62,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string TunnelId { get; set; }
 
         /// <summary>
-        /// <para>The tunnel configurations.</para>
+        /// <para>The tunnel configuration to modify.</para>
         /// </summary>
         [NameInMap("TunnelOptionsSpecification")]
         [Validation(Required=false)]
         public ModifyTunnelAttributeRequestTunnelOptionsSpecification TunnelOptionsSpecification { get; set; }
         public class ModifyTunnelAttributeRequestTunnelOptionsSpecification : TeaModel {
             /// <summary>
-            /// <para>The ID of the customer gateway associated with the tunnel.</para>
+            /// <para>The instance ID of the customer gateway associated with the tunnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cgw-1nmwbpgrp7ssqm1yn****</para>
@@ -79,10 +79,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CustomerGatewayId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable dead peer detection (DPD). Valid values:</para>
+            /// <para>Specifies whether to enable the Dead Peer Detection (DPD) feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b> The IPsec initiator sends DPD packets to check the IPsec peer is alive. If no response is received from the peer within a specified period of time, the IPsec peer is considered disconnected. Then, the ISAKMP SA, IPsec SA, and IPsec tunnel are deleted.</description></item>
-            /// <item><description><b>false</b>: DPD is disabled. The IPsec initiator does not send DPD packets.</description></item>
+            /// <item><description><para><b>true</b>: Enabled. The initiator of the IPsec-VPN connection sends DPD packets to check whether the peer is alive. If no correct response is received within the specified period of time, the connection fails. The ISAKMP SA and the corresponding IPsec SA are deleted, and the tunnel is also deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled. The initiator of the IPsec-VPN connection does not send DPD packets.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,8 +97,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>Specifies whether to enable NAT traversal. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec-VPN tunnel.</description></item>
-            /// <item><description><b>false</b>: disables NAT traversal.</description></item>
+            /// <item><description><para><b>true</b>: Enabled. After NAT traversal is enabled, the verification of the UDP port number is removed during IKE negotiations, and the NAT gateway device in the VPN tunnel can be discovered.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public bool? EnableNatTraversal { get; set; }
 
             /// <summary>
-            /// <para>The peer certificate authority (CA) certificate when you want to attach the IPsec connection to a virtual private network (VPN) gateway that uses a ShangMi (SM) certificate.</para>
+            /// <para>The CA certificate of the peer when you use an IPsec-VPN connection with a Chinese SM VPN gateway.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</para>
@@ -117,15 +121,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RemoteCaCertificate { get; set; }
 
             /// <summary>
-            /// <para>The Border Gateway Protocol (BGP) configurations of the tunnel.</para>
-            /// <para>If the BGP feature is not enabled for the tunnel, you must call the <a href="https://help.aliyun.com/document_detail/120381.html">ModifyVpnConnectionAttribute</a> operation to enable the feature and configure BGP.</para>
+            /// <para>The BGP configuration of the tunnel to modify.</para>
+            /// <para>If BGP was not previously enabled for the tunnel, call the <a href="https://help.aliyun.com/document_detail/120381.html">ModifyVpnConnectionAttribute</a> operation to enable BGP for the tunnel and add the BGP configuration.</para>
             /// </summary>
             [NameInMap("TunnelBgpConfig")]
             [Validation(Required=false)]
             public ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig TunnelBgpConfig { get; set; }
             public class ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig : TeaModel {
                 /// <summary>
-                /// <para>The local autonomous system number (ASN). Valid values: <b>1</b> to <b>4294967295</b>.</para>
+                /// <para>The autonomous system number (ASN) of the local end of the tunnel. Valid values: <b>1</b> to <b>4294967295</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65530</para>
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? LocalAsn { get; set; }
 
                 /// <summary>
-                /// <para>The BGP IP address of the tunnel. The address needs to be an IP address within the <b>TunnelCidr</b>.</para>
+                /// <para>The BGP IP address of the local end of the tunnel. The IP address must fall within the <b>TunnelCidr</b> CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>169.254.11.1</para>
@@ -145,10 +149,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string LocalBgpIp { get; set; }
 
                 /// <summary>
-                /// <para>The CIDR block of the tunnel.</para>
-                /// <para>The CIDR block must fall within 169.254.0.0/16 and the mask of the CIDR block must be 30 bits in length. The CIDR block cannot be 169.254.0.0/30, 169.254.1.0/30, 169.254.2.0/30, 169.254.3.0/30, 169.254.4.0/30, 169.254.5.0/30, 169.254.6.0/30, or 169.254.169.252/30.</para>
+                /// <para>The CIDR block of the BGP IP address on the local end of the tunnel.</para>
+                /// <para>The CIDR block must be a CIDR block with a mask length of 30 within 169.254.0.0/16 and cannot be 169.254.0.0/30, 169.254.1.0/30, 169.254.2.0/30, 169.254.3.0/30, 169.254.4.0/30, 169.254.5.0/30, 169.254.6.0/30, or 169.254.169.252/30.</para>
                 /// <remarks>
-                /// <para> The CIDR block of the IPsec tunnel for each IPsec-VPN connection on a VPN gateway must be unique.</para>
+                /// <para>The IPsec tunnel CIDR block of each IPsec-VPN connection under a VPN gateway instance must be unique.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -161,21 +165,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The configurations of IKE Phase 1.</para>
+            /// <para>The IKE phase (Phase 1) configuration of the tunnel to modify.</para>
             /// </summary>
             [NameInMap("TunnelIkeConfig")]
             [Validation(Required=false)]
             public ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig TunnelIkeConfig { get; set; }
             public class ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig : TeaModel {
                 /// <summary>
-                /// <para>The authentication algorithm that is used in IKE Phase 1 negotiations.</para>
+                /// <para>The authentication algorithm used in Phase 1 negotiations.</para>
                 /// <para>&lt;props=&quot;china&quot;&gt;</para>
                 /// <list type="bullet">
-                /// <item><description>If an IPsec-VPN gateway is associated with a standard VPN gateway, the valid values are <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>.</description></item>
-                /// <item><description>If the IPsec-VPN gateway is associated with an SSL-VPN gateway, the valid value is <b>sm3</b>.</description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a standard VPN gateway, valid values are <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>.</description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a Chinese SM VPN gateway, the value is <b>sm3</b>.</description></item>
                 /// </list>
                 /// <para>&lt;props=&quot;intl&quot;&gt;</para>
                 /// <para>Valid values: <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>.</para>
+                /// <para>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sha1</para>
@@ -185,14 +190,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeAuthAlg { get; set; }
 
                 /// <summary>
-                /// <para>The encryption algorithm that is used in IKE Phase 1 negotiations.</para>
+                /// <para>The encryption algorithm used in Phase 1 negotiations.</para>
                 /// <para>&lt;props=&quot;china&quot;&gt;</para>
                 /// <list type="bullet">
-                /// <item><description>If an IPsec-VPN gateway is associated with a standard VPN gateway, the valid values are <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.</description></item>
-                /// <item><description>If the IPsec-VPN gateway is associated with an SSL-VPN gateway, set the value to <b>sm4</b>.</description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a standard VPN gateway, valid values are <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.  </description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a Chinese SM VPN gateway, the value is <b>sm4</b>.</description></item>
                 /// </list>
                 /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-                /// <para>Valid values: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.</para>
+                /// <para>Valid values: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.  </para>
+                /// <para>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes</para>
@@ -202,7 +208,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The SA lifetime as a result of Phase 1 negotiations. Unit: seconds Valid values: <b>0 to 86400</b>.</para>
+                /// <para>The lifetime of the SA negotiated in Phase 1. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -212,10 +218,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? IkeLifetime { get; set; }
 
                 /// <summary>
-                /// <para>The negotiation mode of IKE. Valid values:</para>
+                /// <para>The negotiation mode of the IKE version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>main:</b> This mode offers higher security during negotiations.</description></item>
-                /// <item><description><b>aggressive</b>: This mode is faster and has a higher success rate.</description></item>
+                /// <item><description><b>main</b>: main mode. This mode offers high security during negotiations.</description></item>
+                /// <item><description><b>aggressive</b>: aggressive mode. This mode supports fast negotiations and a higher success rate.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -226,7 +232,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeMode { get; set; }
 
                 /// <summary>
-                /// <para>The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
+                /// <para>The Diffie-Hellman key exchange algorithm used in Phase 1 negotiations. Valid values: <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group2</para>
@@ -246,7 +252,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IkeVersion { get; set; }
 
                 /// <summary>
-                /// <para>The tunnel identifier. The identifier can be up to 100 characters in length and cannot contain spaces. It supports fully qualified domain names (FQDNs) and IP addresses. The default value is the IP address of the tunnel.</para>
+                /// <para>The identifier of the local end of the tunnel. The identifier can be up to 100 characters in length and cannot contain spaces. It supports FQDN and IP formats. Default value: the IP address of the tunnel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.XX.XX.87</para>
@@ -256,14 +262,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string LocalId { get; set; }
 
                 /// <summary>
-                /// <para>The pre-shared key that is used to verify identities between the tunnel and peer.</para>
+                /// <para>The pre-shared key used for identity authentication between the tunnel and the peer.</para>
                 /// <list type="bullet">
-                /// <item><description>The key must be 1 to 100 characters in length, and can contain digits, and letters. It cannot contain spaces. <c>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</c></description></item>
-                /// <item><description>If you do not specify a pre-shared key, the system randomly generates a 16-bit string as the key. You can call the <a href="https://help.aliyun.com/document_detail/120374.html">DescribeVpnConnection</a> operation to query the pre-shared key that is automatically generated by the system.</description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> The pre-shared key that is configured for the tunnel and the tunnel peer must be the same. Otherwise, the system cannot establish the tunnel.</para>
+                /// <item><description>The key must be 1 to 100 characters in length and can contain digits, uppercase letters, lowercase letters, and the following characters. It cannot contain spaces. <c>~!`@#$%^&amp;*()_-+={}[]|;:\\&quot;,.&lt;&gt;/?</c></description></item>
+                /// <item><description>If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the <a href="https://help.aliyun.com/document_detail/120374.html">DescribeVpnConnection</a> operation to query the pre-shared key that is automatically generated by the system.<remarks>
+                /// <para>The pre-shared keys configured on the tunnel and the peer must be the same. Otherwise, the tunnel cannot be established.</para>
                 /// </remarks>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456****</para>
@@ -273,7 +279,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string Psk { get; set; }
 
                 /// <summary>
-                /// <para>The peer identifier. The identifier can be up to 100 characters in length, and cannot contain spaces. It supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.</para>
+                /// <para>The identifier of the peer end of the tunnel. The identifier can be up to 100 characters in length and cannot contain spaces. It supports FQDN and IP formats. Default value: the IP address of the customer gateway instance associated with the tunnel.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>47.XX.XX.207</para>
@@ -285,21 +291,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The configurations of IPsec Phase 2.</para>
+            /// <para>The IPsec phase (Phase 2) configuration of the tunnel to modify.</para>
             /// </summary>
             [NameInMap("TunnelIpsecConfig")]
             [Validation(Required=false)]
             public ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig TunnelIpsecConfig { get; set; }
             public class ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig : TeaModel {
                 /// <summary>
-                /// <para>The authentication algorithm that is used in IPsec Phase 2 negotiations.</para>
+                /// <para>The authentication algorithm used in Phase 2 negotiations.</para>
                 /// <para>&lt;props=&quot;china&quot;&gt;</para>
                 /// <list type="bullet">
-                /// <item><description>If an IPsec-VPN gateway is associated with a standard VPN gateway, the valid values are <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>.</description></item>
-                /// <item><description>If the IPsec-VPN gateway is associated with an SSL-VPN gateway, set the value to <b>sm3</b>.</description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a standard VPN gateway, valid values are <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>.</description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a Chinese SM VPN gateway, the value is <b>sm3</b>.</description></item>
                 /// </list>
                 /// <para>&lt;props=&quot;intl&quot;&gt;</para>
                 /// <para>Valid values: <b>md5</b>, <b>sha1</b>, <b>sha256</b>, <b>sha384</b>, and <b>sha512</b>.</para>
+                /// <para>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sha1</para>
@@ -309,14 +316,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecAuthAlg { get; set; }
 
                 /// <summary>
-                /// <para>The encryption algorithm that is used in IPsec Phase 2 negotiations.</para>
+                /// <para>The encryption algorithm used in Phase 2 negotiations.</para>
                 /// <para>&lt;props=&quot;china&quot;&gt;</para>
                 /// <list type="bullet">
-                /// <item><description>If an IPsec-VPN gateway is associated with a standard VPN gateway, the valid values are <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.</description></item>
-                /// <item><description>If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to <b>sm4</b>.</description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a standard VPN gateway, valid values are <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.  </description></item>
+                /// <item><description>If the IPsec-VPN connection is associated with a Chinese SM VPN gateway, the value is <b>sm4</b>.</description></item>
                 /// </list>
                 /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-                /// <para>Valid values: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.</para>
+                /// <para>Valid values: <b>aes</b>, <b>aes192</b>, <b>aes256</b>, <b>des</b>, and <b>3des</b>.  </para>
+                /// <para>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aes</para>
@@ -326,7 +334,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public string IpsecEncAlg { get; set; }
 
                 /// <summary>
-                /// <para>The SA lifetime as a result of Phase 2 negotiations. Unit: seconds Valid values: <b>0 to 86400</b>.</para>
+                /// <para>The lifetime of the SA negotiated in Phase 2. Unit: seconds. Valid values: <b>0</b> to <b>86400</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86400</para>
@@ -336,7 +344,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 public long? IpsecLifetime { get; set; }
 
                 /// <summary>
-                /// <para>The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: <b>disabled</b>, <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
+                /// <para>The Diffie-Hellman key exchange algorithm used in Phase 2 negotiations. Valid values: <b>disabled</b>, <b>group1</b>, <b>group2</b>, <b>group5</b>, and <b>group14</b>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>group2</para>
@@ -350,7 +358,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the IPsec connection.</para>
+        /// <para>The ID of the IPsec-VPN connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

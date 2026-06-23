@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECC</para>
+        /// <para>高速上云服务</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The city where the data center is located.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hangzhou</para>
+        /// <para>杭州</para>
         /// </summary>
         [NameInMap("PeerCity")]
         [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>\*\<em>city\</em>\<em>district/county\</em>\<em>road\</em>\<em>number\</em>\<em>property or building name\</em>\<em>building\</em>\<em>floor\</em>\<em>room number\</em>\<em>server rack number\</em>\<em>server rack name\</em>\<em>device\</em>\*port</para>
+        /// <para><b>市</b>区/县<b>路</b>号<b>物业或楼宇名称</b>座<b>楼层</b>房间号<b>机柜号</b>机柜名称<b>设备</b>端口</para>
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]

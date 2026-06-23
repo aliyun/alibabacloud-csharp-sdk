@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouteEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of custom route entries that failed to be added.</para>
+        /// <para>The number of custom routes that failed to be added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? FailedCount { get; set; }
 
         /// <summary>
-        /// <para>The details about the custom route entry that failed to be added.</para>
+        /// <para>The details about the custom routes that failed to be added.</para>
         /// </summary>
         [NameInMap("FailedRouteEntries")]
         [Validation(Required=false)]
         public List<CreateRouteEntriesResponseBodyFailedRouteEntries> FailedRouteEntries { get; set; }
         public class CreateRouteEntriesResponseBodyFailedRouteEntries : TeaModel {
             /// <summary>
-            /// <para>The destination CIDR block of the custom route entry that failed to be added.</para>
+            /// <para>The destination CIDR block of the custom route that failed to be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/24</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedMessage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the next hop of the custom route entry that failed to be added.</para>
+            /// <para>The ID of the next hop of the custom route that failed to be added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-j6c2fp57q8rr4jlu****</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the ID of the custom route entry that was successfully added.</para>
+        /// <para>The information about the IDs of the custom routes that are successfully added.</para>
         /// </summary>
         [NameInMap("RouteEntryIds")]
         [Validation(Required=false)]
         public List<string> RouteEntryIds { get; set; }
 
         /// <summary>
-        /// <para>The number of custom route entries that were successfully added.</para>
+        /// <para>The number of custom routes that are successfully added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

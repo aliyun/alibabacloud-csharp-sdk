@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateFlowLogRequest : TeaModel {
         /// <summary>
-        /// <para>The sampling interval of the flow log. Unit: seconds. Valid values: <b>1</b>, <b>5</b>, and <b>10</b> (default).</para>
+        /// <para>The sampling interval of the flow log. Unit: minutes. Valid values: <b>1</b>, <b>5</b>, and <b>10</b> (default).</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -41,15 +41,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string FlowLogName { get; set; }
 
+        /// <summary>
+        /// <para>The IP version of the traffic captured by the flow log.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>IPv4</para>
+        /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore that stores the captured traffic data.</para>
+        /// <para>The name of the Logstore that stores the captured traffic.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The Logstore name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// 
@@ -69,10 +75,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the project that stores the captured traffic data.</para>
+        /// <para>The name of the project that manages the captured traffic.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
+        /// <item><description>The project name can contain only lowercase letters, digits, and hyphens (-).</description></item>
+        /// <item><description>The name must start and end with a lowercase letter or digit.</description></item>
         /// <item><description>The name must be 3 to 63 characters in length.</description></item>
         /// </list>
         /// 
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where you want to create the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource whose traffic you want to capture.</para>
+        /// <para>The ID of the resource from which to capture traffic.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,11 +130,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource whose traffic you want to capture. Valid values:</para>
+        /// <para>The type of resource from which to capture traffic. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NetworkInterface</b>: elastic network interface (ENI)</description></item>
-        /// <item><description><b>VSwitch</b>: all ENIs in a vSwitch</description></item>
-        /// <item><description><b>VPC</b>: all ENIs in a virtual private cloud (VPC)</description></item>
+        /// <item><description><para><b>NetworkInterface</b>: network interface controller (NIC).</para>
+        /// </description></item>
+        /// <item><description><para><b>VSwitch</b>: all network interface controllers (NICs) in a vSwitch.</para>
+        /// </description></item>
+        /// <item><description><para><b>VPC</b>: all network interface controllers (NICs) in a virtual private cloud (VPC).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -140,15 +149,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag of the resource.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateFlowLogRequestTag> Tag { get; set; }
         public class CreateFlowLogRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be at most 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -158,8 +167,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -171,10 +180,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The scope of the traffic that you want to capture. Valid values:</para>
+        /// <para>The traffic path to capture. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b>: all traffic.</description></item>
-        /// <item><description><b>internetGateway</b>: Internet traffic.</description></item>
+        /// <item><description><b>all</b>: captures all traffic.</description></item>
+        /// <item><description><b>internetGateway</b>: captures Internet traffic.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("TrafficPath")]
@@ -182,11 +191,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> TrafficPath { get; set; }
 
         /// <summary>
-        /// <para>The type of traffic that you want to capture. Valid values:</para>
+        /// <para>The traffic type to collect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: all traffic</description></item>
-        /// <item><description><b>Allow</b>: traffic that is allowed</description></item>
-        /// <item><description><b>Drop</b>: traffic that is rejected</description></item>
+        /// <item><description><para><b>All</b>: all traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>Allow</b>: traffic allowed by access control.</para>
+        /// </description></item>
+        /// <item><description><para><b>Drop</b>: traffic denied by access control.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

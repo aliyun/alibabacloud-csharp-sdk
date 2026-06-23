@@ -20,7 +20,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>[   {     &quot;CircuitCode &quot;: &quot;longtel001&quot;,     &quot; LocalGatewayIp &quot;: &quot;192.168.XX.XX&quot;,     &quot;PeerGatewayIp&quot; : &quot;192.168.XX.XX&quot;,     &quot; PeeringSubnetMask &quot;: &quot;255.255.255.252&quot;,     &quot; PhysicalConnectionId &quot;: &quot;pc-kojok19****&quot;   } ]</para>
+        /// <para>[
+        ///   {
+        ///     &quot;VlanId&quot;: &quot;5&quot;,
+        ///     &quot;CircuitCode&quot;: &quot;longtel001&quot;,
+        ///     &quot;LocalGatewayIp&quot;: &quot;192.168.XX.XX&quot;,
+        ///     &quot;PeerGatewayIp&quot;: &quot;192.168.XX.XX&quot;,
+        ///     &quot;PeeringSubnetMask&quot;: &quot;255.255.255.252&quot;,
+        ///     &quot;LocalIpv6GatewayIp&quot;: &quot;fd00:XXXX:1030:3f41::1&quot;,
+        ///     &quot;PeerIpv6GatewayIp&quot;: &quot;fd00:XXXX:1030:3f41::2&quot;,
+        ///     &quot;PeeringIpv6SubnetMask&quot;: &quot;fd00:0:1030:3f41::/126&quot;,
+        ///     &quot;ipv6Enable&quot;: true,
+        ///     &quot;PhysicalConnectionId&quot;: &quot;pc-kojok19****&quot;
+        ///   }
+        /// ]</para>
         /// </summary>
         [NameInMap("AssociatedPhysicalConnections")]
         [Validation(Required=false)]
@@ -140,6 +153,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public long? MinTxInterval { get; set; }
 
+        /// <summary>
+        /// <para>The MTU value supported by the VBR. Valid values: 1500 and 8500.</para>
+        /// <para>This value can be set only when the VBR is attached to an ECR. The value also affects all other VBRs and VPCs in the same ECR.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1500</para>
+        /// </summary>
         [NameInMap("Mtu")]
         [Validation(Required=false)]
         public int? Mtu { get; set; }

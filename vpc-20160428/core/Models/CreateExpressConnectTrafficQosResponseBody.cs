@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateExpressConnectTrafficQosResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The QoS policy ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qos-2giu0a6vd5x0mv4700</para>
+        /// <para>qos-2giu0a6vd5x0mv****</para>
         /// </summary>
         [NameInMap("QosId")]
         [Validation(Required=false)]
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC668356-BCB4-42FD-9BC3-FA2B2E04B634</para>

@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class ModifyVpnPbrRouteEntryAttributeRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,11 +24,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The new priority of the policy-based route. Valid values: <b>1</b> to <b>100</b>.</para>
+        /// <para>The new policy priority of the policy-based route. Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>A smaller value indicates a higher priority.</para>
-        /// <para>If you do not specify this parameter, the priority of the policy-based route is not modified.</para>
+        /// <para>If you do not specify this parameter, the policy priority of the policy-based route is not modified.</para>
         /// <remarks>
-        /// <para> You must specify at least one of <b>NewPriority</b> and <b>NewWeight</b>.</para>
+        /// <para>You must specify at least one of the <b>NewPriority</b> and <b>NewWeight</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,12 +41,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new weight of the policy-based route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</description></item>
-        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</description></item>
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</description></item>
         /// </list>
         /// <para>If you do not specify this parameter, the weight of the policy-based route is not modified.</para>
         /// <remarks>
-        /// <para> You must specify at least one of <b>NewPriority</b> and <b>NewWeight</b>.</para>
+        /// <para>You must specify at least one of the <b>NewPriority</b> and <b>NewWeight</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The original priority of the policy-based route. Valid values: <b>1</b> to <b>100</b>.</para>
+        /// <para>The original policy priority of the policy-based route. Valid values: <b>1</b> to <b>100</b>.</para>
         /// <para>A smaller value indicates a higher priority.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -88,8 +88,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPN gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPN gateway instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteSource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -143,8 +143,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The original weight of the policy-based route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</description></item>
-        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</description></item>
+        /// <item><description><b>100</b>: The IPsec-VPN connection associated with the policy-based route serves as the active link.</description></item>
+        /// <item><description><b>0</b>: The IPsec-VPN connection associated with the policy-based route serves as the standby link.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

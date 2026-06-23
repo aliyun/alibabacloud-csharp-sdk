@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the IPsec-VPN connection is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The CIDR block on the Alibaba Cloud side.</para>
+        /// <para>Multiple CIDR blocks are separated by commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPsec-VPN connection.</para>
+        /// <para>The request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

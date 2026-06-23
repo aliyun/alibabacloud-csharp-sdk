@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The value must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the router interface.</para>
+        /// <para>路由器接口</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

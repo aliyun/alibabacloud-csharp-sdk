@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The ID of the VBR.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vrt-bp1lhl0taikrteen8****</para>
+        /// <para>vbr-bp1ctxy813985gkuk****</para>
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]

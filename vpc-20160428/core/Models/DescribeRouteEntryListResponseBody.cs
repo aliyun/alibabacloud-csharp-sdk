@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteEntryListResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>Indicates whether a next query token (Token) exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> has a returned value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

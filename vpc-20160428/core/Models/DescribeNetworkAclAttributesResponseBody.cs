@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The ID of the Alibaba Cloud account to which the network ACL belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>253460731706911258</para>
+            /// <para>2546073170691****</para>
             /// </summary>
             [NameInMap("OwnerId")]
             [Validation(Required=false)]

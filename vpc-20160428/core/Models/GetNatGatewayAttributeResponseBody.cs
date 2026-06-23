@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetNatGatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Access mode for reverse access to VPC NAT gateway.</para>
+        /// <para>The access mode of the VPC NAT Gateway.</para>
         /// </summary>
         [NameInMap("AccessMode")]
         [Validation(Required=false)]
         public GetNatGatewayAttributeResponseBodyAccessMode AccessMode { get; set; }
         public class GetNatGatewayAttributeResponseBodyAccessMode : TeaModel {
             /// <summary>
-            /// <para>Access mode values:</para>
+            /// <para>The access mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>route</b>: Route mode.</description></item>
-            /// <item><description><b>tunnel</b>: Tunnel mode.</description></item>
+            /// <item><description><para><b>route</b>: route mode.</para>
+            /// </description></item>
+            /// <item><description><para><b>tunnel</b>: tunnel mode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,9 +33,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ModeValue { get; set; }
 
             /// <summary>
-            /// <para>Tunnel mode type:</para>
+            /// <para>The tunnel type. This parameter is returned only when <c>ModeValue</c> is set to <c>tunnel</c>. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description><b>geneve</b>: Geneve type.</description></item>
+            /// <item><description><b>geneve</b>: Geneve.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,19 +52,21 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string AvailabilityMode { get; set; }
 
         /// <summary>
-        /// <para>The billing information.</para>
+        /// <para>The billing configuration.</para>
         /// </summary>
         [NameInMap("BillingConfig")]
         [Validation(Required=false)]
         public GetNatGatewayAttributeResponseBodyBillingConfig BillingConfig { get; set; }
         public class GetNatGatewayAttributeResponseBodyBillingConfig : TeaModel {
             /// <summary>
-            /// <para>Indicates whether automatic payment is enabled. If the <b>InstanceChargeType</b> parameter is set to <b>PrePaid</b>, one of the following values is returned:</para>
+            /// <para>Indicates whether auto-payment is enabled. This parameter is returned only if <b>InstanceChargeType</b> is set to <b>PrePaid</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b>: disabled. After an order is generated, you must go to the Order Center to complete the payment.</description></item>
-            /// <item><description><b>true</b>: enabled. Payments are automatically completed.</description></item>
+            /// <item><description><para><b>false</b>: Auto-payment is disabled. After an order is generated, the payment must be completed in the Orders console.</para>
+            /// </description></item>
+            /// <item><description><para><b>true</b>: Auto-payment is enabled. Payments are automatically completed.</para>
+            /// </description></item>
             /// </list>
-            /// <para>The return value of this parameter is empty if <b>InstanceChargeType</b> is set to <b>PostPaid</b>.</para>
+            /// <para>If <b>InstanceChargeType</b> is set to <b>PostPaid</b>, an empty string is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -72,7 +76,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string AutoPay { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the NAT gateway. The value is set to <b>PostPaid</b>, which indicates the pay-as-you-go billing method.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <para>The billing method of the NAT Gateway instance. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description><b>PostPaid</b>: pay-as-you-go.</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description><b>PrePaid</b>: subscription.</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <para>The billing method of the NAT Gateway instance. The value is <b>PostPaid</b> (pay-as-you-go).</para>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -82,10 +97,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InstanceChargeType { get; set; }
 
             /// <summary>
-            /// <para>The metering method of the NAT gateway. Valid values:</para>
+            /// <para>The billing method of the NAT Gateway instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PayBySpec</b>: pay-by-specification</description></item>
-            /// <item><description><b>PayByLcu</b>: pay-by-CU</description></item>
+            /// <item><description><para><b>PayBySpec</b>: billed by specification.</para>
+            /// </description></item>
+            /// <item><description><para><b>PayByLcu</b>: billed by usage.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,14 +113,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The specification of the Internet NAT gateway. If the <b>InternetChargeType</b> parameter is set to <b>PayBySpec</b>, one of the following values is returned:</para>
+            /// <para>The specification of the public NAT gateway instance. This parameter is returned only if <b>InternetChargeType</b> is set to <b>PayBySpec</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Small</b>: small</para>
+            /// <item><description><para><b>Small</b></para>
             /// </description></item>
-            /// <item><description><para><b>Middle</b>: medium</para>
+            /// <item><description><para><b>Middle</b></para>
             /// </description></item>
-            /// <item><description><para><b>Large</b>: large</para>
-            /// <para>The return value of this parameter is empty if <b>InternetChargeType</b> is set to <b>PayByLcu</b>.</para>
+            /// <item><description><para><b>Large</b></para>
             /// </description></item>
             /// </list>
             /// 
@@ -117,10 +133,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The service status of the NAT gateway. Valid values:</para>
+        /// <para>The business status of the NAT Gateway instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: normal</description></item>
-        /// <item><description><b>FinancialLocked</b>: locked due to overdue payments</description></item>
+        /// <item><description><para><b>Normal</b>: The instance is running normally.</para>
+        /// </description></item>
+        /// <item><description><para><b>FinancialLocked</b>: The instance is suspended due to an overdue payment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +149,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The time when the NAT gateway was created. Format: YYYY-MM-DDThh:mm:ssZ.</para>
+        /// <para>The creation time of the NAT Gateway instance. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-08T12:20:20Z</para>
@@ -141,7 +159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The information about the deletion protection feature.</para>
+        /// <para>Information about the deletion protection feature.</para>
         /// </summary>
         [NameInMap("DeletionProtectionInfo")]
         [Validation(Required=false)]
@@ -150,8 +168,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>Indicates whether deletion protection is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,7 +184,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The description of the NAT gateway.</para>
+        /// <para>The description of the NAT Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NAT</para>
@@ -174,10 +194,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the traffic monitoring feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the gateway traffic monitoring feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -188,10 +210,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EcsMetricEnabled { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable session log, with values:</para>
+        /// <para>Indicates whether session logging is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Session logging is enabled. </description></item>
-        /// <item><description><b>false</b>: Session logging is disabled.</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -202,7 +226,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableSessionLog { get; set; }
 
         /// <summary>
-        /// <para>The time when the NAT gateway expires.</para>
+        /// <para>The expiration time of the NAT Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-26T12:20:20Z</para>
@@ -212,7 +236,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The information about the DNAT table.</para>
+        /// <para>Information about the DNAT table.</para>
         /// </summary>
         [NameInMap("ForwardTable")]
         [Validation(Required=false)]
@@ -241,7 +265,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The information about the FULLNAT table.</para>
+        /// <para>Information about the FULLNAT table.</para>
         /// </summary>
         [NameInMap("FullNatTable")]
         [Validation(Required=false)]
@@ -270,14 +294,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The elastic IP addresses (EIPs) that are associated with the Internet NAT gateway.</para>
+        /// <para>The Elastic IP Addresses (EIPs) that are associated with the public NAT gateway.</para>
         /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]
         public List<GetNatGatewayAttributeResponseBodyIpList> IpList { get; set; }
         public class GetNatGatewayAttributeResponseBodyIpList : TeaModel {
             /// <summary>
-            /// <para>The ID of the EIP.</para>
+            /// <para>The ID of the EIP instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eip-bp13e9i2qst4g6jzi****</para>
@@ -287,7 +311,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string AllocationId { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the EIP.</para>
+            /// <para>The EIP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>116.33.XX.XX</para>
@@ -297,11 +321,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IpAddress { get; set; }
 
             /// <summary>
-            /// <para>The association status of the EIP.</para>
+            /// <para>The usage status of the EIP.</para>
             /// <list type="bullet">
-            /// <item><description><b>idle</b>: The EIP is not specified in an SNAT entry or a DNAT entry.</description></item>
-            /// <item><description><b>UsedBySnatTable</b>: The EIP is specified in an SNAT entry.</description></item>
-            /// <item><description><b>UsedByForwardTable</b>: The EIP is specified in a DNAT entry.</description></item>
+            /// <item><description><para><b>Idle</b>: Not associated with an SNAT entry or a DNAT entry.</para>
+            /// </description></item>
+            /// <item><description><para><b>UsedBySnat</b>: Associated with an SNAT entry.</para>
+            /// </description></item>
+            /// <item><description><para><b>UsedByForward</b>: Associated with a DNAT entry.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -314,14 +341,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Session log configuration information.</para>
+        /// <para>The session log delivery settings.</para>
         /// </summary>
         [NameInMap("LogDelivery")]
         [Validation(Required=false)]
         public GetNatGatewayAttributeResponseBodyLogDelivery LogDelivery { get; set; }
         public class GetNatGatewayAttributeResponseBodyLogDelivery : TeaModel {
             /// <summary>
-            /// <para>Error message for session log write failure.</para>
+            /// <para>The error message that is returned when log delivery fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LogStoreNotExist: logstore session_log_test does not exist</para>
@@ -331,10 +358,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DeliverLogsErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>Session log write status. Values:</para>
+            /// <para>The status of log delivery. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Success</b>: Success. </description></item>
-            /// <item><description><b>Failure</b>: Failure.</description></item>
+            /// <item><description><para><b>Success</b>: The logs are delivered successfully.</para>
+            /// </description></item>
+            /// <item><description><para><b>Failure</b>: The logs failed to be delivered.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -345,7 +374,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DeliveryStatus { get; set; }
 
             /// <summary>
-            /// <para>Session log delivery destination type. Value: <b>sls</b>, Alibaba Cloud Log Service SLS.</para>
+            /// <para>The destination to which session logs are delivered. The value is always
+            /// <b>sls</b>, which indicates Log Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sls</para>
@@ -355,7 +385,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LogDeliveryType { get; set; }
 
             /// <summary>
-            /// <para>Destination address for session log writing</para>
+            /// <para>The Log Service Logstore to which session logs are delivered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</para>
@@ -367,7 +397,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The name of the NAT gateway.</para>
+        /// <para>The name of the NAT Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -377,7 +407,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The ID of the NAT Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp1047e2d4z7kf2ki****</para>
@@ -387,7 +417,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The type of the Internet NAT gateway. Only <b>Enhanced</b> is returned, which indicates an enhanced Internet NAT gateway.</para>
+        /// <para>The type of the public NAT gateway. The value <b>Enhanced</b> indicates an Enhanced NAT Gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Enhanced</para>
@@ -397,10 +427,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatType { get; set; }
 
         /// <summary>
-        /// <para>The type of the NAT gateway. Valid values:</para>
+        /// <para>The type of the NAT Gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>internet</b>: an Internet NAT gateway</description></item>
-        /// <item><description><b>intranet</b>: a VPC NAT gateway</description></item>
+        /// <item><description><para><b>internet</b>: A public NAT gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>intranet</b>: A VPC NAT Gateway.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -411,14 +443,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The private network information about the NAT gateway.</para>
+        /// <para>The private network information about the NAT Gateway instance.</para>
         /// </summary>
         [NameInMap("PrivateInfo")]
         [Validation(Required=false)]
         public GetNatGatewayAttributeResponseBodyPrivateInfo PrivateInfo { get; set; }
         public class GetNatGatewayAttributeResponseBodyPrivateInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the elastic network interface (ENI).</para>
+            /// <para>The ID of the elastic network interface instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp1cmgtoaka8vfyg****</para>
@@ -428,7 +460,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string EniInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The zone where the NAT gateway is deployed.</para>
+            /// <para>The ID of the availability zone to which the NAT Gateway instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-qingdao-b</para>
@@ -438,7 +470,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string IzNo { get; set; }
 
             /// <summary>
-            /// <para>The maximum bandwidth. Unit: Mbit/s.</para>
+            /// <para>The maximum bandwidth, in Mbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5120</para>
@@ -458,7 +490,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PrivateIpAddress { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch to which the NAT gateway belongs.</para>
+            /// <para>The ID of the vSwitch to which the NAT Gateway instance belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp1s2laxhdf9ayjbo***</para>
@@ -470,10 +502,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the NAT gateway supports PrivateLink. Valid values:</para>
+        /// <para>Indicates whether PrivateLink is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: PrivateLink is supported.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: PrivateLink is not supported.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -484,10 +518,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? PrivateLinkEnabled { get; set; }
 
         /// <summary>
-        /// <para>The mode that is used by PrivateLink. Valid values:</para>
+        /// <para>The mode of the PrivateLink service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FullNat</b>: the FULLNAT mode</description></item>
-        /// <item><description><b>Geneve</b>: the GENEVE mode</description></item>
+        /// <item><description><para><b>FullNat</b>: FULLNAT mode.</para>
+        /// </description></item>
+        /// <item><description><para><b>Geneve</b>: Geneve mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -498,7 +534,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PrivateLinkMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the NAT gateway is deployed.</para>
+        /// <para>The region ID of the NAT Gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-qingdao</para>
@@ -508,7 +544,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EC47282-1B74-4534-BD0E-403F3EE64CAF</para>
@@ -528,7 +564,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The information about the SNAT table.</para>
+        /// <para>Information about the SNAT table.</para>
         /// </summary>
         [NameInMap("SnatTable")]
         [Validation(Required=false)]
@@ -557,13 +593,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The status of the NAT gateway. Valid values:</para>
+        /// <para>The status of the NAT Gateway instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: being created. The operation to create a NAT gateway is asynchronous. The NAT gateway remains in the <b>Creating</b> state until it is created.</description></item>
-        /// <item><description><b>Available</b>: available. After a NAT gateway is created, it remains in a stable state.</description></item>
-        /// <item><description><b>Modifying</b>: being modified. The operation to upgrade or downgrade a NAT gateway is asynchronous. The NAT gateway remains in the <b>Modifying</b> state until it is upgraded or downgraded.</description></item>
-        /// <item><description><b>Deleting</b>: being deleted. The operation to delete a NAT gateway is asynchronous. The NAT gateway remains in the <b>Deleting</b> state until it is deleted.</description></item>
-        /// <item><description><b>Converting</b>: being converted. The operation to convert a standard NAT gateway to an enhanced NAT gateway is asynchronous. The NAT gateway remains in the <b>Converting</b> state until it is converted.</description></item>
+        /// <item><description><para><b>Creating</b>: Being created. This is an asynchronous operation.</para>
+        /// </description></item>
+        /// <item><description><para><b>Available</b>: Available. This is the steady state of the NAT Gateway after creation.</para>
+        /// </description></item>
+        /// <item><description><para><b>Modifying</b>: Being modified. This is an asynchronous operation.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: Being deleted. This is an asynchronous operation.</para>
+        /// </description></item>
+        /// <item><description><para><b>Converting</b>: Being converted to an Enhanced NAT Gateway. This is an asynchronous operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -574,7 +615,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the NAT gateway belongs.</para>
+        /// <para>The ID of the VPC to which the NAT Gateway instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp15zckdt37pq72z****</para>

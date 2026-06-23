@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page for paging queries. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the IPsec-VPN connection is created.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the IPsec-VPN connection. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,18 +79,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag value.</para>
-        /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-        /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</para>
+        /// <para>The list of tags bound to the IPsec-VPN connection.</para>
+        /// <para>You can specify up to 20 tags at a time.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeVpnConnectionsRequestTag> Tag { get; set; }
         public class DescribeVpnConnectionsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. The tag key cannot be an empty string.</para>
-            /// <para>It can be at most 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify at most 20 tag keys in each call.</para>
+            /// <para>The tag key. If you specify this parameter, the value cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -101,8 +100,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</para>
+            /// <para>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>
@@ -124,7 +123,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1q8bgx4xnkx****</para>

@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Other ISPs in China</para>
+        /// <para>中国其他</para>
         /// </summary>
         [NameInMap("LineServiceProvider")]
         [Validation(Required=false)]

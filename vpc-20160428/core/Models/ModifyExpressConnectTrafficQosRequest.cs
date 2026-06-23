@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyExpressConnectTrafficQosRequest : TeaModel {
         /// <summary>
-        /// <para>The instances to be added. Ignore this parameter if no instances are to be added.</para>
+        /// <para>The list of instances to add in this update. You do not need to specify this parameter if no instances need to be added.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<ModifyExpressConnectTrafficQosRequestAddInstanceList> AddInstanceList { get; set; }
         public class ModifyExpressConnectTrafficQosRequestAddInstanceList : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance to be associated.</para>
+            /// <para>The instance ID of the instance to associate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-bp159zj8zujwy3p07****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The type of instance to be associated. Set the value to <b>PHYSICALCONNECTION</b>.</para>
+            /// <para>The type of the instance to associate. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PHYSICALCONNECTION</para>
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,6 +65,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The description of the QoS policy.</para>
+        /// <para>The description must be 0 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-test</para>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qos-2giu0a6vd5x0mv4700</para>
+        /// <para>qos-2giu0a6vd5x0mv****</para>
         /// </summary>
         [NameInMap("QosId")]
         [Validation(Required=false)]
@@ -86,6 +87,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The name of the QoS policy.</para>
+        /// <para>The name must be 0 to 128 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-test</para>
@@ -95,8 +97,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string QosName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the QoS policy.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,14 +109,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instances to be removed. Ignore this parameter if no instances are to be removed.</para>
+        /// <para>The list of instances to remove in this update. You do not need to specify this parameter if no instances need to be removed.</para>
         /// </summary>
         [NameInMap("RemoveInstanceList")]
         [Validation(Required=false)]
         public List<ModifyExpressConnectTrafficQosRequestRemoveInstanceList> RemoveInstanceList { get; set; }
         public class ModifyExpressConnectTrafficQosRequestRemoveInstanceList : TeaModel {
             /// <summary>
-            /// <para>The ID of the associated instance.</para>
+            /// <para>The instance ID of the associated instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-bp1j37am632492qzw****</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the associated instance. Set the value to <b>PHYSICALCONNECTION</b>.</para>
+            /// <para>The type of the associated instance. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PHYSICALCONNECTION</para>

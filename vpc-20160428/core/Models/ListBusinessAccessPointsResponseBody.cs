@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListBusinessAccessPointsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of access points.</para>
+        /// <para>A list of access points.</para>
         /// </summary>
         [NameInMap("BusinessAccessPoints")]
         [Validation(Required=false)]
@@ -30,16 +30,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The name of the access point.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hangzhou-xs-B</para>
+            /// <para>杭州-萧山-B</para>
             /// </summary>
             [NameInMap("AccessPointName")]
             [Validation(Required=false)]
             public string AccessPointName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud box.</para>
+            /// <para>The ID of the Cloud Box instance.</para>
             /// <remarks>
-            /// <para> You can query this parameter if the Express Connect circuits and access points are of the cloud box type.</para>
+            /// <para>This parameter is returned only for access points that are associated with Cloud Box instances.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -69,14 +69,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public double? Longitude { get; set; }
 
+            /// <summary>
+            /// <para>The supported model of the optical module.</para>
+            /// </summary>
             [NameInMap("OpticalModuleModels")]
             [Validation(Required=false)]
             public List<ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels> OpticalModuleModels { get; set; }
             public class ListBusinessAccessPointsResponseBodyBusinessAccessPointsOpticalModuleModels : TeaModel {
+                /// <summary>
+                /// <para>The model of the optical module.</para>
+                /// </summary>
                 [NameInMap("OpticalModuleModel")]
                 [Validation(Required=false)]
                 public string OpticalModuleModel { get; set; }
 
+                /// <summary>
+                /// <para>The port type.</para>
+                /// </summary>
                 [NameInMap("PortType")]
                 [Validation(Required=false)]
                 public string PortType { get; set; }
@@ -84,14 +93,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The connectivity provider of the Express Connect circuit. Valid values:</para>
+            /// <para>The connectivity provider for the Express Connect circuit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CT</b>: China Telecom.</description></item>
-            /// <item><description><b>CU</b>: China Unicom.</description></item>
-            /// <item><description><b>CM</b>: China Mobile.</description></item>
-            /// <item><description><b>CO</b>: other connectivity providers in the Chinese mainland.</description></item>
-            /// <item><description><b>Equinix</b>: Equinix.</description></item>
-            /// <item><description><b>Other</b>: other connectivity providers outside the Chinese mainland.</description></item>
+            /// <item><description><para><b>CT</b>: China Telecom.</para>
+            /// </description></item>
+            /// <item><description><para><b>CU</b>: China Unicom.</para>
+            /// </description></item>
+            /// <item><description><para><b>CM</b>: China Mobile.</para>
+            /// </description></item>
+            /// <item><description><para><b>CO</b>: other connectivity providers in the Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>Equinix</b>: Equinix.</para>
+            /// </description></item>
+            /// <item><description><para><b>Other</b>: other connectivity providers outside the Chinese mainland.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,18 +117,25 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string SupportLineOperator { get; set; }
 
             /// <summary>
-            /// <para>The port type supported by the access point. Valid values:</para>
+            /// <para>The port types supported by the access point. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>100Base-T</b>: 100 Mbit/s copper Ethernet port</description></item>
-            /// <item><description><b>1000Base-T</b>: 1,000 Mbit/s copper Ethernet port</description></item>
-            /// <item><description><b>1000Base-LX</b>: 1,000 Mbit/s single-mode optical port (10 km)</description></item>
-            /// <item><description><b>10GBase-T</b>: 10,000 Mbit/s copper Ethernet port</description></item>
-            /// <item><description><b>10GBase-LR</b>: 10,000 Mbit/s single-mode optical port (10 km)</description></item>
-            /// <item><description><b>40GBase-LR</b>: 40,000 Mbit/s single-mode optical port</description></item>
-            /// <item><description><b>100GBase-LR</b>: 100,000 Mbit/s single-mode optical port</description></item>
+            /// <item><description><para><b>100Base-T</b>: 100 Mbit/s copper port.</para>
+            /// </description></item>
+            /// <item><description><para><b>1000Base-T</b>: 1,000 Mbit/s copper port.</para>
+            /// </description></item>
+            /// <item><description><para><b>1000Base-LX</b>: 1,000 Mbit/s single-mode optical port (10 km).</para>
+            /// </description></item>
+            /// <item><description><para><b>10GBase-T</b>: 10,000 Mbit/s copper port.</para>
+            /// </description></item>
+            /// <item><description><para><b>10GBase-LR</b>: 10,000 Mbit/s single-mode optical port (10 km).</para>
+            /// </description></item>
+            /// <item><description><para><b>40GBase-LR</b>: 40,000 Mbit/s single-mode optical port.</para>
+            /// </description></item>
+            /// <item><description><para><b>100GBase-LR</b>: 100,000 Mbit/s single-mode optical port.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> To use ports 40GBase-LR and 100GBase-LR, you must first contact your account manager.</para>
+            /// <para>The 40GBase-LR and 100GBase-LR port types are subject to availability. To use these port types, contact your account manager.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -9,10 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyVSwitchCidrReservationAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>A client token used to ensure the idempotence of the request.</para>
+        /// <para>Generate a unique value from your client for this parameter to guarantee uniqueness across different requests. ClientToken supports only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>02fb3da4-230e-11e9-8e44-0016e04115b</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sends a dry run request without creating any resource (performing the API operation). The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are met. If the check fails, an error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the check passes, an HTTP 2xx status code is returned and the operation is performed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }

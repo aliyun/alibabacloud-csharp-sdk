@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The IKE version.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ikev1</para>
+                /// <para>ikev2</para>
                 /// </summary>
                 [NameInMap("IkeVersion")]
                 [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>116.62.XX.XX</para>
+                /// <para>139.196.XX.XX</para>
                 /// </summary>
                 [NameInMap("LocalId")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>139.196.XX.XX</para>
+                /// <para>116.62.XX.XX</para>
                 /// </summary>
                 [NameInMap("RemoteId")]
                 [Validation(Required=false)]

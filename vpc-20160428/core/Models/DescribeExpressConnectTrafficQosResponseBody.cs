@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The ID of the instance to which the QoS policy is associated.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>pc-bp159zj8zujwy3p07j83e</para>
+                /// <para>pc-bp159zj8zujwy3p07****</para>
                 /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The ID of the QoS policy.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>qos-pksbqfmotl5hzqmhf8</para>
+                /// <para>qos-pksbqfmotl5hzq****</para>
                 /// </summary>
                 [NameInMap("QosId")]
                 [Validation(Required=false)]
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 /// <para>The ID of the QoS queue.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>qos-queue-9nyx2u7n71s2rcy4n5</para>
+                /// <para>qos-queue-9nyx2u7n71s2rc****</para>
                 /// </summary>
                 [NameInMap("QueueId")]
                 [Validation(Required=false)]

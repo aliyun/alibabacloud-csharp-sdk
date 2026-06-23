@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description of the router interface.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Peer interface.</para>
+        /// <para>对端接口</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The name of the router interface.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RouterInterface1</para>
+        /// <para>路由器接口1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

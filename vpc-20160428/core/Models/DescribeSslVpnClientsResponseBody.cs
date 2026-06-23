@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnClientsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of clients.</para>
+        /// <para>The list of client information.</para>
         /// </summary>
         [NameInMap("ClientInfoList")]
         [Validation(Required=false)]
         public List<DescribeSslVpnClientsResponseBodyClientInfoList> ClientInfoList { get; set; }
         public class DescribeSslVpnClientsResponseBodyClientInfoList : TeaModel {
             /// <summary>
-            /// <para>The SSL client certificate used by the client.</para>
+            /// <para>The SSL client certificate used by the client to establish the SSL-VPN connection to Alibaba Cloud.</para>
             /// <remarks>
-            /// <para> If the client uses two-factor authentication to establish an SSL-VPN connection to Alibaba Cloud, the return value is the username of the client.</para>
+            /// <para>If the client uses two-factor identity authentication to establish the SSL-VPN connection to Alibaba Cloud, the value of this parameter is the username of the client.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that indicates when the client connected to Alibaba Cloud through an SSL-VPN connection. Unit: milliseconds.</para>
-            /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp when the client established the SSL-VPN connection to Alibaba Cloud. Unit: milliseconds.</para>
+            /// <para>The timestamp is in the UNIX format and represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the SSL-VPN connection was established.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1670985008000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? ConnectedTime { get; set; }
 
             /// <summary>
-            /// <para>The actual public IP address used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</para>
+            /// <para>The public IP address that the client used to establish the SSL-VPN connection to Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.XX.XX.15</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The port used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</para>
+            /// <para>The port number that the client used to establish the SSL-VPN connection to Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The private IP address allocated to the client by the VPN gateway when the client established an SSL-VPN connection to Alibaba Cloud.</para>
+            /// <para>The private IP address that the VPN gateway assigned to the client when the client established an SSL-VPN connection to Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.10.10.10</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PrivateIp { get; set; }
 
             /// <summary>
-            /// <para>The amount of data transferred from the client to the VPN gateway through the SSL-VPN connection. Unit: bytes.</para>
+            /// <para>The traffic that the VPN gateway received from the client over the SSL-VPN connection. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60782</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? ReceiveBytes { get; set; }
 
             /// <summary>
-            /// <para>The amount of data transferred from the VPN gateway to the client through the SSL-VPN connection. Unit: bytes.</para>
+            /// <para>The traffic that the VPN gateway sent to the client over the SSL-VPN connection. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>57144</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The status of the SSL-VPN connection.</para>
-            /// <para>The value is set to <b>online</b>, which indicates that the client has connected to Alibaba Cloud through an SSL-VPN connection.</para>
+            /// <para>Valid values: <b>online</b>, which indicates that the client has successfully established an SSL-VPN connection to Alibaba Cloud.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID of the VPN gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eu-central-1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of returned entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The VPN gateway instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-gw8gfb947ctddabja****</para>

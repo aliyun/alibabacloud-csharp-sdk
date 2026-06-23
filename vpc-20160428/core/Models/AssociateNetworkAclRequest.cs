@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]

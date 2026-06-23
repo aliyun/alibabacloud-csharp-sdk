@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// <para>The token that is used for the next query. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first query or no next query is to be sent, ignore this parameter.</description></item>
-        /// <item><description>If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// <item><description>If this is the first query or no subsequent query exists, leave this parameter empty.</description></item>
+        /// <item><description>If a subsequent query exists, set this parameter to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the resource belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the resource.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
+        /// <para>The resource ID. You can specify up to 50 resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -71,14 +71,28 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>VSWITCH</b>: vSwitch</description></item>
-        /// <item><description><b>ROUTETABLE</b>: route table</description></item>
-        /// <item><description><b>EIP</b>: elastic IP address (EIP)</description></item>
-        /// <item><description><b>VpnGateway</b>: VPN gateway</description></item>
-        /// <item><description><b>NATGATEWAY</b>: NAT gateway</description></item>
-        /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: EIP bandwidth plan</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance.</description></item>
+        /// <item><description><b>VSWITCH</b>: virtual switch instance.</description></item>
+        /// <item><description><b>ROUTETABLE</b>: route table instance.</description></item>
+        /// <item><description><b>EIP</b>: elastic IP address (EIP) instance.</description></item>
+        /// <item><description><b>VPNGATEWAY</b>: VPN gateway instance.</description></item>
+        /// <item><description><b>NATGATEWAY</b>: NAT gateway instance.</description></item>
+        /// <item><description><b>COMMONBANDWIDTHPACKAGE</b>: Internet Shared Bandwidth instance.</description></item>
+        /// <item><description><b>PREFIXLIST</b>: prefix list instance.</description></item>
+        /// <item><description><b>PUBLICIPADDRESSPOOL</b>: IP address pool instance.</description></item>
+        /// <item><description><b>IPV4GATEWAY</b>: IPv4 gateway instance.</description></item>
+        /// <item><description><b>IPV6GATEWAY</b>: IPv6 gateway instance.</description></item>
+        /// <item><description><b>NETWORKACL</b>: network ACL instance.</description></item>
+        /// <item><description><b>TRAFFICMIRRORFILTER</b>: traffic mirror filter instance.</description></item>
+        /// <item><description><b>TRAFFICMIRRORSESSION</b>: traffic mirror session instance.</description></item>
+        /// <item><description><b>FLOWLOG</b>: flow log instance.</description></item>
+        /// <item><description><b>HAVIP</b>: high-availability virtual IP address instance.</description></item>
+        /// <item><description><b>DHCPOPTIONSSET</b>: DHCP options set instance.</description></item>
+        /// <item><description><b>GATEWAYENDPOINT</b>: gateway endpoint instance.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>The resource type value is case-insensitive.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -88,15 +102,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeTagsRequestTag> Tag { get; set; }
         public class DescribeTagsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <c>aliyun</c> or <c>acs:</c>. The key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot be an empty string or start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -106,8 +120,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <c>aliyun</c> or <c>acs:</c>. The key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values.</para>
+            /// <para>A tag value can be up to 128 characters in length. It can be an empty string but cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

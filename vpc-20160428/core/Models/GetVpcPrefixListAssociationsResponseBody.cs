@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetVpcPrefixListAssociationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries.</para>
+        /// <para>The number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next page exists.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no subsequent query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the network instances that are associated with the prefix list.</para>
+        /// <para>The association information of the prefix list.</para>
         /// </summary>
         [NameInMap("PrefixListAssociation")]
         [Validation(Required=false)]
         public List<GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation> PrefixListAssociation { get; set; }
         public class GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation : TeaModel {
             /// <summary>
-            /// <para>List of CIDR addresses where the prefix list is effective in the currently associated resources.</para>
+            /// <para>The list of CIDR blocks in the prefix list that are effective for the associated resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CidrList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the prefix list belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account that owns the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>153460731706****</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string OwnerId { get; set; }
 
             /// <summary>
-            /// <para>The prefix list ID.</para>
+            /// <para>The instance ID of the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pl-0b7hwu67****</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PrefixListId { get; set; }
 
             /// <summary>
-            /// <para>The reason why the association failed.</para>
+            /// <para>The reason for the association failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>failed</para>
@@ -103,8 +103,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The type of the associated resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>vpcRouteTable</b>: virtual private cloud (VPC) route table.</description></item>
-            /// <item><description><b>trRouteTable</b>: route table of a transit router.</description></item>
+            /// <item><description><b>vpcRouteTable</b>: VPC route table.</description></item>
+            /// <item><description><b>trRouteTable</b>: transit router route table.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource associated with the prefix list belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account that owns the resource associated with the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>132193271328****</para>
@@ -125,14 +125,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceUid { get; set; }
 
             /// <summary>
-            /// <para>The status of the prefix list. Valid values:</para>
+            /// <para>The association status of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Created</b></description></item>
-            /// <item><description><b>ModifyFailed</b></description></item>
-            /// <item><description><b>Creating</b></description></item>
-            /// <item><description><b>Modifying</b></description></item>
-            /// <item><description><b>Deleting</b></description></item>
-            /// <item><description><b>Deleted</b></description></item>
+            /// <item><description><b>Created</b>: The association is created.</description></item>
+            /// <item><description><b>ModifyFailed</b>: The association is not updated to the latest version.</description></item>
+            /// <item><description><b>Creating</b>: The association is being created.</description></item>
+            /// <item><description><b>Modifying</b>: The association is being modified.</description></item>
+            /// <item><description><b>Deleting</b>: The association is being deleted.</description></item>
+            /// <item><description><b>Deleted</b>: The association is deleted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

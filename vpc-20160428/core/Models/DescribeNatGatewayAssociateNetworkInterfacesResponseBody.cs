@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Number of associated ENIs.</para>
+        /// <para>The number of associated ENIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC NAT gateway.</para>
+        /// <para>The instance ID of the VPC NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-bp1uewa15k4iy5770****</para>
@@ -96,10 +96,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the token for the next query exists. Valid value:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, there is no next page.</description></item>
-        /// <item><description>If the value returned of <b>NextToken</b> is not empty, the value indicates the token that is used for the next query.</description></item>
+        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query exists.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>NextToken</b> is returned, the value indicates the token for the next query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2315DEB7-5E92-423A-91F7-4C1EC9AD****</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

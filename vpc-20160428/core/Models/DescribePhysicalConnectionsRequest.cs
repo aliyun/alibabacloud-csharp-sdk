@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DescribePhysicalConnectionsRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-001</para>
@@ -21,69 +21,67 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The filter keys.</para>
+        /// <para>The list of filter conditions.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribePhysicalConnectionsRequestFilter> Filter { get; set; }
         public class DescribePhysicalConnectionsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The key of the filter. Valid values:</para>
+            /// <para>The filter condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PhysicalConnectionId</b>: the ID of the Express Connect circuit.</para>
+            /// <item><description><para><b>PhysicalConnectionId</b>: the Express Connect circuit ID.</para>
             /// </description></item>
-            /// <item><description><para><b>AccessPointId</b>: the ID of the access point.</para>
+            /// <item><description><para><b>AccessPointId</b>: the access point ID.</para>
             /// </description></item>
-            /// <item><description><para><b>Type</b>: the type of resource to which the Express Connect circuit is connected. You can set Type only to <b>VPC</b>.</para>
+            /// <item><description><para><b>Type</b>: the Express Connect circuit type. This filter condition supports only the value <b>VPC</b>.</para>
             /// </description></item>
-            /// <item><description><para><b>LineOperator</b>: the connectivity provider of the Express Connect circuit. Valid values:</para>
+            /// <item><description><para><b>LineOperator</b>: the carrier of the Express Connect circuit. This filter condition supports the following values:</para>
             /// <list type="bullet">
             /// <item><description><b>CT</b>: China Telecom.</description></item>
             /// <item><description><b>CU</b>: China Unicom.</description></item>
             /// <item><description><b>CM</b>: China Mobile.</description></item>
-            /// <item><description><b>CO</b>: other connectivity providers in the Chinese mainland.</description></item>
+            /// <item><description><b>CO</b>: other carriers in China.</description></item>
             /// <item><description><b>Equinix</b>: Equinix.</description></item>
-            /// <item><description><b>Other</b>: other connectivity providers outside the Chinese mainland.</description></item>
+            /// <item><description><b>Other</b>: other carriers outside China.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>Spec</b>: the specification of the Express Connect circuit. Valid values:</para>
+            /// <item><description><para><b>Spec</b>: the specification of the Express Connect circuit. This filter condition supports the following values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1G and below</b></description></item>
-            /// <item><description><b>10G</b></description></item>
-            /// <item><description><b>40G</b></description></item>
-            /// <item><description><b>100G</b></description></item>
-            /// </list>
-            /// </description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> By default, you cannot set the value to <b>40G</b> or <b>100G</b>. To use these values, you must first contact your account manager.</para>
+            /// <item><description><b>1G and below</b>.</description></item>
+            /// <item><description><b>10G</b>.</description></item>
+            /// <item><description><b>40G</b>.</description></item>
+            /// <item><description><b>100G</b>.<remarks>
+            /// <para> The <b>40G</b> and <b>100G</b> specifications are not available by default. Only users who have committed an application to their account manager and received approval can use these values.</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
+            /// </description></item>
+            /// <item><description><para><b>Status</b>: the status of the Express Connect circuit. This filter condition supports the following values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Status</b>: the status of the Express Connect circuit. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Initial</b>: The application is under review.</description></item>
-            /// <item><description><b>Approved</b>: The application is approved.</description></item>
-            /// <item><description><b>Allocating</b>: The system is allocating resources.</description></item>
-            /// <item><description><b>Allocated</b>: The Express Connect circuit is under construction.</description></item>
-            /// <item><description><b>Confirmed</b>: The Express Connect circuit is pending for user confirmation.</description></item>
-            /// <item><description><b>Enabled</b>: The Express Connect circuit is enabled.</description></item>
-            /// <item><description><b>Rejected</b>: The application is rejected.</description></item>
-            /// <item><description><b>Canceled</b>: The application is canceled.</description></item>
-            /// <item><description><b>Allocation Failed</b>: The system failed to allocate resources.</description></item>
-            /// <item><description><b>Terminating</b>: The Express Connect circuit is being disabled.</description></item>
-            /// <item><description><b>Terminated</b>: The Express Connect circuit is disabled.</description></item>
+            /// <item><description><b>Initial</b>: pending application.</description></item>
+            /// <item><description><b>Approved</b>: approved.</description></item>
+            /// <item><description><b>Allocating</b>: allocating resources.</description></item>
+            /// <item><description><b>Allocated</b>: under construction.</description></item>
+            /// <item><description><b>Confirmed</b>: pending user confirmation.</description></item>
+            /// <item><description><b>Enabled</b>: enabled.</description></item>
+            /// <item><description><b>Rejected</b>: application denied.</description></item>
+            /// <item><description><b>Canceled</b>: canceled.</description></item>
+            /// <item><description><b>Allocation Failed</b>: resource allocation failed.</description></item>
+            /// <item><description><b>Terminating</b>: stopping.</description></item>
+            /// <item><description><b>Terminated</b>: stopped.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para><b>Name</b>: the name of the Express Connect circuit.</para>
             /// </description></item>
-            /// <item><description><para><b>ProductType</b>: the type of the Express Connect circuit. Valid values:</para>
+            /// <item><description><para><b>ProductType</b>: the circuit type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>VirtualPhysicalConnection</b>: shared Express Connect circuit</description></item>
+            /// <item><description><b>VirtualPhysicalConnection</b>: shared Express Connect circuit.</description></item>
             /// <item><description><b>PhysicalConnection</b>: dedicated Express Connect circuit.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
-            /// <para>You can specify at most five filter conditions in each request. The logical relation among the filter conditions is <b>AND</b>. Therefore, an Express Connect circuit is returned only when all specified filter conditions are matched.</para>
+            /// <para>You can specify up to 5 filter conditions at a time. The filter conditions have an <b>AND</b> relationship. Results are returned only when all filter conditions are met.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Name</para>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter values.</para>
+            /// <para>The list of filter values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -105,10 +103,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to return the data about pending orders. Valid values:</para>
+        /// <para>Specifies whether to return data of orders that have not taken effect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Returns data of orders that have not taken effect.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Does not return data of orders that have not taken effect.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>. Valid values: <b>1</b> to <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -147,8 +147,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Express Connect circuit.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Express Connect circuit. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The ID of the resource group to which the Express Connect circuit belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek2yvwibxrmrkq</para>
+        /// <para>rg-aek2yvwibxr****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -177,15 +177,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribePhysicalConnectionsRequestTags> Tags { get; set; }
         public class DescribePhysicalConnectionsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -195,8 +195,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

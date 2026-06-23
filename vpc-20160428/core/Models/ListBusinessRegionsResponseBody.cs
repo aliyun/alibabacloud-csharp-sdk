@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class ListBusinessRegionsResponseBodyGeographicSubRegions : TeaModel {
             /// <summary>
             /// <para>The name of the region where circuits are available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>华东1(杭州)</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

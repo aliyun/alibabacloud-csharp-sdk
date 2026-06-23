@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The name of the construction engineer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Zhangsan</para>
+            /// <para>张三</para>
             /// </summary>
             [NameInMap("PMName")]
             [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The geographic location where the Express Connect circuit is deployed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>杭州</para>
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>company</para>
+        /// <para>阿里</para>
         /// </summary>
         [NameInMap("Si")]
         [Validation(Required=false)]

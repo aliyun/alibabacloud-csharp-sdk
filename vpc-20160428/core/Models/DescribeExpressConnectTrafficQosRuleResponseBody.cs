@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>1.1.1.0/24</para>
+            /// <para><c>1.1.**.**</c>/24</para>
             /// </summary>
             [NameInMap("DstCidr")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>2001:0db8:1234:5678::/64</para>
+            /// <para>2001:0db8:1234:****::/64</para>
             /// </summary>
             [NameInMap("DstIPv6Cidr")]
             [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The ID of the QoS policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>qos-pksbqfmotl5hzqmhf8</para>
+            /// <para>qos-pksbqfmotl5hzq****</para>
             /// </summary>
             [NameInMap("QosId")]
             [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The ID of the QoS queue.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>qos-queue-9nyx2u7n71s2rcy4n5</para>
+            /// <para>qos-queue-9nyx2u7n71s2rc****</para>
             /// </summary>
             [NameInMap("QueueId")]
             [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The ID of the QoS rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>qos-rule-iugg0l9x27f2nocouj</para>
+            /// <para>qos-rule-iugg0l9x27f2noc****</para>
             /// </summary>
             [NameInMap("RuleId")]
             [Validation(Required=false)]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>1.1.1.0/24</para>
+            /// <para><c>1.1.**.**</c>/24</para>
             /// </summary>
             [NameInMap("SrcCidr")]
             [Validation(Required=false)]
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>2001:0db8:1234:5678::/64</para>
+            /// <para>2001:0db8:1234:****::/64</para>
             /// </summary>
             [NameInMap("SrcIPv6Cidr")]
             [Validation(Required=false)]

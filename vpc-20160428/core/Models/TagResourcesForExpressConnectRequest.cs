@@ -18,8 +18,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the resource is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
+        /// <para>The region ID of the resource to which you want to create and bind tags.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 20 resource IDs.</para>
+        /// <para>The resource ID. You can specify up to 20 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -46,11 +46,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>PHYSICALCONNECTION</b>: Express Connect circuit.</description></item>
-        /// <item><description><b>VIRTUALBORDERROUTER</b>: virtual border router (VBR).</description></item>
-        /// <item><description><b>ROUTERINTERFACE</b>: router interface.</description></item>
+        /// <item><description><b>PHYSICALCONNECTION</b>: Express Connect circuit instance.</description></item>
+        /// <item><description><b>VIRTUALBORDERROUTER</b>: Virtual Border Router.</description></item>
+        /// <item><description><b>ROUTERINTERFACE</b>: VBR uplink.</description></item>
+        /// <item><description><b>TRAFFICQOS</b>: QoS policy.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resource.</para>
+        /// <para>The list of resource tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -70,8 +71,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<TagResourcesForExpressConnectRequestTag> Tag { get; set; }
         public class TagResourcesForExpressConnectRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -81,8 +82,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

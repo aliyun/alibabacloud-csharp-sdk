@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class MoveVpnResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource.</para>
+        /// <para>The instance ID of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new resource group.</para>
+        /// <para>The ID of the new resource group to which the resource belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the resource.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,15 +60,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of resource.</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VpnGateway</b>: VPN gateway</para>
-        /// <para>After you move a VPN gateway to a new resource group, the following associated resources are also moved to the new resource group: IPsec servers, SSL servers, SSL client certificates, and IPsec-VPN connections.</para>
+        /// <item><description><para><b>VpnGateway</b>: VPN gateway instance.</para>
+        /// <para>After you change the resource group of a VPN gateway instance, the resource group of the IPsec server, SSL server, SSL client certificate, and IPsec-VPN connections (IPsec-VPN connections associated with the VPN gateway instance) under the VPN gateway instance is also changed.</para>
         /// </description></item>
-        /// <item><description><para><b>CustomerGateway</b>: customer gateway</para>
+        /// <item><description><para><b>CustomerGateway</b>: customer gateway instance.</para>
         /// </description></item>
-        /// <item><description><para><b>VpnAttachment</b>: IPsec-VPN connection</para>
-        /// <para>An IPsec-VPN connection associated with a transit router or not associate with a resource.</para>
+        /// <item><description><para><b>VpnAttachment</b>: IPsec-VPN connection instance.</para>
+        /// <para>This refers to IPsec-VPN connections associated with a transit router instance or IPsec-VPN connections that are not associated with any resource.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

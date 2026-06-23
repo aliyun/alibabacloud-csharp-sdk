@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GrantInstanceToVbrRequest : TeaModel {
         /// <summary>
-        /// <para>The VBRs that need to acquire permissions on the VPC. Valid values:</para>
+        /// <para>The scope of VBR instances that accept the authorization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>All</b>: Permissions on the VPC are granted to all VBRs that belong to the specified region and Alibaba Cloud account. In this case, you can leave <b>VbrInstanceIds</b> empty.</description></item>
-        /// <item><description><b>Specify</b>: Permissions on the VPC are granted to the specified VBRs. <b>VbrInstanceIds</b> must be assigned a value.</description></item>
+        /// <item><description><b>All</b>: Grants authorization of the VPC instance to all VBR instances in the specified region under the specified Alibaba Cloud account. In this case, the <b>VbrInstanceIds</b> parameter can be left empty.</description></item>
+        /// <item><description><b>Specify</b>: Grants authorization of the VPC instance to the specified VBR instances. In this case, the <b>VbrInstanceIds</b> parameter is required.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GrantType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the VPC instance for which authorization is to be granted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VPC is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPC instance for which authorization is to be granted.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the VBRs.</para>
+        /// <para>The list of VBR instances to be granted authorization.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> VbrInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the VBR belongs.</para>
+        /// <para>The Alibaba Cloud account ID that owns the VBR instance to be granted authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? VbrOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the VBR is deployed.</para>
+        /// <para>The region ID of the VBR instance to be granted authorization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

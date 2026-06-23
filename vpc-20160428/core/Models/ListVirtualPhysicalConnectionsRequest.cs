@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVirtualPhysicalConnectionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the hosted connection is accepted by the tenant. Valid values:</para>
+        /// <para>Indicates whether the tenant has accepted the virtual physical connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The connection has been accepted.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The connection has not been accepted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? IsConfirmed { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description><para>Leave this parameter empty for the first request.</para>
+        /// </description></item>
+        /// <item><description><para>For subsequent requests, set this parameter to the <c>NextToken</c> value returned from the previous request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,8 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit over which the hosted connections are created.</para>
-        /// <para>Express Connect circuits in this topic refer to Express Connect circuits over which hosted connections are created.</para>
+        /// <para>The ID of the physical connection associated with the virtual physical connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp1ciz7ekd2grn1as****</para>
@@ -59,8 +62,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the hosted connection.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the virtual physical connection is located.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the latest list of regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the hosted connection belongs.</para>
+        /// <para>The ID of the resource group to which the virtual physical connection belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4p****</para>
@@ -81,15 +84,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tag list.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListVirtualPhysicalConnectionsRequestTags> Tags { get; set; }
         public class ListVirtualPhysicalConnectionsRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>It can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The key of the tag. You can specify up to 20 tags. The tag key cannot be an empty string.</para>
+            /// <para>The key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -99,8 +102,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>It can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of the tag. You can specify up to 20 tags. The tag value can be an empty string.</para>
+            /// <para>The value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The information about the Alibaba Cloud account that owns the hosted connection.</para>
+        /// <para>The Alibaba Cloud accounts that own the virtual physical connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>189xxx</para>
@@ -122,11 +125,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> VirtualPhysicalConnectionAliUids { get; set; }
 
         /// <summary>
-        /// <para>The business status of the hosted connection. Valid values:</para>
+        /// <para>The business status of the virtual physical connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>FinancialLocked</b></description></item>
-        /// <item><description><b>SecurityLocked</b></description></item>
+        /// <item><description><para><b>Normal</b>: The connection is operating normally.</para>
+        /// </description></item>
+        /// <item><description><para><b>FinancialLocked</b>: The connection is locked due to an overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>SecurityLocked</b>: The connection is locked for security reasons.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +143,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VirtualPhysicalConnectionBusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The information about the hosted connection.</para>
+        /// <para>The IDs of the virtual physical connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-xxx</para>
@@ -147,7 +153,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> VirtualPhysicalConnectionIds { get; set; }
 
         /// <summary>
-        /// <para>The business status of the hosted connection.</para>
+        /// <para>The business statuses of the virtual physical connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-xxx</para>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<string> VirtualPhysicalConnectionStatuses { get; set; }
 
         /// <summary>
-        /// <para>The VLAN ID of the hosted connection.</para>
+        /// <para>The VLAN IDs of the virtual physical connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-xxx</para>

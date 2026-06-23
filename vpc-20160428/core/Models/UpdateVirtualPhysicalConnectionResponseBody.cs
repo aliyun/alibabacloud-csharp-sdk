@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the VLAN ID of the hosted connection is changed. Valid values:</para>
+        /// <para>Indicates whether the VLAN ID of the virtual physical connection was successfully modified.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The VLAN ID was modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The VLAN ID was not modified.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

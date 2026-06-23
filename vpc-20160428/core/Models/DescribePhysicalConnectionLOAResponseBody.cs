@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribePhysicalConnectionLOAResponseBody : TeaModel {
         /// <summary>
-        /// <para>The LOA information about the Express Connect circuit.</para>
+        /// <para>Information about the physical connection\&quot;s LOA.</para>
         /// </summary>
         [NameInMap("PhysicalConnectionLOAType")]
         [Validation(Required=false)]
         public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType PhysicalConnectionLOAType { get; set; }
         public class DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType : TeaModel {
             /// <summary>
-            /// <para>The name of the construction company.</para>
+            /// <para>The localized name of the company.</para>
             /// 
             /// <b>Example:</b>
             /// <para>company</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CompanyLocalizedName { get; set; }
 
             /// <summary>
-            /// <para>The name of the organization that requires the Express Connect circuit.</para>
+            /// <para>The name of the company that requires the physical connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1234</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CompanyName { get; set; }
 
             /// <summary>
-            /// <para>The time when construction starts.</para>
+            /// <para>The time when construction personnel enter the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-26T08:00:00Z</para>
@@ -46,12 +46,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string ConstructionTime { get; set; }
 
+            /// <summary>
+            /// <para>The description of the LOA.</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Express Connect circuit.</para>
+            /// <para>The instance ID of the physical connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-bp1ca4wca27****</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The circuit code provided by the connectivity provider.</para>
+            /// <para>The line code assigned by the line service provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aaa111</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineCode { get; set; }
 
             /// <summary>
-            /// <para>The label of the cable in the data center.</para>
+            /// <para>The line label for the in-building cable at the data center.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bbb222</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineLabel { get; set; }
 
             /// <summary>
-            /// <para>The contact information about line O\&amp;M.</para>
+            /// <para>The contact information of the line O\&amp;M personnel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1388888****</para>
@@ -91,28 +94,36 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineSPContactInfo { get; set; }
 
             /// <summary>
-            /// <para>The ISP. Valid values:</para>
+            /// <para>The line service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>China Telecom</b></description></item>
-            /// <item><description><b>China Unicom</b></description></item>
-            /// <item><description><b>China Mobile</b></description></item>
-            /// <item><description><b>Other ISPs in China</b></description></item>
+            /// <item><description><para><b>China Telecom</b></para>
+            /// </description></item>
+            /// <item><description><para><b>China Unicom</b></para>
+            /// </description></item>
+            /// <item><description><para><b>China Mobile</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Other</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Other ISPs in China</para>
+            /// <para>中国其他</para>
             /// </summary>
             [NameInMap("LineServiceProvider")]
             [Validation(Required=false)]
             public string LineServiceProvider { get; set; }
 
             /// <summary>
-            /// <para>The type of the Express Connect circuit. Valid values:</para>
+            /// <para>The line type of the physical connection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>MSTP</b></description></item>
-            /// <item><description><b>MPLSVPN</b></description></item>
-            /// <item><description><b>FIBRE</b></description></item>
-            /// <item><description><b>Other</b></description></item>
+            /// <item><description><para><b>MSTP</b></para>
+            /// </description></item>
+            /// <item><description><para><b>MPLSVPN</b></para>
+            /// </description></item>
+            /// <item><description><para><b>FIBRE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Other</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,7 +134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineType { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the LOA file.</para>
+            /// <para>The URL to download the LOA file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http://******</para>
@@ -132,6 +143,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public string LoaUrl { get; set; }
 
+            /// <summary>
+            /// <para>Information about the construction personnel.</para>
+            /// </summary>
             [NameInMap("PMInfo")]
             [Validation(Required=false)]
             public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOATypePMInfo PMInfo { get; set; }
@@ -165,7 +179,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             }
 
             /// <summary>
-            /// <para>The on-site construction company.</para>
+            /// <para>The system integrator (SI).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ctcu</para>
@@ -177,13 +191,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the LOA. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Applying</b>: The LOA is pending for approval.</description></item>
-            /// <item><description><b>Accept</b>: The LOA is approved.</description></item>
-            /// <item><description><b>Available</b>: The LOA is available.</description></item>
-            /// <item><description><b>Rejected</b>: The LOA is rejected.</description></item>
-            /// <item><description><b>Completing</b>: The Express Connect circuit is under construction.</description></item>
-            /// <item><description><b>Complete</b>: The Express Connect circuit is installed.</description></item>
-            /// <item><description><b>Deleted</b>: The LOA is deleted.</description></item>
+            /// <item><description><para><b>Applying</b>: The LOA application is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>Accept</b>: The LOA application is approved.</para>
+            /// </description></item>
+            /// <item><description><para><b>Available</b>: The LOA is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Rejected</b>: The LOA application is rejected.</para>
+            /// </description></item>
+            /// <item><description><para><b>Completing</b>: The construction of the physical connection is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>Complete</b>: The construction of the physical connection is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleted</b>: The LOA is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,7 +217,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>318BB676-0A2B-43A0-9AD8-F1D34E93750F</para>

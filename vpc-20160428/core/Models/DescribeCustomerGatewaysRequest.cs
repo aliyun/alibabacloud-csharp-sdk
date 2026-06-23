@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeCustomerGatewaysRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the customer gateway.</para>
+        /// <para>The instance ID of the customer gateway. </para>
         /// <remarks>
-        /// <para>If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.</para>
+        /// <para>If you do not specify the instance ID of a customer gateway, the system queries information about all customer gateways in the current region by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number of the list. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paged query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,8 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the customer gateway is deployed.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the customer gateway. </para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the customer gateway belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query the resource group list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> to query resource group IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
@@ -82,16 +82,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to be added to the customer gateway.</para>
+        /// <para>The list of tags bound to the customer gateway.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeCustomerGatewaysRequestTag> Tag { get; set; }
         public class DescribeCustomerGatewaysRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
-            /// <para>You can specify at most 20 tag keys at a time.</para>
+            /// <para>The tag key. If you specify this parameter, the value cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify up to 20 tag keys at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagKey</para>
@@ -101,9 +101,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
-            /// <para>The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.</para>
+            /// <para>The tag value.</para>
+            /// <para>The tag value can be up to 128 characters in length and can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue</para>

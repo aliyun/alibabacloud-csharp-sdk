@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF3898</para>
+        /// <para>TF-DissociateRouteTablesFromVpcGatewayEndpoint-1634369235-8f****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpce-m5e371h5clm3uadih****</para>
+        /// <para>vpce-bp11cwae3p6z7ftbm****</para>
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]

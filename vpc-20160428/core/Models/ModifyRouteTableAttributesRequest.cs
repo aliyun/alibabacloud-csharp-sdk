@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>描述信息</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

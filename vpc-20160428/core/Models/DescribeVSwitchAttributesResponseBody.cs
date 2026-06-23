@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The CIDR block of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.0.0/24</para>
+        /// <para>192.168.0.1/24</para>
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The network access control list (ACL) rules.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nacl-bp1fg655nh68xyz9****</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]

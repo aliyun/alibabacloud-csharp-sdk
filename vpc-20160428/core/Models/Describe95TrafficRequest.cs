@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class Describe95TrafficRequest : TeaModel {
         /// <summary>
-        /// <para>The date in UTC+8. Format: year-month-day.</para>
+        /// <para>The date to query, in UTC+8. Format: YYYY-MM-DD.</para>
+        /// <remarks>
+        /// <para>You can query only data from last month or earlier.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the resource.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to cbwp, which specifies Internet Shared Bandwidth.</para>
+        /// <para>The resource type. Only <b>cbwp</b> is supported, which represents Internet Shared Bandwidth.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

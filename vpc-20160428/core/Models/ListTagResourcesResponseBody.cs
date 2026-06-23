@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next queries are sent.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value is used to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value is the token used to start the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteVpnAttachmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned by the current operation. <b>200</b> indicates that the operation is successful.</para>
+        /// <para>The status code returned by the current task. A value of <b>200</b> indicates that the task is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information returned by the current operation.</para>
+        /// <para>The message returned by the current task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current operation is successful.</para>
+        /// <para>Indicates whether the current task is successfully executed.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The task is successfully executed.</description></item>
+        /// <item><description><b>false</b>: The task failed to be executed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

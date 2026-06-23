@@ -11,7 +11,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class DeleteExpressConnectTrafficQosRuleRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>ClientToken</b> value can contain only ASCII characters.</para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-00****</para>
@@ -29,22 +32,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS policy.</para>
+        /// <para>The QoS policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qos-2giu0a6vd5x0mv4700</para>
+        /// <para>qos-2giu0a6vd5x0mv****</para>
         /// </summary>
         [NameInMap("QosId")]
         [Validation(Required=false)]
         public string QosId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS queue.</para>
+        /// <para>The QoS queue ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qos-queue-9nyx2u7n71s2rcy4n5</para>
+        /// <para>qos-queue-9nyx2u7n71s2rc****</para>
         /// </summary>
         [NameInMap("QueueId")]
         [Validation(Required=false)]
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the QoS policy.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,11 +70,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the QoS rule.</para>
+        /// <para>The QoS rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qos-rule-iugg0l9x27f2nocouj</para>
+        /// <para>qos-rule-iugg0l9x27f2no****</para>
         /// </summary>
         [NameInMap("RuleId")]
         [Validation(Required=false)]

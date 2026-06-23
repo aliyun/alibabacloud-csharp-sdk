@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeRouteEntryListRequest : TeaModel {
         /// <summary>
-        /// <para>The destination CIDR blocks of the routes.</para>
+        /// <para>The list of destination CIDR blocks of route entries.</para>
         /// </summary>
         [NameInMap("DestCidrBlockList")]
         [Validation(Required=false)]
         public List<string> DestCidrBlockList { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route. IPv4 and IPv6 CIDR blocks are supported.</para>
+        /// <para>The destination CIDR block of the route entry. Both IPv4 and IPv6 CIDR blocks are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.2.0/24</para>
@@ -27,21 +27,23 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The IP version. Valid values:</para>
+        /// <para>The version of the IP protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPv4</b></description></item>
-        /// <item><description><b>IPv6</b></description></item>
+        /// <item><description><para><b>ipv4</b>: IPv4 protocol.</para>
+        /// </description></item>
+        /// <item><description><para><b>ipv6</b>: IPv6 protocol.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>IPv4</para>
+        /// <para>ipv4</para>
         /// </summary>
         [NameInMap("IpVersion")]
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return per page during a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResult { get; set; }
 
         /// <summary>
-        /// <para>The ID of the next hop.</para>
+        /// <para>The ID of the next hop instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp10zyaph5cc8b7c7****</para>
@@ -61,20 +63,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopId { get; set; }
 
         /// <summary>
-        /// <para>The next hop type. Valid values:</para>
+        /// <para>The type of the next hop. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Instance</b>: an Elastic Compute Service (ECS) instance. This is the default value.</description></item>
-        /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HaVip).</description></item>
-        /// <item><description><b>VpnGateway</b>: a VPN gateway.</description></item>
-        /// <item><description><b>NatGateway</b>: a NAT gateway.</description></item>
-        /// <item><description><b>NetworkInterface</b>: a secondary elastic network interface (ENI).</description></item>
-        /// <item><description><b>RouterInterface</b>: a router interface.</description></item>
-        /// <item><description><b>IPv6Gateway</b>: an IPv6 gateway.</description></item>
-        /// <item><description><b>Attachment</b>: a transit router.</description></item>
-        /// <item><description><b>Ipv4Gateway</b>: an IPv4 gateway.</description></item>
-        /// <item><description><b>GatewayEndpoint</b>: a gateway endpoint.</description></item>
-        /// <item><description><b>CenBasic</b>: CEN does not support transit routers.</description></item>
-        /// <item><description><b>Ecr</b>: Express Connect Router (ECR).</description></item>
+        /// <item><description><para><b>Instance</b> (default): ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>HaVip</b>: high-availability virtual IP address (HAVIP).</para>
+        /// </description></item>
+        /// <item><description><para><b>VpnGateway</b>: VPN gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>NatGateway</b>: NAT gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>NetworkInterface</b>: secondary elastic network interface.</para>
+        /// </description></item>
+        /// <item><description><para><b>RouterInterface</b>: router interface.</para>
+        /// </description></item>
+        /// <item><description><para><b>IPv6Gateway</b>: IPv6 gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>Attachment</b>: transit router.</para>
+        /// </description></item>
+        /// <item><description><para><b>Ipv4Gateway</b>: IPv4 gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>GatewayEndpoint</b>: gateway endpoint.</para>
+        /// </description></item>
+        /// <item><description><para><b>Ecr</b>: Express Connect Router.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,10 +97,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string NextHopType { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>Specifies whether a next query token (Token) exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>You must specify the token that is obtained from the previous query as the value of NextToken.</description></item>
+        /// <item><description>You do not need to specify this parameter for the first query or if no next query exists.</description></item>
+        /// <item><description>If a next query exists, set the value to the NextToken value returned from the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,8 +119,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the route table.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the route table to which the route entry belongs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +139,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route that you want to query.</para>
+        /// <para>The ID of the route entry to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rte-bp1mnnr2al0naomnp****</para>
@@ -148,13 +160,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteEntryName { get; set; }
 
         /// <summary>
-        /// <para>The route type. Valid values:</para>
+        /// <para>The type of the route. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Custom</b>: custom routes.</description></item>
-        /// <item><description><b>System</b>: system routes.</description></item>
-        /// <item><description><b>BGP</b>: BGP routes.</description></item>
-        /// <item><description><b>CEN</b>: Cloud Enterprise Network (CEN) routes.</description></item>
-        /// <item><description><b>ECR</b>: Express Connect Router (ECR) routes.</description></item>
+        /// <item><description><b>Custom</b>: custom route.</description></item>
+        /// <item><description><b>System</b>: system route.</description></item>
+        /// <item><description><b>BGP</b>: BGP route.</description></item>
+        /// <item><description><b>CEN</b>: Cloud Enterprise Network (CEN) route.</description></item>
+        /// <item><description><b>ECR</b>: Express Connect Router route.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,7 +177,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteEntryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table that you want to query.</para>
+        /// <para>The ID of the route table to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -176,8 +188,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to host the route. If the parameter is empty, the route is not hosted.</para>
-        /// <para>Set the value to <b>TR</b>, which specifies that the route is hosted by a transit router.</para>
+        /// <para>The type of route service. If this field is empty, it indicates that the route is not managed.</para>
+        /// <para>Valid value: <b>TR</b>, which indicates that the managed type is transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TR</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The order number. This parameter is returned if InstanceChargeType is set to PrePaid.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>202008594930117</para>
+        /// <para>20210101123456</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

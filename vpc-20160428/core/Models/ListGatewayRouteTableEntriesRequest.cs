@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListGatewayRouteTableEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The destination CIDR block of the route entry in the gateway route table.</para>
+        /// <para>The destination CIDR block of the route entry in the gateway route table that you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.5</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DestinationCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The ID of the gateway route table that you want to query.</para>
+        /// <para>The ID of the gateway route table to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string GatewayRouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for a paged query. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</description></item>
+        /// <item><description>If this is the first query or no subsequent query exists, leave this parameter empty.</description></item>
+        /// <item><description>If a subsequent query exists, set this parameter to the NextToken value returned in the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the gateway route table.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>The region ID of the gateway route table that you want to query.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCustomerGatewayAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The timestamp generated when the customer gateway was created.</para>
+        /// <para>The timestamp when the customer gateway was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492747187000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the customer gateway.</para>
+        /// <para>The instance ID of the customer gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cgw-bp1pvpl9r9adju6l5****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the gateway device in the data center.</para>
+        /// <para>The public IP address of the on-premises data center gateway device.</para>
         /// 
         /// <b>Example:</b>
         /// <para>139.32.XX.XX</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the customer gateway belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>

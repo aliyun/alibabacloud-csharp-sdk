@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VBR failover group.</para>
+        /// <para>The instance ID of the VBR failover group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vbrha-sa1sxheuxtd98****</para>

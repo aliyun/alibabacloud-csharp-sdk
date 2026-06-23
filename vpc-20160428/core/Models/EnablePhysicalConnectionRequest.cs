@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class EnablePhysicalConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to skip the order lifecycle. Valid values:</para>
+        /// <para>Specifies whether to bypass the service provider (SP) subscription lifecycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Bypasses the SP subscription lifecycle. This means the instance is no longer managed by the Alibaba Cloud subscription system.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Does not bypass the SP subscription lifecycle.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> To use this feature, you must contact your account manager.</para>
+        /// <para>To use this feature, contact your account manager.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,8 +29,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? ByPassSp { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that is used to ensure the idempotence of the request.</para>
+        /// <para>The token must be unique across requests. The token can contain a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>02fb3da4-130e-11e9-8e44-0016e04115b</para>
@@ -46,19 +48,19 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Express Connect circuit.</para>
+        /// <para>The ID of the physical connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-119mfjz****</para>
+        /// <para>pc-2zeoaxkq3x****</para>
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
         [Validation(Required=false)]
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Express Connect circuit is deployed.</para>
-        /// <para>You can call the DescribeRegions operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the physical connection is located.</para>
+        /// <para>You can call <c>DescribeRegions</c> to get the latest region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

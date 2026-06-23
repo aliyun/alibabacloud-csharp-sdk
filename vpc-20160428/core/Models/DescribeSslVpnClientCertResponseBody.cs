@@ -13,7 +13,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The CA certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CA certificate</para>
+        /// <para>-----BEGIN CERTIFICATE-----
+        /// MIID****r4w=
+        /// -----END CERTIFICATE-----</para>
         /// </summary>
         [NameInMap("CaCert")]
         [Validation(Required=false)]
@@ -23,7 +25,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Client certificate</para>
+        /// <para>-----BEGIN CERTIFICATE-----
+        /// MIIDR****A==
+        /// -----END CERTIFICATE-----</para>
         /// </summary>
         [NameInMap("ClientCert")]
         [Validation(Required=false)]
@@ -33,7 +37,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Client configuration</para>
+        /// <para>client
+        /// dev tun
+        /// proto tcp
+        /// remote 120.XX.XX.33 1194
+        /// resolv-retry infinite
+        /// nobind
+        /// persist-key
+        /// persist-tun
+        /// ca ca.crt
+        /// cert vsc-bp15t7****.crt
+        /// key vsc-bp15t7****.key
+        /// cipher AES-128-CBC
+        /// ;comp-lzo
+        /// verb 4</para>
         /// </summary>
         [NameInMap("ClientConfig")]
         [Validation(Required=false)]
@@ -43,7 +60,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client key.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The key of the client</para>
+        /// <para>-----BEGIN RSA PRIVATE KEY-----
+        /// MIIEpAI****ZzNFhuM/za==
+        /// -----END RSA PRIVATE KEY-----</para>
         /// </summary>
         [NameInMap("ClientKey")]
         [Validation(Required=false)]

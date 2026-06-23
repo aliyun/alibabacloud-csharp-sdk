@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewayAvailableZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The zones.</para>
+        /// <para>The list of zones.</para>
         /// </summary>
         [NameInMap("AvailableZoneIdList")]
         [Validation(Required=false)]

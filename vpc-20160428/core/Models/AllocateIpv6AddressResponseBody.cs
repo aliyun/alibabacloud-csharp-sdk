@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPv6 address.</para>
+        /// <para>The instance ID of the IPv6 address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipv6-2zen5j4axcp5l5qyy****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazdjdhd****</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group to which you want to move the resource.</para>
+        /// <para>The ID of the resource group to which you want to move the cloud resource instance.</para>
         /// <remarks>
-        /// <para> You can use resource groups to facilitate resource grouping and permission management for an Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></para>
+        /// <para>A resource group is a mechanism for managing resources by group within an Alibaba Cloud account. Resource groups help you address complex resource grouping and authorization management issues within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the cloud resource belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the cloud resource.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The instance ID of the cloud resource for which you want to modify the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,21 +63,22 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource for which you want to modify the resource group. Valid values:</para>
+        /// <para>The type of the cloud resource for which you want to modify the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Vpc</b></description></item>
-        /// <item><description><b>Eip</b></description></item>
-        /// <item><description><b>BandwidthPackage</b></description></item>
-        /// <item><description><b>PrefixList</b></description></item>
-        /// <item><description><b>PublicIpAddressPool</b></description></item>
-        /// <item><description><b>FlowLog</b></description></item>
-        /// <item><description><b>HaVip</b></description></item>
-        /// <item><description><b>TrafficMirrorFilter</b></description></item>
-        /// <item><description><b>TrafficMirrorSession</b></description></item>
-        /// <item><description><b>IPv4Gateway</b></description></item>
-        /// <item><description><b>IPv6Gateway</b></description></item>
-        /// <item><description><b>DhcpOptionsSet</b></description></item>
-        /// <item><description><b>GatewayEndpoint</b></description></item>
+        /// <item><description><b>Vpc</b>: virtual private cloud (VPC)</description></item>
+        /// <item><description><b>Eip</b>: elastic IP address (EIP)</description></item>
+        /// <item><description><b>BandwidthPackage</b>: Internet Shared Bandwidth</description></item>
+        /// <item><description><b>PrefixList</b>: prefix list</description></item>
+        /// <item><description><b>PublicIpAddressPool</b>: IPAM pool</description></item>
+        /// <item><description><b>FlowLog</b>: flow log</description></item>
+        /// <item><description><b>HaVip</b>: high-availability (HA) virtual IP address</description></item>
+        /// <item><description><b>TrafficMirrorFilter</b>: traffic mirror filter</description></item>
+        /// <item><description><b>TrafficMirrorSession</b>: traffic mirror session</description></item>
+        /// <item><description><b>IPv4Gateway</b>: IPv4 gateway</description></item>
+        /// <item><description><b>IPv6Gateway</b>: IPv6 gateway</description></item>
+        /// <item><description><b>IPv6Address</b>: IPv6 address</description></item>
+        /// <item><description><b>DhcpOptionsSet</b>: DHCP options set</description></item>
+        /// <item><description><b>GatewayEndpoint</b>: gateway endpoint</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

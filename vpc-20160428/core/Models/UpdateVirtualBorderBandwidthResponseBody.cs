@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UpdateVirtualBorderBandwidthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values:</para>
+        /// <para>Indicates whether the modification was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

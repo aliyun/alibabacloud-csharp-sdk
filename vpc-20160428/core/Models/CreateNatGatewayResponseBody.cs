@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The instance ID of the NAT gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ngw-112za33e4****</para>

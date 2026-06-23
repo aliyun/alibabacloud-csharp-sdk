@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the hosted connection.</para>
+        /// <para>The instance ID of the shared Express Connect circuits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp1mrgfbtmc9brre7****</para>

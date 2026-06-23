@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class UnassociateEipAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the EIP that you want to disassociate.</para>
+        /// <para>The ID of the EIP to disassociate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,10 +35,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:</para>
+        /// <para>Specifies whether to forcefully disassociate the EIP when the EIP is associated with a NAT gateway that has DNAT or SNAT entries configured. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b> (default): does not forcefully disassociate the EIP.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: forcefully disassociates the EIP.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +51,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance from which you want to disassociate the EIP.</para>
+        /// <para>The instance ID of the cloud resource from which to disassociate the EIP.
+        /// You can enter the instance ID of a NAT gateway, Classic Load Balancer (CLB) instance, ECS instance, secondary elastic network interface controller (NIC), high availability virtual IP address instance, or an IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-hp3akk9irtd69jad****</para>
@@ -59,13 +62,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of instance from which you want to disassociate the EIP. Valid values:</para>
+        /// <para>The type of the cloud resource from which to disassociate the EIP. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>EcsInstance</b> (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</description></item>
-        /// <item><description><b>SlbInstance</b>: a Server Load Balancer (SLB) instance in a VPC</description></item>
-        /// <item><description><b>NetworkInterface</b>: a secondary elastic network interface (ENI) in a VPC</description></item>
-        /// <item><description><b>Nat</b>: a NAT gateway</description></item>
-        /// <item><description><b>HaVip</b>: a high-availability virtual IP address (HAVIP)</description></item>
+        /// <item><description><para><b>EcsInstance</b> (default): an ECS instance in a virtual private cloud (VPC).   </para>
+        /// </description></item>
+        /// <item><description><para><b>SlbInstance</b>: a load balancing instance in a virtual private cloud (VPC).   </para>
+        /// </description></item>
+        /// <item><description><para><b>NetworkInterface</b>: a secondary elastic network interface controller (NIC) in a virtual private cloud (VPC).</para>
+        /// </description></item>
+        /// <item><description><para><b>Nat</b>: a NAT gateway.  </para>
+        /// </description></item>
+        /// <item><description><para><b>HaVip</b>: a high availability virtual IP address.</para>
+        /// </description></item>
+        /// <item><description><para><b>IpAddress</b>: an IP address.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the ECS instance or the secondary ENI from which you want to disassociate the EIP.</para>
+        /// <para>The private IP address of the ECS instance or secondary elastic network interface controller (NIC) instance from which to disassociate the EIP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.XX.XX.2</para>
@@ -94,7 +104,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the EIP belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the EIP to disassociate.
+        ///  You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

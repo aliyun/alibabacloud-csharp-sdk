@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateNatIpCidrResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the NAT CIDR block.</para>
+        /// <para>The instance ID of the NAT CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpcnatcidr-gw8lhqtvdn4qnea****</para>

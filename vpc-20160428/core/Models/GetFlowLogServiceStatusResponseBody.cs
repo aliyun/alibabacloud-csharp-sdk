@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class GetFlowLogServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the flow log feature is enabled. Valid values:</para>
+        /// <para>Indicates whether the flow log feature is activated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to enable the flow log feature.</description></item>
+        /// <item><description><para><b>true</b>: activated.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: not activated. You can call the <a href="https://help.aliyun.com/document_detail/449637.html">OpenFlowLogService</a> operation to activate the flow log feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>54B48E3D-DF70-471B-AA93-06F83A1B457</para>

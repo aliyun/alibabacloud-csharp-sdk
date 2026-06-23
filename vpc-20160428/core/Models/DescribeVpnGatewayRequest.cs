@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to include the data about pending orders. Valid values:</para>
+        /// <para>Specifies whether to include pending order data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default)</description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b> (default): does not include pending order data.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: includes pending order data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,8 +34,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPN gateway.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPN gateway. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

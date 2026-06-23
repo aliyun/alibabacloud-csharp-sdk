@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpcGrantRulesToEcrRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ECR that you want to query.</para>
+        /// <para>The ID of the Express Connect Router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecr-ncxadcujadncsa****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string EcrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the ECR belongs.</para>
+        /// <para>The ID of the Alibaba Cloud account (main account) that owns the Express Connect Router.</para>
         /// <remarks>
-        /// <para>If you want to connect to a network instance that belongs to a different account, this parameter is required.</para>
+        /// <para>This parameter is required when querying a cross-account network instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of instance. Valid values:</para>
+        /// <para>The type of instance whose authorization rules you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VBR</b>: queries the permissions that are granted to a VBR.</description></item>
-        /// <item><description><b>VPC</b>: queries the permissions that are granted from a VPC.</description></item>
+        /// <item><description><para><b>VBR</b>: Set the value to <b>VBR</b> to query the Virtual Private Cloud (VPC) instances authorized to connect to the specified virtual border router (VBR).</para>
+        /// </description></item>
+        /// <item><description><para><b>VPC</b>: Set the value to <b>VPC</b> to query the VBRs to which the specified VPC has granted authorization.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return per page. Valid values: <b>1</b> to <b>100</b>. Default value: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -67,10 +69,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first request.</description></item>
-        /// <item><description>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</description></item>
+        /// <item><description><para>Omit this parameter for the first request.</para>
+        /// </description></item>
+        /// <item><description><para>For subsequent requests, set this to the <b>NextToken</b> value from the previous response.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network instance that you want to query.</para>
+        /// <para>The ID of the region where the network instance is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,15 +122,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tag.</para>
+        /// <para>The tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeVpcGrantRulesToEcrRequestTags> Tags { get; set; }
         public class DescribeVpcGrantRulesToEcrRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. You must specify at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>acs:</c> or <c>aliyun</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -136,8 +140,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag. You can enter a maximum of 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length, and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

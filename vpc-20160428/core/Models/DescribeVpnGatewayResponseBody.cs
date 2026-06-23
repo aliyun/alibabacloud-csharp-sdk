@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVpnGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</para>
+        /// <para>Indicates whether the routing automatic propagation feature is enabled for the VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The payment status of the VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b></description></item>
-        /// <item><description><b>FinancialLocked</b></description></item>
+        /// <item><description><para><b>Normal</b>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><b>FinancialLocked</b>: locked due to overdue payment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +42,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid value:</para>
-        /// <para><b>POSTPAY</b>: pay-as-you-go</para>
+        /// <para>The billing method. Value:</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;<b>POSTPAY</b>: pay-as-you-go billing method.</para>
+        /// <para>&lt;props=&quot;partner&quot;&gt;<b>POSTPAY</b>: pay-as-you-go billing method.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;<b>Prepay</b>: subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>中国站示例值：Prepay，国际站示例值：POSTPAY</para>
@@ -50,7 +56,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The timestamp when the VPN gateway was created. Unit: milliseconds.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp follows the UNIX time format, which represents the total number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1495382400000</para>
@@ -70,8 +76,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The second IP address assigned by the system to create an IPsec-VPN connection.</para>
-        /// <para>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</para>
+        /// <para>The second IP address assigned by the system to the VPN gateway instance for creating IPsec-VPN connections.</para>
+        /// <para>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.91.XX.XX</para>
@@ -81,8 +87,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DisasterRecoveryInternetIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the second vSwitch associated with the VPN gateway.</para>
-        /// <para>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</para>
+        /// <para>The ID of the second vSwitch associated with the VPN gateway instance.</para>
+        /// <para>This parameter is returned only for VPN gateway instances that support creating dual-tunnel IPsec-VPN connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-p0w95ql6tmr2ludkt****</para>
@@ -92,10 +98,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DisasterRecoveryVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether BGP is enabled for the VPN gateway. Valid values:</para>
+        /// <para>The enabling status of the BGP feature for the VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,8 +114,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableBgp { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the VPN gateway expires. Unit: milliseconds.</para>
-        /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The expiration timestamp of the VPN gateway. Unit: milliseconds.</para>
+        /// <para>The timestamp follows the UNIX time format, which represents the total number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1544666102000</para>
@@ -127,10 +135,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Type of VPN gateway:</para>
+        /// <para>The type of the VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Traditional</b>: Traditional-type VPN gateway, supports both IPSec and SSL.</description></item>
-        /// <item><description><b>Enhanced.SiteToSite</b>: Enhanced Site-to-Site VPN gateway, only supports IPSec.</description></item>
+        /// <item><description><b>Traditional</b>: traditional VPN gateway that supports both IPsec and SSL features.</description></item>
+        /// <item><description><b>Enhanced.SiteToSite</b>: enhanced site-to-cloud VPN gateway that supports only the IPsec feature.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -142,10 +150,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</para>
+        /// <item><description><para>If the VPN gateway instance supports creating single-tunnel IPsec-VPN connections, this address is the IP address of the VPN gateway instance and can be used to create IPsec-VPN connections or SSL-VPN connections.</para>
         /// </description></item>
-        /// <item><description><para>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection.</para>
-        /// <para>If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.</para>
+        /// <item><description><para>If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, this address is the first IP address used to create IPsec-VPN connections and cannot be used to create SSL-VPN connections.</para>
+        /// <para>  If the VPN gateway instance supports creating dual-tunnel IPsec-VPN connections, the system assigns two IPsec IP addresses to the VPN gateway instance for creating dual-tunnel IPsec-VPN connections.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -159,8 +167,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether the IPsec-VPN feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b></description></item>
-        /// <item><description><b>disable</b></description></item>
+        /// <item><description><para><b>enable</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,8 +193,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The network type of the VPN gateway.</para>
         /// <list type="bullet">
-        /// <item><description><b>public</b></description></item>
-        /// <item><description><b>private</b></description></item>
+        /// <item><description><b>public</b>: public VPN gateway.</description></item>
+        /// <item><description><b>private</b>: private VPN gateway.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -205,9 +215,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about pending orders.</para>
+        /// <para>The pending order data.</para>
         /// <remarks>
-        /// <para>This set of parameters is returned only when <b>IncludeReservationData</b> is set to <b>true</b>.</para>
+        /// <para>This parameter is returned only when <b>IncludeReservationData</b> is set to <b>true</b>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ReservationData")]
@@ -215,8 +225,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public DescribeVpnGatewayResponseBodyReservationData ReservationData { get; set; }
         public class DescribeVpnGatewayResponseBodyReservationData : TeaModel {
             /// <summary>
-            /// <para>If the order type is <b>TEMP_UPGRADE</b> (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</para>
-            /// <para>If the order type is <b>RENEWCHANGE</b> (renewal with a specification change) or <b>RENEW</b> (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.</para>
+            /// <para>If the pending order type is <b>TEMP_UPGRADE</b> (temporary upgrade), this parameter indicates the revert time for the temporary upgrade.</para>
+            /// <para>If the pending order type is <b>RENEWCHANGE</b> (renewal with specification change) or <b>RENEW</b> (renewal), this parameter indicates the effective period when the renewal or renewal with specification change takes effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-07-20T16:00:00Z</para>
@@ -226,10 +236,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ReservationEndTime { get; set; }
 
             /// <summary>
-            /// <para>The IPsec-VPN status of the pending order. Valid values:</para>
+            /// <para>The enabling status of the IPsec-VPN feature for the pending order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>enable</b></description></item>
-            /// <item><description><b>disable</b></description></item>
+            /// <item><description><para><b>enable</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>disable</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -252,9 +264,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The type of the pending order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RENEWCHANGE</b>: renewal with upgrade or downgrade</description></item>
-            /// <item><description><b>TEMP_UPGRADE</b>: temporary upgrade</description></item>
-            /// <item><description><b>RENEW</b>: renewal</description></item>
+            /// <item><description><para><b>RENEWCHANGE</b>: renewal with specification change.</para>
+            /// </description></item>
+            /// <item><description><para><b>TEMP_UPGRADE</b>: temporary upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><b>RENEW</b>: renewal.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -265,7 +280,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ReservationOrderType { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth of the pending order. Unit: Mbit/s.</para>
+            /// <para>The bandwidth specification of the pending order. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -275,10 +290,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ReservationSpec { get; set; }
 
             /// <summary>
-            /// <para>The SSL-VPN status of the pending order. Valid values:</para>
+            /// <para>The enabling status of the SSL-VPN feature for the pending order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>enable</b></description></item>
-            /// <item><description><b>disable</b></description></item>
+            /// <item><description><para><b>enable</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>disable</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -291,8 +308,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The status of the pending order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: indicates that the order of the renewal or specification change has not taken effect.</description></item>
-            /// <item><description><b>2</b>: indicates that the order is an order for temporary upgrade and the order has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, <b>ReservationIpsec</b>, <b>ReservationMaxConnections</b>, <b>ReservationSpec</b>, and <b>ReservationSsl</b> indicate the previous specification.</description></item>
+            /// <item><description><para><b>1</b>: The renewal or renewal with specification change order has not taken effect.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: The temporary upgrade order has taken effect. After the restoration time is reached, the system restores the VPN gateway to the specification before the temporary upgrade. In this case, <b>ReservationIpsec</b>, <b>ReservationMaxConnections</b>, <b>ReservationSpec</b>, and <b>ReservationSsl</b> indicate the specifications before the temporary upgrade.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -306,7 +325,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the VPN gateway belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
@@ -316,7 +335,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth of the VPN gateway. Unit: Mbit/s.</para>
+        /// <para>The bandwidth specification of the VPN gateway. Unit: Mbit/s.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -336,10 +355,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? SslMaxConnections { get; set; }
 
         /// <summary>
-        /// <para>The status of the SSL-VPN feature. Valid values:</para>
+        /// <para>The enabling status of the SSL-VPN feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enable</b></description></item>
-        /// <item><description><b>disable</b></description></item>
+        /// <item><description><para><b>enable</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -351,7 +372,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The IP address of the SSL-VPN connection.</para>
-        /// <para>This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.</para>
+        /// <para>This parameter is returned only when the SSL-VPN feature is enabled on a VPN gateway instance of the public network type that supports creating dual-tunnel IPsec-VPN connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.74.XX.XX</para>
@@ -363,11 +384,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the VPN gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>init</b></description></item>
-        /// <item><description><b>provisioning</b></description></item>
-        /// <item><description><b>active</b></description></item>
-        /// <item><description><b>updating</b></description></item>
-        /// <item><description><b>deleting</b></description></item>
+        /// <item><description><para><b>init</b>: initializing.</para>
+        /// </description></item>
+        /// <item><description><para><b>provisioning</b>: preparing.</para>
+        /// </description></item>
+        /// <item><description><para><b>active</b>: Normal.</para>
+        /// </description></item>
+        /// <item><description><para><b>updating</b>: updating.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: deleting.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -378,40 +404,33 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tag that is automatically generated for the VPN gateway. The tag consists of the following parameters:</para>
+        /// <para>The labels automatically generated by the system for the VPN gateway.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>VpnEnableBgp</b>: indicates whether the VPN gateway supports BGP. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>VpnEnableBgp</b>: indicates whether the VPN gateway supports the BGP feature.<list type="bullet">
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>VisuallySsl</b>: indicates whether the VPN gateway allows you to view the connection information of SSL clients. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>VisuallySsl</b>: indicates whether the VPN gateway supports viewing connection information of SSL clients.<list type="bullet">
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>PbrPriority</b>: indicates whether the VPN gateway allows you to configure priorities for policy-based routes. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>PbrPriority</b>: indicates whether the VPN gateway supports configuring policy priority for policy-based routing.<list type="bullet">
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>VpnNewImage</b>: indicates whether the VPN gateway is upgraded. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>VpnNewImage</b>: indicates whether the VPN gateway is a new-generation VPN gateway.<list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>description</b>: the description of the VPN gateway. This parameter is only for internal use.</para>
-        /// </description></item>
-        /// <item><description><para><b>VpnVersion</b>: the version of the VPN gateway.</para>
-        /// </description></item>
-        /// <item><description><para><b>IDaaSNewVersion</b>: indicates whether the VPN gateway can be associated with an EIAM 2.0 instance.</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>description</b>: the description of the VPN gateway, which is used only for internal system purposes.</description></item>
+        /// <item><description><b>VpnVersion</b>: the version number of the VPN gateway.</description></item>
+        /// <item><description><b>IDaaSNewVersion</b>: indicates whether the VPN gateway supports attaching to an EIAM 2.0 instance.<list type="bullet">
+        /// <item><description><b>true</b>: Supported.</description></item>
+        /// <item><description><b>false</b>: Not supported.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -431,22 +450,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             [Validation(Required=false)]
             public List<DescribeVpnGatewayResponseBodyTagsTag> Tag { get; set; }
             public class DescribeVpnGatewayResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>标签键。</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>aaa</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>标签值。</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>bbb</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -476,7 +483,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1r3v1xqkl0w519g****</para>
@@ -486,7 +493,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpnGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The type of VPN gateway. Only <b>Normal</b> may be returned, which indicates a standard VPN gateway.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The type of the VPN gateway. Value: <b>Normal</b>, which indicates a standard VPN gateway.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>The type of the VPN gateway. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Normal</b>: standard.</para>
+        /// </description></item>
+        /// <item><description><para><b>NationalStandard</b>: Chinese SM algorithm-based.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

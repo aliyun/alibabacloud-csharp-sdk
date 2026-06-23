@@ -293,7 +293,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The peer CA certificate when a ShangMi (SM) VPN gateway is used to create the IPsec-VPN connection.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c20ycDI1NnYxIENBIChURVNUIFN****</para>
+        /// <para>-----BEGIN CERTIFICATE----- MIIB7zCCAZW**** -----END CERTIFICATE-----</para>
         /// </summary>
         [NameInMap("RemoteCaCert")]
         [Validation(Required=false)]

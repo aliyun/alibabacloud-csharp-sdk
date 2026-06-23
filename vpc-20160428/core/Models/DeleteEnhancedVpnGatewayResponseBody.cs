@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DeleteEnhancedVpnGatewayResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E9A8AABE-A84B-4AF2-A68A-8E2EA190E7AE</para>
         /// </summary>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>VPC CIDR.</para>
         /// <list type="bullet">
-        /// <item><description>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</description></item>
-        /// <item><description>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</description></item>
+        /// <item><description><para>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</para>
+        /// </description></item>
+        /// <item><description><para>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>request ID</b> as the <b>client token</b>. The <b>request ID</b> may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,8 +53,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,8 +69,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Whether to enable the DNS hostname feature. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): Not enabled. </description></item>
-        /// <item><description><b>true</b>: Enabled.</description></item>
+        /// <item><description><para><b>false</b> (default): Not enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,8 +85,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether IPv6 is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b> (default): disabled.</description></item>
-        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><para><b>false</b> (default): disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,13 +154,17 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default)</description></item>
-        /// <item><description><b>ChinaMobile</b></description></item>
-        /// <item><description><b>ChinaUnicom</b></description></item>
-        /// <item><description><b>ChinaTelecom</b></description></item>
+        /// <item><description><para><b>BGP</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>ChinaMobile</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ChinaUnicom</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ChinaTelecom</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you are allowed to use single-ISP bandwidth, you can set the value to <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, or <b>ChinaMobile</b>.</para>
+        /// <para>If you are allowed to use single-ISP bandwidth, you can set the value to <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, or <b>ChinaMobile</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -237,7 +249,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>For more information about user CIDR blocks, see the <c>What is a user CIDR block?</c> section in <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.0.0/16</para>
+        /// <para>192.168.0.0/12</para>
         /// </summary>
         [NameInMap("UserCidr")]
         [Validation(Required=false)]

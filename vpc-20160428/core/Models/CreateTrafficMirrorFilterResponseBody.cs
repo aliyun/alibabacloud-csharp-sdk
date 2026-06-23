@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateTrafficMirrorFilterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28DB147D-217B-43E8-9E94-A3F6837DDC8A</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the mirrored traffic belongs.</para>
+        /// <para>The ID of the resource group to which the traffic mirror belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4ph****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the filter.</para>
+        /// <para>The instance ID of the traffic mirror filter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tmf-j6cmls82xnc86vtpe****</para>

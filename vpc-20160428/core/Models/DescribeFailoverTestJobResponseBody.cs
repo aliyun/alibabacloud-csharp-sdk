@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The ID of the failover test.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ftj-xxxxxxxxx</para>
+            /// <para>ftj-bp1yh6mvi13aq3g8w****</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]

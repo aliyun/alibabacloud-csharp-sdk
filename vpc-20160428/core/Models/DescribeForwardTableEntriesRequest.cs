@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>TCP</para>
+        /// <para>tcp</para>
         /// </summary>
         [NameInMap("IpProtocol")]
         [Validation(Required=false)]

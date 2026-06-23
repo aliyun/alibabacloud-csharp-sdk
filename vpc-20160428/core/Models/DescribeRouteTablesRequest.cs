@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page during paging. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -39,20 +39,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VPC to which the route table belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-6</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the route table to be queried belongs.</para>
+        /// <para>The ID of the resource group to which the route table belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmxazccb4ph****</para>
+        /// <para>rg-acfmxazb4ph****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
@@ -67,21 +67,27 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the route table that you want to query.</para>
+        /// <para>The ID of the route table to query.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>rtb-bp12mw1f8k3jgygk9****</para>
+        /// <para>vtb-bp145q7glnuzdvzu2****</para>
         /// </summary>
         [NameInMap("RouteTableId")]
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
         /// <summary>
-        /// <para>The name of the route table that you want to query.</para>
-        /// <para>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the route table to query.</para>
+        /// <para>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>RouteTable-1</para>
+        /// <para>doctest</para>
         /// </summary>
         [NameInMap("RouteTableName")]
         [Validation(Required=false)]
@@ -89,9 +95,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the router to which the route table belongs.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>vtb-bp1krxxzp0c29fmon****</para>
+        /// <para>vrt-bp1lhl0taikrteen8****</para>
         /// </summary>
         [NameInMap("RouterId")]
         [Validation(Required=false)]
@@ -100,8 +109,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the router to which the route table belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VRouter</b> (default)</description></item>
-        /// <item><description><b>VBR</b></description></item>
+        /// <item><description><b>VRouter</b> (default): vRouter.</description></item>
+        /// <item><description><b>VBR</b>: Virtual Border Router.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -112,26 +121,30 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RouterType { get; set; }
 
         /// <summary>
-        /// <para>The route type. Valid values:</para>
+        /// <para>The destination type of the route to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Custom</b></description></item>
-        /// <item><description><b>System</b></description></item>
-        /// <item><description><b>BGP</b></description></item>
-        /// <item><description><b>CEN</b></description></item>
+        /// <item><description><b>Custom</b>: custom route.</description></item>
+        /// <item><description><b>System</b>: system route.</description></item>
+        /// <item><description><b>BGP</b>: BGP route.</description></item>
+        /// <item><description><b>CEN</b>: Cloud Enterprise Network (CEN) route.</description></item>
+        /// <item><description><b>ECR</b>: Express Connect Router (ECR) route.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>custom</para>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vRouter.</para>
+        /// <para>The ID of the vRouter to query.</para>
+        /// <remarks>
+        /// <para>You must specify at least one of the following parameters: VRouterId, RouteTableId, RouterId, and RouteTableName. You cannot specify both VRouterId and RouterId at the same time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>vtb-bp1krxxzp0c29fmon****</para>
+        /// <para>vrt-bp1lhl0taikrteen****</para>
         /// </summary>
         [NameInMap("VRouterId")]
         [Validation(Required=false)]

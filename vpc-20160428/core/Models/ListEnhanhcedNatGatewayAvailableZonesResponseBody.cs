@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The name of the zone.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Dubai Zone A</para>
+            /// <para>中东1 可用区A</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]

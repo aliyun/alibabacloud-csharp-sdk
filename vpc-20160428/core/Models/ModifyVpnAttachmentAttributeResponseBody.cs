@@ -882,7 +882,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para><b>vpn-not-exist</b>: The IPsec-VPN connection is not associated with a VPN Gateway.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpn-p0wa1c1018pmeb6cu****</para>
+        /// <para>vpn-not-exist</para>
         /// </summary>
         [NameInMap("VpnGatewayId")]
         [Validation(Required=false)]

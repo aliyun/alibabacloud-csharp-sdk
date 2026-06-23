@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the Express Connect circuit.</para>
+        /// <para>物理专线的描述信息</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Name</para>
+        /// <para>物理专线的名称</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The geographical location of the data center.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>XX Number, XX Road, XX Town, XX District, Hangzhou City, Zhejiang Province.</para>
+        /// <para>浙江省杭州市XX区XX街道XX号</para>
         /// </summary>
         [NameInMap("PeerLocation")]
         [Validation(Required=false)]

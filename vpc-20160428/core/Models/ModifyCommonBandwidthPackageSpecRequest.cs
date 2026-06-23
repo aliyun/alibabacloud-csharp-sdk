@@ -10,8 +10,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifyCommonBandwidthPackageSpecRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</para>
-        /// <para>Valid values: <b>1</b> to <b>1000</b>.</para>
+        /// <para>The peak bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s. </para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>If the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <b>Bandwidth</b> is <b>2</b> to <b>20000</b>.</description></item>
+        /// <item><description>If the billing method of the Internet Shared Bandwidth instance is pay-by-95th-percentile-bandwidth, the default value range of <b>Bandwidth</b> is <b>200</b> to <b>20000</b>.</description></item>
+        /// <item><description>If the billing method of the Internet Shared Bandwidth instance is pay-by-traffic, the default value range of <b>Bandwidth</b> is <b>1</b> to <b>2000</b>.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;Valid values: <b>1</b> to <b>1000</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,8 +47,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the Internet Shared Bandwidth instance.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance. </para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

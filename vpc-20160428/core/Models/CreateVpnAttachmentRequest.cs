@@ -79,6 +79,16 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string CustomerGatewayId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run of the request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Sends a dry run request without creating the IPsec-VPN connection. The system checks whether required parameters are specified, whether the request format is valid, and whether business limits are met. If the check fails, an error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
+        /// <item><description><b>false</b> (default): Sends a normal request. If the check passes, the IPsec-VPN connection is created immediately.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
@@ -367,6 +377,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        /// <summary>
+        /// <para>Specifies the bandwidth specification for a single VPN tunnel. Valid values:
+        /// Standard (Default Value): medium, with a default bandwidth of 1 Gbps
+        /// Large: large, with a default bandwidth of 3 Gbps</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Standard</para>
+        /// </summary>
         [NameInMap("TunnelBandwidth")]
         [Validation(Required=false)]
         public string TunnelBandwidth { get; set; }

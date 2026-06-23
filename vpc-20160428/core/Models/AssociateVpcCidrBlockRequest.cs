@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class AssociateVpcCidrBlockRequest : TeaModel {
         /// <summary>
-        /// <para>The IPv6 CIDR block that you want to add to the VPC.</para>
+        /// <para>The specified IPv6 CIDR block of the VPC.</para>
         /// <remarks>
-        /// <para> You can specify only one of <b>SecondaryCidrBlock</b> and <b>Ipv6CidrBlock</b>.</para>
+        /// <para>You cannot specify both <b>SecondaryCidrBlock</b> and <b>Ipv6CidrBlock</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,8 +25,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The version of the IP address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPV4</b>: the IPv4 address.</description></item>
-        /// <item><description><b>IPV6</b>: the IPv6 address. If you set <b>IpVersion</b> to <b>IPV6</b> and do not specify <b>SecondaryCidrBlock</b>, you can add a secondary IPv6 CIDR block to the VPC.</description></item>
+        /// <item><description><b>IPV4</b>: IPv4 address.</description></item>
+        /// <item><description><b>IPV6</b>: IPv6 address. When <b>IpVersion</b> is set to <b>IPV6</b> and <b>SecondaryCidrBlock</b> is not specified, a secondary IPv6 CIDR block is added to the VPC.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IPAM pool.</para>
+        /// <para>The instance ID of the IPAM pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ipam-pool-sycmt3p2a9v63i****</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string IpamPoolId { get; set; }
 
         /// <summary>
-        /// <para>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</para>
+        /// <para>The subnet mask used to add an IPv6 CIDR block from an IPAM pool to the VPC.</para>
         /// <remarks>
-        /// <para> To add an IPv6 CIDR block to a VPC, specify at least one of the IPv6CidrBlock and Ipv6CidrMask parameters.</para>
+        /// <para>When you use an IPAM pool to add a secondary IPv6 CIDR block to the VPC, you must specify at least one of IPv6CidrBlock and Ipv6CidrMask.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,15 +60,15 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Ipv6CidrMask { get; set; }
 
         /// <summary>
-        /// <para>The type of the IPv6 CIDR block. Valid values:</para>
+        /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BGP</b> (default)</description></item>
-        /// <item><description><b>ChinaMobile</b></description></item>
-        /// <item><description><b>ChinaUnicom</b></description></item>
-        /// <item><description><b>ChinaTelecom</b></description></item>
+        /// <item><description><b>BGP</b> (default): Alibaba Cloud BGP IPv6.</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile (single ISP).</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom (single ISP).</description></item>
+        /// <item><description><b>ChinaTelecom</b>: China Telecom (single ISP).</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, you can set this parameter to <b>ChinaTelecom</b>, <b>ChinaUnicom</b>, or <b>ChinaMobile</b>.</para>
+        /// <para>If your account is included in the China single-ISP bandwidth whitelist, you can set this parameter to <b>ChinaTelecom</b> (China Telecom), <b>ChinaUnicom</b> (China Unicom), or <b>ChinaMobile</b> (China Mobile).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,11 +87,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC to which you want to add a secondary CIDR block.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region ID of the VPC to which you want to add a secondary CIDR block. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ch-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -106,18 +106,20 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR block to be added. Take note of the following requirements:</para>
+        /// <para>The secondary IPv4 CIDR block to add. The CIDR block must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>You can specify one of the following standard IPv4 CIDR blocks or their subnets as the secondary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8.</description></item>
-        /// <item><description>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the VPC.</description></item>
+        /// <item><description>Use a private IPv4 address specified in RFC 1918 as the secondary IPv4 CIDR block of the VPC. The subnet mask is recommended to be 16 to 28 bits in length. Examples: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</description></item>
+        /// <item><description>You can use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the secondary IPv4 CIDR block of the virtual private cloud (VPC).</description></item>
         /// </list>
-        /// <para>The CIDR block must meet the following requirements:</para>
+        /// <para>Configuration limits:</para>
         /// <list type="bullet">
-        /// <item><description>The CIDR block cannot start with 0. The subnet mask must be 8 to 28 bits in length.</description></item>
-        /// <item><description>The CIDR block cannot overlap with the primary CIDR block or an existing secondary CIDR block of the VPC.</description></item>
+        /// <item><description><para>The CIDR block cannot start with 0. The subnet mask is recommended to be 16 to 28 bits in length.</para>
+        /// </description></item>
+        /// <item><description><para>The secondary CIDR block cannot overlap with the primary CIDR block or existing secondary CIDR blocks of the VPC.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must and can specify only one of <b>SecondaryCidrBlock</b> and <b>IPv6CidrBlock</b>.</para>
+        /// <para>If you do not use an IPAM pool to add a secondary CIDR block to the VPC, you must specify either the <b>SecondaryCidrBlock</b> parameter or the <b>Ipv6CidrBlock</b> parameter, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,9 +130,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SecondaryCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>Add an IPv4 CIDR block from the IPAM pool to the VPC by specifying a mask.</para>
+        /// <para>The subnet mask used to add a secondary IPv4 CIDR block from an IPAM pool to the VPC.</para>
         /// <remarks>
-        /// <para> If you use an IPAM pool, you must specify at least one of SecondaryCidrBlock and SecondaryCidrMask.</para>
+        /// <para>When you use an IPAM pool to add a secondary IPv4 CIDR block to the VPC, you must specify at least one of SecondaryCidrBlock and SecondaryCidrMask.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

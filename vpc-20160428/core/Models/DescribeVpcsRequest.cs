@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DhcpOptionsSetId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the check succeeds, an HTTP 2xx status code is returned and the resource is queried.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,12 +36,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Query for VPCs in the specified region that have enabled IPv6 CIDR blocks. The value is empty by default, which means no filtering based on IPv6 availability is conducted. Valid values:</para>
+        /// <para>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is performed based on IPv6 enablement. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false: disabled</para>
-        /// </description></item>
-        /// <item><description><para>true: enabled</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: IPv6 is not enabled.</description></item>
+        /// <item><description><b>true</b>: IPv6 is enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? EnableIpv6 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the default VPC in the specified region. Valid values:</para>
+        /// <para>Specifies whether to query the default VPC in the specified region. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default)</description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b> (default): Queries the default VPC in the specified region.  </para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Does not query the default VPC.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page for paging. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -95,8 +97,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the VPC. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +109,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the VPC to be queried belongs.</para>
+        /// <para>The ID of the resource group to which the VPC belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxvfvazb4p****</para>
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVpcsRequestTag> Tag { get; set; }
         public class DescribeVpcsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
             /// <para>The tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -143,8 +145,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -156,7 +158,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The ID of the VPC. </para>
         /// <para>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the VPC belongs.</para>
+        /// <para>The Alibaba Cloud account ID of the VPC owner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>253460731706911258</para>

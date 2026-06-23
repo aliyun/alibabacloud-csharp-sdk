@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-zhangjiakou</para>
+        /// <para>eu-central-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

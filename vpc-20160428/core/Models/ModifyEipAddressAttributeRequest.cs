@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The new maximum bandwidth of the EIP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> to <b>200</b> if the metering method is pay-by-data-transfer. Unit: Mbit/s.</description></item>
-        /// <item><description><b>1</b> to <b>500</b> if the metering method is pay-by-bandwidth. Unit: Mbit/s.</description></item>
+        /// <item><description><para><b>1</b> to <b>200</b> if the metering method is pay-by-data-transfer. Unit: Mbit/s.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b> to <b>500</b> if the metering method is pay-by-bandwidth. Unit: Mbit/s.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

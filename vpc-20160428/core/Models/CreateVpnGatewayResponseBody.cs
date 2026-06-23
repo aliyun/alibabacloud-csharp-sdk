@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The order ID.</para>
-        /// <para>If automatic payment is disabled, you must manually complete the payment for the VPN gateway in the <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Alibaba Cloud Management console</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2.aliyun.com/home">Expenses and Costs</a> to complete the payment.
+        /// &lt;props=&quot;intl&quot;&gt;If you did not enable automatic payment for the VPN gateway bill, go to <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Expenses and Costs</a> to complete the payment..</para>
         /// 
         /// <b>Example:</b>
         /// <para>208240895400460</para>
@@ -41,7 +42,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The instance ID of the VPN gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-uf68lxhgr7ftbqr3p****</para>

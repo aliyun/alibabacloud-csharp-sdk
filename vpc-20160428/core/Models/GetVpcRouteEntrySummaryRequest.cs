@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom</para>
+        /// <para>custom</para>
         /// </summary>
         [NameInMap("RouteEntryType")]
         [Validation(Required=false)]

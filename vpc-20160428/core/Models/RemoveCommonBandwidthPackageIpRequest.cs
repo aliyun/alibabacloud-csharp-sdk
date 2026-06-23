@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class RemoveCommonBandwidthPackageIpRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Internet Shared Bandwidth instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BandwidthPackageId { get; set; }
 
         /// <summary>
+        /// <para>A client token used to ensure the idempotence of the request.  </para>
+        /// <para>Generate a unique value for this parameter from your client to guarantee uniqueness across different requests. ClientToken supports only ASCII characters.  </para>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
         /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <para>The ID of the EIP instance.  </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36018.html">DescribeEipAddresses</a> API to query the ID of the EIP instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the Internet Shared Bandwidth instance.  </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> API to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

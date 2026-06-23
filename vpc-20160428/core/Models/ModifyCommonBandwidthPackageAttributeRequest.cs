@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The description of the EIP bandwidth plan. The description must be 2 to 256 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>描述</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
