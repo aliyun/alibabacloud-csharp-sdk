@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>a1b2c3d4e5f6...</para>
+            /// <para>a1b2c3d4e5f6</para>
             /// </summary>
             [NameInMap("keyHash")]
             [Validation(Required=false)]
@@ -69,10 +69,6 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string RedemptionOrderNo { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
             [NameInMap("reused")]
             [Validation(Required=false)]
             public bool? Reused { get; set; }
@@ -87,7 +83,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>1000</para>
+                /// <para>100000</para>
                 /// </summary>
                 [NameInMap("quotaLimit")]
                 [Validation(Required=false)]
@@ -123,24 +119,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("retryAble")]
         [Validation(Required=false)]
         public bool? RetryAble { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

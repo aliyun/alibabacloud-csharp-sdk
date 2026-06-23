@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class CreateFinReportSummaryTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Document ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DocId { get; set; }
 
         /// <summary>
+        /// <para>Enable table</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? EnableTable { get; set; }
 
         /// <summary>
+        /// <para>End page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -37,11 +41,18 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public int? EndPage { get; set; }
 
+        /// <summary>
+        /// <para>Instruction</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>请帮我总结一下。</para>
+        /// </summary>
         [NameInMap("instruction")]
         [Validation(Required=false)]
         public string Instruction { get; set; }
 
         /// <summary>
+        /// <para>Document library ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +63,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string LibraryId { get; set; }
 
         /// <summary>
+        /// <para>Model ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ModelId { get; set; }
 
         /// <summary>
+        /// <para>Start page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public int? StartPage { get; set; }
 
         /// <summary>
+        /// <para>Task type. Optional. Defaults to finance_report. If you set this to custom, provide an instruction.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom</para>
         /// </summary>

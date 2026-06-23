@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class UpdateQaLibraryRequest : TeaModel {
         /// <summary>
+        /// <para>A list of parsed Q\&amp;A pair results.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("parseQaResults")]
@@ -17,14 +18,22 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public List<UpdateQaLibraryRequestParseQaResults> ParseQaResults { get; set; }
         public class UpdateQaLibraryRequestParseQaResults : TeaModel {
             /// <summary>
+            /// <para>The answer.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这款**糯米大烧麦的净含量是900g。</para>
             /// </summary>
             [NameInMap("answer")]
             [Validation(Required=false)]
             public string Answer { get; set; }
 
             /// <summary>
+            /// <para>The question.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这款**糯米大烧麦的净含量是多少？</para>
             /// </summary>
             [NameInMap("question")]
             [Validation(Required=false)]
@@ -33,6 +42,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
+        /// <para>The ID of the Q\&amp;A library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6jh378d</para>
         /// </summary>
@@ -41,6 +52,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string QaLibraryId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

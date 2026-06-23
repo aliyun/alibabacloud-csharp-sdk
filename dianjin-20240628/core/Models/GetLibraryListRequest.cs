@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetLibraryListRequest : TeaModel {
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>Number of records per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -25,6 +29,12 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Search keywords. Supports document library names and descriptions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试文档库</para>
+        /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }

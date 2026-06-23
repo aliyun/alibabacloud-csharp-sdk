@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request is part of a stress test</para>
+        /// </summary>
         [NameInMap("X-Load-Test")]
         [Validation(Required=false)]
         public bool? XLoadTest { get; set; }

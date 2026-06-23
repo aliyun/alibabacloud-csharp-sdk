@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>your_user_id_001</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("externalUserId")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>a1b2c3d4e5f6...</para>
+        /// <para>sbyusgdfjsg</para>
         /// </summary>
         [NameInMap("keyHash")]
         [Validation(Required=false)]
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10001</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("templateId")]
         [Validation(Required=false)]

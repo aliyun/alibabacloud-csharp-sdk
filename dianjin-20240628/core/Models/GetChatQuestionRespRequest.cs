@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetChatQuestionRespRequest : TeaModel {
         /// <summary>
+        /// <para>Question batch ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string BatchId { get; set; }
 
         /// <summary>
+        /// <para>Session ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetLibraryListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Time consumed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public long? Cost { get; set; }
 
+        /// <summary>
+        /// <para>Returned data</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetLibraryListResponseBodyData Data { get; set; }
         public class GetLibraryListResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Page number</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public long? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>Number of records per page</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -37,15 +46,26 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>Record list</para>
+            /// </summary>
             [NameInMap("records")]
             [Validation(Required=false)]
             public List<GetLibraryListResponseBodyDataRecords> Records { get; set; }
             public class GetLibraryListResponseBodyDataRecords : TeaModel {
+                /// <summary>
+                /// <para>Document library description</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>文档库</para>
+                /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>Document count</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public long? DocumentCount { get; set; }
 
                 /// <summary>
+                /// <para>Creation time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01 00:00:00</para>
                 /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Modification time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-01-01 00:00:00</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Document library ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>24vs4aa42jv1rg7</para>
                 /// </summary>
@@ -77,15 +103,23 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
+                /// <summary>
+                /// <para>Document library index settings</para>
+                /// </summary>
                 [NameInMap("indexSetting")]
                 [Validation(Required=false)]
                 public GetLibraryListResponseBodyDataRecordsIndexSetting IndexSetting { get; set; }
                 public class GetLibraryListResponseBodyDataRecordsIndexSetting : TeaModel {
+                    /// <summary>
+                    /// <para>Chunking strategy</para>
+                    /// </summary>
                     [NameInMap("chunkStrategy")]
                     [Validation(Required=false)]
                     public GetLibraryListResponseBodyDataRecordsIndexSettingChunkStrategy ChunkStrategy { get; set; }
                     public class GetLibraryListResponseBodyDataRecordsIndexSettingChunkStrategy : TeaModel {
                         /// <summary>
+                        /// <para>Layout chunking</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -94,6 +128,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? DocTreeSplit { get; set; }
 
                         /// <summary>
+                        /// <para>Layout chunking size</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>160</para>
                         /// </summary>
@@ -102,6 +138,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public int? DocTreeSplitSize { get; set; }
 
                         /// <summary>
+                        /// <para>Enhance images</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -110,6 +148,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? EnhanceGraph { get; set; }
 
                         /// <summary>
+                        /// <para>Enhance tables</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -118,6 +158,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? EnhanceTable { get; set; }
 
                         /// <summary>
+                        /// <para>Chunk overlap length</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>40</para>
                         /// </summary>
@@ -126,6 +168,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public int? Overlap { get; set; }
 
                         /// <summary>
+                        /// <para>Split by sentence</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -134,6 +178,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? SentenceSplit { get; set; }
 
                         /// <summary>
+                        /// <para>Split by sentence size</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>160</para>
                         /// </summary>
@@ -142,6 +188,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public int? SentenceSplitSize { get; set; }
 
                         /// <summary>
+                        /// <para>Chunk size</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>256</para>
                         /// </summary>
@@ -150,6 +198,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public int? Size { get; set; }
 
                         /// <summary>
+                        /// <para>Chunking enabled</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -159,11 +209,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>Model Configuration</para>
+                    /// </summary>
                     [NameInMap("modelConfig")]
                     [Validation(Required=false)]
                     public GetLibraryListResponseBodyDataRecordsIndexSettingModelConfig ModelConfig { get; set; }
                     public class GetLibraryListResponseBodyDataRecordsIndexSettingModelConfig : TeaModel {
                         /// <summary>
+                        /// <para>Temperature</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>0.8</para>
                         /// </summary>
@@ -183,15 +238,26 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>Prompt role style</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>你是一个信息处理专家。</para>
+                    /// </summary>
                     [NameInMap("promptRoleStyle")]
                     [Validation(Required=false)]
                     public string PromptRoleStyle { get; set; }
 
+                    /// <summary>
+                    /// <para>Query enhancement</para>
+                    /// </summary>
                     [NameInMap("queryEnhancer")]
                     [Validation(Required=false)]
                     public GetLibraryListResponseBodyDataRecordsIndexSettingQueryEnhancer QueryEnhancer { get; set; }
                     public class GetLibraryListResponseBodyDataRecordsIndexSettingQueryEnhancer : TeaModel {
                         /// <summary>
+                        /// <para>Multi-turn enhancement</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -200,6 +266,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? EnableFollowUp { get; set; }
 
                         /// <summary>
+                        /// <para>Use Large Language Model (LLM) knowledge to decompose questions</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -208,6 +276,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? EnableMultiQuery { get; set; }
 
                         /// <summary>
+                        /// <para>Use Large Language Model (LLM) knowledge to answer questions</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -216,6 +286,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? EnableOpenQa { get; set; }
 
                         /// <summary>
+                        /// <para>Rewrite questions based on domain knowledge</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -224,6 +296,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? EnableQueryRewrite { get; set; }
 
                         /// <summary>
+                        /// <para>Record session</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -232,6 +306,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? EnableSession { get; set; }
 
                         /// <summary>
+                        /// <para>Document library ID used for knowledge rewriting</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>sdbcjsbc</para>
                         /// </summary>
@@ -240,6 +316,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public string LocalKnowledgeId { get; set; }
 
                         /// <summary>
+                        /// <para>Include document reference</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -249,11 +327,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>Recall strategy</para>
+                    /// </summary>
                     [NameInMap("recallStrategy")]
                     [Validation(Required=false)]
                     public GetLibraryListResponseBodyDataRecordsIndexSettingRecallStrategy RecallStrategy { get; set; }
                     public class GetLibraryListResponseBodyDataRecordsIndexSettingRecallStrategy : TeaModel {
                         /// <summary>
+                        /// <para>Merge and sort policy</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>model</para>
                         /// </summary>
@@ -262,6 +345,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public string DocumentRankType { get; set; }
 
                         /// <summary>
+                        /// <para>Number of results from two-way merge summary</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
                         /// </summary>
@@ -271,11 +356,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>Text index settings</para>
+                    /// </summary>
                     [NameInMap("textIndexSetting")]
                     [Validation(Required=false)]
                     public GetLibraryListResponseBodyDataRecordsIndexSettingTextIndexSetting TextIndexSetting { get; set; }
                     public class GetLibraryListResponseBodyDataRecordsIndexSettingTextIndexSetting : TeaModel {
                         /// <summary>
+                        /// <para>Text index type</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>ElasticSearch</para>
                         /// </summary>
@@ -284,6 +374,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public string Category { get; set; }
 
                         /// <summary>
+                        /// <para>Text index enabled</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -292,6 +384,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
+                        /// <para>Index analyzer for text index: (Standard, IkMaxWord, IkSmart)</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Standard</para>
                         /// </summary>
@@ -300,6 +394,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public string IndexAnalyzer { get; set; }
 
                         /// <summary>
+                        /// <para>Text index sort threshold</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>null</para>
                         /// </summary>
@@ -308,6 +404,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public double? RankThreshold { get; set; }
 
                         /// <summary>
+                        /// <para>Search analyzer for text index: (Standard, IkMaxWord, IkSmart)</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Standard</para>
                         /// </summary>
@@ -316,6 +414,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public string SearchAnalyzer { get; set; }
 
                         /// <summary>
+                        /// <para>Number of final summary results for text index</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
                         /// </summary>
@@ -325,11 +425,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>Vector index settings</para>
+                    /// </summary>
                     [NameInMap("vectorIndexSetting")]
                     [Validation(Required=false)]
                     public GetLibraryListResponseBodyDataRecordsIndexSettingVectorIndexSetting VectorIndexSetting { get; set; }
                     public class GetLibraryListResponseBodyDataRecordsIndexSettingVectorIndexSetting : TeaModel {
                         /// <summary>
+                        /// <para>Vector index source. Recommended: ADB</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>ADB</para>
                         /// </summary>
@@ -338,6 +443,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public string Category { get; set; }
 
                         /// <summary>
+                        /// <para>Vector index text embedding model</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>DashScope</para>
                         /// </summary>
@@ -346,6 +453,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public string EmbeddingType { get; set; }
 
                         /// <summary>
+                        /// <para>Enabled</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -354,6 +463,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
+                        /// <para>Vector index sort threshold</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>null</para>
                         /// </summary>
@@ -362,6 +473,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                         public double? RankThreshold { get; set; }
 
                         /// <summary>
+                        /// <para>Number of final summary results for vector index</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>10</para>
                         /// </summary>
@@ -373,6 +486,12 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
                 }
 
+                /// <summary>
+                /// <para>Document library name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>测试文档库</para>
+                /// </summary>
                 [NameInMap("libraryName")]
                 [Validation(Required=false)]
                 public string LibraryName { get; set; }
@@ -380,6 +499,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             }
 
             /// <summary>
+            /// <para>Total pages</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -388,6 +509,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public long? TotalPages { get; set; }
 
             /// <summary>
+            /// <para>Total records</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -398,6 +521,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
+        /// <para>Data type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -406,6 +531,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -414,6 +541,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -422,6 +551,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0a06dfe817156528535968405edce3</para>
         /// </summary>
@@ -430,6 +561,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -438,6 +571,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Timestamp</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01 00:00:00</para>
         /// </summary>

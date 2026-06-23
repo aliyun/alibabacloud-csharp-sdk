@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class EvictTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

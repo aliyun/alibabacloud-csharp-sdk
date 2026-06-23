@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class ReIndexResponseBody : TeaModel {
         /// <summary>
+        /// <para>Processing time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public long? Cost { get; set; }
 
         /// <summary>
+        /// <para>The response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The data type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32FFC91D-0A9F-585A-B84F-8A54C5187035</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The timestamp in YYYY-MM-DD HH:MM:SS format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-24 11:54:34</para>
         /// </summary>

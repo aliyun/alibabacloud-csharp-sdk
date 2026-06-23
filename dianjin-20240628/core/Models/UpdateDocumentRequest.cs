@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class UpdateDocumentRequest : TeaModel {
         /// <summary>
+        /// <para>Document ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DocId { get; set; }
 
         /// <summary>
+        /// <para>Document library ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string LibraryId { get; set; }
 
         /// <summary>
+        /// <para>Document metadata.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///         &quot;businessId&quot;: &quot;12321&quot;
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public Dictionary<string, object> Meta { get; set; }
 
         /// <summary>
+        /// <para>Document title.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

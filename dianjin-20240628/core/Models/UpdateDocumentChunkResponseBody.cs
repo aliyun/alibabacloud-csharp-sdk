@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class UpdateDocumentChunkResponseBody : TeaModel {
         /// <summary>
+        /// <para>Processing time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public long? Cost { get; set; }
 
         /// <summary>
+        /// <para>Response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>Data type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>003D019A-1BB3-53EC-A0D2-CE76DA5D73B1</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01 00:00:00</para>
         /// </summary>

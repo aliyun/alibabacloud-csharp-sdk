@@ -9,19 +9,33 @@ using Tea;
 namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class UpdateLibraryRequest : TeaModel {
+        /// <summary>
+        /// <para>Document library description</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>文档库描述</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Document library index configuration</para>
+        /// </summary>
         [NameInMap("indexSetting")]
         [Validation(Required=false)]
         public UpdateLibraryRequestIndexSetting IndexSetting { get; set; }
         public class UpdateLibraryRequestIndexSetting : TeaModel {
+            /// <summary>
+            /// <para>Chunking strategy</para>
+            /// </summary>
             [NameInMap("chunkStrategy")]
             [Validation(Required=false)]
             public UpdateLibraryRequestIndexSettingChunkStrategy ChunkStrategy { get; set; }
             public class UpdateLibraryRequestIndexSettingChunkStrategy : TeaModel {
                 /// <summary>
+                /// <para>Layout-based chunking</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -30,6 +44,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? DocTreeSplit { get; set; }
 
                 /// <summary>
+                /// <para>Layout-based chunking size</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>160</para>
                 /// </summary>
@@ -38,6 +54,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public int? DocTreeSplitSize { get; set; }
 
                 /// <summary>
+                /// <para>Enhance images</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -46,6 +64,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? EnhanceGraph { get; set; }
 
                 /// <summary>
+                /// <para>Enhance tables</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? EnhanceTable { get; set; }
 
                 /// <summary>
+                /// <para>Chunk overlap length</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public int? Overlap { get; set; }
 
                 /// <summary>
+                /// <para>Split by sentence. Default is true</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? SentenceSplit { get; set; }
 
                 /// <summary>
+                /// <para>Average sentence-based chunking length</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>160</para>
                 /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public int? SentenceSplitSize { get; set; }
 
                 /// <summary>
+                /// <para>Fixed-length chunking size</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>256</para>
                 /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public int? Size { get; set; }
 
                 /// <summary>
+                /// <para>Enable chunking</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -95,11 +125,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             }
 
+            /// <summary>
+            /// <para>Model configuration</para>
+            /// </summary>
             [NameInMap("modelConfig")]
             [Validation(Required=false)]
             public UpdateLibraryRequestIndexSettingModelConfig ModelConfig { get; set; }
             public class UpdateLibraryRequestIndexSettingModelConfig : TeaModel {
                 /// <summary>
+                /// <para>Temperature</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.8</para>
                 /// </summary>
@@ -108,7 +143,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public double? Temperature { get; set; }
 
                 /// <summary>
-                /// <para>topP</para>
+                /// <para>Top P</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.8</para>
@@ -119,15 +154,26 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             }
 
+            /// <summary>
+            /// <para>Prompt role style</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>你是一位文档分析专家，非常善于从给定的知识中，找到重点，像老师给学生讲课一样把问题回答清晰。你的回答富有逻辑性，遇到复杂问题，你善于一步一步思考。</para>
+            /// </summary>
             [NameInMap("promptRoleStyle")]
             [Validation(Required=false)]
             public string PromptRoleStyle { get; set; }
 
+            /// <summary>
+            /// <para>Query enhancement</para>
+            /// </summary>
             [NameInMap("queryEnhancer")]
             [Validation(Required=false)]
             public UpdateLibraryRequestIndexSettingQueryEnhancer QueryEnhancer { get; set; }
             public class UpdateLibraryRequestIndexSettingQueryEnhancer : TeaModel {
                 /// <summary>
+                /// <para>Multi-turn enhancement</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -136,6 +182,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? EnableFollowUp { get; set; }
 
                 /// <summary>
+                /// <para>Use Large Language Models (LLMs) to decompose queries</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -144,6 +192,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? EnableMultiQuery { get; set; }
 
                 /// <summary>
+                /// <para>Use Large Language Models (LLMs) to answer queries</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -152,6 +202,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? EnableOpenQa { get; set; }
 
                 /// <summary>
+                /// <para>Rewrite queries using domain knowledge</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -160,6 +212,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? EnableQueryRewrite { get; set; }
 
                 /// <summary>
+                /// <para>Record session history</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -168,6 +222,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? EnableSession { get; set; }
 
                 /// <summary>
+                /// <para>Document library ID used for query rewriting</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sjdhgfc</para>
                 /// </summary>
@@ -176,6 +232,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string LocalKnowledgeId { get; set; }
 
                 /// <summary>
+                /// <para>Include document references in responses</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -185,11 +243,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             }
 
+            /// <summary>
+            /// <para>Retrieval strategy</para>
+            /// </summary>
             [NameInMap("recallStrategy")]
             [Validation(Required=false)]
             public UpdateLibraryRequestIndexSettingRecallStrategy RecallStrategy { get; set; }
             public class UpdateLibraryRequestIndexSettingRecallStrategy : TeaModel {
                 /// <summary>
+                /// <para>Merge and sort strategy</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>model</para>
                 /// </summary>
@@ -198,6 +261,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string DocumentRankType { get; set; }
 
                 /// <summary>
+                /// <para>Number of results from two-way merge and summarization</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -207,11 +272,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             }
 
+            /// <summary>
+            /// <para>Text index settings</para>
+            /// </summary>
             [NameInMap("textIndexSetting")]
             [Validation(Required=false)]
             public UpdateLibraryRequestIndexSettingTextIndexSetting TextIndexSetting { get; set; }
             public class UpdateLibraryRequestIndexSettingTextIndexSetting : TeaModel {
                 /// <summary>
+                /// <para>Text index type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ElasticSearch</para>
                 /// </summary>
@@ -220,6 +290,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>Enable text indexing</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -228,6 +300,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
+                /// <para>Text index analyzer: Standard, IkMaxWord, or IkSmart</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Standard</para>
                 /// </summary>
@@ -236,6 +310,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string IndexAnalyzer { get; set; }
 
                 /// <summary>
+                /// <para>Text index ranking threshold</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
                 /// </summary>
@@ -244,6 +320,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public double? RankThreshold { get; set; }
 
                 /// <summary>
+                /// <para>Text index search analyzer: Standard, IkMaxWord, or IkSmart</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Standard</para>
                 /// </summary>
@@ -252,6 +330,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string SearchAnalyzer { get; set; }
 
                 /// <summary>
+                /// <para>Number of final summarized results from text indexing</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
                 /// </summary>
@@ -261,11 +341,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             }
 
+            /// <summary>
+            /// <para>Vector index settings</para>
+            /// </summary>
             [NameInMap("vectorIndexSetting")]
             [Validation(Required=false)]
             public UpdateLibraryRequestIndexSettingVectorIndexSetting VectorIndexSetting { get; set; }
             public class UpdateLibraryRequestIndexSettingVectorIndexSetting : TeaModel {
                 /// <summary>
+                /// <para>Vector index source. We recommend ADB</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ADB</para>
                 /// </summary>
@@ -274,6 +359,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string Category { get; set; }
 
                 /// <summary>
+                /// <para>Text embedding model for vector indexing</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>DashScope</para>
                 /// </summary>
@@ -282,6 +369,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string EmbeddingType { get; set; }
 
                 /// <summary>
+                /// <para>Enable vector indexing</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -290,6 +379,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public bool? Enable { get; set; }
 
                 /// <summary>
+                /// <para>Vector index ranking threshold</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
                 /// </summary>
@@ -298,6 +389,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public double? RankThreshold { get; set; }
 
                 /// <summary>
+                /// <para>Number of final summarized results from vector indexing</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -310,6 +403,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
+        /// <para>Document library ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -319,6 +413,12 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public string LibraryId { get; set; }
 
+        /// <summary>
+        /// <para>Document library name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试文档库</para>
+        /// </summary>
         [NameInMap("libraryName")]
         [Validation(Required=false)]
         public string LibraryName { get; set; }

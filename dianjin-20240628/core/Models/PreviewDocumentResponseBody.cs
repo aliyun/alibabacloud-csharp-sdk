@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class PreviewDocumentResponseBody : TeaModel {
         /// <summary>
+        /// <para>Time consumed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public long? Cost { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public PreviewDocumentResponseBodyData Data { get; set; }
         public class PreviewDocumentResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Preview type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pdf</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string PreviewType { get; set; }
 
             /// <summary>
+            /// <para>Document title.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>Upload time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-01 00:00:00</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string UploadTime { get; set; }
 
             /// <summary>
+            /// <para>Document URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://agi.alicdn.com/user/d0o/d3c1f50d-a6c2-49b3-b0c8-3e613c3f20ee_16872_3236784461.png">https://agi.alicdn.com/user/d0o/d3c1f50d-a6c2-49b3-b0c8-3e613c3f20ee_16872_3236784461.png</a></para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
+        /// <para>Data type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ff551395-1c8a-4f30-8ffd-ef7e87c70b4c</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-24 11:54:34</para>
         /// </summary>

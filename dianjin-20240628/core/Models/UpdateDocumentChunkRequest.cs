@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class UpdateDocumentChunkRequest : TeaModel {
         /// <summary>
+        /// <para>List of document chunks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("chunks")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public List<UpdateDocumentChunkRequestChunks> Chunks { get; set; }
         public class UpdateDocumentChunkRequestChunks : TeaModel {
             /// <summary>
+            /// <para>Document chunk ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -27,7 +29,11 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public string ChunkId { get; set; }
 
             /// <summary>
+            /// <para>Document chunk text.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这是一段测试文本</para>
             /// </summary>
             [NameInMap("chunkText")]
             [Validation(Required=false)]
@@ -36,6 +42,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
+        /// <para>Library ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

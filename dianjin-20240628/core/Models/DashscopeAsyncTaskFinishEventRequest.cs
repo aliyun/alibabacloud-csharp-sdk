@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class DashscopeAsyncTaskFinishEventRequest : TeaModel {
         /// <summary>
+        /// <para>Request body parameters</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

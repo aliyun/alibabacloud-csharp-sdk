@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class RebuildTaskRequest : TeaModel {
         /// <summary>
+        /// <para>A list of task IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("taskIds")]

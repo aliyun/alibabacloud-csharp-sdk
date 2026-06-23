@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public class QueryApiKeysResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>2024-12-31T23:59:59Z</para>
+            /// <para>2024-01-01T00:00:00Z</para>
             /// </summary>
             [NameInMap("expiresAt")]
             [Validation(Required=false)]
@@ -47,17 +47,15 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>a1b2c3d4e5f6...</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("keyHash")]
             [Validation(Required=false)]
             public string KeyHash { get; set; }
 
             /// <summary>
-            /// <para><b>API Key ID</b></para>
-            /// 
             /// <b>Example:</b>
-            /// <para>key_001</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("keyId")]
             [Validation(Required=false)]
@@ -65,7 +63,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>ACTIVE</para>
+            /// <para>success</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>100</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
@@ -89,18 +87,10 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("retryAble")]
         [Validation(Required=false)]
         public bool? RetryAble { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

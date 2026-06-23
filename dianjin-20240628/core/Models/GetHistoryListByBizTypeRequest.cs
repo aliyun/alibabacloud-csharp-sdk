@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetHistoryListByBizTypeRequest : TeaModel {
         /// <summary>
+        /// <para>Unique business identifier. When bizType is LibraryChat, bizId is the document library ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Business type. Supported values are LlmChat and LibraryChat.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>Number of records per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

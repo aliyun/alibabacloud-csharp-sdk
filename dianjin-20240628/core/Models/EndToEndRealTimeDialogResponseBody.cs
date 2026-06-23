@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class EndToEndRealTimeDialogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1C98B466-D6E0-5252-A60B-F345CBB33DDB</para>
         /// </summary>

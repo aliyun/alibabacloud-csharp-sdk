@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class InvokePluginResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response time in milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public long? Cost { get; set; }
 
         /// <summary>
+        /// <para>Response data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;jobWaiting\&quot;: [0, 0], \&quot;timestamps\&quot;: [1713383820, 1713383880], \&quot;jobUsage\&quot;: [0, 0], \&quot;quotaUsage\&quot;: [123, 32]}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
+        /// <para>Data type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>915AAAB9-4908-5224-9E53-9E9D7D0AA94B</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Timestamp in YYYY-MM-DD HH:MM:SS format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-24 11:54:34</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetQualityCheckTaskResultRequest : TeaModel {
         /// <summary>
+        /// <para>Task ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetDocumentChunkListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Time consumed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public long? Cost { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetDocumentChunkListResponseBodyData Data { get; set; }
         public class GetDocumentChunkListResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Current page</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public long? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>Records per page</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public long? PageSize { get; set; }
 
+            /// <summary>
+            /// <para>Records</para>
+            /// </summary>
             [NameInMap("records")]
             [Validation(Required=false)]
             public List<GetDocumentChunkListResponseBodyDataRecords> Records { get; set; }
             public class GetDocumentChunkListResponseBodyDataRecords : TeaModel {
                 /// <summary>
+                /// <para>Document chunk ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>28377468263482764</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string ChunkId { get; set; }
 
                 /// <summary>
+                /// <para>Document chunk metadata</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;a&quot;:&quot;1&quot;}</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public Dictionary<string, object> ChunkMeta { get; set; }
 
                 /// <summary>
+                /// <para>Document chunk OSS address</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>oss-xxxx-hangzhou.com/test.pdf</para>
                 /// </summary>
@@ -65,11 +83,19 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string ChunkOssUrl { get; set; }
 
+                /// <summary>
+                /// <para>Document chunk text</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>这是一段测试文本</para>
+                /// </summary>
                 [NameInMap("chunkText")]
                 [Validation(Required=false)]
                 public string ChunkText { get; set; }
 
                 /// <summary>
+                /// <para>Document chunk type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
                 /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string ChunkType { get; set; }
 
                 /// <summary>
+                /// <para>Document ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>8947387648356</para>
                 /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string DocId { get; set; }
 
                 /// <summary>
+                /// <para>Document type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pdf</para>
                 /// </summary>
@@ -94,6 +124,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string FileType { get; set; }
 
                 /// <summary>
+                /// <para>Library ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>jhsdvne</para>
                 /// </summary>
@@ -101,11 +133,19 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string LibraryId { get; set; }
 
+                /// <summary>
+                /// <para>Library name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>测试文档库</para>
+                /// </summary>
                 [NameInMap("libraryName")]
                 [Validation(Required=false)]
                 public string LibraryName { get; set; }
 
                 /// <summary>
+                /// <para>Next document chunk ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>947538465</para>
                 /// </summary>
@@ -113,15 +153,23 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string NextChunkId { get; set; }
 
+                /// <summary>
+                /// <para>Document chunk position</para>
+                /// </summary>
                 [NameInMap("pos")]
                 [Validation(Required=false)]
                 public List<GetDocumentChunkListResponseBodyDataRecordsPos> Pos { get; set; }
                 public class GetDocumentChunkListResponseBodyDataRecordsPos : TeaModel {
+                    /// <summary>
+                    /// <para>Coordinate</para>
+                    /// </summary>
                     [NameInMap("axisArray")]
                     [Validation(Required=false)]
                     public List<double?> AxisArray { get; set; }
 
                     /// <summary>
+                    /// <para>Page number</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -129,6 +177,9 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                     [Validation(Required=false)]
                     public int? Page { get; set; }
 
+                    /// <summary>
+                    /// <para>Text highlight area, used for highlighting text-type files</para>
+                    /// </summary>
                     [NameInMap("textHighlightArea")]
                     [Validation(Required=false)]
                     public List<int?> TextHighlightArea { get; set; }
@@ -136,6 +187,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 }
 
                 /// <summary>
+                /// <para>Previous document chunk ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>9848346548365</para>
                 /// </summary>
@@ -144,6 +197,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string PreChunkId { get; set; }
 
                 /// <summary>
+                /// <para>Document chunk score</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.5</para>
                 /// </summary>
@@ -152,6 +207,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public float? Score { get; set; }
 
                 /// <summary>
+                /// <para>Document title</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -162,6 +219,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             }
 
             /// <summary>
+            /// <para>Total pages</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -170,6 +229,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             public long? TotalPages { get; set; }
 
             /// <summary>
+            /// <para>Total records</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -180,6 +241,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
+        /// <para>Data type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -188,6 +251,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -196,6 +261,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -204,6 +271,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2B8F6DC9-6FAF-576F-9095-CCD90FB2BDDF</para>
         /// </summary>
@@ -212,6 +281,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Success status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -220,6 +291,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Timestamp</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-24 11:54:34</para>
         /// </summary>

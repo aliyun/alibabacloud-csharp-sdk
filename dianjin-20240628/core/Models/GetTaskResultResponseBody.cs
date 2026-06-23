@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetTaskResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time consumed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -18,6 +20,14 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public long? Cost { get; set; }
 
         /// <summary>
+        /// <para>The result of the asynchronous task.</para>
+        /// <h2>PDF translation task</h2>
+        /// <para>The returned file_url is a downloadable file address.</para>
+        /// <pre><c>{
+        ///   &quot;file_url&quot;: &quot;https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf&quot;
+        /// }
+        /// </c></pre>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;file_url&quot;: &quot;<a href="https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf">https://finllmworks.oss-cn-zhangjiakou.aliyuncs.com/render_pdf/5336180997111160501.pdf</a>&quot;
@@ -28,6 +38,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
+        /// <para>The data type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -36,6 +48,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -44,6 +58,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -52,6 +68,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9D5D6BB5-BEAE-53C8-A70A-7275CC1F856C</para>
         /// </summary>
@@ -60,6 +78,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -68,6 +88,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-04-24 11:54:34</para>
         /// </summary>

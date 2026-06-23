@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetLibraryRequest : TeaModel {
         /// <summary>
+        /// <para>The document library ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

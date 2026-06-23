@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class DeleteDocumentRequest : TeaModel {
         /// <summary>
+        /// <para>List of document IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("docIds")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public List<string> DocIds { get; set; }
 
         /// <summary>
+        /// <para>Document library ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

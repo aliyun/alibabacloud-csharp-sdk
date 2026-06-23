@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1001</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("externalUserId")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class CreateLibraryResponseBody : TeaModel {
         /// <summary>
+        /// <para>Processing time in milliseconds</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public long? Cost { get; set; }
 
         /// <summary>
+        /// <para>Response data</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a1b2c3</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>Data type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -41,11 +49,19 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public string ErrCode { get; set; }
 
+        /// <summary>
+        /// <para>Error message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxx</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Operation success status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Timestamp</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>

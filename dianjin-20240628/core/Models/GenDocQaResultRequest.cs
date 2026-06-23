@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GenDocQaResultRequest : TeaModel {
         /// <summary>
+        /// <para>The document ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DocId { get; set; }
 
         /// <summary>
+        /// <para>The document library ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string LibraryId { get; set; }
 
         /// <summary>
+        /// <para>The request ID. This ID uniquely identifies the request. The first request with this ID starts the Q\&amp;A pair parsing. Subsequent requests with the same ID query the parsing status and results.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

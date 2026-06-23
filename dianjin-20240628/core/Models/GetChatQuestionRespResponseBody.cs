@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetChatQuestionRespResponseBody : TeaModel {
         /// <summary>
+        /// <para>Time consumed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         [Validation(Required=false)]
         public long? Cost { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetChatQuestionRespResponseBodyData Data { get; set; }
         public class GetChatQuestionRespResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Current state [INIT (Initialization), PROCESSING (Processing), COMPLETED (Completed)]</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PROCESSING</para>
             /// </summary>
@@ -29,15 +36,26 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
             [Validation(Required=false)]
             public string CurrentState { get; set; }
 
+            /// <summary>
+            /// <para>Question list</para>
+            /// </summary>
             [NameInMap("questionList")]
             [Validation(Required=false)]
             public List<GetChatQuestionRespResponseBodyDataQuestionList> QuestionList { get; set; }
             public class GetChatQuestionRespResponseBodyDataQuestionList : TeaModel {
+                /// <summary>
+                /// <para>Question content</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>今天天气怎么样</para>
+                /// </summary>
                 [NameInMap("content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>Original question time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-17 10:05:00</para>
                 /// </summary>
@@ -45,15 +63,29 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string GmtCreate { get; set; }
 
+                /// <summary>
+                /// <para>Original question</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>今天天气怎么样</para>
+                /// </summary>
                 [NameInMap("oriContent")]
                 [Validation(Required=false)]
                 public string OriContent { get; set; }
 
+                /// <summary>
+                /// <para>Reply content</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>感谢您的支持！</para>
+                /// </summary>
                 [NameInMap("reply")]
                 [Validation(Required=false)]
                 public string Reply { get; set; }
 
                 /// <summary>
+                /// <para>Session ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1732846760323001</para>
                 /// </summary>
@@ -62,6 +94,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string SessionId { get; set; }
 
                 /// <summary>
+                /// <para>Question type [PRODUCT_QA (Audio submission), GOSSIP (Operation submission), UNKNOWN (Unknown)]</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PRODUCT_QA</para>
                 /// </summary>
@@ -70,6 +104,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 public string Type { get; set; }
 
                 /// <summary>
+                /// <para>Unique ID of the user who asked the question in the live channel.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>39847834568436</para>
                 /// </summary>
@@ -77,6 +113,12 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
+                /// <summary>
+                /// <para>Name of the user who asked the question in the live channel.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>张*</para>
+                /// </summary>
                 [NameInMap("userName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }
@@ -86,6 +128,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         }
 
         /// <summary>
+        /// <para>Data type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -94,6 +138,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -102,6 +148,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ErrCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ok</para>
         /// </summary>
@@ -110,6 +158,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>44BD277A-87F9-5310-8D63-3E6645F1DA85</para>
         /// </summary>
@@ -118,6 +168,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -126,6 +178,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Timestamp</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-01-01 00:00:00</para>
         /// </summary>

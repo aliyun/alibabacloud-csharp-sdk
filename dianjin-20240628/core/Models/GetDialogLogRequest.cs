@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetDialogLogRequest : TeaModel {
         /// <summary>
+        /// <para>The \<c>id\\</c> field returned by the real-time conversation API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>175600129454077743fb03ac54955a4be72ec08f9c216</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1758010668S001w4paq82azm</para>
         /// </summary>

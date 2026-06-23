@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
     public class GetUsageRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1001</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("externalUserId")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>R123456789</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("redemptionOrderNo")]
         [Validation(Required=false)]

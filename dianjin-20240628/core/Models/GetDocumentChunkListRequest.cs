@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class GetDocumentChunkListRequest : TeaModel {
+        /// <summary>
+        /// <para>List of document chunk IDs</para>
+        /// </summary>
         [NameInMap("chunkIdList")]
         [Validation(Required=false)]
         public List<string> ChunkIdList { get; set; }
 
         /// <summary>
+        /// <para>Document ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string DocId { get; set; }
 
         /// <summary>
+        /// <para>Library ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +39,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string LibraryId { get; set; }
 
         /// <summary>
+        /// <para>Sorting method</para>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>Sort field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gmtCreate</para>
         /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Search query keyword</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

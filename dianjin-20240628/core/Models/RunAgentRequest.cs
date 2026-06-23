@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
 {
     public class RunAgentRequest : TeaModel {
         /// <summary>
+        /// <para>Agent ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string BotId { get; set; }
 
         /// <summary>
+        /// <para>Model ID. Optional. If empty, the agent uses the model from its configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ModelId { get; set; }
 
         /// <summary>
+        /// <para>Enable streaming. Default is true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? Stream { get; set; }
 
         /// <summary>
+        /// <para>Thread ID. Optional. If empty, a new thread starts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4vlag5ken3</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public string ThreadId { get; set; }
 
         /// <summary>
+        /// <para>Use the draft version. Drafts are unpublished versions in the editor. They are unstable. Default is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -52,17 +61,29 @@ namespace AlibabaCloud.SDK.DianJin20240628.Models
         public bool? UseDraft { get; set; }
 
         /// <summary>
+        /// <para>User input</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>你是谁</para>
         /// </summary>
         [NameInMap("userContent")]
         [Validation(Required=false)]
         public string UserContent { get; set; }
 
+        /// <summary>
+        /// <para>More complex user-defined input parameters</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;name&quot;: &quot;zhangsan&quot;}</para>
+        /// </summary>
         [NameInMap("userInputs")]
         [Validation(Required=false)]
         public Dictionary<string, object> UserInputs { get; set; }
 
         /// <summary>
+        /// <para>Version ID to run</para>
+        /// 
         /// <b>Example:</b>
         /// <para>w4paqoezm2</para>
         /// </summary>
