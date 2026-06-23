@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListInstanceWhiteListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code. A value of <c>200</c> indicates a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The returned data, which is an array of whitelist entries. Each object in the array contains an <c>id</c> (a sequence number used for deletion) and a <c>value</c> (the actual entry, such as an IP address range or a VPC ID).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;Data&quot;: [
         ///     {
@@ -31,6 +35,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public object Data { get; set; }
 
         /// <summary>
+        /// <para>The error message returned on a failed request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx failed,xxxx</para>
         /// </summary>
@@ -39,6 +45,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request. Use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6DC68EC9-0E76-5435-B8C0-FF9492B4****</para>
         /// </summary>
@@ -47,6 +55,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code. A value of <c>200</c> indicates a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -55,6 +65,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string StatusCode { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

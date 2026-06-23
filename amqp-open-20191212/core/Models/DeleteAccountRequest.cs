@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The timestamp that indicates when the pair of static username and password that you want to delete was created. Unit: milliseconds.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/472730.html">ListAccounts</a> operation to view the timestamp.</para>
+        /// <para>The timestamp that indicates when the static username and password were created. Unit: milliseconds.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/472730.html">ListAccounts</a> operation to find this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1671175303522</para>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The pair of username and password that you want to delete.</para>
+        /// <para>The static username to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MjphbXFwLWNuLXVxbTJ5cjc3djAwMzpMVEFJNXQ4YmVNbVZNMWVSWnRFSjZ2Zm1=</para>
+        /// <para>MjphbXFwLWNuLXVxbTJ6cjc2djAwMzpMVEFJNX*******ZNMWVSWnRFSjZ2Zm8=</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

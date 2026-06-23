@@ -19,12 +19,30 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The deployment architecture of the Serverless instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>shared: A shared architecture. This applies to reserved plus elastic (shared) and pay-as-you-go instances.</para>
+        /// </description></item>
+        /// <item><description><para>dedicated: A dedicated architecture. This applies to reserved plus elastic (dedicated) instances.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>shared</para>
+        /// </summary>
         [NameInMap("Edition")]
         [Validation(Required=false)]
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>实例是否开通数据存储加密功能</para>
+        /// <para>This feature is for dedicated instances only. Specifies whether to enable data encryption.</para>
+        /// <list type="bullet">
+        /// <item><description><para>You cannot change the EncryptedInstance and KmsKeyId properties of a dedicated instance. This includes changing its encryption status or downgrading it to a shared instance. Do not include the EncryptedInstance and KmsKeyId parameters when you call UpdateInstance to upgrade or downgrade a dedicated instance.</para>
+        /// </description></item>
+        /// <item><description><para>The EncryptedInstance and KmsKeyId parameters are used only when you upgrade a shared instance to an encrypted dedicated instance.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -45,13 +63,16 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance edition. Valid values for subscription instances:</para>
+        /// <para>The instance type. This parameter is required for subscription instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>professional: Professional Edition</description></item>
-        /// <item><description>enterprise: Enterprise Edition</description></item>
-        /// <item><description>vip: Enterprise Platinum Edition.</description></item>
+        /// <item><description><para>professional: Professional Edition</para>
+        /// </description></item>
+        /// <item><description><para>enterprise: Enterprise Edition</para>
+        /// </description></item>
+        /// <item><description><para>vip: Platinum Edition</para>
+        /// </description></item>
         /// </list>
-        /// <para>If your instance is a pay-as-you-go instance, you do not need to configure this parameter.</para>
+        /// <para>You do not need to specify this parameter for pay-as-you-go instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>professional</para>
@@ -61,7 +82,23 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>使用同地域下KMS密钥ID</para>
+        /// <para>This feature is for dedicated instances only. This parameter is required if EncryptedInstance is set to true.
+        /// It specifies the ID of the KMS key used for data encryption.
+        /// The key must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description><para>The KMS key must be in the same region as the ApsaraMQ for RabbitMQ instance.</para>
+        /// </description></item>
+        /// <item><description><para>The key cannot be a service key.</para>
+        /// </description></item>
+        /// <item><description><para>The key must be active.</para>
+        /// </description></item>
+        /// <item><description><para>The key must be a symmetric key.</para>
+        /// </description></item>
+        /// <item><description><para>The key must be used for encryption and decryption.</para>
+        /// </description></item>
+        /// <item><description><para>If the KMS key expires or is deleted, data reads and writes will fail, and the ApsaraMQ for RabbitMQ instance will become unavailable.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>key-bjj66c2a893vmhawtq5fd</para>
@@ -71,7 +108,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of connections that can be created on the instance.</para>
+        /// <para>The maximum number of connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -81,7 +118,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? MaxConnections { get; set; }
 
         /// <summary>
-        /// <para>The peak TPS for accessing the instance over the Internet.</para>
+        /// <para>The peak TPS for public network traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>
@@ -91,7 +128,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public long? MaxEipTps { get; set; }
 
         /// <summary>
-        /// <para>The peak transactions per second (TPS) for accessing the instance in a virtual private cloud (VPC).</para>
+        /// <para>The peak transactions per second (TPS) for private network traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -101,10 +138,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public long? MaxPrivateTps { get; set; }
 
         /// <summary>
-        /// <para>The type of the configuration change. Valid values:</para>
+        /// <para>The type of specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>UPGRADE</description></item>
-        /// <item><description>DOWNGRADE</description></item>
+        /// <item><description><para>UPGRADE: Upgrade</para>
+        /// </description></item>
+        /// <item><description><para>DOWNGRADE: Downgrade</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -115,12 +154,18 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string ModifyType { get; set; }
 
+        /// <summary>
+        /// <para>The provisioned TPS capacity for a reserved plus elastic instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2000</para>
+        /// </summary>
         [NameInMap("ProvisionedCapacity")]
         [Validation(Required=false)]
         public int? ProvisionedCapacity { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of queues that can be created on the instance.</para>
+        /// <para>The maximum number of queues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -130,9 +175,9 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? QueueCapacity { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the serverless instance. Valid values:</para>
+        /// <para>The billing method of the pay-as-you-go (Serverless) instance. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>onDemand: You are charged based on your actual usage.</description></item>
+        /// <item><description>onDemand: Pay-as-you-go</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -143,7 +188,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string ServerlessChargeType { get; set; }
 
         /// <summary>
-        /// <para>The size of the storage space that can be used to store messages.</para>
+        /// <para>The message storage capacity. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -153,7 +198,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? StorageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether elastic IP addresses (EIPs) are supported.</para>
+        /// <para>Specifies whether to enable Internet access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -173,13 +218,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public bool? SupportTracing { get; set; }
 
         /// <summary>
-        /// <para>The retention period of message traces.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>3</description></item>
-        /// <item><description>7</description></item>
-        /// <item><description>15</description></item>
-        /// </list>
+        /// <para>The retention period for message traces. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

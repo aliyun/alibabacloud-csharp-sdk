@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for RabbitMQ instance for which you want to query the static username and password.</para>
+        /// <para>The ID of the ApsaraMQ for RabbitMQ instance whose static usernames and passwords you want to list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>amqp-cn-20p****04</para>

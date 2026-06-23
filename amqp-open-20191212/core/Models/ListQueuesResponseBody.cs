@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public ListQueuesResponseBodyData Data { get; set; }
         public class ListQueuesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The maximum number of entries returned.</para>
+            /// <para>The maximum number of results returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</para>
+            /// <para>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>caebacccb2be03f84eb48b699f0a****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public Dictionary<string, object> Attributes { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the queue was automatically deleted.</para>
+                /// <para>The auto-delete status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public bool? ExclusiveState { get; set; }
 
                 /// <summary>
-                /// <para>The time when messages in the queue were last consumed.</para>
+                /// <para>The last time a message was consumed from the queue.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1680887085240</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the ApsaraMQ for RabbitMQ instance to which the queue belongs.</para>
+                /// <para>The ID of the instance to which the queue belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1880770869023***</para>
+                /// <para>amqp-cn-5yd3aw******</para>
                 /// </summary>
                 [NameInMap("OwnerId")]
                 [Validation(Required=false)]

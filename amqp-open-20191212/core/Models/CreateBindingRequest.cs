@@ -10,12 +10,15 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateBindingRequest : TeaModel {
         /// <summary>
-        /// <para>The key-value pairs that are configured for the headers attributes of a message. One or more key-value pairs can be concatenated to configure the headers attributes of a message. You must specify the x-match attribute as one of the valid values. You can specify custom values for other attributes. Valid values of the x-match attribute:</para>
+        /// <para>The key-value pairs for the message header attributes. The message header attributes consist of one or more key-value pairs. The x-match attribute is required. Other attributes are custom. The x-match attribute supports the following values:</para>
         /// <list type="bullet">
-        /// <item><description>\*\<em>all: \</em>\*A headers exchange routes a message to a queue only if all binding attributes of the queue except for x-match match the headers attributes of the message. This value is the default value.</description></item>
-        /// <item><description>\*\<em>any: \</em>\*A headers exchange routes a message to a queue if one or more binding attributes of the queue except for x-match match the headers attributes of the message.</description></item>
+        /// <item><description><para>all: This is the default value. All key-value pairs in the message header must match.</para>
+        /// </description></item>
+        /// <item><description><para>any: At least one key-value pair in the message header must match.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Separate the attributes with semicolons (;). Separate the key and value of an attribute with a colon (:). Example: x-match:all;type:report;format:pdf. This parameter is available for only headers exchanges. You can set this parameter to an arbitrary value for other types of exchanges.</para>
+        /// <para>Separate attributes with semicolons (;) and separate keys from values with colons (:). Example: x-match:all;type:report;format:pdf
+        /// This parameter is valid only for headers exchanges. For other types of exchanges, this parameter is ignored.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x-match:all;type:report;format:pdf</para>
@@ -27,17 +30,22 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <summary>
         /// <para>The binding key.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the source exchange is not a topic exchange, the binding key must meet the following conventions:</para>
+        /// <item><description><para>If the source exchange is not a topic exchange:</para>
         /// <list type="bullet">
-        /// <item><description>The binding key can contain only letters, digits, hyphens (-), underscores (_), periods (.), forward slashes (/), and at signs (@).</description></item>
-        /// <item><description>The binding key must be 1 to 255 characters in length.</description></item>
+        /// <item><description><para>It can contain letters, digits, hyphens (-), underscores (_), periods (.), forward slashes (/), and at signs (@).</para>
+        /// </description></item>
+        /// <item><description><para>The length must be 1 to 255 characters.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If the source exchange is a topic exchange, the binding key must meet the following conventions:</para>
+        /// <item><description><para>If the source exchange is a topic exchange:</para>
         /// <list type="bullet">
-        /// <item><description>The binding key can contain letters, digits, hyphens (-), underscores (_), asterisks (\*), periods (.), number signs (#), forward slashes (/), and at signs (@).</description></item>
-        /// <item><description>The binding key cannot start or end with a period (.). If a binding key starts with a number sign (#) or an asterisk (\<em>), the number sign (#) or asterisk (\</em>) must be followed by a period (.). If the binding key ends with a number sign (#) or an asterisk (\<em>), the number sign (#) or asterisk (\</em>) must be preceded by a period (.). If a number sign (#) or an asterisk (\<em>) is used in the middle of a binding key, the number sign (#) or asterisk (\</em>) must be preceded and followed by a period (.).</description></item>
-        /// <item><description>The binding key must be 1 to 255 characters in length.</description></item>
+        /// <item><description><para>It can contain letters, digits, hyphens (-), underscores (_), asterisks (\*), periods (.), number signs (#), forward slashes (/), and at signs (@).</para>
+        /// </description></item>
+        /// <item><description><para>The key cannot start or end with a period (.). If the key starts with a number sign (#) or an asterisk (\<em>), a period (.) must immediately follow. If the key ends with a number sign (#) or an asterisk (\</em>), a period (.) must immediately precede it. If a number sign (#) or an asterisk (\*) is in the middle of the key, it must have a period (.) on both sides.</para>
+        /// </description></item>
+        /// <item><description><para>The length must be 1 to 255 characters.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -50,10 +58,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string BindingKey { get; set; }
 
         /// <summary>
-        /// <para>The type of the object that you want to bind to the source exchange. Valid values:</para>
+        /// <para>The type of the destination object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>\*\<em>0: \</em>\*Queue</description></item>
-        /// <item><description>\*\<em>1: \</em>\*Exchange</description></item>
+        /// <item><description><para>0: Queue</para>
+        /// </description></item>
+        /// <item><description><para>1: Exchange</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,7 +75,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string BindingType { get; set; }
 
         /// <summary>
-        /// <para>The name of the object that you want to bind to the source exchange. You must create the object in the ApsaraMQ for RabbitMQ console in advance. The vhost of the object is the same as the vhost to which the source exchange specified by <b>SourceExchange</b> belongs. The vhost of the source exchange is the one specified by <b>VirtualHost</b>.</para>
+        /// <para>The name of the binding destination. The destination must be created in the console. It must belong to the same vhost as <c>SourceExchange</c>. The <c>VirtualHost</c> parameter specifies the vhost.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +97,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the source exchange. You must create the source exchange in the ApsaraMQ for RabbitMQ console in advance.</para>
+        /// <para>The name of the source exchange. This exchange must be created in the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +108,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string SourceExchange { get; set; }
 
         /// <summary>
-        /// <para>The virtual host (vhost) name. You must create the vhost in the ApsaraMQ for RabbitMQ console in advance. The object specified by <b>DestinationName</b> and the source exchange specified by <b>SourceExchange</b> must belong to the vhost.</para>
+        /// <para>The name of the vhost. The vhost must be created in the console. Both <c>DestinationName</c> and <c>SourceExchange</c> must belong to this vhost.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

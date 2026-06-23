@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class GetInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Message Queue for RabbitMQ instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

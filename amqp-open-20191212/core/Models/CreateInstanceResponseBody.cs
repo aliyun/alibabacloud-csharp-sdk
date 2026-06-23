@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request is successful.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>A message providing additional details about the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx failed,xxxx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to troubleshoot issues. This parameter is a common parameter.</para>
+        /// <para>The unique ID of the request. This is a common parameter used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CCBB1225-C392-480E-8C7F-D09AB2CD2***</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

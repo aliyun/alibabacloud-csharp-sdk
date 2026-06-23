@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the call is successful.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>549A5A97-FE61-5A23-8126-3A11929C1EC4</para>
+        /// <para>549A5A97-FE61-5A23-8126-3A1192*****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

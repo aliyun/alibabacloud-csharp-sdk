@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListInstanceWhiteListRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance whose whitelist to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The type of whitelist to query.</para>
+        /// <para>VPC whitelists apply only to instances whose VPC endpoint is of the <c>anytunnel</c> type. The latest instance versions use a <c>PrivateLink</c> VPC endpoint and do not support VPC whitelists.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

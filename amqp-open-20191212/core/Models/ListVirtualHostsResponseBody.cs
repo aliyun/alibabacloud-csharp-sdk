@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public ListVirtualHostsResponseBodyData Data { get; set; }
         public class ListVirtualHostsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The maximum number of entries returned.</para>
+            /// <para>The maximum number of results returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</para>
+            /// <para>The token that is used to retrieve the next page of results. If this parameter is not returned, all data has been returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>caebacccb2be03f84eb48b699f0a****</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The vhosts.</para>
+            /// <para>The list of vhosts.</para>
             /// </summary>
             [NameInMap("VirtualHosts")]
             [Validation(Required=false)]
             public List<ListVirtualHostsResponseBodyDataVirtualHosts> VirtualHosts { get; set; }
             public class ListVirtualHostsResponseBodyDataVirtualHosts : TeaModel {
                 /// <summary>
-                /// <para>The vhost name.</para>
+                /// <para>The name of the vhost.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>

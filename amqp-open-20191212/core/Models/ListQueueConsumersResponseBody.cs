@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public ListQueueConsumersResponseBodyData Data { get; set; }
         public class ListQueueConsumersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The consumers.</para>
+            /// <para>The consumer information.</para>
             /// </summary>
             [NameInMap("Consumers")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned.</para>
+            /// <para>The maximum number of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</para>
+            /// <para>The token to retrieve the next page of results. An empty value indicates that all results have been returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>caebacccb2be03f84eb48b699f0a****</para>

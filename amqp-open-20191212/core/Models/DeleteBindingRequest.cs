@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string BindingKey { get; set; }
 
         /// <summary>
-        /// <para>The type of the object that you want to unbind from the source exchange. Valid values:</para>
+        /// <para>The type of the destination object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>QUEUE</b></description></item>
-        /// <item><description><b>EXCHANGE</b></description></item>
+        /// <item><description><para><b>QUEUE</b></para>
+        /// </description></item>
+        /// <item><description><para><b>EXCHANGE</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string BindingType { get; set; }
 
         /// <summary>
-        /// <para>The name of the object that you want to unbind from the source exchange.</para>
+        /// <para>The name of the destination object.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

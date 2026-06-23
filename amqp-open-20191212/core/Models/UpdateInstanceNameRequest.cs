@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class UpdateInstanceNameRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for RabbitMQ instance for which you want to update the name.</para>
+        /// <para>The ID of the ApsaraMQ for RabbitMQ instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,11 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The new name of the instance. No limits are imposed on the value. We recommend that you set this parameter to a maximum of 64 characters in length.</para>
+        /// <para>The new name of the instance. The name can be any string of up to 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>amqp-cn-ZVp2ajsj****</para>
+        /// <para>amqp_test</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]

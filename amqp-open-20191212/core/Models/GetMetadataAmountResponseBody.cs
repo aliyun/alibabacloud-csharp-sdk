@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public GetMetadataAmountResponseBodyData Data { get; set; }
         public class GetMetadataAmountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of created exchanges on the ApsaraMQ for RabbitMQ instance.</para>
+            /// <para>The number of existing exchanges.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? CurrentExchanges { get; set; }
 
             /// <summary>
-            /// <para>The number of created queues on the ApsaraMQ for RabbitMQ instance.</para>
+            /// <para>The number of existing queues.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? CurrentQueues { get; set; }
 
             /// <summary>
-            /// <para>The number of created vhosts on the ApsaraMQ for RabbitMQ instance.</para>
+            /// <para>The number of existing vhosts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? CurrentVirtualHosts { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of exchanges that can be created on the ApsaraMQ for RabbitMQ instance.</para>
+            /// <para>The maximum number of exchanges that you can create.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? MaxExchanges { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of queues that can be created on the ApsaraMQ for RabbitMQ instance.</para>
+            /// <para>The maximum number of queues that you can create.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? MaxQueues { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of vhosts that can be created on the ApsaraMQ for RabbitMQ instance.</para>
+            /// <para>The maximum number of vhosts that you can create.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

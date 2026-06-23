@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class RemoveInstanceWhiteListRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance from which to remove a whitelist entry.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Call the ListInstanceWhiteList operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public long? WhiteListItemId { get; set; }
 
         /// <summary>
+        /// <para>The type of the whitelist item. Specify 2 for an IP address or 1 for a VPC ID.</para>
+        /// <para>A VPC whitelist only applies to instances with the anytunnel VPC endpoint type. Newer instances use PrivateLink for their VPC endpoints and do not support VPC whitelists.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

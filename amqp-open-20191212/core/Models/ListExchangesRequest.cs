@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: <b>1 to 100</b></para>
+        /// <para>The maximum number of results to return. Valid values: <b>1 to 100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token for retrieving the next page of results. Set this parameter to the token value returned from the previous call.</para>
         /// <list type="bullet">
-        /// <item><description>If you call this operation for the first time or a next query is not required, leave this parameter empty.</description></item>
-        /// <item><description>If a next query is to be sent, set the value to the value of <c>NextToken</c> that is returned from the previous request.</description></item>
+        /// <item><description><para>Omit this parameter on your first call.</para>
+        /// </description></item>
+        /// <item><description><para>If a subsequent call is required, set this parameter to the <c>NextToken</c> value returned from the previous call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The vhost name.</para>
+        /// <para>The name of the vhost.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

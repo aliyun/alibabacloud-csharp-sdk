@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class UpdateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data, which includes orderId and instanceId. Sample returned data:</para>
+        /// <para>The returned data. It includes the order ID and instance ID. For example:</para>
         /// <pre><code class="language-json">&quot;Data&quot;: {
         ///     &quot;instanceId&quot;: &quot;amqp-cn-xxxxx&quot;,
         ///     &quot;orderId&quot;: 22222
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// </c></pre>
         /// 
         /// <b>Example:</b>
-        /// <para>{“instanceId”: “amqp-cn-jtexxxxx”, “orderId”: 2222222}</para>
+        /// <para>{\&quot;instanceId\&quot;: \&quot;rabbitmq-serverless-cn-lf63qsjlf06\&quot;, \&quot;orderId\&quot;: 234170302080010}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Each request has a unique ID. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>628705FD-03EE-4ABE-BB21-E1672960***</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

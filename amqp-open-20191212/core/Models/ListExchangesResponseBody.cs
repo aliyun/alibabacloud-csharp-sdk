@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public List<ListExchangesResponseBodyDataExchanges> Exchanges { get; set; }
             public class ListExchangesResponseBodyDataExchanges : TeaModel {
                 /// <summary>
-                /// <para>The attributes. This parameter is unavailable in the current version.</para>
+                /// <para>The attributes of the exchange. This parameter is not supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public Dictionary<string, object> Attributes { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the exchange was automatically deleted.</para>
+                /// <para>Indicates whether the exchange is an auto-delete exchange.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public bool? AutoDeleteState { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp that indicates when the exchange was created. Unit: milliseconds.</para>
+                /// <para>The time when the exchange was created. The value is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1580886216000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The exchange type.</para>
+                /// <para>The type of the exchange.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DIRECT</para>
@@ -63,12 +63,15 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string ExchangeType { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the exchange is an internal exchange.</para>
+                /// </summary>
                 [NameInMap("Internal")]
                 [Validation(Required=false)]
                 public bool? Internal { get; set; }
 
                 /// <summary>
-                /// <para>The exchange name.</para>
+                /// <para>The name of the exchange.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>amq.direct</para>
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The vhost name.</para>
+                /// <para>The name of the vhost to which the exchange belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -100,10 +103,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that marks the end of the current returned page.``</para>
+            /// <para>The token that marks the start of the next query.</para>
             /// <list type="bullet">
-            /// <item><description>If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``</description></item>
-            /// <item><description>If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``</description></item>
+            /// <item><description><para>If this parameter is empty, no more data is available.</para>
+            /// </description></item>
+            /// <item><description><para>If a value is returned, use the value as the <c>NextToken</c> value in the next call to continue the query.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

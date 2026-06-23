@@ -14,14 +14,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>188077086902***</para>
+        /// <para>amqp-cn-5yd3aw******</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.</para>
+        /// <para>The token that marks the end of the current page of results. To retrieve the next page, include this token in the next request. If this is your first request or the last page is returned, the value is an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of data entries to return. If you do not configure this parameter, the default value 1 is used.</para>
+        /// <para>The number of entries to return. If you do not set this parameter, the default value is 1.</para>
         /// <para>Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? QueryCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the queue for which you want to query online consumers.</para>
+        /// <para>The queue name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string Queue { get; set; }
 
         /// <summary>
-        /// <para>The virtual host (vhost) name.</para>
+        /// <para>The vhost name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>021788F6-E50C-4BD6-9F80-66B0A19A6***</para>
+        /// <para>021788F6-E50C-4BD6-9F80-66B0A19A****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public CreateAccountResponseBodyData Data { get; set; }
         public class CreateAccountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID that is used to create the password.</para>
+            /// <para>The AccessKey ID that is used to create the username and password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>LTAI****************</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public string AccessKey { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that indicates when the password was created. Unit: milliseconds.</para>
+            /// <para>The timestamp when the username and password were created. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1671175303522</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID or RAM user to which the AccessKey pair that is used to create the static username and password belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account or RAM user that owns the AccessKey. The AccessKey is used to create the static username and password.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>15657*********01</para>
+            /// <para>1565***********01</para>
             /// </summary>
             [NameInMap("MasterUId")]
             [Validation(Required=false)]
@@ -70,15 +70,17 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             /// <para>The created static password.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>NEMxQTYzNjdDRTVDNDI1NUU5NjE3**************1MzNGODoxNjcxMTc1MzEzNTIy</para>
+            /// <para>OUYwQzM2QjZBRkUxNDRFM***************MzZCNzdDQzoxNjcxNDMwMzkyODI1</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
+            /// <para>The remarks.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>***环境</para>
+            /// <para>*** environment</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -110,14 +112,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>92385FD2-624A-48C9-8FB5-753F2AFA***</para>
+        /// <para>FEBA5E0C-50D0-4FA6-A794-4901E5465***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

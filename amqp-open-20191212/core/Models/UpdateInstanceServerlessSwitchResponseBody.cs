@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
-    public class UpdateInstanceNameResponseBody : TeaModel {
+    public class UpdateInstanceServerlessSwitchResponseBody : TeaModel {
         /// <summary>
         /// <para>The status code.</para>
         /// 
@@ -20,40 +20,37 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public string Data { get; set; }
+        public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>InstanceNotExist</para>
+        /// <para>operation success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6DC68EC9-0E76-5435-B8C0-FF9492B4****</para>
+        /// <para>CCBB1225-C392-480E-8C7F-D09AB2CD2***</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

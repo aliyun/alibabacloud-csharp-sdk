@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateExchangeRequest : TeaModel {
         /// <summary>
-        /// <para>The alternate exchange. An alternate exchange is used to receive messages that fail to be routed to queues from the current exchange.</para>
+        /// <para>The alternate exchange. Configure an alternate exchange to receive messages that fail to be routed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DemoAE</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <summary>
         /// <para>Specifies whether to automatically delete the exchange. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: If the last queue that is bound to the exchange is unbound, the exchange is automatically deleted.</description></item>
-        /// <item><description><b>false</b>: If the last queue that is bound to the exchange is unbound, the exchange is not automatically deleted.</description></item>
+        /// <item><description><para><b>true</b>: Yes. The exchange is automatically deleted after the last queue is unbound from it.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: No. The exchange is not automatically deleted after the last queue is unbound from it.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public bool? AutoDeleteState { get; set; }
 
         /// <summary>
-        /// <para>The name of the exchange that you want to create. The exchange name must meet the following conventions:</para>
+        /// <para>The name of the exchange. Note:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</description></item>
-        /// <item><description>After the exchange is created, you cannot change its name. If you want to change its name, delete the exchange and create another exchange.</description></item>
+        /// <item><description><para>The name can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@). The name must be 1 to 255 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The name of an exchange cannot be changed after the exchange is created. To change the name, delete the exchange and create a new one.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,13 +54,16 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string ExchangeName { get; set; }
 
         /// <summary>
-        /// <para>The exchange type. Valid values:</para>
+        /// <para>The type of the exchange. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DIRECT</b>: An exchange of this type routes a message to the queue whose binding key is exactly the same as the routing key of the message.</description></item>
-        /// <item><description><b>TOPIC</b>: This type of exchange is similar to direct exchanges. An exchange of this type routes a message to one or more queues based on the results of the fuzzy match or multi-condition match between the routing key of the message and the binding keys of the current exchange.</description></item>
-        /// <item><description><b>FANOUT</b>: An exchange of this type routes all received messages to all queues bound to this exchange. You can use a fanout exchange to broadcast messages.</description></item>
-        /// <item><description><b>HEADERS</b>: This type of exchange is similar to direct exchanges. The only difference is that a headers exchange routes messages based on the headers attributes instead of routing keys. When you bind a headers exchange to a queue, you must configure binding attributes in the key-value format for the binding. When you send a message to a headers exchange, you must configure the headers attributes in the key-value format for the message. After a headers exchange receives a message, the exchange routes the message based on the matching results between the headers attributes of the message and the binding attributes of the bound queues.</description></item>
-        /// <item><description><b>X-CONSISTENT-HASH</b>: An exchange of this type allows you to perform hash calculations on routing keys or header values and use consistent hashing to route a message to different queues.</description></item>
+        /// <item><description><para><b>DIRECT</b>: This routing rule type routes messages to a queue whose binding key exactly matches the routing key of the message.</para>
+        /// </description></item>
+        /// <item><description><para><b>TOPIC</b>: This type is similar to the DIRECT type. It routes messages to bound queues using routing key pattern matching and string comparison.</para>
+        /// </description></item>
+        /// <item><description><para><b>FANOUT</b>: This routing rule type is simple. It routes all messages sent to the exchange to all queues that are bound to the exchange. This works like a broadcast feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>HEADERS</b>: This type is similar to the DIRECT type. It uses header properties instead of a routing key for routing. When a queue is bound to a headers exchange, key-value pairs are defined for the binding. When a message is sent to the exchange, key-value pairs are defined in the message header. The exchange routes the message by comparing the key-value pairs in the header with the key-value pairs of the binding.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,7 +75,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string ExchangeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for RabbitMQ for which you want to create an exchange.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,8 +88,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <summary>
         /// <para>Specifies whether the exchange is an internal exchange. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b>: No</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Yes</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -94,7 +103,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public bool? Internal { get; set; }
 
         /// <summary>
-        /// <para>The name of the vhost to which the exchange that you want to create belongs.</para>
+        /// <para>The name of the vhost to which the exchange belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,6 +113,24 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [Validation(Required=false)]
         public string VirtualHost { get; set; }
 
+        /// <summary>
+        /// <para>An x-delayed-message exchange lets you use the x-delay header property to specify a delivery delay for a message in milliseconds. The routing rule for the delayed message is determined by the exchange type that you specify for the XDelayedType parameter. This parameter sets the actual exchange type to which the message is delivered after the delay. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>DIRECT</b>: Delivers the delayed message to the specified queue that is bound to a DIRECT exchange.</para>
+        /// </description></item>
+        /// <item><description><para><b>TOPIC</b>: Delivers the delayed message to queues that are bound to a TOPIC exchange.</para>
+        /// </description></item>
+        /// <item><description><para><b>FANOUT</b>: Delivers the delayed message to queues that are bound to a FANOUT exchange.</para>
+        /// </description></item>
+        /// <item><description><para><b>HEADERS</b>: Delivers the delayed message to queues that are bound to a HEADERS exchange.</para>
+        /// </description></item>
+        /// <item><description><para><b>X-JMS-TOPIC</b>: Delivers the delayed message to queues that are bound to an X-JMS-TOPIC exchange.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DIRECT</para>
+        /// </summary>
         [NameInMap("XDelayedType")]
         [Validation(Required=false)]
         public string XDelayedType { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class DeleteVirtualHostRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraMQ for RabbitMQ instance to which the vhost you want to delete belongs.</para>
+        /// <para>The ID of the ApsaraMQ for RabbitMQ instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the vhost that you want to delete.</para>
+        /// <para>The name of the vhost to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

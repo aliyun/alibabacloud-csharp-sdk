@@ -21,11 +21,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the vhost that you want to create. Valid values:</para>
+        /// <para>The name of the vhost to create. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slash (/), and at signs (@).</description></item>
-        /// <item><description>The name must be 1 to 255 characters in length.</description></item>
-        /// <item><description>After the vhost is created, you cannot change its name. If you want to change the name of a vhost, delete the vhost and create another vhost.</description></item>
+        /// <item><description><para>The name can contain only letters, digits, hyphens (-), underscores (_), periods (.), number signs (#), forward slashes (/), and at signs (@).</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 1 to 255 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The vhost name cannot be changed after creation. To use a different name, delete the vhost and create a new one.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

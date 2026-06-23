@@ -19,6 +19,33 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "amqp-open.us-west-1.aliyuncs.com"},
+                {"us-east-1", "amqp-open.us-east-1.aliyuncs.com"},
+                {"me-central-1", "amqp-open.me-central-1.aliyuncs.com"},
+                {"eu-central-1", "amqp-open.eu-central-1.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "amqp-open.cn-zhengzhou-jva.aliyuncs.com"},
+                {"cn-zhangjiakou", "amqp-open.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "amqp-open.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "amqp-open.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "amqp-open.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "amqp-open.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "amqp-open.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "amqp-open.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "amqp-open.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "amqp-open.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "amqp-open.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "amqp-open.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "amqp-open.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing", "amqp-open.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "amqp-open.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "amqp-open.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "amqp-open.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "amqp-open.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "amqp-open.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "amqp-open.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("amqp-open", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +66,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加实例白名单</para>
+        /// <para>Adds an entry to the whitelist of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -95,7 +122,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加实例白名单</para>
+        /// <para>Adds an entry to the whitelist of an instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -151,7 +178,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加实例白名单</para>
+        /// <para>Adds an entry to the whitelist of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -169,7 +196,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加实例白名单</para>
+        /// <para>Adds an entry to the whitelist of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -187,7 +214,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</para>
+        /// <para>When an open-source client accesses an ApsaraMQ for RabbitMQ server, it must provide a username and password for authentication. ApsaraMQ for RabbitMQ lets you generate a username and password from an AccessKey ID and AccessKey secret provided by Resource Access Management (RAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -253,7 +280,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</para>
+        /// <para>When an open-source client accesses an ApsaraMQ for RabbitMQ server, it must provide a username and password for authentication. ApsaraMQ for RabbitMQ lets you generate a username and password from an AccessKey ID and AccessKey secret provided by Resource Access Management (RAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -319,7 +346,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</para>
+        /// <para>When an open-source client accesses an ApsaraMQ for RabbitMQ server, it must provide a username and password for authentication. ApsaraMQ for RabbitMQ lets you generate a username and password from an AccessKey ID and AccessKey secret provided by Resource Access Management (RAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -337,7 +364,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</para>
+        /// <para>When an open-source client accesses an ApsaraMQ for RabbitMQ server, it must provide a username and password for authentication. ApsaraMQ for RabbitMQ lets you generate a username and password from an AccessKey ID and AccessKey secret provided by Resource Access Management (RAM).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -355,7 +382,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding. In ApsaraMQ for RabbitMQ, after a producer sends a message to an exchange, the exchange routes the message to a queue or another exchange based on the binding relationship and the routing rule.</para>
+        /// <para>A producer sends a message to an exchange, which then routes the message to a specified queue or another exchange based on the binding and routing rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -421,7 +448,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding. In ApsaraMQ for RabbitMQ, after a producer sends a message to an exchange, the exchange routes the message to a queue or another exchange based on the binding relationship and the routing rule.</para>
+        /// <para>A producer sends a message to an exchange, which then routes the message to a specified queue or another exchange based on the binding and routing rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -487,7 +514,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding. In ApsaraMQ for RabbitMQ, after a producer sends a message to an exchange, the exchange routes the message to a queue or another exchange based on the binding relationship and the routing rule.</para>
+        /// <para>A producer sends a message to an exchange, which then routes the message to a specified queue or another exchange based on the binding and routing rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -505,7 +532,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a binding. In ApsaraMQ for RabbitMQ, after a producer sends a message to an exchange, the exchange routes the message to a queue or another exchange based on the binding relationship and the routing rule.</para>
+        /// <para>A producer sends a message to an exchange, which then routes the message to a specified queue or another exchange based on the binding and routing rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -523,7 +550,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an exchange. In ApsaraMQ for RabbitMQ, an exchange is used to route a message that is received from a producer to one or more queues or to discard the message. An exchange routes a message to queues by using the routing key and binding keys.</para>
+        /// <para>A producer sends a message to an exchange. The exchange then routes the message to one or more queues based on the routing key and the binding key, or discards the message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -593,7 +620,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an exchange. In ApsaraMQ for RabbitMQ, an exchange is used to route a message that is received from a producer to one or more queues or to discard the message. An exchange routes a message to queues by using the routing key and binding keys.</para>
+        /// <para>A producer sends a message to an exchange. The exchange then routes the message to one or more queues based on the routing key and the binding key, or discards the message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -663,7 +690,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an exchange. In ApsaraMQ for RabbitMQ, an exchange is used to route a message that is received from a producer to one or more queues or to discard the message. An exchange routes a message to queues by using the routing key and binding keys.</para>
+        /// <para>A producer sends a message to an exchange. The exchange then routes the message to one or more queues based on the routing key and the binding key, or discards the message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -681,7 +708,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an exchange. In ApsaraMQ for RabbitMQ, an exchange is used to route a message that is received from a producer to one or more queues or to discard the message. An exchange routes a message to queues by using the routing key and binding keys.</para>
+        /// <para>A producer sends a message to an exchange. The exchange then routes the message to one or more queues based on the routing key and the binding key, or discards the message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -701,11 +728,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <summary>
         /// <para>Creates an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateInstanceRequest
@@ -879,11 +901,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <para>Creates an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</para>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
         /// CreateInstanceRequest
         /// </param>
@@ -1056,11 +1073,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <para>Creates an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -1079,11 +1091,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// <para>Creates an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>*Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/606747.html">billing methods and pricing</a> of ApsaraMQ for RabbitMQ.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -1099,7 +1106,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue. In ApsaraMQ for RabbitMQ, a queue is a message queue. All messages in ApsaraMQ for RabbitMQ are sent to a specific exchange and then routed to a bound queue by the exchange.</para>
+        /// <para>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1188,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue. In ApsaraMQ for RabbitMQ, a queue is a message queue. All messages in ApsaraMQ for RabbitMQ are sent to a specific exchange and then routed to a bound queue by the exchange.</para>
+        /// <para>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1263,7 +1270,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue. In ApsaraMQ for RabbitMQ, a queue is a message queue. All messages in ApsaraMQ for RabbitMQ are sent to a specific exchange and then routed to a bound queue by the exchange.</para>
+        /// <para>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1281,7 +1288,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a queue. In ApsaraMQ for RabbitMQ, a queue is a message queue. All messages in ApsaraMQ for RabbitMQ are sent to a specific exchange and then routed to a bound queue by the exchange.</para>
+        /// <para>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1427,7 +1434,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pair of username and password.</para>
+        /// <para>Deletes a static username and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1473,7 +1480,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pair of username and password.</para>
+        /// <para>Deletes a static username and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1519,7 +1526,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pair of username and password.</para>
+        /// <para>Deletes a static username and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1537,7 +1544,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a pair of username and password.</para>
+        /// <para>Deletes a static username and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1555,7 +1562,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a binding to unbind a queue or an exchange from a source exchange.</para>
+        /// <para>The DeleteBinding operation detaches a source exchange from a target queue or another exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1617,7 +1624,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a binding to unbind a queue or an exchange from a source exchange.</para>
+        /// <para>The DeleteBinding operation detaches a source exchange from a target queue or another exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1679,7 +1686,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a binding to unbind a queue or an exchange from a source exchange.</para>
+        /// <para>The DeleteBinding operation detaches a source exchange from a target queue or another exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1697,7 +1704,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a binding to unbind a queue or an exchange from a source exchange.</para>
+        /// <para>The DeleteBinding operation detaches a source exchange from a target queue or another exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1720,10 +1727,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot delete exchanges of the <b>headers</b> and <b>x-jms-topic</b> types.</description></item>
-        /// <item><description>You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.</description></item>
+        /// <item><description>You cannot delete exchanges with the type <b>headers</b>.</description></item>
+        /// <item><description>You cannot delete the three built-in exchanges in a vhost: amq.direct, amq.topic, or amq.fanout.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1779,10 +1786,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot delete exchanges of the <b>headers</b> and <b>x-jms-topic</b> types.</description></item>
-        /// <item><description>You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.</description></item>
+        /// <item><description>You cannot delete exchanges with the type <b>headers</b>.</description></item>
+        /// <item><description>You cannot delete the three built-in exchanges in a vhost: amq.direct, amq.topic, or amq.fanout.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1838,10 +1845,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot delete exchanges of the <b>headers</b> and <b>x-jms-topic</b> types.</description></item>
-        /// <item><description>You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.</description></item>
+        /// <item><description>You cannot delete exchanges with the type <b>headers</b>.</description></item>
+        /// <item><description>You cannot delete the three built-in exchanges in a vhost: amq.direct, amq.topic, or amq.fanout.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1865,10 +1872,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You cannot delete exchanges of the <b>headers</b> and <b>x-jms-topic</b> types.</description></item>
-        /// <item><description>You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.</description></item>
+        /// <item><description>You cannot delete exchanges with the type <b>headers</b>.</description></item>
+        /// <item><description>You cannot delete the three built-in exchanges in a vhost: amq.direct, amq.topic, or amq.fanout.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2028,7 +2035,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.</para>
+        /// <para>Before you delete a vhost, you must delete all exchanges and queues in it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2079,7 +2086,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.</para>
+        /// <para>Before you delete a vhost, you must delete all exchanges and queues in it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2130,7 +2137,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.</para>
+        /// <para>Before you delete a vhost, you must delete all exchanges and queues in it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2153,7 +2160,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.</para>
+        /// <para>Before you delete a vhost, you must delete all exchanges and queues in it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2171,7 +2178,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2209,7 +2216,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2247,7 +2254,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2265,7 +2272,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Retrieves the details of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2283,7 +2290,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the maximum number of vhosts, exchanges, and queues that you can create and the number of created vhosts, exchanges, and queues on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries the current and maximum numbers of vhosts, exchanges, and queues for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2321,7 +2328,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the maximum number of vhosts, exchanges, and queues that you can create and the number of created vhosts, exchanges, and queues on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries the current and maximum numbers of vhosts, exchanges, and queues for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2359,7 +2366,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the maximum number of vhosts, exchanges, and queues that you can create and the number of created vhosts, exchanges, and queues on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries the current and maximum numbers of vhosts, exchanges, and queues for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2377,7 +2384,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the maximum number of vhosts, exchanges, and queues that you can create and the number of created vhosts, exchanges, and queues on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries the current and maximum numbers of vhosts, exchanges, and queues for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2395,7 +2402,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static username and password of an ApsaraMQ for RabbitMQ.</para>
+        /// <para>Lists the usernames and passwords for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2444,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static username and password of an ApsaraMQ for RabbitMQ.</para>
+        /// <para>Lists the usernames and passwords for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2479,7 +2486,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static username and password of an ApsaraMQ for RabbitMQ.</para>
+        /// <para>Lists the usernames and passwords for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2497,7 +2504,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the static username and password of an ApsaraMQ for RabbitMQ.</para>
+        /// <para>Lists the usernames and passwords for a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2515,7 +2522,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bindings of a virtual host (vhost) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries all bindings that are created in a vhost of a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2553,7 +2560,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bindings of a virtual host (vhost) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries all bindings that are created in a vhost of a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2591,7 +2598,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bindings of a virtual host (vhost) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries all bindings that are created in a vhost of a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2609,7 +2616,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all bindings of a virtual host (vhost) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries all bindings that are created in a vhost of a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2627,7 +2634,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges or queues to which an exchange is bound.</para>
+        /// <para>Queries the exchanges or queues that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2665,7 +2672,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges or queues to which an exchange is bound.</para>
+        /// <para>Queries the exchanges or queues that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2703,7 +2710,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges or queues to which an exchange is bound.</para>
+        /// <para>Queries the exchanges or queues that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2721,7 +2728,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges or queues to which an exchange is bound.</para>
+        /// <para>Queries the exchanges or queues that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2739,7 +2746,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues or exchanges that are bound to an exchange.</para>
+        /// <para>Queries the queues or other exchanges that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2777,7 +2784,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues or exchanges that are bound to an exchange.</para>
+        /// <para>Queries the queues or other exchanges that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2815,7 +2822,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues or exchanges that are bound to an exchange.</para>
+        /// <para>Queries the queues or other exchanges that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2833,7 +2840,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues or exchanges that are bound to an exchange.</para>
+        /// <para>Queries the queues or other exchanges that are bound to a specified exchange.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2851,7 +2858,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges that are created in a virtual host (vhost).</para>
+        /// <para>Lists all exchanges in a specified vhost of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2889,7 +2896,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges that are created in a virtual host (vhost).</para>
+        /// <para>Lists all exchanges in a specified vhost of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2927,7 +2934,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges that are created in a virtual host (vhost).</para>
+        /// <para>Lists all exchanges in a specified vhost of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2945,7 +2952,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all exchanges that are created in a virtual host (vhost).</para>
+        /// <para>Lists all exchanges in a specified vhost of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2963,7 +2970,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例ip/vpc白名单</para>
+        /// <para>Queries the IP or VPC whitelist for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3009,7 +3016,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例ip/vpc白名单</para>
+        /// <para>Queries the IP or VPC whitelist for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3055,7 +3062,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例ip/vpc白名单</para>
+        /// <para>Queries the IP or VPC whitelist for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3073,7 +3080,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例ip/vpc白名单</para>
+        /// <para>Queries the IP or VPC whitelist for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3091,7 +3098,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</para>
+        /// <para>Queries a list of ApsaraMQ for RabbitMQ instances in a specified region and returns basic information about each instance, such as its endpoints and specification limits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3129,7 +3136,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</para>
+        /// <para>Queries a list of ApsaraMQ for RabbitMQ instances in a specified region and returns basic information about each instance, such as its endpoints and specification limits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3167,7 +3174,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</para>
+        /// <para>Queries a list of ApsaraMQ for RabbitMQ instances in a specified region and returns basic information about each instance, such as its endpoints and specification limits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3185,7 +3192,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</para>
+        /// <para>Queries a list of ApsaraMQ for RabbitMQ instances in a specified region and returns basic information about each instance, such as its endpoints and specification limits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3203,12 +3210,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the online consumers of a queue.</para>
+        /// <para>Queries the online consumer clients of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraMQ for RabbitMQ allows you to query only online consumers.</para>
+        /// <para>ApsaraMQ for RabbitMQ lets you query only online consumer clients. You cannot query offline consumer clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3246,12 +3253,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the online consumers of a queue.</para>
+        /// <para>Queries the online consumer clients of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraMQ for RabbitMQ allows you to query only online consumers.</para>
+        /// <para>ApsaraMQ for RabbitMQ lets you query only online consumer clients. You cannot query offline consumer clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3289,12 +3296,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the online consumers of a queue.</para>
+        /// <para>Queries the online consumer clients of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraMQ for RabbitMQ allows you to query only online consumers.</para>
+        /// <para>ApsaraMQ for RabbitMQ lets you query only online consumer clients. You cannot query offline consumer clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3312,12 +3319,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the online consumers of a queue.</para>
+        /// <para>Queries the online consumer clients of a specified queue.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ApsaraMQ for RabbitMQ allows you to query only online consumers.</para>
+        /// <para>ApsaraMQ for RabbitMQ lets you query only online consumer clients. You cannot query offline consumer clients.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3335,7 +3342,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exchanges that are bound to a queue.</para>
+        /// <para>Queries the exchanges that are bound to a specified queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3373,7 +3380,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exchanges that are bound to a queue.</para>
+        /// <para>Queries the exchanges that are bound to a specified queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3411,7 +3418,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exchanges that are bound to a queue.</para>
+        /// <para>Queries the exchanges that are bound to a specified queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3429,7 +3436,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the exchanges that are bound to a queue.</para>
+        /// <para>Queries the exchanges that are bound to a specified queue.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3447,7 +3454,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues in a vhost of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries information about all queues in a vhost on a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3485,7 +3492,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues in a vhost of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries information about all queues in a vhost on a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3523,7 +3530,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues in a vhost of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries information about all queues in a vhost on a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3541,7 +3548,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all queues in a vhost of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Queries information about all queues in a vhost on a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3559,7 +3566,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all virtual hosts (vhosts) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Lists all vhosts in a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3597,7 +3604,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all virtual hosts (vhosts) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Lists all vhosts in a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3635,7 +3642,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all virtual hosts (vhosts) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Lists all vhosts in a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3653,7 +3660,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all virtual hosts (vhosts) on an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Lists all vhosts in a specified ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3671,7 +3678,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例ip/vpc白名单</para>
+        /// <para>Removes an IP address or a VPC from an instance\&quot;s whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3721,7 +3728,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例ip/vpc白名单</para>
+        /// <para>Removes an IP address or a VPC from an instance\&quot;s whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3771,7 +3778,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例ip/vpc白名单</para>
+        /// <para>Removes an IP address or a VPC from an instance\&quot;s whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3789,7 +3796,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除实例ip/vpc白名单</para>
+        /// <para>Removes an IP address or a VPC from an instance\&quot;s whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3807,7 +3814,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Upgrades or downgrades the specifications of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3913,7 +3920,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Upgrades or downgrades the specifications of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4019,7 +4026,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Upgrades or downgrades the specifications of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4037,7 +4044,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades or downgrades the configurations of an ApsaraMQ for RabbitMQ instance.</para>
+        /// <para>Upgrades or downgrades the specifications of an ApsaraMQ for RabbitMQ instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4055,7 +4062,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of an ApsaraMQ for RabbitMQ instance. After an ApsaraMQ for RabbitMQ instance is created, the ID of the instance is used as its name by default. You can specify a custom name for an instance to facilitate instance identification.</para>
+        /// <para>An ApsaraMQ for RabbitMQ instance is named after its instance ID by default. You can change the name for easier identification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4101,7 +4108,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of an ApsaraMQ for RabbitMQ instance. After an ApsaraMQ for RabbitMQ instance is created, the ID of the instance is used as its name by default. You can specify a custom name for an instance to facilitate instance identification.</para>
+        /// <para>An ApsaraMQ for RabbitMQ instance is named after its instance ID by default. You can change the name for easier identification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4147,7 +4154,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of an ApsaraMQ for RabbitMQ instance. After an ApsaraMQ for RabbitMQ instance is created, the ID of the instance is used as its name by default. You can specify a custom name for an instance to facilitate instance identification.</para>
+        /// <para>An ApsaraMQ for RabbitMQ instance is named after its instance ID by default. You can change the name for easier identification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4165,7 +4172,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the name of an ApsaraMQ for RabbitMQ instance. After an ApsaraMQ for RabbitMQ instance is created, the ID of the instance is used as its name by default. You can specify a custom name for an instance to facilitate instance identification.</para>
+        /// <para>An ApsaraMQ for RabbitMQ instance is named after its instance ID by default. You can change the name for easier identification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4179,6 +4186,142 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceNameWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceServerlessSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceServerlessSwitchResponse
+        /// </returns>
+        public UpdateInstanceServerlessSwitchResponse UpdateInstanceServerlessSwitchWithOptions(UpdateInstanceServerlessSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessSwitch))
+            {
+                query["ServerlessSwitch"] = request.ServerlessSwitch;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceServerlessSwitch",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceServerlessSwitchResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceServerlessSwitchRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceServerlessSwitchResponse
+        /// </returns>
+        public async Task<UpdateInstanceServerlessSwitchResponse> UpdateInstanceServerlessSwitchWithOptionsAsync(UpdateInstanceServerlessSwitchRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessSwitch))
+            {
+                query["ServerlessSwitch"] = request.ServerlessSwitch;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateInstanceServerlessSwitch",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateInstanceServerlessSwitchResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceServerlessSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceServerlessSwitchResponse
+        /// </returns>
+        public UpdateInstanceServerlessSwitchResponse UpdateInstanceServerlessSwitch(UpdateInstanceServerlessSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateInstanceServerlessSwitchWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateInstanceServerlessSwitchRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateInstanceServerlessSwitchResponse
+        /// </returns>
+        public async Task<UpdateInstanceServerlessSwitchResponse> UpdateInstanceServerlessSwitchAsync(UpdateInstanceServerlessSwitchRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateInstanceServerlessSwitchWithOptionsAsync(request, runtime);
         }
 
     }

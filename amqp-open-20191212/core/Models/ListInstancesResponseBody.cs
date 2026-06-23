@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListInstancesResponseBodyData Data { get; set; }
         public class ListInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The instances.</para>
+            /// <para>A list of instances.</para>
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]
             public List<ListInstancesResponseBodyDataInstances> Instances { get; set; }
             public class ListInstancesResponseBodyDataInstances : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the instance is automatically renewed.</para>
+                /// <para>Indicates whether auto-renewal is enabled for the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public bool? AutoRenewInstance { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint that is used to access the instance over the classic network. This parameter is no longer available.</para>
+                /// <para>The classic network endpoint. This parameter is deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>amqp-cn-st21x7kv****.not-support</para>
@@ -43,12 +43,24 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string ClassicEndpoint { get; set; }
 
+                /// <summary>
+                /// <para>The deployment architecture, which is applicable only to Serverless Edition instances. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>shared: A shared architecture, used for reserved, elastic (shared), and pay-as-you-go instances.</para>
+                /// </description></item>
+                /// <item><description><para>dedicated: A dedicated architecture, used for reserved and elastic (dedicated) instances.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>shared</para>
+                /// </summary>
                 [NameInMap("Edition")]
                 [Validation(Required=false)]
                 public string Edition { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the encryption at rest feature is enabled for the instance.</para>
+                /// <para>Indicates whether storage encryption is enabled for the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -58,7 +70,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public bool? EncryptedInstance { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp that indicates when the instance expires. Unit: milliseconds.</para>
+                /// <para>The expiration timestamp of the instance, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1651507200000</para>
@@ -68,7 +80,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>amqp-cn-st21x7kv****</para>
@@ -88,11 +100,18 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>The instance type.</para>
+                /// <para>The instance type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PROFESSIONAL: Professional Edition</description></item>
-                /// <item><description>ENTERPRISE: Enterprise Edition</description></item>
-                /// <item><description>VIP: Enterprise Platinum Edition</description></item>
+                /// <item><description><para>professional: Professional Edition</para>
+                /// </description></item>
+                /// <item><description><para>enterprise: Enterprise Edition</para>
+                /// </description></item>
+                /// <item><description><para>vip: Platinum Edition</para>
+                /// </description></item>
+                /// </list>
+                /// <para>&lt;props=&quot;china&quot;&gt;</para>
+                /// <list type="bullet">
+                /// <item><description>serverless: Serverless Edition</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -103,7 +122,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Key Management Service (KMS) key used for the data disk.</para>
+                /// <para>The ID of the KMS key used for data disk encryption.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key-bjj66c2a893vmhawtq5fd</para>
@@ -113,6 +132,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
+                /// <para>The port listener mode of the instance. <c>tcp_and_ssl</c> enables both port <c>5672</c> and port <c>5671</c>, while <c>ssl_only</c> enables only port <c>5671</c>.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>tcp_and_ssl</para>
                 /// </summary>
@@ -121,7 +142,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string ListenerMode { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of Internet-based transactions per second (TPS) for the instance.</para>
+                /// <para>The peak transactions per second (TPS) of the instance over the public network.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>24832</para>
@@ -131,7 +152,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public int? MaxEipTps { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of queues on the instance.</para>
+                /// <para>The maximum number of queues for the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -141,7 +162,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public int? MaxQueue { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of VPC-based TPS for the instance.</para>
+                /// <para>The peak transactions per second (TPS) of the instance over the private network.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5000</para>
@@ -151,7 +172,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public int? MaxTps { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of vhosts on the instance.</para>
+                /// <para>The maximum number of vhosts for the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -161,7 +182,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public int? MaxVhost { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp that indicates when the order was created. Unit: milliseconds.</para>
+                /// <para>The creation timestamp of the order, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1572441939000</para>
@@ -173,8 +194,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 /// <summary>
                 /// <para>The billing method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PrePaid: the subscription billing method.</description></item>
-                /// <item><description>POST_PAID: the pay-as-you-go billing method.</description></item>
+                /// <item><description><para>PRE_PAID: The instance uses the subscription billing method.</para>
+                /// </description></item>
+                /// <item><description><para>POST_PAID: The instance uses the pay-as-you-go billing method.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -185,7 +208,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string OrderType { get; set; }
 
                 /// <summary>
-                /// <para>The virtual private cloud (VPC) endpoint of the instance.</para>
+                /// <para>The VPC endpoint of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>amqp-cn-st21x7kv****.mq-amqp.cn-hangzhou-a.aliyuncs.com</para>
@@ -194,6 +217,12 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string PrivateEndpoint { get; set; }
 
+                /// <summary>
+                /// <para>The reserved TPS capacity for reserved and elastic instances.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2000</para>
+                /// </summary>
                 [NameInMap("ProvisionedCapacity")]
                 [Validation(Required=false)]
                 public int? ProvisionedCapacity { get; set; }
@@ -209,7 +238,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string PublicEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group to which the instance belongs.</para>
+                /// <para>The resource group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-aek3axfj2w4czrq</para>
@@ -219,6 +248,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the security group to which the instance belongs. This security group is used for PrivateLink endpoint creation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>sg-xxx</para>
                 /// </summary>
@@ -233,10 +264,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 /// <summary>
                 /// <para>The instance status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DEPLOYING: The instance is being deployed.</description></item>
-                /// <item><description>EXPIRED: The instance is expired.</description></item>
-                /// <item><description>SERVING: The instance is running.</description></item>
-                /// <item><description>RELEASED: The instance is released.</description></item>
+                /// <item><description><para>DEPLOYING: The instance is being deployed.</para>
+                /// </description></item>
+                /// <item><description><para>EXPIRED: The instance has expired.</para>
+                /// </description></item>
+                /// <item><description><para>SERVING: The instance is running.</para>
+                /// </description></item>
+                /// <item><description><para>RELEASED: The instance is released.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -247,9 +282,9 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The disk size. Unit: GB.</para>
+                /// <para>The storage capacity of the disk. Unit: GB.</para>
                 /// <remarks>
-                /// <para> For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \<em>\</em>-1\<em>\</em> is returned.</para>
+                /// <para>This parameter returns a value of <b>-1</b> for Professional Edition and Enterprise Edition instances, to which it does not apply.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -260,7 +295,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public int? StorageSize { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the instance supports elastic IP addresses (EIPs).</para>
+                /// <para>Indicates whether the instance supports EIPs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -270,7 +305,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public bool? SupportEIP { get; set; }
 
                 /// <summary>
-                /// <para>The tags that are added to the instance.</para>
+                /// <para>The tags attached to the instance.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -299,6 +334,8 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 }
 
                 /// <summary>
+                /// <para>The ID of the VPC in which the instance resides. This VPC is used for PrivateLink endpoint creation.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vpc-xxx</para>
                 /// </summary>
@@ -306,6 +343,9 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <para>The IDs of the VSwitches to which the instance is connected. These VSwitches are used for PrivateLink endpoint creation.</para>
+                /// </summary>
                 [NameInMap("VswitchIds")]
                 [Validation(Required=false)]
                 public List<string> VswitchIds { get; set; }
@@ -313,7 +353,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned.</para>
+            /// <para>The maximum number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -323,7 +363,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.</para>
+            /// <para>The token for the next page of results. If this field is empty, it means all results have been returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>caebacccb2be03f84eb48b699f0a****</para>
