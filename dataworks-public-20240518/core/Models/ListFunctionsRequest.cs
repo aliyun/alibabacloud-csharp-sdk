@@ -65,16 +65,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The user-defined function (UDF) type. This parameter specifies a filter condition.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Math: mathematical operation function</description></item>
-        /// <item><description>Aggregate: aggregate function</description></item>
-        /// <item><description>String: string processing function</description></item>
-        /// <item><description>Date: date function</description></item>
-        /// <item><description>Analytic: window function</description></item>
-        /// <item><description>Other: other functions</description></item>
+        /// <item><description><para>Math: mathematical operation function</para>
+        /// </description></item>
+        /// <item><description><para>Aggregate: aggregate function</para>
+        /// </description></item>
+        /// <item><description><para>String: string processing function</para>
+        /// </description></item>
+        /// <item><description><para>Date: date function</para>
+        /// </description></item>
+        /// <item><description><para>Analytic: window function</para>
+        /// </description></item>
+        /// <item><description><para>Other: other functions</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>MATH</para>
+        /// <para>Math</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

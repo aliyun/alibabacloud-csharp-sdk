@@ -10,23 +10,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineageRelationshipsRequest : TeaModel {
         /// <summary>
-        /// <para>The destination entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</para>
+        /// <para>The ID of the destination entity. You can get the ID for a table or column from the response of the <c>ListTables</c> or <c>ListColumns</c> operation, or specify the ID of a custom entity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:123456XXX::test_project::test_tbl
-        /// dlf-table:123456XXX:test_catalog:test_db::test_tbl
-        /// hms-table:c-abc123xxx::test_db::test_tbl
-        /// holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-        /// custom-api:api123
-        /// custom-table:table456</para>
+        /// <para>dlf-table::catalog_id:database_name::table_name</para>
         /// </summary>
         [NameInMap("DstEntityId")]
         [Validation(Required=false)]
         public string DstEntityId { get; set; }
 
         /// <summary>
-        /// <para>The destination entity name. Supports fuzzy matching.</para>
+        /// <para>The name of the destination entity. Supports fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dstName</para>
@@ -36,10 +31,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DstEntityName { get; set; }
 
         /// <summary>
-        /// <para>The order in which schemas are sorted. Default value: Asc. Valid values:</para>
+        /// <para>The sort order. The default value is <c>Asc</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending.</description></item>
-        /// <item><description>Desc: descending.</description></item>
+        /// <item><description><para><c>Asc</c>: ascending order</para>
+        /// </description></item>
+        /// <item><description><para><c>Desc</c>: descending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 100.</para>
+        /// <para>The page size. The default value is 10. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -70,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sort field. Default value: Name.</para>
+        /// <para>The field to sort the results by. The default value is <c>Name</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Name</para>
@@ -80,23 +77,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The source entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</para>
+        /// <para>The ID of the source entity. You can get the ID for a table or column from the response of the <c>ListTables</c> or <c>ListColumns</c> operation, or specify the ID of a custom entity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-table:123456XXX::test_project::test_tbl
-        /// dlf-table:123456XXX:test_catalog:test_db::test_tbl
-        /// hms-table:c-abc123xxx::test_db::test_tbl
-        /// holo-table:h-abc123xxx::test_db:test_schema:test_tbl
-        /// custom-api:api123
-        /// custom-table:table456</para>
+        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
         /// </summary>
         [NameInMap("SrcEntityId")]
         [Validation(Required=false)]
         public string SrcEntityId { get; set; }
 
         /// <summary>
-        /// <para>The source entity name. Supports fuzzy matching.</para>
+        /// <para>The name of the source entity. Supports fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>srcName</para>

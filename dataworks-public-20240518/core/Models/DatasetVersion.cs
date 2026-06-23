@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class DatasetVersion : TeaModel {
         /// <summary>
         /// <para>The dataset version description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>初始版本</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

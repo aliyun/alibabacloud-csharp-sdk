@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class Schema : TeaModel {
         /// <summary>
-        /// <para>The comment.</para>
+        /// <para>注释。</para>
         /// 
         /// <b>Example:</b>
         /// <para>test comment</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The creation time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>创建时间（毫秒级时间戳）。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736852168000</para>
@@ -30,20 +30,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The schema ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities.</a>.</para>
-        /// <para>The format is <c>${EntityType}:${Instance ID or escaped URL}:${Catalog name}:${Database name}</c>. Use empty strings as placeholders for levels that do not exist.</para>
+        /// <para>ID，可参考<a href="https://help.aliyun.com/document_detail/2880092.html">元数据实体相关概念说明</a>。</para>
+        /// <para>格式为<c>${EntityType}:${实例ID或转义后的URL}:${数据目录名称}:${数据库名称}:${模式名称}</c>，对于不存在的层级置空。</para>
         /// <remarks>
-        /// <para> For the MaxCompute type, the instance ID level is represented by an empty string. The database name is the name of the MaxCompute project, which has enabled the schema feature.</para>
-        /// </remarks>
-        /// <para>Examples of common ID formats</para>
-        /// <para><c>maxcompute-project:::project_name</c> (For MaxCompute projects schema enabled)</para>
-        /// <para><c>holo-schema:instance_id::database_name:schema_name</c></para>
-        /// <remarks>
-        /// <para>\
-        /// <c>instance_id</c>: The Hologres instance ID\
-        /// . <c>database_name</c>: The database name\
-        /// . <c>project_name</c>: The MaxCompute project name\
-        /// . <c>schema_name</c>: The schema name.</para>
+        /// <para>对于MaxCompute类型，此处的实例ID即为主账号ID，数据库名称即为MaxCompute项目名称。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The modification time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>更新时间（毫秒级时间戳）。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1736852168000</para>
@@ -65,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>名称。</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_db</para>
@@ -75,19 +65,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
-        /// <para>The format: <c>${EntityType}:${Instance ID or escaped URL}:${Catalog name}:${Database name}</c>. Use empty strings as placeholders for levels that do not exist.</para>
+        /// <para>父层级元数据实体ID，父层级实体类型取值参考ListCrawlerTypes接口。</para>
+        /// <para>格式为<c>${EntityType}:${实例ID或转义后的URL}:${数据目录名称}:${数据库名称}</c>，对于不存在的层级置空。</para>
         /// <remarks>
-        /// <para> For the MaxCompute type, the instance ID level is represented by an empty string. The database name is the name of the MaxCompute project with schema enabled.</para>
-        /// </remarks>
-        /// <para>Examples of common ParentMetaEntityId formats</para>
-        /// <para><c>maxcompute-project:::project_name</c> (For MaxCompute projects with schema enabled)</para>
-        /// <para><c>holo-database:instance_id::database_name</c></para>
-        /// <remarks>
-        /// <para>\
-        /// <c>instance_id</c>: The Hologres instance ID\
-        /// . <c>database_name</c>: The database name\
-        /// . <c>project_name</c>: The MaxCompute project name.</para>
+        /// <para>对于MaxCompute类型，此处的实例ID即为主账号ID，数据库名称即为MaxCompute项目名称。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ParentMetaEntityId { get; set; }
 
         /// <summary>
-        /// <para>The type.</para>
+        /// <para>类型。</para>
         /// 
         /// <b>Example:</b>
         /// <para>MANAGED</para>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment type of the computing resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dev</description></item>
-        /// <item><description>Prod</description></item>
+        /// <item><description><para>Dev</para>
+        /// </description></item>
+        /// <item><description><para>Prod</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort direction of the computing resource list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Desc: descending order.</description></item>
-        /// <item><description>Asc: ascending order.</description></item>
+        /// <item><description><para>Desc: descending order.</para>
+        /// </description></item>
+        /// <item><description><para>Asc: ascending order.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Desc</para>
         /// 
@@ -82,10 +86,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The field to sort the computing resource list by. Supported fields include name, creation time, and computing resource ID.</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime: Sorts by creation time</description></item>
-        /// <item><description>Id: Sorts by computing resource ID</description></item>
-        /// <item><description>Name: Sorts by computing resource name.</description></item>
-        /// <item><description>CreateTimeWithDefaultFirst: Sorts based on whether it is the default resource and by creation time, with the default computing resource listed first.</description></item>
+        /// <item><description><para>CreateTime: Sorts by creation time</para>
+        /// </description></item>
+        /// <item><description><para>Id: Sorts by computing resource ID</para>
+        /// </description></item>
+        /// <item><description><para>Name: Sorts by computing resource name.</para>
+        /// </description></item>
+        /// <item><description><para>CreateTimeWithDefaultFirst: Sorts based on whether it is the default resource and by creation time, with the default computing resource listed first.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: CreateTime</para>
         /// 

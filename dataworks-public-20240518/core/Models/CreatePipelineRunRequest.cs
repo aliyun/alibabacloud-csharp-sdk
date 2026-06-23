@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The IDs of entities to which you want to apply the process.</para>
         /// <remarks>
-        /// <para> A process can be applied to only a single entity and its child entities. If you specify multiple entities in the array, the process is applied only to the first entity in the array and its child entities. Make sure that the array in your request contains only one element. Extra elements will be ignored.</para>
+        /// <para>A process can be applied to only a single entity and its child entities. If you specify multiple entities in the array, the process is applied only to the first entity in the array and its child entities. Make sure that the array in your request contains only one element. Extra elements will be ignored.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -44,8 +44,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to deploy or undeploy the entity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Online: deploys the entity.</description></item>
-        /// <item><description>Offline: undeploys the entity.</description></item>
+        /// <item><description><para>Online: deploys the entity.</para>
+        /// </description></item>
+        /// <item><description><para>Offline: undeploys the entity.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

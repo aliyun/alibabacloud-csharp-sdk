@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>
+        /// <para>8abcb91f-d266-4073-b907-2ed6****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call is successful. The values are as follows:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: the call failed.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

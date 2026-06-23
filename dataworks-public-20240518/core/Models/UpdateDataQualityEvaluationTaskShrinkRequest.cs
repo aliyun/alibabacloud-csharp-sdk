@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataQualityEvaluationTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of monitoring rules that are associated with the monitor.</para>
+        /// <para>List of data quality rules associated with the data quality monitoring.</para>
         /// </summary>
         [NameInMap("DataQualityRules")]
         [Validation(Required=false)]
         public string DataQualityRulesShrink { get; set; }
 
         /// <summary>
-        /// <para>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</para>
+        /// <para>Data source ID. You can call <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> to obtain the data source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>358750</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the monitor.</para>
+        /// <para>Description of the quality monitoring task</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenAPI data quality monitoring test.</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The hook.</para>
+        /// <para>Callback settings</para>
         /// </summary>
         [NameInMap("Hooks")]
         [Validation(Required=false)]
         public string HooksShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the monitor.</para>
+        /// <para>Data quality monitoring ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the monitor.</para>
+        /// <para>Name of the quality monitoring task</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenAPI data quality monitoring test.</para>
@@ -65,14 +65,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configurations of alert notifications.</para>
+        /// <para>Notification subscription configuration</para>
         /// </summary>
         [NameInMap("Notifications")]
         [Validation(Required=false)]
         public string NotificationsShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace.</para>
+        /// <para>Workspace ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,12 +83,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The extended configurations in JSON-formatted strings. You can use this parameter only for monitors that are used to monitor the quality of E-MapReduce (EMR) data.</para>
+        /// <para>Extended configuration. A JSON-formatted string. Takes effect only for EMR-type data quality monitoring.</para>
         /// <list type="bullet">
-        /// <item><description><para>queue: The Yarn queue used when a monitor checks the quality of EMR data. By default, the queue configured for the current workspace is used.</para>
-        /// </description></item>
-        /// <item><description><para>sqlEngine: The SQL engine used when a monitor checks the quality of EMR data.</para>
-        /// <list type="bullet">
+        /// <item><description>queue: The YARN queue used when executing EMR data quality validation. Defaults to the queue configured for the current project.</description></item>
+        /// <item><description>sqlEngine: The SQL engine used when executing EMR data validation.<list type="bullet">
         /// <item><description>HIVE_SQL</description></item>
         /// <item><description>SPARK_SQL</description></item>
         /// </list>
@@ -103,14 +101,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RuntimeConf { get; set; }
 
         /// <summary>
-        /// <para>The monitored object of the data quality monitoring task.</para>
+        /// <para>Data quality monitoring object</para>
         /// </summary>
         [NameInMap("Target")]
         [Validation(Required=false)]
         public string TargetShrink { get; set; }
 
         /// <summary>
-        /// <para>The trigger configuration of the monitor.</para>
+        /// <para>Trigger configuration of the data quality validation task</para>
         /// </summary>
         [NameInMap("Trigger")]
         [Validation(Required=false)]

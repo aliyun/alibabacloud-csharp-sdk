@@ -22,13 +22,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The data type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>COMMON: Common (Default)</description></item>
-        /// <item><description>PIC</description></item>
-        /// <item><description>TEXT</description></item>
-        /// <item><description>TABLE</description></item>
-        /// <item><description>VIDEO</description></item>
-        /// <item><description>AUDIO</description></item>
-        /// <item><description>INDEX</description></item>
+        /// <item><description><para>COMMON: Common (Default)</para>
+        /// </description></item>
+        /// <item><description><para>PIC</para>
+        /// </description></item>
+        /// <item><description><para>TEXT</para>
+        /// </description></item>
+        /// <item><description><para>TABLE</para>
+        /// </description></item>
+        /// <item><description><para>VIDEO</para>
+        /// </description></item>
+        /// <item><description><para>AUDIO</para>
+        /// </description></item>
+        /// <item><description><para>INDEX</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,20 +136,31 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The storage type. Currently supported values:</para>
         /// <list type="bullet">
-        /// <item><description>OSS</description></item>
-        /// <item><description>NAS: General-purpose NAS file systems</description></item>
-        /// <item><description>EXTREMENAS: Extreme NAS file systems</description></item>
-        /// <item><description>DLF_LANCE: Data Lake Formation</description></item>
+        /// <item><description><para>OSS</para>
+        /// </description></item>
+        /// <item><description><para>NAS: General-purpose NAS file systems</para>
+        /// </description></item>
+        /// <item><description><para>EXTREMENAS: Extreme NAS file systems</para>
+        /// </description></item>
+        /// <item><description><para>DLF_LANCE: Data Lake Formation</para>
+        /// </description></item>
         /// </list>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NAS: General-purpose NAS file systems</description></item>
-        /// <item><description>MAXCOMPUTE: MaxCompute table</description></item>
-        /// <item><description>CPFS: Cloud Parallel File Storage</description></item>
-        /// <item><description>BMCPFS: CPFS for Lingjun</description></item>
-        /// <item><description>EXTREMENAS: Extreme NAS file systems</description></item>
-        /// <item><description>OSS: Object Storage Service</description></item>
-        /// <item><description>DLF_LANCE: Data Lake Formation.</description></item>
+        /// <item><description><para>NAS: General-purpose NAS file systems</para>
+        /// </description></item>
+        /// <item><description><para>MAXCOMPUTE: MaxCompute table</para>
+        /// </description></item>
+        /// <item><description><para>CPFS: Cloud Parallel File Storage</para>
+        /// </description></item>
+        /// <item><description><para>BMCPFS: CPFS for Lingjun</para>
+        /// </description></item>
+        /// <item><description><para>EXTREMENAS: Extreme NAS file systems</para>
+        /// </description></item>
+        /// <item><description><para>OSS: Object Storage Service</para>
+        /// </description></item>
+        /// <item><description><para>DLF_LANCE: Data Lake Formation.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

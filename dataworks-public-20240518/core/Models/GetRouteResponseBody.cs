@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
+            /// <para>Serverless_res_group_524257424564736_6831777****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]

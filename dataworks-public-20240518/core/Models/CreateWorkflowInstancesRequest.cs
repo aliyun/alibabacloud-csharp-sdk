@@ -46,9 +46,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The alert notification method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Sms: SMS only.</description></item>
-                /// <item><description>Mail: Mail only.</description></item>
-                /// <item><description>SmsMail: SMS and mail.</description></item>
+                /// <item><description><para>Sms: SMS only.</para>
+                /// </description></item>
+                /// <item><description><para>Mail: Mail only.</para>
+                /// </description></item>
+                /// <item><description><para>SmsMail: SMS and mail.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -61,9 +64,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The alerting policy. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Success: Alerts on success.</description></item>
-                /// <item><description>Failure: Alerts on failure.</description></item>
-                /// <item><description>SuccessFailure: Alerts on both success and failure.</description></item>
+                /// <item><description><para>Success: Alerts on success.</para>
+                /// </description></item>
+                /// <item><description><para>Failure: Alerts on failure.</para>
+                /// </description></item>
+                /// <item><description><para>SuccessFailure: Alerts on both success and failure.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -135,10 +141,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The data backfill mode. Default value: ManualSelection. Required when Type is set to SupplementData.</para>
             /// <list type="bullet">
-            /// <item><description>General: You can specify only one value for <c>RootTaskIds</c>. The <c>IncludeTaskIds</c> parameter is optional. If it\&quot;s not specified, it defaults to including <c>RootTaskIds</c>.</description></item>
-            /// <item><description>ManualSelection: You can specify multiple values for <c>RootTaskIds</c>. The <c>IncludeTaskIds</c> parameter is optional. If it is not specified, it defaults to including <c>RootTaskIds</c>.</description></item>
-            /// <item><description>Chain: If you set the Mode parameter to Chain, leave the <c>RootTaskIds</c> parameter empty and set the <c>IncludeTaskIds</c> parameter to the start task ID and the end task ID.</description></item>
-            /// <item><description>AllDownstream: Only one <c>RootTaskId</c> can be specified.</description></item>
+            /// <item><description><para>General: You can specify only one value for <c>RootTaskIds</c>. The <c>IncludeTaskIds</c> parameter is optional. If it\&quot;s not specified, it defaults to including <c>RootTaskIds</c>.</para>
+            /// </description></item>
+            /// <item><description><para>ManualSelection: You can specify multiple values for <c>RootTaskIds</c>. The <c>IncludeTaskIds</c> parameter is optional. If it is not specified, it defaults to including <c>RootTaskIds</c>.</para>
+            /// </description></item>
+            /// <item><description><para>Chain: If you set the Mode parameter to Chain, leave the <c>RootTaskIds</c> parameter empty and set the <c>IncludeTaskIds</c> parameter to the start task ID and the end task ID.</para>
+            /// </description></item>
+            /// <item><description><para>AllDownstream: Only one <c>RootTaskId</c> can be specified.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,8 +161,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The execution order. Default value: Asc.</para>
             /// <list type="bullet">
-            /// <item><description>Asc: ascending by business date.</description></item>
-            /// <item><description>Desc: descending by business date.</description></item>
+            /// <item><description><para>Asc: ascending by business date.</para>
+            /// </description></item>
+            /// <item><description><para>Desc: descending by business date.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,8 +197,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The priority weighting policy.</para>
             /// <list type="bullet">
-            /// <item><description><c>Disable</c> (default): Do not enable.</description></item>
-            /// <item><description><c>Upstream</c>: The priority is based on the total weight of upstream nodes. The deeper the hierarchy, the higher the weight.</description></item>
+            /// <item><description><para><c>Disable</c> (default): Do not enable.</para>
+            /// </description></item>
+            /// <item><description><para><c>Upstream</c>: The priority is based on the total weight of upstream nodes. The deeper the hierarchy, the higher the weight.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,10 +213,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The list of root task IDs.</para>
             /// <list type="bullet">
-            /// <item><description>When Type is set to SupplementData, RootTaskIds is required unless Mode is set to Chain.</description></item>
-            /// <item><description>When Type is set to ManualWorkflow, RootTaskIds is optional. If it is not specified, the default root nodes of the manual workflow are used.</description></item>
-            /// <item><description>When Type is set to Manual, RootTaskIds is required and specifies the list of manual tasks to run.</description></item>
-            /// <item><description>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test tasks to run.</description></item>
+            /// <item><description><para>When Type is set to SupplementData, RootTaskIds is required unless Mode is set to Chain.</para>
+            /// </description></item>
+            /// <item><description><para>When Type is set to ManualWorkflow, RootTaskIds is optional. If it is not specified, the default root nodes of the manual workflow are used.</para>
+            /// </description></item>
+            /// <item><description><para>When Type is set to Manual, RootTaskIds is required and specifies the list of manual tasks to run.</para>
+            /// </description></item>
+            /// <item><description><para>When Type is set to SmokeTest, RootTaskIds is required and specifies the list of test tasks to run.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("RootTaskIds")]
@@ -249,8 +267,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The time period type. This parameter is required if you configure the RunPolicy parameter. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Daily</description></item>
-                /// <item><description>Weekend</description></item>
+                /// <item><description><para>Daily</para>
+                /// </description></item>
+                /// <item><description><para>Weekend</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -277,8 +297,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod</description></item>
-        /// <item><description>Dev</description></item>
+        /// <item><description><para>Prod</para>
+        /// </description></item>
+        /// <item><description><para>Dev</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -376,8 +398,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The tag creation policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Append: New tags are added on top of the existing tags of the manual workflow.</description></item>
-        /// <item><description>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</description></item>
+        /// <item><description><para>Append: New tags are added on top of the existing tags of the manual workflow.</para>
+        /// </description></item>
+        /// <item><description><para>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -432,11 +456,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</description></item>
-        /// <item><description>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</description></item>
-        /// <item><description>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</description></item>
-        /// <item><description>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</description></item>
-        /// <item><description>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</description></item>
+        /// <item><description><para>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</para>
+        /// </description></item>
+        /// <item><description><para>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</para>
+        /// </description></item>
+        /// <item><description><para>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</para>
+        /// </description></item>
+        /// <item><description><para>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</para>
+        /// </description></item>
+        /// <item><description><para>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -462,10 +491,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The workflow parameters. This parameter takes effect when a specific workflow is specified (<c>WorkflowId != 1</c>). For scheduled workflows and triggered workflows, the format is key=value, and these parameters have lower priority than task parameters. For manual workflows, the format is JSON, and these parameters have higher priority than task parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{ 
-        ///   &quot;key1&quot;: &quot;value1&quot;, 
-        ///   &quot;key2&quot;: &quot;value2&quot; 
-        /// }</para>
+        /// <para>&quot;key=value&quot; format:
+        /// key1=value1 key2=value2
+        /// JSON format:
+        /// {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
         /// </summary>
         [NameInMap("WorkflowParameters")]
         [Validation(Required=false)]

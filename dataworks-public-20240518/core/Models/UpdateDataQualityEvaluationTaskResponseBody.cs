@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataQualityEvaluationTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>Request ID. Used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>

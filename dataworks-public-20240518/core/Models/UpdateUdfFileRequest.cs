@@ -76,9 +76,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The function parameter description, corresponding to the parameter description field in the Create Function form.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_ALLOWD</description></item>
-        /// <item><description>FAILURE_ALLOWED</description></item>
-        /// <item><description>ALL_DENIED</description></item>
+        /// <item><description><para>ALL_ALLOWD</para>
+        /// </description></item>
+        /// <item><description><para>FAILURE_ALLOWED</para>
+        /// </description></item>
+        /// <item><description><para>ALL_DENIED</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

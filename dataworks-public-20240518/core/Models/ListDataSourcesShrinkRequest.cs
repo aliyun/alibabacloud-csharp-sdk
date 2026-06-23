@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment in which the data sources are used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dev: development environment</description></item>
-        /// <item><description>Prod: production environment</description></item>
+        /// <item><description><para>Dev: development environment</para>
+        /// </description></item>
+        /// <item><description><para>Prod: production environment</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,13 +38,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The order in which you want to sort the data sources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Desc: descending order</description></item>
-        /// <item><description>Asc: ascending order</description></item>
+        /// <item><description><para>Desc: descending order</para>
+        /// </description></item>
+        /// <item><description><para>Asc: ascending order</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Desc</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Asc</para>
+        /// <para>Desc</para>
         /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
@@ -83,14 +87,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The field that you want to use to sort the data sources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime</description></item>
-        /// <item><description>Id</description></item>
-        /// <item><description>Name</description></item>
+        /// <item><description><para>CreateTime</para>
+        /// </description></item>
+        /// <item><description><para>Id</para>
+        /// </description></item>
+        /// <item><description><para>Name</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: CreateTime</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Id</para>
+        /// <para>CreateTime</para>
         /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]
@@ -99,8 +106,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The tag of the data source. This parameter specifies a filter condition.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <c>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</c>.</description></item>
-        /// <item><description>If you do not configure this parameter, tag-based filtering is not performed. You can specify up to 10 tags.</description></item>
+        /// <item><description><para>You can specify multiple tags, which are in the logical AND relation. For example, you can query the data sources that contain the following tags: <c>[&quot;tag1&quot;, &quot;tag2&quot;, &quot;tag3&quot;]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not configure this parameter, tag-based filtering is not performed. You can specify up to 10 tags.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

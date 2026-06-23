@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateMetaEntityRequest : TeaModel {
         /// <summary>
+        /// <para>The entity attributes. Complex values must be serialized into a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
+        /// <para>The comment on the entity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>this is a comment</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The custom attribute values. Each key specifies a custom attribute, and its value is an array that can contain at most one item. To delete an attribute value, provide an empty array.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public Dictionary<string, List<string>> CustomAttributes { get; set; }
 
         /// <summary>
+        /// <para>The ID of the entity to update. The entity name, entity type, and parent-child relationship are determined by the ID and cannot be modified using this operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

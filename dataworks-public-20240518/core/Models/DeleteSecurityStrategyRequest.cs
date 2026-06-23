@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteSecurityStrategyRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the security strategy.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

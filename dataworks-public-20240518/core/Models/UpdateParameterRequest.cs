@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateParameterRequest : TeaModel {
         /// <summary>
+        /// <para>The parameter description.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>这是一个测试参数</para>
+        /// <para>This is a test parameter.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The parameter ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The owner\&quot;s account ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
         /// </summary>
@@ -35,11 +40,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Owner { get; set; }
 
+        /// <summary>
+        /// <para>The parameter value configuration. This parameter is required for the production environment. If you specify the same environment multiple times, only the first configuration is used.</para>
+        /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public List<UpdateParameterRequestProperties> Properties { get; set; }
         public class UpdateParameterRequestProperties : TeaModel {
             /// <summary>
+            /// <para>The project environment.</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>Prod</c>: the production environment</para>
+            /// </description></item>
+            /// <item><description><para><c>Dev</c>: the development environment</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Prod</para>
             /// </summary>
@@ -48,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string EnvType { get; set; }
 
             /// <summary>
+            /// <para>The parameter value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value123</para>
             /// </summary>

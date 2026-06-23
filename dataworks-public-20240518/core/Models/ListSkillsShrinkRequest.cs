@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListSkillsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of results to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page of results. Omit this for the first request. For subsequent requests, set this to the <c>NextToken</c> from the previous response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The search keyword for a fuzzy match on Skill names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>analysis</para>
         /// </summary>
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Q { get; set; }
 
+        /// <summary>
+        /// <para>Filters the results by visibility level. You can specify multiple values.</para>
+        /// </summary>
         [NameInMap("Visibility")]
         [Validation(Required=false)]
         public string VisibilityShrink { get; set; }

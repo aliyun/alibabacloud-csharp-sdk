@@ -95,8 +95,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>Indicates whether the development environment is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</description></item>
-                /// <item><description>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</description></item>
+                /// <item><description><para>true: The development environment is enabled. In this case, the development environment is isolated from the production environment in the workspace.</para>
+                /// </description></item>
+                /// <item><description><para>false: The development environment is disabled. In this case, only the production environment is used in the workspace.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,8 +111,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>Indicates whether the Develop role is disabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>false (default)</description></item>
-                /// <item><description>true</description></item>
+                /// <item><description><para>false (default)</para>
+                /// </description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -163,8 +167,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>Indicates whether scheduling of PAI tasks is enabled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</description></item>
-                /// <item><description>false: Scheduling of PAI tasks is disabled.</description></item>
+                /// <item><description><para>true: Scheduling of PAI tasks is enabled. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</para>
+                /// </description></item>
+                /// <item><description><para>false: Scheduling of PAI tasks is disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -177,15 +183,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The status of the workspace. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Available</description></item>
-                /// <item><description>Initializing</description></item>
-                /// <item><description>InitFailed</description></item>
-                /// <item><description>Forbidden</description></item>
-                /// <item><description>Deleting</description></item>
-                /// <item><description>DeleteFailed</description></item>
-                /// <item><description>Frozen</description></item>
-                /// <item><description>Updating</description></item>
-                /// <item><description>UpdateFailed</description></item>
+                /// <item><description><para>Available</para>
+                /// </description></item>
+                /// <item><description><para>Initializing</para>
+                /// </description></item>
+                /// <item><description><para>InitFailed</para>
+                /// </description></item>
+                /// <item><description><para>Forbidden</para>
+                /// </description></item>
+                /// <item><description><para>Deleting</para>
+                /// </description></item>
+                /// <item><description><para>DeleteFailed</para>
+                /// </description></item>
+                /// <item><description><para>Frozen</para>
+                /// </description></item>
+                /// <item><description><para>Updating</para>
+                /// </description></item>
+                /// <item><description><para>UpdateFailed</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

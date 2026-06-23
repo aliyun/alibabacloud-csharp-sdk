@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The resource groups returned.</para>
+            /// <para>The list of resource groups.</para>
             /// </summary>
             [NameInMap("ResourceGroupList")]
             [Validation(Required=false)]
             public List<ListResourceGroupsResponseBodyPagingInfoResourceGroupList> ResourceGroupList { get; set; }
             public class ListResourceGroupsResponseBodyPagingInfoResourceGroupList : TeaModel {
                 /// <summary>
-                /// <para>Alibaba Cloud Resource Group ID</para>
+                /// <para>The Alibaba Cloud resource group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-aek2kqofrgXXXXX</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string AliyunResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>Alibaba Cloud tag list</para>
+                /// <para>A list of Alibaba Cloud tags.</para>
                 /// </summary>
                 [NameInMap("AliyunResourceTags")]
                 [Validation(Required=false)]
                 public List<ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags> AliyunResourceTags { get; set; }
                 public class ListResourceGroupsResponseBodyPagingInfoResourceGroupListAliyunResourceTags : TeaModel {
                     /// <summary>
-                    /// <para>Tag Key</para>
+                    /// <para>The tag key.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Key</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>Tag Value</para>
+                    /// <para>The tag value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Value</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The creation time, which is a 64-bit timestamp.</para>
+                /// <para>The creation time of the resource group, as a 64-bit timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1727055811000</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user who created the resource group.</para>
+                /// <para>The user ID of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11075500042XXXXX</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string CreateUser { get; set; }
 
                 /// <summary>
-                /// <para>Default VPC ID bound to a common resource group</para>
+                /// <para>The ID of the default Virtual Private Cloud (VPC) bound to the general-purpose resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DefaultVpcId { get; set; }
 
                 /// <summary>
-                /// <para>The default switch ID bound to the common resource group.</para>
+                /// <para>The ID of the default vSwitch bound to the general-purpose resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DefaultVswicthId { get; set; }
 
                 /// <summary>
-                /// <para>Unique identifier of a resource group</para>
+                /// <para>The unique identifier of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Serverless_res_group_524257424564736_6831777003XXXXX</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The order instance ID of the resource group.</para>
+                /// <para>The ID of the order for the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c442b330-3b10-4584-959e-736e4edXXXXX</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string OrderInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The billing method of the resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</para>
+                /// <para>The billing method of the resource group. <c>PrePaid</c> indicates subscription and <c>PostPaid</c> indicates pay-as-you-go.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PrePaid</para>
@@ -163,22 +163,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string PaymentType { get; set; }
 
                 /// <summary>
-                /// <para>Remarks for resource groups</para>
+                /// <para>The description of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Create a common resource group for common tasks</para>
+                /// <para>Create a general-purpose resource group for common tasks.</para>
                 /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
                 /// <summary>
-                /// <para>Resource group types:</para>
+                /// <para>The type of the resource group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CommonV2: Serverless resource group</description></item>
-                /// <item><description>ExclusiveDataIntegration: Exclusive resource group for Data Integration</description></item>
-                /// <item><description>ExclusiveScheduler: Exclusive resource group for scheduling</description></item>
-                /// <item><description>ExclusiveDataService: Exclusive resource group for DataService Studio</description></item>
+                /// <item><description><para><c>CommonV2</c>: The new general-purpose resource group.</para>
+                /// </description></item>
+                /// <item><description><para><c>ExclusiveDataIntegration</c>: The exclusive resource group for data integration.</para>
+                /// </description></item>
+                /// <item><description><para><c>ExclusiveScheduler</c>: The exclusive resource group for scheduling.</para>
+                /// </description></item>
+                /// <item><description><para><c>ExclusiveDataService</c>: The exclusive resource group for data services.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -189,14 +193,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ResourceGroupType { get; set; }
 
                 /// <summary>
-                /// <para>Resource Group specifications</para>
+                /// <para>The specifications of the resource group.</para>
                 /// </summary>
                 [NameInMap("Spec")]
                 [Validation(Required=false)]
                 public ListResourceGroupsResponseBodyPagingInfoResourceGroupListSpec Spec { get; set; }
                 public class ListResourceGroupsResponseBodyPagingInfoResourceGroupListSpec : TeaModel {
                     /// <summary>
-                    /// <para>Quantity</para>
+                    /// <para>The number of resource units.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -206,7 +210,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? Amount { get; set; }
 
                     /// <summary>
-                    /// <para>Specification details</para>
+                    /// <para>The resource specifications.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2CU</para>
@@ -220,18 +224,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The status of the resource group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: The resource group is running or in use.</description></item>
-                /// <item><description>Stop: The resource group is expired.</description></item>
-                /// <item><description>Deleted: The resource group is released or destroyed.</description></item>
-                /// <item><description>Creating: The resource group is being created.</description></item>
-                /// <item><description>CreateFailed: The resource group fails to be created.</description></item>
-                /// <item><description>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</description></item>
-                /// <item><description>UpdateFailed: The resource group fails to be scaled out or upgraded.</description></item>
-                /// <item><description>Deleting: The resource group is being released or destroyed.</description></item>
-                /// <item><description>DeleteFailed: The resource group fails to be released or destroyed.</description></item>
-                /// <item><description>Timeout: The operations that are performed on the resource group time out.</description></item>
-                /// <item><description>Freezed: The resource group is frozen.</description></item>
-                /// <item><description>Starting: The resource group is being started.</description></item>
+                /// <item><description><para><c>Normal</c>: Running.</para>
+                /// </description></item>
+                /// <item><description><para><c>Stop</c>: Frozen due to expiration.</para>
+                /// </description></item>
+                /// <item><description><para><c>Deleted</c>: Released.</para>
+                /// </description></item>
+                /// <item><description><para><c>Creating</c>: Creation in progress.</para>
+                /// </description></item>
+                /// <item><description><para><c>CreateFailed</c>: Creation failed.</para>
+                /// </description></item>
+                /// <item><description><para><c>Updating</c>: Update in progress.</para>
+                /// </description></item>
+                /// <item><description><para><c>UpdateFailed</c>: Update failed.</para>
+                /// </description></item>
+                /// <item><description><para><c>Deleting</c>: Release in progress.</para>
+                /// </description></item>
+                /// <item><description><para><c>DeleteFailed</c>: Release failed.</para>
+                /// </description></item>
+                /// <item><description><para><c>Timeout</c>: The operation timed out.</para>
+                /// </description></item>
+                /// <item><description><para><c>Freezed</c>: Frozen.</para>
+                /// </description></item>
+                /// <item><description><para><c>Starting</c>: Starting.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -244,7 +260,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>All data entries</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -256,7 +272,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to query logs and troubleshoot issues.</para>
+        /// <para>The request ID. You can use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
@@ -266,7 +282,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

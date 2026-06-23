@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>You must configure this parameter to specify an Alibaba Cloud resource group for the workspace that you want to create.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmzbn7pti3zff</para>
+        /// <para>rg-acfmzbn7****</para>
         /// </summary>
         [NameInMap("AliyunResourceGroupId")]
         [Validation(Required=false)]
@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to enable the development environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</description></item>
-        /// <item><description>false: disables the development environment. In this case, only the production environment is used in the workspace.</description></item>
+        /// <item><description><para>true : enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables the development environment. In this case, only the production environment is used in the workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,8 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to disable the Develop role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,9 +84,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name of the workspace.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The workspace name must be unqiue in a region.</description></item>
-        /// <item><description>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</description></item>
-        /// <item><description>The workspace name must be 3 to 28 characters in length.</description></item>
+        /// <item><description><para>The workspace name must be unqiue in a region.</para>
+        /// </description></item>
+        /// <item><description><para>The workspace name can contain letters, digits, and underscores (_), and must start with a letter.</para>
+        /// </description></item>
+        /// <item><description><para>The workspace name must be 3 to 28 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -96,8 +103,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</description></item>
-        /// <item><description>false: disables scheduling of PAI tasks.</description></item>
+        /// <item><description><para>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables scheduling of PAI tasks.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

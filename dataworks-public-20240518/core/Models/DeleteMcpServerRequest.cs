@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteMcpServerRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the MCP Server to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

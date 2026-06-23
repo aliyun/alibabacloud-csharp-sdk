@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataQualityRuleTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The check settings for sample data.</para>
+        /// <para>The settings for sample validation.</para>
         /// </summary>
         [NameInMap("CheckingConfig")]
         [Validation(Required=false)]
         public UpdateDataQualityRuleTemplateRequestCheckingConfig CheckingConfig { get; set; }
         public class UpdateDataQualityRuleTemplateRequestCheckingConfig : TeaModel {
             /// <summary>
-            /// <para>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference samples and perform aggregate operations on the reference values. In this example, an expression is used to specify the query method of referenced samples.</para>
+            /// <para>For some types of thresholds, you must query reference samples and then aggregate the values of the reference samples to obtain the threshold used for comparison. An expression is used here to indicate the query method of reference samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The code for the template.</para>
+        /// <para>The code of the rule template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</para>
+        /// <para>The category directory in which the custom template is stored. Levels are separated by forward slashes (/). The name of each level can be up to 1024 characters in length and cannot contain whitespace characters or forward slashes (/).</para>
         /// 
         /// <b>Example:</b>
         /// <para>/ods/order_data</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DirectoryPath { get; set; }
 
         /// <summary>
-        /// <para>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</para>
+        /// <para>The name of the rule template. The name can contain digits, letters, Chinese characters, and half-width and full-width punctuation marks. The name can be up to 512 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Table row Count Verification</para>
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Management page to obtain the ID.</para>
+        /// <para>This parameter specifies the DataWorks workspace used for this API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,30 +85,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The sampling settings.</para>
+        /// <para>The settings required for sample collection.</para>
         /// </summary>
         [NameInMap("SamplingConfig")]
         [Validation(Required=false)]
         public UpdateDataQualityRuleTemplateRequestSamplingConfig SamplingConfig { get; set; }
         public class UpdateDataQualityRuleTemplateRequestSamplingConfig : TeaModel {
             /// <summary>
-            /// <para>The metrics used for sampling. Valid values:</para>
+            /// <para>The name of the metric to be sampled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Count: the number of rows in the table.</description></item>
-            /// <item><description>Min: the minimum value of the field.</description></item>
-            /// <item><description>Max: the maximum value of the field.</description></item>
-            /// <item><description>Avg: the average value of the field.</description></item>
-            /// <item><description>DistinctCount: the number of unique values of the field after deduplication.</description></item>
-            /// <item><description>DistinctPercent: the proportion of the number of unique values of the field after deduplication to the number of rows in the table.</description></item>
-            /// <item><description>DuplicatedCount: the number of duplicated values of the field.</description></item>
-            /// <item><description>DuplicatedPercent: the proportion of the number of duplicated values of the field to the number of rows in the table.</description></item>
-            /// <item><description>TableSize: the table size.</description></item>
-            /// <item><description>NullValueCount: the number of rows in which the field value is null.</description></item>
-            /// <item><description>NullValuePercent: the proportion of the number of rows in which the field value is null to the number of rows in the table.</description></item>
-            /// <item><description>GroupCount: the field value and the number of rows for each field value.</description></item>
-            /// <item><description>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</description></item>
-            /// <item><description>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</description></item>
-            /// <item><description>UserDefinedSql: indicates that data is sampled by executing custom SQL statements.</description></item>
+            /// <item><description>Count: the number of table rows.</description></item>
+            /// <item><description>Min: the minimum value of a field.</description></item>
+            /// <item><description>Max: the maximum value of a field.</description></item>
+            /// <item><description>Avg: the average value of a field.</description></item>
+            /// <item><description>DistinctCount: the number of distinct values of a field.</description></item>
+            /// <item><description>DistinctPercent: the ratio of the number of distinct values of a field to the number of data rows.</description></item>
+            /// <item><description>DuplicatedCount: the number of duplicate values of a field.</description></item>
+            /// <item><description>DuplicatedPercent: the ratio of the number of duplicate values of a field to the number of data rows.</description></item>
+            /// <item><description>TableSize: the size of the table.</description></item>
+            /// <item><description>NullValueCount: the number of rows in which the field is null.</description></item>
+            /// <item><description>NullValuePercent: the percentage of rows in which the field is null.</description></item>
+            /// <item><description>GroupCount: the number of data rows corresponding to each value after the field values are aggregated.</description></item>
+            /// <item><description>CountNotIn: the number of rows whose values do not match the enumerated values.</description></item>
+            /// <item><description>CountDistinctNotIn: the number of distinct values that do not match the enumerated values.</description></item>
+            /// <item><description>UserDefinedSql: sample collection by using custom SQL.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Metric { get; set; }
 
             /// <summary>
-            /// <para>The parameters required for sampling.</para>
+            /// <para>The parameters required for sample collection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;SQL&quot;: &quot;select count(1) from table;&quot;}</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string MetricParameters { get; set; }
 
             /// <summary>
-            /// <para>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</para>
+            /// <para>The runtime parameter setting statements that are inserted and executed before the sampling statements are executed. The statements can be up to 1,000 characters in length. Only MaxCompute is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SET odps.sql.udf.timeout=600s; 

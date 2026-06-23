@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The response.</para>
             /// <remarks>
-            /// <para> The workflow ID is returned.</para>
+            /// <para>The workflow ID is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -83,10 +83,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The status of the asynchronous task.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running: The asynchronous task is running.</description></item>
-            /// <item><description>Success: The asynchronous task is complete.</description></item>
-            /// <item><description>Fail: The asynchronous task fails.</description></item>
-            /// <item><description>Cancel: The asynchronous task is canceled.</description></item>
+            /// <item><description><para>Running: The asynchronous task is running.</para>
+            /// </description></item>
+            /// <item><description><para>Success: The asynchronous task is complete.</para>
+            /// </description></item>
+            /// <item><description><para>Fail: The asynchronous task fails.</para>
+            /// </description></item>
+            /// <item><description><para>Cancel: The asynchronous task is canceled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,8 +104,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The type of the asynchronous task.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Create: The asynchronous task is used to create an object.</description></item>
-            /// <item><description>Cancel: The asynchronous task is used to cancel an operation.</description></item>
+            /// <item><description><para>Create: The asynchronous task is used to create an object.</para>
+            /// </description></item>
+            /// <item><description><para>Cancel: The asynchronous task is used to cancel an operation.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

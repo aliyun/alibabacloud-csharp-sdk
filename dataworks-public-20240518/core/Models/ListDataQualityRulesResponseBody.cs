@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>Paginated query result of the rule list.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListDataQualityRulesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDataQualityRulesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The rules.</para>
+            /// <para>Specific rule list.</para>
             /// </summary>
             [NameInMap("DataQualityRules")]
             [Validation(Required=false)]
             public List<ListDataQualityRulesResponseBodyPagingInfoDataQualityRules> DataQualityRules { get; set; }
             public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRules : TeaModel {
                 /// <summary>
-                /// <para>The check settings for sample data.</para>
+                /// <para>Sample validation settings.</para>
                 /// </summary>
                 [NameInMap("CheckingConfig")]
                 [Validation(Required=false)]
                 public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfig CheckingConfig { get; set; }
                 public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfig : TeaModel {
                     /// <summary>
-                    /// <para>The method that is used to query the referenced samples. To obtain some types of thresholds, you need to query reference values. In this example, an expression is used to indicate the query method of referenced samples.</para>
+                    /// <para>Some types of thresholds require querying some reference samples, then aggregating the values of the reference samples to obtain the threshold for comparison. An expression is used here to represent the query method for the reference samples.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{ &quot;bizdate&quot;: [ &quot;-1&quot;, &quot;-7&quot;, &quot;-1m&quot; ] }</para>
@@ -41,28 +41,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ReferencedSamplesFilter { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold settings.</para>
+                    /// <para>Threshold settings.</para>
                     /// </summary>
                     [NameInMap("Thresholds")]
                     [Validation(Required=false)]
                     public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholds Thresholds { get; set; }
                     public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholds : TeaModel {
                         /// <summary>
-                        /// <para>The threshold settings for critical alerts.</para>
+                        /// <para>Threshold settings for critical warnings.</para>
                         /// </summary>
                         [NameInMap("Critical")]
                         [Validation(Required=false)]
                         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical Critical { get; set; }
                         public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsCritical : TeaModel {
                             /// <summary>
-                            /// <para>The threshold expression.</para>
-                            /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</para>
+                            /// <para>Threshold expression.</para>
+                            /// <para>Fluctuation rate type rules must use the expression method to indicate the fluctuation threshold. Examples:</para>
                             /// <list type="bullet">
-                            /// <item><description>$checkValue &gt; 0.01</description></item>
-                            /// <item><description>$checkValue &lt; -0.01</description></item>
-                            /// <item><description>abs($checkValue) &gt; 0.01</description></item>
+                            /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                            /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                            /// <item><description>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                             /// </list>
-                            /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
+                            /// <para>Fixed value type rules can also configure thresholds using expressions. If both are configured, the expression takes precedence over Operator and Value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>$checkValue &gt; 0.01</para>
@@ -72,14 +72,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Expression { get; set; }
 
                             /// <summary>
-                            /// <para>The comparison operator. Valid values:</para>
+                            /// <para>Comparison operator.</para>
                             /// <list type="bullet">
                             /// <item><description>\&gt;</description></item>
                             /// <item><description>\&gt;=</description></item>
                             /// <item><description>&lt;</description></item>
                             /// <item><description>&lt;=</description></item>
                             /// <item><description>!=</description></item>
-                            /// <item><description>\=</description></item>
+                            /// <item><description>=</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Operator { get; set; }
 
                             /// <summary>
-                            /// <para>The threshold value.</para>
+                            /// <para>Threshold value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>100.0</para>
@@ -103,21 +103,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The expected threshold setting.</para>
+                        /// <para>Expected threshold settings.</para>
                         /// </summary>
                         [NameInMap("Expected")]
                         [Validation(Required=false)]
                         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected Expected { get; set; }
                         public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsExpected : TeaModel {
                             /// <summary>
-                            /// <para>The threshold expression.</para>
-                            /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</para>
+                            /// <para>Threshold expression.</para>
+                            /// <para>Fluctuation rate type rules must use the expression method to indicate the fluctuation threshold. Examples:</para>
                             /// <list type="bullet">
-                            /// <item><description>$checkValue &gt; 0.01</description></item>
-                            /// <item><description>$checkValue &lt; -0.01</description></item>
-                            /// <item><description>abs($checkValue) &gt; 0.01</description></item>
+                            /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                            /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                            /// <item><description>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                             /// </list>
-                            /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
+                            /// <para>Fixed value type rules can also configure thresholds using expressions. If both are configured, the expression takes precedence over Operator and Value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>$checkValue &gt; 0.01</para>
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Expression { get; set; }
 
                             /// <summary>
-                            /// <para>The comparison operator. Valid values:</para>
+                            /// <para>Comparison operator.</para>
                             /// <list type="bullet">
                             /// <item><description>\&gt;</description></item>
                             /// <item><description>\&gt;=</description></item>
                             /// <item><description>&lt;</description></item>
                             /// <item><description>&lt;=</description></item>
                             /// <item><description>!=</description></item>
-                            /// <item><description>\=</description></item>
+                            /// <item><description>=</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Operator { get; set; }
 
                             /// <summary>
-                            /// <para>The threshold value.</para>
+                            /// <para>Threshold value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>100.0</para>
@@ -158,21 +158,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The threshold settings for normal alerts.</para>
+                        /// <para>Threshold settings for normal warnings.</para>
                         /// </summary>
                         [NameInMap("Warned")]
                         [Validation(Required=false)]
                         public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned Warned { get; set; }
                         public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesCheckingConfigThresholdsWarned : TeaModel {
                             /// <summary>
-                            /// <para>The threshold expression.</para>
-                            /// <para>If the template specified by the TemplateCode parameter is about fluctuation, you must use an expression to represent the threshold for fluctuation. Examples:</para>
+                            /// <para>Threshold expression.</para>
+                            /// <para>Fluctuation rate type rules must use the expression method to indicate the fluctuation threshold. Examples:</para>
                             /// <list type="bullet">
-                            /// <item><description>$checkValue &gt; 0.01</description></item>
-                            /// <item><description>$checkValue &lt; -0.01</description></item>
-                            /// <item><description>abs($checkValue) &gt; 0.01</description></item>
+                            /// <item><description>Fluctuation increase greater than 0.01: $checkValue &gt; 0.01 </description></item>
+                            /// <item><description>Fluctuation decrease greater than 0.01: $checkValue &lt; -0.01 </description></item>
+                            /// <item><description>Absolute value of the fluctuation rate: abs($checkValue) &gt; 0.01</description></item>
                             /// </list>
-                            /// <para>If the template specified by the TemplateCode parameter is about fixed value, you can also use an expression to represent the threshold. If you configure the Expression, Operator, and Value parameters for the threshold at the same time, the Expression parameter takes precedence over the Operator and Value parameters.</para>
+                            /// <para>Fixed value type rules can also configure thresholds using expressions. If both are configured, the expression takes precedence over Operator and Value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>$checkValue &gt; 0.01</para>
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Expression { get; set; }
 
                             /// <summary>
-                            /// <para>The comparison operator. Valid values:</para>
+                            /// <para>Comparison operator.</para>
                             /// <list type="bullet">
                             /// <item><description>\&gt;</description></item>
                             /// <item><description>\&gt;=</description></item>
                             /// <item><description>&lt;</description></item>
                             /// <item><description>&lt;=</description></item>
                             /// <item><description>!=</description></item>
-                            /// <item><description>\=</description></item>
+                            /// <item><description>=</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Operator { get; set; }
 
                             /// <summary>
-                            /// <para>The threshold value.</para>
+                            /// <para>Threshold value.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>100.0</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The threshold calculation method. Valid values:</para>
+                    /// <para>Threshold calculation method.</para>
                     /// <list type="bullet">
                     /// <item><description>Fixed</description></item>
                     /// <item><description>Fluctation</description></item>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The description of the rule. The description can be up to 500 characters in length.</para>
+                /// <para>Rule description. Maximum length: 500 characters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>this is a odps _sql task</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the rule is enabled.</para>
+                /// <para>Whether the data quality rule is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -255,14 +255,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The operations that you can perform after the rule-based check fails.</para>
+                /// <para>List of issue handlers for data quality rule validation.</para>
                 /// </summary>
                 [NameInMap("ErrorHandlers")]
                 [Validation(Required=false)]
                 public List<ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesErrorHandlers> ErrorHandlers { get; set; }
                 public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesErrorHandlers : TeaModel {
                     /// <summary>
-                    /// <para>The SQL statement that is used to filter failed tasks. If the rule is defined by custom SQL statements, you must specify an SQL statement to filter failed tasks.</para>
+                    /// <para>For custom SQL rules, the user needs to specify SQL to filter problem data.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SELECT * FROM tb_api_log WHERE id IS NULL</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string ErrorDataFilter { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the operation. Valid values:</para>
+                    /// <para>Handler type:</para>
                     /// <list type="bullet">
                     /// <item><description>SaveErrorData</description></item>
                     /// </list>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The rule ID.</para>
+                /// <para>Rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22130</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The rule name.</para>
+                /// <para>Rule name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The table cannot be empty.</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The DataWorks workspace ID.</para>
+                /// <para>DataWorks workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100001</para>
@@ -317,30 +317,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The settings for sampling.</para>
+                /// <para>Settings required for sample collection.</para>
                 /// </summary>
                 [NameInMap("SamplingConfig")]
                 [Validation(Required=false)]
                 public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesSamplingConfig SamplingConfig { get; set; }
                 public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesSamplingConfig : TeaModel {
                     /// <summary>
-                    /// <para>The metrics used for sampling. Valid values:</para>
+                    /// <para>Sampling metric name.</para>
                     /// <list type="bullet">
-                    /// <item><description>Count: the number of rows in the table.</description></item>
-                    /// <item><description>Min: the minimum value of the field.</description></item>
-                    /// <item><description>Max: the maximum value of the field.</description></item>
-                    /// <item><description>Avg: the average value of the field.</description></item>
-                    /// <item><description>DistinctCount: the number of unique values of the field after deduplication.</description></item>
-                    /// <item><description>DistinctPercent: the percentage of the number of unique values of the field after deduplication to the number of rows in the table.</description></item>
-                    /// <item><description>DuplicatedCount: the number of duplicated values in the field.</description></item>
-                    /// <item><description>DuplicatedPercent: the percentage of the number of duplicated values of the field to the number of rows in the table.</description></item>
-                    /// <item><description>TableSize: the table size.</description></item>
-                    /// <item><description>NullValueCount: the number of rows in which the field is set to null.</description></item>
-                    /// <item><description>NullValuePercent: the percentage of the number of rows in which the field is set to null to the number of rows in the table.</description></item>
-                    /// <item><description>GroupCount: the field value and the number of rows for each field value.</description></item>
-                    /// <item><description>CountNotIn: the number of rows in which the field values are different from the referenced values that you specified in the rule.</description></item>
-                    /// <item><description>CountDistinctNotIn: the number of unique values that are different from the referenced values that you specified in the rule after deduplication.</description></item>
-                    /// <item><description>UserDefinedSql: indicates that the data is sampled by executing custom SQL statements.</description></item>
+                    /// <item><description>Count: number of table rows.</description></item>
+                    /// <item><description>Min: minimum value of the field.</description></item>
+                    /// <item><description>Max: maximum value of the field.</description></item>
+                    /// <item><description>Avg: average value of the field.</description></item>
+                    /// <item><description>DistinctCount: number of distinct values of the field.</description></item>
+                    /// <item><description>DistinctPercent: ratio of the number of distinct values of the field to the number of data rows.</description></item>
+                    /// <item><description>DuplicatedCount: number of duplicate values of the field.</description></item>
+                    /// <item><description>DuplicatedPercent: ratio of the number of duplicate values of the field to the number of data rows.</description></item>
+                    /// <item><description>TableSize: table size.</description></item>
+                    /// <item><description>NullValueCount: number of rows where the field value is null.</description></item>
+                    /// <item><description>NullValuePercent: percentage of rows where the field value is null.</description></item>
+                    /// <item><description>GroupCount: each value and its corresponding number of data rows after aggregation by field value.</description></item>
+                    /// <item><description>CountNotIn: number of rows whose enumerated values do not match.</description></item>
+                    /// <item><description>CountDistinctNotIn: number of distinct values whose enumerated values do not match.</description></item>
+                    /// <item><description>UserDefinedSql: sample collection via custom SQL.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Metric { get; set; }
 
                     /// <summary>
-                    /// <para>The parameters required for sampling.</para>
+                    /// <para>Parameters required during sample collection.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{ &quot;Columns&quot;: [ &quot;id&quot;, &quot;name&quot; ] , &quot;SQL&quot;: &quot;select count(1) from table;&quot;}</para>
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string MetricParameters { get; set; }
 
                     /// <summary>
-                    /// <para>The statements that are used to filter unnecessary data during sampling. The statements can be up to 16,777,215 characters in length.</para>
+                    /// <para>Condition for the secondary filtering of data that is not of concern during sampling. Maximum length: 16,777,215 characters.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>id IS NULL</para>
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string SamplingFilter { get; set; }
 
                     /// <summary>
-                    /// <para>The statements that are used to configure the parameters required for sampling before you execute the sampling statements. The statements can be up to 1,000 characters in length. Only the MaxCompute database is supported.</para>
+                    /// <para>Runtime parameter setting statements inserted and executed before the sampling statement is actually executed. Maximum length: 1,000 characters. Currently only MaxCompute is supported.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>SET odps.sql.udf.timeout=600s; 
@@ -384,7 +384,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The strength of the rule. Valid values:</para>
+                /// <para>Severity level of the rule for the business (corresponding to strong/weak rules on the page). Valid enumerated values:</para>
                 /// <list type="bullet">
                 /// <item><description>Normal</description></item>
                 /// <item><description>High</description></item>
@@ -398,14 +398,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Severity { get; set; }
 
                 /// <summary>
-                /// <para>The monitored object of the rule.</para>
+                /// <para>Object monitored by the rule.</para>
                 /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesTarget Target { get; set; }
                 public class ListDataQualityRulesResponseBodyPagingInfoDataQualityRulesTarget : TeaModel {
                     /// <summary>
-                    /// <para>The type of the database to which the table belongs. Valid values:</para>
+                    /// <para>For table-type datasets, the database type to which the table belongs.</para>
                     /// <list type="bullet">
                     /// <item><description>maxcompute</description></item>
                     /// <item><description>emr</description></item>
@@ -424,7 +424,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DatabaseType { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the table that is limited by the rule in Data Map.</para>
+                    /// <para>Unique ID of the table to which the rule applies in Data Map.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps.unit_test.tb_unit_test</para>
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string TableGuid { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the monitored object. Valid values:</para>
+                    /// <para>Type of the monitored object.</para>
                     /// <list type="bullet">
                     /// <item><description>Table</description></item>
                     /// </list>
@@ -449,10 +449,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the template used by the rule.</para>
+                /// <para>Unique identifier of the rule template referenced by the rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>system::user_defined</para>
+                /// <para>SYSTEM:user_defined_sql</para>
                 /// </summary>
                 [NameInMap("TemplateCode")]
                 [Validation(Required=false)]
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>Page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -471,7 +471,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>Page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>Total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>294</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>691CA452-D37A-4ED0-9441</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateMetaEntityResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AASFDFSDFG-DFSDF-DFSDFD-SDFSDF</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The result of the update operation.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public UpdateMetaEntityResponseBodyResult Result { get; set; }
         public class UpdateMetaEntityResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The ID of the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>custom_entity-customer_api:api_001</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the update was successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -226,10 +226,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type of the cross-cycle scheduling dependency of the node. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</description></item>
-                    /// <item><description>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</description></item>
-                    /// <item><description>USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</description></item>
-                    /// <item><description>NONE: No cross-cycle scheduling dependency type is selected for the node.</description></item>
+                    /// <item><description><para>SELF: The instance generated for the node in the current cycle depends on the instance generated for the node in the previous cycle.</para>
+                    /// </description></item>
+                    /// <item><description><para>CHILD: The instance generated for the node in the current cycle depends on the instances generated for the descendant nodes at the nearest level of the node in the previous cycle.</para>
+                    /// </description></item>
+                    /// <item><description><para>USER_DEFINE: The instance generated for the node in the current cycle depends on the instances generated for one or more specified nodes in the previous cycle.</para>
+                    /// </description></item>
+                    /// <item><description><para>NONE: No cross-cycle scheduling dependency type is selected for the node.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -260,8 +264,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The mode of the configuration file dependency. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>MANUAL: Scheduling dependencies are manually configured.</description></item>
-                        /// <item><description>AUTO: Scheduling dependencies are automatically parsed.</description></item>
+                        /// <item><description><para>MANUAL: Scheduling dependencies are manually configured.</para>
+                        /// </description></item>
+                        /// <item><description><para>AUTO: Scheduling dependencies are automatically parsed.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -318,9 +324,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>Indicates whether the node that corresponds to the file can be rerun. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</description></item>
-                    /// <item><description>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</description></item>
-                    /// <item><description>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</description></item>
+                    /// <item><description><para>ALL_ALLOWED: The node can be rerun regardless of whether it is successfully run or fails to run.</para>
+                    /// </description></item>
+                    /// <item><description><para>FAILURE_ALLOWED: The node can be rerun only after it fails to run.</para>
+                    /// </description></item>
+                    /// <item><description><para>ALL_DENIED: The node cannot be rerun regardless of whether it is successfully run or fails to run.</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>This parameter corresponds to the Rerun parameter in the Schedule section of the Properties tab on the DataStudio page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                     /// 
@@ -344,10 +353,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The scheduling type of the node. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>NORMAL: The node is an auto triggered node.</description></item>
-                    /// <item><description>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</description></item>
-                    /// <item><description>PAUSE: The node is a paused node.</description></item>
-                    /// <item><description>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</description></item>
+                    /// <item><description><para>NORMAL: The node is an auto triggered node.</para>
+                    /// </description></item>
+                    /// <item><description><para>MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered. They correspond to the nodes in the Manually Triggered Workflows pane.</para>
+                    /// </description></item>
+                    /// <item><description><para>PAUSE: The node is a paused node.</para>
+                    /// </description></item>
+                    /// <item><description><para>SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled, but the system sets the status of the nodes to successful when it starts to run them.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -372,12 +385,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: The file is used for DataStudio.</description></item>
-                /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
-                /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
-                /// <item><description>SKIP: The file is used for a dry-run node in DataStudio.</description></item>
-                /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
-                /// <item><description>COMPONENT: The file is used for a script template.</description></item>
+                /// <item><description><para>NORMAL: The file is used for DataStudio.</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL: The file is used for a manually triggered node.</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL_BIZ: The file is used for a manually triggered workflow.</para>
+                /// </description></item>
+                /// <item><description><para>SKIP: The file is used for a dry-run node in DataStudio.</para>
+                /// </description></item>
+                /// <item><description><para>ADHOCQUERY: The file is used for an ad hoc query.</para>
+                /// </description></item>
+                /// <item><description><para>COMPONENT: The file is used for a script template.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -509,12 +528,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: The file is used for DataStudio.</description></item>
-                /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
-                /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
-                /// <item><description>SKIP: The file is used for a dry-run node in DataStudio.</description></item>
-                /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
-                /// <item><description>COMPONENT: The file is used for a script template.</description></item>
+                /// <item><description><para>NORMAL: The file is used for DataStudio.</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL: The file is used for a manually triggered node.</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL_BIZ: The file is used for a manually triggered workflow.</para>
+                /// </description></item>
+                /// <item><description><para>SKIP: The file is used for a dry-run node in DataStudio.</para>
+                /// </description></item>
+                /// <item><description><para>ADHOCQUERY: The file is used for an ad hoc query.</para>
+                /// </description></item>
+                /// <item><description><para>COMPONENT: The file is used for a script template.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -622,8 +647,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>Indicates whether the column is a partition key column. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
+                    /// <item><description><para>true</para>
+                    /// </description></item>
+                    /// <item><description><para>false</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -658,8 +685,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The environment in which the table is used. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DEV</description></item>
-                /// <item><description>PROD</description></item>
+                /// <item><description><para>DEV</para>
+                /// </description></item>
+                /// <item><description><para>PROD</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The scheduling dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal</description></item>
-                /// <item><description>CrossCycle</description></item>
+                /// <item><description><para>Normal</para>
+                /// </description></item>
+                /// <item><description><para>CrossCycle</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -116,8 +118,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The environment in which the data source is used. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Dev</description></item>
-                    /// <item><description>Prod</description></item>
+                    /// <item><description><para>Dev</para>
+                    /// </description></item>
+                    /// <item><description><para>Prod</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -308,15 +312,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The status of the instance. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>NotRun: The instance is not run.</description></item>
-                    /// <item><description>Running: The instance is running.</description></item>
-                    /// <item><description>WaitTime: The instance is waiting for the scheduling time to arrive.</description></item>
-                    /// <item><description>CheckingCondition: Branch conditions are being checked for the instance.</description></item>
-                    /// <item><description>WaitResource: The instance is waiting for resources.</description></item>
-                    /// <item><description>Failure: The instance fails to be run.</description></item>
-                    /// <item><description>Success: The instance is successfully run.</description></item>
-                    /// <item><description>Checking: Data quality is being checked for the instance.</description></item>
-                    /// <item><description>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</description></item>
+                    /// <item><description><para>NotRun: The instance is not run.</para>
+                    /// </description></item>
+                    /// <item><description><para>Running: The instance is running.</para>
+                    /// </description></item>
+                    /// <item><description><para>WaitTime: The instance is waiting for the scheduling time to arrive.</para>
+                    /// </description></item>
+                    /// <item><description><para>CheckingCondition: Branch conditions are being checked for the instance.</para>
+                    /// </description></item>
+                    /// <item><description><para>WaitResource: The instance is waiting for resources.</para>
+                    /// </description></item>
+                    /// <item><description><para>Failure: The instance fails to be run.</para>
+                    /// </description></item>
+                    /// <item><description><para>Success: The instance is successfully run.</para>
+                    /// </description></item>
+                    /// <item><description><para>Checking: Data quality is being checked for the instance.</para>
+                    /// </description></item>
+                    /// <item><description><para>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -370,9 +383,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Pause</description></item>
-                    /// <item><description>Skip</description></item>
-                    /// <item><description>Normal</description></item>
+                    /// <item><description><para>Pause</para>
+                    /// </description></item>
+                    /// <item><description><para>Skip</para>
+                    /// </description></item>
+                    /// <item><description><para>Normal</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -395,8 +411,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The trigger type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
-                    /// <item><description>Manual: manual trigger</description></item>
+                    /// <item><description><para>Scheduler: scheduling cycle-based trigger</para>
+                    /// </description></item>
+                    /// <item><description><para>Manual: manual trigger</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -429,11 +447,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type of the workflow instance. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Normal</description></item>
-                    /// <item><description>Manual</description></item>
-                    /// <item><description>SmokeTest</description></item>
-                    /// <item><description>SupplementData</description></item>
-                    /// <item><description>ManualWorkflow</description></item>
+                    /// <item><description><para>Normal</para>
+                    /// </description></item>
+                    /// <item><description><para>Manual</para>
+                    /// </description></item>
+                    /// <item><description><para>SmokeTest</para>
+                    /// </description></item>
+                    /// <item><description><para>SupplementData</para>
+                    /// </description></item>
+                    /// <item><description><para>ManualWorkflow</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -556,8 +579,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The environment in which the data source is used. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Dev</description></item>
-                /// <item><description>Prod</description></item>
+                /// <item><description><para>Dev</para>
+                /// </description></item>
+                /// <item><description><para>Prod</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -664,9 +689,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The rerun mode.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</description></item>
-                /// <item><description>FailureAllowed: The task can be rerun only after it fails to run.</description></item>
-                /// <item><description>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</description></item>
+                /// <item><description><para>AllDenied: The task cannot be rerun regardless of whether it is successfully run or fails to run.</para>
+                /// </description></item>
+                /// <item><description><para>FailureAllowed: The task can be rerun only after it fails to run.</para>
+                /// </description></item>
+                /// <item><description><para>AllAllowed: The task can be rerun regardless of whether it is successfully run or fails to run.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -767,15 +795,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The status of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NotRun: The instance is not run.</description></item>
-                /// <item><description>Running: The instance is running.</description></item>
-                /// <item><description>WaitTime: The instance is waiting for the scheduling time to arrive.</description></item>
-                /// <item><description>CheckingCondition: Branch conditions are being checked for the instance.</description></item>
-                /// <item><description>WaitResource: The instance is waiting for resources.</description></item>
-                /// <item><description>Failure: The instance fails to be run.</description></item>
-                /// <item><description>Success: The instance is successfully run.</description></item>
-                /// <item><description>Checking: Data quality is being checked for the instance.</description></item>
-                /// <item><description>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</description></item>
+                /// <item><description><para>NotRun: The instance is not run.</para>
+                /// </description></item>
+                /// <item><description><para>Running: The instance is running.</para>
+                /// </description></item>
+                /// <item><description><para>WaitTime: The instance is waiting for the scheduling time to arrive.</para>
+                /// </description></item>
+                /// <item><description><para>CheckingCondition: Branch conditions are being checked for the instance.</para>
+                /// </description></item>
+                /// <item><description><para>WaitResource: The instance is waiting for resources.</para>
+                /// </description></item>
+                /// <item><description><para>Failure: The instance fails to be run.</para>
+                /// </description></item>
+                /// <item><description><para>Success: The instance is successfully run.</para>
+                /// </description></item>
+                /// <item><description><para>Checking: Data quality is being checked for the instance.</para>
+                /// </description></item>
+                /// <item><description><para>WaitTrigger: The instance is waiting to be triggered by external scheduling systems.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -788,8 +825,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The scheduling dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: same-cycle scheduling dependency</description></item>
-                /// <item><description>CrossCycle: cross-cycle scheduling dependency</description></item>
+                /// <item><description><para>Normal: same-cycle scheduling dependency</para>
+                /// </description></item>
+                /// <item><description><para>CrossCycle: cross-cycle scheduling dependency</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -834,7 +873,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>Note: The value of this parameter is rounded up by hour.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>3600</para>
                 /// </summary>
                 [NameInMap("Timeout")]
                 [Validation(Required=false)]
@@ -844,9 +883,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Pause</description></item>
-                /// <item><description>Skip</description></item>
-                /// <item><description>Normal</description></item>
+                /// <item><description><para>Pause</para>
+                /// </description></item>
+                /// <item><description><para>Skip</para>
+                /// </description></item>
+                /// <item><description><para>Normal</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -870,8 +912,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The method to trigger instance scheduling.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
-                /// <item><description>Manual: manual trigger</description></item>
+                /// <item><description><para>Scheduler: scheduling cycle-based trigger</para>
+                /// </description></item>
+                /// <item><description><para>Manual: manual trigger</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -905,12 +949,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The type of the workflow instance.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SmokeTest</description></item>
-                /// <item><description>SupplementData</description></item>
-                /// <item><description>Manual</description></item>
-                /// <item><description>ManualWorkflow</description></item>
-                /// <item><description>Normal</description></item>
-                /// <item><description>ManualFlow</description></item>
+                /// <item><description><para>SmokeTest</para>
+                /// </description></item>
+                /// <item><description><para>SupplementData</para>
+                /// </description></item>
+                /// <item><description><para>Manual</para>
+                /// </description></item>
+                /// <item><description><para>ManualWorkflow</para>
+                /// </description></item>
+                /// <item><description><para>Normal</para>
+                /// </description></item>
+                /// <item><description><para>ManualFlow</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListNodesRequest : TeaModel {
         /// <summary>
-        /// <para>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</para>
+        /// <para>The ID of the container. If you specify this parameter, only nodes in the specified container are returned. This parameter is independent of the resource group (ResourceGroupId).</para>
         /// <remarks>
-        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>This parameter is of the Long type in SDK versions earlier than 8.0.0 and of the String type in SDK 8.0.0 and later. <b>This change does not affect SDK usage. The parameter is returned in the type defined for your SDK version.</b> The type change may cause compilation errors only when you upgrade the SDK across version 8.0.0. In this case, you must manually correct the data type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>860438872620113XXXX</para>
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ContainerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the node. Fuzzy search is supported.</para>
+        /// <para>The node name. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -33,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number of the data to retrieve, used for pagination.</para>
+        /// <para>The page number of the results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number of the data to retrieve, used for pagination.</para>
+        /// <para>The number of entries per page. Default: 10. Maximum: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -53,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
+        /// <para>The ID of the DataWorks workspace. To find this ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and navigate to the workspace configuration page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,10 +65,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Leave this parameter empty if not specified. Filter condition: within a specified container. Specify the container ID. This parameter is independent of the resource group ID (ResourceGroupId).</para>
-        /// <remarks>
-        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
-        /// </remarks>
+        /// <para>Filters nodes by their scheduling type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Normal: The node runs as scheduled.</para>
+        /// </description></item>
+        /// <item><description><para>Pause: The node is paused and blocks its dependent downstream nodes.</para>
+        /// </description></item>
+        /// <item><description><para>Skip: The node is skipped, and the system immediately returns a success status with a 0-second execution time. This action does not block downstream nodes or consume resources.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -77,11 +83,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Recurrence { get; set; }
 
         /// <summary>
-        /// <para>The rerun property, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</para>
+        /// <para>The rerun mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Allowed: The nodes can be rerun regardless of whether they are successfully run or fail to run.</description></item>
-        /// <item><description>FailureAllowed: The nodes can be rerun only after they fail to run.</description></item>
-        /// <item><description>Denied: The nodes cannot be rerun regardless of whether they are successfully run or fail to run.</description></item>
+        /// <item><description><para>Allowed: The node can be rerun regardless of whether it succeeded or failed.</para>
+        /// </description></item>
+        /// <item><description><para>FailureAllowed: The node can be rerun only if its previous run failed.</para>
+        /// </description></item>
+        /// <item><description><para>Denied: The node cannot be rerun regardless of whether it succeeded or failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,15 +101,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RerunMode { get; set; }
 
         /// <summary>
-        /// <para>The location of the nodes in the left-side navigation pane of the Data Studio page, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</para>
+        /// <para>The context for filtering nodes. In data development, this corresponds to the sections in the directory tree on the left. If you omit this parameter, no filtering is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DataworksProject</description></item>
-        /// <item><description>DataworksManualWorkflow</description></item>
-        /// <item><description>DataworksManualTask</description></item>
+        /// <item><description><para>DataworksProject: Nodes in the project directory.</para>
+        /// </description></item>
+        /// <item><description><para>DataworksManualWorkflow: manual workflow</para>
+        /// </description></item>
+        /// <item><description><para>DataworksManualTask: manual task</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>DATAWORKS_PROJECT</para>
+        /// <para>DataworksProject</para>
         /// </summary>
         [NameInMap("Scene")]
         [Validation(Required=false)]

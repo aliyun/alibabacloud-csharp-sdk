@@ -40,10 +40,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the tag value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Boolean</description></item>
-        /// <item><description>Int</description></item>
-        /// <item><description>String</description></item>
-        /// <item><description>Double</description></item>
+        /// <item><description><para>Boolean</para>
+        /// </description></item>
+        /// <item><description><para>Int</para>
+        /// </description></item>
+        /// <item><description><para>String</para>
+        /// </description></item>
+        /// <item><description><para>Double</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

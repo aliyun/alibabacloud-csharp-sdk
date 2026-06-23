@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateProjectRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the workspace.</para>
+        /// <para>An optional description of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Financial analysis group project data development</para>
@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to enable the development environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the development environment. In this case, the development environment is isolated from the production environment in the workspace.</description></item>
-        /// <item><description>false: disables the development environment. In this case, only the production environment is used in the workspace.</description></item>
+        /// <item><description><para><c>true</c>: Enables the development environment for the workspace and isolates it from the production environment.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Uses only the production environment.</para>
+        /// </description></item>
         /// </list>
+        /// <para><b>Important</b>: You cannot disable the development environment after you enable it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -34,12 +37,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? DevEnvironmentEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable the Develop role. Valid values:</para>
+        /// <para>Specifies whether to disable the development role, which grants permissions for workflow and code editing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para><c>false</c>: Enables the development role. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><c>true</c>: Disables the development role.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Note: If you disable the Develop role, you cannot assume the Develop role to develop nodes in workflows and edit node code. The Develop role cannot be enabled again after it is disabled.</para>
+        /// <para><b>Important</b>: After you enable the development role (by setting this parameter to <c>false</c>), you cannot disable it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -59,8 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the workspace management page to obtain the ID.</para>
-        /// <para>This parameter is used to determine the DataWorks workspaces used for this API call.</para>
+        /// <para>The ID of the DataWorks workspace. To find the workspace ID, log in to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace Management page.</para>
+        /// <para>This parameter specifies the DataWorks workspace to use for the API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,10 +76,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable scheduling of Platform for AI (PAI) tasks. Valid values:</para>
+        /// <para>Specifies whether to enable task scheduling for Machine Learning Platform for AI (PAI). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables scheduling of PAI tasks. In this case, you can create a PAI node in a DataWorks workspace and configure scheduling properties for the node to implement periodic scheduling of PAI tasks.</description></item>
-        /// <item><description>false: disables scheduling of PAI tasks.</description></item>
+        /// <item><description><para><c>true</c>: You can create PAI nodes in the DataWorks workspace and run them on a schedule.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disables task scheduling for PAI.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,10 +92,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? PaiTaskEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable or enable the workspace. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Available: enables the workspace.</description></item>
-        /// <item><description>Forbidden: disables the workspace.</description></item>
+        /// <item><description><para><c>Available</c>: Enables the workspace.</para>
+        /// </description></item>
+        /// <item><description><para><c>Forbidden</c>: Disables the workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The entity ID. Currently, entities can only be tables. You can call the ListTables operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dlf-table:123456789:test_catalog:test_database::test_table</para>
+        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The collection ID. You can call the ListMetaCollections operation to query the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>category.123</para>
+        /// <para>as78d756asd</para>
         /// </summary>
         [NameInMap("MetaCollectionId")]
         [Validation(Required=false)]

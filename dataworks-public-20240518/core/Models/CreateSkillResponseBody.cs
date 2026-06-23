@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string CreatorId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>数据分析技能</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -55,6 +59,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12345678901</para>
             /// </summary>
             [NameInMap("GmtModifiedTime")]
             [Validation(Required=false)]

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the Id parameter instead.</para>
+        /// <para>This field is deprecated. Use the <c>Id</c> field instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11588</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization task.</para>
+        /// <para>The ID of the DI job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11588</para>
@@ -33,8 +33,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The DataWorks workspace ID. You can call the <c>ListProjects</c> operation to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -44,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.</para>
+        /// <para>Specifies whether to return the detailed configuration, including <c>TransformationRules</c>, <c>TableMappings</c>, and <c>JobSettings</c>. This configuration is returned by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

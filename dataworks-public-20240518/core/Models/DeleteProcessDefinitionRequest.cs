@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteProcessDefinitionRequest : TeaModel {
         /// <summary>
+        /// <para><b>The ID of the process definition to delete.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -69,11 +69,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The status of the network resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The network resource is waiting to be created.</description></item>
-            /// <item><description>Creating: The network resource is being created.</description></item>
-            /// <item><description>Running: The network resource is running as expected.</description></item>
-            /// <item><description>Deleting: The network resource is being deleted.</description></item>
-            /// <item><description>Deleted: The network resource is deleted.</description></item>
+            /// <item><description><para>Pending: The network resource is waiting to be created.</para>
+            /// </description></item>
+            /// <item><description><para>Creating: The network resource is being created.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The network resource is running as expected.</para>
+            /// </description></item>
+            /// <item><description><para>Deleting: The network resource is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para>Deleted: The network resource is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

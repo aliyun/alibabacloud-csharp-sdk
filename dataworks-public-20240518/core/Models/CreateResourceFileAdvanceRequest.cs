@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateResourceFileAdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>The code for the file. The code format varies based on the file type. To view the code format for a specific file type, go to Operation Center, open the directed acyclic graph (DAG) of a node of the file type, right-click the node, and then select View Code.</para>
+        /// <para>The code content of the file. The code format varies depending on the code type (fileType). You can locate a job of the corresponding type in the Operation Center, right-click it, and select View Code to check the specific code format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SHOW TABLES;</para>
@@ -52,8 +52,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The type of the code for the file.</para>
-        /// <para>The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</para>
+        /// <para>The code type of the file.</para>
+        /// <para>Different file types correspond to different code types. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks Node Types</a>.<br>
+        /// You can also invoke the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> API to query the code types of files.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +76,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string OriginResourceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account used by the file owner. If this parameter is not configured, the ID of the Alibaba Cloud account of the user who calls the operation is used by default.</para>
+        /// <para>The Alibaba Cloud User ID of the file owner. If this parameter is empty, the Alibaba Cloud User ID of the caller is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000000001</para>
@@ -85,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the DataWorks console, go to the workspace configuration page, and obtain the workspace ID. This parameter is required to identify the DataWorks workspace for this API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to upload the resource file to a desired compute engine.</para>
+        /// <para>Indicates whether to synchronize and upload the resource to the compute engine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +108,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? RegisterToCalcEngine { get; set; }
 
         /// <summary>
-        /// <para>The URL of the Object Storage Service (OSS) bucket to which you upload the file. The URL is provided by the POP platform.</para>
+        /// <para>The OSS URL for file upload provided by POP.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://bucketname1.oss-cn-shanghai.aliyuncs.com/example">http://bucketname1.oss-cn-shanghai.aliyuncs.com/example</a></para>
@@ -117,7 +118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public Stream ResourceFileObject { get; set; }
 
         /// <summary>
-        /// <para>The storage path of the resource file in a desired compute engine. This parameter takes effect only for E-MapReduce (EMR) and Cloudera\&quot;s Distribution including Apache Hadoop (CDH) compute engines. In an EMR compute engine, this parameter is configured in the [osshdfs]://path/to/object format. In a CDH compute engine, this parameter is set to /user/admin/lib by default.</para>
+        /// <para>The Storage Path of the resource file on the compute engine. This field is currently used only by EMR and CDH. The EMR format is [osshdfs]://path/to/object, and for CDH, the default value must be /user/admin/lib.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://oss-cn-shanghai.aliyuncs.com/emr-test</para>
@@ -127,10 +128,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string StorageURL { get; set; }
 
         /// <summary>
-        /// <para>The upload mode of MaxCompute file resources. This parameter takes effect only for MaxCompute file resources. Valid values:</para>
+        /// <para>The upload mode for the resource file. This parameter currently applies only to File-type files in MaxCompute. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: indicates the resource upload and download mode.</description></item>
-        /// <item><description>false: indicates the online editing mode.</description></item>
+        /// <item><description><para>true: Downloadable resource mode.</para>
+        /// </description></item>
+        /// <item><description><para>false: Online-editable text mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

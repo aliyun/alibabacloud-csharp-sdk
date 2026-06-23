@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort order. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending.</description></item>
-        /// <item><description>Desc: descending.</description></item>
+        /// <item><description><para>Asc: ascending.</para>
+        /// </description></item>
+        /// <item><description><para>Desc: descending.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,27 +69,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
         /// <para>You can refer to the ListCrawlerTypes operation for the parent entity type.</para>
         /// <list type="bullet">
-        /// <item><description>If the parent entity is a catalog, the format of <c>ParentMetaEntityId</c> follows the response of the ListCatalogs API.</description></item>
-        /// <item><description>If the parent entity is a metadata crawler, the format of <c>ParentMetaEntityId</c> is <c>${CrawlerType}:${Instance ID or encoded URL}</c>.</description></item>
+        /// <item><description><para>If the parent entity is a catalog, the format of <c>ParentMetaEntityId</c> follows the response of the ListCatalogs API.</para>
+        /// </description></item>
+        /// <item><description><para>If the parent entity is a metadata crawler, the format of <c>ParentMetaEntityId</c> is <c>${CrawlerType}:${Instance ID or encoded URL}</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>ParentMetaEntityId format examples</para>
         /// <list type="bullet">
-        /// <item><description><c>dlf-catalog::catalog_id</c></description></item>
-        /// <item><description><c>holo:instance_id</c></description></item>
-        /// <item><description><c>mysql:(instance_id|encoded_jdbc_url)</c></description></item>
+        /// <item><description><para><c>dlf-catalog::catalog_id</c></para>
+        /// </description></item>
+        /// <item><description><para><c>holo:instance_id</c></para>
+        /// </description></item>
+        /// <item><description><para><c>mysql:(instance_id|encoded_jdbc_url)</c></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><c>catalog_id</c>: The ID of the DLF catalog.</description></item>
-        /// <item><description><c>instance_id</c>: The instance ID. Required when the data source is registered in instance mode.</description></item>
-        /// <item><description><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. Required when the data source is registered by connection string.</description></item>
+        /// <item><description><para><c>catalog_id</c>: The ID of the DLF catalog.</para>
+        /// </description></item>
+        /// <item><description><para><c>instance_id</c>: The instance ID. Required when the data source is registered in instance mode.</para>
+        /// </description></item>
+        /// <item><description><para><c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string. Required when the data source is registered by connection string.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mysql:rm-abc123xxx
-        /// dlf-catalog:123456XXX:test_catalog</para>
+        /// <para>holo:instance_id</para>
         /// </summary>
         [NameInMap("ParentMetaEntityId")]
         [Validation(Required=false)]
@@ -96,9 +105,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort field. Default value: CreateTime. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime</description></item>
-        /// <item><description>ModifyTime</description></item>
-        /// <item><description>Name</description></item>
+        /// <item><description><para>CreateTime</para>
+        /// </description></item>
+        /// <item><description><para>ModifyTime</para>
+        /// </description></item>
+        /// <item><description><para>Name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

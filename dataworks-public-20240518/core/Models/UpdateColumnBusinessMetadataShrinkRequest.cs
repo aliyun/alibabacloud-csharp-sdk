@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateColumnBusinessMetadataShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The custom attributes of the column, specified as key-value pairs. The key is the attribute identifier, and the value is an array that can contain at most one element. An empty array deletes the attribute\&quot;s value. To avoid overwriting the column\&quot;s business description, omit the <c>Description</c> parameter from the request. An empty object (<c>{}</c>) indicates that no custom attributes are updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CustomAttributesShrink { get; set; }
 
         /// <summary>
-        /// <para>The field business description.</para>
+        /// <para>The business description of the column.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test description</para>
@@ -28,11 +30,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The field ID. You can refer to the response from the ListColumns operation. You can also refer to the <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
+        /// <para>The ID of the column. You can obtain this ID from the response of the <c>ListColumns</c> operation. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Metadata Entity Concepts</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-column:11075xxxx::test_project:test_schema:test_table:test_column</para>
+        /// <para>maxcompute-column:::project_name:[schema_name]:table_name:column_name</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

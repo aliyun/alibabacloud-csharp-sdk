@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>22C97E95-F023-56B5-8852-B1A77A17XXXX</para>
+        /// <para>22C97E95-F023-56B5-8852-B1A77A1****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

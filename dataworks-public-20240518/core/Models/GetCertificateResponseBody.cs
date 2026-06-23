@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the certificate file.</para>
+        /// <para>The details of the certificate.</para>
         /// </summary>
         [NameInMap("Certificate")]
         [Validation(Required=false)]
         public GetCertificateResponseBodyCertificate Certificate { get; set; }
         public class GetCertificateResponseBodyCertificate : TeaModel {
             /// <summary>
-            /// <para>The time when the certificate file was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the file was created. This is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1730217600000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The size of the certificate file, in bytes.</para>
+            /// <para>The file size in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>77549</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? FileSizeInBytes { get; set; }
 
             /// <summary>
-            /// <para>The ID of the certificate file.</para>
+            /// <para>The unique ID of the certificate file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>676303114031776</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the certificate file.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca1.crt</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace to which the certificate file belongs.</para>
+            /// <para>The ID of the project to which the certificate file belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>177161</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>

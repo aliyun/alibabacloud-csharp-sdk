@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The ID of the user who creates the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>1107550****</para>
             /// </summary>
             [NameInMap("CreateUser")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The data source ID. You can call the <a href="https://help.aliyun.com/document_detail/211431.html">ListDataSources</a> operation to query the ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>265133</para>
             /// </summary>
             [NameInMap("DataSourceId")]
             [Validation(Required=false)]
@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The environment to which the target data source belongs. The values are as follows:</para>
             /// <list type="bullet">
-            /// <item><description>Dev: the development environment.</description></item>
-            /// <item><description>Prod: the production environment.</description></item>
+            /// <item><description><para>Dev: the development environment.</para>
+            /// </description></item>
+            /// <item><description><para>Prod: the production environment.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>101412</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The user in the workspace to which the data source is shared. If the data source is shared to the entire workspace, this parameter is left empty.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>1107550004253538</para>
             /// </summary>
             [NameInMap("SharedUser")]
             [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The ID of the workspace with which the data source is associated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>106560</para>
             /// </summary>
             [NameInMap("SourceProjectId")]
             [Validation(Required=false)]
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The ID of the workspace to which the data source is shared.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>106561</para>
             /// </summary>
             [NameInMap("TargetProjectId")]
             [Validation(Required=false)]

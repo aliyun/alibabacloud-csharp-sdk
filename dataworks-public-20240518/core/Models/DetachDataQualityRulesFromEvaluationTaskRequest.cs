@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DetachDataQualityRulesFromEvaluationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data quality monitoring task that is associated with the rule.</para>
+        /// <para>The ID of the associated data quality monitoring task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityEvaluationTaskId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the monitoring rules.</para>
+        /// <para>The list of data quality rule IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DataQualityRuleIds")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<long?> DataQualityRuleIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace configuration page to obtain the workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

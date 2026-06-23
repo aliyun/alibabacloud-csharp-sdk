@@ -73,8 +73,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The way in which the mapping between the data asset and the tag is created. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>System</description></item>
-                    /// <item><description>UserDefined</description></item>
+                    /// <item><description><para>System</para>
+                    /// </description></item>
+                    /// <item><description><para>UserDefined</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -99,8 +101,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The environment of the workspace to which the data asset belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Dev: development environment</description></item>
-                /// <item><description>Prod: production environment</description></item>
+                /// <item><description><para>Dev: development environment</para>
+                /// </description></item>
+                /// <item><description><para>Prod: production environment</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,8 +147,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type of the data asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ACS::DataWorks::Table</description></item>
-                /// <item><description>ACS::DataWorks::Task</description></item>
+                /// <item><description><para>ACS::DataWorks::Table</para>
+                /// </description></item>
+                /// <item><description><para>ACS::DataWorks::Task</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

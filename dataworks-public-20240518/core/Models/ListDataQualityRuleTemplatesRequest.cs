@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityRuleTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The source of the template. This parameter is required. Valid values:</para>
+        /// <para>The creation source of the rule template. This parameter is required.</para>
         /// <list type="bullet">
-        /// <item><description>System</description></item>
-        /// <item><description>UserDefined</description></item>
+        /// <item><description>System: system template</description></item>
+        /// <item><description>UserDefined: user-defined template</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string CreationSource { get; set; }
 
         /// <summary>
-        /// <para>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</para>
+        /// <para>The category directory in which the custom template is stored. Levels are separated by forward slashes (/). Each level name can be up to 1,024 characters in length and cannot contain whitespace characters or backslashes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/ods/order_data</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DirectoryPath { get; set; }
 
         /// <summary>
-        /// <para>The name of the template. If you want to query a system template, set this parameter to the name of the system template. Fuzzy match is supported.</para>
+        /// <para>The fuzzy match of the template rule name. For a system template, the internationalized name of the system template is fuzzy matched based on the language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Table rows</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries per page in a paginated query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of a paginated query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

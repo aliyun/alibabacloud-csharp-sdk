@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class FindBestMatchSecurityStrategyRequest : TeaModel {
         /// <summary>
+        /// <para>Control module, used to match the security policy type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DataQuery</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ControlModule { get; set; }
 
         /// <summary>
+        /// <para>Control sub-module, used to match the security policy type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MyCatalog</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ControlSubModule { get; set; }
 
         /// <summary>
+        /// <para><b>Workspace ID</b>, used to precisely match workspace-level policies.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>

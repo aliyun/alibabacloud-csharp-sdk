@@ -62,8 +62,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Indicates whether the call was successful.</para>
         /// <list type="bullet">
-        /// <item><description>true: success.</description></item>
-        /// <item><description>false: failure.</description></item>
+        /// <item><description><para>true: success.</para>
+        /// </description></item>
+        /// <item><description><para>false: failure.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -89,8 +89,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The status used for matching manual workflow instances.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Success</description></item>
-        /// <item><description>Failure</description></item>
+        /// <item><description><para>Success</para>
+        /// </description></item>
+        /// <item><description><para>Failure</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

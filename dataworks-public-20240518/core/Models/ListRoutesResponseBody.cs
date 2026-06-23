@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The list of network resource routing information obtained.</para>
+            /// <para>The routes of the network resource.</para>
             /// </summary>
             [NameInMap("RouteList")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Route destination CIDR</para>
+                /// <para>The destination CIDR block of the route.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.0.0/16</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DestinationCidr { get; set; }
 
                 /// <summary>
-                /// <para>Route ID</para>
+                /// <para>The route ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Network Resource ID</para>
+                /// <para>The network resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? NetworkId { get; set; }
 
                 /// <summary>
-                /// <para>Unique identifier of the resource group to which it belongs</para>
+                /// <para>The ID of the resource group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Serverless_res_group_524257424564736_6831777003****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>Unique identifier of network resource</para>
+                /// <para>The ID of the network resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ns-679XXXXXX</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>All data entries</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>

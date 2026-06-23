@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class EnableProcessDefinitionRequest : TeaModel {
         /// <summary>
+        /// <para>The idempotence token. A UUID is recommended.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para><b>process definition ID</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>f0d6d578-a305-40ac-ba1e-0a09f64cbc69</para>
         /// </summary>

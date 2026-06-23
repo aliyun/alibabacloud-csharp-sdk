@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>691CA452-D37A-4ED0-9441</para>

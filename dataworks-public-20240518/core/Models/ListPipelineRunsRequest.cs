@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListPipelineRunsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the user who creates the processes. This parameter specifies a filter condition.</para>
+        /// <para>Filters the results by the creator of the pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>110755000425****</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Creator { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the artifact.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>860438872620113XXXX</para>
+        /// </summary>
         [NameInMap("ObjectId")]
         [Validation(Required=false)]
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,8 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can obtain this ID from the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
+        /// <para>This parameter specifies the DataWorks workspace to use for the API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,15 +62,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The status of the processes. This parameter specifies a filter condition.</para>
+        /// <para>Filters the results by the current status of the pipeline.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Init</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Success</description></item>
-        /// <item><description>Fail</description></item>
-        /// <item><description>Termination</description></item>
-        /// <item><description>Cancel</description></item>
+        /// <item><description><para><c>Init</c>: initializing</para>
+        /// </description></item>
+        /// <item><description><para><c>Running</c>: running</para>
+        /// </description></item>
+        /// <item><description><para><c>Success</c>: succeeded</para>
+        /// </description></item>
+        /// <item><description><para><c>Fail</c>: failed</para>
+        /// </description></item>
+        /// <item><description><para><c>Termination</c>: terminated</para>
+        /// </description></item>
+        /// <item><description><para><c>Cancel</c>: canceled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

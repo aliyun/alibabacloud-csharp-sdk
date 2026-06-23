@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListNodeDependenciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The pagination settings.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListNodeDependenciesResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListNodeDependenciesResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The list of dependent nodes.</para>
+            /// <para>A list of dependent nodes.</para>
             /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<ListNodeDependenciesResponseBodyPagingInfoNodes> Nodes { get; set; }
             public class ListNodeDependenciesResponseBodyPagingInfoNodes : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the node was created.</para>
+                /// <para>The creation timestamp of the data development node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListNodeDependenciesResponseBodyPagingInfoNodesDataSource DataSource { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesDataSource : TeaModel {
                     /// <summary>
-                    /// <para>The name of the data source.</para>
+                    /// <para>The data source name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps_first</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the data source.</para>
+                    /// <para>The data source type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps</para>
@@ -73,10 +73,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the Data Studio node.</para>
+                /// <para>The unique ID of the data development node.</para>
                 /// <remarks>
-                /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// <para>Notice: </para>
                 /// </remarks>
+                /// <para>The data type for this parameter is <c>Long</c> for SDKs earlier than v8.0.0 and <c>String</c> for SDK v8.0.0 and later. <b>This change does not affect normal usage, as the parameter\&quot;s data type matches the SDK definition.</b> However, upgrading from a pre-8.0.0 SDK version may cause a compilation error, requiring you to manually update the data type in your code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>723932906364267XXXX</para>
@@ -86,21 +87,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The node input.</para>
+                /// <para>Details about the node\&quot;s inputs.</para>
                 /// </summary>
                 [NameInMap("Inputs")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesInputs Inputs { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesInputs : TeaModel {
                     /// <summary>
-                    /// <para>The node output list.</para>
+                    /// <para>A list of node outputs.</para>
                     /// </summary>
                     [NameInMap("NodeOutputs")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs> NodeOutputs { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesInputsNodeOutputs : TeaModel {
                         /// <summary>
-                        /// <para>The output of the node.</para>
+                        /// <para>The node output.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>860438872620113XXXX</para>
@@ -109,6 +110,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [Validation(Required=false)]
                         public string Data { get; set; }
 
+                        /// <summary>
+                        /// <para>A human-readable name for the node\&quot;s target data table. This identifier is for display purposes only and does not enforce logical constraints.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>testProject.testTableName</para>
+                        /// </summary>
                         [NameInMap("RefTableName")]
                         [Validation(Required=false)]
                         public string RefTableName { get; set; }
@@ -116,14 +123,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The table list.</para>
+                    /// <para>A list of tables.</para>
                     /// </summary>
                     [NameInMap("Tables")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesInputsTables> Tables { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesInputsTables : TeaModel {
                         /// <summary>
-                        /// <para>The table ID.</para>
+                        /// <para>The ID of the table.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>odps.autotest.test_output_table_1</para>
@@ -135,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The variable list.</para>
+                    /// <para>A list of variables.</para>
                     /// </summary>
                     [NameInMap("Variables")]
                     [Validation(Required=false)]
@@ -152,10 +159,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string ArtifactType { get; set; }
 
                         /// <summary>
-                        /// <para>The variable ID.</para>
+                        /// <para>The ID of the variable.</para>
                         /// <remarks>
-                        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                        /// <para>Notice: </para>
                         /// </remarks>
+                        /// <para>The data type for this parameter is <c>Long</c> for SDKs earlier than v8.0.0 and <c>String</c> for SDK v8.0.0 and later. <b>This change does not affect normal usage, as the parameter\&quot;s data type matches the SDK definition.</b> However, upgrading from a pre-8.0.0 SDK version may cause a compilation error, requiring you to manually update the data type in your code.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>543218872620113XXXX</para>
@@ -182,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariablesNode Node { get; set; }
                         public class ListNodeDependenciesResponseBodyPagingInfoNodesInputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>The output of the node.</para>
+                            /// <para>The node output.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>860438872620113XXXX</para>
@@ -194,12 +202,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable. Valid values:</para>
+                        /// <para>The scope of the variable.</para>
                         /// <list type="bullet">
-                        /// <item><description>NodeParameter</description></item>
-                        /// <item><description>NodeContext</description></item>
-                        /// <item><description>Workflow</description></item>
-                        /// <item><description>Workspace</description></item>
+                        /// <item><description><para>NodeParameter</para>
+                        /// </description></item>
+                        /// <item><description><para>NodeContext</para>
+                        /// </description></item>
+                        /// <item><description><para>Workflow</para>
+                        /// </description></item>
+                        /// <item><description><para>Workspace</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -212,11 +224,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The type of the variable.</para>
                         /// <list type="bullet">
-                        /// <item><description>NoKvVariableExpression</description></item>
-                        /// <item><description>Constant</description></item>
-                        /// <item><description>PassThrough</description></item>
-                        /// <item><description>System</description></item>
-                        /// <item><description>NodeOutput</description></item>
+                        /// <item><description><para>NoKvVariableExpression</para>
+                        /// </description></item>
+                        /// <item><description><para>Constant</para>
+                        /// </description></item>
+                        /// <item><description><para>PassThrough</para>
+                        /// </description></item>
+                        /// <item><description><para>System</para>
+                        /// </description></item>
+                        /// <item><description><para>NodeOutput</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -227,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The variable name.</para>
+                        /// <para>The value of the variable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>111</para>
@@ -241,7 +258,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The timestamp when the node was last modified.</para>
+                /// <para>The last modification timestamp of the data development node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1724505917000</para>
@@ -251,7 +268,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node.</para>
+                /// <para>The name of the data development node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Node name</para>
@@ -261,21 +278,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The output of the node.</para>
+                /// <para>Details about the node\&quot;s outputs.</para>
                 /// </summary>
                 [NameInMap("Outputs")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesOutputs Outputs { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputs : TeaModel {
                     /// <summary>
-                    /// <para>The node output list.</para>
+                    /// <para>A list of node outputs.</para>
                     /// </summary>
                     [NameInMap("NodeOutputs")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs> NodeOutputs { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsNodeOutputs : TeaModel {
                         /// <summary>
-                        /// <para>The output of the node.</para>
+                        /// <para>The node output.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>463497880880954XXXX</para>
@@ -284,6 +301,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [Validation(Required=false)]
                         public string Data { get; set; }
 
+                        /// <summary>
+                        /// <para>A human-readable name for the node\&quot;s target data table. This identifier is for display purposes only and does not enforce logical constraints.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>testProject.testTableName</para>
+                        /// </summary>
                         [NameInMap("RefTableName")]
                         [Validation(Required=false)]
                         public string RefTableName { get; set; }
@@ -291,14 +314,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The table list.</para>
+                    /// <para>A list of tables.</para>
                     /// </summary>
                     [NameInMap("Tables")]
                     [Validation(Required=false)]
                     public List<ListNodeDependenciesResponseBodyPagingInfoNodesOutputsTables> Tables { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsTables : TeaModel {
                         /// <summary>
-                        /// <para>The table ID.</para>
+                        /// <para>The ID of the table.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>odps.autotest.test_output_table_1</para>
@@ -310,7 +333,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     }
 
                     /// <summary>
-                    /// <para>The variables.</para>
+                    /// <para>A list of variables.</para>
                     /// </summary>
                     [NameInMap("Variables")]
                     [Validation(Required=false)]
@@ -327,10 +350,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string ArtifactType { get; set; }
 
                         /// <summary>
-                        /// <para>The variable ID.</para>
+                        /// <para>The ID of the variable.</para>
                         /// <remarks>
-                        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                        /// <para>Notice: </para>
                         /// </remarks>
+                        /// <para>The data type for this parameter is <c>Long</c> for SDKs earlier than v8.0.0 and <c>String</c> for SDK v8.0.0 and later. <b>This change does not affect normal usage, as the parameter\&quot;s data type matches the SDK definition.</b> However, upgrading from a pre-8.0.0 SDK version may cause a compilation error, requiring you to manually update the data type in your code.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>543217824470354XXXX</para>
@@ -340,7 +364,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The variable name.</para>
+                        /// <para>The name of the variable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>output</para>
@@ -357,7 +381,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode Node { get; set; }
                         public class ListNodeDependenciesResponseBodyPagingInfoNodesOutputsVariablesNode : TeaModel {
                             /// <summary>
-                            /// <para>The node output corresponding to the variable.</para>
+                            /// <para>The node output that corresponds to the variable.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>463497880880954XXXX</para>
@@ -369,12 +393,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The scope of the variable. Valid values:</para>
+                        /// <para>The scope of the variable.</para>
                         /// <list type="bullet">
-                        /// <item><description>NodeParameter</description></item>
-                        /// <item><description>NodeContext</description></item>
-                        /// <item><description>Workflow</description></item>
-                        /// <item><description>Workspace</description></item>
+                        /// <item><description><para>NodeParameter</para>
+                        /// </description></item>
+                        /// <item><description><para>NodeContext</para>
+                        /// </description></item>
+                        /// <item><description><para>Workflow</para>
+                        /// </description></item>
+                        /// <item><description><para>Workspace</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -385,13 +413,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Scope { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the variable. Valid values:</para>
+                        /// <para>The type of the variable.</para>
                         /// <list type="bullet">
-                        /// <item><description>NoKvVariableExpression</description></item>
-                        /// <item><description>Constant</description></item>
-                        /// <item><description>PassThrough</description></item>
-                        /// <item><description>System</description></item>
-                        /// <item><description>NodeOutput</description></item>
+                        /// <item><description><para>NoKvVariableExpression</para>
+                        /// </description></item>
+                        /// <item><description><para>Constant</para>
+                        /// </description></item>
+                        /// <item><description><para>PassThrough</para>
+                        /// </description></item>
+                        /// <item><description><para>System</para>
+                        /// </description></item>
+                        /// <item><description><para>NodeOutput</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -402,7 +435,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The variable name.</para>
+                        /// <para>The value of the variable.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>111</para>
@@ -416,7 +449,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The owner of the node.</para>
+                /// <para>The owner of the data development node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110755000425XXXX</para>
@@ -426,7 +459,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the workspace to which the node belongs.</para>
+                /// <para>The ID of the project that contains the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65133</para>
@@ -436,12 +469,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling type.</para>
+                /// <para>The execution mode of the node.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Normal: Nodes are scheduled as expected.</description></item>
-                /// <item><description>Pause: Nodes are paused, and the running of their descendant nodes is blocked.</description></item>
-                /// <item><description>Skip: Nodes are dry run. The system does not actually run the nodes but directly prompts that the nodes are successfully run. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</description></item>
+                /// <item><description><para><c>Normal</c>: The node runs as normal.</para>
+                /// </description></item>
+                /// <item><description><para><c>Pause</c>: The node is paused. This action blocks the execution of downstream nodes that depend on this node.</para>
+                /// </description></item>
+                /// <item><description><para><c>Skip</c>: The node is skipped (dry run). The system immediately returns a success status with an execution time of 0 seconds. This action does not block downstream nodes or consume resources.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -452,14 +488,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Recurrence { get; set; }
 
                 /// <summary>
-                /// <para>The information about the resource group.</para>
+                /// <para>Details about the resource group.</para>
                 /// </summary>
                 [NameInMap("RuntimeResource")]
                 [Validation(Required=false)]
                 public ListNodeDependenciesResponseBodyPagingInfoNodesRuntimeResource RuntimeResource { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesRuntimeResource : TeaModel {
                     /// <summary>
-                    /// <para>The resource group ID.</para>
+                    /// <para>The ID of the resource group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>S_res_group_XXXX_XXXX</para>
@@ -471,7 +507,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The script information.</para>
+                /// <para>Details about the script.</para>
                 /// </summary>
                 [NameInMap("Script")]
                 [Validation(Required=false)]
@@ -480,8 +516,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The ID of the script.</para>
                     /// <remarks>
-                    /// <para> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// <para>Notice: </para>
                     /// </remarks>
+                    /// <para>The data type for this parameter is <c>Long</c> for SDKs earlier than v8.0.0 and <c>String</c> for SDK v8.0.0 and later. <b>This change does not affect normal usage, as the parameter\&quot;s data type matches the SDK definition.</b> However, upgrading from a pre-8.0.0 SDK version may cause a compilation error, requiring you to manually update the data type in your code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>853573334108680XXXX</para>
@@ -491,7 +528,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The script path.</para>
+                    /// <para>The path of the script.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>root/demo</para>
@@ -501,14 +538,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>Runtime</para>
+                    /// <para>The runtime environment.</para>
                     /// </summary>
                     [NameInMap("Runtime")]
                     [Validation(Required=false)]
                     public ListNodeDependenciesResponseBodyPagingInfoNodesScriptRuntime Runtime { get; set; }
                     public class ListNodeDependenciesResponseBodyPagingInfoNodesScriptRuntime : TeaModel {
                         /// <summary>
-                        /// <para>The command used to distinguish node types.</para>
+                        /// <para>The command that is used to distinguish between node types.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ODPS_SQL</para>
@@ -522,7 +559,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The scheduling policy.</para>
+                /// <para>The scheduling strategy.</para>
                 /// </summary>
                 [NameInMap("Strategy")]
                 [Validation(Required=false)]
@@ -531,8 +568,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The instance generation mode.</para>
                     /// <list type="bullet">
-                    /// <item><description>T+1</description></item>
-                    /// <item><description>Immediately</description></item>
+                    /// <item><description><para>T+1</para>
+                    /// </description></item>
+                    /// <item><description><para>Immediately</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -543,7 +582,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string InstanceMode { get; set; }
 
                     /// <summary>
-                    /// <para>The interval between retries after failure. Unit: milliseconds.</para>
+                    /// <para>The retry interval after a failure, in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>180000</para>
@@ -555,9 +594,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The rerun mode.</para>
                     /// <list type="bullet">
-                    /// <item><description>Allowed</description></item>
-                    /// <item><description>Denied</description></item>
-                    /// <item><description>FailureAllowed</description></item>
+                    /// <item><description><para>Allowed</para>
+                    /// </description></item>
+                    /// <item><description><para>Denied</para>
+                    /// </description></item>
+                    /// <item><description><para>FailureAllowed</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -568,7 +610,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string RerunMode { get; set; }
 
                     /// <summary>
-                    /// <para>The number of retries after failure.</para>
+                    /// <para>The number of retries after a failure.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -578,7 +620,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public int? RerunTimes { get; set; }
 
                     /// <summary>
-                    /// <para>The timeout period. Unit: milliseconds.</para>
+                    /// <para>The timeout period, in milliseconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -590,7 +632,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The tags. This parameter is not in use.</para>
+                /// <para>A list of tags. This parameter is currently not in use.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -636,7 +678,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public ListNodeDependenciesResponseBodyPagingInfoNodesTrigger Trigger { get; set; }
                 public class ListNodeDependenciesResponseBodyPagingInfoNodesTrigger : TeaModel {
                     /// <summary>
-                    /// <para>The cron expression for scheduling.</para>
+                    /// <para>The cron expression used for scheduling.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>00 00 00 * * ?</para>
@@ -646,7 +688,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Cron { get; set; }
 
                     /// <summary>
-                    /// <para>The effective end time of the schedule, in the format yyyy-MM-dd HH:mm:ss.</para>
+                    /// <para>The time when scheduling expires, in <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>9999-01-01 00:00:00</para>
@@ -656,10 +698,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The unique identifier of the trigger.</para>
+                    /// <para>The unique ID of the trigger.</para>
                     /// <remarks>
-                    /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// <para>Notice: </para>
                     /// </remarks>
+                    /// <para>The data type for this parameter is <c>Long</c> for SDKs earlier than v8.0.0 and <c>String</c> for SDK v8.0.0 and later. <b>This change does not affect normal usage, as the parameter\&quot;s data type matches the SDK definition.</b> However, upgrading from a pre-8.0.0 SDK version may cause a compilation error, requiring you to manually update the data type in your code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>543680677872062XXXX</para>
@@ -669,7 +712,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The effective start time of the schedule, in the format yyyy-MM-dd HH:mm:ss.</para>
+                    /// <para>The time when scheduling becomes effective, in <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1970-01-01 00:00:00</para>
@@ -692,9 +735,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <para>The trigger type.</para>
                     /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Scheduler: Periodic scheduling.</description></item>
-                    /// <item><description>Manual: Manual scheduling.</description></item>
-                    /// <item><description>Streaming: Streaming scheduler.</description></item>
+                    /// <item><description><para><c>Scheduler</c>: Periodic scheduling.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>Manual</c>: Manual scheduling.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>Streaming</c>: Stream-based scheduling.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -709,7 +755,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The number of the page to return.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -719,7 +765,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries to return on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -729,7 +775,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of matching entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -741,7 +787,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Use this ID to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>204EAF68-CCE3-5112-8DA0-E7A60F02XXXX</para>

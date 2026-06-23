@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-column:11075xxxx::test_project:test_schema:test_table</para>
+        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

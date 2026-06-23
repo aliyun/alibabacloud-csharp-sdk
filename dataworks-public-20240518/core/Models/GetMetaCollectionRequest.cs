@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>category.123</para>
+        /// <para>as78d756asd</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -102,10 +102,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The status of the deployment package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: It is ready.</description></item>
-        /// <item><description>1: It was successfully deployed.</description></item>
-        /// <item><description>2: It failed to be deployed.</description></item>
-        /// <item><description>6: It was rejected.</description></item>
+        /// <item><description><para>0: It is ready.</para>
+        /// </description></item>
+        /// <item><description><para>1: It was successfully deployed.</para>
+        /// </description></item>
+        /// <item><description><para>2: It failed to be deployed.</para>
+        /// </description></item>
+        /// <item><description><para>6: It was rejected.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

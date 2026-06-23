@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The value of the association is as follows:</para>
+        /// <para>Indicates whether the association is successful. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: the call failed.</description></item>
+        /// <item><description>false: The call fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

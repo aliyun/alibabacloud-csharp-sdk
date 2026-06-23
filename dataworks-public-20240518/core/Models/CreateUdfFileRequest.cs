@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to automatically create the directory if the specified path (FileFolderPath) does not exist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatically creates the directory if it does not exist.</description></item>
-        /// <item><description>false: The call fails if the directory does not exist.</description></item>
+        /// <item><description><para>true: Automatically creates the directory if it does not exist.</para>
+        /// </description></item>
+        /// <item><description><para>false: The call fails if the directory does not exist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

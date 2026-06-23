@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Whether the data source has been modified:</para>
         /// <list type="bullet">
-        /// <item><description>true: Yes</description></item>
-        /// <item><description>false: no</description></item>
+        /// <item><description><para>true: Yes</para>
+        /// </description></item>
+        /// <item><description><para>false: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod</description></item>
-        /// <item><description>Dev</description></item>
+        /// <item><description><para>Prod</para>
+        /// </description></item>
+        /// <item><description><para>Dev</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,8 +84,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The tag creation policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Append: New tags are added on top of the existing tags of the manual workflow.</description></item>
-        /// <item><description>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</description></item>
+        /// <item><description><para>Append: New tags are added on top of the existing tags of the manual workflow.</para>
+        /// </description></item>
+        /// <item><description><para>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,11 +120,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</description></item>
-        /// <item><description>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</description></item>
-        /// <item><description>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</description></item>
-        /// <item><description>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</description></item>
-        /// <item><description>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</description></item>
+        /// <item><description><para>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</para>
+        /// </description></item>
+        /// <item><description><para>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</para>
+        /// </description></item>
+        /// <item><description><para>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</para>
+        /// </description></item>
+        /// <item><description><para>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</para>
+        /// </description></item>
+        /// <item><description><para>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -146,10 +155,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The workflow parameters. This parameter takes effect when a specific workflow is specified (<c>WorkflowId != 1</c>). For scheduled workflows and triggered workflows, the format is key=value, and these parameters have lower priority than task parameters. For manual workflows, the format is JSON, and these parameters have higher priority than task parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{ 
-        ///   &quot;key1&quot;: &quot;value1&quot;, 
-        ///   &quot;key2&quot;: &quot;value2&quot; 
-        /// }</para>
+        /// <para>&quot;key=value&quot; format:
+        /// key1=value1 key2=value2
+        /// JSON format:
+        /// {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
         /// </summary>
         [NameInMap("WorkflowParameters")]
         [Validation(Required=false)]

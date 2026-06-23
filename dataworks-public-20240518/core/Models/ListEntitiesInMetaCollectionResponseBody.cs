@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The ID of the entity. Currently, only the Table type is supported. If the entity is deleted, this field is empty.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dlf-table:123456789:test_catalog:test_database::test_table</para>
+                /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The entity type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dlf-table</para>
+                /// <para>maxcompute-table</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

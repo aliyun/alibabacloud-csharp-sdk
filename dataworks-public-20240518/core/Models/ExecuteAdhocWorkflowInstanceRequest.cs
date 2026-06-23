@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description><para>Prod: production environment</para>
+        /// </description></item>
+        /// <item><description><para>Dev: development environment</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <para>The value of the variable. You must configure this parameter in the <c>The ancestor output: The output variable name of the ancestor task</c> format.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Value1</para>
+                    /// <para>upstream_task_output:key1</para>
                     /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
@@ -218,10 +220,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>System</description></item>
-                    /// <item><description>Constant</description></item>
-                    /// <item><description>NodeOutput</description></item>
-                    /// <item><description>PassThrough</description></item>
+                    /// <item><description><para>System</para>
+                    /// </description></item>
+                    /// <item><description><para>Constant</para>
+                    /// </description></item>
+                    /// <item><description><para>NodeOutput</para>
+                    /// </description></item>
+                    /// <item><description><para>PassThrough</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

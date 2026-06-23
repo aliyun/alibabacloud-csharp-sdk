@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateMetaEntityDefResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the created entity type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>custom_entity-biz_api</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A04C673-BEFA-5803-94E5-89E2D9F8C567</para>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

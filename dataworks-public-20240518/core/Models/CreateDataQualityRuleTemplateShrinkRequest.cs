@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityRuleTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The check settings for sample data.</para>
+        /// <para>The sample validation settings.</para>
         /// </summary>
         [NameInMap("CheckingConfig")]
         [Validation(Required=false)]
         public string CheckingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The directory in which the template is stored. Slashes (/) are used to separate directory levels. The name of each directory level can be up to 1,024 characters in length. It cannot contain whitespace characters or slashes (/).</para>
+        /// <para>The category directory where the custom template is stored. Hierarchy levels are separated by slashes. Each level name can be up to 1024 characters long and cannot contain whitespace characters or slashes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/ods/order_data</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DirectoryPath { get; set; }
 
         /// <summary>
-        /// <para>The name of the template. The name can be up to 512 characters in length and can contain digits, letters, and punctuation marks.</para>
+        /// <para>The name of the rule template. It can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation marks. The maximum length is 512 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,17 +49,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The sampling settings.</para>
+        /// <para>The settings required for sample collection.</para>
         /// </summary>
         [NameInMap("SamplingConfig")]
         [Validation(Required=false)]
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The applicable scope of the template. Valid values:</para>
+        /// <para>The visibility scope of the template:</para>
         /// <list type="bullet">
-        /// <item><description>Tenant: The template is available in all workspaces in the current tenant.</description></item>
-        /// <item><description>Project: The template is available only in the current workspace.</description></item>
+        /// <item><description>Tenant: available to the entire tenant</description></item>
+        /// <item><description>Project: available only in the current project</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

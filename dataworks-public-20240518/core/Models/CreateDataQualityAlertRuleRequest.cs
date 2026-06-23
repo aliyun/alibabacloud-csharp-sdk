@@ -57,14 +57,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type of alert recipients.</para>
                 /// <list type="bullet">
-                /// <item><description>AliUid</description></item>
-                /// <item><description>WebhookUrl</description></item>
-                /// <item><description>DingdingUrl</description></item>
-                /// <item><description>WeixinUrl</description></item>
-                /// <item><description>FeishuUrl</description></item>
-                /// <item><description>TaskOwner</description></item>
-                /// <item><description>DataQualityScanOwner</description></item>
-                /// <item><description>ShiftSchedule</description></item>
+                /// <item><description><para>AliUid</para>
+                /// </description></item>
+                /// <item><description><para>WebhookUrl</para>
+                /// </description></item>
+                /// <item><description><para>DingdingUrl</para>
+                /// </description></item>
+                /// <item><description><para>WeixinUrl</para>
+                /// </description></item>
+                /// <item><description><para>FeishuUrl</para>
+                /// </description></item>
+                /// <item><description><para>TaskOwner</para>
+                /// </description></item>
+                /// <item><description><para>DataQualityScanOwner</para>
+                /// </description></item>
+                /// <item><description><para>ShiftSchedule</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 

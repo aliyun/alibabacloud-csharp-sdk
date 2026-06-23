@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The description of the computing resource. The maximum length is 3000 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Level description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

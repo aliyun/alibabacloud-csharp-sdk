@@ -29,10 +29,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The dependency type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</description></item>
-            /// <item><description>CrossCycleDependsOnSelf: Depends on itself across cycles.</description></item>
-            /// <item><description>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</description></item>
-            /// <item><description>Normal: Depends on nodes in the same cycle.</description></item>
+            /// <item><description><para>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</para>
+            /// </description></item>
+            /// <item><description><para>CrossCycleDependsOnSelf: Depends on itself across cycles.</para>
+            /// </description></item>
+            /// <item><description><para>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</para>
+            /// </description></item>
+            /// <item><description><para>Normal: Depends on nodes in the same cycle.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -78,8 +82,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment.</para>
         /// <list type="bullet">
-        /// <item><description>Prod</description></item>
-        /// <item><description>Dev</description></item>
+        /// <item><description><para>Prod</para>
+        /// </description></item>
+        /// <item><description><para>Dev</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,8 +109,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The instance generation mode.</para>
         /// <list type="bullet">
-        /// <item><description>T+1: the next day</description></item>
-        /// <item><description>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</description></item>
+        /// <item><description><para>T+1: the next day</para>
+        /// </description></item>
+        /// <item><description><para>Immediately Note: Periodic instances will only be generated normally if the workflow\&quot;s scheduled time is more than 10 minutes after the workflow publication time. Real-time instance generation is not available during the batch instance generation period (23:30 to 24:00). While workflows can be published during this time, instances will not be regenerated immediately after submission.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -260,10 +268,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</description></item>
-                /// <item><description>CrossCycleDependsOnSelf: Depends on itself across cycles.</description></item>
-                /// <item><description>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</description></item>
-                /// <item><description>Normal: Depends on nodes in the same cycle.</description></item>
+                /// <item><description><para>CrossCycleDependsOnChildren: Depends on level-1 downstream nodes across cycles</para>
+                /// </description></item>
+                /// <item><description><para>CrossCycleDependsOnSelf: Depends on itself across cycles.</para>
+                /// </description></item>
+                /// <item><description><para>CrossCycleDependsOnOtherNode: Depends on other nodes across cycles.</para>
+                /// </description></item>
+                /// <item><description><para>Normal: Depends on nodes in the same cycle.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -309,8 +321,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The project environment.</para>
             /// <list type="bullet">
-            /// <item><description>Prod</description></item>
-            /// <item><description>Dev</description></item>
+            /// <item><description><para>Prod</para>
+            /// </description></item>
+            /// <item><description><para>Dev</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -357,10 +371,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Constant: constant value.</description></item>
-                    /// <item><description>PassThrough: node output.</description></item>
-                    /// <item><description>System: variable.</description></item>
-                    /// <item><description>NodeOutput: script output.</description></item>
+                    /// <item><description><para>Constant: constant value.</para>
+                    /// </description></item>
+                    /// <item><description><para>PassThrough: node output.</para>
+                    /// </description></item>
+                    /// <item><description><para>System: variable.</para>
+                    /// </description></item>
+                    /// <item><description><para>NodeOutput: script output.</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 
@@ -442,10 +460,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Constant: constant value.</description></item>
-                    /// <item><description>PassThrough: node output.</description></item>
-                    /// <item><description>System: variable.</description></item>
-                    /// <item><description>NodeOutput: script output.</description></item>
+                    /// <item><description><para>Constant: constant value.</para>
+                    /// </description></item>
+                    /// <item><description><para>PassThrough: node output.</para>
+                    /// </description></item>
+                    /// <item><description><para>System: variable.</para>
+                    /// </description></item>
+                    /// <item><description><para>NodeOutput: script output.</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>This parameter is required.</para>
                     /// 
@@ -494,9 +516,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>Configuration for whether the task can be rerun.</para>
             /// <list type="bullet">
-            /// <item><description>AllDenied: The task cannot be rerun.</description></item>
-            /// <item><description>FailureAllowed: The task can be rerun only after it fails.</description></item>
-            /// <item><description>AllAllowed: The task can always be rerun.</description></item>
+            /// <item><description><para>AllDenied: The task cannot be rerun.</para>
+            /// </description></item>
+            /// <item><description><para>FailureAllowed: The task can be rerun only after it fails.</para>
+            /// </description></item>
+            /// <item><description><para>AllAllowed: The task can always be rerun.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -638,9 +663,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Pause</description></item>
-                /// <item><description>Skip</description></item>
-                /// <item><description>Normal</description></item>
+                /// <item><description><para>Pause</para>
+                /// </description></item>
+                /// <item><description><para>Skip</para>
+                /// </description></item>
+                /// <item><description><para>Normal</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -654,8 +682,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The trigger type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: periodically triggered</description></item>
-                /// <item><description>Manual</description></item>
+                /// <item><description><para>Scheduler: periodically triggered</para>
+                /// </description></item>
+                /// <item><description><para>Manual</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -721,8 +751,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The trigger type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Scheduler: periodically triggered</description></item>
-            /// <item><description>Manual</description></item>
+            /// <item><description><para>Scheduler: periodically triggered</para>
+            /// </description></item>
+            /// <item><description><para>Manual</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

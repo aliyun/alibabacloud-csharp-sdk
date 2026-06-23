@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The unique identifier of the deployment.</para>
                 /// <remarks>
-                /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// <para>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -109,11 +109,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The deployment status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Init: Initializing</description></item>
-                /// <item><description>Running</description></item>
-                /// <item><description>Success</description></item>
-                /// <item><description>Fail</description></item>
-                /// <item><description>Termination</description></item>
+                /// <item><description><para>Init: Initializing</para>
+                /// </description></item>
+                /// <item><description><para>Running</para>
+                /// </description></item>
+                /// <item><description><para>Success</para>
+                /// </description></item>
+                /// <item><description><para>Fail</para>
+                /// </description></item>
+                /// <item><description><para>Termination</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,10 +131,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The deployment type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Node</description></item>
-                /// <item><description>WorkflowDefinition: Workflow definition.</description></item>
-                /// <item><description>Resource</description></item>
-                /// <item><description>Function: The object is a function.</description></item>
+                /// <item><description><para>Node</para>
+                /// </description></item>
+                /// <item><description><para>WorkflowDefinition: Workflow definition.</para>
+                /// </description></item>
+                /// <item><description><para>Resource</para>
+                /// </description></item>
+                /// <item><description><para>Function: The object is a function.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

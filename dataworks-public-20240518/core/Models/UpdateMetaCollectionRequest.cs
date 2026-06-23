@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> Administrators { get; set; }
 
         /// <summary>
+        /// <para>Updated collection description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>new comment</para>
         /// </summary>
@@ -29,13 +31,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>category.123</para>
+        /// <para>as78d756asd</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>Updated collection name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>new_name</para>
         /// </summary>

@@ -73,6 +73,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>质量校验任务</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

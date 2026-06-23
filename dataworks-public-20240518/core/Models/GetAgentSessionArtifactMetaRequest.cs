@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetAgentSessionArtifactMetaRequest : TeaModel {
         /// <summary>
+        /// <para>A client-provided ID that is echoed in the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>900335678024</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The JSON-RPC version. The value is <c>2.0</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Jsonrpc { get; set; }
 
+        /// <summary>
+        /// <para>The container for business parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public GetAgentSessionArtifactMetaRequestParams Params { get; set; }
         public class GetAgentSessionArtifactMetaRequestParams : TeaModel {
             /// <summary>
+            /// <para>The path of the artifact.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mock/mock_report.md</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ArtifactPath { get; set; }
 
             /// <summary>
+            /// <para>The ID of the session.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sess_0f12abc34</para>
             /// </summary>

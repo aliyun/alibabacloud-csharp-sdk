@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The collection ID returned after a successful creation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>category.123</para>
+        /// <para>4as3dasf654a</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

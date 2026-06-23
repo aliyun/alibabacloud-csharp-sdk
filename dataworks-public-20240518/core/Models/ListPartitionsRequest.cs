@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort order. Default: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: Ascending order.</description></item>
-        /// <item><description>Desc: Descending order.</description></item>
+        /// <item><description><para>Asc: Ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>Desc: Descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,11 +58,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort field. Default value: CreateTime. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime: Creation time. Supported only for MaxCompute tables.</description></item>
-        /// <item><description>ModifyTime: Modification time. Supported only for MaxCompute tables.</description></item>
-        /// <item><description>Name: Name. Used for HMS-type tables.</description></item>
-        /// <item><description>RecordCount: Record count. Supported only for MaxCompute tables.</description></item>
-        /// <item><description>DataSize: Storage size. Supported only for MaxCompute tables.</description></item>
+        /// <item><description><para>CreateTime: Creation time. Supported only for MaxCompute tables.</para>
+        /// </description></item>
+        /// <item><description><para>ModifyTime: Modification time. Supported only for MaxCompute tables.</para>
+        /// </description></item>
+        /// <item><description><para>Name: Name. Used for HMS-type tables.</para>
+        /// </description></item>
+        /// <item><description><para>RecordCount: Record count. Supported only for MaxCompute tables.</para>
+        /// </description></item>
+        /// <item><description><para>DataSize: Storage size. Supported only for MaxCompute tables.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-column:11075xxxx::test_project:test_schema:test_table</para>
+        /// <para>maxcompute-table:::project_name:[schema_name]:table_name</para>
         /// </summary>
         [NameInMap("TableId")]
         [Validation(Required=false)]

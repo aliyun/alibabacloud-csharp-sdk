@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityEvaluationTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the data quality monitoring task. Fuzzy match is supported.</para>
+        /// <para>The name used to fuzzy match data quality check task names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number for the paging query. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The page size for the paging query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table in Data Map.</para>
+        /// <para>The unique ID of the table in Data Map.</para>
         /// 
         /// <b>Example:</b>
         /// <para>odps.unit_test.tb_unit_test</para>

@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic parsing for the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter corresponds to the Analyze Code setting in Properties &gt; Dependencies for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
         /// 
@@ -91,18 +93,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The cron expression for scheduled execution. This parameter corresponds to the Cron Expression setting in Scheduling &gt; Scheduling Time for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>. After you configure Scheduling Cycle and Scheduled Time, DataWorks automatically generates a cron expression.</para>
         /// <para>Examples:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled at 05:30 every day: <c>00 30 05 * * ?</c></description></item>
-        /// <item><description>Scheduled at the 15th minute of every hour: <c>00 15 * * * ?</c></description></item>
-        /// <item><description>Scheduled every 10 minutes: <c>00 00/10 * * * ?</c></description></item>
-        /// <item><description>Scheduled every 10 minutes between 08:00 and 23:00 every day: <c>00 00-59/10 8-23 * * * ?</c></description></item>
-        /// <item><description>Scheduled at 00:20 on the 1st day of every month: <c>00 20 00 1 * ?</c></description></item>
-        /// <item><description>Scheduled every 3 months starting from 00:10 on January 1: <c>00 10 00 1 1-12/3 ?</c></description></item>
-        /// <item><description>Scheduled at 00:05 on every Tuesday and Friday: <c>00 05 00 * * 2,5</c></description></item>
+        /// <item><description><para>Scheduled at 05:30 every day: <c>00 30 05 * * ?</c></para>
+        /// </description></item>
+        /// <item><description><para>Scheduled at the 15th minute of every hour: <c>00 15 * * * ?</c></para>
+        /// </description></item>
+        /// <item><description><para>Scheduled every 10 minutes: <c>00 00/10 * * * ?</c></para>
+        /// </description></item>
+        /// <item><description><para>Scheduled every 10 minutes between 08:00 and 23:00 every day: <c>00 00-59/10 8-23 * * * ?</c></para>
+        /// </description></item>
+        /// <item><description><para>Scheduled at 00:20 on the 1st day of every month: <c>00 20 00 1 * ?</c></para>
+        /// </description></item>
+        /// <item><description><para>Scheduled every 3 months starting from 00:10 on January 1: <c>00 10 00 1 1-12/3 ?</c></para>
+        /// </description></item>
+        /// <item><description><para>Scheduled at 00:05 on every Tuesday and Friday: <c>00 05 00 * * 2,5</c></para>
+        /// </description></item>
         /// </list>
         /// <para>Due to the rules of the DataWorks scheduling system, cron expressions have the following restrictions:</para>
         /// <list type="bullet">
-        /// <item><description>The minimum scheduling interval is 5 minutes.</description></item>
-        /// <item><description>The earliest scheduling time each day is 00:05.</description></item>
+        /// <item><description><para>The minimum scheduling interval is 5 minutes.</para>
+        /// </description></item>
+        /// <item><description><para>The earliest scheduling time each day is 00:05.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,10 +148,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The dependency mode on the previous cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SELF: Depends on the current node.</description></item>
-        /// <item><description>CHILD: Depends on the child nodes.</description></item>
-        /// <item><description>USER_DEFINE: Depends on other nodes.</description></item>
-        /// <item><description>NONE: No dependencies. Does not depend on the previous cycle.</description></item>
+        /// <item><description><para>SELF: Depends on the current node.</para>
+        /// </description></item>
+        /// <item><description><para>CHILD: Depends on the child nodes.</para>
+        /// </description></item>
+        /// <item><description><para>USER_DEFINE: Depends on other nodes.</para>
+        /// </description></item>
+        /// <item><description><para>NONE: No dependencies. Does not depend on the previous cycle.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -314,17 +329,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The rerun policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</description></item>
-        /// <item><description>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</description></item>
-        /// <item><description>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</description></item>
+        /// <item><description><para>ALL_ALLOWED: Reruns are allowed regardless of whether the task succeeds or fails.</para>
+        /// </description></item>
+        /// <item><description><para>FAILURE_ALLOWED: Reruns are allowed only when the task fails.</para>
+        /// </description></item>
+        /// <item><description><para>ALL_DENIED: Reruns are not allowed regardless of whether the task succeeds or fails.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter corresponds to the Support for Rerun setting in Scheduling &gt; Scheduling Policies for Data Studio tasks in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALL_ALLOWD</description></item>
-        /// <item><description>FAILURE_ALLOWED</description></item>
-        /// <item><description>ALL_DENIED</description></item>
-        /// <item><description>ALL_ALLOWED</description></item>
+        /// <item><description><para>ALL_ALLOWD</para>
+        /// </description></item>
+        /// <item><description><para>FAILURE_ALLOWED</para>
+        /// </description></item>
+        /// <item><description><para>ALL_DENIED</para>
+        /// </description></item>
+        /// <item><description><para>ALL_ALLOWED</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -347,10 +369,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The scheduling type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: Normal scheduled task.</description></item>
-        /// <item><description>MANUAL: Manually triggered node. Not scheduled for daily execution. Corresponds to nodes in manually triggered workflows.</description></item>
-        /// <item><description>PAUSE: Paused task.</description></item>
-        /// <item><description>SKIP: Dry-run task. Scheduled for daily execution but is directly marked as successful when scheduling starts.</description></item>
+        /// <item><description><para>NORMAL: Normal scheduled task.</para>
+        /// </description></item>
+        /// <item><description><para>MANUAL: Manually triggered node. Not scheduled for daily execution. Corresponds to nodes in manually triggered workflows.</para>
+        /// </description></item>
+        /// <item><description><para>PAUSE: Paused task.</para>
+        /// </description></item>
+        /// <item><description><para>SKIP: Dry-run task. Scheduled for daily execution but is directly marked as successful when scheduling starts.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -374,8 +400,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to start the task immediately after it is published. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Start the task immediately after it is published.</description></item>
-        /// <item><description>false: Do not start the task immediately after it is published.</description></item>
+        /// <item><description><para>true: Start the task immediately after it is published.</para>
+        /// </description></item>
+        /// <item><description><para>false: Do not start the task immediately after it is published.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter corresponds to the Start Method setting in Configuration &gt; Scheduling Policies in the right-side navigation pane on the editing page for EMR Spark Streaming and EMR Streaming SQL tasks in Data Studio in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
         /// 
@@ -389,8 +417,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to skip execution. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter corresponds to the Skip Execution option in Properties &gt; Schedule &gt; Recurrence for data development nodes in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
         /// 

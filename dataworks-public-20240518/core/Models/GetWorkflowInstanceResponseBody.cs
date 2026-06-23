@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The environment of the workspace. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Prod</description></item>
-            /// <item><description>Dev</description></item>
+            /// <item><description><para>Prod</para>
+            /// </description></item>
+            /// <item><description><para>Dev</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,14 +155,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The status of the workflow instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NotRun: The instance is not run.</description></item>
-            /// <item><description>Running: The instance is running.</description></item>
-            /// <item><description>WaitTime: The instance is waiting for the scheduling time to arrive.</description></item>
-            /// <item><description>CheckingCondition: Branch conditions are being checked for the instance.</description></item>
-            /// <item><description>WaitResource: The instance is waiting for resources.</description></item>
-            /// <item><description>Failure: The instance fails to be run.</description></item>
-            /// <item><description>Success: The instance is successfully run.</description></item>
-            /// <item><description>Checking: Data quality is being checked for the instance.</description></item>
+            /// <item><description><para>NotRun: The instance is not run.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The instance is running.</para>
+            /// </description></item>
+            /// <item><description><para>WaitTime: The instance is waiting for the scheduling time to arrive.</para>
+            /// </description></item>
+            /// <item><description><para>CheckingCondition: Branch conditions are being checked for the instance.</para>
+            /// </description></item>
+            /// <item><description><para>WaitResource: The instance is waiting for resources.</para>
+            /// </description></item>
+            /// <item><description><para>Failure: The instance fails to be run.</para>
+            /// </description></item>
+            /// <item><description><para>Success: The instance is successfully run.</para>
+            /// </description></item>
+            /// <item><description><para>Checking: Data quality is being checked for the instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,12 +212,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the workflow instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: Scheduled execution</description></item>
-            /// <item><description>Manual: Manually triggered node</description></item>
-            /// <item><description>SmokeTest: Testing</description></item>
-            /// <item><description>SupplementData: Data backfill</description></item>
-            /// <item><description>ManualWorkflow: Manually triggered workflow</description></item>
-            /// <item><description>TriggerWorkflow: Triggered Workflow</description></item>
+            /// <item><description><para>Normal: Scheduled execution</para>
+            /// </description></item>
+            /// <item><description><para>Manual: Manually triggered node</para>
+            /// </description></item>
+            /// <item><description><para>SmokeTest: Testing</para>
+            /// </description></item>
+            /// <item><description><para>SupplementData: Data backfill</para>
+            /// </description></item>
+            /// <item><description><para>ManualWorkflow: Manually triggered workflow</para>
+            /// </description></item>
+            /// <item><description><para>TriggerWorkflow: Triggered Workflow</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -218,6 +234,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The unified pipeline instance ID. For all pipeline instances triggered under the same data timestamp in a single trigger, this field value is identical.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234</para>
             /// </summary>
@@ -237,6 +255,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             /// <summary>
             /// <para>The workflow parameters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>周期工作流：
+            /// key1=value1 key2=value2
+            /// 手动业务流程：
+            /// {&quot;key1&quot;:&quot;value1&quot;, &quot;key2&quot;: &quot;value2&quot;}</para>
             /// </summary>
             [NameInMap("WorkflowParameters")]
             [Validation(Required=false)]

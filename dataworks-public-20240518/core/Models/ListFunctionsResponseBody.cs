@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The database name. This parameter is used only when the function type is EMR Function.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>odps_first</para>
+                /// <para>EMR_lake</para>
                 /// </summary>
                 [NameInMap("DatabaseName")]
                 [Validation(Required=false)]
@@ -126,11 +126,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The nested code type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Python2</description></item>
-                /// <item><description>Python3</description></item>
-                /// <item><description>Java8</description></item>
-                /// <item><description>Java11</description></item>
-                /// <item><description>Java17</description></item>
+                /// <item><description><para>Python2</para>
+                /// </description></item>
+                /// <item><description><para>Python3</para>
+                /// </description></item>
+                /// <item><description><para>Java8</para>
+                /// </description></item>
+                /// <item><description><para>Java11</para>
+                /// </description></item>
+                /// <item><description><para>Java17</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,8 +149,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The nested resource type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>File: General resource file.</description></item>
-                /// <item><description>Embedded: Embedded resource.</description></item>
+                /// <item><description><para>File: General resource file.</para>
+                /// </description></item>
+                /// <item><description><para>Embedded: Embedded resource.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -179,7 +186,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The unique identifier of the UDF.</para>
                 /// <remarks>
-                /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// <para>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -279,7 +286,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The ID of the script.</para>
                     /// <remarks>
-                    /// <para> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// <para>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. However, compilation failures may occur due to the type change only when upgrading the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -324,16 +331,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The UDF type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Math: Mathematical operation functions</description></item>
-                /// <item><description>Aggregate: Aggregation functions</description></item>
-                /// <item><description>String: String processing functions</description></item>
-                /// <item><description>Date: Date functions</description></item>
-                /// <item><description>Analytic: Window functions</description></item>
-                /// <item><description>Other: Other functions</description></item>
+                /// <item><description><para>Math: Mathematical operation functions</para>
+                /// </description></item>
+                /// <item><description><para>Aggregate: Aggregation functions</para>
+                /// </description></item>
+                /// <item><description><para>String: String processing functions</para>
+                /// </description></item>
+                /// <item><description><para>Date: Date functions</para>
+                /// </description></item>
+                /// <item><description><para>Analytic: Window functions</para>
+                /// </description></item>
+                /// <item><description><para>Other: Other functions</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>MATH</para>
+                /// <para>Math</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

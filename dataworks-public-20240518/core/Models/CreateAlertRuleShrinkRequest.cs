@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>279114181716147735</para>
+        /// <para>279114181****</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]

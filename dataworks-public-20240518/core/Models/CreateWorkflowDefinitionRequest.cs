@@ -56,7 +56,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         ///                     &quot;failureStrategy&quot;: &quot;Break&quot;
         ///                 },
         ///                 &quot;name&quot;: &quot;OpenAPITestWorkflowDemo&quot;,
-        ///                 &quot;inputs&quot;: {},
         ///                 &quot;outputs&quot;: {
         ///                     &quot;nodeOutputs&quot;: [
         ///                         {
@@ -66,7 +65,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         ///                         }
         ///                     ]
         ///                 },
-        ///                 &quot;nodes&quot;: [],
         ///                 &quot;dependencies&quot;: []
         ///             }
         ///         ]

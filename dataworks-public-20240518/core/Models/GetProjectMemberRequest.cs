@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetProjectMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks Workspace. You can sign in to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks Console</a> and go to the Workspace Management page to obtain the Workspace ID.</para>
+        /// <para>This parameter is used to identify the DataWorks workspace that you want to access.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +22,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account used by the member in the workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the ID of the account used by the member in the workspace.</para>
+        /// <para>The ID of the user. To find the ID, sign in to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks Console</a>, go to the Management Center, select the target Workspace, and open the Tenant Members and Roles page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123422344899</para>
+        /// <para>123422****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]

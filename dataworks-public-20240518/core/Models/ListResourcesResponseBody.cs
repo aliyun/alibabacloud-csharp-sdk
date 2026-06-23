@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The unique identifier of the file resource.</para>
                 /// <remarks>
-                /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                /// <para>Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The ID of the script.</para>
                     /// <remarks>
-                    /// <para> This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+                    /// <para>This field is of type Long in SDK versions prior to 8.0.0, and of type String in SDK version 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -200,12 +200,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The source storage type of the file resource.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Local</description></item>
-                /// <item><description>OSS</description></item>
+                /// <item><description><para>Local</para>
+                /// </description></item>
+                /// <item><description><para>OSS</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>local</para>
+                /// <para>Local</para>
                 /// </summary>
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
@@ -225,13 +227,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The destination storage type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Gateway</description></item>
-                /// <item><description>OSS</description></item>
-                /// <item><description>HDFS</description></item>
+                /// <item><description><para>Gateway</para>
+                /// </description></item>
+                /// <item><description><para>OSS</para>
+                /// </description></item>
+                /// <item><description><para>HDFS</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>oss</para>
+                /// <para>Oss</para>
                 /// </summary>
                 [NameInMap("TargetType")]
                 [Validation(Required=false)]
@@ -241,14 +246,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The resource type.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Python</description></item>
-                /// <item><description>Jar</description></item>
-                /// <item><description>Archive</description></item>
-                /// <item><description>File</description></item>
+                /// <item><description><para>Python</para>
+                /// </description></item>
+                /// <item><description><para>Jar</para>
+                /// </description></item>
+                /// <item><description><para>Archive</para>
+                /// </description></item>
+                /// <item><description><para>File</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>jar</para>
+                /// <para>Jar</para>
                 /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]

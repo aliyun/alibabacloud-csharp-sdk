@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The description of the alert rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the alert rule.</para>
+        /// <para>Alert rule description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -65,11 +65,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The metric type in the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Heartbeat</description></item>
-        /// <item><description>FailoverCount</description></item>
-        /// <item><description>Delay</description></item>
-        /// <item><description>DdlReport</description></item>
-        /// <item><description>ResourceUtilization</description></item>
+        /// <item><description><para>Heartbeat</para>
+        /// </description></item>
+        /// <item><description><para>FailoverCount</para>
+        /// </description></item>
+        /// <item><description><para>Delay</para>
+        /// </description></item>
+        /// <item><description><para>DdlReport</para>
+        /// </description></item>
+        /// <item><description><para>ResourceUtilization</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,10 +134,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The alert notification method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Mail</description></item>
-                /// <item><description>Phone</description></item>
-                /// <item><description>Sms</description></item>
-                /// <item><description>Ding</description></item>
+                /// <item><description><para>Mail</para>
+                /// </description></item>
+                /// <item><description><para>Phone</para>
+                /// </description></item>
+                /// <item><description><para>Sms</para>
+                /// </description></item>
+                /// <item><description><para>Ding</para>
+                /// </description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("Channels")]
@@ -142,8 +151,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The severity level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Warning</description></item>
-                /// <item><description>Critical</description></item>
+                /// <item><description><para>Warning</para>
+                /// </description></item>
+                /// <item><description><para>Critical</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -175,8 +186,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The recipient.</para>
                 /// <list type="bullet">
-                /// <item><description>If the ReceiverType parameter is set to AliyunUid, set this parameter to the Alibaba Cloud account ID of a user.</description></item>
-                /// <item><description>If the ReceiverType parameter is set to DingToken, set this parameter to the token of a DingTalk chatbot.</description></item>
+                /// <item><description><para>If the ReceiverType parameter is set to AliyunUid, set this parameter to the Alibaba Cloud account ID of a user.</para>
+                /// </description></item>
+                /// <item><description><para>If the ReceiverType parameter is set to DingToken, set this parameter to the token of a DingTalk chatbot.</para>
+                /// </description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("ReceiverValues")]
@@ -224,8 +237,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The severity level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Warning</description></item>
-            /// <item><description>Critical</description></item>
+            /// <item><description><para>Warning</para>
+            /// </description></item>
+            /// <item><description><para>Critical</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -238,9 +253,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The alert threshold.</para>
             /// <list type="bullet">
-            /// <item><description>If the alert rule is for task status, you do not need to specify a threshold.</description></item>
-            /// <item><description>If the alert rule is for failovers, you must specify the number of failovers.</description></item>
-            /// <item><description>If the alert rule is for latency, you must specify the latency duration, in seconds.</description></item>
+            /// <item><description><para>If the alert rule is for task status, you do not need to specify a threshold.</para>
+            /// </description></item>
+            /// <item><description><para>If the alert rule is for failovers, you must specify the number of failovers.</para>
+            /// </description></item>
+            /// <item><description><para>If the alert rule is for latency, you must specify the latency duration, in seconds.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

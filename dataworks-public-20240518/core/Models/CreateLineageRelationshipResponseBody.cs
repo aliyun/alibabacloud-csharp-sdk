@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateLineageRelationshipResponseBody : TeaModel {
         /// <summary>
-        /// <para>The lineage ID.</para>
+        /// <para>The lineage relationship ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</para>
+        /// <para>4as3dasf654a</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID. The unique identifier of a request.</para>
+        /// <para>The request ID. A unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C99E2BE6-9DEA-5C2E-8F51-1DDCFEADE490</para>

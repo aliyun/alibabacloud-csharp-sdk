@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>135123</para>
         /// </summary>
         [NameInMap("DataSourceId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The ID of the workspace to which the data source is shared. You cannot share the data source to the workspace with which the data source is associated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>106565</para>
         /// </summary>
         [NameInMap("TargetProjectId")]
         [Validation(Required=false)]

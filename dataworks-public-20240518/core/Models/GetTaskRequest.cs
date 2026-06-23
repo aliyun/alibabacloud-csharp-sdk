@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description><para>Prod: production environment</para>
+        /// </description></item>
+        /// <item><description><para>Dev: development environment</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -41,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public DataQualityRuleCheckingConfigThresholdsCritical Critical { get; set; }
                 public class DataQualityRuleCheckingConfigThresholdsCritical : TeaModel {
                     /// <summary>
+                    /// <para>校验表达式</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</para>
                     /// </summary>
@@ -87,6 +89,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public DataQualityRuleCheckingConfigThresholdsExpected Expected { get; set; }
                 public class DataQualityRuleCheckingConfigThresholdsExpected : TeaModel {
                     /// <summary>
+                    /// <para>阈值表达式</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</para>
                     /// </summary>
@@ -133,6 +137,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public DataQualityRuleCheckingConfigThresholdsWarned Warned { get; set; }
                 public class DataQualityRuleCheckingConfigThresholdsWarned : TeaModel {
                     /// <summary>
+                    /// <para>阈值表达式</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>波动率类型规则使用，通过表达式来表示波动阈值。如：波动上升大于0.01： $checkValue &gt; 0.01  波动下降大于0.01：$checkValue &lt; -0.01   波动率绝对值：abs($checkValue) &gt; 0.01</para>
                     /// </summary>
@@ -257,6 +263,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>The rule name. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>表不能为空</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

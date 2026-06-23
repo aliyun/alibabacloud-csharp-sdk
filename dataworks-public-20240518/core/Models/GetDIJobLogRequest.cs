@@ -55,8 +55,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the node. This parameter is applicable only to the tasks that are run on serverless resource groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MASTER</b>: the master node, which is used to query the logs of JobManagers.</description></item>
-        /// <item><description><b>WORKER</b>: the worker node, which is used to query the logs of TaskManagers.</description></item>
+        /// <item><description><para><b>MASTER</b>: the master node, which is used to query the logs of JobManagers.</para>
+        /// </description></item>
+        /// <item><description><para><b>WORKER</b>: the worker node, which is used to query the logs of TaskManagers.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

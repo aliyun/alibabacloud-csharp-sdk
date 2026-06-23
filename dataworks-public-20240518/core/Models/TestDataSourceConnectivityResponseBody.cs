@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public class TestDataSourceConnectivityResponseBodyConnectivity : TeaModel {
             /// <summary>
             /// <para>The error message returned if the connectivity test fails. No such a message is returned if the connectivity test is successful.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>连接数据库失败</para>
             /// </summary>
             [NameInMap("ConnectMessage")]
             [Validation(Required=false)]
@@ -62,6 +65,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The name of the step.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Validate input parameters</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]

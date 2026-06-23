@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>300000</para>
+        /// <para>300001</para>
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>MyBusiness</para>
+        /// <para>firstBusiness</para>
         /// </summary>
         [NameInMap("BusinessName")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The description of the workflow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>modified from my first business</para>
+        /// <para>modified from first business</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the owner.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>348428****</para>
+        /// <para>34842****</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to obtain the workspace ID. You must configure either this parameter or the <c>ProjectIdentifier</c> parameter to determine the DataWorks workspace to which the operation is applied.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("ProjectId")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to obtain the name. You must configure either this parameter or the <c>ProjectId</c> parameter to determine the DataWorks workspace to which the operation is applied.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dw_project</para>
+        /// <para>project_dw</para>
         /// </summary>
         [NameInMap("ProjectIdentifier")]
         [Validation(Required=false)]

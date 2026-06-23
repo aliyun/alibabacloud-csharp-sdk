@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetFileVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the file version.</para>
+        /// <para>Version details of the file.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFileVersionResponseBodyData Data { get; set; }
         public class GetFileVersionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The type of the change to the file of the current version. Valid values: CREATE, UPDATE, and DELETE.</para>
+            /// <para>The change type of this file version, including CREATE, UPDATE, and DELETE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATE</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ChangeType { get; set; }
 
             /// <summary>
-            /// <para>The description of the file version.</para>
+            /// <para>Description of this file version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Second version submission</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the file version was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>UNIX timestamp (in milliseconds) when the file version was generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1593881265000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CommitTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to generate the file of the current version.</para>
+            /// <para>User ID of the Alibaba Cloud user who generated this file version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7384234****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CommitUser { get; set; }
 
             /// <summary>
-            /// <para>The code in the file of the current version.</para>
+            /// <para>The code of the file for this version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SHOW TABLES;</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string FileContent { get; set; }
 
             /// <summary>
-            /// <para>The name of the file of the current version.</para>
+            /// <para>File name used to generate this file version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ods_user_info_d</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The basic information about the file of the current version.</para>
+            /// <para>Basic information of the file used to generate this file version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;fileName&quot;:&quot;ods_user_info_d&quot;,&quot;fileType&quot;:10}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string FilePropertyContent { get; set; }
 
             /// <summary>
-            /// <para>The file version.</para>
+            /// <para>The version of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -97,10 +97,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? FileVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the version is the latest version in the production environment. Valid values:</para>
+            /// <para>Indicates whether this file version is the latest version in the current production environment.</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: It is the latest version.</para>
+            /// </description></item>
+            /// <item><description><para>false: It is not the latest version.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public bool? IsCurrentProd { get; set; }
 
             /// <summary>
-            /// <para>The scheduling configurations of the node that corresponds to the file of the current version.</para>
+            /// <para>The scan configuration at the time this file version was generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;cycleType&quot;:0,&quot;cronExpress&quot;:&quot;00 05 00 * * ?&quot;}</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string NodeContent { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node that corresponds to the file version.</para>
+            /// <para>The ID of the scheduling task corresponding to the generation of this file version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3000001</para>
@@ -131,14 +133,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? NodeId { get; set; }
 
             /// <summary>
-            /// <para>The status of the file version. Valid values:</para>
+            /// <para>Current status of the file version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>COMMITTING</description></item>
-            /// <item><description>COMMITTED or CHECK_OK</description></item>
-            /// <item><description>PACKAGED</description></item>
-            /// <item><description>DEPLOYING</description></item>
-            /// <item><description>DEPLOYED</description></item>
-            /// <item><description>CANCELLED</description></item>
+            /// <item><description><para>COMMITTING (Submitting)</para>
+            /// </description></item>
+            /// <item><description><para>COMMITTED or CHECK_OK (Submitted)</para>
+            /// </description></item>
+            /// <item><description><para>PACKAGED (Preparing for publish)</para>
+            /// </description></item>
+            /// <item><description><para>DEPLOYING (In Publish)</para>
+            /// </description></item>
+            /// <item><description><para>DEPLOYED (Published)</para>
+            /// </description></item>
+            /// <item><description><para>CANCELLED (Publish canceled)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -149,14 +157,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The module to which the file belongs. Valid values:</para>
+            /// <para>Function module to which the file belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: NORMAL, which indicates that the file is used for DataStudio.</description></item>
-            /// <item><description>1: MANUAL, which indicates that the file is used for a manually triggered node.</description></item>
-            /// <item><description>2: MANUAL_BIZ, which indicates that the file is used for a manually triggered workflow.</description></item>
-            /// <item><description>3: SKIP, which indicates that the file is used for a dry-run node in DataStudio.</description></item>
-            /// <item><description>10: ADHOCQUERY, which indicates that the file is used for an ad hoc query.</description></item>
-            /// <item><description>30: COMPONENT, which indicates that the file is used for a script template.</description></item>
+            /// <item><description><para>0: NORMAL (Data Development)</para>
+            /// </description></item>
+            /// <item><description><para>1: MANUAL (one-time task)</para>
+            /// </description></item>
+            /// <item><description><para>2: MANUAL_BIZ (manual pipeline)</para>
+            /// </description></item>
+            /// <item><description><para>3: SKIP (Dry-Run scheduling in Data Development)</para>
+            /// </description></item>
+            /// <item><description><para>10: ADHOCQUERY (Ad Hoc Query)</para>
+            /// </description></item>
+            /// <item><description><para>30: COMPONENT (widget Management)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -189,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -199,7 +213,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of this request. If an error occurs, you can troubleshoot the issue using this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -209,10 +223,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the API call succeeded.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

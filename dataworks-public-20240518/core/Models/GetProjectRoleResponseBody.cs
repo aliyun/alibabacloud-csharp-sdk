@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetProjectRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The role in the DataWorks workspace.</para>
+        /// <para>The details of the workspace role.</para>
         /// </summary>
         [NameInMap("ProjectRole")]
         [Validation(Required=false)]
         public GetProjectRoleResponseBodyProjectRole ProjectRole { get; set; }
         public class GetProjectRoleResponseBodyProjectRole : TeaModel {
             /// <summary>
-            /// <para>The code of the role in the DataWorks workspace.</para>
+            /// <para>The code of the workspace role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>role_project_guest</para>
@@ -26,11 +26,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            /// <summary>
+            /// <para>The permissions for the modules in the workspace.</para>
+            /// </summary>
             [NameInMap("ModulePermissions")]
             [Validation(Required=false)]
             public List<GetProjectRoleResponseBodyProjectRoleModulePermissions> ModulePermissions { get; set; }
             public class GetProjectRoleResponseBodyProjectRoleModulePermissions : TeaModel {
                 /// <summary>
+                /// <para>The module ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -39,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ModuleId { get; set; }
 
                 /// <summary>
+                /// <para>The module name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HoloStudio</para>
                 /// </summary>
@@ -47,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string ModuleName { get; set; }
 
                 /// <summary>
+                /// <para>The permission type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Read</para>
                 /// </summary>
@@ -57,7 +66,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The name of the role in the DataWorks workspace.</para>
+            /// <para>The name of the workspace role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Visitors</para>
@@ -67,7 +76,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The DataWorks workspace ID.</para>
+            /// <para>The ID of the DataWorks workspace.</para>
+            /// <para>Note: A fixed value of -1 is returned for a system role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10002</para>
@@ -77,10 +87,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The type of the role in the DataWorks workspace. Valid values:</para>
+            /// <para>The type of the workspace role. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>UserCustom: user-defined role</description></item>
-            /// <item><description>System: system role</description></item>
+            /// <item><description><para>UserCustom: a custom role</para>
+            /// </description></item>
+            /// <item><description><para>System: a system role</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

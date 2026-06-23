@@ -25,8 +25,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not perform the forcible rerun operation.</para>
         /// <list type="bullet">
-        /// <item><description>If the system does not perform the forcible rerun operation, only the steps that are not run start to run.</description></item>
-        /// <item><description>If the system performs the forcible rerun operation, all steps start to rerun.</description></item>
+        /// <item><description><para>If the system does not perform the forcible rerun operation, only the steps that are not run start to run.</para>
+        /// </description></item>
+        /// <item><description><para>If the system performs the forcible rerun operation, all steps start to rerun.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

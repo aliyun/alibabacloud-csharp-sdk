@@ -1,3 +1,8 @@
+2026-06-23 Version: 5.8.2
+- Update API ApproveProcessInstance: add request parameters NewExpiration.
+- Update API CreateAgentSession: add request parameters Params.Meta.InitialConfigOptions.
+
+
 2026-06-09 Version: 5.8.1
 - Generated csharp 2024-05-18 for dataworks-public.
 

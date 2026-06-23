@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetParameterResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the parameter.</para>
+        /// </summary>
         [NameInMap("Parameter")]
         [Validation(Required=false)]
         public GetParameterResponseBodyParameter Parameter { get; set; }
         public class GetParameterResponseBodyParameter : TeaModel {
             /// <summary>
+            /// <para>The time when the parameter was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1640000000000</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The creator of the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
             /// </summary>
@@ -30,14 +37,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string CreateUser { get; set; }
 
             /// <summary>
+            /// <para>The description of the parameter.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>这是一个测试参数</para>
+            /// <para>This is a test parameter.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ID of the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12345</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The time when the parameter was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1640000000000</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The modifier of the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ModifyUser { get; set; }
 
             /// <summary>
+            /// <para>The name of the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workspace.para</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The owner of the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>The ID of the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -85,11 +106,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public long? ProjectId { get; set; }
 
+            /// <summary>
+            /// <para>The value configurations of the parameter.</para>
+            /// </summary>
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public List<GetParameterResponseBodyParameterProperties> Properties { get; set; }
             public class GetParameterResponseBodyParameterProperties : TeaModel {
                 /// <summary>
+                /// <para>The project environment. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>Prod</c>: production.</para>
+                /// </description></item>
+                /// <item><description><para><c>Dev</c>: development.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Prod</para>
                 /// </summary>
@@ -98,6 +130,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string EnvType { get; set; }
 
                 /// <summary>
+                /// <para>The value of the parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>value123</para>
                 /// </summary>
@@ -108,6 +142,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
+            /// <para>The scope of the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Project</para>
             /// </summary>
@@ -116,6 +152,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Scope { get; set; }
 
             /// <summary>
+            /// <para>The type of the parameter. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>PlainConstant</c>: a constant in plaintext.</para>
+            /// </description></item>
+            /// <item><description><para><c>SecretConstant</c>: a constant in ciphertext.</para>
+            /// </description></item>
+            /// <item><description><para><c>Variable</c>: a variable.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>PlainConstant</para>
             /// </summary>
@@ -124,6 +170,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The version of the parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -134,6 +182,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6A6CBE87-9F91-1323-B680-E7A7065XXXXX</para>
         /// </summary>

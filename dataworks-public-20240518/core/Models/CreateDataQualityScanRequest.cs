@@ -31,8 +31,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The workspace environment to which the compute engine belongs.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Prod: production environment .</description></item>
-            /// <item><description>Dev: development environment.</description></item>
+            /// <item><description><para>Prod: production environment .</para>
+            /// </description></item>
+            /// <item><description><para>Dev: development environment.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,9 +65,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The type of the compute engine. Only EMR compute engines support these settings.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Hive: Hive SQL</description></item>
-                /// <item><description>Spark: Spark SQL</description></item>
-                /// <item><description>Kyuubi</description></item>
+                /// <item><description><para>Hive: Hive SQL</para>
+                /// </description></item>
+                /// <item><description><para>Spark: Spark SQL</para>
+                /// </description></item>
+                /// <item><description><para>Kyuubi</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -294,8 +299,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The trigger mode of the monitoring task.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ByManual: Manual trigger. This is the default setting.</description></item>
-            /// <item><description>BySchedule: Triggered by a scheduled task instance.</description></item>
+            /// <item><description><para>ByManual: Manual trigger. This is the default setting.</para>
+            /// </description></item>
+            /// <item><description><para>BySchedule: Triggered by a scheduled task instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

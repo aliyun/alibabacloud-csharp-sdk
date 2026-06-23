@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the tag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal</description></item>
-        /// <item><description>System</description></item>
+        /// <item><description><para>Normal</para>
+        /// </description></item>
+        /// <item><description><para>System</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

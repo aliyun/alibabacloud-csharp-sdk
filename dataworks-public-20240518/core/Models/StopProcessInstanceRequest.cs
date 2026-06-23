@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class StopProcessInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>A token to ensure that the request is idempotent. We recommend that you use a universally unique identifier (UUID).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABFUOEUOTRTRJKE</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The process instance ID. This operation supports approval forms from both the old and new versions of Security Center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

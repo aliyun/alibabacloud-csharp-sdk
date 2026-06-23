@@ -65,14 +65,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The resource type. This parameter specifies a filter condition.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Python</description></item>
-        /// <item><description>Jar</description></item>
-        /// <item><description>Archive</description></item>
-        /// <item><description>File</description></item>
+        /// <item><description><para>Python</para>
+        /// </description></item>
+        /// <item><description><para>Jar</para>
+        /// </description></item>
+        /// <item><description><para>Archive</para>
+        /// </description></item>
+        /// <item><description><para>File</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>python</para>
+        /// <para>Python</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

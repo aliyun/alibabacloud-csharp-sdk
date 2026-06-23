@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The check status of the extension for this extension point event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OK: The extension passed the check for this event.</description></item>
-        /// <item><description>FAIL: The extension failed the check for this event. You need to review and resolve the error promptly to avoid affecting subsequent program execution.</description></item>
-        /// <item><description>WARN: The extension passed the check for this event, but with warnings.</description></item>
+        /// <item><description><para>OK: The extension passed the check for this event.</para>
+        /// </description></item>
+        /// <item><description><para>FAIL: The extension failed the check for this event. You need to review and resolve the error promptly to avoid affecting subsequent program execution.</para>
+        /// </description></item>
+        /// <item><description><para>WARN: The extension passed the check for this event, but with warnings.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

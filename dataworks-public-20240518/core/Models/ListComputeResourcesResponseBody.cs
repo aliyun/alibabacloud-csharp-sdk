@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Dev</description></item>
-                    /// <item><description>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</description></item>
+                    /// <item><description><para>Dev</para>
+                    /// </description></item>
+                    /// <item><description><para>Prod Different types of computing resources have different attribute specifications under different configuration modes (ConnectionPropertiesMode).</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetDataQualityEvaluationTaskInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the monitor instance.</para>
+        /// <para>The details of the data quality monitoring instance.</para>
         /// </summary>
         [NameInMap("DataQualityEvaluationTaskInstance")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the instance.</para>
+            /// <para>The end time of the instance execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1716344665000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? FinishTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data quality monitoring instance.</para>
+            /// <para>The data quality monitoring instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7234231689</para>
@@ -47,9 +47,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Data quality verification execution parameters in JSON format. The available keys are as follows:</para>
+            /// <para>The execution parameters for the data quality check, in JSON format. The following keys are available:</para>
             /// <list type="bullet">
-            /// <item><description>triggerTime: the millisecond timestamp of the trigger time. The baseline time of the $[yyyymmdd] expression in the data range of data quality monitoring. Required.</description></item>
+            /// <item><description>triggerTime: the millisecond-level timestamp of the trigger time. This is the base time for the $[yyyymmdd] expression in the data range of the data quality monitoring task. This key is required.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Parameters { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98330</para>
@@ -276,13 +276,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The status of the data quality monitoring instance.</para>
+            /// <para>The instance status of the data quality monitoring task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Running: Verifying</description></item>
-            /// <item><description>Error: A rule verification Error occurred.</description></item>
-            /// <item><description>Passed: all rules are verified</description></item>
-            /// <item><description>Warned: normal alarm threshold triggered by rules</description></item>
-            /// <item><description>Critical: Threshold for serious alerts triggered by rules</description></item>
+            /// <item><description>Running: The check is in progress.</description></item>
+            /// <item><description>Error: A rule check encountered an error.</description></item>
+            /// <item><description>Passed: All rule checks passed.</description></item>
+            /// <item><description>Warned: A rule triggered a normal alert threshold.</description></item>
+            /// <item><description>Critical: A rule triggered a critical alert threshold.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -293,14 +293,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The monitor.</para>
+            /// <para>The data quality monitoring task.</para>
             /// </summary>
             [NameInMap("Task")]
             [Validation(Required=false)]
             public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTask Task { get; set; }
             public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTask : TeaModel {
                 /// <summary>
-                /// <para>The description of the monitor.</para>
+                /// <para>The description of the data quality monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OpenAPI quality monitoring test</para>
@@ -310,17 +310,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The hook.</para>
+                /// <para>The callback settings.</para>
                 /// </summary>
                 [NameInMap("Hooks")]
                 [Validation(Required=false)]
                 public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskHooks> Hooks { get; set; }
                 public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskHooks : TeaModel {
                     /// <summary>
-                    /// <para>The hook trigger condition. When this condition is met, the hook action is triggered. Only two conditional expressions are supported:</para>
+                    /// <para>The cause that triggers the hook action. When this condition is met, the hook action is triggered. Only two types of conditional expressions are supported:</para>
                     /// <list type="bullet">
-                    /// <item><description>Specify only one group of rule strength type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
-                    /// <item><description>Specify multiple groups of rule strength types and rule check status, such as <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
+                    /// <item><description>Specify a single combination of rule severity and rule check status. For example, <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c> means that the condition is met if any rule with a severity of High has a check result of Critical.</description></item>
+                    /// <item><description>Specify multiple combinations of rule severity and rule check status. For example, <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c> means that the condition is met if any rule with a severity of High has a check result of Critical, or any rule with a severity of Normal has a check result of Critical, or any rule with a severity of Normal has a check result of Error. The severity enumeration values in the conditional expression are consistent with the severity enumeration values in DataQualityRule, and the status enumeration values are consistent with the status values in DataQualityResult.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -331,9 +331,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Condition { get; set; }
 
                     /// <summary>
-                    /// <para>Hook type. Currently, only one type is supported:</para>
+                    /// <para>The hook type. Only one type is supported:</para>
                     /// <list type="bullet">
-                    /// <item><description>BlockTaskInstance: the blocking scheduling task continues to run. Data quality monitoring is triggered by the scheduling task. After the data quality monitoring is completed, the Hook.Condition is used to determine whether the blocking scheduling task continues to run.</description></item>
+                    /// <item><description>BlockTaskInstance: Blocks the scheduling node from continuing to run. If the data quality monitoring task is triggered by a scheduling node, after the data quality monitoring task is completed, the system determines whether to block the scheduling node from continuing to run based on Hook.Condition.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the data quality monitor.</para>
+                /// <para>The ID of the data quality monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>28544990</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the monitor.</para>
+                /// <para>The name of the data quality monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Data quality OpenAPI monitoring test</para>
@@ -366,17 +366,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The configurations of alert notifications.</para>
+                /// <para>The notification settings.</para>
                 /// </summary>
                 [NameInMap("Notifications")]
                 [Validation(Required=false)]
                 public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotifications Notifications { get; set; }
                 public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotifications : TeaModel {
                     /// <summary>
-                    /// <para>The notification trigger condition. When this condition is met, the alert notification is triggered. Only two conditional expressions are supported:</para>
+                    /// <para>The cause that triggers a notification. When this condition is met, a message notification is sent. Only two types of conditional expressions are supported:</para>
                     /// <list type="bullet">
-                    /// <item><description>Specify only one group of rule strength type and rule check status, such as <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical.</description></item>
-                    /// <item><description>Specify multiple groups of rule strength types and rule check status, such as <c>(${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c>. In this expression, the hook trigger condition is met if severity is High and status is Critical, severity is Normal and status is Critical, or severity is Normal and status is Error. The enumeration of severity in a conditional expression is the same as the enumeration of severity in DataQualityRule. The enumeration of status in a conditional expression is the same as the enumeration of status in DataQualityResult.</description></item>
+                    /// <item><description>Specify a single combination of rule severity and rule check status. For example, <c>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</c> means that the condition is met if any rule with a severity of High has a check result of Critical. </description></item>
+                    /// <item><description>Specify multiple combinations of rule severity and rule check status. For example, <c>(${severity} == &quot;High&quot;AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Critical&quot;) OR (${severity} == &quot;Normal&quot; AND ${status} == &quot;Error&quot;)</c> means that the condition is met if any rule with a severity of High has a check result of Critical, or any rule with a severity of Normal has a check result of Critical, or any rule with a severity of Normal has a check result of Error. The severity enumeration values in the conditional expression are consistent with the severity enumeration values in DataQualityRule, and the status enumeration values are consistent with the status values in DataQualityResult.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -387,21 +387,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Condition { get; set; }
 
                     /// <summary>
-                    /// <para>The alert notification methods.</para>
+                    /// <para>The alert methods.</para>
                     /// </summary>
                     [NameInMap("Notifications")]
                     [Validation(Required=false)]
                     public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotificationsNotifications> Notifications { get; set; }
                     public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotificationsNotifications : TeaModel {
                         /// <summary>
-                        /// <para>The notification method.</para>
+                        /// <para>The notification channels.</para>
                         /// </summary>
                         [NameInMap("NotificationChannels")]
                         [Validation(Required=false)]
                         public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationChannels> NotificationChannels { get; set; }
                         public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationChannels : TeaModel {
                             /// <summary>
-                            /// <para>The notification method.</para>
+                            /// <para>The notification channels.</para>
                             /// </summary>
                             [NameInMap("Channels")]
                             [Validation(Required=false)]
@@ -410,16 +410,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The value of the receiver.</para>
+                        /// <para>The notification recipients.</para>
                         /// </summary>
                         [NameInMap("NotificationReceivers")]
                         [Validation(Required=false)]
                         public List<GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationReceivers> NotificationReceivers { get; set; }
                         public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskNotificationsNotificationsNotificationReceivers : TeaModel {
                             /// <summary>
-                            /// <para>Additional parameter settings for sending alerts in json format. The supported keys are as follows:</para>
+                            /// <para>The additional parameter settings for sending alerts, in JSON format. The following keys are supported:</para>
                             /// <list type="bullet">
-                            /// <item><description>atAll: when sending DingTalk alerts, do you need to @ everyone in the group. It takes effect when ReceiverType is DingdingUrl.</description></item>
+                            /// <item><description>atAll: Specifies whether to @everyone in the group when sending a DingTalk alert. This parameter takes effect only when ReceiverType is set to DingdingUrl.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -430,7 +430,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Extension { get; set; }
 
                             /// <summary>
-                            /// <para>The type of alert recipient.</para>
+                            /// <para>The type of the alert recipient.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>DingdingUrl</para>
@@ -440,7 +440,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string ReceiverType { get; set; }
 
                             /// <summary>
-                            /// <para>The recipient of the alert.</para>
+                            /// <para>The alert recipients.</para>
                             /// </summary>
                             [NameInMap("ReceiverValues")]
                             [Validation(Required=false)]
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the workspace.</para>
+                /// <para>The workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20629</para>
@@ -463,12 +463,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>Extended configuration, JSON-formatted string, takes effect only for EMR-type data quality monitoring.</para>
+                /// <para>The extension configuration, a JSON-formatted character string. This parameter takes effect only for EMR-type data quality monitoring tasks.</para>
                 /// <list type="bullet">
-                /// <item><description>queue: the yarn queue used when performing EMR data quality verification. The default queue is the queue configured for this project.</description></item>
-                /// <item><description>sqlEngine: SQL engine used when performing EMR data verification<list type="bullet">
-                /// <item><description>HIVE_ SQL</description></item>
-                /// <item><description>SPARK_ SQL</description></item>
+                /// <item><description>queue: The YARN queue used to execute EMR data validation. The default value is the queue configured for the current project.</description></item>
+                /// <item><description>sqlEngine: The SQL engine used to execute EMR data validation. Valid values:<list type="bullet">
+                /// <item><description>HIVE_SQL</description></item>
+                /// <item><description>SPARK_SQL.</description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -481,7 +481,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string RuntimeConf { get; set; }
 
                 /// <summary>
-                /// <para>The monitored object of the monitor.</para>
+                /// <para>The monitored object of the data quality check task. Refer to the DataQualityTarget example.</para>
                 /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DatabaseType { get; set; }
 
                     /// <summary>
-                    /// <para>The partition range monitored.</para>
+                    /// <para>The partition range to monitor.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>pt=$[yyyymmdd-1]</para>
@@ -508,7 +508,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string PartitionSpec { get; set; }
 
                     /// <summary>
-                    /// <para>The unique ID of the table in the data map.</para>
+                    /// <para>The unique ID of the table in DataWorks Data Map.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps.api_trace.ods_d_api_log</para>
@@ -518,9 +518,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string TableGuid { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the monitoring object.</para>
+                    /// <para>The monitored object type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Table: Table</description></item>
+                    /// <item><description>Table: table.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -533,24 +533,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The trigger configuration of the monitor.</para>
+                /// <para>The trigger configuration of the data quality check task.</para>
                 /// </summary>
                 [NameInMap("Trigger")]
                 [Validation(Required=false)]
                 public GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskTrigger Trigger { get; set; }
                 public class GetDataQualityEvaluationTaskInstanceResponseBodyDataQualityEvaluationTaskInstanceTaskTrigger : TeaModel {
                     /// <summary>
-                    /// <para>The Id list of the scheduled task, which is valid when the Type is ByScheduledTaskInstance.</para>
+                    /// <para>The list of scheduling node IDs. This parameter is valid only when Type is set to ByScheduledTaskInstance.</para>
                     /// </summary>
                     [NameInMap("TaskIds")]
                     [Validation(Required=false)]
                     public List<long?> TaskIds { get; set; }
 
                     /// <summary>
-                    /// <para>The trigger type of the monitor. Valid values:</para>
+                    /// <para>The trigger type of the quality monitoring task. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>ByManual (default): The monitor is manually triggered.</description></item>
-                    /// <item><description>ByScheduledTaskInstance: The monitor is triggered by the associated scheduling tasks.</description></item>
+                    /// <item><description>ByManual: Manual trigger. This is the default value.</description></item>
+                    /// <item><description>ByScheduledTaskInstance: Triggered by an associated scheduling node.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -565,10 +565,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The context information when the instance is triggered, in JSON format. The possible keys are as follows:</para>
+            /// <para>The context information when the instance is triggered, in JSON format. The following keys may be included:</para>
             /// <list type="bullet">
-            /// <item><description>TriggerClient: the trigger source of the data quality monitoring instance, such as CWF2 (scheduling system), may be added later.</description></item>
-            /// <item><description>TriggerClientId: associated with a specific business resource in the source system. For example, if TriggerClient is CWF2, the ID of the scheduling task is recorded here.</description></item>
+            /// <item><description>TriggerClient: the trigger source of the data quality monitoring instance, such as CWF2 (scheduling system). More values may be added in the future.</description></item>
+            /// <item><description>TriggerClientId: the ID of a specific business resource in the source system. For example, when TriggerClient is CWF2, this field records the scheduling task ID.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -581,10 +581,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
+        /// <para>The request ID. Used to locate logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8abcb91f-d266-4073-b907-2ed670378ed1</para>
+        /// <para>8abcb91f-d266-4073-b907-2ed67****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

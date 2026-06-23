@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The order in which the tables are sorted. Default value: Asc. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: ascending order.</description></item>
-        /// <item><description>Desc: descending order.</description></item>
+        /// <item><description><para>Asc: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>Desc: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,19 +69,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
         /// <para>Currently, only the DLF and StarRocks types are supported.</para>
         /// <list type="bullet">
-        /// <item><description>For the DLF type, you can query all catalog lists. The format of <c>ParentMetaEntityId</c> is <c>DLF</c>.</description></item>
-        /// <item><description>For the StarRocks type, you can query the catalogs of a specific instance. The format of <c>ParentMetaEntityId</c> <c>is StarRocks:(instance_id|encoded_jdbc_url)</c>.</description></item>
+        /// <item><description><para>For the DLF type, you can query all catalog lists. The format of <c>ParentMetaEntityId</c> is <c>DLF</c>.</para>
+        /// </description></item>
+        /// <item><description><para>For the StarRocks type, you can query the catalogs of a specific instance. The format of <c>ParentMetaEntityId</c> <c>is StarRocks:(instance_id|encoded_jdbc_url)</c>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>\
-        /// <c>instance_id</c>: The instance ID. Required if the data source is registered in instance mode.\
+        /// <para><br><c>instance_id</c>: The instance ID. Required if the data source is registered in instance mode.<br>
         /// <c>encoded_jdbc_url</c>: The JDBC connection string encoded with URL encoding. Required if the data source is registered in connection-string mode.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dlf
-        /// starrocks:c-abc123xxx</para>
+        /// <para>dlf</para>
         /// </summary>
         [NameInMap("ParentMetaEntityId")]
         [Validation(Required=false)]
@@ -88,10 +90,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort field. Default value: CreateTime. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime</description></item>
-        /// <item><description>ModifyTime</description></item>
-        /// <item><description>Name</description></item>
-        /// <item><description>Type</description></item>
+        /// <item><description><para>CreateTime</para>
+        /// </description></item>
+        /// <item><description><para>ModifyTime</para>
+        /// </description></item>
+        /// <item><description><para>Name</para>
+        /// </description></item>
+        /// <item><description><para>Type</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

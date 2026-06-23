@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
     public class Dataset : TeaModel {
         /// <summary>
         /// <para>The description of the dataset. The length cannot exceed 1024 characters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试数据集</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]

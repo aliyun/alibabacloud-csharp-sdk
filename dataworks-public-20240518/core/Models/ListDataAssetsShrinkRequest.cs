@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the data asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ACS::DataWorks::Table</description></item>
-        /// <item><description>ACS::DataWorks::Task</description></item>
+        /// <item><description><para>ACS::DataWorks::Table</para>
+        /// </description></item>
+        /// <item><description><para>ACS::DataWorks::Task</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,8 +35,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment of the workspace to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dev: development environment</description></item>
-        /// <item><description>Prod: production environment</description></item>
+        /// <item><description><para>Dev: development environment</para>
+        /// </description></item>
+        /// <item><description><para>Prod: production environment</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,8 +81,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The tags that are added to data assets. This parameter specifies a filter condition.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c>.</description></item>
-        /// <item><description>If you do not configure this parameter, tag-based filtering is not performed.</description></item>
+        /// <item><description><para>You can specify multiple tags, which are in the logical OR relation. For example, you can query the data assets that contain one of the following tags: <c>[&quot;key1:v1&quot;, &quot;key2:v1&quot;, &quot;key3:v1&quot;]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not configure this parameter, tag-based filtering is not performed.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>

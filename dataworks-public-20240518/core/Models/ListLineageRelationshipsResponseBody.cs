@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListLineageRelationshipsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination result.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListLineageRelationshipsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListLineageRelationshipsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The list of data tables.</para>
+            /// <para>An array of data lineage relationships.</para>
             /// </summary>
             [NameInMap("LineageRelationships")]
             [Validation(Required=false)]
             public List<LineageRelationship> LineageRelationships { get; set; }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The page size.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total count.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID. Used for locating and troubleshooting issues.</para>
+        /// <para>The ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SDFSDFSDF-SDFSDF-SDFDSF-SDFSDF</para>

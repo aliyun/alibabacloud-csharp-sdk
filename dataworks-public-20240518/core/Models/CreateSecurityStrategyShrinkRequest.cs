@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateSecurityStrategyShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>A client-generated token that ensures request idempotency, preventing duplicate operations if you retry the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABFUOEUOTRTRJKE</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The content of the strategy. This value is constrained by the <c>SecurityStrategySchema</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Content")]
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ContentShrink { get; set; }
 
         /// <summary>
+        /// <para><b>The control scope. Valid values: Workspace and Tenant.</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ControlDwScope { get; set; }
 
         /// <summary>
+        /// <para><b>Control module</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,6 +50,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ControlModule { get; set; }
 
         /// <summary>
+        /// <para><b>Control submodule</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>MyCatalog</para>
         /// </summary>
@@ -52,18 +59,29 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string ControlSubModule { get; set; }
 
+        /// <summary>
+        /// <para><b>Strategy description</b></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>控制数据分析模块的查询结果安全行为</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para><b>Strategy name</b></para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>默认数据分析策略</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para><b>Schema template name</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,6 +91,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SchemaName { get; set; }
 
+        /// <summary>
+        /// <para>A list of associated workspace IDs.</para>
+        /// </summary>
         [NameInMap("Workspaces")]
         [Validation(Required=false)]
         public string WorkspacesShrink { get; set; }

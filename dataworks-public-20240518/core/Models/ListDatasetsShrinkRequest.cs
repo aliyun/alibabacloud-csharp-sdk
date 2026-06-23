@@ -22,13 +22,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The data type. Multiple selections are allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>COMMON</description></item>
-        /// <item><description>PIC</description></item>
-        /// <item><description>TEXT</description></item>
-        /// <item><description>TABLE</description></item>
-        /// <item><description>VIDEO</description></item>
-        /// <item><description>AUDIO</description></item>
-        /// <item><description>INDEX</description></item>
+        /// <item><description><para>COMMON</para>
+        /// </description></item>
+        /// <item><description><para>PIC</para>
+        /// </description></item>
+        /// <item><description><para>TEXT</para>
+        /// </description></item>
+        /// <item><description><para>TABLE</para>
+        /// </description></item>
+        /// <item><description><para>VIDEO</para>
+        /// </description></item>
+        /// <item><description><para>AUDIO</para>
+        /// </description></item>
+        /// <item><description><para>INDEX</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("DataTypeList")]
@@ -49,8 +56,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The sort order. Default: Desc.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: Ascending.</description></item>
-        /// <item><description>Desc: Descending.</description></item>
+        /// <item><description><para>Asc: Ascending.</para>
+        /// </description></item>
+        /// <item><description><para>Desc: Descending.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,8 +72,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The dataset source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DataWorks</description></item>
-        /// <item><description>PAI</description></item>
+        /// <item><description><para>DataWorks</para>
+        /// </description></item>
+        /// <item><description><para>PAI</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,9 +119,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The sort field. Default: CreateTime.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ModifyTime: Modification time.</description></item>
-        /// <item><description>CreateTime: Creation time.</description></item>
-        /// <item><description>Name</description></item>
+        /// <item><description><para>ModifyTime: Modification time.</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime: Creation time.</para>
+        /// </description></item>
+        /// <item><description><para>Name</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,13 +137,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The storage type. Multiple selections are allowed. Supported values:</para>
         /// <list type="bullet">
-        /// <item><description>OSS</description></item>
-        /// <item><description>NAS: General-purpose NAS file systems</description></item>
-        /// <item><description>EXTREMENAS: Extreme NAS file systems</description></item>
-        /// <item><description>DLF_LANCE: Data Lake Formation</description></item>
-        /// <item><description>CPFS: Cloud Parallel File Storage</description></item>
-        /// <item><description>BMCPFS: CPFS for Lingjun</description></item>
-        /// <item><description>MAXCOMPUTE: MaxCompute table</description></item>
+        /// <item><description><para>OSS</para>
+        /// </description></item>
+        /// <item><description><para>NAS: General-purpose NAS file systems</para>
+        /// </description></item>
+        /// <item><description><para>EXTREMENAS: Extreme NAS file systems</para>
+        /// </description></item>
+        /// <item><description><para>DLF_LANCE: Data Lake Formation</para>
+        /// </description></item>
+        /// <item><description><para>CPFS: Cloud Parallel File Storage</para>
+        /// </description></item>
+        /// <item><description><para>BMCPFS: CPFS for Lingjun</para>
+        /// </description></item>
+        /// <item><description><para>MAXCOMPUTE: MaxCompute table</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("StorageTypeList")]

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The alert details.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>aggregator:avg [**] for 5 minutes, service maybe abnormal</para>
+                /// <para>Data integration sync task exception: Level: WARNING, DataWorks project name:** [Region: cn-shanghai], Task name:<b>, Alert rule: Business delay, aggregator:avg [</b>] for 5 minutes, service maybe abnormal.</para>
                 /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
@@ -148,11 +148,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type of the alert event.</para>
                 /// <list type="bullet">
-                /// <item><description>Heartbeat</description></item>
-                /// <item><description>Delay</description></item>
-                /// <item><description>FailoverCount</description></item>
-                /// <item><description>DdlReport</description></item>
-                /// <item><description>ResourceUtilization</description></item>
+                /// <item><description><para>Heartbeat</para>
+                /// </description></item>
+                /// <item><description><para>Delay</para>
+                /// </description></item>
+                /// <item><description><para>FailoverCount</para>
+                /// </description></item>
+                /// <item><description><para>DdlReport</para>
+                /// </description></item>
+                /// <item><description><para>ResourceUtilization</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -200,7 +205,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The request ID. You can locate logs and troubleshoot issues based on the ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>645F6D68-9C29-5961-80B1-BDD4B794C22D</para>
+        /// <para>645F6D68-9C29-5961-80B1-BDD4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -85,10 +85,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The dependency type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CrossCycleDependsOnChildren: cross-cycle dependency on level-1 descendant nodes</description></item>
-                /// <item><description>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</description></item>
-                /// <item><description>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</description></item>
-                /// <item><description>Normal: same-cycle scheduling dependency</description></item>
+                /// <item><description><para>CrossCycleDependsOnChildren: cross-cycle dependency on level-1 descendant nodes</para>
+                /// </description></item>
+                /// <item><description><para>CrossCycleDependsOnSelf: cross-cycle dependency on the current node</para>
+                /// </description></item>
+                /// <item><description><para>CrossCycleDependsOnOtherNode: cross-cycle dependency on other nodes</para>
+                /// </description></item>
+                /// <item><description><para>Normal: same-cycle scheduling dependency</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -133,8 +137,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The environment of the workspace. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Prod: production environment</description></item>
-            /// <item><description>Dev: development environment</description></item>
+            /// <item><description><para>Prod: production environment</para>
+            /// </description></item>
+            /// <item><description><para>Dev: development environment</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,10 +190,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Constant: constant</description></item>
-                    /// <item><description>PassThrough: node output</description></item>
-                    /// <item><description>System: variable</description></item>
-                    /// <item><description>NodeOutput: script output</description></item>
+                    /// <item><description><para>Constant: constant</para>
+                    /// </description></item>
+                    /// <item><description><para>PassThrough: node output</para>
+                    /// </description></item>
+                    /// <item><description><para>System: variable</para>
+                    /// </description></item>
+                    /// <item><description><para>NodeOutput: script output</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -214,8 +224,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The instance generation mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>T+1</description></item>
-            /// <item><description>Immediately</description></item>
+            /// <item><description><para>T+1</para>
+            /// </description></item>
+            /// <item><description><para>Immediately</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -301,10 +313,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Constant: constant</description></item>
-                    /// <item><description>PassThrough: node output</description></item>
-                    /// <item><description>System: variable</description></item>
-                    /// <item><description>NodeOutput: script output</description></item>
+                    /// <item><description><para>Constant: constant</para>
+                    /// </description></item>
+                    /// <item><description><para>PassThrough: node output</para>
+                    /// </description></item>
+                    /// <item><description><para>System: variable</para>
+                    /// </description></item>
+                    /// <item><description><para>NodeOutput: script output</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -353,8 +369,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Prod: production environment</description></item>
-            /// <item><description>Dev: development environment</description></item>
+            /// <item><description><para>Prod: production environment</para>
+            /// </description></item>
+            /// <item><description><para>Dev: development environment</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -388,9 +406,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The rerun mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to be run.</description></item>
-            /// <item><description>FailureAllowed: The task can be rerun only after it fails to be run.</description></item>
-            /// <item><description>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to be run.</description></item>
+            /// <item><description><para>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to be run.</para>
+            /// </description></item>
+            /// <item><description><para>FailureAllowed: The task can be rerun only after it fails to be run.</para>
+            /// </description></item>
+            /// <item><description><para>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to be run.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -554,8 +575,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The environment of the workspace. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Prod: production environment</description></item>
-                    /// <item><description>Dev: development environment</description></item>
+                    /// <item><description><para>Prod: production environment</para>
+                    /// </description></item>
+                    /// <item><description><para>Dev: development environment</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -630,8 +653,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The environment of the workspace. This parameter is deprecated and replaced by the EnvType parameter. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Prod: production environment</description></item>
-                    /// <item><description>Dev: development environment</description></item>
+                    /// <item><description><para>Prod: production environment</para>
+                    /// </description></item>
+                    /// <item><description><para>Dev: development environment</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -665,9 +690,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The rerun mode. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to be run.</description></item>
-                    /// <item><description>FailureAllowed: The task can be rerun only after it fails to be run.</description></item>
-                    /// <item><description>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to be run.</description></item>
+                    /// <item><description><para>AllDenied: The task cannot be rerun regardless of whether the task is successfully run or fails to be run.</para>
+                    /// </description></item>
+                    /// <item><description><para>FailureAllowed: The task can be rerun only after it fails to be run.</para>
+                    /// </description></item>
+                    /// <item><description><para>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to be run.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -766,9 +794,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Pause</description></item>
-                        /// <item><description>Skip</description></item>
-                        /// <item><description>Normal</description></item>
+                        /// <item><description><para>Pause</para>
+                        /// </description></item>
+                        /// <item><description><para>Skip</para>
+                        /// </description></item>
+                        /// <item><description><para>Normal</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -791,8 +822,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The trigger type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Scheduler: periodic scheduling</description></item>
-                        /// <item><description>Manual: manual scheduling</description></item>
+                        /// <item><description><para>Scheduler: periodic scheduling</para>
+                        /// </description></item>
+                        /// <item><description><para>Manual: manual scheduling</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -829,9 +862,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The type of the subtask. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DoWhile: do-while node</description></item>
-                /// <item><description>Combined: node group</description></item>
-                /// <item><description>ForEach: for-each node</description></item>
+                /// <item><description><para>DoWhile: do-while node</para>
+                /// </description></item>
+                /// <item><description><para>Combined: node group</para>
+                /// </description></item>
+                /// <item><description><para>ForEach: for-each node</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -912,9 +948,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Pause</description></item>
-                /// <item><description>Skip</description></item>
-                /// <item><description>Normal</description></item>
+                /// <item><description><para>Pause</para>
+                /// </description></item>
+                /// <item><description><para>Skip</para>
+                /// </description></item>
+                /// <item><description><para>Normal</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -937,8 +976,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The trigger type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: periodic scheduling</description></item>
-                /// <item><description>Manual: manual scheduling</description></item>
+                /// <item><description><para>Scheduler: periodic scheduling</para>
+                /// </description></item>
+                /// <item><description><para>Manual: manual scheduling</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

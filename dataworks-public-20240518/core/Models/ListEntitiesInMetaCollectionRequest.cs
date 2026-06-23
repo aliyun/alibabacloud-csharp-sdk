@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>category.123</para>
+        /// <para>as78d756asd</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -53,8 +53,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc (default): ascending order.</description></item>
-        /// <item><description>Desc</description></item>
+        /// <item><description><para>Asc (default): ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>Desc</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,8 +89,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The sort field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Name (default)</description></item>
-        /// <item><description>CreateTime</description></item>
+        /// <item><description><para>Name (default)</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

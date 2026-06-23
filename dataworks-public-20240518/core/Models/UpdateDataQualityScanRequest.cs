@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>Workspace environment of the compute engine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Prod</description></item>
-            /// <item><description>Dev</description></item>
+            /// <item><description><para>Prod</para>
+            /// </description></item>
+            /// <item><description><para>Dev</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,9 +52,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The engine type. These settings are only supported for the EMR compute engine.This setting? Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Hive: Hive SQL</description></item>
-                /// <item><description>Spark: Spark SQL</description></item>
-                /// <item><description>Kyuubi</description></item>
+                /// <item><description><para>Hive: Hive SQL</para>
+                /// </description></item>
+                /// <item><description><para>Spark: Spark SQL</para>
+                /// </description></item>
+                /// <item><description><para>Kyuubi</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -289,8 +294,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The trigger mode of the data quality monitor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ByManual: Manually triggered. Default setting.</description></item>
-            /// <item><description>BySchedule: Triggered by a scheduled task instance.</description></item>
+            /// <item><description><para>ByManual: Manually triggered. Default setting.</para>
+            /// </description></item>
+            /// <item><description><para>BySchedule: Triggered by a scheduled task instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

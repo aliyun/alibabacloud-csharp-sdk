@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteMetaEntityDefResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>3C1E755D-B606-57A4-9B9C-7B214E81354C</para>
         /// </summary>

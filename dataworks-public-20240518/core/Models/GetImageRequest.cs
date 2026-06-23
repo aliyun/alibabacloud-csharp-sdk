@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetImageRequest : TeaModel {
         /// <summary>
+        /// <para>The image ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The image version. If you do not specify this parameter, the latest version is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

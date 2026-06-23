@@ -158,10 +158,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CommonV2: Serverless resource group.</description></item>
-            /// <item><description>ExclusiveDataIntegration: Exclusive resource group for Data Integration.</description></item>
-            /// <item><description>ExclusiveScheduler: Exclusive resource group for scheduling.</description></item>
-            /// <item><description>ExclusiveDataService: Exclusive resource group for DataService Studio.</description></item>
+            /// <item><description><para>CommonV2: Serverless resource group.</para>
+            /// </description></item>
+            /// <item><description><para>ExclusiveDataIntegration: Exclusive resource group for Data Integration.</para>
+            /// </description></item>
+            /// <item><description><para>ExclusiveScheduler: Exclusive resource group for scheduling.</para>
+            /// </description></item>
+            /// <item><description><para>ExclusiveDataService: Exclusive resource group for DataService Studio.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -203,18 +207,30 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The status of the resource group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal: The resource group is running or in use.</description></item>
-            /// <item><description>Stop: The resource group is expired.</description></item>
-            /// <item><description>Deleted: The resource group is released or destroyed.</description></item>
-            /// <item><description>Creating: The resource group is being created.</description></item>
-            /// <item><description>CreateFailed: The resource group fails to be created.</description></item>
-            /// <item><description>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</description></item>
-            /// <item><description>UpdateFailed: The resource group fails to be scaled out or upgraded.</description></item>
-            /// <item><description>Deleting: The resource group is being released or destroyed.</description></item>
-            /// <item><description>DeleteFailed: The resource group fails to be released or destroyed.</description></item>
-            /// <item><description>Timeout: The operations that are performed on the resource group time out.</description></item>
-            /// <item><description>Freezed: The resource group is frozen.</description></item>
-            /// <item><description>Starting: The resource group is being started.</description></item>
+            /// <item><description><para>Normal: The resource group is running or in use.</para>
+            /// </description></item>
+            /// <item><description><para>Stop: The resource group is expired.</para>
+            /// </description></item>
+            /// <item><description><para>Deleted: The resource group is released or destroyed.</para>
+            /// </description></item>
+            /// <item><description><para>Creating: The resource group is being created.</para>
+            /// </description></item>
+            /// <item><description><para>CreateFailed: The resource group fails to be created.</para>
+            /// </description></item>
+            /// <item><description><para>Updating: The resource group is being scaled in or out, or the configurations of the resource group are being changed.</para>
+            /// </description></item>
+            /// <item><description><para>UpdateFailed: The resource group fails to be scaled out or upgraded.</para>
+            /// </description></item>
+            /// <item><description><para>Deleting: The resource group is being released or destroyed.</para>
+            /// </description></item>
+            /// <item><description><para>DeleteFailed: The resource group fails to be released or destroyed.</para>
+            /// </description></item>
+            /// <item><description><para>Timeout: The operations that are performed on the resource group time out.</para>
+            /// </description></item>
+            /// <item><description><para>Freezed: The resource group is frozen.</para>
+            /// </description></item>
+            /// <item><description><para>Starting: The resource group is being started.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

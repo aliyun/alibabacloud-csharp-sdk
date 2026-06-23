@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>Specifies whether automatic parsing is enabled for the file. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: The file automatically parses code.</description></item>
-                /// <item><description>false: The file does not automatically parse code.</description></item>
+                /// <item><description><para>true: The file automatically parses code.</para>
+                /// </description></item>
+                /// <item><description><para>false: The file does not automatically parse code.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter corresponds to Analyze Code when you set Dependencies to Same Cycle in the scheduling configuration of a Data Studio task in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>.</para>
                 /// 
@@ -242,12 +244,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The functional module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: Data Studio</description></item>
-                /// <item><description>MANUAL: Manually triggered node</description></item>
-                /// <item><description>MANUAL_BIZ: Manually triggered workflow</description></item>
-                /// <item><description>SKIP: Dry-run scheduling in Data Studio</description></item>
-                /// <item><description>ADHOCQUERY: Ad hoc query</description></item>
-                /// <item><description>COMPONENT: Component management</description></item>
+                /// <item><description><para>NORMAL: Data Studio</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL: Manually triggered node</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL_BIZ: Manually triggered workflow</para>
+                /// </description></item>
+                /// <item><description><para>SKIP: Dry-run scheduling in Data Studio</para>
+                /// </description></item>
+                /// <item><description><para>ADHOCQUERY: Ad hoc query</para>
+                /// </description></item>
+                /// <item><description><para>COMPONENT: Component management</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -334,8 +342,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Indicates whether the call succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

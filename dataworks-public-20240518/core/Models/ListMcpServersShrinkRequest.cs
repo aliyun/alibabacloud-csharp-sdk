@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMcpServersShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of results to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The next page token from a previous response. Use this token to retrieve the next page of results. Leave this parameter empty for the first request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The search keyword for a fuzzy search on MCP Server names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mcp</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Q { get; set; }
 
         /// <summary>
+        /// <para>The visibility level for filtering the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>

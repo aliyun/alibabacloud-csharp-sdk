@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the Id parameter instead.</para>
+        /// <para>This parameter is deprecated. Use the <c>Id</c> parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11588</para>
@@ -23,21 +23,208 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DIJobId { get; set; }
 
         /// <summary>
-        /// <para>The task description.</para>
+        /// <para>The description of the synchronization job.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the synchronization task.</para>
+        /// <para>DI Job Demo</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The job configuration in script mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;resourceSettings&quot;: {
+        ///         &quot;realtimeResourceSettings&quot;: {
+        ///             &quot;requestedCu&quot;: 2,
+        ///             &quot;resourceGroupIdentifier&quot;: &quot;Serverless_res_group_123_456&quot;
+        ///         },
+        ///         &quot;offlineResourceSettings&quot;: {
+        ///             &quot;requestedCu&quot;: 2,
+        ///             &quot;resourceGroupIdentifier&quot;: &quot;Serverless_res_group_123_456&quot;
+        ///         }
+        ///     },
+        ///     &quot;tableMappings&quot;: [
+        ///         {
+        ///             &quot;sourceObjectSelectionRules&quot;: [
+        ///                 {
+        ///                     &quot;expression&quot;: &quot;autotest_hologres&quot;,
+        ///                     &quot;action&quot;: &quot;Include&quot;,
+        ///                     &quot;expressionType&quot;: &quot;Exact&quot;,
+        ///                     &quot;objectType&quot;: &quot;Datasource&quot;
+        ///                 },
+        ///                 {
+        ///                     &quot;expression&quot;: &quot;auto_holo_2661647&quot;,
+        ///                     &quot;action&quot;: &quot;Include&quot;,
+        ///                     &quot;expressionType&quot;: &quot;Exact&quot;,
+        ///                     &quot;objectType&quot;: &quot;Table&quot;
+        ///                 },
+        ///                 {
+        ///                     &quot;expression&quot;: &quot;public&quot;,
+        ///                     &quot;action&quot;: &quot;Include&quot;,
+        ///                     &quot;expressionType&quot;: &quot;Exact&quot;,
+        ///                     &quot;objectType&quot;: &quot;Schema&quot;
+        ///                 }
+        ///             ],
+        ///             &quot;transformationRules&quot;: [
+        ///                 {
+        ///                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///                     &quot;ruleActionType&quot;: &quot;SourceSchema&quot;,
+        ///                     &quot;ruleName&quot;: &quot;SourceSchema_Table_BStf8aXPSCJjOWGe&quot;
+        ///                 },
+        ///                 {
+        ///                     &quot;ruleTargetType&quot;: &quot;Schema&quot;,
+        ///                     &quot;ruleActionType&quot;: &quot;Rename&quot;,
+        ///                     &quot;ruleName&quot;: &quot;Rename_Schema_3qWNOIsljtInvKJy&quot;
+        ///                 },
+        ///                 {
+        ///                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///                     &quot;ruleActionType&quot;: &quot;Rename&quot;,
+        ///                     &quot;ruleName&quot;: &quot;Rename_Table_o3PVQq1aIKDGoVVW&quot;
+        ///                 },
+        ///                 {
+        ///                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///                     &quot;ruleActionType&quot;: &quot;DefineDstTableSettings&quot;,
+        ///                     &quot;ruleName&quot;: &quot;DefineDstTableSettings_Table_BhJltOmOCIc81fzi&quot;
+        ///                 },
+        ///                 {
+        ///                     &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///                     &quot;ruleActionType&quot;: &quot;ColumnMapping&quot;,
+        ///                     &quot;ruleName&quot;: &quot;ColumnMapping_Table_nP4hJPX1wh2W3fpo&quot;
+        ///                 }
+        ///             ]
+        ///         }
+        ///     ],
+        ///     &quot;sourceDataSourceSettings&quot;: [
+        ///         {
+        ///             &quot;dataSourceProperties&quot;: {
+        ///                 &quot;timeZone&quot;: &quot;Asia/Shanghai&quot;
+        ///             },
+        ///             &quot;dataSourceName&quot;: &quot;autotest_hologres&quot;
+        ///         }
+        ///     ],
+        ///     &quot;jobSettings&quot;: {
+        ///         &quot;runtimeSettings&quot;: [</para>
+        /// <pre><c>    ],
+        ///     &quot;ddlHandlingSettings&quot;: [
+        /// 
+        ///     ],
+        ///     &quot;columnDataTypeSettings&quot;: [
+        /// 
+        ///     ],
+        ///     &quot;cycleScheduleSettings&quot;: {
+        /// 
+        ///     },
+        ///     &quot;channelSettings&quot;: {
+        ///         &quot;destinationChannelSettings&quot;: {
+        ///             &quot;conflictMode&quot;: &quot;replace&quot;,
+        ///             &quot;dynamicColumnAction&quot;: &quot;replay&quot;,
+        ///             &quot;writeMode&quot;: &quot;replay&quot;
+        ///         },
+        ///         &quot;sourceChannelSettings&quot;: {
+        /// 
+        ///         }
+        ///     }
+        /// },
+        /// &quot;destinationDataSourceType&quot;: &quot;Hologres&quot;,
+        /// &quot;transformationRules&quot;: [
+        ///     {
+        ///         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///         &quot;ruleName&quot;: &quot;SourceSchema_Table_BStf8aXPSCJjOWGe&quot;,
+        ///         &quot;ruleActionType&quot;: &quot;SourceSchema&quot;,
+        ///         &quot;ruleExpression&quot;: {
+        ///             &quot;columns&quot;: [
+        ///                 {
+        ///                     &quot;name&quot;: &quot;id&quot;,
+        ///                     &quot;category&quot;: &quot;normal&quot;,
+        ///                     &quot;type&quot;: &quot;BIGINT&quot;
+        ///                 },
+        ///                 {
+        ///                     &quot;name&quot;: &quot;decimal&quot;,
+        ///                     &quot;category&quot;: &quot;normal&quot;,
+        ///                     &quot;type&quot;: &quot;DECIMAL&quot;
+        ///                 }
+        ///             ]
+        ///         }
+        ///     },
+        ///     {
+        ///         &quot;ruleTargetType&quot;: &quot;Schema&quot;,
+        ///         &quot;ruleName&quot;: &quot;Rename_Schema_3qWNOIsljtInvKJy&quot;,
+        ///         &quot;ruleActionType&quot;: &quot;Rename&quot;,
+        ///         &quot;ruleExpression&quot;: {
+        ///             &quot;expression&quot;: &quot;public&quot;
+        ///         }
+        ///     },
+        ///     {
+        ///         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///         &quot;ruleName&quot;: &quot;Rename_Table_o3PVQq1aIKDGoVVW&quot;,
+        ///         &quot;ruleActionType&quot;: &quot;Rename&quot;,
+        ///         &quot;ruleExpression&quot;: {
+        ///             &quot;expression&quot;: &quot;auto_holo_2661647_dst&quot;
+        ///         }
+        ///     },
+        ///     {
+        ///         &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///         &quot;ruleName&quot;: &quot;DefineDstTableSettings_Table_BhJltOmOCIc81fzi&quot;,
+        ///         &quot;ruleActionType&quot;: &quot;DefineDstTableSettings&quot;,
+        ///         &quot;ruleExpression&quot;: {
+        ///             &quot;ddlString&quot;: &quot;BEGIN;
+        /// </c></pre>
+        /// <para>CREATE TABLE IF NOT EXISTS public.auto_holo_2661647_dst (
+        ///    id          BIGINT PRIMARY KEY,
+        ///    &quot;decimal&quot;   DECIMAL(38,18)
+        /// );
+        /// CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;time_to_live_in_seconds\&quot;, \&quot;3153600000\&quot;);
+        /// CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;orientation\&quot;, \&quot;column\&quot;);
+        /// CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;binlog.level\&quot;, \&quot;replica\&quot;);
+        /// CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;binlog.ttl\&quot;, \&quot;2592000\&quot;);
+        /// CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;bitmap_columns\&quot;, \&quot;&quot;text&quot;,&quot;char&quot;,&quot;varchar&quot;\&quot;);
+        /// CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;dictionary_encoding_columns\&quot;, \&quot;&quot;text&quot;:auto,&quot;bytea&quot;:auto,&quot;char&quot;:auto,&quot;varchar&quot;:auto\&quot;);
+        /// CALL SET_TABLE_PROPERTY(\&quot;public.auto_holo_2661647_dst\&quot;, \&quot;distribution_key\&quot;, \&quot;&quot;id&quot;\&quot;);
+        /// COMMIT;
+        /// &quot;,
+        ///                 &quot;ddlType&quot;: &quot;STRUCT&quot;
+        ///             }
+        ///         },
+        ///         {
+        ///             &quot;ruleTargetType&quot;: &quot;Table&quot;,
+        ///             &quot;ruleName&quot;: &quot;ColumnMapping_Table_nP4hJPX1wh2W3fpo&quot;,
+        ///             &quot;ruleActionType&quot;: &quot;ColumnMapping&quot;,
+        ///             &quot;ruleExpression&quot;: {
+        ///                 &quot;columnMapping&quot;: [
+        ///                     {
+        ///                         &quot;sourceColName&quot;: &quot;id&quot;,
+        ///                         &quot;dstColName&quot;: &quot;id&quot;
+        ///                     },
+        ///                     {
+        ///                         &quot;sourceColName&quot;: &quot;decimal&quot;,
+        ///                         &quot;dstColName&quot;: &quot;decimal&quot;
+        ///                     }
+        ///                 ]
+        ///             }
+        ///         }
+        ///     ],
+        ///     &quot;migrationType&quot;: &quot;FullAndRealtimeIncremental&quot;,
+        ///     &quot;destinationDataSourceSettings&quot;: [
+        ///         {
+        ///             &quot;dataSourceProperties&quot;: {</para>
+        /// <pre><c>        },
+        ///         &quot;dataSourceName&quot;: &quot;autotest_hologres&quot;
+        ///     }
+        /// ],
+        /// &quot;sourceDataSourceType&quot;: &quot;Hologres&quot;
+        /// </c></pre>
+        /// <para>}</para>
+        /// </summary>
         [NameInMap("FileSpec")]
         [Validation(Required=false)]
         public string FileSpec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization task.</para>
+        /// <para>The ID of the synchronization job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11588</para>
@@ -47,43 +234,63 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The task-level settings, including DDL handling policies, column data type mapping between source and destination, and runtime parameters.</para>
+        /// <para>The settings for the synchronization job. This includes DDL handling settings, data type mappings for columns between the source and destination, and runtime parameters.</para>
         /// </summary>
         [NameInMap("JobSettings")]
         [Validation(Required=false)]
         public UpdateDIJobRequestJobSettings JobSettings { get; set; }
         public class UpdateDIJobRequestJobSettings : TeaModel {
             /// <summary>
-            /// <para>The channel-specific settings. You can configure special settings for specific channels. Currently supported: Holo2Holo (Hologres to Hologres) and Holo2Kafka (Hologres to Kafka).</para>
+            /// <para>The job settings for specific data synchronization channels. You can apply special configurations to certain channels. Currently, <c>Holo2Holo</c> (synchronization from Hologres to Hologres) and <c>Holo2Kafka</c> (synchronization from Hologres to Kafka) are supported.</para>
             /// <ol>
-            /// <item><description>Holo2Kafka</description></item>
+            /// <item><description><c>Holo2Kafka</c></description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}} kafkaClientProperties: Kafka producer parameters used when writing to Kafka.</description></item>
-            /// <item><description>keyColumns: The columns to write to Kafka.</description></item>
-            /// <item><description>writeMode: The Kafka write format. Valid values: json and canal.</description></item>
+            /// <item><description><para>Example: <c>{&quot;destinationChannelSettings&quot;:{&quot;kafkaClientProperties&quot;:[{&quot;key&quot;:&quot;linger.ms&quot;,&quot;value&quot;:&quot;100&quot;}],&quot;keyColumns&quot;:[&quot;col3&quot;],&quot;writeMode&quot;:&quot;canal&quot;}}</c>
+            /// <c>kafkaClientProperties</c>: The Kafka producer parameters used when writing to Kafka.</para>
+            /// </description></item>
+            /// <item><description><para><c>keyColumns</c>: The columns whose values are written to the key of a Kafka message.</para>
+            /// </description></item>
+            /// <item><description><para><c>writeMode</c>: The format for writing data to Kafka. Valid values: <c>json</c> and <c>canal</c>.</para>
+            /// </description></item>
             /// </list>
             /// <ol start="2">
-            /// <item><description>Holo2Holo</description></item>
+            /// <item><description><c>Holo2Holo</c></description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</description></item>
-            /// <item><description>conflictMode: The conflict handling policy when writing to Hologres. Valid values: replace (overwrite) and ignore.</description></item>
-            /// <item><description>writeMode: The write mode for Hologres. Valid values: replay and insert.</description></item>
-            /// <item><description>dynamicColumnAction: The dynamic column handling mode when writing to Hologres. Valid values: replay, insert, and ignore.</description></item>
+            /// <item><description><para>Example: <c>{&quot;destinationChannelSettings&quot;:{&quot;conflictMode&quot;:&quot;replace&quot;,&quot;dynamicColumnAction&quot;:&quot;replay&quot;,&quot;writeMode&quot;:&quot;replay&quot;}}</c></para>
+            /// </description></item>
+            /// <item><description><para><c>conflictMode</c>: The conflict handling policy for writing data to Hologres. Valid values: <c>replace</c> (overwrite) and <c>ignore</c> (ignore).</para>
+            /// </description></item>
+            /// <item><description><para><c>writeMode</c>: The method for writing data to Hologres. Valid values: <c>replay</c> and <c>insert</c>.</para>
+            /// </description></item>
+            /// <item><description><para><c>dynamicColumnAction</c>: The action for handling dynamic columns when writing data to Hologres. Valid values: <c>replay</c>, <c>insert</c>, and <c>ignore</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;structInfo&quot;:&quot;MANAGED&quot;,&quot;storageType&quot;:&quot;TEXTFILE&quot;,&quot;writeMode&quot;:&quot;APPEND&quot;,&quot;partitionColumns&quot;:[{&quot;columnName&quot;:&quot;pt&quot;,&quot;columnType&quot;:&quot;STRING&quot;,&quot;comment&quot;:&quot;&quot;}],&quot;fieldDelimiter&quot;:&quot;&quot;}</para>
+            /// <para>{
+            ///       &quot;structInfo&quot;: &quot;MANAGED&quot;,
+            ///       &quot;storageType&quot;: &quot;TEXTFILE&quot;,
+            ///       &quot;writeMode&quot;: &quot;APPEND&quot;,
+            ///       &quot;partitionColumns&quot;: [
+            ///             {
+            ///                   &quot;columnName&quot;: &quot;pt&quot;,
+            ///                   &quot;columnType&quot;: &quot;STRING&quot;,
+            ///                   &quot;comment&quot;: &quot;&quot;
+            ///             }
+            ///       ],
+            ///       &quot;fieldDelimiter&quot;: &quot;&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("ChannelSettings")]
             [Validation(Required=false)]
             public string ChannelSettings { get; set; }
 
             /// <summary>
-            /// <para>The array of column type mappings.</para>
+            /// <para>An array of column data type mappings.</para>
             /// <remarks>
-            /// <para> [&quot;ColumnDataTypeSettings&quot;:[ { &quot;SourceDataType&quot;:&quot;Bigint&quot;, &quot;DestinationDataType&quot;:&quot;Text&quot; } ]</para>
+            /// <para>[&quot;ColumnDataTypeSettings&quot;:[ { &quot;SourceDataType&quot;:&quot;Bigint&quot;, &quot;DestinationDataType&quot;:&quot;Text&quot; } ]</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ColumnDataTypeSettings")]
@@ -91,7 +298,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<UpdateDIJobRequestJobSettingsColumnDataTypeSettings> ColumnDataTypeSettings { get; set; }
             public class UpdateDIJobRequestJobSettingsColumnDataTypeSettings : TeaModel {
                 /// <summary>
-                /// <para>The destination type, such as bigint, boolean, string, text, datetime, timestamp, decimal, or binary. Different data sources may have different types.</para>
+                /// <para>The destination data type. Examples: <c>bigint</c>, <c>boolean</c>, <c>string</c>, <c>text</c>, <c>datetime</c>, <c>timestamp</c>, <c>decimal</c>, and <c>binary</c>. The supported data types depend on the destination data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -101,7 +308,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DestinationDataType { get; set; }
 
                 /// <summary>
-                /// <para>The source type, such as bigint, boolean, string, text, datetime, timestamp, decimal, or binary. Different data sources may have different types.</para>
+                /// <para>The source data type. Examples: <c>bigint</c>, <c>boolean</c>, <c>string</c>, <c>text</c>, <c>datetime</c>, <c>timestamp</c>, <c>decimal</c>, and <c>binary</c>. The supported data types depend on the source data source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bigint</para>
@@ -113,7 +320,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The scheduled task settings.</para>
+            /// <para>The settings for periodic scheduling.</para>
             /// </summary>
             [NameInMap("CycleScheduleSettings")]
             [Validation(Required=false)]
@@ -132,9 +339,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The array of DDL handling settings.</para>
+            /// <para>An array of DDL handling settings.</para>
             /// <remarks>
-            /// <para> [&quot;DDLHandlingSettings&quot;:[ { &quot;Type&quot;:&quot;Insert&quot;, &quot;Action&quot;:&quot;Normal&quot; } ]</para>
+            /// <para>[&quot;DDLHandlingSettings&quot;:[ { &quot;Type&quot;:&quot;Insert&quot;, &quot;Action&quot;:&quot;Normal&quot; } ]</para>
             /// </remarks>
             /// </summary>
             [NameInMap("DdlHandlingSettings")]
@@ -142,11 +349,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<UpdateDIJobRequestJobSettingsDdlHandlingSettings> DdlHandlingSettings { get; set; }
             public class UpdateDIJobRequestJobSettingsDdlHandlingSettings : TeaModel {
                 /// <summary>
-                /// <para>Valid values:</para>
+                /// <para>The handling action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Ignore</description></item>
-                /// <item><description>Critical: Fail the task</description></item>
-                /// <item><description>Normal</description></item>
+                /// <item><description><para><c>Ignore</c>: Ignores the DDL message.</para>
+                /// </description></item>
+                /// <item><description><para><c>Critical</c>: Reports an error and terminates the synchronization job.</para>
+                /// </description></item>
+                /// <item><description><para><c>Normal</c>: Processes the DDL message normally.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -159,13 +369,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The DDL type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>RenameColumn</description></item>
-                /// <item><description>ModifyColumn</description></item>
-                /// <item><description>CreateTable</description></item>
-                /// <item><description>TruncateTable</description></item>
-                /// <item><description>DropTable</description></item>
-                /// <item><description>DropColumn</description></item>
-                /// <item><description>AddColumn</description></item>
+                /// <item><description><para><c>RenameColumn</c></para>
+                /// </description></item>
+                /// <item><description><para><c>ModifyColumn</c></para>
+                /// </description></item>
+                /// <item><description><para><c>CreateTable</c></para>
+                /// </description></item>
+                /// <item><description><para><c>TruncateTable</c></para>
+                /// </description></item>
+                /// <item><description><para><c>DropTable</c></para>
+                /// </description></item>
+                /// <item><description><para><c>DropColumn</c></para>
+                /// </description></item>
+                /// <item><description><para><c>AddColumn</c></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -185,27 +402,35 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<UpdateDIJobRequestJobSettingsRuntimeSettings> RuntimeSettings { get; set; }
             public class UpdateDIJobRequestJobSettingsRuntimeSettings : TeaModel {
                 /// <summary>
-                /// <para>The setting name. Valid values:</para>
+                /// <para>The name of the setting. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>src.offline.datasource.max.connection: Specifies the maximum number of connections that are allowed for reading data from the source of a batch synchronization task.</description></item>
-                /// <item><description>dst.offline.truncate: Specifies whether to clear the destination table before data writing.</description></item>
-                /// <item><description>runtime.offline.speed.limit.enable: Specifies whether throttling is enabled for a batch synchronization task.</description></item>
-                /// <item><description>runtime.offline.concurrent: Specifies the maximum number of parallel threads that are allowed for a batch synchronization task.</description></item>
-                /// <item><description>runtime.enable.auto.create.schema: Specifies whether schemas are automatically created in the destination of a synchronization task.</description></item>
-                /// <item><description>runtime.realtime.concurrent: Specifies the maximum number of parallel threads that are allowed for a real-time synchronization task.</description></item>
-                /// <item><description>runtime.realtime.failover.minute.dataxcdc: Specifies the maximum waiting duration before a synchronization task retries the next restart if the previous restart fails after failover occurs. Unit: minutes.</description></item>
-                /// <item><description>runtime.realtime.failover.times.dataxcdc: Specifies the maximum number of failures that are allowed for restarting a synchronization task after failovers occur.</description></item>
+                /// <item><description><para><c>src.offline.datasource.max.connection</c>: The maximum number of concurrent connections to the source for an offline synchronization job.</para>
+                /// </description></item>
+                /// <item><description><para><c>dst.offline.truncate</c>: Specifies whether to truncate the destination table before an offline synchronization job.</para>
+                /// </description></item>
+                /// <item><description><para><c>runtime.offline.speed.limit.enable</c>: Specifies whether to enable speed limiting for an offline synchronization job.</para>
+                /// </description></item>
+                /// <item><description><para><c>runtime.offline.concurrent</c>: The concurrency level for an offline synchronization job.</para>
+                /// </description></item>
+                /// <item><description><para><c>runtime.enable.auto.create.schema</c>: Specifies whether to automatically create a schema at the destination.</para>
+                /// </description></item>
+                /// <item><description><para><c>runtime.realtime.concurrent</c>: The concurrency level for a real-time synchronization job.</para>
+                /// </description></item>
+                /// <item><description><para><c>runtime.realtime.failover.minute.dataxcdc</c>: The number of minutes to wait before a failover retry.</para>
+                /// </description></item>
+                /// <item><description><para><c>runtime.realtime.failover.times.dataxcdc</c>: The number of failover retries.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>runtime.offline.concurrent</para>
+                /// <para>src.offline.datasource.max.connection</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The setting value.</para>
+                /// <para>The value of the setting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -219,7 +444,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The task owner.</para>
+        /// <para>The owner of the synchronization job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95279527</para>
@@ -229,7 +454,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to obtain the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can call the <a href="https://help.aliyun.com/document_detail/178393.html">ListProjects</a> operation to get the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -246,24 +471,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public UpdateDIJobRequestResourceSettings ResourceSettings { get; set; }
         public class UpdateDIJobRequestResourceSettings : TeaModel {
             /// <summary>
-            /// <para>The batch synchronization resources.</para>
+            /// <para>The resource settings for the offline synchronization job.</para>
             /// </summary>
             [NameInMap("OfflineResourceSettings")]
             [Validation(Required=false)]
             public UpdateDIJobRequestResourceSettingsOfflineResourceSettings OfflineResourceSettings { get; set; }
             public class UpdateDIJobRequestResourceSettingsOfflineResourceSettings : TeaModel {
                 /// <summary>
-                /// <para>The CUs of the resource group for Data Integration used for batch synchronization.</para>
+                /// <para>The number of CUs for the Data Integration resource group used by the offline synchronization job.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2.0</para>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("RequestedCu")]
                 [Validation(Required=false)]
                 public double? RequestedCu { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group for Data Integration that are used for batch synchronization.</para>
+                /// <para>The name of the Data Integration resource group used by the offline synchronization job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_111_222</para>
@@ -275,24 +500,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The real-time synchronization resources.</para>
+            /// <para>The resource settings for the real-time synchronization job.</para>
             /// </summary>
             [NameInMap("RealtimeResourceSettings")]
             [Validation(Required=false)]
             public UpdateDIJobRequestResourceSettingsRealtimeResourceSettings RealtimeResourceSettings { get; set; }
             public class UpdateDIJobRequestResourceSettingsRealtimeResourceSettings : TeaModel {
                 /// <summary>
-                /// <para>The CUs of the resource group for Data Integration that are used for real-time synchronization.</para>
+                /// <para>The number of CUs for the Data Integration resource group used by the real-time synchronization job.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2.0</para>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("RequestedCu")]
                 [Validation(Required=false)]
                 public double? RequestedCu { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource group for Data Integration that are used for real-time synchronization.</para>
+                /// <para>The name of the Data Integration resource group used by the real-time synchronization job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>S_res_group_111_222</para>
@@ -304,27 +529,27 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The resource used for scheduling.</para>
+            /// <para>The scheduling resource settings.</para>
             /// </summary>
             [NameInMap("ScheduleResourceSettings")]
             [Validation(Required=false)]
             public UpdateDIJobRequestResourceSettingsScheduleResourceSettings ScheduleResourceSettings { get; set; }
             public class UpdateDIJobRequestResourceSettingsScheduleResourceSettings : TeaModel {
                 /// <summary>
-                /// <para>The CUs of the scheduling resource group for batch synchronization tasks.</para>
+                /// <para>The number of CUs for the scheduling resource group used by the offline synchronization job.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2.0</para>
+                /// <para>2</para>
                 /// </summary>
                 [NameInMap("RequestedCu")]
                 [Validation(Required=false)]
                 public double? RequestedCu { get; set; }
 
                 /// <summary>
-                /// <para>The name of the scheduling resource group used for batch synchronization tasks.</para>
+                /// <para>The name of the scheduling resource group used by the offline synchronization job.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>S_res_group_235454102432001_1721021993437</para>
+                /// <para>S_res_group_222_333</para>
                 /// </summary>
                 [NameInMap("ResourceGroupIdentifier")]
                 [Validation(Required=false)]
@@ -335,9 +560,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The list of synchronization object transformation mappings. Each element describes a set of source object selection rules and the transformation rules applied to those objects.</para>
+        /// <para>A list of object transformation mappings. Each mapping specifies a set of selection rules for source objects and a list of transformation rules that apply to the selected objects.</para>
         /// <remarks>
-        /// <para> [ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</para>
+        /// <para>[ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TableMappings")]
@@ -345,14 +570,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<UpdateDIJobRequestTableMappings> TableMappings { get; set; }
         public class UpdateDIJobRequestTableMappings : TeaModel {
             /// <summary>
-            /// <para>Each rule can select different object types from the source, such as source databases and source tables.</para>
+            /// <para>The rules for selecting source objects. Each rule can select a different type of source object to synchronize, such as a source database or table.</para>
             /// </summary>
             [NameInMap("SourceObjectSelectionRules")]
             [Validation(Required=false)]
             public List<UpdateDIJobRequestTableMappingsSourceObjectSelectionRules> SourceObjectSelectionRules { get; set; }
             public class UpdateDIJobRequestTableMappingsSourceObjectSelectionRules : TeaModel {
                 /// <summary>
-                /// <para>Valid values: Include and Exclude.</para>
+                /// <para>The selection action. Valid values: <c>Include</c> and <c>Exclude</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Include</para>
@@ -372,7 +597,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Expression { get; set; }
 
                 /// <summary>
-                /// <para>The expression type. Valid values: Exact and Regex.</para>
+                /// <para>The type of the expression. Valid values: <c>Exact</c> and <c>Regex</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Exact</para>
@@ -384,9 +609,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The object type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Table</description></item>
-                /// <item><description>Schema</description></item>
-                /// <item><description>Database</description></item>
+                /// <item><description><para><c>Table</c> (table)</para>
+                /// </description></item>
+                /// <item><description><para><c>Schema</c> (schema)</para>
+                /// </description></item>
+                /// <item><description><para><c>Database</c> (database)</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -399,19 +627,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The transformation rules applied to source objects.</para>
+            /// <para>The transformation rules for the source objects.</para>
             /// </summary>
             [NameInMap("TransformationRules")]
             [Validation(Required=false)]
             public List<UpdateDIJobRequestTableMappingsTransformationRules> TransformationRules { get; set; }
             public class UpdateDIJobRequestTableMappingsTransformationRules : TeaModel {
                 /// <summary>
-                /// <para>Valid values:</para>
+                /// <para>The type of the action. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DefinePrimaryKey</description></item>
-                /// <item><description>Rename</description></item>
-                /// <item><description>AddColumn</description></item>
-                /// <item><description>HandleDml</description></item>
+                /// <item><description><para><c>DefinePrimaryKey</c>: Defines a primary key.</para>
+                /// </description></item>
+                /// <item><description><para><c>Rename</c>: Renames an object.</para>
+                /// </description></item>
+                /// <item><description><para><c>AddColumn</c>: Adds a column.</para>
+                /// </description></item>
+                /// <item><description><para><c>HandleDml</c>: Handles DML operations.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -422,7 +654,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string RuleActionType { get; set; }
 
                 /// <summary>
-                /// <para>The rule name. The rule name must be unique for a given combination of action type and target type. The name cannot exceed 50 characters.</para>
+                /// <para>The name of the transformation rule. The name must be unique for a specific combination of <c>RuleActionType</c> and <c>RuleTargetType</c> and can be up to 50 characters long.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rename_rule_1</para>
@@ -432,11 +664,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>Valid values:</para>
+                /// <para>The type of the target object. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Table</description></item>
-                /// <item><description>Schema</description></item>
-                /// <item><description>Database</description></item>
+                /// <item><description><para><c>Table</c> (table)</para>
+                /// </description></item>
+                /// <item><description><para><c>Schema</c> (schema)</para>
+                /// </description></item>
+                /// <item><description><para><c>Database</c> (database)</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -451,9 +686,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The list of synchronization object transformation rule definitions.</para>
+        /// <para>A list of transformation rule definitions.</para>
         /// <remarks>
-        /// <para> [ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</para>
+        /// <para>[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TransformationRules")]
@@ -461,15 +696,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<UpdateDIJobRequestTransformationRules> TransformationRules { get; set; }
         public class UpdateDIJobRequestTransformationRules : TeaModel {
             /// <summary>
-            /// <para>Valid values:</para>
+            /// <para>The type of the action. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DefinePrimaryKey</description></item>
-            /// <item><description>Rename</description></item>
-            /// <item><description>AddColumn</description></item>
-            /// <item><description>HandleDml</description></item>
-            /// <item><description>DefineIncrementalCondition</description></item>
-            /// <item><description>DefineCycleScheduleSettings</description></item>
-            /// <item><description>DefinePartitionKey</description></item>
+            /// <item><description><para><c>DefinePrimaryKey</c>: Defines a primary key.</para>
+            /// </description></item>
+            /// <item><description><para><c>Rename</c>: Renames an object.</para>
+            /// </description></item>
+            /// <item><description><para><c>AddColumn</c>: Adds a column.</para>
+            /// </description></item>
+            /// <item><description><para><c>HandleDml</c>: Handles DML operations.</para>
+            /// </description></item>
+            /// <item><description><para><c>DefineIncrementalCondition</c>: Defines an incremental condition.</para>
+            /// </description></item>
+            /// <item><description><para><c>DefineCycleScheduleSettings</c>: Defines periodic scheduling settings.</para>
+            /// </description></item>
+            /// <item><description><para><c>DefinePartitionKey</c>: Defines a partition key.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -480,63 +722,85 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RuleActionType { get; set; }
 
             /// <summary>
-            /// <para>The rule expression in JSON string format.</para>
+            /// <para>The rule expression, specified as a JSON string.</para>
             /// <ol>
-            /// <item><description>Rename rule</description></item>
+            /// <item><description>Rename rule (<c>Rename</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot; }</description></item>
-            /// <item><description>expression: The rename transformation expression. Supported variables include: ${srcDatasourceName} (source data source name), ${srcDatabaseName} (source database name), and ${srcTableName} (source table name).</description></item>
+            /// <item><description><para>Example: <c>{&quot;expression&quot;:&quot;${srcDatasourceName}_${srcDatabaseName}_0922&quot;}</c></para>
+            /// </description></item>
+            /// <item><description><para><c>expression</c>: The expression for the rename transformation rule. The expression supports variables, including <c>${srcDatasourceName}</c> (source data source name), <c>${srcDatabaseName}</c> (source database name), and <c>${srcTableName}</c> (source table name).</para>
+            /// </description></item>
             /// </list>
             /// <ol start="2">
-            /// <item><description>AddColumn rule</description></item>
+            /// <item><description>Add column rule (<c>AddColumn</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</description></item>
-            /// <item><description>If not specified, the default behavior is to not add columns.</description></item>
-            /// <item><description>columnName: The name of the column to add.</description></item>
-            /// <item><description>columnValueType: The value type of the column to add. Valid values: Constant and Variable.</description></item>
-            /// <item><description>columnValue: The value of the column to add. When columnValueType is set to Constant, the value is a custom constant of the string type. When columnValueType is set to Variable, the value is a built-in variable. Built-in variables include: EXECUTE_TIME (execution time, long type), DB_NAME_SRC (source database name, string type), DATASOURCE_NAME_SRC (source data source name, string type), TABLE_NAME_SRC (source table name, string type), DB_NAME_DEST (destination database name, string type), DATASOURCE_NAME_DEST (destination data source name, string type), TABLE_NAME_DEST (destination table name, string type), and DB_NAME_SRC_TRANSED (transformed source database name, string type).</description></item>
+            /// <item><description><para>Example: <c>{&quot;columns&quot;:[{&quot;columnName&quot;:&quot;my_add_column&quot;,&quot;columnValueType&quot;:&quot;Constant&quot;,&quot;columnValue&quot;:&quot;123&quot;}]}</c></para>
+            /// </description></item>
+            /// <item><description><para>If this rule is not specified, no columns are added.</para>
+            /// </description></item>
+            /// <item><description><para><c>columnName</c>: The name of the column to add.</para>
+            /// </description></item>
+            /// <item><description><para><c>columnValueType</c>: The value type of the added column. Valid values: <c>Constant</c> and <c>Variable</c>.</para>
+            /// </description></item>
+            /// <item><description><para><c>columnValue</c>: The value of the added column. If <c>columnValueType</c> is <c>Constant</c>, the value is a custom constant of the string type. If <c>columnValueType</c> is <c>Variable</c>, the value is a built-in variable. Valid built-in variables: <c>EXECUTE_TIME</c> (execution time, Long type), <c>DB_NAME_SRC</c> (source database name, String type), <c>DATASOURCE_NAME_SRC</c> (source data source name, String type), <c>TABLE_NAME_SRC</c> (source table name, String type), <c>DB_NAME_DEST</c> (destination database name, String type), <c>DATASOURCE_NAME_DEST</c> (destination data source name, String type), <c>TABLE_NAME_DEST</c> (destination table name, String type), and <c>DB_NAME_SRC_TRANSED</c> (transformed database name, String type).</para>
+            /// </description></item>
             /// </list>
             /// <ol start="3">
-            /// <item><description>DefinePrimaryKey</description></item>
+            /// <item><description>Define primary key rule (<c>DefinePrimaryKey</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</description></item>
-            /// <item><description>If not specified, the source primary key columns are used by default.</description></item>
-            /// <item><description>When the destination table already exists: Data Integration does not modify the destination table structure. If the specified primary key columns are not in the destination table, the task fails to start.</description></item>
-            /// <item><description>When the destination table is auto-created: Data Integration automatically creates the destination table structure with the defined primary key columns. If the specified primary key columns are not in the destination table, the task fails to start.</description></item>
+            /// <item><description><para>Example: <c>{&quot;columns&quot;:[&quot;ukcolumn1&quot;,&quot;ukcolumn2&quot;]}</c></para>
+            /// </description></item>
+            /// <item><description><para>If this rule is not specified, the primary key of the source is used by default.</para>
+            /// </description></item>
+            /// <item><description><para>Data Integration does not modify the structure of an existing destination table. If a specified primary key column does not exist in the table, the synchronization job fails.</para>
+            /// </description></item>
+            /// <item><description><para>When a destination table is automatically created, Data Integration includes the defined primary key columns in the structure. If a specified primary key column is not in the destination column set, the synchronization job fails.</para>
+            /// </description></item>
             /// </list>
             /// <ol start="4">
-            /// <item><description>HandleDml rule</description></item>
+            /// <item><description>DML handling rule (<c>HandleDml</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example of a rule used to process DML messages: {&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}.</description></item>
-            /// <item><description>If not specified, the default rule is Normal for Insert, Update, and Delete.</description></item>
-            /// <item><description>dmlType: The DML operation type. Valid values: Insert, Update, Delete.</description></item>
-            /// <item><description>dmlAction: The DML handling policy. Valid values: Normal, Ignore, Filter (conditional processing, used when dmlType is Update or Delete), and LogicalDelete.</description></item>
-            /// <item><description>filterCondition: The DML filter condition. This parameter is used when dmlAction is set to Filter.</description></item>
+            /// <item><description><para>Example: <c>{&quot;dmlPolicies&quot;:[{&quot;dmlType&quot;:&quot;Delete&quot;,&quot;dmlAction&quot;:&quot;Filter&quot;,&quot;filterCondition&quot;:&quot;id &gt; 1&quot;}]}</c></para>
+            /// </description></item>
+            /// <item><description><para>If this rule is not specified, the default action for <c>Insert</c>, <c>Update</c>, and <c>Delete</c> operations is <c>Normal</c>.</para>
+            /// </description></item>
+            /// <item><description><para><c>dmlType</c>: The DML operation type. Valid values: <c>Insert</c>, <c>Update</c>, and <c>Delete</c>.</para>
+            /// </description></item>
+            /// <item><description><para><c>dmlAction</c>: The DML handling policy. Valid values: <c>Normal</c> (process the operation), <c>Ignore</c> (ignore the operation), <c>Filter</c> (conditionally process the operation, used when <c>dmlType</c> is <c>Update</c> or <c>Delete</c>), and <c>LogicalDelete</c> (perform a logical delete).</para>
+            /// </description></item>
+            /// <item><description><para><c>filterCondition</c>: The DML filter condition, used when <c>dmlAction</c> is <c>Filter</c>.</para>
+            /// </description></item>
             /// </list>
             /// <ol start="5">
-            /// <item><description>DefineIncrementalCondition</description></item>
+            /// <item><description>Incremental condition rule (<c>DefineIncrementalCondition</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;where&quot;:&quot;id &gt; 0&quot;}</description></item>
-            /// <item><description>Specifies the incremental filter condition.</description></item>
+            /// <item><description><para>Example: <c>{&quot;where&quot;:&quot;id &gt; 0&quot;}</c></para>
+            /// </description></item>
+            /// <item><description><para>The <c>WHERE</c> clause for the incremental condition.</para>
+            /// </description></item>
             /// </list>
             /// <ol start="6">
-            /// <item><description>DefineCycleScheduleSettings</description></item>
+            /// <item><description>Periodic scheduling rule (<c>DefineCycleScheduleSettings</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;cronExpress&quot;:&quot; \* \* \* \* \* \*&quot;, &quot;cycleType&quot;:&quot;1&quot;}</description></item>
-            /// <item><description>Specifies the scheduled task parameters.</description></item>
+            /// <item><description><para>Example: <c>{&quot;cronExpress&quot;:&quot; * * * * * *&quot;, &quot;cycleType&quot;:&quot;1&quot;}</c></para>
+            /// </description></item>
+            /// <item><description><para>Specifies the scheduling parameters for a periodic job.</para>
+            /// </description></item>
             /// </list>
             /// <ol start="7">
-            /// <item><description>DefinePartitionKey</description></item>
+            /// <item><description>Define partition key rule (<c>DefinePartitionKey</c>)</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>Example: {&quot;columns&quot;:[&quot;id&quot;]}</description></item>
-            /// <item><description>Specifies the partition key.</description></item>
+            /// <item><description><para>Example: <c>{&quot;columns&quot;:[&quot;id&quot;]}</c></para>
+            /// </description></item>
+            /// <item><description><para>Specifies the partition key.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -547,7 +811,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RuleExpression { get; set; }
 
             /// <summary>
-            /// <para>The rule name. When the action type and target type are the same, the rule name must be unique. The name cannot exceed 50 characters.</para>
+            /// <para>The name of the transformation rule. The name must be unique for a specific combination of <c>RuleActionType</c> and <c>RuleTargetType</c> and can be up to 50 characters long.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rename_rule_1</para>
@@ -557,11 +821,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The target type for the action. Valid values:</para>
+            /// <para>The type of the target object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Table</description></item>
-            /// <item><description>Schema</description></item>
-            /// <item><description>Database</description></item>
+            /// <item><description><para><c>Table</c> (table)</para>
+            /// </description></item>
+            /// <item><description><para><c>Schema</c> (schema)</para>
+            /// </description></item>
+            /// <item><description><para><c>Database</c> (database)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

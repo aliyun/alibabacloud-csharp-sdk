@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteParameterRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

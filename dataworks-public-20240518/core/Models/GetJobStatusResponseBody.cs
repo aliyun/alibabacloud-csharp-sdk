@@ -59,9 +59,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The type of the asynchronous task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Create</b>: The asynchronous task is used to create an object.</description></item>
-            /// <item><description><b>Update</b>: The asynchronous task is used to update an object.</description></item>
-            /// <item><description><b>Cancel</b>: The asynchronous task is used to cancel an operation.</description></item>
+            /// <item><description><para><b>Create</b>: The asynchronous task is used to create an object.</para>
+            /// </description></item>
+            /// <item><description><para><b>Update</b>: The asynchronous task is used to update an object.</para>
+            /// </description></item>
+            /// <item><description><para><b>Cancel</b>: The asynchronous task is used to cancel an operation.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,10 +77,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The status of the asynchronous task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Success</b></description></item>
-            /// <item><description><b>Fail</b></description></item>
-            /// <item><description><b>Cancel</b></description></item>
-            /// <item><description><b>Running</b></description></item>
+            /// <item><description><para><b>Success</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Fail</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Cancel</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Running</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

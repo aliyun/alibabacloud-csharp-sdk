@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateAgentSessionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The request ID provided by the client. This ID is returned in the response without modification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4758330557805415712</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The JSON-RPC version. The value is fixed at <c>2.0</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string Jsonrpc { get; set; }
 
+        /// <summary>
+        /// <para>The business parameters.</para>
+        /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]
         public string ParamsShrink { get; set; }

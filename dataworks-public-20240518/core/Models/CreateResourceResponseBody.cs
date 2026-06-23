@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>A5B97987-66EA-5563-9599-A2752292XXXX</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The ID of the file resource.</para>
+        /// <para>A5B97987-66EA-5563-9599-A2752292****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListResourceGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>Alibaba Cloud Resource Group ID</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2kqofrgXXXXX</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AliyunResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Alibaba Cloud tag list</para>
+        /// <para>The list of Alibaba Cloud tags.</para>
         /// </summary>
         [NameInMap("AliyunResourceTags")]
         [Validation(Required=false)]
         public List<ListResourceGroupsRequestAliyunResourceTags> AliyunResourceTags { get; set; }
         public class ListResourceGroupsRequestAliyunResourceTags : TeaModel {
             /// <summary>
-            /// <para>Tag Key</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag Value</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The name of a resource group, which is used for fuzzy match.</para>
+        /// <para>The name of the resource group. Fuzzy search is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -79,10 +79,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method of resource groups. Valid values:</para>
+        /// <para>The billing method of the resource group. Valid values include:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid</description></item>
-        /// <item><description>PostPaid</description></item>
+        /// <item><description><para><c>PrePaid</c>: subscription.</para>
+        /// </description></item>
+        /// <item><description><para><c>PostPaid</c>: pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -103,25 +105,33 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The types of resource groups to query. If you do not configure this parameter, only serverless resource groups are returned by default.</para>
+        /// <para>The types of the resource groups to query. <b>If this parameter is not specified, general-purpose resource groups are queried by default.</b></para>
         /// </summary>
         [NameInMap("ResourceGroupTypes")]
         [Validation(Required=false)]
         public List<string> ResourceGroupTypes { get; set; }
 
         /// <summary>
-        /// <para>The list of fields used for sorting. Fields such as TriggerTime and StartedTime are supported. You must configure this parameter in the Sorting field + Sort by (Desc/Asc). By default, results are sorted in ascending order. Valid values:</para>
+        /// <para>The sorting criterion for the results. The format is <c>FieldName SortOrder</c>. <c>SortOrder</c> can be <c>Asc</c> (ascending) or <c>Desc</c> (descending). If you do not specify <c>SortOrder</c>, the default is <c>Asc</c>. The following fields are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Id (Desc/Asc): the resource group ID</description></item>
-        /// <item><description>Name (Desc/Asc): the name of the resource group</description></item>
-        /// <item><description>Remark (Desc/Asc): the remarks of the resource group</description></item>
-        /// <item><description>Type (Desc/Asc): the type of the resource group</description></item>
-        /// <item><description>Status (Desc/Asc): the status of the resource group</description></item>
-        /// <item><description>Spec (Desc/Asc): the specifications of the resource group</description></item>
-        /// <item><description>CreateUser (Desc/Asc): the creator of the resource group</description></item>
-        /// <item><description>CreateTime (Desc/Asc): the time when the resource group is created</description></item>
+        /// <item><description><para><c>Id</c>: Resource group ID</para>
+        /// </description></item>
+        /// <item><description><para><c>Name</c>: Resource group name</para>
+        /// </description></item>
+        /// <item><description><para><c>Remark</c>: Resource group remarks</para>
+        /// </description></item>
+        /// <item><description><para><c>Type</c>: Resource group type</para>
+        /// </description></item>
+        /// <item><description><para><c>Status</c>: Resource group status</para>
+        /// </description></item>
+        /// <item><description><para><c>Spec</c>: Resource group specifications</para>
+        /// </description></item>
+        /// <item><description><para><c>CreateUser</c>: The user who created the resource group</para>
+        /// </description></item>
+        /// <item><description><para><c>CreateTime</c>: The time when the resource group was created</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: CreateTime Asc</para>
+        /// <para>Default value: <c>CreateTime Asc</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime Asc</para>
@@ -131,7 +141,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The statuses of resource groups.</para>
+        /// <para>The statuses of the resource groups to query.</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

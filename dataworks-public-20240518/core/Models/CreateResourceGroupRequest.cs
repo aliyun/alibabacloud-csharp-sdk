@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string AliyunResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of Alibaba Cloud tags.</para>
         /// </summary>
         [NameInMap("AliyunResourceTags")]
         [Validation(Required=false)]
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal.</para>
+        /// <para>Specifies whether to enable auto-renewal for the subscription.</para>
         /// </summary>
         [NameInMap("AutoRenewEnabled")]
         [Validation(Required=false)]
         public bool? AutoRenewEnabled { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>A client token to ensure the idempotence of the request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the serverless resource group. The name can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_). The name must start with a letter.</para>
+        /// <para>The name of the general-purpose resource group. It must be up to 128 characters long, start with a letter, and contain only letters, digits, and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PaymentDuration { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values: Month and Year.</para>
+        /// <para>The unit of the subscription duration. Valid values: <c>Month</c> and <c>Year</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentDurationUnit { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the serverless resource group. Valid values: PrePaid and PostPaid. The value PrePaid indicates the subscription billing method, and the value PostPaid indicates the pay-as-you-go billing method.</para>
+        /// <para>The billing method of the resource group. <c>PrePaid</c> indicates subscription, and <c>PostPaid</c> indicates pay-as-you-go.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The description of the serverless resource group. The description can be a maximum of 128 characters in length and can contain letters, digits, and underscores (_).</para>
+        /// <para>The remark for the general-purpose resource group. It can be up to 128 characters long and can contain letters, Chinese characters, digits, and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>Create a serverless resource group for common tasks</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the serverless resource group. Unit: CU. This parameter is required only if you set the PaymentType parameter to PrePaid.</para>
+        /// <para>The specification of the resource group, in CUs. This parameter is required when <c>PaymentType</c> is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -129,22 +129,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? Spec { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) with which the serverless resource group is associated by default.</para>
+        /// <para>The ID of the VPC to be bound by default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-m2et4f3oc8msfbccXXXXX</para>
+        /// <para>vpc-m2et4f3oc8m****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch with which the serverless resource group is associated by default.</para>
+        /// <para>The ID of the vSwitch to be bound by default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-uf8usrhs7hjd9amsXXXXX</para>
+        /// <para>vsw-uf8usrhs7hjd9****</para>
         /// </summary>
         [NameInMap("VswitchId")]
         [Validation(Required=false)]

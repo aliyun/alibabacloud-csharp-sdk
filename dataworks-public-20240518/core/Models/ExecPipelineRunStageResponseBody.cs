@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <item><description><para>true</para>
         /// </description></item>
         /// <item><description><para>false</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note:</b> The value of this parameter indicates only whether the stage is triggered but does not indicate whether the execution of the stage is successful.</para>
         /// </description></item>
         /// </list>

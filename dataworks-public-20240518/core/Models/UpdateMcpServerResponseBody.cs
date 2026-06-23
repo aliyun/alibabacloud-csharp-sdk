@@ -9,11 +9,17 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateMcpServerResponseBody : TeaModel {
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description>The details of the updated MCP Server.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("McpServer")]
         [Validation(Required=false)]
         public UpdateMcpServerResponseBodyMcpServer McpServer { get; set; }
         public class UpdateMcpServerResponseBodyMcpServer : TeaModel {
             /// <summary>
+            /// <para>The creation time. This value is a millisecond timestamp.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
+            /// <para><b>The last modification time. This value is a millisecond timestamp.</b></para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
+            /// <para><b>The name of the MCP Server.</b></para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-mcp-server</para>
             /// </summary>
@@ -44,6 +53,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>824F80BA-1778-5D8A-BAFF-668A4D9C4CC7</para>
         /// </summary>

@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The parent collection ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>category.123</para>
+        /// <para>as78d756asd</para>
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
@@ -43,9 +43,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The collection name.</para>
         /// <list type="bullet">
-        /// <item><description>Category</description></item>
-        /// <item><description>Album</description></item>
-        /// <item><description>AlbumCategory: Album subcategory.</description></item>
+        /// <item><description><para>Category</para>
+        /// </description></item>
+        /// <item><description><para>Album</para>
+        /// </description></item>
+        /// <item><description><para>AlbumCategory: Album subcategory.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

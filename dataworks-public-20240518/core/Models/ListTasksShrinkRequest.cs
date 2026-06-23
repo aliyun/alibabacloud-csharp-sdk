@@ -60,8 +60,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The workspace environment.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod</description></item>
-        /// <item><description>Dev</description></item>
+        /// <item><description><para>Prod</para>
+        /// </description></item>
+        /// <item><description><para>Dev</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,26 +116,46 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ODPS_SQL</description></item>
-        /// <item><description>SPARK</description></item>
-        /// <item><description>PY_ODPS</description></item>
-        /// <item><description>PY_ODPS3</description></item>
-        /// <item><description>ODPS_SCRIPT</description></item>
-        /// <item><description>ODPS_MR</description></item>
-        /// <item><description>COMPONENT_SQL</description></item>
-        /// <item><description>EMR_HIVE</description></item>
-        /// <item><description>EMR_MR</description></item>
-        /// <item><description>EMR_SPARK_SQL</description></item>
-        /// <item><description>EMR_SPARK</description></item>
-        /// <item><description>EMR_SHELL</description></item>
-        /// <item><description>EMR_PRESTO</description></item>
-        /// <item><description>EMR_IMPALA</description></item>
-        /// <item><description>SPARK_STREAMING</description></item>
-        /// <item><description>EMR_KYUUBI</description></item>
-        /// <item><description>EMR_TRINO</description></item>
-        /// <item><description>HOLOGRES_SQL</description></item>
-        /// <item><description>HOLOGRES_SYNC_DDL</description></item>
-        /// <item><description>HOLOGRES_SYNC_DATA</description></item>
+        /// <item><description><para>ODPS_SQL</para>
+        /// </description></item>
+        /// <item><description><para>SPARK</para>
+        /// </description></item>
+        /// <item><description><para>PY_ODPS</para>
+        /// </description></item>
+        /// <item><description><para>PY_ODPS3</para>
+        /// </description></item>
+        /// <item><description><para>ODPS_SCRIPT</para>
+        /// </description></item>
+        /// <item><description><para>ODPS_MR</para>
+        /// </description></item>
+        /// <item><description><para>COMPONENT_SQL</para>
+        /// </description></item>
+        /// <item><description><para>EMR_HIVE</para>
+        /// </description></item>
+        /// <item><description><para>EMR_MR</para>
+        /// </description></item>
+        /// <item><description><para>EMR_SPARK_SQL</para>
+        /// </description></item>
+        /// <item><description><para>EMR_SPARK</para>
+        /// </description></item>
+        /// <item><description><para>EMR_SHELL</para>
+        /// </description></item>
+        /// <item><description><para>EMR_PRESTO</para>
+        /// </description></item>
+        /// <item><description><para>EMR_IMPALA</para>
+        /// </description></item>
+        /// <item><description><para>SPARK_STREAMING</para>
+        /// </description></item>
+        /// <item><description><para>EMR_KYUUBI</para>
+        /// </description></item>
+        /// <item><description><para>EMR_TRINO</para>
+        /// </description></item>
+        /// <item><description><para>HOLOGRES_SQL</para>
+        /// </description></item>
+        /// <item><description><para>HOLOGRES_SYNC_DDL</para>
+        /// </description></item>
+        /// <item><description><para>HOLOGRES_SYNC_DATA</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -147,9 +169,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The run mode when triggered. Valid only if TriggerType is Scheduler.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pause</description></item>
-        /// <item><description>Skip</description></item>
-        /// <item><description>Normal</description></item>
+        /// <item><description><para>Pause</para>
+        /// </description></item>
+        /// <item><description><para>Skip</para>
+        /// </description></item>
+        /// <item><description><para>Normal</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,8 +188,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The trigger type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduler: Triggered by schedule.</description></item>
-        /// <item><description>Manual: Triggered manually.</description></item>
+        /// <item><description><para>Scheduler: Triggered by schedule.</para>
+        /// </description></item>
+        /// <item><description><para>Manual: Triggered manually.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

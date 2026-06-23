@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description><para>Prod: production environment</para>
+        /// </description></item>
+        /// <item><description><para>Dev: development environment</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,9 +86,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The field used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ModifyTime (Desc/Asc)</description></item>
-        /// <item><description>CreateTime (Desc/Asc)</description></item>
-        /// <item><description>Id (Desc/Asc)</description></item>
+        /// <item><description><para>ModifyTime (Desc/Asc)</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime (Desc/Asc)</para>
+        /// </description></item>
+        /// <item><description><para>Id (Desc/Asc)</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Id Desc.</para>
         /// 
@@ -97,6 +102,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
+        /// <summary>
+        /// <para>List of tags. A result is returned if it matches any one of the specified tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
@@ -104,9 +112,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The trigger type.</para>
         /// <list type="bullet">
-        /// <item><description>Scheduler</description></item>
-        /// <item><description>Manual</description></item>
-        /// <item><description>TriggerWorkflow</description></item>
+        /// <item><description><para>Scheduler</para>
+        /// </description></item>
+        /// <item><description><para>Manual</para>
+        /// </description></item>
+        /// <item><description><para>TriggerWorkflow</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

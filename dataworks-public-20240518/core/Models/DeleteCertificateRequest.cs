@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the certificate file.</para>
+        /// <para>The unique identifier of the certificate file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the certificate file belongs.</para>
+        /// <para>The ID of the project to which the certificate file belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

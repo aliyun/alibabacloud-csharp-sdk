@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListColumnsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination result.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListColumnsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListColumnsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The columns in the table.</para>
+            /// <para>The table columns.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

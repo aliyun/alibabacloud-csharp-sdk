@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The change type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: addition</description></item>
-        /// <item><description>1: update</description></item>
-        /// <item><description>2: deletion</description></item>
+        /// <item><description><para>0: addition</para>
+        /// </description></item>
+        /// <item><description><para>1: update</para>
+        /// </description></item>
+        /// <item><description><para>2: deletion</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

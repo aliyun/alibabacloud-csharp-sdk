@@ -45,13 +45,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <list type="bullet">
-                /// <item><description>UNPUBLISHED(0)</description></item>
-                /// <item><description>SUCCESS(1)</description></item>
-                /// <item><description>ERROR(2)</description></item>
-                /// <item><description>CLONED(3)</description></item>
-                /// <item><description>DEPLOY_ERROR(4)</description></item>
-                /// <item><description>CLONING(5)</description></item>
-                /// <item><description>REJECT(6)</description></item>
+                /// <item><description><para>UNPUBLISHED(0)</para>
+                /// </description></item>
+                /// <item><description><para>SUCCESS(1)</para>
+                /// </description></item>
+                /// <item><description><para>ERROR(2)</para>
+                /// </description></item>
+                /// <item><description><para>CLONED(3)</para>
+                /// </description></item>
+                /// <item><description><para>DEPLOY_ERROR(4)</para>
+                /// </description></item>
+                /// <item><description><para>CLONING(5)</para>
+                /// </description></item>
+                /// <item><description><para>REJECT(6)</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -73,8 +80,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The validation status of nodes in the deployment package. For packages deployed to the development environment (toEnviroment=1), you can only proceed to deploy to production if the package Status is 1 (succeeded) and CheckingStatus is empty (validation complete).</para>
                 /// <list type="bullet">
-                /// <item><description>7: Validation failed</description></item>
-                /// <item><description>8: Validation in progress</description></item>
+                /// <item><description><para>7: Validation failed</para>
+                /// </description></item>
+                /// <item><description><para>8: Validation in progress</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -221,8 +230,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Indicates whether the call succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

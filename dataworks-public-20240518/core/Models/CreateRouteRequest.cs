@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1000</para>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("NetworkId")]
         [Validation(Required=false)]

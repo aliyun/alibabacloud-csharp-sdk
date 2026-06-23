@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the deletion is successful.</para>
+        /// <para>Indicates whether the deletion was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Successful</description></item>
-        /// <item><description>false: Failed</description></item>
+        /// <item><description>true: successful</description></item>
+        /// <item><description>false: failed</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

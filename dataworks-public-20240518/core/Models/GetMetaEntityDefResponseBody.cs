@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetMetaEntityDefResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The custom entity definition.</para>
+        /// </summary>
         [NameInMap("MetaEntityDef")]
         [Validation(Required=false)]
         public MetaEntityDef MetaEntityDef { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C636A747-7E4E-594D-94CD-2B4F8A9A9A63</para>
@@ -24,6 +27,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

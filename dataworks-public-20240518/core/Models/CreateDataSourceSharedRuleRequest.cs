@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataSourceId { get; set; }
 
         /// <summary>
-        /// <para>Share data sources to the target project environment, including</para>
+        /// <para>The environment of the target workspace to which the data source is shared. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dev (Development Environment)</description></item>
-        /// <item><description>Prod (production environment)</description></item>
+        /// <item><description><para>Dev: development environment</para>
+        /// </description></item>
+        /// <item><description><para>Prod: production environment</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The user with which you want to share the data source. If you do not configure this parameter, the data source is shared to an entire workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1107550004253538</para>
+        /// <para>110755000****</para>
         /// </summary>
         [NameInMap("SharedUser")]
         [Validation(Required=false)]

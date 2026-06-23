@@ -53,8 +53,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>Whether to skip the pre-deployment check after the file is submitted:</para>
         /// <list type="bullet">
-        /// <item><description>false: Do not skip. After the file is submitted, the system automatically triggers the pre-deployment check. The file becomes available for deployment only after the check is passed.</description></item>
-        /// <item><description>true: Skip. After the file is submitted, the system does not trigger the pre-deployment check. The file can proceed directly to deployment.</description></item>
+        /// <item><description><para>false: Do not skip. After the file is submitted, the system automatically triggers the pre-deployment check. The file becomes available for deployment only after the check is passed.</para>
+        /// </description></item>
+        /// <item><description><para>true: Skip. After the file is submitted, the system does not trigger the pre-deployment check. The file can proceed directly to deployment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

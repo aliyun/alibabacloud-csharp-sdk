@@ -96,8 +96,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The environment of the workspace. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Prod</description></item>
-                /// <item><description>Dev</description></item>
+                /// <item><description><para>Prod</para>
+                /// </description></item>
+                /// <item><description><para>Dev</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -236,9 +238,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The running mode of the workflow after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Pause</description></item>
-                    /// <item><description>Skip</description></item>
-                    /// <item><description>Normal</description></item>
+                    /// <item><description><para>Pause</para>
+                    /// </description></item>
+                    /// <item><description><para>Skip</para>
+                    /// </description></item>
+                    /// <item><description><para>Normal</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -261,8 +266,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The trigger type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
-                    /// <item><description>Manual: manual trigger</description></item>
+                    /// <item><description><para>Scheduler: scheduling cycle-based trigger</para>
+                    /// </description></item>
+                    /// <item><description><para>Manual: manual trigger</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

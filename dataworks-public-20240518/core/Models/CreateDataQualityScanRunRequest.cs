@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateDataQualityScanRunRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the data quality monitor.</para>
+        /// <para>The data quality scan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20000001</para>
@@ -20,27 +20,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? DataQualityScanId { get; set; }
 
         /// <summary>
-        /// <para>The parameter settings used during the actual run. The <c>triggerTime</c> parameter is required.</para>
+        /// <para>The parameters for the run. The <c>triggerTime</c> parameter is required.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<CreateDataQualityScanRunRequestParameters> Parameters { get; set; }
         public class CreateDataQualityScanRunRequestParameters : TeaModel {
             /// <summary>
-            /// <para>The parameter name.</para>
+            /// <para>The name of the parameter. The only supported value is:</para>
+            /// <list type="bullet">
+            /// <item><description>triggerTime</description></item>
+            /// </list>
+            /// <para>No other scheduling parameters are currently supported.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>regiondt</para>
+            /// <para>triggerTime</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter value. You can use a scheduling time expression.</para>
+            /// <para>The parameter value.</para>
+            /// <list type="bullet">
+            /// <item><description>If the parameter name is triggerTime, this value must be the trigger time as a timestamp.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-shanghai$[yyyy-mm-dd-1]</para>
+            /// <para>1775812636</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -59,14 +66,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The scheduling resource group used when running the data quality monitor. This resource group uses the same data structure as in the scheduling API.</para>
+        /// <para>Specifies the scheduling resource group used to run the data quality scan. This object uses the same data structure as the scheduling API.</para>
         /// </summary>
         [NameInMap("RuntimeResource")]
         [Validation(Required=false)]
         public CreateDataQualityScanRunRequestRuntimeResource RuntimeResource { get; set; }
         public class CreateDataQualityScanRunRequestRuntimeResource : TeaModel {
             /// <summary>
-            /// <para>The Compute Resources (CUs) reserved for running the data quality monitor in the resource group.</para>
+            /// <para>The number of compute units (CUs) to reserve from the resource group for the data quality scan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -86,7 +93,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The image settings used when running the data quality monitor in the resource group.</para>
+            /// <para>The image configuration for running the data quality scan on the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxxxxx</para>

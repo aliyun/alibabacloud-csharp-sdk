@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateDataQualityRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The check settings for sample data.</para>
+        /// <para>The sample verification settings.</para>
         /// </summary>
         [NameInMap("CheckingConfig")]
         [Validation(Required=false)]
         public string CheckingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the rule. The description can be up to 500 characters in length.</para>
+        /// <para>The rule description. The maximum length is 500 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a odps _sql task</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule.</para>
+        /// <para>Specifies whether the rule is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The operations that you can perform after the rule-based check fails.</para>
+        /// <para>The list of issue handlers for data quality rule verification.</para>
         /// </summary>
         [NameInMap("ErrorHandlers")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</para>
+        /// <para>The rule name. The name can be a combination of digits, English letters, Chinese characters, and half-width or full-width punctuation. The maximum length is 255 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The table cannot be empty.</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace Settings page to obtain the workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,14 +76,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The sampling settings.</para>
+        /// <para>The settings required for sample collection.</para>
         /// </summary>
         [NameInMap("SamplingConfig")]
         [Validation(Required=false)]
         public string SamplingConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The strength of the rule. Valid values:</para>
+        /// <para>The severity level of the rule for the business (corresponding to strong/weak rules on the page). Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Normal</description></item>
         /// <item><description>High</description></item>
@@ -97,10 +97,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template used by the rule.</para>
+        /// <para>The unique identifier of the rule template referenced by the rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>system::user_defined</para>
+        /// <para>SYSTEM:table:table_count:fixed</para>
         /// </summary>
         [NameInMap("TemplateCode")]
         [Validation(Required=false)]

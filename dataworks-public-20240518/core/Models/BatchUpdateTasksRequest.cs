@@ -58,8 +58,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The project environment.</para>
             /// <list type="bullet">
-            /// <item><description>Prod: Production</description></item>
-            /// <item><description>Dev: Development</description></item>
+            /// <item><description><para>Prod: Production</para>
+            /// </description></item>
+            /// <item><description><para>Dev: Development</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,9 +115,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The rerun mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AllDenied: The task cannot be rerun.</description></item>
-            /// <item><description>FailureAllowed: The task can be rerun only after it fails.</description></item>
-            /// <item><description>AllAllowed: The task can always be rerun.</description></item>
+            /// <item><description><para>AllDenied: The task cannot be rerun.</para>
+            /// </description></item>
+            /// <item><description><para>FailureAllowed: The task can be rerun only after it fails.</para>
+            /// </description></item>
+            /// <item><description><para>AllAllowed: The task can always be rerun.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -244,9 +249,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The running mode of the task after it is triggered. This parameter takes effect only if the Type parameter is set to Scheduler. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Pause</description></item>
-                /// <item><description>Skip</description></item>
-                /// <item><description>Normal</description></item>
+                /// <item><description><para>Pause</para>
+                /// </description></item>
+                /// <item><description><para>Skip</para>
+                /// </description></item>
+                /// <item><description><para>Normal</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -269,8 +277,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The trigger type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduler: periodically triggered</description></item>
-                /// <item><description>Manual</description></item>
+                /// <item><description><para>Scheduler: periodically triggered</para>
+                /// </description></item>
+                /// <item><description><para>Manual</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

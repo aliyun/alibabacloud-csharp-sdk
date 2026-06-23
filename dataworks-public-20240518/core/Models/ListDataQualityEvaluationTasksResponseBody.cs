@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDataQualityEvaluationTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>质量校验任务分页查询结果</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListDataQualityEvaluationTasksResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDataQualityEvaluationTasksResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The data quality monitoring tasks.</para>
+            /// <para>质量校验任务</para>
             /// </summary>
             [NameInMap("DataQualityEvaluationTasks")]
             [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? DataSourceId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the data quality monitoring task. The description can be up to 65,535 characters in length.</para>
+                /// <para>数据质量校验任务描述，最长65535个字符</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This is a daily run data quality evaluation plan</para>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The callback configurations of the task during the instance lifecycle. Blocking an auto triggered node is a type of callback event. Only this type is supported.</para>
+                /// <para>数据质量校验任务实例生命周期中的回调设置，目前只支持一个阻塞调度任务的Hook</para>
                 /// </summary>
                 [NameInMap("Hooks")]
                 [Validation(Required=false)]
                 public List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksHooks> Hooks { get; set; }
                 public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksHooks : TeaModel {
                     /// <summary>
-                    /// <para>The trigger configuration of the callback event.</para>
+                    /// <para>Hook触发条件</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>${severity} == &quot;High&quot; AND ${status} == &quot;Critical&quot;</para>
@@ -55,9 +55,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Condition { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the callback event. Valid values:</para>
+                    /// <para>后续处理动作类型</para>
                     /// <list type="bullet">
-                    /// <item><description>BlockTaskInstance. The value indicates that an auto triggered node is blocked.</description></item>
+                    /// <item><description>BlockTaskInstance：阻塞DataWorks任务实例执行</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the data quality monitoring task.</para>
+                /// <para>数据质量校验任务ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data quality monitoring task. The name can be up to 255 characters in length and can contain digits, letters, and punctuation marks.</para>
+                /// <para>数据质量校验任务名称，数字、英文字母、汉字、半角全角标点符号组合，最长255个字符。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Data quality verification task</para>
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The configurations for alert notifications.</para>
+                /// <para>告警配置</para>
                 /// </summary>
                 [NameInMap("Notifications")]
                 [Validation(Required=false)]
                 public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotifications Notifications { get; set; }
                 public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotifications : TeaModel {
                     /// <summary>
-                    /// <para>The trigger condition of the alert notification.</para>
+                    /// <para>Notification触发条件</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>${severity} == &quot;High&quot;</para>
@@ -107,21 +107,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string Condition { get; set; }
 
                     /// <summary>
-                    /// <para>The configurations for the alert notification.</para>
+                    /// <para>具体的告警设置</para>
                     /// </summary>
                     [NameInMap("Notifications")]
                     [Validation(Required=false)]
                     public List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotifications> Notifications { get; set; }
                     public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotifications : TeaModel {
                         /// <summary>
-                        /// <para>The alert notification methods.</para>
+                        /// <para>告警方式配置</para>
                         /// </summary>
                         [NameInMap("NotificationChannels")]
                         [Validation(Required=false)]
                         public List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationChannels> NotificationChannels { get; set; }
                         public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationChannels : TeaModel {
                             /// <summary>
-                            /// <para>The alert notification methods.</para>
+                            /// <para>告警方式</para>
                             /// </summary>
                             [NameInMap("Channels")]
                             [Validation(Required=false)]
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         }
 
                         /// <summary>
-                        /// <para>The alert recipients.</para>
+                        /// <para>告警接收人配置</para>
                         /// </summary>
                         [NameInMap("NotificationReceivers")]
                         [Validation(Required=false)]
                         public List<ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationReceivers> NotificationReceivers { get; set; }
                         public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksNotificationsNotificationsNotificationReceivers : TeaModel {
                             /// <summary>
-                            /// <para>The extended information in the JSON format. For example, the DingTalk chatbot can remind all members in a DingTalk group by using the at sign (@).</para>
+                            /// <para>扩展信息，格式为 json，例如钉钉机器人支持 at 所有人</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{&quot;atAll&quot;:&quot;true&quot;}</para>
@@ -147,13 +147,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string Extension { get; set; }
 
                             /// <summary>
-                            /// <para>The type of the alert recipient. Valid values:</para>
+                            /// <para>告警接收人类型</para>
                             /// <list type="bullet">
-                            /// <item><description>AliUid: Alibaba Cloud account ID</description></item>
-                            /// <item><description>WebhookUrl: URL of a custom webhook</description></item>
-                            /// <item><description>DingdingUrl: DingTalk chatbot URL</description></item>
-                            /// <item><description>FeishuUrl: Lark chatbot URL</description></item>
-                            /// <item><description>WeixinUrl: WeCom chatbot URL</description></item>
+                            /// <item><description>AliUid - 阿里云账号Uid</description></item>
+                            /// <item><description>WebhookUrl - 自定义 webhook URL</description></item>
+                            /// <item><description>DingdingUrl - 钉钉机器人Url</description></item>
+                            /// <item><description>FeishuUrl - 飞书机器人Url</description></item>
+                            /// <item><description>WeixinUrl - 企微机器人Url</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                             public string ReceiverType { get; set; }
 
                             /// <summary>
-                            /// <para>The alert recipients.</para>
+                            /// <para>告警接收人具体值</para>
                             /// </summary>
                             [NameInMap("ReceiverValues")]
                             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The DataWorks workspace ID.</para>
+                /// <para>DataWorks工作空间ID</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -187,24 +187,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The configuration of the data source. The value of the queue field is default, and that of the sqlEngine field can be set to SPARK_SQL, KYUUBI, PRESTO_SQL, or HIVE_SQL. The value default indicates the YARN queue for E-MapReduce (EMR) tasks.</para>
+                /// <para>使用数据源时的一些设置，目前只支持指定EMR的yarn队列、采集EMR表时SQL引擎指定为SPARK_SQL|KYUUBI|PRESTO_SQL|HIVE_SQL</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK-SQL&quot; }</para>
+                /// <para>{ &quot;queue&quot;: &quot;default&quot;, &quot;sqlEngine&quot;: &quot;SPARK_SQL&quot; }</para>
                 /// </summary>
                 [NameInMap("RuntimeConf")]
                 [Validation(Required=false)]
                 public string RuntimeConf { get; set; }
 
                 /// <summary>
-                /// <para>The monitored object of the task.</para>
+                /// <para>数据质量校验任务的监控对象</para>
                 /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget Target { get; set; }
                 public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTarget : TeaModel {
                     /// <summary>
-                    /// <para>The type of the database to which the table belongs. Valid values:</para>
+                    /// <para>表类型的数据集，表所属的数据库类型</para>
                     /// <list type="bullet">
                     /// <item><description>maxcompute</description></item>
                     /// <item><description>emr</description></item>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string DatabaseType { get; set; }
 
                     /// <summary>
-                    /// <para>The configuration of the partitioned table.</para>
+                    /// <para>分区表的分区设置</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ds=$[yyyymmdd-1]</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string PartitionSpec { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the table in Data Map.</para>
+                    /// <para>表在数据地图中的唯一ID</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps.unit_test.tb_unit_test</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     public string TableGuid { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the monitored object. Valid values:</para>
+                    /// <para>监控对象类型</para>
                     /// <list type="bullet">
                     /// <item><description>Table</description></item>
                     /// </list>
@@ -258,23 +258,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 }
 
                 /// <summary>
-                /// <para>The trigger configuration of the task.</para>
+                /// <para>数据质量校验任务的触发配置</para>
                 /// </summary>
                 [NameInMap("Trigger")]
                 [Validation(Required=false)]
                 public ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTrigger Trigger { get; set; }
                 public class ListDataQualityEvaluationTasksResponseBodyPagingInfoDataQualityEvaluationTasksTrigger : TeaModel {
                     /// <summary>
-                    /// <para>The IDs of the auto triggered nodes of which the instances are successfully run. This parameter takes effect only if the Type parameter is set to ByScheduledTaskInstance.</para>
+                    /// <para>type=ByScheduledTaskInstance时生效
+                    /// ,具体指明哪些调度节点的实例执行成功后可以触发</para>
                     /// </summary>
                     [NameInMap("TaskIds")]
                     [Validation(Required=false)]
                     public List<long?> TaskIds { get; set; }
 
                     /// <summary>
-                    /// <para>The trigger condition of the task. Valid values:</para>
+                    /// <para>何种事件可以触发质量校验任务执行</para>
                     /// <list type="bullet">
-                    /// <item><description>ByScheduledTaskInstance. The value indicates that the task is triggered when the instance of an auto triggered node is successfully run.</description></item>
+                    /// <item><description>ByScheduledTaskInstance：调度实例运行成功</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -289,7 +290,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>页码</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -299,7 +300,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>页大小</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -309,7 +310,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>总条数</para>
             /// 
             /// <b>Example:</b>
             /// <para>131</para>
@@ -321,10 +322,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>API请求ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>691CA452-D37A-4ED0-9441</para>
+        /// <para>691CA452-D37A-4ED0-****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

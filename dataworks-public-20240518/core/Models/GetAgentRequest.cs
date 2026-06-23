@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the skill to retrieve.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

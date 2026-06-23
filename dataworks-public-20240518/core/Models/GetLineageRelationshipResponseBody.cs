@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetLineageRelationshipResponseBody : TeaModel {
         /// <summary>
-        /// <para>The lineage structure.</para>
+        /// <para>The lineage relationship object.</para>
         /// </summary>
         [NameInMap("LineageRelationship")]
         [Validation(Required=false)]

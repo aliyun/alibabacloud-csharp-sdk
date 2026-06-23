@@ -13,10 +13,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The ID. You can refer to the response of the ListColumns operation and the <a href="https://help.aliyun.com/document_detail/2880092.html">description of concepts related to metadata entities.</a></para>
         /// <para>The format: <c>${EntityType}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Schema name}:${Table name}:${Column name}</c>. Use empty strings as placeholders for levels that do not exist.</para>
         /// <remarks>
-        /// <para> For the MaxCompute and DLF types, use an empty string as the placeholder for the instance ID. For MaxCompute, the database name refers to the MaxCompute project name. If the project has schema enabled, you must specify the schema name. Otherwise, use an empty string as the placeholder for the schema name.</para>
+        /// <para>For the MaxCompute and DLF types, use an empty string as the placeholder for the instance ID. For MaxCompute, the database name refers to the MaxCompute project name. If the project has schema enabled, you must specify the schema name. Otherwise, use an empty string as the placeholder for the schema name.</para>
         /// </remarks>
         /// <remarks>
-        /// <para> The catalog identifier of the StarRocks is the catalog name, and the catalog identifier of the DLF type is the catalog ID. Other types do not support catalog levels. Use empty strings as placeholders.</para>
+        /// <para>The catalog identifier of the StarRocks is the catalog name, and the catalog identifier of the DLF type is the catalog ID. Other types do not support catalog levels. Use empty strings as placeholders.</para>
         /// </remarks>
         /// <para>Examples of common ID formats</para>
         /// <para><c>maxcompute-column:::project_name:[schema_name]:table_name:column_name</c></para>
@@ -25,20 +25,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para><c>holo-column:instance_id::database_name:schema_name:table_name:column_name</c></para>
         /// <para><c>mysql-column:(instance_id|encoded_jdbc_url)::database_name::table_name:column_name</c></para>
         /// <remarks>
-        /// <para>\
-        /// <c>instance_id</c>: the ID of the instance, which is required when the data source is registered in instance mode.\
-        /// <c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string, which is required when the data source is registered via a connection string.\
-        /// <c>catalog_id</c>: The DLF catalog ID.\
-        /// <c>project_name</c>: The MaxCompute project name.\
-        /// <c>database_name</c>: The database name.\
-        /// <c>schema_name</c>: The schema name. For the MaxCompute type, this is required only if the project has enabled schema; otherwise, use an empty string as a placeholder.\
-        /// <c>table_name</c>: The table name.\
+        /// <para><br><c>instance_id</c>: the ID of the instance, which is required when the data source is registered in instance mode.<br>
+        /// <c>encoded_jdbc_url</c>: The URL-encoded JDBC connection string, which is required when the data source is registered via a connection string.<br>
+        /// <c>catalog_id</c>: The DLF catalog ID.<br>
+        /// <c>project_name</c>: The MaxCompute project name.<br>
+        /// <c>database_name</c>: The database name.<br>
+        /// <c>schema_name</c>: The schema name. For the MaxCompute type, this is required only if the project has enabled schema; otherwise, use an empty string as a placeholder.<br>
+        /// <c>table_name</c>: The table name.<br>
         /// <c>column_name</c>: The field name.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>maxcompute-column:11075xxxx::test_project:test_schema:test_table:test_column</para>
+        /// <para>maxcompute-column:::project_name:[schema_name]:table_name:column_name</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string BundleUrl { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>数据分析技能</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
@@ -49,6 +53,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string SkillMdOverride { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>初版</para>
+        /// </summary>
         [NameInMap("VersionNote")]
         [Validation(Required=false)]
         public string VersionNote { get; set; }

@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The collection description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test category</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The collection name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>category.123</para>
+                /// <para>7a65sd7aasd</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <para>The ID of the parent collection. Can be empty.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>category.1</para>
+                /// <para>as78d756asd</para>
                 /// </summary>
                 [NameInMap("ParentId")]
                 [Validation(Required=false)]
@@ -100,9 +103,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The collection type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Category</description></item>
-                /// <item><description>Album</description></item>
-                /// <item><description>AlbumCategory: Album subcategory</description></item>
+                /// <item><description><para>Category</para>
+                /// </description></item>
+                /// <item><description><para>Album</para>
+                /// </description></item>
+                /// <item><description><para>AlbumCategory: Album subcategory</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -150,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E25887B7-579C-54A5-9C4F-83A0DE367DDE</para>
+        /// <para>E25887B7-XXXX-54A5-9C4F-83A0DE367DDE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

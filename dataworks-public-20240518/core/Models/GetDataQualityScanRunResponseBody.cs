@@ -122,10 +122,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The final comparison result status.</para>
                     /// <list type="bullet">
-                    /// <item><description>Pass</description></item>
-                    /// <item><description>Error</description></item>
-                    /// <item><description>Warn</description></item>
-                    /// <item><description>Fail</description></item>
+                    /// <item><description><para>Pass</para>
+                    /// </description></item>
+                    /// <item><description><para>Error</para>
+                    /// </description></item>
+                    /// <item><description><para>Warn</para>
+                    /// </description></item>
+                    /// <item><description><para>Fail</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -168,11 +172,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The validation result status.</para>
                 /// <list type="bullet">
-                /// <item><description>Pass</description></item>
-                /// <item><description>Running</description></item>
-                /// <item><description>Error</description></item>
-                /// <item><description>Warn</description></item>
-                /// <item><description>Fail</description></item>
+                /// <item><description><para>Pass</para>
+                /// </description></item>
+                /// <item><description><para>Running</para>
+                /// </description></item>
+                /// <item><description><para>Error</para>
+                /// </description></item>
+                /// <item><description><para>Warn</para>
+                /// </description></item>
+                /// <item><description><para>Fail</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -201,8 +210,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The workspace environment to which the compute engine belongs.</para>
                     /// <list type="bullet">
-                    /// <item><description>Prod</description></item>
-                    /// <item><description>Dev</description></item>
+                    /// <item><description><para>Prod</para>
+                    /// </description></item>
+                    /// <item><description><para>Dev</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -232,9 +243,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The type of the compute engine. Only EMR compute engines support these settings.</para>
                         /// <list type="bullet">
-                        /// <item><description>Hive</description></item>
-                        /// <item><description>Spark</description></item>
-                        /// <item><description>Kyuubi</description></item>
+                        /// <item><description><para>Hive</para>
+                        /// </description></item>
+                        /// <item><description><para>Spark</para>
+                        /// </description></item>
+                        /// <item><description><para>Kyuubi</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -513,8 +527,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The trigger method of the data quality monitor.</para>
                     /// <list type="bullet">
-                    /// <item><description>ByManual</description></item>
-                    /// <item><description>BySchedule</description></item>
+                    /// <item><description><para>ByManual</para>
+                    /// </description></item>
+                    /// <item><description><para>BySchedule</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -531,11 +547,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The current running status.</para>
             /// <list type="bullet">
-            /// <item><description>Pass</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Error</description></item>
-            /// <item><description>Warn</description></item>
-            /// <item><description>Fail</description></item>
+            /// <item><description><para>Pass</para>
+            /// </description></item>
+            /// <item><description><para>Running</para>
+            /// </description></item>
+            /// <item><description><para>Error</para>
+            /// </description></item>
+            /// <item><description><para>Warn</para>
+            /// </description></item>
+            /// <item><description><para>Fail</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

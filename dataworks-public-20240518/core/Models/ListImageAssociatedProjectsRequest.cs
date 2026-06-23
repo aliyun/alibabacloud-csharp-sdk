@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListImageAssociatedProjectsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

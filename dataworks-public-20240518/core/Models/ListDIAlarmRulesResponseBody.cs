@@ -79,11 +79,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The metric type in the alert rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Heartbeat</description></item>
-                /// <item><description>FailoverCount</description></item>
-                /// <item><description>Delay</description></item>
-                /// <item><description>DdlReport</description></item>
-                /// <item><description>ResourceUtilization</description></item>
+                /// <item><description><para>Heartbeat</para>
+                /// </description></item>
+                /// <item><description><para>FailoverCount</para>
+                /// </description></item>
+                /// <item><description><para>Delay</para>
+                /// </description></item>
+                /// <item><description><para>DdlReport</para>
+                /// </description></item>
+                /// <item><description><para>ResourceUtilization</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -150,8 +155,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The severity level. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Warning</description></item>
-                        /// <item><description>Critical</description></item>
+                        /// <item><description><para>Warning</para>
+                        /// </description></item>
+                        /// <item><description><para>Critical</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -183,8 +190,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         /// <summary>
                         /// <para>The recipient.</para>
                         /// <list type="bullet">
-                        /// <item><description>If the value of the ReceiverType parameter is AliyunUid, the value of this parameter is the Alibaba Cloud account ID of a user.</description></item>
-                        /// <item><description>If the value of the ReceiverType parameter is DingToken, the value of this parameter is the token of a DingTalk chatbot.</description></item>
+                        /// <item><description><para>If the value of the ReceiverType parameter is AliyunUid, the value of this parameter is the Alibaba Cloud account ID of a user.</para>
+                        /// </description></item>
+                        /// <item><description><para>If the value of the ReceiverType parameter is DingToken, the value of this parameter is the token of a DingTalk chatbot.</para>
+                        /// </description></item>
                         /// </list>
                         /// </summary>
                         [NameInMap("ReceiverValues")]
@@ -232,8 +241,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The severity level. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Warning</description></item>
-                    /// <item><description>Critical</description></item>
+                    /// <item><description><para>Warning</para>
+                    /// </description></item>
+                    /// <item><description><para>Critical</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -246,9 +257,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The alert threshold.</para>
                     /// <list type="bullet">
-                    /// <item><description>If the alert rule is for task status, no threshold is used.</description></item>
-                    /// <item><description>If the alert rule is for failovers, the threshold is the number of failovers.</description></item>
-                    /// <item><description>If the alert rule is for latency, the threshold is the latency duration, in seconds.</description></item>
+                    /// <item><description><para>If the alert rule is for task status, no threshold is used.</para>
+                    /// </description></item>
+                    /// <item><description><para>If the alert rule is for failovers, the threshold is the number of failovers.</para>
+                    /// </description></item>
+                    /// <item><description><para>If the alert rule is for latency, the threshold is the latency duration, in seconds.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

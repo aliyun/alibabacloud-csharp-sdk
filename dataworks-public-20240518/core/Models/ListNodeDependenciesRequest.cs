@@ -10,10 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListNodeDependenciesRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the Data Studio node.</para>
+        /// <para>The ID of the node.</para>
         /// <remarks>
-        /// <para> Prior to SDK version 8.0.0, this field is of type Long. In SDK version 8.0.0 and later, it is of type String. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>The data type of this parameter is Long in SDKs earlier than V8.0.0, and is String in SDKs of V8.0.0 and later versions. <b>The change does not affect the normal use of the SDKs. The parameter is still returned as the type defined in the SDKs.</b> When you upgrade an SDK to a version later than V8.0.0, a compilation error may occur due to the type change. In this case, you must manually change the data type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,10 +25,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the Data Studio node.</para>
-        /// <remarks>
-        /// <para> This field is of the Long type in SDK versions prior to 8.0.0, and of the String type in SDK versions 8.0.0 and later. This change does not affect the normal use of the SDK. The parameter is returned based on the type defined in the SDK. Compilation failures caused by the type change may occur only when you upgrade the SDK across version 8.0.0. In this case, you must manually update the data type.</para>
-        /// </remarks>
+        /// <para>The number of the page to return. The value of this parameter must be a positive integer. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Default value: 1.</para>
+        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,8 +45,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can go to the Workspace Management page in the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> to obtain the workspace ID.</para>
+        /// <para>This parameter is used to specify the DataWorks workspace for the API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

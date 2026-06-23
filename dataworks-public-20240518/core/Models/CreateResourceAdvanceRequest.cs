@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The specific file stream or OSS download link contained in the resource.</para>
         /// <remarks>
-        /// <para> This field allows users to provide a file stream or an OSS download link. When providing an OSS download link, ensure that the OSS link is publicly accessible. A presigned URL is recommended.</para>
+        /// <para>This field allows users to provide a file stream or an OSS download link. When providing an OSS download link, ensure that the OSS link is publicly accessible. A presigned URL is recommended.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

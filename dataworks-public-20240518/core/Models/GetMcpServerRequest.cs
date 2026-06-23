@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetMcpServerRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the MCP Server to retrieve.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

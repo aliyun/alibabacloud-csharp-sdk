@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ApplyResourceAccessPermissionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>A list of permission requests.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplyContents")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ApplyContentsShrink { get; set; }
 
         /// <summary>
+        /// <para>The idempotency parameter, which prevents duplicate operations from repeated calls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABFUOEUOTRTRJKE</para>
         /// </summary>
@@ -25,7 +28,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The reason for the request.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>业务发展需要</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]

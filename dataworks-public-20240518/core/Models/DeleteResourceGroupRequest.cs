@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The unique identifier of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

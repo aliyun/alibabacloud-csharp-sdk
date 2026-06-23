@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class EnableProcessDefinitionResponseBody : TeaModel {
         /// <summary>
+        /// <para><b>request ID</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>0bc5df3a17***903790e8e8a</para>
         /// </summary>

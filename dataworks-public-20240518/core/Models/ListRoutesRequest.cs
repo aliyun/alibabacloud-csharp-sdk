@@ -53,9 +53,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Id (Desc/Asc): the route ID</description></item>
-        /// <item><description>DestinationCidr (Desc/Asc): the destination CIDR block of the route</description></item>
-        /// <item><description>CreateTime (Desc/Asc): the time when the route is created</description></item>
+        /// <item><description><para>Id (Desc/Asc): the route ID</para>
+        /// </description></item>
+        /// <item><description><para>DestinationCidr (Desc/Asc): the destination CIDR block of the route</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime (Desc/Asc): the time when the route is created</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: CreateTime Asc.</para>
         /// 

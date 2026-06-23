@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Filter condition: The type of the workflow. The default value is CycleWorkflow.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CycleWorkflow</description></item>
-        /// <item><description>ManualWorkflow</description></item>
+        /// <item><description><para>CycleWorkflow</para>
+        /// </description></item>
+        /// <item><description><para>ManualWorkflow</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,8 +72,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Filter condition: The type of the workflow. The default value is CycleWorkflow.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CycleWorkflow</description></item>
-        /// <item><description>ManualWorkflow</description></item>
+        /// <item><description><para>CycleWorkflow</para>
+        /// </description></item>
+        /// <item><description><para>ManualWorkflow</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <para>true\
+        /// <para>true<br>
         /// false</para>
         /// 
         /// <b>Example:</b>

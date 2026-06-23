@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListProjectMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. To obtain this ID, log in to the <a href="https://workbench.data.aliyun.com/console">DataWorks Console</a> and go to the Workspace Management page.</para>
+        /// <para>This parameter specifies the DataWorks workspace for the API call.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The codes of the roles in the workspace. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to query the codes of all roles in the workspace.</para>
+        /// <para>A list of role codes for the workspace to filter the results. You can call the <a href="https://help.aliyun.com/document_detail/2853930.html">ListProjectRoles</a> operation to obtain the role codes.</para>
         /// </summary>
         [NameInMap("RoleCodes")]
         [Validation(Required=false)]
         public List<string> RoleCodes { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the accounts used by the members in the workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/product/ms_menu">DataWorks console</a>, choose More &gt; Management Center in the left-side navigation pane, select the desired workspace on the Management Center page, and then click Go to Management Center. In the left-side navigation pane of the SettingCenter page, click Tenant Members and Roles. On the Tenant Members and Roles page, view the IDs of the accounts used by the members in the workspace.</para>
+        /// <para>A list of DataWorks user IDs to filter the results. You can find these IDs on the <a href="https://dataworks.console.aliyun.com/product/ms_menu">Tenant Members and Roles</a> page in the Management Center.</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]

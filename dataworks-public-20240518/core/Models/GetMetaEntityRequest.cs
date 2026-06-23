@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetMetaEntityRequest : TeaModel {
         /// <summary>
+        /// <para>The entity ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

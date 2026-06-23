@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class RollbackParameterRequest : TeaModel {
         /// <summary>
+        /// <para>The parameter ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The rollback version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

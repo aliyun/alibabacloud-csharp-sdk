@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? Bizdate { get; set; }
 
         /// <summary>
+        /// <para>The filter. It is in JSON format, and multiple filter conditions are combined with a logical AND. Currently supported fields include: <c>startedTimeStart</c>, <c>startedTimeEnd</c>, <c>finishedTimeStart</c>, <c>finishedTimeEnd</c>, <c>createTimeStart</c>, <c>createTimeEnd</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;startedTimeStart&quot;: &quot;1763481600000&quot;,
@@ -85,8 +87,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The environment of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prod: production environment</description></item>
-        /// <item><description>Dev: development environment</description></item>
+        /// <item><description><para>Prod: production environment</para>
+        /// </description></item>
+        /// <item><description><para>Dev: development environment</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -143,12 +147,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The status of the task instance.</para>
         /// <list type="bullet">
-        /// <item><description><c>NotRun</c>: Not started</description></item>
-        /// <item><description><c>Running</c></description></item>
-        /// <item><description><c>Failure</c></description></item>
-        /// <item><description><c>Success</c></description></item>
-        /// <item><description><c>WaitTime</c>: Awaiting scheduled time</description></item>
-        /// <item><description><c>WaitResource</c>: Awaiting resources</description></item>
+        /// <item><description><para><c>NotRun</c>: Not started</para>
+        /// </description></item>
+        /// <item><description><para><c>Running</c></para>
+        /// </description></item>
+        /// <item><description><para><c>Failure</c></para>
+        /// </description></item>
+        /// <item><description><para><c>Success</c></para>
+        /// </description></item>
+        /// <item><description><para><c>WaitTime</c>: Awaiting scheduled time</para>
+        /// </description></item>
+        /// <item><description><para><c>WaitResource</c>: Awaiting resources</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -198,9 +208,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The running mode of the instance after it is triggered. This parameter takes effect only if the TriggerType parameter is set to Scheduler. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pause</description></item>
-        /// <item><description>Skip</description></item>
-        /// <item><description>Normal</description></item>
+        /// <item><description><para>Pause</para>
+        /// </description></item>
+        /// <item><description><para>Skip</para>
+        /// </description></item>
+        /// <item><description><para>Normal</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -213,8 +226,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduler: scheduling cycle-based trigger</description></item>
-        /// <item><description>Manual: manual trigger</description></item>
+        /// <item><description><para>Scheduler: scheduling cycle-based trigger</para>
+        /// </description></item>
+        /// <item><description><para>Manual: manual trigger</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -225,6 +240,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TriggerType { get; set; }
 
         /// <summary>
+        /// <para>The unified workflow instance ID. For all task instances under a specific data timestamp within a single trigger, this field has the same value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234</para>
         /// </summary>
@@ -255,12 +272,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SmokeTest: Testing</description></item>
-        /// <item><description>Manual: Manually triggered node</description></item>
-        /// <item><description>SupplementData: Data backfill</description></item>
-        /// <item><description>ManualWorkflow: Manually triggered workflow</description></item>
-        /// <item><description>Normal: Scheduled execution</description></item>
-        /// <item><description>TriggerWorkflow: Triggered Workflow</description></item>
+        /// <item><description><para>SmokeTest: Testing</para>
+        /// </description></item>
+        /// <item><description><para>Manual: Manually triggered node</para>
+        /// </description></item>
+        /// <item><description><para>SupplementData: Data backfill</para>
+        /// </description></item>
+        /// <item><description><para>ManualWorkflow: Manually triggered workflow</para>
+        /// </description></item>
+        /// <item><description><para>Normal: Scheduled execution</para>
+        /// </description></item>
+        /// <item><description><para>TriggerWorkflow: Triggered Workflow</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetLineageRelationshipRequest : TeaModel {
         /// <summary>
-        /// <para>The lineage ID. You can refer to the return result of the ListLineageRelationships operation.</para>
+        /// <para>The lineage relationship ID. You can get this ID from the response to the ListLineageRelationships operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</para>
+        /// <para>4as3dasf654a</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

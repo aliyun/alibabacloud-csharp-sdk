@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the Skill to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

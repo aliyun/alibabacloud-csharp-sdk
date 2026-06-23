@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The sort order. Default: Desc.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Asc: Ascending.</description></item>
-        /// <item><description>Desc: Descending.</description></item>
+        /// <item><description><para>Asc: Ascending.</para>
+        /// </description></item>
+        /// <item><description><para>Desc: Descending.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,9 +71,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The sort field. Default: VersionNumber.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ModifyTime: Modification time.</description></item>
-        /// <item><description>CreateTime: Creation time.</description></item>
-        /// <item><description>VersionNumber: Version number.</description></item>
+        /// <item><description><para>ModifyTime: Modification time.</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime: Creation time.</para>
+        /// </description></item>
+        /// <item><description><para>VersionNumber: Version number.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

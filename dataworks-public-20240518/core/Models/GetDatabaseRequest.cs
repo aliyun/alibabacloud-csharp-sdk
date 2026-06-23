@@ -13,13 +13,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Database entity ID. You can refer to the response of the ListDatabases operation and <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</para>
         /// <para>The format: <c>${EntityType}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}</c>. Use empty strings as placeholders for levels that do not exist.</para>
         /// <remarks>
-        /// <para> For StarRocks, the catalog identifier is the catalog name. For DLF, the catalog identifier is the catalog ID. For other types, the catalog-level hierarchy is not supported, and an empty string can be used as a placeholder.</para>
+        /// <para>For StarRocks, the catalog identifier is the catalog name. For DLF, the catalog identifier is the catalog ID. For other types, the catalog-level hierarchy is not supported, and an empty string can be used as a placeholder.</para>
         /// </remarks>
         /// <para>Examples of common ID formats</para>
         /// <list type="bullet">
-        /// <item><description><c>dlf-database::catalog_id:database_name</c></description></item>
-        /// <item><description><c>holo-database:instance_id::database_name</c></description></item>
-        /// <item><description><c>mysql-database:(instance_id|encoded_jdbc_url)::database_name</c></description></item>
+        /// <item><description><para><c>dlf-database::catalog_id:database_name</c></para>
+        /// </description></item>
+        /// <item><description><para><c>holo-database:instance_id::database_name</c></para>
+        /// </description></item>
+        /// <item><description><para><c>mysql-database:(instance_id|encoded_jdbc_url)::database_name</c></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// </remarks>
@@ -36,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mysql-database:rm-abc123xxx::test_db</para>
+        /// <para>dlf-database::catalog_id:database_name</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

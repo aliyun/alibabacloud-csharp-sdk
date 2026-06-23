@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>691CA452-D37A-4ED0-9441</para>
+        /// <para>691CA452-D37A-4ED0-****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the update was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

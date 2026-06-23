@@ -26,9 +26,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The change type, which is an integer. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: addition</description></item>
-                /// <item><description>1: update</description></item>
-                /// <item><description>2: deletion</description></item>
+                /// <item><description><para>0: addition</para>
+                /// </description></item>
+                /// <item><description><para>1: update</para>
+                /// </description></item>
+                /// <item><description><para>2: deletion</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -40,6 +43,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The comment for committing.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Test submission</para>
                 /// </summary>
                 [NameInMap("Comment")]
                 [Validation(Required=false)]
@@ -213,6 +219,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
                 /// <summary>
                 /// <para>The test status in the development environment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Not tested</para>
                 /// </summary>
                 [NameInMap("SmokeTestStatus")]
                 [Validation(Required=false)]
@@ -221,20 +230,34 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The status of the code file of the current version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>2: Commit check in progress.</description></item>
-                /// <item><description>3: Commit check passed.</description></item>
-                /// <item><description>4: Commit check failed.</description></item>
-                /// <item><description>10: Committing.</description></item>
-                /// <item><description>11: Committed.</description></item>
-                /// <item><description>20: Approved.</description></item>
-                /// <item><description>21: Rejected.</description></item>
-                /// <item><description>22: Warning detected during checking.</description></item>
-                /// <item><description>23: Under code review.</description></item>
-                /// <item><description>24: Code review rejected.</description></item>
-                /// <item><description>80: Deployment package created.</description></item>
-                /// <item><description>100: Deploying.</description></item>
-                /// <item><description>101: Deployed to the production environment.</description></item>
-                /// <item><description>200: Cancelled.</description></item>
+                /// <item><description><para>2: Commit check in progress.</para>
+                /// </description></item>
+                /// <item><description><para>3: Commit check passed.</para>
+                /// </description></item>
+                /// <item><description><para>4: Commit check failed.</para>
+                /// </description></item>
+                /// <item><description><para>10: Committing.</para>
+                /// </description></item>
+                /// <item><description><para>11: Committed.</para>
+                /// </description></item>
+                /// <item><description><para>20: Approved.</para>
+                /// </description></item>
+                /// <item><description><para>21: Rejected.</para>
+                /// </description></item>
+                /// <item><description><para>22: Warning detected during checking.</para>
+                /// </description></item>
+                /// <item><description><para>23: Under code review.</para>
+                /// </description></item>
+                /// <item><description><para>24: Code review rejected.</para>
+                /// </description></item>
+                /// <item><description><para>80: Deployment package created.</para>
+                /// </description></item>
+                /// <item><description><para>100: Deploying.</para>
+                /// </description></item>
+                /// <item><description><para>101: Deployed to the production environment.</para>
+                /// </description></item>
+                /// <item><description><para>200: Cancelled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -257,12 +280,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The module to which the file belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NORMAL: The file is used for DataStudio.</description></item>
-                /// <item><description>MANUAL: The file is used for a manually triggered node.</description></item>
-                /// <item><description>MANUAL_BIZ: The file is used for a manually triggered workflow.</description></item>
-                /// <item><description>SKIP: The file is used for a dry-run node in DataStudio.</description></item>
-                /// <item><description>ADHOCQUERY: The file is used for an ad hoc query.</description></item>
-                /// <item><description>COMPONENT: The file is used for a script template.</description></item>
+                /// <item><description><para>NORMAL: The file is used for DataStudio.</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL: The file is used for a manually triggered node.</para>
+                /// </description></item>
+                /// <item><description><para>MANUAL_BIZ: The file is used for a manually triggered workflow.</para>
+                /// </description></item>
+                /// <item><description><para>SKIP: The file is used for a dry-run node in DataStudio.</para>
+                /// </description></item>
+                /// <item><description><para>ADHOCQUERY: The file is used for an ad hoc query.</para>
+                /// </description></item>
+                /// <item><description><para>COMPONENT: The file is used for a script template.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

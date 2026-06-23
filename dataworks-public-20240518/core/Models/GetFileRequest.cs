@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetFileRequest : TeaModel {
         /// <summary>
-        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</para>
+        /// <para>The ID of the file. You can invoke the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> API to query the ID of the corresponding file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node that is scheduled. You can call the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> operation to query the ID.</para>
+        /// <para>The ID of the scheduling node. You can invoke the <a href="https://help.aliyun.com/document_detail/173942.html">ListFiles</a> API to obtain the node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200000001</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? NodeId { get; set; }
 
         /// <summary>
-        /// <para>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</para>
-        /// <para>You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, and go to the workspace configuration page to obtain the workspace ID.</para>
+        /// <para>You must specify either this parameter or the ProjectIdentifier parameter to identify the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the name.</para>
-        /// <para>You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</para>
+        /// <para>The name of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, and go to the workspace configuration page to obtain the workspace name.</para>
+        /// <para>You must specify either this parameter or the ProjectId parameter to identify the DataWorks workspace for this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>

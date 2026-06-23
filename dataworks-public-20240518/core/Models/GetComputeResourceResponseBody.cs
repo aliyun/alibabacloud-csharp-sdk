@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The specific connection configuration details for the computing resource, including the connection address, access identity, and environment information. envType, which specifies the computing resource environment, is a property of this object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Dev</description></item>
-            /// <item><description>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</description></item>
+            /// <item><description><para>Dev</para>
+            /// </description></item>
+            /// <item><description><para>Prod Different types of computing resources have different attribute specifications under various configuration modes (ConnectionPropertiesMode).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,9 +43,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <summary>
             /// <para>The addition category of the computing resource. Different types will have different subtypes, each with corresponding parameter constraints. For instance:</para>
             /// <list type="bullet">
-            /// <item><description>InstanceMode: Instance mode</description></item>
-            /// <item><description>UrlMode: Connection String Mode</description></item>
-            /// <item><description>CdhMode: CDH mode</description></item>
+            /// <item><description><para>InstanceMode: Instance mode</para>
+            /// </description></item>
+            /// <item><description><para>UrlMode: Connection String Mode</para>
+            /// </description></item>
+            /// <item><description><para>CdhMode: CDH mode</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

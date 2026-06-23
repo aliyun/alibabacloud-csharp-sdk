@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The connection configurations of the data source, including the connection address, access identity, and environment information. The envType parameter specifies the environment in which the data source is used. Valid values of the envType parameter:</para>
                     /// <list type="bullet">
-                    /// <item><description>Dev: development environment</description></item>
-                    /// <item><description>Prod: production environment</description></item>
+                    /// <item><description><para>Dev: development environment</para>
+                    /// </description></item>
+                    /// <item><description><para>Prod: production environment</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</para>
                     /// 
@@ -56,8 +58,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                     /// <summary>
                     /// <para>The mode in which the data source is added. The mode varies based on the data source type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>InstanceMode: instance mode</description></item>
-                    /// <item><description>UrlMode: connection string mode</description></item>
+                    /// <item><description><para>InstanceMode: instance mode</para>
+                    /// </description></item>
+                    /// <item><description><para>UrlMode: connection string mode</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

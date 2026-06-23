@@ -55,9 +55,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The list of sorting fields. Supports fields such as last modified time and creation time. Format: &quot;SortField+SortOrder (Desc/Asc)&quot;, where Asc is the default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ModifyTime (Desc/Asc)</description></item>
-        /// <item><description>CreateTime (Desc/Asc)</description></item>
-        /// <item><description>Id (Desc/Asc)</description></item>
+        /// <item><description><para>ModifyTime (Desc/Asc)</para>
+        /// </description></item>
+        /// <item><description><para>CreateTime (Desc/Asc)</para>
+        /// </description></item>
+        /// <item><description><para>Id (Desc/Asc)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

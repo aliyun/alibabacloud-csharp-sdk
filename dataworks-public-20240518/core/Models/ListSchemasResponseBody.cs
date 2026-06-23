@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public ListSchemasResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListSchemasResponseBodyPagingInfo : TeaModel {
             /// <summary>
+            /// <para>Page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public List<Schema> Schemas { get; set; }
 
             /// <summary>
+            /// <para>Total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment.</para>
         /// <list type="bullet">
-        /// <item><description>Prod</description></item>
-        /// <item><description>Dev</description></item>
+        /// <item><description><para>Prod</para>
+        /// </description></item>
+        /// <item><description><para>Dev</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,8 +80,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The instance generation mode.</para>
         /// <list type="bullet">
-        /// <item><description>T+1: the next day</description></item>
-        /// <item><description>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</description></item>
+        /// <item><description><para>T+1: the next day</para>
+        /// </description></item>
+        /// <item><description><para>Immediately Note: Scheduled instances are generated only if the scheduled time is at least 10 minutes after the publish time. Real-time instance generation is unavailable during the global instance generation period (23:30 to 24:00). You can publish nodes during this period, but instances for the new nodes will not be generated automatically.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The rerun interval. Unit: milliseconds. Must not exceed 1800000.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>60</para>
+        /// <para>60000</para>
         /// </summary>
         [NameInMap("RerunInterval")]
         [Validation(Required=false)]
@@ -129,9 +133,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The rerun mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllDenied: The task cannot be rerun.</description></item>
-        /// <item><description>FailureAllowed: The task can be rerun only after it fails.</description></item>
-        /// <item><description>AllAllowed: The task can always be rerun.</description></item>
+        /// <item><description><para>AllDenied: The task cannot be rerun.</para>
+        /// </description></item>
+        /// <item><description><para>FailureAllowed: The task can be rerun only after it fails.</para>
+        /// </description></item>
+        /// <item><description><para>AllAllowed: The task can always be rerun.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

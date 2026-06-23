@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class DeleteProjectRoleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5BCD2252-F184-55A8-9675-337C43BE0CD1</para>
         /// </summary>

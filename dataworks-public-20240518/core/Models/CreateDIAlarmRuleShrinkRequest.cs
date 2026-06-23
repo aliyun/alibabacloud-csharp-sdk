@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The description of the alert rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the alert rule.</para>
+        /// <para>Alert description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -53,11 +53,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The metric type in the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Heartbeat</description></item>
-        /// <item><description>FailoverCount</description></item>
-        /// <item><description>Delay</description></item>
-        /// <item><description>DdlReport</description></item>
-        /// <item><description>ResourceUtilization</description></item>
+        /// <item><description><para>Heartbeat</para>
+        /// </description></item>
+        /// <item><description><para>FailoverCount</para>
+        /// </description></item>
+        /// <item><description><para>Delay</para>
+        /// </description></item>
+        /// <item><description><para>DdlReport</para>
+        /// </description></item>
+        /// <item><description><para>ResourceUtilization</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

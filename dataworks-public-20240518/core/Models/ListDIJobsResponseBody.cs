@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListDIJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination information.</para>
+        /// <para>The paging information.</para>
         /// </summary>
         [NameInMap("PagingInfo")]
         [Validation(Required=false)]
         public ListDIJobsResponseBodyPagingInfo PagingInfo { get; set; }
         public class ListDIJobsResponseBodyPagingInfo : TeaModel {
             /// <summary>
-            /// <para>The synchronization tasks returned.</para>
+            /// <para>A list of Data Integration jobs.</para>
             /// </summary>
             [NameInMap("DIJobs")]
             [Validation(Required=false)]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>This parameter is deprecated. Use the Id parameter instead.</para>
+                /// <para>This parameter is deprecated. Use the <c>Id</c> parameter instead.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32599</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? DIJobId { get; set; }
 
                 /// <summary>
-                /// <para>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, Loghub, STARROCKS, DataHub, ANALYTICDB_FOR_MYSQL, Kafka, and Hive.</para>
+                /// <para>The type of the destination data source. Valid values: <c>Hologres</c>, <c>OSS-HDFS</c>, <c>OSS</c>, <c>MaxCompute</c>, <c>LogHub</c>, <c>StarRocks</c>, <c>DataHub</c>, <c>AnalyticDB_For_MySQL</c>, <c>Kafka</c>, and <c>Hive</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Hologres</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string DestinationDataSourceType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the synchronization task.</para>
+                /// <para>The ID of the Data Integration job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>32599</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the synchronization task.</para>
+                /// <para>The name of the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql_to_holo_sync_35197</para>
@@ -67,14 +67,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string JobName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the synchronization task. Valid values:</para>
+                /// <para>The job status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Finished</description></item>
-                /// <item><description>Initialized</description></item>
-                /// <item><description>Stopped</description></item>
-                /// <item><description>Failed</description></item>
-                /// <item><description>Running</description></item>
-                /// <item><description>Stopping</description></item>
+                /// <item><description><para><c>Finished</c>: The job completed successfully.</para>
+                /// </description></item>
+                /// <item><description><para><c>Initialized</c>: The job is initialized.</para>
+                /// </description></item>
+                /// <item><description><para><c>Stopped</c>: The job is stopped.</para>
+                /// </description></item>
+                /// <item><description><para><c>Failed</c>: The job failed.</para>
+                /// </description></item>
+                /// <item><description><para><c>Running</c>: The job is running.</para>
+                /// </description></item>
+                /// <item><description><para><c>Stopping</c>: The job is being stopped.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,11 +93,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 /// <summary>
                 /// <para>The synchronization type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization</description></item>
-                /// <item><description>RealtimeIncremental: real-time incremental synchronization</description></item>
-                /// <item><description>Full: full synchronization</description></item>
-                /// <item><description>OfflineIncremental: batch incremental synchronization</description></item>
-                /// <item><description>FullAndOfflineIncremental: one-time full synchronization and batch incremental synchronization</description></item>
+                /// <item><description><para><c>FullAndRealtimeIncremental</c>: full and real-time incremental synchronization</para>
+                /// </description></item>
+                /// <item><description><para><c>RealtimeIncremental</c>: real-time incremental synchronization</para>
+                /// </description></item>
+                /// <item><description><para><c>Full</c>: full synchronization</para>
+                /// </description></item>
+                /// <item><description><para><c>OfflineIncremental</c>: offline incremental synchronization</para>
+                /// </description></item>
+                /// <item><description><para><c>FullAndOfflineIncremental</c>: full and offline incremental synchronization</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -106,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the DataWorks workspace to which the synchronization task belongs.</para>
+                /// <para>The ID of the DataWorks workspace that contains the job.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>26442</para>
@@ -116,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 public long? ProjectId { get; set; }
 
                 /// <summary>
-                /// <para>The source type. Valid values: PolarDB, MySQL, Kafka, Loghub, Hologres, Oracle, OceanBase, MongoDB, RedShift, Hive, SqlServer, Doris, and ClickHouse. If you do not configure this parameter, the API operation returns synchronization tasks that use all types of sources.</para>
+                /// <para>The type of the source data source. Valid values: <c>PolarDB</c>, <c>MySQL</c>, <c>Kafka</c>, <c>LogHub</c>, <c>Hologres</c>, <c>Oracle</c>, <c>OceanBase</c>, <c>MongoDB</c>, <c>RedShift</c>, <c>Hive</c>, <c>SQLServer</c>, <c>Doris</c>, and <c>ClickHouse</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Mysql</para>
@@ -128,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The returned page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -148,7 +159,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that meet the filter criteria.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -160,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7263E4AC-9D2E-5B29-B8AF-7C5012E92A41</para>

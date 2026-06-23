@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The unique name of the Skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

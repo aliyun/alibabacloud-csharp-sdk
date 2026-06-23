@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the computing resource was modified successfully:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Yes</para>
+        /// </description></item>
+        /// <item><description><para>false: No</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
