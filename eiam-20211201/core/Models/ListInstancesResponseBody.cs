@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The creation time of the instance, in Unix timestamp format, in milliseconds.</para>
+            /// <para>The time when the instance was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1550115455000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceFailoverStatus { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_eypq6ljgyeuwmlw672sulxxxxx</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The service code of the cloud service that manages the instance.</para>
+            /// <para>The service code of the Alibaba Cloud service that manages the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sase</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the instance is managed by a cloud service.</para>
+            /// <para>Indicates whether the instance is managed by an Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>Instance status. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>creating: Being created.</description></item>
             /// <item><description>running: Running.</description></item>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

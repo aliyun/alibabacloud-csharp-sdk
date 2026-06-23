@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CheckInstanceModuleStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status update information.</para>
+        /// <para>The module status information.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public CheckInstanceModuleStatusResponseBodyModule Module { get; set; }
         public class CheckInstanceModuleStatusResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The status of the module.</para>
+            /// <para>The module status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

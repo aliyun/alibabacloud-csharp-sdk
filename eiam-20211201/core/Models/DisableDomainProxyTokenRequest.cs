@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DisableDomainProxyTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the domain name.</para>
+        /// <para>The domain ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DomainId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the proxy token of the domain name.</para>
+        /// <para>The domain proxy token ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>A client token used to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The token can contain only ASCII characters and must be 64 characters or less in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the authorization rule. The description can be up to 128 characters long.</para>
+        /// <para>The description of the authorization rule. The description can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test rule</para>

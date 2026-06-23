@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListNetworkAccessEndpointAvailableZonesResponseBodyZones> Zones { get; set; }
         public class ListNetworkAccessEndpointAvailableZonesResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>The name of the zone.</para>
+            /// <para>The zone name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>China (Hangzhou) Zone J</para>

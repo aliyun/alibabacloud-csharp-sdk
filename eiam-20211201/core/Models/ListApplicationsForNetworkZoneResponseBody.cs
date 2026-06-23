@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListApplicationsForNetworkZoneResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsForNetworkZoneResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloudSSO</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IDaaS EIAM instance.</para>
+            /// <para>The IDaaS EIAM instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the next query.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the previous query.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

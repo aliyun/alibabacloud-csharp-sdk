@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkAccessEndpointAvailableZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region that supports exclusive network endpoints.</para>
+        /// <para>The ID of the region supported by dedicated network endpoints.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

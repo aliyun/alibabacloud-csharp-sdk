@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetInstanceControlConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The control items for the instance.</para>
+        /// <para>The instance control elements.</para>
         /// </summary>
         [NameInMap("ControlElements")]
         [Validation(Required=false)]
         public List<SetInstanceControlConfigurationRequestControlElements> ControlElements { get; set; }
         public class SetInstanceControlConfigurationRequestControlElements : TeaModel {
             /// <summary>
-            /// <para>The name of the control item.</para>
+            /// <para>The name of the instance control element.</para>
             /// 
             /// <b>Example:</b>
             /// <para>human_verification</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ElementName { get; set; }
 
             /// <summary>
-            /// <para>The CAPTCHA configuration.</para>
+            /// <para>The CAPTCHA authenticate configuration.</para>
             /// </summary>
             [NameInMap("HumanVerificationConfig")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The status of the control item.</para>
+            /// <para>The status of the instance control element.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

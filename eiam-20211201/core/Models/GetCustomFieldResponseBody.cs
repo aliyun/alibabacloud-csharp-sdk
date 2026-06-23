@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetCustomFieldResponseBody : TeaModel {
         /// <summary>
-        /// <para>Custom field information.</para>
+        /// <para>The custom field information.</para>
         /// </summary>
         [NameInMap("CustomField")]
         [Validation(Required=false)]
         public GetCustomFieldResponseBodyCustomField CustomField { get; set; }
         public class GetCustomFieldResponseBodyCustomField : TeaModel {
             /// <summary>
-            /// <para>The creation time of the custom field, in UNIX timestamp format in milliseconds.</para>
+            /// <para>The time when the extended field was created, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17642960730</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
-            /// <para>The description of the custom field.</para>
+            /// <para>The description of the extended field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>Field value configuration items.</para>
+            /// <para>The field value configuration items.</para>
             /// </summary>
             [NameInMap("FieldDataConfig")]
             [Validation(Required=false)]
             public GetCustomFieldResponseBodyCustomFieldFieldDataConfig FieldDataConfig { get; set; }
             public class GetCustomFieldResponseBodyCustomFieldFieldDataConfig : TeaModel {
                 /// <summary>
-                /// <para>A list of field configuration items.</para>
+                /// <para>The list of field configuration items.</para>
                 /// </summary>
                 [NameInMap("Items")]
                 [Validation(Required=false)]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Required { get; set; }
 
             /// <summary>
-            /// <para>The status of the custom field.</para>
+            /// <para>The status of the extended field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Unique { get; set; }
 
             /// <summary>
-            /// <para>The last update time of the custom field, in UNIX timestamp format in milliseconds.</para>
+            /// <para>The time when the extended field was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17642960730</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>User-side (portal) permissions.</para>
+            /// <para>The user-side (portal-side) permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>read_only</para>

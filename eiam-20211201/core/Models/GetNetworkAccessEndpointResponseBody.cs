@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetNetworkAccessEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>Network endpoint information.</para>
+        /// <para>The network access endpoint information.</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpoint")]
         [Validation(Required=false)]
         public GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint NetworkAccessEndpoint { get; set; }
         public class GetNetworkAccessEndpointResponseBodyNetworkAccessEndpoint : TeaModel {
             /// <summary>
-            /// <para>The time when the baseline was created.</para>
+            /// <para>The time when the network access endpoint was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Public egress ip address range of the dedicated network endpoint This field is returned only when NetworkEndpointType is set to private.</para>
+            /// <para>The private egress IP addresses of the dedicated network access endpoint. This parameter is returned only when NetworkEndpointType is set to private.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.168.x.x</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> EgressPrivateIpAddresses { get; set; }
 
             /// <summary>
-            /// <para>Public egress ip address range of the shared network endpoint This field is returned only when networkEndpointType is set to shared.</para>
+            /// <para>The public egress IP addresses of the shared network access endpoint. This parameter is returned only when NetworkEndpointType is set to shared.</para>
             /// 
             /// <b>Example:</b>
             /// <para>203.0.XX.XX/27</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> EgressPublicIpAddresses { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the network access endpoint.</para>
+            /// <para>The dedicated network access endpoint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae_examplexxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>Private network endpoint name.</para>
+            /// <para>The name of the dedicated network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Xx-business VPC access endpoint</para>
@@ -77,9 +77,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointName { get; set; }
 
             /// <summary>
-            /// <para>Type of the Network Endpoint Possible values:</para>
-            /// <para>shared: Shared network endpoint</para>
-            /// <para>private: Dedicated network endpoint</para>
+            /// <para>The type of the network access endpoint. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>shared: shared network access endpoint.</description></item>
+            /// <item><description>private: dedicated network access endpoint.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the destination security group.</para>
+            /// <para>The ID of the security group used by the dedicated network access endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-examplexxx</para>
@@ -99,11 +101,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>Status of the Network Endpoint Possible values:</para>
-            /// <para>pending: Pending initialization</para>
-            /// <para>creating: Being created</para>
-            /// <para>running: Running</para>
-            /// <para>deleting: Being deleted</para>
+            /// <para>The status of the network access endpoint. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>pending: pending initialization.</description></item>
+            /// <item><description>creating: being created.</description></item>
+            /// <item><description>running: running.</description></item>
+            /// <item><description>deleting: being deleted.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the endpoint was updated.</para>
+            /// <para>The time when the dedicated network access endpoint was last updated. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>List of specified vSwitches associated with the dedicated network endpoint connection.</para>
+            /// <para>The list of vSwitches to which the dedicated network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-examplexxx</para>
@@ -133,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The ID of the VPC to which the dedicated network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-examplexxx</para>
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the outbound virtual private cloud (VPC).</para>
+            /// <para>The region of the VPC to which the dedicated network access endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

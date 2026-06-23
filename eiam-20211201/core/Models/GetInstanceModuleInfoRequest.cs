@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the primary module.</para>
+        /// <para>The identifier of the first-level module.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

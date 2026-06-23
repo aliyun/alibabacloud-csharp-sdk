@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetPasswordInitializationConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forcible password change upon first logon. Valid values:</para>
+        /// <para>The password forced update status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PasswordForcedUpdateStatus { get; set; }
 
         /// <summary>
-        /// <para>The methods for receiving password initialization notifications.</para>
+        /// <para>The list of password initialization notification channels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>email</para>
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> PasswordInitializationNotificationChannels { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable password initialization. Valid values:</para>
+        /// <para>The password initialization configuration status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PasswordInitializationStatus { get; set; }
 
         /// <summary>
-        /// <para>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Set the value to random.</para>
+        /// <para>The password initialization method. This parameter is required when PasswordInitializationStatus is set to enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>random: A randomly generated password is used.</description></item>
+        /// <item><description>random: Random.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

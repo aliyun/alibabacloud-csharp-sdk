@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListConditionalAccessPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Collection of conditional access policies</para>
+        /// <para>Collection of conditional access policies.</para>
         /// </summary>
         [NameInMap("ConditionalAccessPolicies")]
         [Validation(Required=false)]
         public List<ListConditionalAccessPoliciesResponseBodyConditionalAccessPolicies> ConditionalAccessPolicies { get; set; }
         public class ListConditionalAccessPoliciesResponseBodyConditionalAccessPolicies : TeaModel {
             /// <summary>
-            /// <para>Conditional access policy ID</para>
+            /// <para>Conditional access policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cp_xxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ConditionalAccessPolicyId { get; set; }
 
             /// <summary>
-            /// <para>Conditional access policy name</para>
+            /// <para>Conditional access policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>My policy</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ConditionalAccessPolicyName { get; set; }
 
             /// <summary>
-            /// <para>Type of the conditional access policy</para>
+            /// <para>Conditional access policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arn:alibaba:idaas:authn:access:policy:system</para>
@@ -47,28 +47,28 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ConditionalAccessPolicyType { get; set; }
 
             /// <summary>
-            /// <para>Content of the conditional access policy</para>
+            /// <para>Conditional access policy conditions.</para>
             /// </summary>
             [NameInMap("ConditionsConfig")]
             [Validation(Required=false)]
             public ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfig ConditionsConfig { get; set; }
             public class ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfig : TeaModel {
                 /// <summary>
-                /// <para>Target applications of the conditional access policy</para>
+                /// <para>Conditional access policy target applications.</para>
                 /// </summary>
                 [NameInMap("Applications")]
                 [Validation(Required=false)]
                 public ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfigApplications Applications { get; set; }
                 public class ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfigApplications : TeaModel {
                     /// <summary>
-                    /// <para>Excluded applications</para>
+                    /// <para>Excluded applications.</para>
                     /// </summary>
                     [NameInMap("ExcludeApplications")]
                     [Validation(Required=false)]
                     public List<string> ExcludeApplications { get; set; }
 
                     /// <summary>
-                    /// <para>Selected applications</para>
+                    /// <para>Included applications.</para>
                     /// </summary>
                     [NameInMap("IncludeApplications")]
                     [Validation(Required=false)]
@@ -77,21 +77,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>Network zones for conditional access policies</para>
+                /// <para>Conditional access policy network zones.</para>
                 /// </summary>
                 [NameInMap("NetworkZones")]
                 [Validation(Required=false)]
                 public ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfigNetworkZones NetworkZones { get; set; }
                 public class ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfigNetworkZones : TeaModel {
                     /// <summary>
-                    /// <para>Excluded network zones</para>
+                    /// <para>Excluded network zones.</para>
                     /// </summary>
                     [NameInMap("ExcludeNetworkZones")]
                     [Validation(Required=false)]
                     public List<string> ExcludeNetworkZones { get; set; }
 
                     /// <summary>
-                    /// <para>Included network ranges</para>
+                    /// <para>Included network zones.</para>
                     /// </summary>
                     [NameInMap("IncludeNetworkZones")]
                     [Validation(Required=false)]
@@ -100,49 +100,49 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>Target users of the conditional access policy</para>
+                /// <para>Conditional access policy target users.</para>
                 /// </summary>
                 [NameInMap("Users")]
                 [Validation(Required=false)]
                 public ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfigUsers Users { get; set; }
                 public class ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesConditionsConfigUsers : TeaModel {
                     /// <summary>
-                    /// <para>Excluded user groups</para>
+                    /// <para>Excluded user groups.</para>
                     /// </summary>
                     [NameInMap("ExcludeGroups")]
                     [Validation(Required=false)]
                     public List<string> ExcludeGroups { get; set; }
 
                     /// <summary>
-                    /// <para>Excluded organizations</para>
+                    /// <para>Excluded organizational units.</para>
                     /// </summary>
                     [NameInMap("ExcludeOrganizationalUnits")]
                     [Validation(Required=false)]
                     public List<string> ExcludeOrganizationalUnits { get; set; }
 
                     /// <summary>
-                    /// <para>Excluded users</para>
+                    /// <para>Excluded users.</para>
                     /// </summary>
                     [NameInMap("ExcludeUsers")]
                     [Validation(Required=false)]
                     public List<string> ExcludeUsers { get; set; }
 
                     /// <summary>
-                    /// <para>Included user groups</para>
+                    /// <para>Included user groups.</para>
                     /// </summary>
                     [NameInMap("IncludeGroups")]
                     [Validation(Required=false)]
                     public List<string> IncludeGroups { get; set; }
 
                     /// <summary>
-                    /// <para>Included organizations</para>
+                    /// <para>Included organizational units.</para>
                     /// </summary>
                     [NameInMap("IncludeOrganizationalUnits")]
                     [Validation(Required=false)]
                     public List<string> IncludeOrganizationalUnits { get; set; }
 
                     /// <summary>
-                    /// <para>Selected users</para>
+                    /// <para>Included users.</para>
                     /// </summary>
                     [NameInMap("IncludeUsers")]
                     [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>Creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741857554000</para>
@@ -163,14 +163,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Action of the conditional access policy</para>
+            /// <para>Conditional access policy execution action.</para>
             /// </summary>
             [NameInMap("DecisionConfig")]
             [Validation(Required=false)]
             public ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesDecisionConfig DecisionConfig { get; set; }
             public class ListConditionalAccessPoliciesResponseBodyConditionalAccessPoliciesDecisionConfig : TeaModel {
                 /// <summary>
-                /// <para>Whether to enable session reuse for secondary authentication</para>
+                /// <para>Whether to enable secondary authentication session reuse.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>disabled</para>
@@ -180,7 +180,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ActiveSessionReuseStatus { get; set; }
 
                 /// <summary>
-                /// <para>Decision action of the conditional access policy: deny Deny allow Allow</para>
+                /// <para>Conditional access policy decision action:
+                /// deny: Deny access.
+                /// allow: Allow access.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deny</para>
@@ -190,7 +192,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// <para>Re-authentication interval for the conditional access policy (in seconds) 300-86400</para>
+                /// <para>Conditional access policy re-authentication interval (seconds), ranging from 300 to 86400.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -200,14 +202,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? MfaAuthenticationIntervalSeconds { get; set; }
 
                 /// <summary>
-                /// <para>MFA types allowed by the conditional access policy</para>
+                /// <para>MFA types allowed by the conditional access policy.</para>
                 /// </summary>
                 [NameInMap("MfaAuthenticationMethods")]
                 [Validation(Required=false)]
                 public List<string> MfaAuthenticationMethods { get; set; }
 
                 /// <summary>
-                /// <para>Conditional Access Policy Mfa Type</para>
+                /// <para>Conditional access policy MFA type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>directly_access</para>
@@ -219,7 +221,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Execution type of the conditional access policy</para>
+            /// <para>Conditional access policy execution type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enforcement</para>
@@ -229,7 +231,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DecisionType { get; set; }
 
             /// <summary>
-            /// <para>Description of the conditional access policy</para>
+            /// <para>Conditional access policy description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>My policy description</para>
@@ -239,7 +241,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Execution point of the conditional access policy</para>
+            /// <para>Conditional access policy evaluation point.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arn:alibaba:idaas:authn:access:rule:eval_at:after_step1</para>
@@ -249,7 +251,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EvaluateAt { get; set; }
 
             /// <summary>
-            /// <para>Instance ID</para>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ksvv5c7f2l6uzh6oqspeks23ni</para>
@@ -259,7 +261,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Last updated time</para>
+            /// <para>Update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741857554000</para>
@@ -269,7 +271,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>Priority, 1-100</para>
+            /// <para>Priority, ranging from 1 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -279,7 +281,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>Enable or disable status of the conditional access policy</para>
+            /// <para>Conditional access policy enabled/disabled status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -291,7 +293,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The token value returned by this call for the next page query.</para>
+        /// <para>The query token value returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -301,7 +303,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Previous page query token (Token)</para>
+        /// <para>Previous page query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>

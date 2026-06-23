@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time range of the validity period. This parameter is returned only when <b>ValidityType</b> is set to <b>time_bound</b>.</para>
+            /// <para>The time range of the validity period. This parameter takes effect only when ValidityType is set to time_bound.</para>
             /// </summary>
             [NameInMap("ValidityPeriod")]
             [Validation(Required=false)]
             public ListAuthorizationRulesForApplicationResponseBodyAuthorizationRulesValidityPeriod ValidityPeriod { get; set; }
             public class ListAuthorizationRulesForApplicationResponseBodyAuthorizationRulesValidityPeriod : TeaModel {
                 /// <summary>
-                /// <para>The end time of the validity period. This is a UNIX timestamp in milliseconds.</para>
+                /// <para>The end time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the validity period. This is a UNIX timestamp in milliseconds.</para>
+                /// <para>The start time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -66,12 +66,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The type of the validity period for the relationship. Valid values:</para>
+            /// <para>The validity type of the relationship. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>permanent: The relationship is permanent.</para>
-            /// </description></item>
-            /// <item><description><para>time_bound: The relationship is valid within a custom time range.</para>
-            /// </description></item>
+            /// <item><description>permanent: permanent</description></item>
+            /// <item><description>time_bound: custom time range.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries on each page of a paged query.</para>
+        /// <para>The number of entries per page for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -94,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to use for the next paged query.</para>
+        /// <para>The pagination token returned in this call. Use this token to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -114,7 +112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

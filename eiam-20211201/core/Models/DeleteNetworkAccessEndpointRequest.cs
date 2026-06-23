@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Network Access Endpoint ID.</para>
+        /// <para>The ID of the dedicated network access endpoint. Only network access endpoints whose NetworkEndpointType is private can be deleted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

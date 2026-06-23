@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListApplicationsForAuthorizationRuleRequestFilter> Filter { get; set; }
         public class ListApplicationsForAuthorizationRuleRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The name of the field to filter. Valid values:</para>
+            /// <para>The name of the filter field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ApplicationId: The application ID.</description></item>
+            /// <item><description>ApplicationId: the application ID.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of values for the filter field.</para>
+            /// <para>The values of the filter field.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -61,11 +61,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of records to return in a paged query.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>The default value is 20.</para>
+        /// <item><description><para>Default value: 20.</para>
         /// </description></item>
-        /// <item><description><para>The maximum value cannot exceed 100.</para>
+        /// <item><description><para>Maximum value: 100.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -77,9 +77,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to mark the start of the next page for a paged query.</para>
+        /// <para>The pagination token that indicates the start position of the next page.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the query starts from the first page.</description></item>
+        /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCustomFieldRequest : TeaModel {
         /// <summary>
-        /// <para>The default value of the field. If the field has configuration items, the default value must be one of the enabled configuration items. The default value can be up to 1024 characters in length.</para>
+        /// <para>The default value of the field.
+        /// If configuration items exist for the type, the default value must be one of the configuration items and must be in the enabled state. Maximum length: 1024 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string</para>
@@ -20,7 +21,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DefaultValue { get; set; }
 
         /// <summary>
-        /// <para>The description of the field. The description can be up to 512 characters in length.</para>
+        /// <para>The field description.
+        /// Maximum length: 512 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Field test</para>
@@ -30,7 +32,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to encrypt the field value. If you set this parameter to true, the system encrypts the data value before storing it.</para>
+        /// <para>Specifies whether to encrypt the field.
+        /// If this parameter is set to true, the data value is encrypted at the storage layer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,9 +43,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The entity to which the field belongs. Valid value:</para>
+        /// <para>The entity to which the field belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>user: an account.</description></item>
+        /// <item><description>user: account.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,14 +57,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The configuration items of the field value.</para>
+        /// <para>The field value configuration items.</para>
         /// </summary>
         [NameInMap("FieldDataConfig")]
         [Validation(Required=false)]
         public CreateCustomFieldRequestFieldDataConfig FieldDataConfig { get; set; }
         public class CreateCustomFieldRequestFieldDataConfig : TeaModel {
             /// <summary>
-            /// <para>A list of field configuration items. The list can contain up to 100 items.</para>
+            /// <para>The list of field configuration items. Maximum number of items: 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string</para>
@@ -71,7 +74,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<CreateCustomFieldRequestFieldDataConfigItems> Items { get; set; }
             public class CreateCustomFieldRequestFieldDataConfigItems : TeaModel {
                 /// <summary>
-                /// <para>The display name of the configuration item. The display name can be up to 128 characters in length.</para>
+                /// <para>The display name of the configuration item.
+                /// Maximum length: 128 characters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -83,12 +87,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <summary>
                 /// <para>The status of the configuration item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>enabled: The configuration item is enabled.</para>
-                /// </description></item>
-                /// <item><description><para>disabled: The configuration item is disabled.</para>
-                /// </description></item>
+                /// <item><description>enabled: Enabled.</description></item>
+                /// <item><description>disabled: Disabled.</description></item>
                 /// </list>
-                /// <para>If a configuration item is disabled, it is unavailable when you create or update the field value for an entity.</para>
+                /// <para>If a configuration item is disabled, it cannot be used when creating or updating entity field values.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -98,7 +100,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The value of the configuration item. The value can be up to 64 characters in length.</para>
+                /// <para>The display value of the configuration item.
+                /// Maximum length: 64 characters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -114,12 +117,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The data type of the field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>string: a string.</para>
-        /// </description></item>
-        /// <item><description><para>number: a number. The number can be up to 32 digits in length and can be a positive integer or a decimal.</para>
-        /// </description></item>
-        /// <item><description><para>boolean: a Boolean value.</para>
-        /// </description></item>
+        /// <item><description>string: string.</description></item>
+        /// <item><description>number: number. Maximum length: 32 characters. Positive integers and decimals are supported.</description></item>
+        /// <item><description>boolean: Boolean.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -131,7 +131,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FieldDataType { get; set; }
 
         /// <summary>
-        /// <para>The display name of the field. The display name can be up to 64 characters in length.</para>
+        /// <para>The field display name.
+        /// Maximum length: 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -142,14 +143,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FieldDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The display type of the field. Valid values:</para>
+        /// <para>The field display type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>input: a text box. This display type supports the string and number data types.</para>
-        /// </description></item>
-        /// <item><description><para>select: a drop-down list. This display type supports the string and Boolean data types.</para>
-        /// </description></item>
-        /// <item><description><para>checkbox: a check box. This display type supports the string data type.</para>
-        /// </description></item>
+        /// <item><description>input: text input box. Supported data types: string and number.</description></item>
+        /// <item><description>select: drop-down list. Supported data types: string and boolean.</description></item>
+        /// <item><description>checkbox: multi-select box. Supported data types: string.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -161,7 +159,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FieldDisplayType { get; set; }
 
         /// <summary>
-        /// <para>The name of the field. The name can be up to 40 characters in length and can contain lowercase letters and underscores (<em>). It cannot start with an underscore (</em>).</para>
+        /// <para>The field identifier.
+        /// Maximum length: 40 characters. The value can contain lowercase letters and underscores, and cannot start with an underscore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -183,7 +182,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the field is required.</para>
+        /// <para>Specifies whether the field is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -193,7 +192,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? Required { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the field value is unique. If you set this parameter to true, the value of this field must be unique for the specified entity type.</para>
+        /// <para>Specifies whether the field value is unique.
+        /// If this parameter is set to true, the field value must be unique within the corresponding entity type and cannot be duplicated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -203,14 +203,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? Unique { get; set; }
 
         /// <summary>
-        /// <para>The permission on the field in the portal. Valid values:</para>
+        /// <para>The field permission on the portal side. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>hide: The field is not visible in the portal.</para>
-        /// </description></item>
-        /// <item><description><para>read_only: The field is visible but cannot be modified in the portal.</para>
-        /// </description></item>
-        /// <item><description><para>read_write: The field is visible and can be modified in the portal.</para>
-        /// </description></item>
+        /// <item><description>hide: Not visible on the portal side.</description></item>
+        /// <item><description>read_only: Visible on the portal side but cannot be edited or updated.</description></item>
+        /// <item><description>read_write: Visible and editable on the portal side.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

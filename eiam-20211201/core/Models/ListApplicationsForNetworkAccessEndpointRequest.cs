@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

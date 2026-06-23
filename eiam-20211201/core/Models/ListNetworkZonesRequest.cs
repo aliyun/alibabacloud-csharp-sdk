@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A collection of network IDs.</para>
+        /// <para>The collection of network zone IDs.</para>
         /// </summary>
         [NameInMap("NetworkZoneIds")]
         [Validation(Required=false)]
         public List<string> NetworkZoneIds { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the previous page of results.</para>
+        /// <para>The pagination token for the previous page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>

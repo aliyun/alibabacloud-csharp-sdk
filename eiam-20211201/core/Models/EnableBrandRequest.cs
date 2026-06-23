@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class EnableBrandRequest : TeaModel {
         /// <summary>
-        /// <para>The branding ID.</para>
+        /// <para>The brand ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListSynchronizationJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the sync task. Valid values:</para>
+        /// <para>Synchronization job direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ingress: Inbound.</para>
+        /// <item><description><para>ingress: inbound</para>
         /// </description></item>
-        /// <item><description><para>egress: Outbound.</para>
+        /// <item><description><para>egress: outbound</para>
         /// </description></item>
         /// </list>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The synchronization end time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>Synchronization end time in Unix timestamp format, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830226000</para>
@@ -36,14 +36,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The filter parameters.</para>
+        /// <para>Filter parameters</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<ListSynchronizationJobsRequestFilters> Filters { get; set; }
         public class ListSynchronizationJobsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The name of the dynamic parameter.</para>
+            /// <para>Dynamic parameter name</para>
             /// 
             /// <b>Example:</b>
             /// <para>qps</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The values of the dynamic parameter.</para>
+            /// <para>Dynamic parameter values</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
+        /// <para>Number of rows per page for paginated queries. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. If no more pages exist, this parameter is not returned.</para>
+        /// <para>Token for querying the next page. This parameter is not returned when there are no more pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1.</para>
+        /// <para>Page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The maximum value is 100.</para>
+        /// <para>Page size. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The synchronization start time. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>Synchronization start time in Unix timestamp format, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830226000</para>
@@ -123,17 +123,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the sync task. Valid values:</para>
+        /// <para>Synchronization job status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>pending: The task is pending.</para>
+        /// <item><description><para>pending: initial state</para>
         /// </description></item>
-        /// <item><description><para>running: The task is running.</para>
+        /// <item><description><para>running: running</para>
         /// </description></item>
-        /// <item><description><para>failed: The task failed.</para>
+        /// <item><description><para>failed: failed</para>
         /// </description></item>
-        /// <item><description><para>partial_success: The task is partially successful.</para>
+        /// <item><description><para>partial_success: partially succeeded</para>
         /// </description></item>
-        /// <item><description><para>success: The task is successful.</para>
+        /// <item><description><para>success: succeeded</para>
         /// </description></item>
         /// </list>
         /// 
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>A list of synchronization target IDs. For example, \<c>[idp_111XXXX,idp_222XXXX]\\</c>.</para>
+        /// <para>List of synchronization target IDs. [idp_111XXXX,idp_222XXXX]</para>
         /// 
         /// <b>Example:</b>
         /// <para>target_001</para>
@@ -155,11 +155,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> TargetIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the synchronization target. Valid values:</para>
+        /// <para>Synchronization target type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>identity_provider: Identity provider.</para>
+        /// <item><description><para>identity_provider: identity provider</para>
         /// </description></item>
-        /// <item><description><para>application: Application.</para>
+        /// <item><description><para>application: application</para>
         /// </description></item>
         /// </list>
         /// 

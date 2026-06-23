@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForNetworkAccessEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of applications for the network access endpoint.</para>
+        /// <para>The collection of applications under the network access endpoint.</para>
         /// </summary>
         [NameInMap("ApplicationsForNetworkAccessEndpoint")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The token for the next page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

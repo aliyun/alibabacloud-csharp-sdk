@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetRootOrganizationalUnitResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data object of the organizational unit.</para>
+        /// <para>The organizational unit data object.</para>
         /// </summary>
         [NameInMap("OrganizationalUnit")]
         [Validation(Required=false)]
         public GetRootOrganizationalUnitResponseBodyOrganizationalUnit OrganizationalUnit { get; set; }
         public class GetRootOrganizationalUnitResponseBodyOrganizationalUnit : TeaModel {
             /// <summary>
-            /// <para>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the organizational unit was created, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the organizational unit.</para>
+            /// <para>The organizational unit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitId { get; set; }
 
             /// <summary>
-            /// <para>The name of the organization.</para>
+            /// <para>The organizational unit name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitName { get; set; }
 
             /// <summary>
-            /// <para>The time when the organizational unit was last updated. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the organizational unit was last updated, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652085686179</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

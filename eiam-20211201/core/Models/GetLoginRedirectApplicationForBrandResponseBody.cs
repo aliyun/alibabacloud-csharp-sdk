@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetLoginRedirectApplicationForBrandResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the post-logon redirect application for the brand.</para>
+        /// <para>The brand logon redirect application information.</para>
         /// </summary>
         [NameInMap("BrandLoginRedirectApplication")]
         [Validation(Required=false)]

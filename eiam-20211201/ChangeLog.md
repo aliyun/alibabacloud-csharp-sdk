@@ -1,3 +1,10 @@
+2026-06-23 Version: 1.25.0
+- Support API GetAuthorizationServer.
+- Support API ListAuthorizationServers.
+- Support API UpdateAuthorizationServer.
+- Support API UpdateAuthorizationServerDescription.
+
+
 2026-06-16 Version: 1.24.1
 - Update API GetInstance: add response parameters Body.Instance.CrossRegionReplication.
 - Update API GetInstance: add response parameters Body.Instance.CrossRegionReplicationRole.

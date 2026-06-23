@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CheckInstanceForDeleteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The check result.</para>
         /// </summary>
         [NameInMap("CheckInstanceResult")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Deletable { get; set; }
 
             /// <summary>
-            /// <para>The restriction information that prevents deletion.</para>
+            /// <para>The restriction information for instances that cannot be deleted.</para>
             /// </summary>
             [NameInMap("RestrictScenarios")]
             [Validation(Required=false)]
             public List<CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios> RestrictScenarios { get; set; }
             public class CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios : TeaModel {
                 /// <summary>
-                /// <para>The URL of a helpful console page.</para>
+                /// <para>The console URL that provides helpful information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://console-rpa.aliyun.com/">https://console-rpa.aliyun.com/</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the restriction.</para>
+                /// <para>The restriction reason.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_product_dependency</para>

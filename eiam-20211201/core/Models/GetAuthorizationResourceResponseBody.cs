@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetAuthorizationResourceResponseBodyAuthorizationResource AuthorizationResource { get; set; }
         public class GetAuthorizationResourceResponseBodyAuthorizationResource : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource entity that is associated with the authorized resource.</para>
+            /// <para>The ID of the resource entity associated with the authorized resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource entity that is associated with the authorized resource. Valid value:</para>
+            /// <para>The type of the resource entity associated with the authorized resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_account_role: a cloud role</description></item>
+            /// <item><description>cloud_account_role: cloud role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the resource entity that is associated with the authorized resource belongs.</para>
+            /// <para>The ID of the cloud account to which the resource entity associated with the authorized resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>

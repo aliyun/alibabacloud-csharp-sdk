@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class EnableInitDomainAutoRedirectRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

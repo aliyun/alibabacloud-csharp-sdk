@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>A client token that you generate to ensure the idempotence of the request. Make sure that the value of this parameter is unique across different requests. The client token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public AddGroupToAuthorizationRuleRequestValidityPeriod ValidityPeriod { get; set; }
         public class AddGroupToAuthorizationRuleRequestValidityPeriod : TeaModel {
             /// <summary>
-            /// <para>The end time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The end time of the validity period. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1704062061000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The start time of the validity period. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1704042061000</para>
@@ -83,12 +83,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The type of the validity period. Valid values:</para>
+        /// <para>The validity type of the relationship. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>permanent: The relationship is permanent.</para>
-        /// </description></item>
-        /// <item><description><para>time_bound: The relationship is valid for a custom time range.</para>
-        /// </description></item>
+        /// <item><description>permanent: permanent</description></item>
+        /// <item><description>time_bound: custom time range.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

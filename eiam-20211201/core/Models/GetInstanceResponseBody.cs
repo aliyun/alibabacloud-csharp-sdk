@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetInstanceResponseBodyInstance Instance { get; set; }
         public class GetInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created, in Unix timestamp format, measured in milliseconds.</para>
+            /// <para>The time when the instance was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1550115455000</para>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CrossRegionReplicationRole { get; set; }
 
             /// <summary>
-            /// <para>The default endpoint of the instance. This field is no longer maintained. Use the DomainConfig related fields or refer to the domain list query API instead.</para>
+            /// <para>The default domain name of the instance. This field is no longer maintained. Use the DomainConfig fields or refer to the query domain name list operation instead.</para>
             /// </summary>
             [NameInMap("DefaultEndpoint")]
             [Validation(Required=false)]
             public GetInstanceResponseBodyInstanceDefaultEndpoint DefaultEndpoint { get; set; }
             public class GetInstanceResponseBodyInstanceDefaultEndpoint : TeaModel {
                 /// <summary>
-                /// <para>The endpoint address of the instance.</para>
+                /// <para>The domain name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-xxx.aliyunidaas.com</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The status of the instance endpoint. Valid values:</para>
+                /// <para>The status of the instance domain name. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>resolved: Resolved.</description></item>
                 /// <item><description>unresolved: Not resolved.</description></item>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The domain-related configuration of the instance.</para>
+            /// <para>The domain name configuration of the instance.</para>
             /// </summary>
             [NameInMap("DomainConfig")]
             [Validation(Required=false)]
             public GetInstanceResponseBodyInstanceDomainConfig DomainConfig { get; set; }
             public class GetInstanceResponseBodyInstanceDomainConfig : TeaModel {
                 /// <summary>
-                /// <para>The default domain of the instance.</para>
+                /// <para>The default domain name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>login.example.com</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string DefaultDomain { get; set; }
 
                 /// <summary>
-                /// <para>The initialization domain of the instance.</para>
+                /// <para>The initialization domain name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rx72nxxx.example.com</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string InitDomain { get; set; }
 
                 /// <summary>
-                /// <para>The auto-redirect status of the initialization domain. Valid values:</para>
+                /// <para>The automatic redirect status of the initialization domain name. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>enabled: Enabled.</para>
                 /// </description></item>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The egress public IP address ranges of the instance. For example, during AD account synchronization, the EIAM instance accesses your AD service through these public IP address ranges.</para>
+            /// <para>The public egress CIDR blocks of the instance. For example, during Active Directory (AD) account synchronization, the EIAM instance accesses your AD server through these public CIDR blocks.</para>
             /// </summary>
             [NameInMap("EgressAddresses")]
             [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The service code of the cloud service that manages the instance.</para>
+            /// <para>The ServiceCode of the Alibaba Cloud service that manages the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sase</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the instance is managed by a cloud service.</para>
+            /// <para>Indicates whether the instance is managed by an Alibaba Cloud service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

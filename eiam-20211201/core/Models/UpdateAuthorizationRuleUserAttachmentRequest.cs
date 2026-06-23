@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>A client token used to ensure the idempotence of the request. Generate a unique value from your client for this parameter. ClientToken supports only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The user ID.</para>
+        /// <para>The account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The time range of the validity period. This parameter takes effect when ValidityType is set to time_bound.</para>
+        /// <para>The time range of the validity period. This parameter takes effect only when <b>ValidityType</b> is set to <b>time_bound</b>.</para>
         /// </summary>
         [NameInMap("ValidityPeriod")]
         [Validation(Required=false)]
         public UpdateAuthorizationRuleUserAttachmentRequestValidityPeriod ValidityPeriod { get; set; }
         public class UpdateAuthorizationRuleUserAttachmentRequestValidityPeriod : TeaModel {
             /// <summary>
-            /// <para>The end time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The end time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1704062061000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the validity period. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The start time of the validity period, in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1704042061000</para>
@@ -83,12 +83,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The validity period type of the association. Valid values:</para>
+        /// <para>The validity type of the relationship. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>permanent: The association is permanent.</para>
-        /// </description></item>
-        /// <item><description><para>time_bound: The association is valid for a custom time range.</para>
-        /// </description></item>
+        /// <item><description>permanent: permanent</description></item>
+        /// <item><description>time_bound: custom time range.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

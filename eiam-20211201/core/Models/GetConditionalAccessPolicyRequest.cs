@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetConditionalAccessPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the conditional access policy.</para>
+        /// <para>Conditional access policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ConditionalAccessPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

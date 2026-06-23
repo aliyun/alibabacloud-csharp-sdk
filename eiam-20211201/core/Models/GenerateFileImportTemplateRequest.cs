@@ -21,7 +21,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The synchronization target type.</para>
+        /// <para>The synchronization target type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>identity_provider: identity provider</description></item>
+        /// <item><description>application: application</description></item>
+        /// <item><description>eiam_v2_user_import: IDaaS 2.0 user import.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

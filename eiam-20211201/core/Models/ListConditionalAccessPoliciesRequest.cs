@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page in a paginated query.</para>
+        /// <para>Number of rows per page in paginated queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token for the next page query.</para>
+        /// <para>Next page query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Token for the previous page query.</para>
+        /// <para>Previous page query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>

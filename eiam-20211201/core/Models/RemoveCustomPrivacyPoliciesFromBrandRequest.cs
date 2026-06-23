@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RemoveCustomPrivacyPoliciesFromBrandRequest : TeaModel {
         /// <summary>
-        /// <para>The branding ID.</para>
+        /// <para>The brand ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string BrandId { get; set; }
 
         /// <summary>
-        /// <para>A list of policy IDs.</para>
+        /// <para>The list of term IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CustomPrivacyPolicyIds")]

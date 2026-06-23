@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sync task.</para>
+        /// <para>The synchronization task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

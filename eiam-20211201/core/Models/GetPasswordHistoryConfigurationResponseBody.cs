@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetPasswordHistoryConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The password history configurations.</para>
+        /// <para>The password history check configuration.</para>
         /// </summary>
         [NameInMap("PasswordHistoryConfiguration")]
         [Validation(Required=false)]
         public GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration PasswordHistoryConfiguration { get; set; }
         public class GetPasswordHistoryConfigurationResponseBodyPasswordHistoryConfiguration : TeaModel {
             /// <summary>
-            /// <para>The maximum number of recent passwords that are retained.</para>
+            /// <para>The maximum number of recent password records to retain.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? PasswordHistoryMaxRetention { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the password history feature is enabled. Valid values:</para>
+            /// <para>The status of the password history configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled</description></item>
-            /// <item><description>disabled</description></item>
+            /// <item><description>enabled: Enabled.</description></item>
+            /// <item><description>disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

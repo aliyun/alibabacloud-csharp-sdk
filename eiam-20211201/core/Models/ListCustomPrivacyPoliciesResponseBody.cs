@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCustomPrivacyPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of custom privacy policies.</para>
+        /// <para>The list of custom terms.</para>
         /// </summary>
         [NameInMap("CustomPrivacyPolicies")]
         [Validation(Required=false)]
         public List<ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies> CustomPrivacyPolicies { get; set; }
         public class ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies : TeaModel {
             /// <summary>
-            /// <para>The ID of the custom privacy policy.</para>
+            /// <para>The custom term ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pp_xxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom privacy policy.</para>
+            /// <para>The custom term name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom Privacy Policy Name</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyName { get; set; }
 
             /// <summary>
-            /// <para>The default language of the policy. The value is the LanguageCode returned by the ListLanguages operation.</para>
+            /// <para>The default language term entry. The value is obtained from the LanguageCode field returned by the ListLanguages operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The status of the custom privacy policy.</para>
+            /// <para>The custom term status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The user consent type for the policy.</para>
+            /// <para>The consent type of the custom term.</para>
             /// 
             /// <b>Example:</b>
             /// <para>implied_consent</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the previous page of results.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

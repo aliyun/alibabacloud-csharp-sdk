@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListConditionalAccessPoliciesForNetworkZoneRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Application ID associated with the conditional access policy</para>
+        /// <para>The network zone ID associated with the conditional access policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

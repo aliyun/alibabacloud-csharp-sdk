@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEiamInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID list.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides.</para>
+        /// <para>The region to which the instances belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

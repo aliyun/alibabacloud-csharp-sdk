@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEiamInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance list.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListEiamInstancesResponseBodyInstances> Instances { get; set; }
         public class ListEiamInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The instance description.</para>
+            /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Production environment</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The private domain name of the instance Developer API.</para>
+            /// <para>The private domain name of the developer API for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-developerapi-cn.vpc-proxy.aliyuncs.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DeveloperAPIPrivateDomain { get; set; }
 
             /// <summary>
-            /// <para>The public domain of the instance Developer API.</para>
+            /// <para>The public domain name of the developer API for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-developerapi.cn-hangzhou.aliyuncs.com</para>
@@ -68,13 +68,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The instance version.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>EIAM 2.0</para>
-            /// </description></item>
-            /// <item><description><para>EIAM 1.0</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>EIAM 2.0</para>
@@ -84,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceVersion { get; set; }
 
             /// <summary>
-            /// <para>The private domain of the instance OpenAPI.</para>
+            /// <para>The private domain name of the OpenAPI for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-cn.vpc-proxy.aliyuncs.com</para>
@@ -94,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OpenAPIPrivateDomain { get; set; }
 
             /// <summary>
-            /// <para>The public domain of the instance OpenAPI.</para>
+            /// <para>The public domain name of the OpenAPI for the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam.cn-hangzhou.aliyuncs.com</para>
@@ -104,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OpenAPIPublicDomain { get; set; }
 
             /// <summary>
-            /// <para>The single sign-on (SSO) domain of the instance.</para>
+            /// <para>The SSO domain name of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx.aliyunidaas.com</para>

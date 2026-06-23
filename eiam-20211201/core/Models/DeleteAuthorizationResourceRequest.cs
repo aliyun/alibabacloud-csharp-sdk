@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DeleteAuthorizationResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The authorization resource ID.</para>
+        /// <para>The authorized resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

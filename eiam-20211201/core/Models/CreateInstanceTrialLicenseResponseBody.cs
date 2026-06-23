@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateInstanceTrialLicenseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the license.</para>
+        /// <para>The unique identifier of the License.</para>
         /// 
         /// <b>Example:</b>
         /// <para>license_463hfmewi2njxxxx</para>

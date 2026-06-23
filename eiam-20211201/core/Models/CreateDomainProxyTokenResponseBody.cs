@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateDomainProxyTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the proxy token of the domain name.</para>
+        /// <para>The domain proxy token ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pt_mtohn73423stghoivjmi4jwxxx</para>

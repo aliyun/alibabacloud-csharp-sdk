@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance whose description you want to modify.</para>
+        /// <para>The instance ID of the instance whose description you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetInstanceModuleInfoResponseBodyModule Module { get; set; }
         public class GetInstanceModuleInfoResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>The information about the secondary modules.</para>
+            /// <para>The second-level module information.</para>
             /// </summary>
             [NameInMap("Features")]
             [Validation(Required=false)]
             public List<GetInstanceModuleInfoResponseBodyModuleFeatures> Features { get; set; }
             public class GetInstanceModuleInfoResponseBodyModuleFeatures : TeaModel {
                 /// <summary>
-                /// <para>The identifier of the secondary module.</para>
+                /// <para>The identifier of the second-level module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:alibaba:idaas:license:module:application:standard:oidc</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string FeatureKey { get; set; }
 
                 /// <summary>
-                /// <para>The status of the secondary module.</para>
+                /// <para>The status of the second-level module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The identifier of the primary module.</para>
+            /// <para>The identifier of the first-level module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:license:module:application</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ModuleKey { get; set; }
 
             /// <summary>
-            /// <para>The status of the primary module.</para>
+            /// <para>The status of the first-level module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

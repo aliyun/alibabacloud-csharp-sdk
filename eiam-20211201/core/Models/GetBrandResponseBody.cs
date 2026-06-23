@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetBrandResponseBody : TeaModel {
         /// <summary>
-        /// <para>The brand.</para>
+        /// <para>Brand.</para>
         /// </summary>
         [NameInMap("Brand")]
         [Validation(Required=false)]
         public GetBrandResponseBodyBrand Brand { get; set; }
         public class GetBrandResponseBodyBrand : TeaModel {
             /// <summary>
-            /// <para>The brand ID.</para>
+            /// <para>Brand ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>brand_xxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandId { get; set; }
 
             /// <summary>
-            /// <para>The brand name.</para>
+            /// <para>Brand name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom Brand</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandName { get; set; }
 
             /// <summary>
-            /// <para>The brand type.</para>
+            /// <para>Brand type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_custom</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandType { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The brand status.</para>
+            /// <para>Brand status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

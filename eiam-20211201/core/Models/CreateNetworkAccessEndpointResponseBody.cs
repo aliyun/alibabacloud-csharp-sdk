@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateNetworkAccessEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the network access endpoint.</para>
+        /// <para>Network access endpoint ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nae_examplexxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

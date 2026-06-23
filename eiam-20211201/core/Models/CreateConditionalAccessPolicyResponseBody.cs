@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateConditionalAccessPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Conditional Access Policy ID</para>
+        /// <para>Conditional access policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cp_xxxxx</para>

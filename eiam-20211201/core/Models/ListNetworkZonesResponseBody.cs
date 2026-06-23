@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListNetworkZonesResponseBodyNetworkZones> NetworkZones { get; set; }
         public class ListNetworkZonesResponseBodyNetworkZones : TeaModel {
             /// <summary>
-            /// <para>The description of the network zone.</para>
+            /// <para>The network zone description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The IPv4 CIDR blocks.</para>
+            /// <para>The IPv4 CIDR blocks of the network zone.</para>
             /// </summary>
             [NameInMap("Ipv4Cidrs")]
             [Validation(Required=false)]
             public List<string> Ipv4Cidrs { get; set; }
 
             /// <summary>
-            /// <para>The IPv6 CIDR blocks.</para>
+            /// <para>The IPv6 CIDR blocks of the network zone.</para>
             /// </summary>
             [NameInMap("Ipv6Cidrs")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkZoneName { get; set; }
 
             /// <summary>
-            /// <para>The type of the network zone.</para>
+            /// <para>The network zone type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arn:alibaba:idaas:network:zone:classic</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the next page of results.</para>
+        /// <para>The pagination token returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to retrieve the previous page of results.</para>
+        /// <para>The pagination token for the previous page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

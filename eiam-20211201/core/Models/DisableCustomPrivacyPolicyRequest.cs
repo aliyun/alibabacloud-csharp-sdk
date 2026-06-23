@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DisableCustomPrivacyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom privacy policy.</para>
+        /// <para>The ID of the custom term.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

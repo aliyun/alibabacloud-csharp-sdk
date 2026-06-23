@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user associated with the conditional access policy.</para>
+        /// <para>The user ID associated with the conditional access policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

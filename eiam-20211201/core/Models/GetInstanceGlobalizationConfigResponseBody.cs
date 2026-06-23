@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceGlobalizationConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The language and time zone configuration for the instance.</para>
+        /// <para>The language and time zone configuration of the instance.</para>
         /// </summary>
         [NameInMap("GlobalizationConfig")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DeleteCustomPrivacyPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The custom privacy policy ID.</para>
+        /// <para>The custom clause ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

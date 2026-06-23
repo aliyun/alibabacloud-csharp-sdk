@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListAuthorizationResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of authorized resources.</para>
+        /// <para>The list of authorization resources.</para>
         /// </summary>
         [NameInMap("AuthorizationResources")]
         [Validation(Required=false)]
         public List<ListAuthorizationResourcesResponseBodyAuthorizationResources> AuthorizationResources { get; set; }
         public class ListAuthorizationResourcesResponseBodyAuthorizationResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the associated resource entity.</para>
+            /// <para>The resource entity ID associated with the authorization resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The type of the associated resource entity. Valid values:</para>
+            /// <para>The resource entity type associated with the authorization resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_account_role: A cloud role.</description></item>
+            /// <item><description>cloud_account_role: cloud role.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityType { get; set; }
 
             /// <summary>
-            /// <para>The authorized resource ID.</para>
+            /// <para>The authorization resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arres_01kgh3jvt7pk093rv6giu0c0qxxxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the associated resource entity.</para>
+            /// <para>The cloud account ID to which the resource entity associated with the authorization resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in the paged query. This is the paging size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results. This parameter is returned when the results are paged.</para>
+        /// <para>The pagination token returned in this call. Use this token for the next page query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

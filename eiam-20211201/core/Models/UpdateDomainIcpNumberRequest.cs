@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateDomainIcpNumberRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name ID.</para>
+        /// <para>Domain ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DomainId { get; set; }
 
         /// <summary>
-        /// <para>The ICP filing number associated with the domain name.</para>
+        /// <para>The ICP filing number associated with the domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IcpNumber { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

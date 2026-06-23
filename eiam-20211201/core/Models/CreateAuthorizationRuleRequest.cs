@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The scope of authorized resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>global: all resources within the project.</para>
-        /// </description></item>
-        /// <item><description><para>custom: specified resources within the project.</para>
-        /// </description></item>
+        /// <item><description>global: all resources under the project.</description></item>
+        /// <item><description>custom: specified resources under the project.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationResourceScope { get; set; }
 
         /// <summary>
-        /// <para>The name of the authorization rule. The name can be up to 64 characters long.</para>
+        /// <para>The name of the authorization rule. The name can be up to 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleName { get; set; }
 
         /// <summary>
-        /// <para>A unique identifier that you provide to ensure the idempotence of the request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References: <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the authorization rule. The description can be up to 128 characters long.</para>
+        /// <para>The description of the authorization rule. The description can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test rule</para>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the project to associate with the authorization rule. If you are unsure which project to use, you can associate the rule with the default project, iprj_system_default.</para>
+        /// <para>The ID of the project associated with the authorization rule. If you are unsure which project to associate, you can associate the default project. The default project ID is iprj_system_default.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

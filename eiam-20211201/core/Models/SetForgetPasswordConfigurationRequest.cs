@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetForgetPasswordConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The authentication channels. Valid values: email and sms.</para>
+        /// <para>The list of authentication channels. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>email: email.</description></item>
+        /// <item><description>sms: text message.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>email</para>
@@ -20,7 +24,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> AuthenticationChannels { get; set; }
 
         /// <summary>
-        /// <para>The status of the forgot password feature. Valid values: enabled and disabled.</para>
+        /// <para>The forgot password configuration status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled: enabled.</description></item>
+        /// <item><description>disabled: disabled.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

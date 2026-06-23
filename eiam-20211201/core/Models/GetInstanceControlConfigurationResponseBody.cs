@@ -17,14 +17,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration InstanceControlConfiguration { get; set; }
         public class GetInstanceControlConfigurationResponseBodyInstanceControlConfiguration : TeaModel {
             /// <summary>
-            /// <para>The list of control elements.</para>
+            /// <para>The instance control configuration.</para>
             /// </summary>
             [NameInMap("ControlElements")]
             [Validation(Required=false)]
             public List<GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements> ControlElements { get; set; }
             public class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElements : TeaModel {
                 /// <summary>
-                /// <para>The element name.</para>
+                /// <para>The name of the instance control item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>human_verification</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ElementName { get; set; }
 
                 /// <summary>
-                /// <para>The human verification configuration.</para>
+                /// <para>The Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) authenticate configuration.</para>
                 /// </summary>
                 [NameInMap("HumanVerificationConfig")]
                 [Validation(Required=false)]
                 public GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig HumanVerificationConfig { get; set; }
                 public class GetInstanceControlConfigurationResponseBodyInstanceControlConfigurationControlElementsHumanVerificationConfig : TeaModel {
                     /// <summary>
-                    /// <para>The human verification type.</para>
+                    /// <para>The CAPTCHA type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>urn:alibaba:idaas:humanverification:alibaba-cloud-jigsaw-verification</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the control element.</para>
+                /// <para>The status of the instance control item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>

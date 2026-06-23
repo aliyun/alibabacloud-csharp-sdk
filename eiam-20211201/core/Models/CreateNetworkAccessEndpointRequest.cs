@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateNetworkAccessEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>Idempotent token.</para>
+        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the VPC.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Private network endpoint name.</para>
+        /// <para>Network access endpoint name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of vSwitches.</para>
+        /// <para>List of specified vSwitches connected to the network access endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-examplexxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>VPC ID connected to the network access endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the outbound VPC.</para>
+        /// <para>Region of the VPC ID connected to the network access endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

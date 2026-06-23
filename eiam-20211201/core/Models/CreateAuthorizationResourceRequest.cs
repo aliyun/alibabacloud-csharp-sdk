@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateAuthorizationResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource entity that is associated with the authorization resource.</para>
+        /// <para>The ID of the resource entity associated with the authorization resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationResourceEntityId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource entity that is associated with the authorization resource. Valid value:</para>
+        /// <para>The type of the resource entity associated with the authorization resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_account_role: indicates a cloud role.</description></item>
+        /// <item><description>cloud_account_role: cloud role.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The client token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate a parameter value, but make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see References <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

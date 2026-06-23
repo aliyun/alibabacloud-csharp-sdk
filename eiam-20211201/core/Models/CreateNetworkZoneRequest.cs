@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateNetworkZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The idempotence token.</para>
+        /// <para>Idempotency token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the network zone.</para>
+        /// <para>Network zone description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test description</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR blocks of the network zone.</para>
+        /// <para>Network zone IPv4 CIDR blocks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.0.0/0</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> Ipv4Cidrs { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 CIDR blocks of the network zone.</para>
+        /// <para>Network zone IPv6 CIDR blocks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>::/0</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> Ipv6Cidrs { get; set; }
 
         /// <summary>
-        /// <para>The name of the network zone.</para>
+        /// <para>Network zone name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkZoneName { get; set; }
 
         /// <summary>
-        /// <para>The type of the network zone.</para>
+        /// <para>Network zone type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkZoneType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc_xxxxx</para>
