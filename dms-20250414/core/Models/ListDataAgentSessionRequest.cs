@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>Session creation end time</para>
+        /// <para>The end time of the session creation period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770912000000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? CreateEndTime { get; set; }
 
         /// <summary>
-        /// <para>Session creation start time</para>
+        /// <para>The start time of the session creation period.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1770825600000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? CreateStartTime { get; set; }
 
         /// <summary>
-        /// <para>Custom Agent ID</para>
+        /// <para>The custom agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-4y3ca4khkcu**********ysf</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
-        /// <para>Current DMS unit</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>Whether to return only saved sessions</para>
+        /// <para>Specifies whether to retrieve only favorited sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -59,8 +59,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public bool? IsSaved { get; set; }
 
+        [NameInMap("Mode")]
+        [Validation(Required=false)]
+        public string Mode { get; set; }
+
         /// <summary>
-        /// <para>Page number for pagination</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Session type. Required when you specify a collaboration workspace.</para>
+        /// <para>The session type. This parameter is required if a workspace is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myFavorite</para>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string QueryType { get; set; }
 
         /// <summary>
-        /// <para>Data Agent title (supports fuzzy search)</para>
+        /// <para>The Data Agent title. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>帮我分析一下这份数据</para>
@@ -100,7 +104,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Collaboration workspace ID</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20923*****7291</para>

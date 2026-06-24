@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            /// <summary>
+            /// <para>The message ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>922d7fd2-77fb-4549-9091-d51da225d47f</para>
+            /// </summary>
             [NameInMap("MessageId")]
             [Validation(Required=false)]
             public string MessageId { get; set; }

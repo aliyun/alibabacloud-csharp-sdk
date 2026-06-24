@@ -7014,6 +7014,182 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the operation logs of the SQL window.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlConsoleOperationLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlConsoleOperationLogResponse
+        /// </returns>
+        public GetSqlConsoleOperationLogResponse GetSqlConsoleOperationLogWithOptions(GetSqlConsoleOperationLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlType))
+            {
+                query["SqlType"] = request.SqlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlConsoleOperationLog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlConsoleOperationLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the operation logs of the SQL window.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlConsoleOperationLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlConsoleOperationLogResponse
+        /// </returns>
+        public async Task<GetSqlConsoleOperationLogResponse> GetSqlConsoleOperationLogWithOptionsAsync(GetSqlConsoleOperationLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlType))
+            {
+                query["SqlType"] = request.SqlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSqlConsoleOperationLog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSqlConsoleOperationLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the operation logs of the SQL window.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlConsoleOperationLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlConsoleOperationLogResponse
+        /// </returns>
+        public GetSqlConsoleOperationLogResponse GetSqlConsoleOperationLog(GetSqlConsoleOperationLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSqlConsoleOperationLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the operation logs of the SQL window.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSqlConsoleOperationLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSqlConsoleOperationLogResponse
+        /// </returns>
+        public async Task<GetSqlConsoleOperationLogResponse> GetSqlConsoleOperationLogAsync(GetSqlConsoleOperationLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSqlConsoleOperationLogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Reads the content of a code file in the workspace and returns the file content along with mtime (in the header).</para>
         /// </summary>
         /// 
@@ -7902,7 +8078,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Data Agent session descriptions.</para>
+        /// <para>Retrieves the list of historical session descriptions for a Data Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7938,6 +8114,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSaved))
             {
                 query["IsSaved"] = request.IsSaved;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -7980,7 +8160,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Data Agent session descriptions.</para>
+        /// <para>Retrieves the list of historical session descriptions for a Data Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8016,6 +8196,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSaved))
             {
                 query["IsSaved"] = request.IsSaved;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                query["Mode"] = request.Mode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -8058,7 +8242,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Data Agent session descriptions.</para>
+        /// <para>Retrieves the list of historical session descriptions for a Data Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8076,7 +8260,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Data Agent session descriptions.</para>
+        /// <para>Retrieves the list of historical session descriptions for a Data Agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12438,8 +12622,8 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
@@ -12559,8 +12743,8 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
@@ -12680,8 +12864,8 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
@@ -12711,8 +12895,8 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>

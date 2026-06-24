@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListDataAgentSessionResponseBodyData> Data { get; set; }
         public class ListDataAgentSessionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Current Agent ID</para>
+            /// <para>The current agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cu0cs*******mf</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>Current Agent status</para>
+            /// <para>The current agent status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentStatus { get; set; }
 
             /// <summary>
-            /// <para>Session creation time</para>
+            /// <para>The session creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1731645908000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Whether the session is saved by the current user in the workspace</para>
+            /// <para>Indicates whether the session is favorited by the current logged-in user in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public bool? FavoriteInWorkspace { get; set; }
 
             /// <summary>
-            /// <para>File ID</para>
+            /// <para>The file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>f-8*******01m</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string File { get; set; }
 
             /// <summary>
-            /// <para>Whether the session is saved by the current user</para>
+            /// <para>Indicates whether the session is favorited by the current logged-in user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public bool? Saved { get; set; }
 
             /// <summary>
-            /// <para>Session configuration</para>
+            /// <para>The session configuration item.</para>
             /// </summary>
             [NameInMap("SessionConfig")]
             [Validation(Required=false)]
             public ListDataAgentSessionResponseBodyDataSessionConfig SessionConfig { get; set; }
             public class ListDataAgentSessionResponseBodyDataSessionConfig : TeaModel {
                 /// <summary>
-                /// <para>Custom Agent ID</para>
+                /// <para>The custom agent ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ca-e*******ckd</para>
@@ -94,12 +94,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CustomAgentId { get; set; }
 
                 /// <summary>
-                /// <para>Custom Agent usage stage:</para>
+                /// <para>The usage stage of the custom agent. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>debug</b> Debug stage</para>
-                /// </description></item>
-                /// <item><description><para><b>prod</b> Production stage</para>
-                /// </description></item>
+                /// <item><description><b>debug</b>: Debug stage.</description></item>
+                /// <item><description><b>prod</b>: Production stage.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -110,7 +108,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CustomAgentStage { get; set; }
 
                 /// <summary>
-                /// <para>Whether web search is enabled</para>
+                /// <para>Specifies whether to enable web search.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -120,12 +118,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? EnableSearch { get; set; }
 
                 /// <summary>
-                /// <para>Language</para>
+                /// <para>The language. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>CHINESE</b> Chinese</para>
-                /// </description></item>
-                /// <item><description><para><b>ENGLISH</b> English</para>
-                /// </description></item>
+                /// <item><description><b>CHINESE</b>: Chinese.</description></item>
+                /// <item><description><b>ENGLISH</b>: English.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -136,14 +132,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Language { get; set; }
 
                 /// <summary>
-                /// <para>Mode:</para>
+                /// <para>The mode. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>ASK_DATA</b> Quick Inquiry Mode</para>
-                /// </description></item>
-                /// <item><description><para><b>ANALYSIS</b> Analysis mode</para>
-                /// </description></item>
-                /// <item><description><para><b>INSIGHT</b> Insight mode</para>
-                /// </description></item>
+                /// <item><description><b>ASK_DATA</b>: Ask data mode.</description></item>
+                /// <item><description><b>ANALYSIS</b>: Analysis mode.</description></item>
+                /// <item><description><b>INSIGHT</b>: Insight mode.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -154,9 +147,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// <para>User OSS bucket name</para>
+                /// <para>The name of the user OSS bucket.</para>
                 /// <list type="bullet">
-                /// <item><description>Files and reports generated during analysis can be uploaded to the user-specified OSS bucket.</description></item>
+                /// <item><description>Analysis process files and report artifacts can be uploaded to the user-specified OSS bucket.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -169,7 +162,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>Data Agent session ID</para>
+            /// <para>The Data Agent session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>h8r********4fch</para>
@@ -179,7 +172,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>Session status</para>
+            /// <para>The session status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -189,7 +182,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string SessionStatus { get; set; }
 
             /// <summary>
-            /// <para>Title</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>分析一下这份文件，给出报告。</para>
@@ -199,7 +192,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Session owner ID</para>
+            /// <para>The ID of the session owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2096******</para>
@@ -211,7 +204,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>Error code. Returned when the request fails.</para>
+        /// <para>The error code returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -221,7 +214,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message returned when the call fails.</para>
+        /// <para>The error message returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
@@ -231,7 +224,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -241,7 +234,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Current page size</para>
+        /// <para>The current page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -251,7 +244,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>E0D21075-CD3E-4D98-8264-****</para>
@@ -261,12 +254,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request succeeded. Possible values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -277,7 +268,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of records</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -287,7 +278,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? Total { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

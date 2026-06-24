@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DescribeDataAgentSessionRequest : TeaModel {
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The agent session ID.</para>
+        /// <para>The DataAgent session ID. You can obtain this ID by calling CreateDataAgentSession.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c61n7gm******rj</para>
