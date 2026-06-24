@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The name of the whitelist group for the instance.</para>
+        /// <para>The name of the whitelist group of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

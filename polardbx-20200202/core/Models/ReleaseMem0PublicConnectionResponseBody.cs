@@ -8,16 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class ModifyMem0SecurityIpsResponseBody : TeaModel {
+    public class ReleaseMem0PublicConnectionResponseBody : TeaModel {
         /// <summary>
         /// <para>The details about the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
-        public ModifyMem0SecurityIpsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
-        public class ModifyMem0SecurityIpsResponseBodyAccessDeniedDetail : TeaModel {
+        public ReleaseMem0PublicConnectionResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class ReleaseMem0PublicConnectionResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
-            /// <para>The API operation name.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the identity used for authentication belongs.</para>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>111</para>
@@ -47,12 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The type of identity used for authentication in the request. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SubUser: RAM user.</description></item>
-            /// <item><description>AssumedRoleUser: RAM role.</description></item>
-            /// <item><description>Federated: SSO federated identity.</description></item>
-            /// </list>
+            /// <para>Same as above.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -62,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted complete diagnostic information.</para>
+            /// <para>The encoded diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
@@ -72,11 +67,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>ImplicitDeny</b>: The resource owner has not granted the required permissions to the current user. Unauthorized operations are denied by default.</description></item>
-            /// <item><description><b>ExplicitDeny</b>: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</description></item>
-            /// </list>
+            /// <para>The type of missing permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -98,29 +89,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The data structure.</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public ModifyMem0SecurityIpsResponseBodyData Data { get; set; }
-        public class ModifyMem0SecurityIpsResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The task ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2209883</para>
-            /// </summary>
-            [NameInMap("TaskId")]
-            [Validation(Required=false)]
-            public int? TaskId { get; set; }
-
-        }
-
-        /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B87E2AB3-B7C9-4394-9160-7F639F732031</para>
+        /// <para>173CA69A-3513-591D-8A09-C1EA37CBE2D9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
