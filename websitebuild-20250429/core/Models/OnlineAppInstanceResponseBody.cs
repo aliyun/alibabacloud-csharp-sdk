@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
-    public class GetAppWorkspaceDirectoryResponseBody : TeaModel {
+    public class OnlineAppInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The detailed reason why access was denied.</para>
+        /// <para>The authentication failure details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a retry is allowed.</para>
+        /// <para>Indicates whether retries are allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name can be up to 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ish-intelligence-store-platform-admin-web</para>
+        /// <para>stg.mlp_finance_cap_refund_hi</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The dynamic error code.</para>
+        /// <para>The dynamic error code. This parameter will be deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,82 +50,37 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
+        /// <para>The placeholder in the dynamic error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SYSTEM_ERROR</para>
+        /// <para>xxxxx</para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The error parameters returned.</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>The response object.</para>
+        /// <para>The application module.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;StorageSize\&quot;: \&quot;3.29 MB\&quot;, \&quot;FileNum\&quot;: 30}</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
-        public GetAppWorkspaceDirectoryResponseBodyModule Module { get; set; }
-        public class GetAppWorkspaceDirectoryResponseBodyModule : TeaModel {
-            /// <summary>
-            /// <para>The current time.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2026</para>
-            /// </summary>
-            [NameInMap("CurrentTime")]
-            [Validation(Required=false)]
-            public string CurrentTime { get; set; }
-
-            /// <summary>
-            /// <para>The directory structure.</para>
-            /// </summary>
-            [NameInMap("DirectoryList")]
-            [Validation(Required=false)]
-            public List<GetAppWorkspaceDirectoryResponseBodyModuleDirectoryList> DirectoryList { get; set; }
-            public class GetAppWorkspaceDirectoryResponseBodyModuleDirectoryList : TeaModel {
-                /// <summary>
-                /// <para>The child content.</para>
-                /// </summary>
-                [NameInMap("Children")]
-                [Validation(Required=false)]
-                public List<object> Children { get; set; }
-
-                /// <summary>
-                /// <para>The full path relative to the workspace.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PolarDBInnoDBRedoLogWrites</para>
-                /// </summary>
-                [NameInMap("Key")]
-                [Validation(Required=false)]
-                public string Key { get; set; }
-
-                /// <summary>
-                /// <para>The name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Evaluable=true</para>
-                /// </summary>
-                [NameInMap("Label")]
-                [Validation(Required=false)]
-                public string Label { get; set; }
-
-            }
-
-        }
+        public Dictionary<string, object> Module { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6C6B99AC-39EC-5350-874C-204128C905E6</para>
+        /// <para>CAB8FBB7-F93D-596D-8BA9-FB278ADF9C22</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -152,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

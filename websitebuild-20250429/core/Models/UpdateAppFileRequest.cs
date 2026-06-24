@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UpdateAppFileRequest : TeaModel {
         /// <summary>
-        /// <para>File content</para>
+        /// <para>The file content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>verify_46630893e2b5efde444c82b4e3707adb</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>Session ID</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>593fe1a2-d0b4-4fde-a2b0-78ad6a438d41</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>File Path</para>
+        /// <para>The file path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pt3/01/31/pengpeixin.png</para>

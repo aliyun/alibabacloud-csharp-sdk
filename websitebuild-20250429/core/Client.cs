@@ -14412,6 +14412,246 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineAppInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAppInstanceResponse
+        /// </returns>
+        public OfflineAppInstanceResponse OfflineAppInstanceWithOptions(OfflineAppInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineAppInstance",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineAppInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineAppInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAppInstanceResponse
+        /// </returns>
+        public async Task<OfflineAppInstanceResponse> OfflineAppInstanceWithOptionsAsync(OfflineAppInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineAppInstance",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineAppInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineAppInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAppInstanceResponse
+        /// </returns>
+        public OfflineAppInstanceResponse OfflineAppInstance(OfflineAppInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OfflineAppInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delists a website: switches the CDN back-to-origin configuration for all domain names under the site to an offline page.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OfflineAppInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAppInstanceResponse
+        /// </returns>
+        public async Task<OfflineAppInstanceResponse> OfflineAppInstanceAsync(OfflineAppInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OfflineAppInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineAppInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineAppInstanceResponse
+        /// </returns>
+        public OnlineAppInstanceResponse OnlineAppInstanceWithOptions(OnlineAppInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineAppInstance",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineAppInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineAppInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineAppInstanceResponse
+        /// </returns>
+        public async Task<OnlineAppInstanceResponse> OnlineAppInstanceWithOptionsAsync(OnlineAppInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineAppInstance",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineAppInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineAppInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineAppInstanceResponse
+        /// </returns>
+        public OnlineAppInstanceResponse OnlineAppInstance(OnlineAppInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return OnlineAppInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes a website by restoring the CDN back-to-origin rewrite rules to the normal path for all domain names under the site.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OnlineAppInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineAppInstanceResponse
+        /// </returns>
+        public async Task<OnlineAppInstanceResponse> OnlineAppInstanceAsync(OnlineAppInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await OnlineAppInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Operates an application by a partner.</para>
         /// </summary>
         /// 
@@ -18584,12 +18824,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save requirements</para>
+        /// <para>Save Requirement</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Get code generation plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18637,12 +18877,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save requirements</para>
+        /// <para>Save Requirement</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Get code generation plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18690,12 +18930,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save requirements</para>
+        /// <para>Save Requirement</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Get code generation plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18713,12 +18953,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save requirements</para>
+        /// <para>Save Requirement</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Get code generation plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20340,12 +20580,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update file</para>
+        /// <para>Updates a file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20395,12 +20635,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update file</para>
+        /// <para>Updates a file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20450,12 +20690,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update file</para>
+        /// <para>Updates a file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20473,12 +20713,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update file</para>
+        /// <para>Updates a file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
