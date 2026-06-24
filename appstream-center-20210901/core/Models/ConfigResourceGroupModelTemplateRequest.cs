@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ConfigResourceGroupModelTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The model group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

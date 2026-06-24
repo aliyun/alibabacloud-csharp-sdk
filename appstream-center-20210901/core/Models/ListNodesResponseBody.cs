@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that can be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,22 +20,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The resource nodes.</para>
+        /// <para>The list of resource nodes.</para>
         /// </summary>
         [NameInMap("NodeModels")]
         [Validation(Required=false)]
         public List<ListNodesResponseBodyNodeModels> NodeModels { get; set; }
         public class ListNodesResponseBodyNodeModels : TeaModel {
             /// <summary>
-            /// <para>The billing method of the resource node.</para>
+            /// <para>The billing type of the resource node.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</para>
+            /// <para>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</para>
             /// </remarks>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PostPaid: pay-as-you-go</description></item>
-            /// <item><description>Prepaid: subscription</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -45,9 +40,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource node.</para>
+            /// <para>The resource node ID.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the resource node belongs is set to Node.</para>
+            /// <para>This parameter is returned only when the billing mode of the delivery group is per-resource billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -60,7 +55,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size of the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +75,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the currently returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

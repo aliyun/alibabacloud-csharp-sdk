@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodeInstanceTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The resource types.</para>
+        /// <para>The list of resource specifications.</para>
         /// </summary>
         [NameInMap("NodeInstanceTypeModels")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Gpu { get; set; }
 
             /// <summary>
-            /// <para>The GPU size. Unit: MB.</para>
+            /// <para>The GPU memory size. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8192</para>
@@ -47,13 +47,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? GpuMemory { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</para>
+            /// <para>The maximum number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</para>
             /// <list type="bullet">
+            /// <item><description>appstreaming.general.2c4g: 1</description></item>
             /// <item><description>appstreaming.general.4c8g: 1 to 2</description></item>
             /// <item><description>appstreaming.general.8c16g: 1 to 4</description></item>
             /// <item><description>appstreaming.vgpu.8c16g.4g: 1 to 4</description></item>
             /// <item><description>appstreaming.vgpu.8c31g.16g: 1 to 4</description></item>
-            /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 6</description></item>
+            /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 7</description></item>
+            /// <item><description>appstreaming.vgpu.4c10g.2gt4: 1 to 2</description></item>
+            /// <item><description>appstreaming.vgpu.4c16g.2ga10: 1 to 2</description></item>
+            /// <item><description>appstreaming.vgpu.8c16g.4g: 1 to 4</description></item>
+            /// <item><description>appstreaming.vgpu.8c31g.16g: 1 to 4</description></item>
+            /// <item><description>appstreaming.vgpu.8c16g.4gt4: 1 to 4</description></item>
+            /// <item><description>appstreaming.vgpu.8c32g.4ga10: 1 to 4</description></item>
+            /// <item><description>appstreaming.vgpu.12c46g.11g28: 1 to 6</description></item>
+            /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 7</description></item>
+            /// <item><description>appstreaming.vgpu.16c32g.8g: 1 to 8</description></item>
+            /// <item><description>appstreaming.vgpu.16c62g.8ga10: 1 to 8.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,7 +85,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource type.</para>
+            /// <para>The ID of the resource specification type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -84,12 +95,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NodeInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The resource type family.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>appstreaming.general: WUYING - General</description></item>
-            /// <item><description>appstreaming.vgpu: WUYING - Graphics</description></item>
-            /// </list>
+            /// <para>The resource specification family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appstreaming.vgpu</para>
@@ -99,10 +105,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NodeInstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource type.</para>
+            /// <para>The name of the resource specification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>WUYING - General - 4 vCPUs 8 GB Memory</para>
+            /// <para>无影-通用型_4核8G</para>
             /// </summary>
             [NameInMap("NodeTypeName")]
             [Validation(Required=false)]
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the query results currently displayed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on each page.</para>
+        /// <para>The number of query results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

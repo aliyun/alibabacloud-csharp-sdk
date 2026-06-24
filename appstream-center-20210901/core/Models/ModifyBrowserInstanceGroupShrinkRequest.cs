@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyBrowserInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The browser settings.</para>
+        /// <para>The browser configuration.</para>
         /// </summary>
         [NameInMap("BrowserConfig")]
         [Validation(Required=false)]
         public string BrowserConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud browser to be modified.</para>
+        /// <para>The ID of the cloud browser to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxAmount { get; set; }
 
         /// <summary>
-        /// <para>The network configurations.</para>
+        /// <para>The network configuration.</para>
         /// </summary>
         [NameInMap("Network")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StoragePolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The timer.</para>
+        /// <para>The timers.</para>
         /// </summary>
         [NameInMap("Timers")]
         [Validation(Required=false)]

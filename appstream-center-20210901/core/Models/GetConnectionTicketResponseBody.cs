@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetConnectionTicketResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The delivery group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-53fvrq1oan****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application instance.</para>
+        /// <para>The application instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-7ybdeiyoeh5e****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the persistent session.</para>
+        /// <para>The persistent session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0bxls9m3cl7s****</para>
@@ -57,11 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The operating system.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>Windows: the Windows operating system</description></item>
-        /// </list>
+        /// <para>The operating system type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -92,12 +88,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The task status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Finished: The task is complete.</description></item>
-        /// <item><description>Failed: The task failed.</description></item>
-        /// <item><description>Running: The task is being executed.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -107,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The tenant ID (Alibaba Cloud account UID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>148871678899****</para>
@@ -117,9 +107,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// <para>The credential that is used to connect to App Streaming.</para>
+        /// <para>The credentials for connecting to the cloud application.</para>
         /// <remarks>
-        /// <para> This parameter is displayed for calls other than the first call to this operation.</para>
+        /// <para>This parameter is returned only on non-initial calls.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

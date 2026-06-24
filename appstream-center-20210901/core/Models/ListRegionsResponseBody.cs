@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region IDs.</para>
+        /// <para>The list of region IDs.</para>
         /// </summary>
         [NameInMap("RegionModels")]
         [Validation(Required=false)]

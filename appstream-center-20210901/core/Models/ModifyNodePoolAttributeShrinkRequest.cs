@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyNodePoolAttributeShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
-        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
-        /// </list>
+        /// <para>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -25,6 +20,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>appstreaming.general.4c8g: 1 to 2.</description></item>
+        /// <item><description>appstreaming.general.8c16g: 1 to 4.</description></item>
+        /// <item><description>appstreaming.vgpu.8c16g.4g: 1 to 4.</description></item>
+        /// <item><description>appstreaming.vgpu.8c31g.16g: 1 to 4.</description></item>
+        /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 6.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -33,13 +37,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? NodeCapacity { get; set; }
 
         /// <summary>
-        /// <para>The auto scaling policy used by the delivery group.</para>
+        /// <para>The automatic scaling policy of the delivery group.</para>
         /// </summary>
         [NameInMap("NodePoolStrategy")]
         [Validation(Required=false)]
         public string NodePoolStrategyShrink { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-ew7va2g1wl3vm****</para>
         /// </summary>
@@ -49,10 +55,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CloudApp</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteAppInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The list of instance deletion results.</para>
         /// </summary>
         [NameInMap("DeleteAppInstanceModels")]
         [Validation(Required=false)]
         public List<DeleteAppInstancesResponseBodyDeleteAppInstanceModels> DeleteAppInstanceModels { get; set; }
         public class DeleteAppInstancesResponseBodyDeleteAppInstanceModels : TeaModel {
             /// <summary>
-            /// <para>The ID of the application instance.</para>
+            /// <para>The application instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ai-gbuea*****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The error code returned when an error occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidParameter.ProductType</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
+            /// <para>The error message returned when an error occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The parameter ProductType is invalid.</para>
@@ -47,12 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the application instance is deleted.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>Indicates whether the deletion is triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

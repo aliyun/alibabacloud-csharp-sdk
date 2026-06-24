@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListTagCloudResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 1000. Default value: 50.</para>
+        /// <para>The number of entries per page.
+        /// Maximum value: 1000. Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ptnJAAAAAAAxNzE5OTEwNQ==</para>
@@ -33,21 +34,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 resource IDs. You do not need to specify this parameter if you set ResourceType to AliUid.</para>
+        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud resource.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AppId: app ID.</description></item>
-        /// <item><description>WyId: Alibaba Cloud Workspace user ID.</description></item>
-        /// <item><description>AppInstanceGroupId: delivery group ID.</description></item>
-        /// <item><description>AliUid: tenant ID.</description></item>
-        /// </list>
+        /// <para>The cloud resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,12 +53,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The tag type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>All (default): all tags.</description></item>
-        /// <item><description>Custom: custom tag.</description></item>
-        /// <item><description>System: system tag.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Custom</para>

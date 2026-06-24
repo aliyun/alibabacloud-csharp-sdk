@@ -22,10 +22,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: RDS Cloud App</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Displays the policy.</para>
+        /// <para>The display policy.</para>
         /// </summary>
         [NameInMap("VideoPolicy")]
         [Validation(Required=false)]
@@ -44,11 +40,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class ModifyAppPolicyRequestVideoPolicy : TeaModel {
             /// <summary>
             /// <para>The frame rate (FPS).</para>
-            /// <para>Enumerated values:</para>
-            /// <list type="bullet">
-            /// <item><description>30: 30 FPS</description></item>
-            /// <item><description>60: 60 FPS</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -78,11 +69,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? SessionResolutionWidth { get; set; }
 
             /// <summary>
-            /// <para>The stream mode. This parameter is used together with <c>Webrtc</c> to specify the protocol type.</para>
+            /// <para>The streaming mode. This parameter is used together with the Webrtc parameter to specify the protocol type.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>Webrtc</c> to <c>true</c> and <c>StreamingMode</c> to <c>video</c>, Web Real-Time Communications (WebRTC) streams are used.</description></item>
-            /// <item><description>If you set <c>Webrtc</c> to <c>false</c> and <c>StreamingMode</c> to <c>video</c>, video streams are used.</description></item>
-            /// <item><description>If you set <c>Webrtc</c> to <c>false</c> and <c>StreamingMode</c> to <c>mix</c>, mixed streams are used.</description></item>
+            /// <item><description>Webrtc=<c>true</c> and StreamingMode=<c>video</c>: WebRTC stream.</description></item>
+            /// <item><description>Webrtc=<c>false</c> and StreamingMode=<c>video</c>: video stream.</description></item>
+            /// <item><description>Webrtc=<c>false</c> and StreamingMode=<c>mix</c>: mixed stream.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +84,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string StreamingMode { get; set; }
 
             /// <summary>
-            /// <para>Whether to use adaptive resolution.</para>
+            /// <para>Specifies whether to use adaptive resolution.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: The session resolution changes with the display area of the terminal. In this case, <c>SessionResolutionWidth</c> indicates the maximum resolution width and <c>SessionResolutionHeight</c> indicates the maximum resolution height.</description></item>
-            /// <item><description><c>false</c>: The session resolution does not change with the display area of the terminal. In this case, <c>SessionResolutionWidth</c> specifies the fixed resolution width and <c>SessionResolutionHeight</c> specifies the fixed resolution height.</description></item>
+            /// <item><description><para><c>true</c>: The session resolution follows changes in the terminal display area. In this case, SessionResolutionWidth and SessionResolutionHeight specify the maximum resolution values.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: The session resolution does not follow changes in the terminal display area. In this case, the resolution is fixed to the values of SessionResolutionWidth and SessionResolutionHeight.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,13 +100,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? TerminalResolutionAdaptive { get; set; }
 
             /// <summary>
-            /// <para>The image quality policy.</para>
-            /// <para>Enumerated values:</para>
-            /// <list type="bullet">
-            /// <item><description>adaptive: adaptive.</description></item>
-            /// <item><description>smooth: smooth first.</description></item>
-            /// <item><description>quality: quality first.</description></item>
-            /// </list>
+            /// <para>The visual quality strategy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>smooth</para>
@@ -123,11 +110,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string VisualQualityStrategy { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable WebRTC. This parameter is used together with <c>StreamingMode</c> to specify the protocol type.</para>
+            /// <para>Specifies whether to enable WebRTC. This parameter is used together with the StreamingMode parameter to specify the protocol type.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>Webrtc</c> to <c>true</c> and <c>StreamingMode</c> to <c>video</c>, WebRTC streams are used.</description></item>
-            /// <item><description>If you set <c>Webrtc</c> to <c>false</c> and <c>StreamingMode</c> to <c>video</c>, video streams are used.</description></item>
-            /// <item><description>If you set <c>Webrtc</c> to <c>false</c> and <c>StreamingMode</c> to <c>mix</c>, mixed streams are used.</description></item>
+            /// <item><description>Webrtc=<c>true</c> and StreamingMode=<c>video</c>: WebRTC stream.</description></item>
+            /// <item><description>Webrtc=<c>false</c> and StreamingMode=<c>video</c>: video stream.</description></item>
+            /// <item><description>Webrtc=<c>false</c> and StreamingMode=<c>mix</c>: mixed stream.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

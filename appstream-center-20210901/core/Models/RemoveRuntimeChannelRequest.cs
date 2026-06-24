@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RemoveRuntimeChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The agent platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
+        /// <para>The agent provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
+        /// <para>The channel code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The list of agent runtime IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuntimeIds")]
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> RuntimeIds { get; set; }
 
         /// <summary>
+        /// <para>The runtime type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

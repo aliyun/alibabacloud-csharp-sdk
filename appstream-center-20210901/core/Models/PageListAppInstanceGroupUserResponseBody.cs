@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The users.</para>
+        /// <para>The queried users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

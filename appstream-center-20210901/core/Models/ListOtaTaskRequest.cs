@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListOtaTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The delivery group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the OTA update task.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Fota: update of the system components of Alibaba Cloud Workspace</description></item>
-        /// </list>
+        /// <para>The type of the over-the-air update task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OtaType { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number of the query results to display.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The number of query results per page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

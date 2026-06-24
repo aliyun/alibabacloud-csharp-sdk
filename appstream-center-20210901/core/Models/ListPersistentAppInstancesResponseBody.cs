@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListPersistentAppInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the query results currently displayed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of query results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The app instances of the persistent session type.</para>
+        /// <para>The list of persistent session application instances.</para>
         /// </summary>
         [NameInMap("PersistentAppInstanceModels")]
         [Validation(Required=false)]
         public List<ListPersistentAppInstancesResponseBodyPersistentAppInstanceModels> PersistentAppInstanceModels { get; set; }
         public class ListPersistentAppInstancesResponseBodyPersistentAppInstanceModels : TeaModel {
             /// <summary>
-            /// <para>The ID of the delivery group.</para>
+            /// <para>The delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-0bxls9m9arax6****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the app instance.</para>
+            /// <para>The application instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ai-azn3kmwruh1vl****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the app instance of the persistent session type.</para>
+            /// <para>The persistent session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>p-0cc7s3mw2fg4j****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstancePersistentId { get; set; }
 
             /// <summary>
-            /// <para>The name of the app instance of the persistent session type.</para>
+            /// <para>The name of the persistent session application instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-persistent-name</para>
@@ -77,19 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstancePersistentName { get; set; }
 
             /// <summary>
-            /// <para>The status of the app instance of the persistent session type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>STARTING</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>STOPPED</description></item>
-            /// <item><description>UNAVAILABLE</description></item>
-            /// <item><description>DELETING</description></item>
-            /// <item><description>PENDING</description></item>
-            /// <item><description>STOPPING</description></item>
-            /// <item><description>DELETED</description></item>
-            /// <item><description>REBUILDING</description></item>
-            /// </list>
+            /// <para>The instance status of the persistent session application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -99,19 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstancePersistentStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the app instance.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>INIT: The app instance is being initialized.</description></item>
-            /// <item><description>STARTING: The app instance is being started.</description></item>
-            /// <item><description>CLOSING: The app instance is being stopped.</description></item>
-            /// <item><description>CLOSED: The app instance is closed.</description></item>
-            /// <item><description>RUNNING: The app instance is running.</description></item>
-            /// <item><description>idle: The app instance is idle.</description></item>
-            /// <item><description>BOUND: The app instance is bound to an app instance group.</description></item>
-            /// <item><description>UNAVAILABLE: The app instance is unavailable.</description></item>
-            /// <item><description>DELETED: The app instance is deleted.</description></item>
-            /// </list>
+            /// <para>The application instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -121,14 +97,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceStatus { get; set; }
 
             /// <summary>
-            /// <para>The authorized users.</para>
+            /// <para>The list of authorized usernames.</para>
             /// </summary>
             [NameInMap("AuthorizedUsers")]
             [Validation(Required=false)]
             public List<string> AuthorizedUsers { get; set; }
 
             /// <summary>
-            /// <para>The time when the app instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-13T03:22:18.000+00:00</para>
@@ -150,7 +126,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

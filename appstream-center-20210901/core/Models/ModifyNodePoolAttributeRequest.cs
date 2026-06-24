@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyNodePoolAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
-        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
-        /// </list>
+        /// <para>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -25,6 +20,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary depending on the resource specification. The valid values for each resource specification are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>appstreaming.general.4c8g: 1 to 2.</description></item>
+        /// <item><description>appstreaming.general.8c16g: 1 to 4.</description></item>
+        /// <item><description>appstreaming.vgpu.8c16g.4g: 1 to 4.</description></item>
+        /// <item><description>appstreaming.vgpu.8c31g.16g: 1 to 4.</description></item>
+        /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 6.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -33,14 +37,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? NodeCapacity { get; set; }
 
         /// <summary>
-        /// <para>The auto scaling policy used by the delivery group.</para>
+        /// <para>The automatic scaling policy of the delivery group.</para>
         /// </summary>
         [NameInMap("NodePoolStrategy")]
         [Validation(Required=false)]
         public ModifyNodePoolAttributeRequestNodePoolStrategy NodePoolStrategy { get; set; }
         public class ModifyNodePoolAttributeRequestNodePoolStrategy : TeaModel {
             /// <summary>
-            /// <para>The maximum number of idle sessions. After you specify a value for this parameter, auto scaling is triggered only if the number of idle sessions in the delivery group is smaller than the specified value and the session usage exceeds the value specified for <c>ScalingUsageThreshold</c>. Otherwise, the system determines that the idle sessions in the delivery group are sufficient and does not perform auto scaling.`` You can use this parameter to flexibly manage auto scaling and reduce costs.</para>
+            /// <para>The maximum number of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <c>ScalingUsageThreshold</c> and the number of idle sessions in the current delivery group is less than <c>MaxIdleAppInstanceAmount</c>. Otherwise, the idle sessions in the delivery group are considered sufficient, and no automatic scale-out is performed. This parameter can be used to flexibly control elastic scale-out behavior and reduce costs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? MaxIdleAppInstanceAmount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of resources that can be created for scale-out. This parameter is required only if you set <c>StrategyType</c> to <c>NODE_SCALING_BY_USAGE</c>.</para>
+            /// <para>The maximum number of resources that can be created during scale-out. This parameter is required when <c>StrategyType</c> is set to <c>NODE_SCALING_BY_USAGE</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -60,12 +64,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? MaxScalingAmount { get; set; }
 
             /// <summary>
-            /// <para>The number of resources to purchase. Valid values: 1 to 100.</para>
+            /// <para>The number of purchased resources. Valid values: 1 to 100.</para>
             /// <remarks>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>If you use subscription resources, you cannot modify this parameter.</description></item>
-            /// <item><description>If you use pay-as-you-go resources, you can modify this parameter only if you set <c>StrategyType</c> to <c>NODE_FIXED</c> or <c>NODE_SCALING_BY_USAGE</c>.</description></item>
+            /// <item><description>If the resources are subscription resources, this parameter cannot be modified.</description></item>
+            /// <item><description>If the resources are pay-as-you-go resources, this parameter can be modified when the scaling mode (<c>StrategyType</c>) is set to fixed quantity (<c>NODE_FIXED</c>) or automatic scaling (<c>NODE_SCALING_BY_USAGE</c>).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,18 +80,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The intervals at which the scaling policy is executed. This parameter is required only if you set <c>StrategyType</c> to <c>NODE_SCALING_BY_SCHEDULE</c>.</para>
+            /// <para>The list of policy execution cycles. This parameter is required when <c>StrategyType</c> (scaling mode) is set to <c>NODE_SCALING_BY_SCHEDULE</c> (scheduled scaling).</para>
             /// </summary>
             [NameInMap("RecurrenceSchedules")]
             [Validation(Required=false)]
             public List<ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules> RecurrenceSchedules { get; set; }
             public class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedules : TeaModel {
                 /// <summary>
-                /// <para>The schedule type of the scaling policy. This parameter must be configured together with <c>RecurrenceValues</c>.``</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>weekly: The scaling policy is executed on specific days each week.</description></item>
-                /// </list>
+                /// <para>The type of the policy execution cycle. You must specify both <c>RecurrenceType</c> and <c>RecurrenceValues</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>weekly</para>
@@ -97,20 +97,20 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string RecurrenceType { get; set; }
 
                 /// <summary>
-                /// <para>The days of each week on which the scaling policy is executed.</para>
+                /// <para>The list of values for the policy execution cycle.</para>
                 /// </summary>
                 [NameInMap("RecurrenceValues")]
                 [Validation(Required=false)]
                 public List<int?> RecurrenceValues { get; set; }
 
                 /// <summary>
-                /// <para>The time periods during which the scaling policy can be executed. The time periods must meet the following requirements:</para>
+                /// <para>The list of time periods for the policy execution cycle. Requirements for time period settings:</para>
                 /// <list type="bullet">
-                /// <item><description>Up to three time periods can be added.</description></item>
-                /// <item><description>Time periods cannot be overlapped.</description></item>
-                /// <item><description>The interval between two consecutive time periods must be greater than or equal to 5 minutes.</description></item>
-                /// <item><description>Each time period must be greater than or equal to 15 minutes.</description></item>
-                /// <item><description>The total length of the time periods that you specify cannot be greater than a day.</description></item>
+                /// <item><description>You can add up to three time periods.</description></item>
+                /// <item><description>Time periods must not overlap.</description></item>
+                /// <item><description>The interval between time periods must be at least 5 minutes.</description></item>
+                /// <item><description>Each time period must be at least 15 minutes long.</description></item>
+                /// <item><description>All time periods combined must not span across days.</description></item>
                 /// </list>
                 /// </summary>
                 [NameInMap("TimerPeriods")]
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public List<ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedulesTimerPeriods> TimerPeriods { get; set; }
                 public class ModifyNodePoolAttributeRequestNodePoolStrategyRecurrenceSchedulesTimerPeriods : TeaModel {
                     /// <summary>
-                    /// <para>The number of resources.</para>
+                    /// <para>The resource count.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public int? Amount { get; set; }
 
                     /// <summary>
-                    /// <para>The end of the time period during which the scaling policy is executed. Format: HH:mm.</para>
+                    /// <para>The end time. Format: HH:mm.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>15:00</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string EndTime { get; set; }
 
                     /// <summary>
-                    /// <para>The beginning of the time period during which the scaling policy is executed. Format: HH:mm.</para>
+                    /// <para>The start time. Format: HH:mm.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>12:00</para>
@@ -152,10 +152,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The maximum retention period of a resource to which no session is connected. If no session is connected to a resource, the resource is automatically scaled in after the specified retention period elapses. Valid values: 5 to 120. Default value: 5. Unit: minutes. If one of the following situations occurs, the resource is not scaled in.</para>
+            /// <para>The maximum duration (in minutes) that a resource without session connections is retained. When no sessions are connected to a resource, a countdown starts based on the duration specified here. The resource is scaled in when the countdown ends. Valid values: 5 to 120. Default value: 5. The following exceptions apply:</para>
             /// <list type="bullet">
-            /// <item><description>If a scale-out is automatically triggered after the resource is scaled in, the scale-in is not executed. This prevents repeated scale-in and scale-out.</description></item>
-            /// <item><description>If a scale-out is automatically triggered due to an increase in the number of sessions during the specified period of time, the resource is not scaled in and the countdown restarts.</description></item>
+            /// <item><description>If scale-in would trigger automatic scale-out again, the scale-in is not performed to avoid repeated scale-in and scale-out operations.</description></item>
+            /// <item><description>If automatic scale-out is triggered by an increase in sessions during this period, the resource is not scaled in as originally planned, and the countdown restarts.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? ScalingDownAfterIdleMinutes { get; set; }
 
             /// <summary>
-            /// <para>The number of resources that are created each time resources are scaled out. Valid values: 1 to 10. This parameter is required only if you set <c>StrategyType</c> to <c>NODE_SCALING_BY_USAGE</c>.</para>
+            /// <para>The number of resources created per scale-out operation. Valid values: 1 to 10. This parameter is required when <c>StrategyType</c> is set to <c>NODE_SCALING_BY_USAGE</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? ScalingStep { get; set; }
 
             /// <summary>
-            /// <para>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage is calculated by using the following formula: <c>Session usage = Number of current sessions/(Total number of resources × Number of concurrent sessions) × 100%</c>. This parameter is required only if you set <c>StrategyType</c> to <c>NODE_SCALING_BY_USAGE</c>. Valid values: 0 to 100. Default value: 85.</para>
+            /// <para>The upper threshold of session usage (%). Automatic scale-out is triggered when the session usage exceeds this threshold. The session usage is calculated by using the following formula: <c>Session usage = Current sessions ÷ (Total resources × Concurrent sessions per resource) × 100%</c>. This parameter is required when <c>StrategyType</c> is set to <c>NODE_SCALING_BY_USAGE</c>. Valid values: 0 to 100. Default value: 85.</para>
             /// 
             /// <b>Example:</b>
             /// <para>85</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ScalingUsageThreshold { get; set; }
 
             /// <summary>
-            /// <para>The expiration date of the scaling policy. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be from 7 days to 1 year. This parameter is required only if you set <c>StrategyType</c> to <c>NODE_SCALING_BY_SCHEDULE</c>.</para>
+            /// <para>The date when the policy expires. Format: yyyy-MM-dd. The interval between the expiration date and the effective date must be between 7 days and 1 year, inclusive. This parameter is required when <c>StrategyType</c> (scaling mode) is set to <c>NODE_SCALING_BY_SCHEDULE</c> (scheduled scaling).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-19</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string StrategyDisableDate { get; set; }
 
             /// <summary>
-            /// <para>The effective date of the scaling policy. Format: yyyy-MM-dd. The date must be the same as or later than the current date. This parameter is required only if you set <c>StrategyType</c> to <c>NODE_SCALING_BY_SCHEDULE</c>.</para>
+            /// <para>The date when the policy takes effect. Format: yyyy-MM-dd. The date must be equal to or later than the current date. This parameter is required when <c>StrategyType</c> (scaling mode) is set to <c>NODE_SCALING_BY_SCHEDULE</c> (scheduled scaling).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-05</para>
@@ -210,15 +210,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <remarks>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description><c>NODE_FIXED</c>: no scaling. This value is applicable to pay-as-you-go resources and subscription resources.</description></item>
-            /// <item><description><c>NODE_SCALING_BY_USAGE</c>: auto scaling. This value is applicable to pay-as-you-go resources and subscription resources.</description></item>
-            /// <item><description><c>NODE_SCALING_BY_SCHEDULE</c>: scheduled scaling. This value is applicable only to pay-as-you-go resources.</description></item>
-            /// </list>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NODE_FIXED: no scaling</description></item>
-            /// <item><description>NODE_SCALING_BY_SCHEDULE: scheduled scaling</description></item>
-            /// <item><description>NODE_SCALING_BY_USAGE: auto scaling</description></item>
+            /// <item><description><c>NODE_FIXED</c> (fixed quantity): Applicable to subscription and pay-as-you-go resources.</description></item>
+            /// <item><description><c>NODE_SCALING_BY_USAGE</c> (automatic scaling): Applicable to subscription and pay-as-you-go resources.</description></item>
+            /// <item><description><c>NODE_SCALING_BY_SCHEDULE</c> (scheduled scaling): Applicable only to pay-as-you-go resources.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,7 +223,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string StrategyType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the warmup policy for resources. This parameter is required only if you set <c>StrategyType</c> to <c>NODE_SCALING_BY_SCHEDULE</c>.</para>
+            /// <para>Specifies whether to enable the resource prefetch policy. This parameter is required when <c>StrategyType</c> (scaling mode) is set to <c>NODE_SCALING_BY_SCHEDULE</c> (scheduled scaling).</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -241,6 +235,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-ew7va2g1wl3vm****</para>
         /// </summary>
@@ -250,10 +246,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CloudApp</para>

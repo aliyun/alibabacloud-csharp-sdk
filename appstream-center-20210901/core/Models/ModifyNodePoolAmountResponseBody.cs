@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyNodePoolAmountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

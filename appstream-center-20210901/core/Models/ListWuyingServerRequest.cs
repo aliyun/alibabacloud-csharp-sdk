@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListWuyingServerRequest : TeaModel {
         /// <summary>
+        /// <para>The list of statuses for joining a virtual node pool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Added</para>
         /// </summary>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the Internet access package.</para>
+        /// <para>The billing type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The office network IDs.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-172301****</para>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Workstation specifications.</para>
+        /// <para>The workstation instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.proworkstation_flagship_elite.32c64g.48g1x</para>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ServerInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The status of the workstation.</para>
+        /// <para>The workstation status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -122,6 +124,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Users { get; set; }
 
         /// <summary>
+        /// <para>The virtual node pool ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vnp-bp1234567890abcde</para>
         /// </summary>

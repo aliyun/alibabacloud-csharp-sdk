@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The delivery group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number of the query results to display, starting from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 200.</para>
+        /// <para>The number of query results per page. Valid values: 1 to 200.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

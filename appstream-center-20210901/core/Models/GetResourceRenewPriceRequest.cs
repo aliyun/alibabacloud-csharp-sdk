@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetResourceRenewPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</para>
+        /// <para>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of resources. This parameter must be configured together with <c>PeriodUnit</c>.</para>
+        /// <para>The numeric part of the purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter must be configured together with <c>Period</c>. The following items describe valid values for the combinations of <c>Period</c> and <c>PeriodUnit</c>:</para>
+        /// <para>The unit part of the purchase duration. This parameter is used together with Period to specify the complete purchase duration. Valid combinations of Period and PeriodUnit:</para>
         /// <list type="bullet">
         /// <item><description>1 Week</description></item>
         /// <item><description>1 Month</description></item>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <item><description>3 Year</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is case-insensitive. For example, <c>Week</c> is valid and <c>week</c> is invalid. If you specify a value combination other than the preceding combinations, such as <c>2 Week</c>, the operation can still be called. However, an error occurs when you place the order.</para>
+        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is invalid. If the request parameters do not match the combinations listed above, such as <c>2 Week</c>, the call to this operation succeeds, but an error occurs during the order placement phase.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,10 +57,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListBindInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The bindings.</para>
+        /// <para>The list of binding information returned.</para>
         /// </summary>
         [NameInMap("BindInfoModels")]
         [Validation(Required=false)]
@@ -18,11 +18,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public class ListBindInfoResponseBodyBindInfoModels : TeaModel {
             /// <summary>
             /// <para>The account type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ad: Active Directory (AD) account</description></item>
-            /// <item><description>simple: convenience account</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>simple</para>
@@ -32,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The app ID.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca-fq738or6vd854****</para>
@@ -42,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the delivery group.</para>
+            /// <para>The delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-0abxhr6ce35w8****</para>
@@ -52,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the app instance.</para>
+            /// <para>The application instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ai-83oe276fre4l3****</para>
@@ -62,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The app version.</para>
+            /// <para>The application version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
@@ -73,12 +68,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The product type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CloudApp: App Streaming</description></item>
-            /// <item><description>CloudBrowser: Cloud-based Browser</description></item>
-            /// <item><description>AndroidCloud: Cloud Phone</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>CloudApp</para>
@@ -108,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud Workspace user.</para>
+            /// <para>The WUYING user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2ca6f5a93536****</para>
@@ -120,7 +109,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the query results currently displayed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -130,7 +119,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of query results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -150,7 +139,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

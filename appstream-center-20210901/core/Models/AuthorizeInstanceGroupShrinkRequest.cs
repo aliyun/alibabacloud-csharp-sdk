@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class AuthorizeInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>持久会话ID。</para>
+        /// <para>The persistent session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3mw2fg4j****</para>
@@ -30,6 +31,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstancePersistentId { get; set; }
 
         /// <summary>
+        /// <para>The list of user group IDs to be authorized.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -38,13 +41,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AuthorizeUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</para>
+        /// <para>The list of usernames to be authorized for the delivery group. You can specify 1 to 100 usernames.</para>
         /// </summary>
         [NameInMap("AuthorizeUserIds")]
         [Validation(Required=false)]
         public List<string> AuthorizeUserIds { get; set; }
 
         /// <summary>
+        /// <para>The user avatar ID.</para>
+        /// <remarks>
+        /// <para>This parameter is not available for public use.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -53,6 +61,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AvatarId { get; set; }
 
         /// <summary>
+        /// <para>The product type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,6 +72,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
+        /// <para>The list of user group IDs to be deauthorized.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -71,7 +82,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> UnAuthorizeUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</para>
+        /// <para>The list of usernames to be deauthorized from the delivery group. You can specify 1 to 100 usernames.</para>
         /// </summary>
         [NameInMap("UnAuthorizeUserIds")]
         [Validation(Required=false)]

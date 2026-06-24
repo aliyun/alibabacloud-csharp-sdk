@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The Agent platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
+        /// <para>The name of the Agent provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
+        /// <para>The business type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether models have been configured in the group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -45,11 +51,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public bool? HasModel { get; set; }
 
+        /// <summary>
+        /// <para>The list of template group IDs used for filtering.</para>
+        /// </summary>
         [NameInMap("ModelTemplateIdList")]
         [Validation(Required=false)]
         public List<string> ModelTemplateIdList { get; set; }
 
         /// <summary>
+        /// <para>The page number, starting from 1. Values 0 and 1 return the same result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateWuyingServerRequest : TeaModel {
         /// <summary>
-        /// <para>Quantity.</para>
+        /// <para>The number of workstations to create.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>Auto payment.</para>
+        /// <para>Specifies whether to enable automatic payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Auto-renewal.</para>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>bandwidth value, the NetworkStrategyType is valid for DirectIp. Unit: Mbps, range 2~100</para>
+        /// <para>The bandwidth value. This parameter takes effect only when NetworkStrategyType is set to DirectIp. Unit: Mbit/s. Valid values: 2 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>Region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -61,10 +61,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The billing method.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PrePaid: subscription</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -74,18 +70,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The list of data disks.</para>
+        /// <para>The list of data cloud disks.</para>
         /// </summary>
         [NameInMap("DataDisk")]
         [Validation(Required=false)]
         public List<CreateWuyingServerRequestDataDisk> DataDisk { get; set; }
         public class CreateWuyingServerRequestDataDisk : TeaModel {
             /// <summary>
-            /// <para>The data disk category.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cloud_auto.</description></item>
-            /// </list>
+            /// <para>The type of the data cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_auto</para>
@@ -95,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DataDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The PL of the data disk.</para>
+            /// <para>The performance level of the data cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL0</para>
@@ -105,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string DataDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The data disk size.</para>
+            /// <para>The size of the data cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -116,12 +108,48 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
+        /// <summary>
+        /// <para>The hostname. The following limits apply:</para>
+        /// <list type="bullet">
+        /// <item><description><para>A period (.) or hyphen (-) cannot be used as the first or last character, and consecutive periods or hyphens are not allowed.</para>
+        /// </description></item>
+        /// <item><description><para>Windows workstations: The hostname must be 2 to 15 characters in length. It cannot contain periods (.), consecutive hyphens, or consist entirely of digits. It can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Linux workstations:</para>
+        /// <list type="bullet">
+        /// <item><description><para>The hostname must be 2 to 64 characters in length and can contain multiple periods (.). Each segment separated by a period can contain uppercase and lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>You can use the placeholder <c>${instance_id}</c> to include the instance ID in the HostName parameter. For example, if you set <c>HostName=k8s-${instance_id}</c> and the ECS instance ID is <c>i-123abc****</c>, the hostname is <c>k8s-i-123abc****</c>.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>When you create multiple workstation instances at a time, you can use the <c>name_prefix[begin_number,bits]name_suffix</c> format to assign sequential hostnames. For example, if you set HostName to <c>ecd-[1,4]-test</c>, the hostname of the first workstation is <c>ecd-0001-test</c>, the hostname of the second workstation is <c>ecd-0002-test</c>, and so on.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>name_prefix</c>: the prefix of the hostname.</para>
+        /// </description></item>
+        /// <item><description><para><c>[begin_number,bits]</c>: the sequential number in the hostname.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>begin_number</c>: the starting number. Valid values: 0 to 999999. Default value: 0. If the value is invalid, 0 is used.</para>
+        /// </description></item>
+        /// <item><description><para><c>bits</c>: the number of digits. Valid values: 1 to 6. Default value: 6. If the value is invalid, 6 is used.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><c>name_suffix</c>: the suffix of the hostname.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testhost</para>
+        /// </summary>
         [NameInMap("HostName")]
         [Validation(Required=false)]
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>Idempotence token to ensure operation uniqueness</para>
+        /// <para>The idempotence token that ensures the uniqueness of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6a1b8c3d</para>
@@ -131,7 +159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string IdempotenceToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-bp13mu****</para>
@@ -145,7 +173,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public float? MaxPrice { get; set; }
 
         /// <summary>
-        /// <para>The type of the network policy (in invitational preview).</para>
+        /// <para>The network policy type (in invitational preview).</para>
         /// 
         /// <b>Example:</b>
         /// <para>DirectIp</para>
@@ -155,7 +183,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NetworkStrategyType { get; set; }
 
         /// <summary>
-        /// <para>The office network IDs.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-643067****</para>
@@ -165,7 +193,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>Workstation login password.</para>
+        /// <para>The logon password of the workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>YourPassword123</para>
@@ -175,7 +203,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The subscription period.</para>
+        /// <para>The subscription duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -185,12 +213,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The time unit.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
-        /// </list>
+        /// <para>The unit of the subscription duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -200,9 +223,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the discount.</para>
+        /// <para>The promotion ID.</para>
         /// <remarks>
-        /// <para> If PromotionId is set, it will try to apply the corresponding discount.</para>
+        /// <para>If PromotionId is specified, the corresponding discount is applied.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -217,7 +240,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SavingPlanId { get; set; }
 
         /// <summary>
-        /// <para>Workstation specifications.</para>
+        /// <para>The workstation instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</para>
@@ -235,11 +258,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SubPayType { get; set; }
 
         /// <summary>
-        /// <para>The system disk category.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cloud_auto.</description></item>
-        /// </list>
+        /// <para>The type of the system cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_auto</para>
@@ -249,7 +268,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SystemDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the system disk.</para>
+        /// <para>The performance level of the system cloud disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -259,7 +278,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SystemDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the system disk. Unit: GB.</para>
+        /// <para>The size of the system cloud disk. Unit: GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -269,7 +288,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? SystemDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The list of office network vSwitches.</para>
+        /// <para>The list of vSwitches in the office network.</para>
         /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
@@ -284,7 +303,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string VirtualNodePoolId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workstation. The numeric suffix is automatically added when multiple workstations are created.</para>
+        /// <para>The workstation name. When you create multiple workstations, a numeric suffix is automatically appended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleServerName</para>

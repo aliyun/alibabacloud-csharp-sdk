@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyWuyingServerAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Workstation login password.</para>
+        /// <para>The logon password of the cloud graphics workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourPassword</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workstation.</para>
+        /// <para>The ID of the cloud graphics workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0bw2f11****dial</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string WuyingServerId { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name of the cloud graphics workstation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleServerName</para>

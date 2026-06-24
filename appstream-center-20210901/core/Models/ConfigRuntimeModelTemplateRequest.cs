@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ConfigRuntimeModelTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The model group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
+        /// <para>The list of Agent runtime IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RuntimeIds")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> RuntimeIds { get; set; }
 
         /// <summary>
+        /// <para>The Agent runtime type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

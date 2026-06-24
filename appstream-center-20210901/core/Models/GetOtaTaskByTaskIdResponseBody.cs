@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetOtaTaskByTaskIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OtaTask.Running</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The task is running and cannot be sumitted.</para>
@@ -40,7 +40,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OtaVersion { get; set; }
 
         /// <summary>
-        /// <para>The version description.</para>
+        /// <para>The version description that describes the content of the over-the-air update.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试升级</para>
         /// </summary>
         [NameInMap("ReleaseNote")]
         [Validation(Required=false)]
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution time of the OTA update task. The time follows the ISO 8601 standard.</para>
+        /// <para>The task execution time in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>

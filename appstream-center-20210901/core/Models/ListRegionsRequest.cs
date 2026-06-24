@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
     public class ListRegionsRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,10 +23,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CloudApp</para>

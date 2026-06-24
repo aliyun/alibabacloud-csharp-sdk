@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the update task.</para>
+        /// <para>The update task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ota-be7jzm29wrrz5****</para>

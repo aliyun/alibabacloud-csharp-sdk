@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetRuntimeChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The Agent platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentPlatform { get; set; }
 
         /// <summary>
+        /// <para>The Agent provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AgentProvider { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to include risk information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -36,6 +41,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? IncludeRiskInfo { get; set; }
 
         /// <summary>
+        /// <para>The Agent runtime ID. The ID mappings are as follows:</para>
+        /// <list type="bullet">
+        /// <item><description>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</description></item>
+        /// <item><description>OpenClaw: cloud computer ID, in the format of ecd-xxxx.</description></item>
+        /// <item><description>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RuntimeId { get; set; }
 
         /// <summary>
+        /// <para>The type of the Agent runtime.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

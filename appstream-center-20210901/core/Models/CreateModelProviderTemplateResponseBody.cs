@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateModelProviderTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Returned result object.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateModelProviderTemplateResponseBodyData Data { get; set; }
         public class CreateModelProviderTemplateResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Model provider template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mpt-xxxx</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

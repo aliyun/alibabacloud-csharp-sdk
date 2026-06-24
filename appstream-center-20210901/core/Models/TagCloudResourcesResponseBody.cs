@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class TagCloudResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud resources on which the operation failed and the corresponding tags.</para>
+        /// <para>The list of failed resources and tag information.</para>
         /// </summary>
         [NameInMap("FailedResources")]
         [Validation(Required=false)]
         public List<TagCloudResourcesResponseBodyFailedResources> FailedResources { get; set; }
         public class TagCloudResourcesResponseBodyFailedResources : TeaModel {
             /// <summary>
+            /// <para>The error code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TAG_KEY_DUPLICATED</para>
             /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The error message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Duplicate tag keys exist.</para>
             /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>The resource ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>aig-001</para>
             /// </summary>
@@ -41,15 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud resource.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CenterImageId: center image ID.</description></item>
-            /// <item><description>AppId: app ID.</description></item>
-            /// <item><description>WyId: Alibaba Cloud Workspace user ID.</description></item>
-            /// <item><description>AppInstanceGroupId: delivery group ID.</description></item>
-            /// <item><description>AliUid: tenant ID.</description></item>
-            /// </list>
+            /// <para>The cloud resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AppInstanceGroupId</para>
@@ -58,11 +56,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
+            /// <summary>
+            /// <para>The list of failed tag information.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<TagCloudResourcesResponseBodyFailedResourcesTags> Tags { get; set; }
             public class TagCloudResourcesResponseBodyFailedResourcesTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>System/Scheduler/STOP_NEW_USER_CONNECTION</para>
                 /// </summary>
@@ -71,6 +74,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>System</para>
                 /// </summary>
@@ -79,6 +84,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Scope { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -91,6 +98,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

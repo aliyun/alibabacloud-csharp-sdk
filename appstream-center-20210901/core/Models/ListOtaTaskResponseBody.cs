@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListOtaTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the query results to display.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on each page.</para>
+        /// <para>The number of query results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The OTA update tasks.</para>
+        /// <para>The list of over-the-air update tasks.</para>
         /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
@@ -58,15 +58,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The task status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>FAILED</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>TERMINATED</description></item>
-            /// <item><description>PART_FINISHED</description></item>
-            /// <item><description>STANDBY</description></item>
-            /// <item><description>FINISHED</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -86,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the OTA update task. The time follows the ISO 8601 standard.</para>
+            /// <para>The task start time in ISO 8601 format.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>
@@ -99,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The total number of OTA update tasks.</para>
+        /// <para>The total number of over-the-air update tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>

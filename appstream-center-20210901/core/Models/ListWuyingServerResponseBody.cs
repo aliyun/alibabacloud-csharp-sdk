@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<ListWuyingServerResponseBodyWuyingServerList> WuyingServerList { get; set; }
         public class ListWuyingServerResponseBodyWuyingServerList : TeaModel {
             /// <summary>
+            /// <para>The status of joining a virtual node pool.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Added</para>
             /// </summary>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>Region.</para>
+            /// <para>The region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the storage resource was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-02T16:52:11.000+00:00</para>
@@ -111,14 +113,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The data disks.</para>
+            /// <para>The list of data cloud disks.</para>
             /// </summary>
             [NameInMap("DataDisk")]
             [Validation(Required=false)]
             public List<ListWuyingServerResponseBodyWuyingServerListDataDisk> DataDisk { get; set; }
             public class ListWuyingServerResponseBodyWuyingServerListDataDisk : TeaModel {
                 /// <summary>
-                /// <para>The category of data disk.</para>
+                /// <para>The data cloud disk type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_auto</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DataDiskNo { get; set; }
 
                 /// <summary>
-                /// <para>The PL of the data disk.</para>
+                /// <para>The performance level of the data cloud disk.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL0</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string DataDiskPerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The size of the data disk. Unit: GB.</para>
+                /// <para>The data cloud disk size. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -174,7 +176,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? EniPrivateIpAddressQuantity { get; set; }
 
             /// <summary>
-            /// <para>The time when the subscription instance expires.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-03T16:00:00.000+00:00</para>
@@ -192,7 +194,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string FotaVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom image.</para>
+            /// <para>The image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-06****oagaev</para>
@@ -205,21 +207,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Ubuntu 22.04</para>
+            /// <para>Alibaba Cloud Linux 3.2104 LTS 64位</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The list of information about the workstation instance.</para>
+            /// <para>The list of workstation instance information.</para>
             /// </summary>
             [NameInMap("InstanceInfoList")]
             [Validation(Required=false)]
             public List<ListWuyingServerResponseBodyWuyingServerListInstanceInfoList> InstanceInfoList { get; set; }
             public class ListWuyingServerResponseBodyWuyingServerListInstanceInfoList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the instance.</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>p-0ceitx****c5</para>
@@ -229,7 +231,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the ENI.</para>
+                /// <para>The network interface controller (NIC) ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-uf65b****dfnt3wb</para>
@@ -249,7 +251,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public float? MaxPrice { get; set; }
 
             /// <summary>
-            /// <para>The private IP address.</para>
+            /// <para>The internal IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.80.21.149</para>
@@ -259,7 +261,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NetworkInterfaceIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the office network.</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-1b****ayv2</para>
@@ -279,7 +281,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The type of the office network.</para>
+            /// <para>The office network type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -289,7 +291,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OfficeSiteType { get; set; }
 
             /// <summary>
-            /// <para>The OS type.</para>
+            /// <para>The operating system type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Linux</para>
@@ -332,12 +334,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ResourceSessionStatus { get; set; }
 
+            /// <summary>
+            /// <para>The list of security group IDs.</para>
+            /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>The specifications.</para>
+            /// <para>The instance type information.</para>
             /// </summary>
             [NameInMap("ServerInstanceTypeInfo")]
             [Validation(Required=false)]
@@ -364,7 +369,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Gpu { get; set; }
 
                 /// <summary>
-                /// <para>The memory size. Unit: MB.</para>
+                /// <para>The GPU memory size. Unit: MB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>196,608</para>
@@ -392,7 +397,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? Memory { get; set; }
 
                 /// <summary>
-                /// <para>Workstation specifications.</para>
+                /// <para>The workstation instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eds.proworkstation_flagship_elite_ne.96c384g.192g4x</para>
@@ -426,7 +431,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The status of the workstation.</para>
+            /// <para>The workstation status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -444,7 +449,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SubPayType { get; set; }
 
             /// <summary>
-            /// <para>The type of the system disk.</para>
+            /// <para>The system cloud disk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_auto</para>
@@ -462,7 +467,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level (PL) of the system disk.</para>
+            /// <para>The performance level of the system cloud disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL0</para>
@@ -472,7 +477,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The size of the system disk. Unit: GiB.</para>
+            /// <para>The system cloud disk size. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -502,6 +507,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string VirtualKubeletIp { get; set; }
 
             /// <summary>
+            /// <para>The virtual node pool ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vnp-bp1234567890abcde</para>
             /// </summary>
@@ -522,7 +529,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string VkVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workstation.</para>
+            /// <para>The workstation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ws-0byd****8wn2lwi</para>
@@ -532,7 +539,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string WuyingServerId { get; set; }
 
             /// <summary>
-            /// <para>The name of the workstation.</para>
+            /// <para>The workstation name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleServerName</para>

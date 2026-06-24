@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
+        /// <para>The access type. If you do not specify this parameter, both types are displayed. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INTERNET: Internet access.</description></item>
+        /// <item><description>VPC: Express Connect access.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>INTERNET</para>
         /// 
@@ -23,7 +29,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The application ID.</para>
         /// <remarks>
-        /// <para> This parameter is required for the first call to this operation and optional for subsequent calls to the operation.</para>
+        /// <para>This parameter is required for the initial call and optional for subsequent calls.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,11 +40,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The delivery groups.</para>
+        /// <para>The list of delivery groups.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you configure this parameter, the system assigns application instances only among the specified authorized delivery groups. </description></item>
-        /// <item><description>This parameter is required if you configure <c>AppInstanceId</c> or <c>AppInstancePersistentId</c>.</description></item>
+        /// <item><description>If you specify this parameter, application instances are allocated only from the specified authorized delivery groups.</description></item>
+        /// <item><description>If you specify the <c>AppInstanceId</c> or <c>AppInstancePersistentId</c> parameter, this parameter is required.</description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -47,11 +53,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AppInstanceGroupIdList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application instance.</para>
+        /// <para>The application instance ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you configure this parameter, the system attempts to assign only the specified application instance.</description></item>
-        /// <item><description>If you configure this parameter, you must also configure <c>AppInstanceGroupIdList</c> and the number of delivery groups specified by <c>AppInstanceGroupIdList</c> must be 1.</description></item>
+        /// <item><description>If you specify this parameter, only the specified application instance is allocated.</description></item>
+        /// <item><description>If you specify this parameter, you must also specify the <c>AppInstanceGroupIdList</c> parameter, and the number of delivery group IDs in <c>AppInstanceGroupIdList</c> must be 1.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -63,7 +69,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the persistent session.</para>
+        /// <para>The persistent session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0bxls9m3cl7s****</para>
@@ -77,7 +83,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">Obtain parameters configured to install and start an application</a>.</para>
+        /// <para>The application startup parameter. For information about how to obtain startup parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">How to obtain application installation and startup parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/q /n</para>
@@ -87,7 +93,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppStartParam { get; set; }
 
         /// <summary>
-        /// <para>The application version. If you configure this parameter, only an application of the specified version is started. If you do not configure this parameter, an application of a random authorized version is started.</para>
+        /// <para>The application version. If you specify this parameter, only the specified version of the application is opened. If you do not specify this parameter, any authorized version of the application is opened.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> If you configure this parameter, the system assigns application instances only among the delivery groups that reside in the specified region.</para>
+        /// <para>If you specify this parameter, application instances are allocated only from delivery groups in the specified region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the convenience account.</para>
+        /// <para>The username.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,11 +135,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// <item><description>AndroidCloud: Cloud Phone</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,7 +147,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <summary>
         /// <para>The task ID.</para>
         /// <remarks>
-        /// <para> This parameter is required for calls other than the first call to this operation. You can use this parameter to query the task status and connection credential.</para>
+        /// <para>This request parameter is required for non-initial invokes. Use this parameter to check the task status and connection credentials.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

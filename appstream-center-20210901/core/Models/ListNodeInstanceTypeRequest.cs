@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListNodeInstanceTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where the resource resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
-        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
-        /// </list>
+        /// <para>The region ID of the resource. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -24,14 +19,32 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// <para>The number of CPU cores.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public float? Cpu { get; set; }
 
+        /// <summary>
+        /// <para>The number of GPUs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Gpu")]
         [Validation(Required=false)]
         public float? Gpu { get; set; }
 
+        /// <summary>
+        /// <para>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud desktops. Unit: MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("GpuMemory")]
         [Validation(Required=false)]
         public int? GpuMemory { get; set; }
@@ -41,12 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string InstanceTypeForModify { get; set; }
 
         /// <summary>
-        /// <para>The language that you want to use.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>en-US: English (US)</description></item>
-        /// <item><description>zh-CN: Simplified Chinese</description></item>
-        /// </list>
+        /// <para>The language type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -55,12 +63,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// <para>The memory size. Unit: MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10240</para>
+        /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>The resource type that you want to query. If you do not configure this parameter, all resource types are returned.</para>
+        /// <para>The resource specification type to query. If you leave this parameter empty, all specification types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -69,10 +83,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string NodeInstanceType { get; set; }
 
+        /// <summary>
+        /// <para>The instance family.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>appstreaming.vgpu</para>
+        /// </summary>
         [NameInMap("NodeInstanceTypeFamily")]
         [Validation(Required=false)]
         public string NodeInstanceTypeFamily { get; set; }
 
+        /// <summary>
+        /// <para>CPU/Memory.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CPU</para>
+        /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
         public string OrderBy { get; set; }
@@ -82,11 +108,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The operating system that is supported.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>Windows: the Windows operating system</description></item>
-        /// </list>
+        /// <para>The supported operating system type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -96,7 +118,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the query results to display.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -107,7 +129,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The number of query results per page. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,10 +141,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,6 +150,12 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        /// <summary>
+        /// <para>DESC/ASC.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASC</para>
+        /// </summary>
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }

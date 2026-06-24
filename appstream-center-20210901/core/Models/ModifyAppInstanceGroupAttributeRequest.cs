@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ModifyAppInstanceGroupAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The delivery group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,16 +21,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery group.</para>
+        /// <para>The delivery group name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>办公应用</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The network settings.</para>
+        /// <para>The network configuration.</para>
         /// <remarks>
-        /// <para> If you want to use this parameter, submit a ticket.</para>
+        /// <para>To use this parameter, submit a ticket.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Network")]
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyAppInstanceGroupAttributeRequestNetwork Network { get; set; }
         public class ModifyAppInstanceGroupAttributeRequestNetwork : TeaModel {
             /// <summary>
-            /// <para>The domain name rules.</para>
+            /// <para>The domain name rule configurations.</para>
             /// </summary>
             [NameInMap("DomainRules")]
             [Validation(Required=false)]
@@ -55,12 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Domain { get; set; }
 
                 /// <summary>
-                /// <para>The policy used for the domain name.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>allow</description></item>
-                /// <item><description>block</description></item>
-                /// </list>
+                /// <para>The policy value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>block</para>
@@ -74,21 +72,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The information about the resource group.</para>
+        /// <para>The resource group object.</para>
         /// </summary>
         [NameInMap("NodePool")]
         [Validation(Required=false)]
         public ModifyAppInstanceGroupAttributeRequestNodePool NodePool { get; set; }
         public class ModifyAppInstanceGroupAttributeRequestNodePool : TeaModel {
             /// <summary>
-            /// <para>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</para>
-            /// <list type="bullet">
-            /// <item><description>appstreaming.general.4c8g: 1 to 2</description></item>
-            /// <item><description>appstreaming.general.8c16g: 1 to 4</description></item>
-            /// <item><description>appstreaming.vgpu.8c16g.4g: 1 to 4</description></item>
-            /// <item><description>appstreaming.vgpu.8c31g.16g: 1 to 4</description></item>
-            /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 6</description></item>
-            /// </list>
+            /// <para>The number of concurrent sessions, which is the number of sessions that can be simultaneously connected to a single resource. Too many simultaneous sessions may degrade the application experience. The valid value range varies by resource specification. You can call the ListNodeInstanceType operation to query the valid value range for each resource specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -98,7 +89,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? NodeCapacity { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-ew7va2g1wl3vm****</para>
@@ -110,14 +101,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether only one application can be opened in a session.</para>
+        /// <para>Specifies whether to allow only one application per session.</para>
         /// <list type="bullet">
-        /// <item><description>After you enable this feature, the system assigns a session to each application if you open multiple applications in a delivery group. This consumes a larger number of sessions.</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>If enabled, opening multiple applications within a delivery group allocates a separate session for each application, consuming more sessions.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +114,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? PerSessionPerApp { get; set; }
 
         /// <summary>
-        /// <para>The application ID of the pre-open application. If you set <c>PreOpenMode</c> to <c>SINGLE_APP</c>, you cannot leave this parameter empty.``</para>
+        /// <para>The AppId of the pre-open application. If the PreOpenMode parameter is set to <c>SINGLE_APP</c>, PreOpenAppId cannot be an empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ca-b2ronxxd****</para>
@@ -139,11 +125,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The pre-open mode.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SINGLE_APP: enables the pre-open mode for a single application.</description></item>
-        /// <item><description>OFF: disables the pre-open mode. This is the default value.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OFF</para>
@@ -154,10 +135,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -175,12 +152,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyAppInstanceGroupAttributeRequestSecurityPolicy SecurityPolicy { get; set; }
         public class ModifyAppInstanceGroupAttributeRequestSecurityPolicy : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to reset after unbinding from a delivery group.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>Specifies whether to reset after unbinding.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -190,12 +162,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? ResetAfterUnbind { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to skip user permission verification.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false: This is the default value.</description></item>
-            /// </list>
+            /// <para>Specifies whether to skip user authorization verification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -207,7 +174,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <c>-1</c>. Valid values:-1 and 3 to 300. Default value: <c>15</c>.</para>
+        /// <para>The session retention duration after disconnection, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this parameter to <c>-1</c> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -224,21 +191,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public ModifyAppInstanceGroupAttributeRequestStoragePolicy StoragePolicy { get; set; }
         public class ModifyAppInstanceGroupAttributeRequestStoragePolicy : TeaModel {
             /// <summary>
-            /// <para>The storage types.</para>
+            /// <para>The list of storage types.</para>
             /// </summary>
             [NameInMap("StorageTypeList")]
             [Validation(Required=false)]
             public List<string> StorageTypeList { get; set; }
 
             /// <summary>
-            /// <para>The configurations of user data roaming.</para>
+            /// <para>The user data roaming configuration.</para>
             /// </summary>
             [NameInMap("UserProfile")]
             [Validation(Required=false)]
             public ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile UserProfile { get; set; }
             public class ModifyAppInstanceGroupAttributeRequestStoragePolicyUserProfile : TeaModel {
                 /// <summary>
-                /// <para>The ID of the File Storage NAS (NAS) file system used to store user data.</para>
+                /// <para>The ID of the user data storage system (NAS ID).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>06ae94****</para>
@@ -248,12 +215,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string FileSystemId { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether user data roaming is enabled.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
-                /// </list>
+                /// <para>Specifies whether to enable user data roaming.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>

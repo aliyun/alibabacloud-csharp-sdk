@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeWuyingServerEipInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the associated EIP.</para>
+        /// <para>The EIP information.</para>
         /// </summary>
         [NameInMap("EipInfoModel")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string IpAddress { get; set; }
 
             /// <summary>
-            /// <para>The ID of the elastic network interface (ENI).</para>
+            /// <para>The network interface controller (NIC) ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-bp174p2xxxxxbyh02ix</para>

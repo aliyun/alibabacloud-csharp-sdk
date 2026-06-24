@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class StartTaskForDistributeImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code if an error occurred.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image replication task.</para>
+        /// <para>The ID of the image copy task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tid-06xnr5lyp77e7****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error message if an error occurred.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>419F31B9-1FDF-5644-ABA3-D00026FA****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

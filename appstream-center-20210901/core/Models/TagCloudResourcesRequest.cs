@@ -10,22 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class TagCloudResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 resource IDs. You do not need to specify this parameter if you set ResourceType to AliUid.</para>
+        /// <para>The list of resource IDs. A maximum of 50 resource IDs are supported. You do not need to specify this parameter when the resource type is tenant ID.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the cloud resource.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CenterImageId: center image ID.</description></item>
-        /// <item><description>AppId: app ID.</description></item>
-        /// <item><description>WyId: Alibaba Cloud Workspace user ID.</description></item>
-        /// <item><description>AppInstanceGroupId: delivery group ID.</description></item>
-        /// <item><description>AliUid: tenant ID.</description></item>
-        /// </list>
+        /// <para>The cloud resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,19 +28,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to remove from the cloud resources. System and custom tags are supported.</para>
+        /// <para>The list of tags. System tags and custom tags are supported.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for system tags:</para>
+        /// <item><description><para>System tag enumeration values:</para>
         /// <list type="bullet">
-        /// <item><description><c>System/Scheduler/GRAYSCALE</c>: canary tags.</description></item>
-        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tags used to stop new users bound to the delivery group from establishing a connection.</description></item>
+        /// <item><description><c>System/Scheduler/GRAYSCALE</c>: canary release tag</description></item>
+        /// <item><description><c>System/Scheduler/STOP_NEW_USER_CONNECTION</c>: tag that prevents new user connections from being established for the delivery group</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>You can create up to 20 custom tags.</para>
+        /// <item><description><para>Custom tags: A maximum of 20 custom tags can be created.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</para>
+        /// <para>Each tag key on the same resource can have only one tag value. If you add a tag key that already exists, the corresponding tag value is updated to the new value.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -57,7 +49,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<TagCloudResourcesRequestTags> Tags { get; set; }
         public class TagCloudResourcesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The key of a tag. The value must be 1 to 128 characters in length and is case-sensitive. The name must be 1 to 128 characters in length.</para>
+            /// <para>The tag key. This parameter is case-sensitive. The tag key must be 1 to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -68,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of a tag. The value must be 1 to 128 characters in length and is case-sensitive. The name must be 1 to 128 characters in length.</para>
+            /// <para>The tag value. This parameter is case-sensitive. The tag value must be 1 to 128 characters in length.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DescribeWuyingServerEipInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The Internet service provider (ISP). Valid values:</para>
+        /// <para>The Internet service operation provider (ISP). Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>ChinaMobile: China Mobile</description></item>
-        /// <item><description>ChinaTelecom: China Telecom</description></item>
-        /// <item><description>ChinaUnicom: China Unicom</description></item>
+        /// <item><description>ChinaMobile: Shift.</description></item>
+        /// <item><description>ChinaTelecom: China Telecom.</description></item>
+        /// <item><description>ChinaUnicom: China Unicom.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workstation.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

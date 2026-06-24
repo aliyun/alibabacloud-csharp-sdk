@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListLlmTemplatesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of returned data objects.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListLlmTemplatesResponseBodyData> Data { get; set; }
         public class ListLlmTemplatesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The model configuration JSON object.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;id&quot;: &quot;qwen3.6-plus&quot;,
@@ -37,11 +42,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Config { get; set; }
 
+            /// <summary>
+            /// <para>The template description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>千问Plus系列模型</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether this is the default model in the associated model group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -50,6 +63,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? IsDefaultModel { get; set; }
 
             /// <summary>
+            /// <para>The model code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen3.6-plus</para>
             /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string LlmCode { get; set; }
 
             /// <summary>
+            /// <para>The model template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>llmt-xxxx</para>
             /// </summary>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string LlmTemplateId { get; set; }
 
             /// <summary>
+            /// <para>The template name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Qwen3.6-Plus</para>
             /// </summary>
@@ -74,6 +93,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The ID of the model provider template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mpt-xxxx</para>
             /// </summary>
@@ -84,6 +105,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The page number of the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -92,6 +115,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -100,6 +125,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -108,6 +135,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

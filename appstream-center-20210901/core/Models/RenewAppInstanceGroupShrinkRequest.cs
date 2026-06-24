@@ -22,11 +22,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>Specifies whether to enable automatic payment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false: manual payment. This is the default value.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -36,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of resources. This parameter must be configured together with <c>PeriodUnit</c>.</para>
+        /// <para>The numeric part of the resource purchase duration. This parameter is used together with PeriodUnit to specify the complete purchase duration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,19 +42,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter must be configured together with <c>Period</c>. The following items describe valid values for the combinations of <c>Period</c> and <c>PeriodUnit</c>:</para>
+        /// <para>The unit part of the resource purchase duration. This parameter is used together with Period to specify the complete purchase duration. Valid combinations of Period and PeriodUnit:</para>
         /// <list type="bullet">
-        /// <item><description>1 Week</description></item>
-        /// <item><description>1 Month</description></item>
-        /// <item><description>2 Month</description></item>
-        /// <item><description>3 Month</description></item>
-        /// <item><description>6 Month</description></item>
-        /// <item><description>1 Year</description></item>
-        /// <item><description>2 Year</description></item>
-        /// <item><description>3 Year</description></item>
+        /// <item><description>1 Week (1 week)</description></item>
+        /// <item><description>1 Month (1 month)</description></item>
+        /// <item><description>2 Month (2 months)</description></item>
+        /// <item><description>3 Month (3 months)</description></item>
+        /// <item><description>6 Month (6 months)</description></item>
+        /// <item><description>1 Year (1 year)</description></item>
+        /// <item><description>2 Year (2 years)</description></item>
+        /// <item><description>3 Year (3 years)</description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is case-insensitive. For example, <c>Week</c> is valid and <c>week</c> is invalid. If you specify a value combination other than the preceding combinations, such as <c>2 Week</c>, the operation can still be called. However, an error occurs when you place the order.</para>
+        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is invalid. If the request parameters do not match the combinations listed above, such as <c>2 Week</c>, the call to this operation succeeds, but an error occurs during the order placement phase.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -72,10 +67,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID. You can call the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation to obtain the ID.</para>
+        /// <para>The promotion ID. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/428503.html">GetResourcePrice</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17440009****</para>

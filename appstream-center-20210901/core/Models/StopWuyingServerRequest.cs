@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class StopWuyingServerRequest : TeaModel {
         /// <summary>
-        /// <para>Force restart.</para>
-        /// <para>Valid values:</para>
+        /// <para>Specifies whether to forcibly restart the workstation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True.</description></item>
-        /// <item><description>False</description></item>
+        /// <item><description>True: forcibly restart</description></item>
+        /// <item><description>False: do not forcibly restart.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

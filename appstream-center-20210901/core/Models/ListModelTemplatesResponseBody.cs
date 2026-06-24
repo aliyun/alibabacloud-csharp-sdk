@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelTemplatesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of returned data objects.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListModelTemplatesResponseBodyData> Data { get; set; }
         public class ListModelTemplatesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The name of the Agent provider.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>OpenClaw</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AgentProvider { get; set; }
 
             /// <summary>
+            /// <para>The model group configuration JSON object.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;defaults&quot;: {
@@ -35,11 +42,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Config { get; set; }
 
+            /// <summary>
+            /// <para>The template group description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试模型分组</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether models have been configured in the group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -48,6 +63,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? HasModel { get; set; }
 
             /// <summary>
+            /// <para>The model group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mt-xxxx</para>
             /// </summary>
@@ -56,6 +73,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ModelTemplateId { get; set; }
 
             /// <summary>
+            /// <para>The template group name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>model-template-001</para>
             /// </summary>
@@ -66,6 +85,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The page number of the current query result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -74,6 +95,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page in the query result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -82,6 +105,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -90,6 +115,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries in the query result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

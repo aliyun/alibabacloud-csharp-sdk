@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workstation.</para>
+        /// <para>The workstation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0bw2f11****dial</para>

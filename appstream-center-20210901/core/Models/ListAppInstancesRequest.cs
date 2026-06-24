@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The delivery group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application instance.</para>
+        /// <para>The application instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-azn3kmwruh1vl****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the application instances. Up to 100 IDs can be specified.</para>
+        /// <para>The list of application instance IDs. A maximum of 100 IDs can be specified.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -41,12 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> AppInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the information about deleted app instances. If you set this parameter to true, you must configure AppInstanceIdList. Otherwise, a parameter error is reported.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>Specifies whether to query information about deleted instances. If this parameter is set to true, the AppInstanceIdList parameter is required. Otherwise, a parameter error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -56,7 +51,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? IncludeDeleted { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <c>1</c>. We recommend that you specify this parameter.</para>
+        /// <para>The page number of the query results to display. Default value: <c>1</c>. Specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -66,7 +61,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The value cannot be greater than <c>100</c>. Default value: <c>20</c>. We recommend that you specify this parameter.</para>
+        /// <para>The number of query results per page. Maximum value: <c>100</c>. Default value: <c>20</c>. Specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -76,7 +71,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the application instances.</para>
+        /// <para>The list of application instance statuses.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -86,7 +81,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The user IDs. You can specify up to 100 IDs.</para>
+        /// <para>The list of user IDs. A maximum of 100 IDs can be specified.</para>
         /// </summary>
         [NameInMap("UserIdList")]
         [Validation(Required=false)]

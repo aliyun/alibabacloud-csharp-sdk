@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels AppInstanceGroupModels { get; set; }
         public class GetAppInstanceGroupResponseBodyAppInstanceGroupModels : TeaModel {
             /// <summary>
-            /// <para>接入类型。</para>
+            /// <para>The access type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INTERNET</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The number of subscription resources. Minimum value: 1.</para>
+            /// <para>The number of subscription resources configured by the user. Minimum value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? Amount { get; set; }
 
             /// <summary>
-            /// <para>The image ID of the application.</para>
+            /// <para>The application image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>img-8z4nztpaqvay4****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppCenterImageId { get; set; }
 
             /// <summary>
-            /// <para>The image name of the application.</para>
+            /// <para>The application image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OfficeApps</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppCenterImageName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the delivery group.</para>
+            /// <para>The delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -67,14 +67,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the delivery group.</para>
+            /// <para>The delivery group name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>办公应用</para>
             /// </summary>
             [NameInMap("AppInstanceGroupName")]
             [Validation(Required=false)]
             public string AppInstanceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The resource type of the delivery group.</para>
+            /// <para>The instance type of the delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b>dynamic</b></para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceType { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource type of the delivery group.</para>
+            /// <para>The name of the instance type of the delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test001</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceTypeName { get; set; }
 
             /// <summary>
-            /// <para>The policy ID of the application.</para>
+            /// <para>The application policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-g3k5wa2ms2****</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppPolicyId { get; set; }
 
             /// <summary>
-            /// <para>The applications.</para>
+            /// <para>The list of application information.</para>
             /// </summary>
             [NameInMap("Apps")]
             [Validation(Required=false)]
@@ -132,6 +135,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>The application name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>办公应用</para>
                 /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
@@ -148,7 +154,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string AppVersion { get; set; }
 
                 /// <summary>
-                /// <para>The name of the application version.</para>
+                /// <para>The application version name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>初始版本</para>
                 /// </summary>
                 [NameInMap("AppVersionName")]
                 [Validation(Required=false)]
@@ -157,7 +166,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>授权模式。</para>
+            /// <para>The authorization mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>App</para>
@@ -168,11 +177,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The sales mode.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AppInstance: by session</description></item>
-            /// <item><description>Node: by resource</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Node</para>
@@ -183,11 +187,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The billing method.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PostPaid: pay-as-you-go</description></item>
-            /// <item><description>PrePaid: subscription</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -197,7 +196,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the delivery group expires.</para>
+            /// <para>The expiration time of the delivery group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-27T16:00:00.000+00:00</para>
@@ -207,7 +206,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the delivery group was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-26T15:06:16.000+00:00</para>
@@ -237,7 +236,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? MinAmount { get; set; }
 
             /// <summary>
-            /// <para>The information about the resource group.</para>
+            /// <para>The resource group information.</para>
             /// </summary>
             [NameInMap("NodePool")]
             [Validation(Required=false)]
@@ -254,7 +253,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>空闲会话数上限。指定该值时，当会话使用率超过<c>ScalingUsageThreshold</c>且当前交付组空闲会话数小于<c>MaxIdleAppInstanceAmount</c>时，才会触发自动扩容，否则认为交付组空闲会话已足够使用，不自动扩容。该参数可用于灵活控制弹性扩容行为和降低使用成本。</para>
+                /// <para>The upper limit of idle sessions. When this value is specified, automatic scale-out is triggered only when the session usage exceeds <c>ScalingUsageThreshold</c> and the number of idle sessions in the delivery group is less than <c>MaxIdleAppInstanceAmount</c>. Otherwise, the delivery group is considered to have sufficient idle sessions and no automatic scale-out is performed. This parameter allows you to flexibly control elastic scaling behavior and reduce costs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -264,7 +263,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? MaxIdleAppInstanceAmount { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of resources that can be created for scale-out.</para>
+                /// <para>The maximum number of resources that can be created during scale-out.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -274,7 +273,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? MaxScalingAmount { get; set; }
 
                 /// <summary>
-                /// <para>The total number of subscription resources.</para>
+                /// <para>The total number of current subscription resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -284,13 +283,13 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? NodeAmount { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of sessions to which a resource can connect at the same time. If a resource connects to a large number of sessions at the same time, user experience can be compromised. The value range varies based on the resource type. The following items describe the value ranges of different resource types:</para>
+                /// <para>The number of concurrent sessions, which is the number of sessions that a single resource can handle simultaneously. If too many sessions are connected simultaneously, the application experience may degrade. The valid values vary by resource specification:</para>
                 /// <list type="bullet">
-                /// <item><description>appstreaming.general.4c8g: 1 to 2</description></item>
-                /// <item><description>appstreaming.general.8c16g: 1 to 4</description></item>
-                /// <item><description>appstreaming.vgpu.8c16g.4g: 1 to 4</description></item>
-                /// <item><description>appstreaming.vgpu.8c31g.16g: 1 to 4</description></item>
-                /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 6</description></item>
+                /// <item><description>appstreaming.general.4c8g: 1 to 2.</description></item>
+                /// <item><description>appstreaming.general.8c16g: 1 to 4.</description></item>
+                /// <item><description>appstreaming.vgpu.8c16g.4g: 1 to 4.</description></item>
+                /// <item><description>appstreaming.vgpu.8c31g.16g: 1 to 4.</description></item>
+                /// <item><description>appstreaming.vgpu.14c93g.12g: 1 to 6.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -301,7 +300,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? NodeCapacity { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource type that you purchase.</para>
+                /// <para>The instance type ID of the purchased resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -311,7 +310,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string NodeInstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource group.</para>
+                /// <para>The resource group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-g6922kced36hx****</para>
@@ -321,14 +320,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string NodePoolId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource type.</para>
+                /// <para>The resource specification name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>无影-通用型_4核8G</para>
                 /// </summary>
                 [NameInMap("NodeTypeName")]
                 [Validation(Required=false)]
                 public string NodeTypeName { get; set; }
 
                 /// <summary>
-                /// <para>The number of subscription resources that are in use.</para>
+                /// <para>The resource count of subscription resources in use.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -338,14 +340,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? NodeUsed { get; set; }
 
                 /// <summary>
-                /// <para>The schedules of the scaling policy.</para>
+                /// <para>The list of policy execution cycles.</para>
                 /// </summary>
                 [NameInMap("RecurrenceSchedules")]
                 [Validation(Required=false)]
                 public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules> RecurrenceSchedules { get; set; }
                 public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedules : TeaModel {
                     /// <summary>
-                    /// <para>The schedule type of the scaling policy. This parameter must be configured together with <c>RecurrenceValues</c>.``</para>
+                    /// <para>The type of the policy execution cycle. You must specify both <c>RecurrenceType</c> and <c>RecurrenceValues</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Weekly</para>
@@ -355,21 +357,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                     public string RecurrenceType { get; set; }
 
                     /// <summary>
-                    /// <para>The days of each week on which the scaling policy is executed.</para>
+                    /// <para>The list of values for the policy execution cycle.</para>
                     /// </summary>
                     [NameInMap("RecurrenceValues")]
                     [Validation(Required=false)]
                     public List<int?> RecurrenceValues { get; set; }
 
                     /// <summary>
-                    /// <para>The time periods during which the scaling policy can be executed.</para>
+                    /// <para>The list of time periods for the policy execution cycle.</para>
                     /// </summary>
                     [NameInMap("TimerPeriods")]
                     [Validation(Required=false)]
                     public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedulesTimerPeriods> TimerPeriods { get; set; }
                     public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsNodePoolRecurrenceSchedulesTimerPeriods : TeaModel {
                         /// <summary>
-                        /// <para>The number of destination resources.</para>
+                        /// <para>The target resource count.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>5</para>
@@ -379,7 +381,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                         public int? Amount { get; set; }
 
                         /// <summary>
-                        /// <para>The end time of the scaling policy. Format: HH:mm.</para>
+                        /// <para>The end time. Format: HH:mm.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>11:00</para>
@@ -389,7 +391,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                         public string EndTime { get; set; }
 
                         /// <summary>
-                        /// <para>The start time of the scaling policy. Format: HH:mm.</para>
+                        /// <para>The start time. Format: HH:mm.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>09:30</para>
@@ -403,7 +405,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The duration for which no session is connected. Unit: minutes. If no session is connected in the resources after the specified duration elapses, automatic scale-in is triggered. Default value: 5.</para>
+                /// <para>The idle duration without session connections, in minutes. When a resource remains without session connections for the specified duration, automatic scale-in is triggered. Default value: 5.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -413,7 +415,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? ScalingDownAfterIdleMinutes { get; set; }
 
                 /// <summary>
-                /// <para>The total number of scalable resources.</para>
+                /// <para>The total number of elastic resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -423,7 +425,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? ScalingNodeAmount { get; set; }
 
                 /// <summary>
-                /// <para>The number of scalable resources that are in use.</para>
+                /// <para>The resource count of elastic resources in use.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -433,7 +435,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? ScalingNodeUsed { get; set; }
 
                 /// <summary>
-                /// <para>The number of resources that are created each time resources are scaled out. Valid values: 1 to 10.</para>
+                /// <para>The number of resources created during each scale-out event. Valid values: 1 to 10.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -443,7 +445,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public int? ScalingStep { get; set; }
 
                 /// <summary>
-                /// <para>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage is calculated by using the following formula: <c>Session usage = Number of current sessions/(Total number of resources × Number of concurrent sessions) × 100%</c>.</para>
+                /// <para>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The session usage is calculated as follows: <c>Session usage = Number of current sessions ÷ (Total number of resources × Concurrent sessions per resource) × 100%</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>85</para>
@@ -453,7 +455,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string ScalingUsageThreshold { get; set; }
 
                 /// <summary>
-                /// <para>The expiration date of the scaling policy. Format: yyyy-MM-dd.</para>
+                /// <para>The date when the policy expires. Format: yyyy-MM-dd.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-09-08</para>
@@ -463,7 +465,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string StrategyDisableDate { get; set; }
 
                 /// <summary>
-                /// <para>The effective date of the scaling policy. Format: yyyy-MM-dd.</para>
+                /// <para>The date when the policy takes effect. Format: yyyy-MM-dd.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-01</para>
@@ -473,16 +475,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string StrategyEnableDate { get; set; }
 
                 /// <summary>
-                /// <para>The type of the scaling policy.</para>
+                /// <para>The elastic policy type.</para>
                 /// <remarks>
-                /// <para> <c>NODE_SCALING_BY_USAGE</c> is returned for this parameter only if ChargeType is set to <c>PrePaid</c>. <c>NODE_SCALING_BY_SCHEDULE</c> is returned for this parameter only if ChargeType is set to <c>PostPaid</c>.</para>
+                /// <para><c>NODE_SCALING_BY_USAGE</c> (usage-based scaling policy) applies only to <c>PrePaid</c> (subscription) resources. <c>NODE_SCALING_BY_SCHEDULE</c> (scheduled scaling policy) applies only to <c>PostPaid</c> (pay-as-you-go) resources.</para>
                 /// </remarks>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>NODE_FIXED: No scalable resources are used.</description></item>
-                /// <item><description>NODE_SCALING_BY_SCHEDULE: Scheduled scaling is used.</description></item>
-                /// <item><description>NODE_SCALING_BY_USAGE: Resources are scaled based on usage.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NODE_FIXED</para>
@@ -492,7 +488,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string StrategyType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the warmup policy is enabled for resources.</para>
+                /// <para>Indicates whether the resource prefetch policy is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -504,7 +500,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>办公网络ID。</para>
+            /// <para>The office network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing+dir-172301****</para>
@@ -514,7 +510,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The type of the operating system.</para>
+            /// <para>The operating system type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -524,14 +520,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The information about the over-the-air (OTA) update task.</para>
+            /// <para>The OTA upgrade task information.</para>
             /// </summary>
             [NameInMap("OtaInfo")]
             [Validation(Required=false)]
             public GetAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo OtaInfo { get; set; }
             public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsOtaInfo : TeaModel {
                 /// <summary>
-                /// <para>The new OTA version. A null value indicates that no new version is available.</para>
+                /// <para>The new OTA version. An empty value indicates that no new version is available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0.1-D-20220630.11****</para>
@@ -551,7 +547,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string OtaVersion { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the OTA update task.</para>
+                /// <para>The OTA upgrade task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ota-e49929gv8acz5****</para>
@@ -573,7 +569,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
+            /// <para>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -583,7 +579,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The percentage of reserved instances. The value indicates the percentage of unused sessions in the delivery group. Valid values: 0 to 99.</para>
+            /// <para>The percentage of reserved instances, which represents the ratio of unused sessions in the delivery group. Valid values: 0 to 99.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -593,7 +589,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ReserveAmountRatio { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of reserved instances. The value indicates the maximum number of unused sessions in the delivery group. Minimum value: 1.</para>
+            /// <para>The maximum number of reserved instances, which represents the maximum number of unused sessions in the delivery group. Minimum value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -603,7 +599,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? ReserveMaxAmount { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of reserved instances. The value indicates the minimum number of unused sessions in the delivery group. Minimum value: 1.</para>
+            /// <para>The minimum number of reserved instances, which represents the minimum number of unused sessions in the delivery group. Minimum value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -623,7 +619,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceStatus { get; set; }
 
             /// <summary>
-            /// <para>The duration for which no session is connected. Unit: minutes. If no session is connected in the resources after the specified duration elapses, automatic scale-in is triggered. Minimum value: 0.</para>
+            /// <para>The idle duration without session connections, in minutes. When a resource remains without session connections for the specified duration, automatic scale-in is triggered. Minimum value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -633,7 +629,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? ScalingDownAfterIdleMinutes { get; set; }
 
             /// <summary>
-            /// <para>The number of sessions that are created each time the delivery group is scaled out. Minimum value: 1.</para>
+            /// <para>The number of sessions created during each scale-out event. Minimum value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -643,7 +639,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public int? ScalingStep { get; set; }
 
             /// <summary>
-            /// <para>The upper limit of session usage. If the session usage exceeds the specified upper limit, auto scaling is automatically triggered. The session usage rate is calculated by using the following formula: Session usage rate = Number of sessions in use/Total number of sessions × 100%. Valid values: 0 to 99.</para>
+            /// <para>The upper threshold of session usage (%). When the session usage exceeds this threshold, automatic scale-out is triggered. The session usage is calculated as follows: Session usage = Number of sessions in use ÷ Total number of sessions × 100%. Valid values: 0 to 99.</para>
             /// 
             /// <b>Example:</b>
             /// <para>85</para>
@@ -653,7 +649,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ScalingUsageThreshold { get; set; }
 
             /// <summary>
-            /// <para>The duration for which sessions are retained after disconnection. Unit: minutes. After an end user disconnects from a session, the session is closed only after the specified duration elapses. If you want to permanently retain sessions, set this parameter to <c>-1</c>. Valid values:-1 and 3 to 300. Default value: <c>15</c>.</para>
+            /// <para>The session disconnection retention duration, in minutes. After an end user session is disconnected, the session is retained for the specified duration before being logged off. Set this parameter to <c>-1</c> to retain the session indefinitely. Valid values: -1 and 3 to 300. Default value: <c>15</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15</para>
@@ -663,7 +659,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SessionTimeout { get; set; }
 
             /// <summary>
-            /// <para>会话类型。</para>
+            /// <para>The session type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -673,12 +669,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SessionType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether user permission verification is skipped.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false: This is the default value.</description></item>
-            /// </list>
+            /// <para>Indicates whether user authorization verification is skipped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -688,7 +679,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? SkipUserAuthCheck { get; set; }
 
             /// <summary>
-            /// <para>The specification ID that uniquely corresponds to the ID of the delivery group.</para>
+            /// <para>The ID that uniquely corresponds to the delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spec-8o18t8uc31qib0****</para>
@@ -698,18 +689,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SpecId { get; set; }
 
             /// <summary>
-            /// <para>The status of the delivery group.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PUBLISHED: The delivery group is published.</description></item>
-            /// <item><description>FAILED: The delivery group failed to be published.</description></item>
-            /// <item><description>MAINTAIN_FAILED: The delivery group failed to be updated.</description></item>
-            /// <item><description>EXPIRED: The delivery group is expired.</description></item>
-            /// <item><description>MAINTAINING: The delivery group is being updated.</description></item>
-            /// <item><description>CEASED: The delivery group has overdue payments.</description></item>
-            /// <item><description>EXPIRED_RECYCLING: The delivery group is expired and being recycled.</description></item>
-            /// <item><description>DEPLOYING: The delivery group is being published.</description></item>
-            /// </list>
+            /// <para>The delivery group status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLISHED</para>
@@ -723,14 +703,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? SupportUserGroupMixedAuth { get; set; }
 
             /// <summary>
-            /// <para>资源标签列表。</para>
+            /// <para>The list of resource tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags> Tags { get; set; }
             public class GetAppInstanceGroupResponseBodyAppInstanceGroupModelsTags : TeaModel {
                 /// <summary>
-                /// <para>标签键。</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>department</para>
@@ -740,7 +720,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>标签类型。</para>
+                /// <para>The tag type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -750,7 +730,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// <para>标签值。</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>design</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstanceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The image ID of the app. You can obtain the ID from the Images page in the App Streaming console.</para>
+        /// <para>The application image ID. You can obtain this value from the Image Management page in the WUYING Cloud Application console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>img-8z4nztpaqvay4****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppCenterImageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The delivery group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -30,19 +30,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery groups to query. Fuzzy match is used for queries. For example, if you set this parameter to <c>Office App</c>, all delivery groups whose names contain <c>Office App</c> are queried, such as <c>My Office Apps</c> and <c>Office App A</c>.</para>
+        /// <para>The delivery group name. Fuzzy match is used for the query. For example, if you set the delivery group name to <c>Office App</c>, all delivery groups whose names contain <c>Office App</c> are returned, such as <c>My Office App</c> and <c>Office App A</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>办公应用</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
-        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
-        /// </list>
+        /// <para>The region ID of the delivery group. For more information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> ExcludedUserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource specification that you purchase. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain the ID.</para>
+        /// <para>The specification type ID of the purchased resources. You can call the <a href="~~ListNodeInstanceType~~">ListNodeInstanceType</a> operation to obtain this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>appstreaming.vgpu.4c8g.2g</para>
@@ -70,6 +68,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NodeInstanceType { get; set; }
 
         /// <summary>
+        /// <para>The office network ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hongkong+dir-643067****</para>
         /// </summary>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the query results to display.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The value cannot be greater than <c>100</c>.</para>
+        /// <para>The number of query results per page. Maximum value: <c>100</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -99,10 +99,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +111,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -126,13 +122,15 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The status of the delivery groups.</para>
+        /// <para>The list of delivery group statuses.</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
         /// <summary>
+        /// <para>The tags.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -140,10 +138,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<ListAppInstanceGroupRequestTag> Tag { get; set; }
         public class ListAppInstanceGroupRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>department</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>design</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code:</para>
+        /// <para>The status code:</para>
         /// <list type="bullet">
         /// <item><description><c>200</c>: Success.</description></item>
-        /// <item><description><c>400</c>: An error occurred.</description></item>
+        /// <item><description><c>400</c>: Error.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,12 +24,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Whether the deletion is successful.</para>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>true:Deleted successfully.</description></item>
-        /// <item><description>false:Deletion failure.</description></item>
-        /// </list>
+        /// <para>Indicates whether the deletion is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -39,7 +34,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -59,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListAppInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The app instances.</para>
+        /// <para>The list of queried application instances.</para>
         /// </summary>
         [NameInMap("AppInstanceModels")]
         [Validation(Required=false)]
         public List<ListAppInstancesResponseBodyAppInstanceModels> AppInstanceModels { get; set; }
         public class ListAppInstancesResponseBodyAppInstanceModels : TeaModel {
             /// <summary>
-            /// <para>The ID of the delivery group.</para>
+            /// <para>The delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-dk8p95irqfst9****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application instance.</para>
+            /// <para>The application instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ai-8dl7dzchklmka****</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The information about the binding between the application instance and end users.</para>
+            /// <para>The binding information between the instance and the user.</para>
             /// </summary>
             [NameInMap("BindInfo")]
             [Validation(Required=false)]
             public ListAppInstancesResponseBodyAppInstanceModelsBindInfo BindInfo { get; set; }
             public class ListAppInstancesResponseBodyAppInstanceModelsBindInfo : TeaModel {
                 /// <summary>
-                /// <para>The ID of the end user that is bound to the application instance.</para>
+                /// <para>The ID of the end user bound to the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app.test</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// <para>The use duration of the application instance. Unit: seconds.</para>
+                /// <para>The usage duration of the instance. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The billing method of the app instance. Valid values:</para>
+            /// <para>The billing method of the instance. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>PrePaid</b>: subscription.</description></item>
-            /// <item><description><b>PostPaid</b>: pay-as-you-go</description></item>
-            /// </list>
-            /// <remarks>
-            /// <para> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</para>
+            /// <item><description><b>PostPaid</b>: pay-as-you-go.<remarks>
+            /// <para>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PostPaid</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the application instance was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-07T20:29:19.000+08:00</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the application instance was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-07T20:29:19.000+08:00</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The public IP address associated with the primary NIC. This value is returned only if <c>StrategyType</c> is set to <c>Mixed</c>.</para>
+            /// <para>The public IP address of the primary network interface controller (NIC). This value is returned only when the network policy (<c>StrategyType</c>) of the delivery group is set to mixed mode pattern (<c>Mixed</c>). Otherwise, this value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.13.13.211</para>
@@ -121,9 +121,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NetworkInterfaceIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node on which the app instance runs.</para>
+            /// <para>The ID of the node on which the instance runs.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if the ChargeResourceMode parameter of the delivery group to which the app instance belongs is set to Node.</para>
+            /// <para>This parameter is returned only when the billing mode of the delivery group to which the instance belongs is set to resource-based billing (ChargeResourceMode=Node).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -134,12 +134,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The session status. This parameter is returned only if the application instance is in the <c>RUNNING</c> state.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>disconnect: disconnected</description></item>
-            /// <item><description>connect: connected</description></item>
-            /// </list>
+            /// <para>The session connection status. This value is returned only when the instance status is running (<c>RUNNING</c>). Otherwise, this value is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>connect</para>
@@ -149,7 +144,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string SessionStatus { get; set; }
 
             /// <summary>
-            /// <para>The status of the application instance.</para>
+            /// <para>The application instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BOUND</para>
@@ -161,7 +156,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page. We recommend that you configure this parameter.</para>
+        /// <para>The page number of the query results to display. Specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -171,7 +166,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. The value cannot be greater than <c>100</c>. We recommend that you configure this parameter.</para>
+        /// <para>The number of query results per page. Maximum value: <c>100</c>. Specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -191,7 +186,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>

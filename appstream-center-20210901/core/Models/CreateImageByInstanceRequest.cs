@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageByInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is applicable only to scenarios in which the instance type is Cloud Desktop. Specifies whether to clear private data of users. If this parameter is set to true, the created image clears data in directories other than Administrator and Public in the C:\Users directory.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: cleanup.</description></item>
-        /// <item><description>false: does not clear.</description></item>
-        /// </list>
+        /// <para>This parameter is applicable only when the instance type is cloud desktop. Specifies whether to clear user personal data. If you set this parameter to true, the created image clears data in all directories under C:\Users except the Administrator and Public directories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The description of the image.</para>
+        /// <para>The image description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my test image v1.0</para>
@@ -45,12 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The type of disk data contained in the image. By default, the system disk and data disk of the instance are included.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SYSTEM: only system disk.</description></item>
-        /// <item><description>ALL: system disk + data disk</description></item>
-        /// </list>
+        /// <para>The type of disk data included in the image. By default, the image includes both the system cloud disk and data cloud disk of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -60,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -70,7 +60,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the RDS instance. The instance can be a CloudDesktop instance, a workstation instance. To ensure data consistency in the image, we recommend that you shut down the instance before you create an image.</para>
+        /// <para>The WUYING instance ID. The instance can be a cloud desktop instance or a workstation instance. To ensure data consistency in the image, stop the instance before creating the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-0buj1s9gm******</para>
@@ -81,11 +71,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The instance type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudDesktop: Cloud Desktop.</description></item>
-        /// <item><description>WuyingServer: Workstation</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>WuyingServer</para>
@@ -105,7 +90,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the child instance. This parameter is not used in cloud computing scenarios. Workstation scenarios, you need to specify a persistent session ID to ensure that a specific instance is located.</para>
+        /// <para>The sub-instance ID. This parameter is not applicable to cloud desktop scenarios. In workstation scenarios, specify the persistent session ID to identify a specific instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p-0cc7s3n1l*****</para>

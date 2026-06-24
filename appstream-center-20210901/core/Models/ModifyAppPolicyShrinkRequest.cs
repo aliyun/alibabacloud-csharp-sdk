@@ -22,10 +22,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: RDS Cloud App</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +32,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>Displays the policy.</para>
+        /// <para>The display policy.</para>
         /// </summary>
         [NameInMap("VideoPolicy")]
         [Validation(Required=false)]

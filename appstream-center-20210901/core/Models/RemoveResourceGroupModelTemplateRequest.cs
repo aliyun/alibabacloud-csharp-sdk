@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RemoveResourceGroupModelTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The model group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
+        /// <para>The list of resource group IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]

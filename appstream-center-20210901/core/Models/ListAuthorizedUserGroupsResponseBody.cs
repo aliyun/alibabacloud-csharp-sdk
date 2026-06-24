@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned on each page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the user groups.</para>
+        /// <para>The list of user group information.</para>
         /// </summary>
         [NameInMap("UserGroups")]
         [Validation(Required=false)]
         public List<ListAuthorizedUserGroupsResponseBodyUserGroups> UserGroups { get; set; }
         public class ListAuthorizedUserGroupsResponseBodyUserGroups : TeaModel {
             /// <summary>
-            /// <para>The ID of the delivery group.</para>
+            /// <para>The delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -68,12 +68,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The authorization mode.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>App: authorizes access to apps.</description></item>
-            /// <item><description>AppInstanceGroup: authorizes access to delivery groups.</description></item>
-            /// <item><description>Session: authorizes access to sessions.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>App</para>
@@ -83,7 +77,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AuthMode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user group.</para>
+            /// <para>The user group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ug-00001</para>
@@ -93,7 +87,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the user group.</para>
+            /// <para>The user group name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>用户组001</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]

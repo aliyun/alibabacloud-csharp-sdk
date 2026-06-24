@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class DeleteLlmTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the model template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

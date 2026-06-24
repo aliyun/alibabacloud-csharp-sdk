@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListTagCloudResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the next query is required.</para>
+        /// <para>The pagination token that indicates whether more results are available for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYRHtOLVQzCYj17y+OP7LZRrUJaF4rnBGQkWwMiVHlLZBB1w3Us37CVvhvyM0TXavA==</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags added to the cloud resources.</para>
+        /// <para>The list of tags bound to the resources.</para>
         /// </summary>
         [NameInMap("ResourceTags")]
         [Validation(Required=false)]
@@ -47,14 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud resource.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AppId: app ID.</description></item>
-            /// <item><description>WyId: Alibaba Cloud Workspace user ID.</description></item>
-            /// <item><description>AppInstanceGroupId: delivery group ID.</description></item>
-            /// <item><description>AliUid: tenant ID.</description></item>
-            /// </list>
+            /// <para>The cloud resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AppInstanceGroupId</para>
@@ -64,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -82,11 +75,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>The tag type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Custom: custom tag.</description></item>
-                /// <item><description>System: system tag.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -110,7 +98,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

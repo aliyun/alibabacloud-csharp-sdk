@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public CreateAppInstanceGroupResponseBodyAppInstanceGroupModel AppInstanceGroupModel { get; set; }
         public class CreateAppInstanceGroupResponseBodyAppInstanceGroupModel : TeaModel {
             /// <summary>
-            /// <para>The ID of the delivery group.</para>
+            /// <para>The delivery group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-9ciijz60n4xsv****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string AppInstanceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group. This parameter is returned if a resource group was created.</para>
+            /// <para>The resource group ID. This parameter is returned if a resource group is created at the same time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-ew7va2g1wl3vm****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetResourcePriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter.ProductType</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned when an error occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter ProductType is invalid.</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The price objects.</para>
-        /// <para>This parameter is returned only if a value is specified for AppInstanceType.</para>
+        /// <para>The list of price objects.</para>
+        /// <para>This parameter is returned when the request parameter AppInstanceType has a value.</para>
         /// </summary>
         [NameInMap("PriceList")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public GetResourcePriceResponseBodyPriceListPrice Price { get; set; }
             public class GetResourcePriceResponseBodyPriceListPrice : TeaModel {
                 /// <summary>
-                /// <para>The currency type.</para>
+                /// <para>The currency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</para>
+                /// <para>The discount amount. The actual price equals the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>999.0</para>
@@ -93,6 +93,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                     /// <summary>
                     /// <para>The coupon description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>**活动期间的优惠</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -110,18 +113,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                     /// <summary>
                     /// <para>The coupon name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>**优惠</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
                     public string PromotionName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the coupon was used.</para>
-                    /// <para>Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
-                    /// </list>
+                    /// <para>Indicates whether the coupon is selected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -133,7 +134,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</para>
+                /// <para>The actual price. The actual price equals the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5278.0</para>
@@ -146,11 +147,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The price type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Connected: in use</description></item>
-            /// <item><description>Standby: pending for use.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Standby</para>
@@ -160,21 +156,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string PriceType { get; set; }
 
             /// <summary>
-            /// <para>The price calculation rules.</para>
+            /// <para>The pricing rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<GetResourcePriceResponseBodyPriceListRules> Rules { get; set; }
             public class GetResourcePriceResponseBodyPriceListRules : TeaModel {
                 /// <summary>
-                /// <para>The description of the price calculation rule.</para>
+                /// <para>The pricing rule description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>用户优惠。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the price calculation rule.</para>
+                /// <para>The pricing rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>260904273633****</para>
@@ -189,7 +188,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The price object.</para>
-        /// <para>This parameter is returned only if a value is specified for NodeInstanceType.</para>
+        /// <para>This parameter is returned when the request parameter NodeInstanceType has a value.</para>
         /// </summary>
         [NameInMap("PriceModel")]
         [Validation(Required=false)]
@@ -203,7 +202,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public GetResourcePriceResponseBodyPriceModelPrice Price { get; set; }
             public class GetResourcePriceResponseBodyPriceModelPrice : TeaModel {
                 /// <summary>
-                /// <para>The currency type.</para>
+                /// <para>The currency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -213,7 +212,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discount. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</para>
+                /// <para>The discount amount. The actual price equals the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.00</para>
@@ -251,6 +250,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                     /// <summary>
                     /// <para>The coupon description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>**活动期间的优惠</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -268,18 +270,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                     /// <summary>
                     /// <para>The coupon name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>**优惠</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
                     public string PromotionName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the coupon was used.</para>
-                    /// <para>Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
-                    /// </list>
+                    /// <para>Indicates whether the coupon is selected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 }
 
                 /// <summary>
-                /// <para>The actual price. The actual price is calculated based on the following formula: Actual price = Original price - Discount.</para>
+                /// <para>The actual price. The actual price equals the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10.00</para>
@@ -303,21 +303,24 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
-            /// <para>The price calculation rules.</para>
+            /// <para>The pricing rules.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<GetResourcePriceResponseBodyPriceModelRules> Rules { get; set; }
             public class GetResourcePriceResponseBodyPriceModelRules : TeaModel {
                 /// <summary>
-                /// <para>The description of the price calculation rule.</para>
+                /// <para>The pricing rule description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>用户优惠</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the price calculation rule.</para>
+                /// <para>The pricing rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>102002100393****</para>

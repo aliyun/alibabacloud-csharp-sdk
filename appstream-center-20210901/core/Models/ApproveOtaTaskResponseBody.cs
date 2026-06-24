@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ApproveOtaTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution result. If the request was successful, <c>success</c> is returned. If the request failed, an error message is returned.</para>
+        /// <para>The execution result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OtaTask.Running</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. If the value of <c>Code</c> is <c>success</c>, this parameter is not returned.</para>
+        /// <para>The error message. This parameter is not returned when <c>Code</c> is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The task is running and cannot be sumitted.</para>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateModelProviderTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>The model provider configuration.</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public UpdateModelProviderTemplateRequestConfig Config { get; set; }
         public class UpdateModelProviderTemplateRequestConfig : TeaModel {
             /// <summary>
+            /// <para>The API key of the model service, which is used for authentication. The key is encrypted after it is created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sk-xxxxxxxxxxxxxxxxxxxx</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ApiKey { get; set; }
 
             /// <summary>
+            /// <para>The API protocol type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>openai-completions</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ApiType { get; set; }
 
             /// <summary>
+            /// <para>The base URL of the model service API.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
             /// </summary>
@@ -39,11 +48,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         }
 
+        /// <summary>
+        /// <para>The description of the model provider template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>阿里云百炼服务商</para>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the Wuying security gateway proxy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -51,11 +68,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public bool? EnableWuyingProxy { get; set; }
 
+        /// <summary>
+        /// <para>The name of the model provider template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>阿里云百炼</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the model provider template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

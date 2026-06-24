@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class GetModelProviderTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the model provider template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

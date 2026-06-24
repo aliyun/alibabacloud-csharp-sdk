@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the delivery group.</para>
+        /// <para>The delivery group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aig-9ciijz60n4xsv****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application instance.</para>
+        /// <para>The application instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ai-7ybdeiyoeh5e****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application version.</para>
+        /// <para>The application version ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppVersion { get; set; }
 
         /// <summary>
-        /// <para>The authorization code. This authorization code is valid for 3 minutes and can be used only once, regardless of whether the authentication succeeds. If multiple authentication codes are generated for a user, only the latest authentication code takes effect.</para>
+        /// <para>The authorization code. The authorization code is valid for 3 minutes and can be used only once regardless of whether the verification succeeds or fails. If multiple authorization codes are generated for a user, only the last generated code is valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e4e169bea1cc48e8afac53**********</para>

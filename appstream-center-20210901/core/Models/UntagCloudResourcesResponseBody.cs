@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UntagCloudResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud resources whose tags failed to be removed and the corresponding tags.</para>
+        /// <para>The list of failed resources and tag information.</para>
         /// </summary>
         [NameInMap("FailedResources")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The resource IDs.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aig-00000001</para>
@@ -47,14 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud resource.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AppId: app ID.</description></item>
-            /// <item><description>WyId: Alibaba Cloud Workspace user ID.</description></item>
-            /// <item><description>AppInstanceGroupId: delivery group ID.</description></item>
-            /// <item><description>AliUid: tenant ID.</description></item>
-            /// </list>
+            /// <para>The cloud resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AppInstanceGroupId</para>
@@ -64,7 +57,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The tags that failed to be removed from the cloud resources.</para>
+            /// <para>The list of failed tag information.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -82,11 +75,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <para>The tag type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Custom: custom tag.</description></item>
-                /// <item><description>System: system tag.</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>

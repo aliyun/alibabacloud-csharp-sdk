@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class BatchCreateLlmTemplatesRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of model configurations to create.</para>
+        /// </summary>
         [NameInMap("LlmTemplateItems")]
         [Validation(Required=false)]
         public List<BatchCreateLlmTemplatesRequestLlmTemplateItems> LlmTemplateItems { get; set; }
         public class BatchCreateLlmTemplatesRequestLlmTemplateItems : TeaModel {
             /// <summary>
+            /// <para>The model configuration JSON object.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;id&quot;: &quot;qwen3.6-plus&quot;,
@@ -37,11 +42,19 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Config { get; set; }
 
+            /// <summary>
+            /// <para>The model description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>千问Plus系列模型</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to set this model as the default model. Each model group can have at most one default model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -50,6 +63,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public bool? IsDefaultModel { get; set; }
 
             /// <summary>
+            /// <para>The model code, which must be unique within the same provider.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen3.6-plus</para>
             /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string LlmCode { get; set; }
 
             /// <summary>
+            /// <para>The model name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Qwen3.6-Plus</para>
             /// </summary>
@@ -68,6 +85,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The ID of the associated model group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mt-xxxx</para>
         /// </summary>
@@ -76,6 +95,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the model provider template to which the models belong.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

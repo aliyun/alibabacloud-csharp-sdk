@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class RemoveResourceGroupModelTemplateResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The removal results.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<RemoveResourceGroupModelTemplateResponseBodyData> Data { get; set; }
         public class RemoveResourceGroupModelTemplateResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The error code returned if the operation fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>InvalidParameter.resourceGroupIds</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>The error message returned if the operation fails.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>The parameter resourceGroupIds is invalid.</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>The resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-xxxxx</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the operation is successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>

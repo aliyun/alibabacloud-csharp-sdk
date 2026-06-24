@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateImageByInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateImageByInstanceResponseBodyData Data { get; set; }
         public class CreateImageByInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the RDS image.</para>
+            /// <para>The WUYING image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imgc-07hnjj5fp****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the image creation task.</para>
+            /// <para>The task ID for creating the image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tid-0abxi0lbih******</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The version of the image.</para>
+            /// <para>The image version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>iv-0abxi0lbi*****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NULL</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the request was successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

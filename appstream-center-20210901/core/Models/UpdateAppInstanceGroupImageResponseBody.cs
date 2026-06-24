@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class UpdateAppInstanceGroupImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter.ProductType</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter ProductType is invalid.</para>

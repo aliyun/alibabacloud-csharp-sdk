@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class CreateAppInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The image ID of the application. To obtain the image ID, log on to the <a href="https://appstreaming.console.aliyun.com/">App Streaming console</a>. In the left-side navigation pane, choose <b>Maintenance</b> &gt; <b>Custom Images</b> or Maintenance &gt; <b>System Images</b>.</para>
+        /// <para>The application image ID. You can obtain the ID from the <b>O&amp;M</b> &gt; <b>Custom Images</b> or <b>System Images</b> page in the <a href="https://appstreaming.console.aliyun.com/">WUYING Cloud Application console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,13 +22,16 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The name of the delivery group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>办公应用</para>
         /// </summary>
         [NameInMap("AppInstanceGroupName")]
         [Validation(Required=false)]
         public string AppInstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>Package type.</para>
+        /// <para>The package type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>browser.package.5.250.appstreaming.general.basic</para>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppPackageType { get; set; }
 
         /// <summary>
-        /// <para>Policy ID.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-0clfzcy0adpcf****</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string AppPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The authentication mode of the delivery group.</para>
+        /// <para>The authorization mode of the delivery group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>App</para>
@@ -62,11 +65,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>Specifies whether to enable automatic payment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false: manual payment. This is the default value.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -77,11 +75,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false: manual payment. This is the default value.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -91,12 +84,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-shanghai: China (Shanghai)</description></item>
-        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
-        /// </list>
+        /// <para>The region ID of the delivery group. For information about supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,10 +96,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The sales mode.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>Node: by resource</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,11 +107,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The billing method.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go</description></item>
-        /// <item><description>PrePaid: subscription</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -138,7 +117,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cls-d39iq73l5c0a8****</para>
@@ -148,9 +127,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The network settings.</para>
+        /// <para>The network configuration.</para>
         /// <remarks>
-        /// <para> If you want to use this parameter, submit a ticket.</para>
+        /// <para>To use this parameter, submit a ticket.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Network")]
@@ -165,14 +144,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string NodePoolShrink { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of resources. This parameter is required if you set <c>ChargeType</c> to <c>PrePaid</c>. The unit of this parameter is specified by <c>PeriodUnit</c>.</para>
+        /// <para>The subscription duration of the resource when <c>ChargeType</c> is set to <c>PrePaid</c>. This parameter is required. The unit is specified by <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid value if you set <c>PeriodUnit</c> to <c>Week</c>:</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Week</c>, valid values:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Month</c>:</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -180,7 +159,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// <item><description>6</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Year</c>:</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values:</para>
         /// <list type="bullet">
         /// <item><description>1</description></item>
         /// <item><description>2</description></item>
@@ -189,7 +168,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set <c>ChargeType</c> to <c>PostPaid</c>, set this parameter to 1.</para>
+        /// <para>If <c>ChargeType</c> is set to <c>PostPaid</c>, set this parameter to 1.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -201,19 +180,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is available if you set <c>ChargeType</c> to <c>PrePaid</c>.</para>
+        /// <para>The unit of the subscription duration when <c>ChargeType</c> is set to <c>PrePaid</c>.</para>
         /// <remarks>
-        /// <para> The value of this parameter is case-insensitive. For example, <c>Week</c> is valid and <c>week</c> is invalid. If you specify an invalid value combination for Period and PeriodUnit, such as <c>2 Week</c>, the operation can still be called. However, an error occurs when you place the order.</para>
+        /// <para>This parameter is case-sensitive. For example, <c>Week</c> is valid, but <c>week</c> is invalid.
+        /// If the request parameters do not match the valid combinations, such as <c>2 Week</c>, the API call succeeds but an error occurs during the order placement.</para>
         /// </remarks>
         /// <remarks>
-        /// <para> If you set <c>ChargeType</c> to <c>PostPaid</c>, set this parameter to <c>Month</c>.</para>
+        /// <para>If <c>ChargeType</c> is set to <c>PostPaid</c>, set this parameter to <c>Month</c>.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
-        /// <item><description>Week</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -224,10 +198,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the pre-open application.</para>
+        /// <para>The pre-opened application ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cag-b2ron*******</para>
+        /// <para>cag-b2ronxxd****</para>
         /// </summary>
         [NameInMap("PreOpenAppId")]
         [Validation(Required=false)]
@@ -235,10 +209,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
         /// <summary>
         /// <para>The product type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>CloudApp: App Streaming</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -273,7 +243,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SecurityPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The period of time during which the application can be recycled. The recycling period is the period of time between the time when the end user disconnects from the application and the time when processes exit the application. If you do not want to recycle the application, set this parameter to <c>-1</c>. Valid values:-1 and 3 to 300. The value must be an integer. Default value: <c>15</c>. Unit: minutes.</para>
+        /// <para>The application recycling timeout period, in minutes. After an end user disconnects from a cloud application for a period of time, the cloud application process exits. This period is the application recycling timeout. Set this parameter to <c>-1</c> if you do not want the application to be recycled. Valid values: -1 and 3 to 300 (integer). Default value: <c>15</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -291,7 +261,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string StoragePolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>Payment method subtype.</para>
+        /// <para>The billing method subtype.</para>
         /// 
         /// <b>Example:</b>
         /// <para>postPaid</para>
@@ -301,14 +271,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string SubPayType { get; set; }
 
         /// <summary>
-        /// <para>The custom policy.</para>
+        /// <para>The user-defined policy.</para>
         /// </summary>
         [NameInMap("UserDefinePolicy")]
         [Validation(Required=false)]
         public string UserDefinePolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>List of authorized user group IDs.</para>
+        /// <para>The list of authorized user group IDs.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -318,21 +288,21 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The information about the user that you want to add to the assigned user list of the delivery group. This parameter is required if you configure <c>Users</c>.</para>
+        /// <para>The user information of the users to be added to the delivery group. This field is required if the <c>Users</c> parameter is specified.</para>
         /// </summary>
         [NameInMap("UserInfo")]
         [Validation(Required=false)]
         public string UserInfoShrink { get; set; }
 
         /// <summary>
-        /// <para>The users that you want to add to the assigned user list of the delivery group.</para>
+        /// <para>The list of usernames to be added to the delivery group as assigned users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<string> Users { get; set; }
 
         /// <summary>
-        /// <para>Display policy.</para>
+        /// <para>The display policy.</para>
         /// </summary>
         [NameInMap("VideoPolicy")]
         [Validation(Required=false)]

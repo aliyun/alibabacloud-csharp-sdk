@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListModelTemplateResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the model group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string ModelTemplateId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from page 1. Both 0 and 1 return the same result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -35,6 +40,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The list of resource group IDs.</para>
+        /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
         public List<string> ResourceGroupIds { get; set; }
