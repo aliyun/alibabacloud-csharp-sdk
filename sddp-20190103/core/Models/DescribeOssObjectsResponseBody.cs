@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The OSS objects.</para>
+        /// <para>A list of OSS objects.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeOssObjectsResponseBodyItems> Items { get; set; }
         public class DescribeOssObjectsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The name of the bucket.</para>
+            /// <para>The bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-duplicate-***</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The type of the OSS object. Valid values include <b>900001</b>, <b>800015</b>, or <b>800005</b>, which indicates the MP4 file, PDF file, or OSS configuration file, respectively.</para>
+            /// <para>The type of the OSS object, such as <b>900001</b> (MP4 video file), <b>800015</b> (PDF document), and <b>800005</b> (OSS configuration file).</para>
             /// 
             /// <b>Example:</b>
             /// <para>900001</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <para>The name of the file type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>MP4 file</para>
+            /// <para>MP4</para>
             /// </summary>
             [NameInMap("CategoryName")]
             [Validation(Required=false)]
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The code of the file type.</para>
+            /// <para>The code of the file category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? FileCategoryCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the file type.</para>
+            /// <para>The name of the file category.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text file</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string FileCategoryName { get; set; }
 
             /// <summary>
-            /// <para>The file ID of the OSS object.</para>
+            /// <para>The ID of the OSS file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file-22***</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the OSS object.</para>
+            /// <para>The unique ID of the OSS object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17383</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance to which the OSS object belongs.</para>
+            /// <para>The ID of the asset instance to which the OSS object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1232122</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the OSS object.</para>
+            /// <para>The region ID of the OSS object owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-***</para>
@@ -137,13 +137,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sensitivity level of the OSS object. Valid values:</para>
+            /// <para>The risk level ID of the OSS object. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: N/A, which indicates that no sensitive data is detected.</description></item>
-            /// <item><description><b>2</b>: S1, which indicates the low sensitivity level.</description></item>
-            /// <item><description><b>3</b>: S2, which indicates the medium sensitivity level.</description></item>
-            /// <item><description><b>4</b>: S3, which indicates the high sensitivity level.</description></item>
-            /// <item><description><b>5</b>: S4, which indicates the highest sensitivity level.</description></item>
+            /// <item><description><para><b>1</b>: N/A. No sensitive data is detected.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: S1. Level 1 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: S2. Level 2 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: S3. Level 3 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: S4. Level 4 sensitive data.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,17 +159,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitivity level for the OSS object.</para>
+            /// <para>The name of the risk level for the OSS object.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Medium sensitivity level</para>
+            /// <para>High risk</para>
             /// </summary>
             [NameInMap("RiskLevelName")]
             [Validation(Required=false)]
             public string RiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The number of rules that are hit.</para>
+            /// <para>The number of matched rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -174,14 +179,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RuleCount { get; set; }
 
             /// <summary>
-            /// <para>The rules.</para>
+            /// <para>A list of rules.</para>
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
             public List<DescribeOssObjectsResponseBodyItemsRuleList> RuleList { get; set; }
             public class DescribeOssObjectsResponseBodyItemsRuleList : TeaModel {
                 /// <summary>
-                /// <para>The number of times that the rule is hit.</para>
+                /// <para>The number of times the rule is matched.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -191,7 +196,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>The search keyword. Fuzzy match is supported.</para>
+                /// <para>The name of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ID card</para>
@@ -201,13 +206,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the sensitivity level of the OSS object. Valid values:</para>
+                /// <para>The risk level ID of the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: N/A, which indicates that no sensitive data is detected.</description></item>
-                /// <item><description><b>2</b>: S1, which indicates the low sensitivity level.</description></item>
-                /// <item><description><b>3</b>: S2, which indicates the medium sensitivity level.</description></item>
-                /// <item><description><b>4</b>: S3, which indicates the high sensitivity level.</description></item>
-                /// <item><description><b>5</b>: S4, which indicates the highest sensitivity level.</description></item>
+                /// <item><description><para><b>1</b>: N/A. No sensitive data is detected.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: S1. Level 1 sensitive data.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: S2. Level 2 sensitive data.</para>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: S3. Level 3 sensitive data.</para>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: S4. Level 4 sensitive data.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -220,7 +230,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>The number of fields that are hit.</para>
+            /// <para>The number of matched fields.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -230,7 +240,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SensitiveCount { get; set; }
 
             /// <summary>
-            /// <para>The size of the file. Unit: bytes.</para>
+            /// <para>The file size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -252,9 +262,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The ID value from which the next page of results starts.</para>
+        /// <para>The token that marks the start of the next page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when the <c>Truncated</c> parameter is set to <c>true</c>.</para>
+        /// <para>This parameter is returned only when <c>Truncated</c> is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -265,7 +275,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string NextMarker { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -295,10 +305,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the queried entries are truncated. Valid values:</para>
+        /// <para>Indicates whether the results are truncated. The default value is false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The results are truncated.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The results are not truncated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

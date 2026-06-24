@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values: <b>zh</b> and <b>en</b>. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// <para>The language of the request and response. Valid values are <b>zh</b> for Chinese and <b>en</b> for English.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the anomalous event subtype. Separate multiple IDs with commas (,).</para>
+        /// <para>The unique IDs of the anomalous activity subtypes. Separate multiple IDs with commas.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeEventTypes</b> operation to query the ID of anomalous event subtype.</para>
+        /// <para>To enable SDDP to detect anomalous activities for subtypes, provide the unique IDs of the anomalous activity subtypes. Call the <b>DescribeEventTypes</b> operation to obtain the IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

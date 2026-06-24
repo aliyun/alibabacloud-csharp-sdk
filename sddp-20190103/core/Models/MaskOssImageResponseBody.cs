@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class MaskOssImageResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>136082B3-B21F-5E9D-B68E-991FFD205D24</para>
         /// </summary>

@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh_cn: Chinese (default)</description></item>
-        /// <item><description>en_us: English</description></item>
+        /// <item><description><para>zh_cn: Chinese. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>en_us: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the industry-specific rule template.</para>
+        /// <para>The ID of the industry-specific template.</para>
+        /// <remarks>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> to get the ID of the industry-specific template.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

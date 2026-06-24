@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeEventDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the anomalous event.</para>
+        /// <para>The unique ID of the anomalous activity.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeEvents</b> operation to query the ID of the anomalous event.</para>
+        /// <para>To query the details of a single anomalous activity, you must provide its unique ID. You can call the <b>DescribeEvents</b> operation to obtain the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

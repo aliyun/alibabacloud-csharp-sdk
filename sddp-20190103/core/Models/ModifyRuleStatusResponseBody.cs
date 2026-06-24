@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyRuleStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of sensitive data detection rules whose status failed to be changed. Multiple IDs are separated with commas (,).</para>
+        /// <para>The IDs of the rules whose status failed to be changed. Multiple IDs are separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3,4</para>

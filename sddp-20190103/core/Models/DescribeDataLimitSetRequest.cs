@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Simplified Chinese (default)</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese (Simplified). This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English (US).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,8 +36,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The parent asset ID of the data asset.</para>
-        /// <para>You can call the <a href="~~DescribeDataLimitDetail~~">DescribeDataLimitDetail</a> or <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain the parent asset ID of the data asset from the value of the <b>ParentId</b> parameter.</para>
+        /// <para>The ID of the parent asset.</para>
+        /// <para>The <a href="~~DescribeDataLimitDetail~~">DescribeDataLimitDetail</a> or <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation returns this ID in the <b>ParentId</b> parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>db</para>
@@ -44,19 +46,38 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [Validation(Required=false)]
         public string ParentId { get; set; }
 
+        /// <summary>
+        /// <para>The region type.</para>
+        /// <list type="bullet">
+        /// <item><description><b>native_audit</b>: A region that supports traffic collection.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>native_audit</para>
+        /// </summary>
         [NameInMap("RegionType")]
         [Validation(Required=false)]
         public string RegionType { get; set; }
 
         /// <summary>
-        /// <para>The type of service to which the data asset belongs. Valid values:</para>
+        /// <para>The type of data asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: MaxCompute</description></item>
-        /// <item><description><b>2</b>: OSS</description></item>
-        /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-        /// <item><description><b>4</b>: Tablestore</description></item>
-        /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+        /// <item><description><para><b>1</b>: MaxCompute.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: OSS.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: ADS.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: OTS.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: RDS.</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: SELF_DB.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>If you set this parameter to a value other than 2, the returned OssBucketList object is empty.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

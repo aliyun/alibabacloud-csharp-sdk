@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Sddp20190103
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-hongkong", "sddp-api.cn-hongkong.aliyuncs.com"},
+                {"cn-zhangjiakou", "sddp.cn-zhangjiakou.aliyuncs.com"},
+                {"ap-southeast-1", "sddp.ap-southeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sddp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -43,12 +45,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a common configuration item for alerts.</para>
+        /// <para>Modifies the general alert configuration parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.</para>
+        /// <para>Creates or restores configurations based on the codes of common alert configuration items, allowing you to manage these configurations.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -112,12 +114,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a common configuration item for alerts.</para>
+        /// <para>Modifies the general alert configuration parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.</para>
+        /// <para>Creates or restores configurations based on the codes of common alert configuration items, allowing you to manage these configurations.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -181,12 +183,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a common configuration item for alerts.</para>
+        /// <para>Modifies the general alert configuration parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.</para>
+        /// <para>Creates or restores configurations based on the codes of common alert configuration items, allowing you to manage these configurations.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -206,12 +208,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a common configuration item for alerts.</para>
+        /// <para>Modifies the general alert configuration parameters.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create or restore configurations based on the codes of common configuration items. This allows you to manage the configurations of common configuration items.</para>
+        /// <para>Creates or restores configurations based on the codes of common alert configuration items, allowing you to manage these configurations.</para>
         /// <h1>Limits</h1>
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
@@ -231,12 +233,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.</para>
+        /// <para>You can call the CreateDataLimit operation to grant permissions to scan databases, projects, and buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
+        /// <para>You can use this operation to grant permissions to scan your data assets. This helps improve the security of your data assets.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, the system throttles your API calls. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -350,12 +354,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.</para>
+        /// <para>You can call the CreateDataLimit operation to grant permissions to scan databases, projects, and buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
+        /// <para>You can use this operation to grant permissions to scan your data assets. This helps improve the security of your data assets.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, the system throttles your API calls. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -469,12 +475,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.</para>
+        /// <para>You can call the CreateDataLimit operation to grant permissions to scan databases, projects, and buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
+        /// <para>You can use this operation to grant permissions to scan your data assets. This helps improve the security of your data assets.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, the system throttles your API calls. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -492,12 +500,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes Data Security Center (DSC) to scan data assets. The data assets can be a database, a project, or a bucket.</para>
+        /// <para>You can call the CreateDataLimit operation to grant permissions to scan databases, projects, and buckets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to authorize DSC to scan data assets to ensure the security of the data assets.</para>
+        /// <para>You can use this operation to grant permissions to scan your data assets. This helps improve the security of your data assets.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, the system throttles your API calls. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -515,7 +525,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom sensitive data detection rule.</para>
+        /// <para>Call CreateRule to create a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -629,7 +639,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom sensitive data detection rule.</para>
+        /// <para>Call CreateRule to create a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -743,7 +753,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom sensitive data detection rule.</para>
+        /// <para>Call CreateRule to create a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -761,7 +771,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom sensitive data detection rule.</para>
+        /// <para>Call CreateRule to create a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -779,14 +789,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.</para>
+        /// <para>You can call the CreateScanTask operation to create a custom scan task to detect sensitive data in authorized assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation creates custom scan tasks for authorized assets. You can control the run interval and runtime of each scan task.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, API calls are throttled. This may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -876,14 +886,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.</para>
+        /// <para>You can call the CreateScanTask operation to create a custom scan task to detect sensitive data in authorized assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation creates custom scan tasks for authorized assets. You can control the run interval and runtime of each scan task.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, API calls are throttled. This may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -973,14 +983,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.</para>
+        /// <para>You can call the CreateScanTask operation to create a custom scan task to detect sensitive data in authorized assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation creates custom scan tasks for authorized assets. You can control the run interval and runtime of each scan task.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, API calls are throttled. This may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -998,14 +1008,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a custom scan task. The custom scan task is used to scan data assets on which Data Security Center (DSC) is granted the scan permissions for sensitive data.</para>
+        /// <para>You can call the CreateScanTask operation to create a custom scan task to detect sensitive data in authorized assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create a custom scan task for authorized data assets. You can customize the interval between two consecutive scan tasks and the time when the scan task is executed next time.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation creates custom scan tasks for authorized assets. You can control the run interval and runtime of each scan task.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, API calls are throttled. This may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1023,14 +1033,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.</para>
+        /// <para>Call CreateSlrRole to create a service-linked role for Data Security Center (DSC). This role authorizes DSC to access your cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows DSC to access the resources of Alibaba Cloud services such as OSS, RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role. The role is named AliyunServiceRoleForSDDP, and its access policy is AliyunServiceRolePolicyForSDDP.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1084,14 +1094,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.</para>
+        /// <para>Call CreateSlrRole to create a service-linked role for Data Security Center (DSC). This role authorizes DSC to access your cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows DSC to access the resources of Alibaba Cloud services such as OSS, RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role. The role is named AliyunServiceRoleForSDDP, and its access policy is AliyunServiceRolePolicyForSDDP.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1145,14 +1155,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.</para>
+        /// <para>Call CreateSlrRole to create a service-linked role for Data Security Center (DSC). This role authorizes DSC to access your cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows DSC to access the resources of Alibaba Cloud services such as OSS, RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role. The role is named AliyunServiceRoleForSDDP, and its access policy is AliyunServiceRolePolicyForSDDP.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1170,14 +1180,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service-linked role for Data Security Center (DSC) to grant DSC the permissions to access data assets in other services.</para>
+        /// <para>Call CreateSlrRole to create a service-linked role for Data Security Center (DSC). This role authorizes DSC to access your cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to allow DSC to access the data assets in services such as Object Storage Service (OSS), ApsaraDB RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role named AliyunServiceRoleForSDDP and attaches the AliyunServiceRolePolicyForSDDP policy to the role.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation allows DSC to access the resources of Alibaba Cloud services such as OSS, RDS, and MaxCompute. After you call this operation, the system automatically creates a service-linked role. The role is named AliyunServiceRoleForSDDP, and its access policy is AliyunServiceRolePolicyForSDDP.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1195,14 +1205,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.</para>
+        /// <para>Revokes the scan authorization for a data asset, such as a database, instance, or bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to revoke authorization for data assets. This helps you manage data access permissions.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation within this limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1256,14 +1266,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.</para>
+        /// <para>Revokes the scan authorization for a data asset, such as a database, instance, or bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to revoke authorization for data assets. This helps you manage data access permissions.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation within this limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1317,14 +1327,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.</para>
+        /// <para>Revokes the scan authorization for a data asset, such as a database, instance, or bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to revoke authorization for data assets. This helps you manage data access permissions.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation within this limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1342,14 +1352,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scan permissions on a data asset. The data asset can be a database, an instance, or a bucket.</para>
+        /// <para>Revokes the scan authorization for a data asset, such as a database, instance, or bucket.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to revoke the permissions on a data asset from Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to revoke authorization for data assets. This helps you manage data access permissions.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. We recommend that you call this operation within this limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1367,7 +1377,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom sensitive data detection rule from Data Security Center (DSC).</para>
+        /// <para>Deletes a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1421,7 +1431,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom sensitive data detection rule from Data Security Center (DSC).</para>
+        /// <para>Deletes a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1475,7 +1485,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom sensitive data detection rule from Data Security Center (DSC).</para>
+        /// <para>Deletes a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1493,7 +1503,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom sensitive data detection rule from Data Security Center (DSC).</para>
+        /// <para>Deletes a custom sensitive data detection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1511,8 +1521,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计告警日志列表</para>
+        /// <para>Retrieves a list of audit alert logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAuditLogsRequest
@@ -1665,8 +1682,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计告警日志列表</para>
+        /// <para>Retrieves a list of audit alert logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAuditLogsRequest
@@ -1819,8 +1843,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计告警日志列表</para>
+        /// <para>Retrieves a list of audit alert logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAuditLogsRequest
@@ -1837,8 +1868,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审计告警日志列表</para>
+        /// <para>Retrieves a list of audit alert logs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries a list of data audit alert logs, allowing you to search for and handle alerts.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The QPS limit for a single user is 10. If you exceed this limit, the system throttles your API calls. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeAuditLogsRequest
@@ -1855,7 +1893,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the list of industry templates.</para>
+        /// <para>Lists industry-specific templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1913,7 +1951,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the list of industry templates.</para>
+        /// <para>Lists industry-specific templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1971,7 +2009,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the list of industry templates.</para>
+        /// <para>Lists industry-specific templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1989,7 +2027,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the list of industry templates.</para>
+        /// <para>Lists industry-specific templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2007,14 +2045,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries rules in a classification template by page.</para>
+        /// <para>Queries a paginated list of rules in a data classification template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query rules in a classification template.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves the rules in a data classification template to help you review the rule details.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2076,14 +2114,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries rules in a classification template by page.</para>
+        /// <para>Queries a paginated list of rules in a data classification template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query rules in a classification template.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves the rules in a data classification template to help you review the rule details.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2145,14 +2183,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries rules in a classification template by page.</para>
+        /// <para>Queries a paginated list of rules in a data classification template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query rules in a classification template.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves the rules in a data classification template to help you review the rule details.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2170,14 +2208,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries rules in a classification template by page.</para>
+        /// <para>Queries a paginated list of rules in a data classification template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query rules in a classification template.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves the rules in a data classification template to help you review the rule details.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2195,16 +2233,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.</para>
+        /// <para>You can call the DescribeColumns API to query column data in data asset tables, such as MaxCompute and RDS, that are authorized to connect to Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to view column data in sensitive data asset information tables. This helps users accurately analyze sensitive data.</para>
+        /// <h2>Notes</h2>
+        /// <para>The DescribeColumns API has been revised and replaced by DescribeColumnsV2. Use the newer DescribeColumnsV2 version when developing applications.</para>
+        /// <h2>QPS Limits</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If you exceed this limit, API calls will be rate-limited. This may affect your business. You should call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2318,16 +2356,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.</para>
+        /// <para>You can call the DescribeColumns API to query column data in data asset tables, such as MaxCompute and RDS, that are authorized to connect to Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to view column data in sensitive data asset information tables. This helps users accurately analyze sensitive data.</para>
+        /// <h2>Notes</h2>
+        /// <para>The DescribeColumns API has been revised and replaced by DescribeColumnsV2. Use the newer DescribeColumnsV2 version when developing applications.</para>
+        /// <h2>QPS Limits</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If you exceed this limit, API calls will be rate-limited. This may affect your business. You should call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2441,16 +2479,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.</para>
+        /// <para>You can call the DescribeColumns API to query column data in data asset tables, such as MaxCompute and RDS, that are authorized to connect to Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to view column data in sensitive data asset information tables. This helps users accurately analyze sensitive data.</para>
+        /// <h2>Notes</h2>
+        /// <para>The DescribeColumns API has been revised and replaced by DescribeColumnsV2. Use the newer DescribeColumnsV2 version when developing applications.</para>
+        /// <h2>QPS Limits</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If you exceed this limit, API calls will be rate-limited. This may affect your business. You should call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2468,16 +2506,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data in the columns of the tables that Data Security Center (DSC) is authorized to access. The tables include the tables of MaxCompute and ApsaraDB RDS.</para>
+        /// <para>You can call the DescribeColumns API to query column data in data asset tables, such as MaxCompute and RDS, that are authorized to connect to Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data in columns of a table that may contain sensitive data. This helps you analyze sensitive data.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeColumns operation is changed to DescribeColumnsV2. We recommend that you call the DescribeColumnsV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to view column data in sensitive data asset information tables. This helps users accurately analyze sensitive data.</para>
+        /// <h2>Notes</h2>
+        /// <para>The DescribeColumns API has been revised and replaced by DescribeColumnsV2. Use the newer DescribeColumnsV2 version when developing applications.</para>
+        /// <h2>QPS Limits</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If you exceed this limit, API calls will be rate-limited. This may affect your business. You should call the API reasonably.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2495,7 +2533,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data in columns of data assets such as MaxCompute, RDS, etc., that are authorized by the Data Security Center.</para>
+        /// <para>The DescribeColumnsV2 operation queries data in the columns of data asset tables, such as those in MaxCompute and RDS, that are authorized in Data Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2589,7 +2627,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data in columns of data assets such as MaxCompute, RDS, etc., that are authorized by the Data Security Center.</para>
+        /// <para>The DescribeColumnsV2 operation queries data in the columns of data asset tables, such as those in MaxCompute and RDS, that are authorized in Data Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2683,7 +2721,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data in columns of data assets such as MaxCompute, RDS, etc., that are authorized by the Data Security Center.</para>
+        /// <para>The DescribeColumnsV2 operation queries data in the columns of data asset tables, such as those in MaxCompute and RDS, that are authorized in Data Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2701,7 +2739,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data in columns of data assets such as MaxCompute, RDS, etc., that are authorized by the Data Security Center.</para>
+        /// <para>The DescribeColumnsV2 operation queries data in the columns of data asset tables, such as those in MaxCompute and RDS, that are authorized in Data Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2719,8 +2757,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries common configuration items for alerts.</para>
+        /// <para>Queries common configuration items for anomaly alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Queries common configuration items for anomaly alerts, which you can use to create or restore alert configurations.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The maximum number of queries per second (QPS) per user is 10. If this limit is exceeded, API calls are throttled. This may impact your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeConfigsRequest
@@ -2761,8 +2807,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries common configuration items for alerts.</para>
+        /// <para>Queries common configuration items for anomaly alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Queries common configuration items for anomaly alerts, which you can use to create or restore alert configurations.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The maximum number of queries per second (QPS) per user is 10. If this limit is exceeded, API calls are throttled. This may impact your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeConfigsRequest
@@ -2803,8 +2857,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries common configuration items for alerts.</para>
+        /// <para>Queries common configuration items for anomaly alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Queries common configuration items for anomaly alerts, which you can use to create or restore alert configurations.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The maximum number of queries per second (QPS) per user is 10. If this limit is exceeded, API calls are throttled. This may impact your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeConfigsRequest
@@ -2821,8 +2883,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries common configuration items for alerts.</para>
+        /// <para>Queries common configuration items for anomaly alerts.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Usage notes</h1>
+        /// <para>Queries common configuration items for anomaly alerts, which you can use to create or restore alert configurations.</para>
+        /// <h1>QPS limit</h1>
+        /// <para>The maximum number of queries per second (QPS) per user is 10. If this limit is exceeded, API calls are throttled. This may impact your business. Call this operation only as needed.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeConfigsRequest
@@ -2839,8 +2909,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Searches for data assets on the Overview page of Data Security Center (DSC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is typically used to query data assets of different types on the overview page of DSC.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation is deprecated and no longer maintained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataAssetsRequest
@@ -2905,8 +2984,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Searches for data assets on the Overview page of Data Security Center (DSC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is typically used to query data assets of different types on the overview page of DSC.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation is deprecated and no longer maintained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataAssetsRequest
@@ -2971,8 +3059,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Searches for data assets on the Overview page of Data Security Center (DSC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is typically used to query data assets of different types on the overview page of DSC.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation is deprecated and no longer maintained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataAssetsRequest
@@ -2989,8 +3086,17 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitive data detection results of data assets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Searches for data assets on the Overview page of Data Security Center (DSC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is typically used to query data assets of different types on the overview page of DSC.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation is deprecated and no longer maintained.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataAssetsRequest
@@ -3007,7 +3113,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves the details of an authorized data asset, such as a MaxCompute project, ApsaraDB RDS database, or OSS bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3061,7 +3167,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves the details of an authorized data asset, such as a MaxCompute project, ApsaraDB RDS database, or OSS bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3115,7 +3221,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves the details of an authorized data asset, such as a MaxCompute project, ApsaraDB RDS database, or OSS bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3133,7 +3239,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a data asset, such as a MaxCompute project, an ApsaraDB RDS database, or an Object Storage Service (OSS) bucket, that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves the details of an authorized data asset, such as a MaxCompute project, ApsaraDB RDS database, or OSS bucket.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3151,14 +3257,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
+        /// <para>Call the DescribeDataLimitSet operation to query the authorization list for unstructured assets or the list of regions supported by Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Use this operation to retrieve a list of authorized product assets. This list helps you search for and aggregate resources.</para>
+        /// <h2>Notes</h2>
+        /// <para>In the future, this operation will be used only to retrieve the list of regions that a product supports. Other features will no longer be maintained.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. API calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation a reasonable number of times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3216,14 +3324,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
+        /// <para>Call the DescribeDataLimitSet operation to query the authorization list for unstructured assets or the list of regions supported by Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Use this operation to retrieve a list of authorized product assets. This list helps you search for and aggregate resources.</para>
+        /// <h2>Notes</h2>
+        /// <para>In the future, this operation will be used only to retrieve the list of regions that a product supports. Other features will no longer be maintained.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. API calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation a reasonable number of times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3281,14 +3391,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
+        /// <para>Call the DescribeDataLimitSet operation to query the authorization list for unstructured assets or the list of regions supported by Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Use this operation to retrieve a list of authorized product assets. This list helps you search for and aggregate resources.</para>
+        /// <h2>Notes</h2>
+        /// <para>In the future, this operation will be used only to retrieve the list of regions that a product supports. Other features will no longer be maintained.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. API calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation a reasonable number of times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3306,14 +3418,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries assets that Data Security Center (DSC) is authorized to scan, or the regions that DSC supports.</para>
+        /// <para>Call the DescribeDataLimitSet operation to query the authorization list for unstructured assets or the list of regions supported by Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the data assets that are authorized to be scanned. This facilitates resource search and aggregation.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Use this operation to retrieve a list of authorized product assets. This list helps you search for and aggregate resources.</para>
+        /// <h2>Notes</h2>
+        /// <para>In the future, this operation will be used only to retrieve the list of regions that a product supports. Other features will no longer be maintained.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. API calls that exceed this limit are throttled. Throttling can affect your business. We recommend that you call this operation a reasonable number of times.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3331,7 +3445,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries the list of data assets for authorized instances, databases, and buckets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3429,7 +3543,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries the list of data assets for authorized instances, databases, and buckets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3527,7 +3641,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries the list of data assets for authorized instances, databases, and buckets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3545,7 +3659,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data assets such as instances, databases, or buckets that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries the list of data assets for authorized instances, databases, and buckets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3563,14 +3677,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution information about a de-identification task.</para>
+        /// <para>You can call DescribeDataMaskingRunHistory to query the execution history of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the execution information of a static de-identification task, including the status and progress.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves the execution history of static data masking tasks. You can use it to search for task statuses and view task progress.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. Calls that exceed this limit are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3652,14 +3766,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution information about a de-identification task.</para>
+        /// <para>You can call DescribeDataMaskingRunHistory to query the execution history of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the execution information of a static de-identification task, including the status and progress.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves the execution history of static data masking tasks. You can use it to search for task statuses and view task progress.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. Calls that exceed this limit are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3741,14 +3855,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution information about a de-identification task.</para>
+        /// <para>You can call DescribeDataMaskingRunHistory to query the execution history of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the execution information of a static de-identification task, including the status and progress.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves the execution history of static data masking tasks. You can use it to search for task statuses and view task progress.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. Calls that exceed this limit are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3766,14 +3880,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution information about a de-identification task.</para>
+        /// <para>You can call DescribeDataMaskingRunHistory to query the execution history of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the execution information of a static de-identification task, including the status and progress.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves the execution history of static data masking tasks. You can use it to search for task statuses and view task progress.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user on this operation is 10 calls per second. Calls that exceed this limit are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3791,14 +3905,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries de-identification tasks.</para>
+        /// <para>Call DescribeDataMaskingTasks to retrieve a list of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query static de-identification tasks. This facilitates task queries and management.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves a list of static data masking tasks, which you can then search and manage.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3864,14 +3978,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries de-identification tasks.</para>
+        /// <para>Call DescribeDataMaskingTasks to retrieve a list of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query static de-identification tasks. This facilitates task queries and management.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves a list of static data masking tasks, which you can then search and manage.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3937,14 +4051,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries de-identification tasks.</para>
+        /// <para>Call DescribeDataMaskingTasks to retrieve a list of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query static de-identification tasks. This facilitates task queries and management.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves a list of static data masking tasks, which you can then search and manage.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3962,14 +4076,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries de-identification tasks.</para>
+        /// <para>Call DescribeDataMaskingTasks to retrieve a list of data masking tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query static de-identification tasks. This facilitates task queries and management.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation retrieves a list of static data masking tasks, which you can then search and manage.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3987,13 +4101,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data object column details</para>
+        /// <para>Queries the detection results for columns in a data table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Notes</h2>
-        /// <para>The DescribeDataObjectColumnDetail interface has been revised to DescribeDataObjectColumnDetailV2. It is recommended that you use the newer version, DescribeDataObjectColumnDetailV2, when developing your application.</para>
+        /// <para>The DescribeDataObjectColumnDetail operation has been updated to DescribeDataObjectColumnDetailV2. We recommend that you use the latest version, DescribeDataObjectColumnDetailV2, for application development.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4059,13 +4173,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data object column details</para>
+        /// <para>Queries the detection results for columns in a data table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Notes</h2>
-        /// <para>The DescribeDataObjectColumnDetail interface has been revised to DescribeDataObjectColumnDetailV2. It is recommended that you use the newer version, DescribeDataObjectColumnDetailV2, when developing your application.</para>
+        /// <para>The DescribeDataObjectColumnDetail operation has been updated to DescribeDataObjectColumnDetailV2. We recommend that you use the latest version, DescribeDataObjectColumnDetailV2, for application development.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4131,13 +4245,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data object column details</para>
+        /// <para>Queries the detection results for columns in a data table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Notes</h2>
-        /// <para>The DescribeDataObjectColumnDetail interface has been revised to DescribeDataObjectColumnDetailV2. It is recommended that you use the newer version, DescribeDataObjectColumnDetailV2, when developing your application.</para>
+        /// <para>The DescribeDataObjectColumnDetail operation has been updated to DescribeDataObjectColumnDetailV2. We recommend that you use the latest version, DescribeDataObjectColumnDetailV2, for application development.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4155,13 +4269,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View data object column details</para>
+        /// <para>Queries the detection results for columns in a data table.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Notes</h2>
-        /// <para>The DescribeDataObjectColumnDetail interface has been revised to DescribeDataObjectColumnDetailV2. It is recommended that you use the newer version, DescribeDataObjectColumnDetailV2, when developing your application.</para>
+        /// <para>The DescribeDataObjectColumnDetail operation has been updated to DescribeDataObjectColumnDetailV2. We recommend that you use the latest version, DescribeDataObjectColumnDetailV2, for application development.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4179,7 +4293,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Data Object Column Details V2</para>
+        /// <para>Queries the detection results for the columns of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4245,7 +4359,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Data Object Column Details V2</para>
+        /// <para>Queries the detection results for the columns of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4311,7 +4425,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Data Object Column Details V2</para>
+        /// <para>Queries the detection results for the columns of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4329,7 +4443,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Data Object Column Details V2</para>
+        /// <para>Queries the detection results for the columns of a data table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4347,8 +4461,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginated Query of Data Catalog Objects</para>
+        /// <para>Query data detection results for tables and files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataObjectsRequest
@@ -4505,8 +4626,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginated Query of Data Catalog Objects</para>
+        /// <para>Query data detection results for tables and files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataObjectsRequest
@@ -4663,8 +4791,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginated Query of Data Catalog Objects</para>
+        /// <para>Query data detection results for tables and files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataObjectsRequest
@@ -4681,8 +4816,15 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paginated Query of Data Catalog Objects</para>
+        /// <para>Query data detection results for tables and files.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries data detection results for tables and files, to provide a comprehensive view across all your assets.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The per-user QPS limit for this operation is 10 requests per second. If you exceed this limit, the system throttles your API calls. To prevent business disruptions, call this operation only when necessary.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDataObjectsRequest
@@ -4699,7 +4841,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of OSS object types that can be identified.</para>
+        /// <para>Queries a list of file types supported by Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4741,7 +4883,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of OSS object types that can be identified.</para>
+        /// <para>Queries a list of file types supported by Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4783,7 +4925,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of OSS object types that can be identified.</para>
+        /// <para>Queries a list of file types supported by Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4801,7 +4943,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of OSS object types that can be identified.</para>
+        /// <para>Queries a list of file types supported by Object Storage Service (OSS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4819,7 +4961,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.</para>
+        /// <para>Retrieves the details of an anomalous event, including its occurrence time, description, and handling status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4865,7 +5007,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.</para>
+        /// <para>Retrieves the details of an anomalous event, including its occurrence time, description, and handling status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4911,7 +5053,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.</para>
+        /// <para>Retrieves the details of an anomalous event, including its occurrence time, description, and handling status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4929,7 +5071,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an anomalous event. The details include the time when the anomalous event occurred, and the description and handling status of the anomalous event.</para>
+        /// <para>Retrieves the details of an anomalous event, including its occurrence time, description, and handling status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4947,7 +5089,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of anomalous events.</para>
+        /// <para>Queries anomalous activity types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5005,7 +5147,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of anomalous events.</para>
+        /// <para>Queries anomalous activity types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5063,7 +5205,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of anomalous events.</para>
+        /// <para>Queries anomalous activity types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5081,7 +5223,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of anomalous events.</para>
+        /// <para>Queries anomalous activity types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5099,14 +5241,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries anomalous events.</para>
+        /// <para>Lists anomalous events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation queries alerts for data breach risks to help you find and handle them.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, your API calls are throttled. This may affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5208,14 +5350,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries anomalous events.</para>
+        /// <para>Lists anomalous events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation queries alerts for data breach risks to help you find and handle them.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, your API calls are throttled. This may affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5317,14 +5459,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries anomalous events.</para>
+        /// <para>Lists anomalous events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation queries alerts for data breach risks to help you find and handle them.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, your API calls are throttled. This may affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5342,14 +5484,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries anomalous events.</para>
+        /// <para>Lists anomalous events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query anomalous events that may involve data leaks. This helps you search for and handle anomalous events.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation queries alerts for data breach risks to help you find and handle them.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, your API calls are throttled. This may affect your business. Plan your API calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5367,13 +5509,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of an identification task</para>
+        /// <para>Retrieves the completion status of a detection task based on the task ID. You can obtain the task ID from the Id field in the return value of a CreateScanTask or ScanOssObjectV1 API call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS Limit</h2>
-        /// <para>The QPS limit for this interface per user is 10 times/second. Exceeding the limit will result in API calls being rate-limited, which may affect your business. Please call it reasonably.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5411,13 +5553,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of an identification task</para>
+        /// <para>Retrieves the completion status of a detection task based on the task ID. You can obtain the task ID from the Id field in the return value of a CreateScanTask or ScanOssObjectV1 API call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS Limit</h2>
-        /// <para>The QPS limit for this interface per user is 10 times/second. Exceeding the limit will result in API calls being rate-limited, which may affect your business. Please call it reasonably.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5455,13 +5597,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of an identification task</para>
+        /// <para>Retrieves the completion status of a detection task based on the task ID. You can obtain the task ID from the Id field in the return value of a CreateScanTask or ScanOssObjectV1 API call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS Limit</h2>
-        /// <para>The QPS limit for this interface per user is 10 times/second. Exceeding the limit will result in API calls being rate-limited, which may affect your business. Please call it reasonably.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5479,13 +5621,13 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of an identification task</para>
+        /// <para>Retrieves the completion status of a detection task based on the task ID. You can obtain the task ID from the Id field in the return value of a CreateScanTask or ScanOssObjectV1 API call.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>QPS Limit</h2>
-        /// <para>The QPS limit for this interface per user is 10 times/second. Exceeding the limit will result in API calls being rate-limited, which may affect your business. Please call it reasonably.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 for each user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5508,8 +5650,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-        /// This operation is no longer used for the KMS console of the new version.</para>
+        /// <para>Queries the list of authorized or unauthorized data assets based on the AuthStatus parameter to help you understand the authorization status of your data assets.
+        /// This operation is no longer used in the new console.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>Each user can call this operation up to 10 times per second. If this limit is exceeded, API calls are throttled, which may affect your business.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5604,8 +5748,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-        /// This operation is no longer used for the KMS console of the new version.</para>
+        /// <para>Queries the list of authorized or unauthorized data assets based on the AuthStatus parameter to help you understand the authorization status of your data assets.
+        /// This operation is no longer used in the new console.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>Each user can call this operation up to 10 times per second. If this limit is exceeded, API calls are throttled, which may affect your business.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5700,8 +5846,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-        /// This operation is no longer used for the KMS console of the new version.</para>
+        /// <para>Queries the list of authorized or unauthorized data assets based on the AuthStatus parameter to help you understand the authorization status of your data assets.
+        /// This operation is no longer used in the new console.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>Each user can call this operation up to 10 times per second. If this limit is exceeded, API calls are throttled, which may affect your business.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5724,8 +5872,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query a list of unauthorized or authorized data assets based on the value of AuthStatus.
-        /// This operation is no longer used for the KMS console of the new version.</para>
+        /// <para>Queries the list of authorized or unauthorized data assets based on the AuthStatus parameter to help you understand the authorization status of your data assets.
+        /// This operation is no longer used in the new console.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>Each user can call this operation up to 10 times per second. If this limit is exceeded, API calls are throttled, which may affect your business.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5743,14 +5893,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves a list of authorized MaxCompute, RDS, and OSS data asset instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>When you call the DescribeInstances operation, you can set parameters such as search keywords and the threat level of data asset instances to retrieve a list of instances that meet your requirements.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user for this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5828,14 +5978,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves a list of authorized MaxCompute, RDS, and OSS data asset instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>When you call the DescribeInstances operation, you can set parameters such as search keywords and the threat level of data asset instances to retrieve a list of instances that meet your requirements.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user for this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5913,14 +6063,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves a list of authorized MaxCompute, RDS, and OSS data asset instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>When you call the DescribeInstances operation, you can set parameters such as search keywords and the threat level of data asset instances to retrieve a list of instances that meet your requirements.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user for this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5938,14 +6088,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data assets such as MaxCompute, ApsaraDB RDS, and Object Storage Service (OSS) that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Retrieves a list of authorized MaxCompute, RDS, and OSS data asset instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeInstances operation, you can specify parameters such as Name and RiskLevelId to query data assets that meet filter conditions.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>When you call the DescribeInstances operation, you can set parameters such as search keywords and the threat level of data asset instances to retrieve a list of instances that meet your requirements.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user for this operation is 10 calls per second. If you exceed this limit, API calls are throttled. This can affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5963,16 +6113,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to query the details of OSS objects. This information helps you accurately locate sensitive data assets in OSS.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>The DescribeOssObjectDetail operation has been updated to DescribeOssObjectDetailV2. We recommend that you use the new version, DescribeOssObjectDetailV2, when you develop applications.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>A single user can make up to 10 queries per second (QPS). If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6018,16 +6168,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to query the details of OSS objects. This information helps you accurately locate sensitive data assets in OSS.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>The DescribeOssObjectDetail operation has been updated to DescribeOssObjectDetailV2. We recommend that you use the new version, DescribeOssObjectDetailV2, when you develop applications.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>A single user can make up to 10 queries per second (QPS). If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6073,16 +6223,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to query the details of OSS objects. This information helps you accurately locate sensitive data assets in OSS.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>The DescribeOssObjectDetail operation has been updated to DescribeOssObjectDetailV2. We recommend that you use the new version, DescribeOssObjectDetailV2, when you develop applications.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>A single user can make up to 10 queries per second (QPS). If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6100,16 +6250,16 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Object Storage Service (OSS) object that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of an Object Storage Service (OSS) object. This helps you locate sensitive data detected in OSS.</para>
-        /// <h2><a href="#"></a>Precautions</h2>
-        /// <para>The DescribeOssObjectDetail operation is chagned to DescribeOssObjectDetailV2. We recommend that you call the DescribeOssObjectDetailV2 operation when you develop your applications.</para>
-        /// <h2><a href="#qps"></a>Limits</h2>
-        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation is typically used to query the details of OSS objects. This information helps you accurately locate sensitive data assets in OSS.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>The DescribeOssObjectDetail operation has been updated to DescribeOssObjectDetailV2. We recommend that you use the new version, DescribeOssObjectDetailV2, when you develop applications.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>A single user can make up to 10 queries per second (QPS). If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6127,12 +6277,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the details of a single storage object in OSS that is authorized by the Data Security Center.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is generally used to query the detailed information of OSS storage objects, which facilitates the accurate positioning of sensitive OSS assets.</para>
+        /// <para>This operation queries the details of OSS objects. You can use this operation to locate sensitive data assets in OSS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6194,12 +6344,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the details of a single storage object in OSS that is authorized by the Data Security Center.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is generally used to query the detailed information of OSS storage objects, which facilitates the accurate positioning of sensitive OSS assets.</para>
+        /// <para>This operation queries the details of OSS objects. You can use this operation to locate sensitive data assets in OSS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6261,12 +6411,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the details of a single storage object in OSS that is authorized by the Data Security Center.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is generally used to query the detailed information of OSS storage objects, which facilitates the accurate positioning of sensitive OSS assets.</para>
+        /// <para>This operation queries the details of OSS objects. You can use this operation to locate sensitive data assets in OSS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6284,12 +6434,12 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query the details of a single storage object in OSS that is authorized by the Data Security Center.</para>
+        /// <para>Obtains detailed information about an authorized OSS object in Data Security Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is generally used to query the detailed information of OSS storage objects, which facilitates the accurate positioning of sensitive OSS assets.</para>
+        /// <para>This operation queries the details of OSS objects. You can use this operation to locate sensitive data assets in OSS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6307,7 +6457,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Lists authorized OSS objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6397,7 +6547,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Lists authorized OSS objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6487,7 +6637,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Lists authorized OSS objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6505,7 +6655,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries Object Storage Service (OSS) objects that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>Lists authorized OSS objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6523,14 +6673,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.</para>
+        /// <para>Retrieves information about MaxCompute packages authorized for scanning, including package names, owner accounts, and risk levels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to query a list of MaxCompute packages. This helps you search for packages and obtain an overview of sensitive information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled. This can affect your business. Make sure to call this API within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6600,14 +6750,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.</para>
+        /// <para>Retrieves information about MaxCompute packages authorized for scanning, including package names, owner accounts, and risk levels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to query a list of MaxCompute packages. This helps you search for packages and obtain an overview of sensitive information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled. This can affect your business. Make sure to call this API within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6677,14 +6827,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.</para>
+        /// <para>Retrieves information about MaxCompute packages authorized for scanning, including package names, owner accounts, and risk levels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to query a list of MaxCompute packages. This helps you search for packages and obtain an overview of sensitive information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled. This can affect your business. Make sure to call this API within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6702,14 +6852,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the MaxCompute packages that Data Security Center (DSC) is authorized to access. The information includes the names of MaxCompute packages, the accounts of MaxCompute package owners, and the sensitivity levels of MaxCompute packages.</para>
+        /// <para>Retrieves information about MaxCompute packages authorized for scanning, including package names, owner accounts, and risk levels.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query MaxCompute packages that are scanned by DSC. This helps you search for MaxCompute packages and view the summary of MaxCompute packages.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API is typically used to query a list of MaxCompute packages. This helps you search for packages and obtain an overview of sensitive information.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, your API calls are throttled. This can affect your business. Make sure to call this API within the limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6727,7 +6877,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of first-level authorizations.</para>
+        /// <para>Lists assets and their authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6813,7 +6963,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of first-level authorizations.</para>
+        /// <para>Lists assets and their authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6899,7 +7049,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of first-level authorizations.</para>
+        /// <para>Lists assets and their authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6917,7 +7067,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the list of first-level authorizations.</para>
+        /// <para>Lists assets and their authorization status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6935,14 +7085,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).</para>
+        /// <para>Call the DescribeRiskLevels operation to retrieve a list of risk levels for sensitive data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can use this operation to retrieve a list of risk levels for sensitive data that are defined in the current template. This lets you view the number of rules that reference each risk level and the maximum risk level in the template.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, your API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6992,14 +7142,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).</para>
+        /// <para>Call the DescribeRiskLevels operation to retrieve a list of risk levels for sensitive data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can use this operation to retrieve a list of risk levels for sensitive data that are defined in the current template. This lets you view the number of rules that reference each risk level and the maximum risk level in the template.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, your API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7049,14 +7199,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).</para>
+        /// <para>Call the DescribeRiskLevels operation to retrieve a list of risk levels for sensitive data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can use this operation to retrieve a list of risk levels for sensitive data that are defined in the current template. This lets you view the number of rules that reference each risk level and the maximum risk level in the template.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, your API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7074,14 +7224,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the sensitivity levels that are defined in a rule template provided by Data Security Center (DSC).</para>
+        /// <para>Call the DescribeRiskLevels operation to retrieve a list of risk levels for sensitive data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the sensitivity levels that are defined in the current rule template provided by DSC. This helps you learn about the number of times that each sensitivity level is referenced in the rule template and the highest sensitivity level.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You can use this operation to retrieve a list of risk levels for sensitive data that are defined in the current template. This lets you view the number of rules that reference each risk level and the maximum risk level in the template.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If you exceed this limit, your API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7099,7 +7249,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sensitive data detection rules.</para>
+        /// <para>Queries a list of sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7217,7 +7367,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sensitive data detection rules.</para>
+        /// <para>Queries a list of sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7335,7 +7485,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sensitive data detection rules.</para>
+        /// <para>Queries a list of sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7353,7 +7503,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sensitive data detection rules.</para>
+        /// <para>Queries a list of sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7371,14 +7521,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries tables in data assets, such as MaxCompute and RDS, that Data Security Center is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.</para>
+        /// <para>You can call the DescribeTables operation to retrieve information about specific data asset tables. You can specify parameters such as search keywords and risk levels.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If you exceed this limit, throttling is triggered, which may affect your business. We recommend that you call this operation at a sustainable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7464,14 +7614,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries tables in data assets, such as MaxCompute and RDS, that Data Security Center is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.</para>
+        /// <para>You can call the DescribeTables operation to retrieve information about specific data asset tables. You can specify parameters such as search keywords and risk levels.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If you exceed this limit, throttling is triggered, which may affect your business. We recommend that you call this operation at a sustainable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7557,14 +7707,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries tables in data assets, such as MaxCompute and RDS, that Data Security Center is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.</para>
+        /// <para>You can call the DescribeTables operation to retrieve information about specific data asset tables. You can specify parameters such as search keywords and risk levels.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If you exceed this limit, throttling is triggered, which may affect your business. We recommend that you call this operation at a sustainable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7582,14 +7732,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tables in data assets such as MaxCompute projects and ApsaraDB RDS instances that Data Security Center (DSC) is authorized to access.</para>
+        /// <para>Queries tables in data assets, such as MaxCompute and RDS, that Data Security Center is authorized to access.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call the DescribeTables operation to query tables, you can specify parameters such as Name and RiskLevelId to filter tables.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can send up to 10 requests per second to call this operation by using your Alibaba Cloud account. If you send excessive requests, throttling is implemented, and your business may be affected.</para>
+        /// <para>You can call the DescribeTables operation to retrieve information about specific data asset tables. You can specify parameters such as search keywords and risk levels.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>Each Alibaba Cloud account can call this operation up to 10 times per second. If you exceed this limit, throttling is triggered, which may affect your business. We recommend that you call this operation at a sustainable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7607,7 +7757,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query all models list of industry templates.</para>
+        /// <para>Lists all rules in an industry-specific template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7657,7 +7807,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query all models list of industry templates.</para>
+        /// <para>Lists all rules in an industry-specific template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7707,7 +7857,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query all models list of industry templates.</para>
+        /// <para>Lists all rules in an industry-specific template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7725,7 +7875,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call this interface to query all models list of industry templates.</para>
+        /// <para>Lists all rules in an industry-specific template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7743,14 +7893,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an account.</para>
+        /// <para>Queries the status of a user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves information about the current account, such as your usage of Data Security Center (DSC).</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7796,14 +7946,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an account.</para>
+        /// <para>Queries the status of a user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves information about the current account, such as your usage of Data Security Center (DSC).</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7849,14 +7999,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an account.</para>
+        /// <para>Queries the status of a user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves information about the current account, such as your usage of Data Security Center (DSC).</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7874,14 +8024,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an account.</para>
+        /// <para>Queries the status of a user account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the information about the current account. This helps you get familiar with your account that accesses Data Security Center (DSC).</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Retrieves information about the current account, such as your usage of Data Security Center (DSC).</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed this limit, API calls are throttled. This may affect your business. Call this operation at a reasonable frequency.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7899,14 +8049,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.</para>
+        /// <para>You can call the DisableUserConfig operation to disable a user configuration. After a configuration is disabled, you can call the CreateConfig operation and specify the same Code parameter to restore the general anomaly alert configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation disables a user configuration based on the code of a configuration item in the general anomaly alert configuration module. This lets you promptly change the status of the user configuration.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7956,14 +8106,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.</para>
+        /// <para>You can call the DisableUserConfig operation to disable a user configuration. After a configuration is disabled, you can call the CreateConfig operation and specify the same Code parameter to restore the general anomaly alert configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation disables a user configuration based on the code of a configuration item in the general anomaly alert configuration module. This lets you promptly change the status of the user configuration.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8013,14 +8163,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.</para>
+        /// <para>You can call the DisableUserConfig operation to disable a user configuration. After a configuration is disabled, you can call the CreateConfig operation and specify the same Code parameter to restore the general anomaly alert configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation disables a user configuration based on the code of a configuration item in the general anomaly alert configuration module. This lets you promptly change the status of the user configuration.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8038,14 +8188,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables a configuration item. After you disable a configuration item, you can call the CreateConfig operation to enable the configuration item by specifying the code of the configuration item for the Code parameter in the request.</para>
+        /// <para>You can call the DisableUserConfig operation to disable a user configuration. After a configuration is disabled, you can call the CreateConfig operation and specify the same Code parameter to restore the general anomaly alert configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to disable a configuration item based on the code of the configuration item. This helps you modify configurations at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation disables a user configuration based on the code of a configuration item in the general anomaly alert configuration module. This lets you promptly change the status of the user configuration.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This operation is limited to 10 queries per second (QPS) per user. Calls that exceed this limit are throttled. Throttling may impact your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8063,7 +8213,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dynamically de-identifies sensitive data.</para>
+        /// <para>You can call the ExecDatamask operation to dynamically mask data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8117,7 +8267,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dynamically de-identifies sensitive data.</para>
+        /// <para>You can call the ExecDatamask operation to dynamically mask data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8171,7 +8321,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dynamically de-identifies sensitive data.</para>
+        /// <para>You can call the ExecDatamask operation to dynamically mask data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8189,7 +8339,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dynamically de-identifies sensitive data.</para>
+        /// <para>You can call the ExecDatamask operation to dynamically mask data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8207,7 +8357,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a de-identification task.</para>
+        /// <para>Triggers a data masking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8253,7 +8403,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a de-identification task.</para>
+        /// <para>Triggers a data masking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8299,7 +8449,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a de-identification task.</para>
+        /// <para>Triggers a data masking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8317,7 +8467,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a de-identification task.</para>
+        /// <para>Triggers a data masking task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8335,8 +8485,20 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OSS图片脱敏</para>
+        /// <para>Use the MaskOssImage operation to mask images stored as objects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Prerequisites</em>*
+        /// To use this operation, you must have an image masking quota. Each call deducts one unit from your quota.
+        /// <b>QPS limit</b>
+        /// The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled, which can affect your business. To prevent service disruptions, operate within this limit.
+        /// <b>Usage notes</b>
+        /// After masking is complete, the system stores the masked image in the aliyun_dsc_desensitization folder within the source bucket.
+        /// For example, an image at exampledir/test.png in a bucket is saved as aliyun_dsc_desensitization/exampledir/test.png after masking.
+        /// For more information, see https\://help.aliyun.com/zh/dsc/data-security-center/user-guide/picture-desensitization</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MaskOssImageRequest
@@ -8359,6 +8521,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAlwaysUpload))
             {
                 query["IsAlwaysUpload"] = request.IsAlwaysUpload;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCoverObject))
+            {
+                query["IsCoverObject"] = request.IsCoverObject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSupportRestore))
             {
@@ -8401,8 +8567,20 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OSS图片脱敏</para>
+        /// <para>Use the MaskOssImage operation to mask images stored as objects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Prerequisites</em>*
+        /// To use this operation, you must have an image masking quota. Each call deducts one unit from your quota.
+        /// <b>QPS limit</b>
+        /// The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled, which can affect your business. To prevent service disruptions, operate within this limit.
+        /// <b>Usage notes</b>
+        /// After masking is complete, the system stores the masked image in the aliyun_dsc_desensitization folder within the source bucket.
+        /// For example, an image at exampledir/test.png in a bucket is saved as aliyun_dsc_desensitization/exampledir/test.png after masking.
+        /// For more information, see https\://help.aliyun.com/zh/dsc/data-security-center/user-guide/picture-desensitization</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MaskOssImageRequest
@@ -8425,6 +8603,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAlwaysUpload))
             {
                 query["IsAlwaysUpload"] = request.IsAlwaysUpload;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsCoverObject))
+            {
+                query["IsCoverObject"] = request.IsCoverObject;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSupportRestore))
             {
@@ -8467,8 +8649,20 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OSS图片脱敏</para>
+        /// <para>Use the MaskOssImage operation to mask images stored as objects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Prerequisites</em>*
+        /// To use this operation, you must have an image masking quota. Each call deducts one unit from your quota.
+        /// <b>QPS limit</b>
+        /// The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled, which can affect your business. To prevent service disruptions, operate within this limit.
+        /// <b>Usage notes</b>
+        /// After masking is complete, the system stores the masked image in the aliyun_dsc_desensitization folder within the source bucket.
+        /// For example, an image at exampledir/test.png in a bucket is saved as aliyun_dsc_desensitization/exampledir/test.png after masking.
+        /// For more information, see https\://help.aliyun.com/zh/dsc/data-security-center/user-guide/picture-desensitization</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MaskOssImageRequest
@@ -8485,8 +8679,20 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OSS图片脱敏</para>
+        /// <para>Use the MaskOssImage operation to mask images stored as objects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Prerequisites</em>*
+        /// To use this operation, you must have an image masking quota. Each call deducts one unit from your quota.
+        /// <b>QPS limit</b>
+        /// The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled, which can affect your business. To prevent service disruptions, operate within this limit.
+        /// <b>Usage notes</b>
+        /// After masking is complete, the system stores the masked image in the aliyun_dsc_desensitization folder within the source bucket.
+        /// For example, an image at exampledir/test.png in a bucket is saved as aliyun_dsc_desensitization/exampledir/test.png after masking.
+        /// For more information, see https\://help.aliyun.com/zh/dsc/data-security-center/user-guide/picture-desensitization</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MaskOssImageRequest
@@ -8503,7 +8709,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>You can call ModifyDataLimit to modify the configuration items of a connection authorization in Data Security Center (DSC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8609,7 +8815,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>You can call ModifyDataLimit to modify the configuration items of a connection authorization in Data Security Center (DSC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8715,7 +8921,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>You can call ModifyDataLimit to modify the configuration items of a connection authorization in Data Security Center (DSC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8733,7 +8939,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies configuration items for a data asset that you authorize Data Security Center (DSC) to access.</para>
+        /// <para>You can call ModifyDataLimit to modify the configuration items of a connection authorization in Data Security Center (DSC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8751,14 +8957,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.</para>
+        /// <para>Modifies the rules that define threat levels for sensitive data. This includes the default threat level for unidentified data and the threat levels for data that is classified as sensitive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API modifies the rules that define threat levels for sensitive data to help with threat level planning.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. Throttling can impact your business. We recommend that you call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8808,14 +9014,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.</para>
+        /// <para>Modifies the rules that define threat levels for sensitive data. This includes the default threat level for unidentified data and the threat levels for data that is classified as sensitive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API modifies the rules that define threat levels for sensitive data to help with threat level planning.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. Throttling can impact your business. We recommend that you call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8865,14 +9071,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.</para>
+        /// <para>Modifies the rules that define threat levels for sensitive data. This includes the default threat level for unidentified data and the threat levels for data that is classified as sensitive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API modifies the rules that define threat levels for sensitive data to help with threat level planning.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. Throttling can impact your business. We recommend that you call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8890,14 +9096,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the sensitivity levels of sensitive data. You can change the default sensitivity levels of data that cannot be classified as sensitive or insensitive, and the sensitivity levels of data that can be classified as sensitive.</para>
+        /// <para>Modifies the rules that define threat levels for sensitive data. This includes the default threat level for unidentified data and the threat levels for data that is classified as sensitive.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to modify the sensitivity levels of data. This helps you manage the sensitivity levels.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API modifies the rules that define threat levels for sensitive data to help with threat level planning.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. Throttling can impact your business. We recommend that you call this API at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8915,14 +9121,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an anomalous event.</para>
+        /// <para>Handles anomalous activities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation is typically used to handle alerts for data breach threats, helping you protect your data assets promptly.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This API operation has a queries per second (QPS) limit of 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. We recommend calling the API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8980,14 +9186,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an anomalous event.</para>
+        /// <para>Handles anomalous activities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation is typically used to handle alerts for data breach threats, helping you protect your data assets promptly.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This API operation has a queries per second (QPS) limit of 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. We recommend calling the API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9045,14 +9251,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an anomalous event.</para>
+        /// <para>Handles anomalous activities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation is typically used to handle alerts for data breach threats, helping you protect your data assets promptly.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This API operation has a queries per second (QPS) limit of 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. We recommend calling the API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9070,14 +9276,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles an anomalous event.</para>
+        /// <para>Handles anomalous activities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to handle anomalous events that involve data leaks. This helps protect your data assets at the earliest opportunity.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This API operation is typically used to handle alerts for data breach threats, helping you protect your data assets promptly.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>This API operation has a queries per second (QPS) limit of 10 for each user. If you exceed the limit, API calls are throttled, which can affect your business. We recommend calling the API operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9095,7 +9301,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the detection of anomalous events of subtypes.</para>
+        /// <para>This operation enables anomalous activity detection for subtypes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9145,7 +9351,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the detection of anomalous events of subtypes.</para>
+        /// <para>This operation enables anomalous activity detection for subtypes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9195,7 +9401,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the detection of anomalous events of subtypes.</para>
+        /// <para>This operation enables anomalous activity detection for subtypes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9213,7 +9419,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the detection of anomalous events of subtypes.</para>
+        /// <para>This operation enables anomalous activity detection for subtypes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9231,14 +9437,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the report task.</para>
+        /// <para>You can call the ModifyReportTaskStatus operation to enable or disable report tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>After you activate Data Security Center (DSC), report tasks are enabled by default. If you disable report tasks, Report Center, Cloud-native Data Audit Overview, and Data Security Lab will not generate new statistical data. Existing data is not affected.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9288,14 +9494,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the report task.</para>
+        /// <para>You can call the ModifyReportTaskStatus operation to enable or disable report tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>After you activate Data Security Center (DSC), report tasks are enabled by default. If you disable report tasks, Report Center, Cloud-native Data Audit Overview, and Data Security Lab will not generate new statistical data. Existing data is not affected.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9345,14 +9551,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the report task.</para>
+        /// <para>You can call the ModifyReportTaskStatus operation to enable or disable report tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>After you activate Data Security Center (DSC), report tasks are enabled by default. If you disable report tasks, Report Center, Cloud-native Data Audit Overview, and Data Security Lab will not generate new statistical data. Existing data is not affected.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9370,14 +9576,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the report task.</para>
+        /// <para>You can call the ModifyReportTaskStatus operation to enable or disable report tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to enable or disable the report task. After you activate Data Security Center (DSC), the report task is enabled by default. After you disable the report task, you cannot view statistics that are newly generated in the Report Center module, on the Overview page of the Cloud Native Data Audit module, and in the Data security lab module. Existing statistics are not affected.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>After you activate Data Security Center (DSC), report tasks are enabled by default. If you disable report tasks, Report Center, Cloud-native Data Audit Overview, and Data Security Lab will not generate new statistical data. Existing data is not affected.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled, which may affect your business. We recommend that you call this operation at a reasonable rate.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9400,9 +9606,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You must specify the rule name, rule ID, and rule content.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If the limit is exceeded, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9501,9 +9707,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You must specify the rule name, rule ID, and rule content.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If the limit is exceeded, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9602,9 +9808,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You must specify the rule name, rule ID, and rule content.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If the limit is exceeded, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9627,9 +9833,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, you must configure request parameters to specify the rule name, rule ID, and rule content.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>You must specify the rule name, rule ID, and rule content.</para>
+        /// <h2>QPS limits</h2>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for a single user. If the limit is exceeded, API calls are throttled. This may affect your business. Plan your calls accordingly.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9647,7 +9853,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a sensitive data detection rule.</para>
+        /// <para>Enables or disables sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9701,7 +9907,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a sensitive data detection rule.</para>
+        /// <para>Enables or disables sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9755,7 +9961,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a sensitive data detection rule.</para>
+        /// <para>Enables or disables sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9773,7 +9979,7 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a sensitive data detection rule.</para>
+        /// <para>Enables or disables sensitive data detection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9791,8 +9997,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片复原</para>
+        /// <para>You can call the RestoreOssImage operation to restore desensitized images.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use RestoreOssImage to retrieve the original images that were processed by the MaskOssImage operation if the IsAlwaysUpload parameter is set to <c>true</c>.
+        /// For example, the image <c>aliyun_dsc_desensitization/exampledir/test.png</c> in a bucket is restored and saved as <c>aliyun_dsc_original/exampledir/test.png</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestoreOssImageRequest
@@ -9849,8 +10061,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片复原</para>
+        /// <para>You can call the RestoreOssImage operation to restore desensitized images.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use RestoreOssImage to retrieve the original images that were processed by the MaskOssImage operation if the IsAlwaysUpload parameter is set to <c>true</c>.
+        /// For example, the image <c>aliyun_dsc_desensitization/exampledir/test.png</c> in a bucket is restored and saved as <c>aliyun_dsc_original/exampledir/test.png</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestoreOssImageRequest
@@ -9907,8 +10125,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片复原</para>
+        /// <para>You can call the RestoreOssImage operation to restore desensitized images.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use RestoreOssImage to retrieve the original images that were processed by the MaskOssImage operation if the IsAlwaysUpload parameter is set to <c>true</c>.
+        /// For example, the image <c>aliyun_dsc_desensitization/exampledir/test.png</c> in a bucket is restored and saved as <c>aliyun_dsc_original/exampledir/test.png</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestoreOssImageRequest
@@ -9925,8 +10149,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>图片复原</para>
+        /// <para>You can call the RestoreOssImage operation to restore desensitized images.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can use RestoreOssImage to retrieve the original images that were processed by the MaskOssImage operation if the IsAlwaysUpload parameter is set to <c>true</c>.
+        /// For example, the image <c>aliyun_dsc_desensitization/exampledir/test.png</c> in a bucket is restored and saved as <c>aliyun_dsc_original/exampledir/test.png</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RestoreOssImageRequest
@@ -9943,18 +10173,18 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identification task to scan sensitive data in Object Storage Service (OSS) objects.</para>
+        /// <para>The ScanOssObjectV1 operation creates a scan task to detect sensitive data in a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>To call this operation, make sure that asset authorization for your OSS bucket is complete and the bucket is connected. If the authorization is not complete, the bucket_not_authorized error code is returned when you call the operation.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Additional information</h3>
-        /// <para>After you call this operation, you can obtain the task ID. You can specify the task ID in the DescribeIdentifyTaskDetail operation to query the state of the task.
-        /// After the task is complete, you can call the DescribeOssObjectDetailV2 operation to query the identification results of sensitive data in the related OSS objects. When you call the DescribeOssObjectDetailV2 operation, you must specify BucketName, ServiceRegionId, and ObjectKey.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>You must authorize and connect to the specified bucket before you call this operation. If the bucket is not authorized, the API call returns the bucket_not_authorized error code.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you call the operation at a reasonable rate.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You can use the returned task ID to call the DescribeIdentifyTaskStatus operation to check the running status of the task.
+        /// After the task is complete, call the DescribeOssObjectDetailV2 operation and provide the BucketName, ServiceRegionId, and ObjectKey to view the sensitive data detection results for the object.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10018,18 +10248,18 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identification task to scan sensitive data in Object Storage Service (OSS) objects.</para>
+        /// <para>The ScanOssObjectV1 operation creates a scan task to detect sensitive data in a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>To call this operation, make sure that asset authorization for your OSS bucket is complete and the bucket is connected. If the authorization is not complete, the bucket_not_authorized error code is returned when you call the operation.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Additional information</h3>
-        /// <para>After you call this operation, you can obtain the task ID. You can specify the task ID in the DescribeIdentifyTaskDetail operation to query the state of the task.
-        /// After the task is complete, you can call the DescribeOssObjectDetailV2 operation to query the identification results of sensitive data in the related OSS objects. When you call the DescribeOssObjectDetailV2 operation, you must specify BucketName, ServiceRegionId, and ObjectKey.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>You must authorize and connect to the specified bucket before you call this operation. If the bucket is not authorized, the API call returns the bucket_not_authorized error code.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you call the operation at a reasonable rate.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You can use the returned task ID to call the DescribeIdentifyTaskStatus operation to check the running status of the task.
+        /// After the task is complete, call the DescribeOssObjectDetailV2 operation and provide the BucketName, ServiceRegionId, and ObjectKey to view the sensitive data detection results for the object.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10093,18 +10323,18 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identification task to scan sensitive data in Object Storage Service (OSS) objects.</para>
+        /// <para>The ScanOssObjectV1 operation creates a scan task to detect sensitive data in a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>To call this operation, make sure that asset authorization for your OSS bucket is complete and the bucket is connected. If the authorization is not complete, the bucket_not_authorized error code is returned when you call the operation.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Additional information</h3>
-        /// <para>After you call this operation, you can obtain the task ID. You can specify the task ID in the DescribeIdentifyTaskDetail operation to query the state of the task.
-        /// After the task is complete, you can call the DescribeOssObjectDetailV2 operation to query the identification results of sensitive data in the related OSS objects. When you call the DescribeOssObjectDetailV2 operation, you must specify BucketName, ServiceRegionId, and ObjectKey.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>You must authorize and connect to the specified bucket before you call this operation. If the bucket is not authorized, the API call returns the bucket_not_authorized error code.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you call the operation at a reasonable rate.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You can use the returned task ID to call the DescribeIdentifyTaskStatus operation to check the running status of the task.
+        /// After the task is complete, call the DescribeOssObjectDetailV2 operation and provide the BucketName, ServiceRegionId, and ObjectKey to view the sensitive data detection results for the object.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10122,18 +10352,18 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an identification task to scan sensitive data in Object Storage Service (OSS) objects.</para>
+        /// <para>The ScanOssObjectV1 operation creates a scan task to detect sensitive data in a specified object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#"></a>Prerequisites</h3>
-        /// <para>To call this operation, make sure that asset authorization for your OSS bucket is complete and the bucket is connected. If the authorization is not complete, the bucket_not_authorized error code is returned when you call the operation.</para>
-        /// <h3><a href="#qps-"></a>Limits</h3>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
-        /// <h3><a href="#"></a>Additional information</h3>
-        /// <para>After you call this operation, you can obtain the task ID. You can specify the task ID in the DescribeIdentifyTaskDetail operation to query the state of the task.
-        /// After the task is complete, you can call the DescribeOssObjectDetailV2 operation to query the identification results of sensitive data in the related OSS objects. When you call the DescribeOssObjectDetailV2 operation, you must specify BucketName, ServiceRegionId, and ObjectKey.</para>
+        /// <h3>Prerequisites</h3>
+        /// <para>You must authorize and connect to the specified bucket before you call this operation. If the bucket is not authorized, the API call returns the bucket_not_authorized error code.</para>
+        /// <h3>QPS limits</h3>
+        /// <para>The queries per second (QPS) limit for this operation is 10 calls per second for each user. If you exceed the limit, API calls are throttled. This may affect your business. We recommend that you call the operation at a reasonable rate.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>You can use the returned task ID to call the DescribeIdentifyTaskStatus operation to check the running status of the task.
+        /// After the task is complete, call the DescribeOssObjectDetailV2 operation and provide the BucketName, ServiceRegionId, and ObjectKey to view the sensitive data detection results for the object.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10151,14 +10381,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.</para>
+        /// <para>You can call the StopMaskingProcess operation to stop a data masking task. You can call the ManualTriggerMaskingProcess operation to restart a stopped task using its unique resource ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation stops a running data masking task. For example, you can call this operation if you no longer need to mask data for a previously configured task.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Ensure that you call this operation within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10204,14 +10434,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.</para>
+        /// <para>You can call the StopMaskingProcess operation to stop a data masking task. You can call the ManualTriggerMaskingProcess operation to restart a stopped task using its unique resource ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation stops a running data masking task. For example, you can call this operation if you no longer need to mask data for a previously configured task.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Ensure that you call this operation within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10257,14 +10487,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.</para>
+        /// <para>You can call the StopMaskingProcess operation to stop a data masking task. You can call the ManualTriggerMaskingProcess operation to restart a stopped task using its unique resource ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation stops a running data masking task. For example, you can call this operation if you no longer need to mask data for a previously configured task.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Ensure that you call this operation within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10282,14 +10512,14 @@ namespace AlibabaCloud.SDK.Sddp20190103
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a de-identification task. After you stop a de-identification task, you can resume the task by calling the ManualTriggerMaskingProcess operation.</para>
+        /// <para>You can call the StopMaskingProcess operation to stop a data masking task. You can call the ManualTriggerMaskingProcess operation to restart a stopped task using its unique resource ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.</para>
-        /// <h1>Limits</h1>
-        /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>This operation stops a running data masking task. For example, you can call this operation if you no longer need to mask data for a previously configured task.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The queries per second (QPS) limit for a single user is 10 calls per second. If you exceed this limit, API calls are throttled. This may affect your business. Ensure that you call this operation within the specified limit.</para>
         /// </description>
         /// 
         /// <param name="request">

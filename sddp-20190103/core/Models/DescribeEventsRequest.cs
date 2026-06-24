@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that handles the anomalous event.</para>
+        /// <para>The ID of the account that handled the anomalous activity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yundun-***</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string DealUserId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The time when the detection of the anomalous activity ended. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1698700000</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string EndTime { get; set; }
+        public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the anomalous event.</para>
+        /// <para>The unique ID of the anomalous activity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>789026</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the data asset.</para>
+        /// <para>The name of the data asset instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-uf6yzvbc2tg90iuxk.l****</para>
@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. The default value is <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the service to which the table belongs. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+        /// <para>The service to which the data asset belongs. Valid values include MaxCompute, OSS, ADS, OTS, and <b>RDS</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
@@ -94,21 +96,24 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the anomalous events are detected. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The time when the anomalous activity occurred. This is the start time of the detection. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1657900000</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string StartTime { get; set; }
+        public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The handling status of the anomalous event. Valid values:</para>
+        /// <para>The processing status of the anomalous activity.</para>
         /// <list type="bullet">
-        /// <item><description>0: unhandled</description></item>
-        /// <item><description>1: confirmed</description></item>
-        /// <item><description>2: marked as false positive</description></item>
+        /// <item><description><para>0: Unhandled.</para>
+        /// </description></item>
+        /// <item><description><para>1: Confirmed.</para>
+        /// </description></item>
+        /// <item><description><para>2: Dismissed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,20 +124,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the anomalous event subtype.</para>
+        /// <para>The name of the child type of the anomalous activity.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeEventTypes</b> operation to query the name of the anomalous event subtype.</para>
+        /// <para>To query anomalous activities by the child type name, call the <b>DescribeEventTypes</b> operation to get the name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Anomalous volume of downloaded data</para>
+        /// <para>Abnormal data download volume</para>
         /// </summary>
         [NameInMap("SubTypeCode")]
         [Validation(Required=false)]
         public string SubTypeCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination service in an anomalous data flow. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b></para>
+        /// <para>The destination service for an anomalous data flow event. Valid values include MaxCompute, OSS, ADS, OTS, and <b>RDS</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RDS</para>
@@ -142,11 +147,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string TargetProductCode { get; set; }
 
         /// <summary>
-        /// <para>The name of the anomalous event type. Valid values:</para>
+        /// <para>The code of the parent type of the anomalous activity.</para>
         /// <list type="bullet">
-        /// <item><description>01: anomalous permission usage</description></item>
-        /// <item><description>02: anomalous data flow</description></item>
-        /// <item><description>03: anomalous data operation</description></item>
+        /// <item><description><para>01: Anomalous permission access.</para>
+        /// </description></item>
+        /// <item><description><para>02: Anomalous data flow.</para>
+        /// </description></item>
+        /// <item><description><para>03: Anomalous data operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -157,7 +165,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string TypeCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account that triggered the anomalous event.</para>
+        /// <para>The ID of the account that performed the operation that triggered the anomalous activity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1978132506596***</para>
@@ -177,11 +185,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string UserName { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the alert that is triggered. Valid values:</para>
+        /// <para>The risk level of the anomalous activity.</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: low</description></item>
-        /// <item><description><b>2</b>: medium</description></item>
-        /// <item><description><b>3</b>: high</description></item>
+        /// <item><description><para><b>1</b>: Low.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Medium.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: High.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

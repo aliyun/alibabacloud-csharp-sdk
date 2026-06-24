@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeOssObjectsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The code of the file type.</para>
+        /// <para>The code of the file category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? FileCategoryCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which the OSS object belongs.</para>
+        /// <para>The ID of the asset instance to which the OSS object belongs.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeInstances</b> operation to query the instance ID.</para>
+        /// <para>To query the list of authorized OSS objects by the ID of the asset instance, call the <b>DescribeInstances</b> operation to obtain the instance ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? LastScanTimeStart { get; set; }
 
         /// <summary>
-        /// <para>When you query data by page, use the <c>Marker</c> parameter to query the data that follows the <c>Marker</c> value.</para>
+        /// <para>The position where the query starts. To retrieve the next page of results, set this parameter to the value of <c>NextMarker</c> from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1754786235714378752</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -107,13 +109,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the OSS object. Valid values:</para>
+        /// <para>The risk level ID of the OSS object. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: N/A, which indicates that no sensitive data is detected.</description></item>
-        /// <item><description><b>2</b>: S1, which indicates the low sensitivity level.</description></item>
-        /// <item><description><b>3</b>: S2, which indicates the medium sensitivity level.</description></item>
-        /// <item><description><b>4</b>: S3, which indicates the high sensitivity level.</description></item>
-        /// <item><description><b>5</b>: S4, which indicates the highest sensitivity level.</description></item>
+        /// <item><description><para><b>1</b>: N/A. No sensitive data is detected.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: S1. Level 1 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: S2. Level 2 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: S3. Level 3 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: S4. Level 4 sensitive data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,9 +131,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitive data detection rule that the OSS object hits.</para>
+        /// <para>The ID of the sensitive data detection rule that the OSS object matches.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeRules</b> operation to query the ID of the sensitive data detection rule.</para>
+        /// <para>To query the list of authorized OSS objects by the ID of a matched sensitive data detection rule, call the <b>DescribeRules</b> operation to obtain the rule ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -137,7 +144,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data asset resides.</para>
+        /// <para>The region of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -147,7 +154,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the industry-specific rule template.</para>
+        /// <para>The ID of the industry-specific template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

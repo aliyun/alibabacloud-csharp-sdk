@@ -19,9 +19,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The status of the connectivity test between the data asset and DSC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>2</b>: indicates that the data asset was being connected.</description></item>
-            /// <item><description><b>3</b>: indicates that the data asset was connected to DSC.</description></item>
-            /// <item><description><b>4</b>: indicates that the data asset failed to be connected.</description></item>
+            /// <item><description><para><b>2</b>: indicates that the data asset was being connected.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: indicates that the data asset was connected to DSC.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: indicates that the data asset failed to be connected.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,13 +37,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The result that indicates the status of the connectivity test between the data asset and DSC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Passed</b></description></item>
-            /// <item><description><b>Failed</b></description></item>
-            /// <item><description><b>Testing</b></description></item>
+            /// <item><description><para><b>Passed</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Failed</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Testing</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Passed</para>
+            /// <para>Pending</para>
             /// </summary>
             [NameInMap("CheckStatusName")]
             [Validation(Required=false)]
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <para>The region in which the data asset resides.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China (Qingdao)</para>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
@@ -109,11 +115,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The type of the service to which the data asset belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: MaxCompute</description></item>
-            /// <item><description><b>2</b>: OSS</description></item>
-            /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-            /// <item><description><b>4</b>: Tablestore</description></item>
-            /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+            /// <item><description><para><b>1</b>: MaxCompute</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: OSS</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: AnalyticDB for MySQL</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: Tablestore</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: ApsaraDB RDS</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -126,11 +137,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The service to which the data asset belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>MaxCompute</b></description></item>
-            /// <item><description><b>OSS</b></description></item>
-            /// <item><description><b>ADS</b></description></item>
-            /// <item><description><b>OTS</b></description></item>
-            /// <item><description><b>RDS</b></description></item>
+            /// <item><description><para><b>MaxCompute</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>ADS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OTS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>RDS</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

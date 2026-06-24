@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateScanTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the data asset, such as an instance, a database, and a bucket. You can call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to query the unique ID.</para>
+        /// <para>The unique ID of the data asset. The asset can be an instance, a database, or a bucket. Call the <a href="~~DescribeDataLimits~~">DescribeDataLimits</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The interval between two consecutive custom scan tasks. Unit: days. Valid values: 1 to 2147483648.</para>
+        /// <para>The interval in days between two consecutive custom scan tasks. The value must be between 1 and 2147483648.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,10 +42,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? IntervalDay { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language of the request and response.</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The data to be scanned in the Object Storage Service (OSS) bucket. Prefix match, suffix match, and regular expression match are supported.</para>
+        /// <para>The scan scope for OSS assets. You can specify a prefix, a suffix, or a regular expression to match objects.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/test/test</para>
@@ -66,7 +68,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string OssScanPath { get; set; }
 
         /// <summary>
-        /// <para>The type of the service to which the data assets to be scanned belong. Valid values include <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+        /// <para>The type of resource to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: MaxCompute.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: OSS.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: AnalyticDB.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Tablestore.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: RDS.</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: a self-managed database.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +93,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The time when the scan task is executed next time. Unit: hours.</para>
+        /// <para>The hour at which the next scan task runs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +104,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? RunHour { get; set; }
 
         /// <summary>
-        /// <para>The time when the scan task is executed next time. Unit: minutes.</para>
+        /// <para>The minute at which the next scan task runs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,12 +115,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? RunMinute { get; set; }
 
         /// <summary>
-        /// <para>The matching rule that specifies the scan scope of the custom scan task. This parameter takes effect only if you set the <b>ScanRangeContent</b> parameter. Valid values:</para>
+        /// <para>The matching rule for the scan scope of the custom scan task. This parameter takes effect only when you configure the <b>ScanRangeContent</b> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: exact match</description></item>
-        /// <item><description><b>1</b>: prefix match</description></item>
-        /// <item><description><b>2</b>: suffix match</description></item>
-        /// <item><description><b>3</b>: regular expression match</description></item>
+        /// <item><description><para><b>0</b>: full match.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: prefix match.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: suffix match.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: regular expression match.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -116,7 +136,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The data to be scanned in a structured data asset. Prefix match, suffix match, and regular expression match are supported.</para>
+        /// <para>The content to match for the scan of structured data assets. This parameter is used with the ScanRange parameter.</para>
+        /// <remarks>
+        /// <para>If you set ScanRange to 0, the scan matches the exact value of this parameter. If you set ScanRange to 1, the scan matches items that have the prefix specified by this parameter. For example, if you set this parameter to \<c>test/abc\\</c>, file paths that start with \<c>test/abc\\</c> are matched. If you set ScanRange to 2, the scan matches items that have the suffix specified by this parameter. If you set ScanRange to 3, the scan matches items that match the regular expression specified by this parameter.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,7 +153,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>39.170.XX.XX</para>
+        /// <para>106.11.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
@@ -148,7 +171,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The account that is used to create the scan task.</para>
+        /// <para>The account that creates the scan task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>

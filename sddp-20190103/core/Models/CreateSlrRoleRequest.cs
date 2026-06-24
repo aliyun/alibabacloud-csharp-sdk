@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response messages. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Simplified Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese (Simplified)</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English (US)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>39.170.XX.XX</para>
+        /// <para>106.11.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

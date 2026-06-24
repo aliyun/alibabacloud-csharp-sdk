@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>A list of de-identification tasks.</para>
+        /// <para>A list of data masking tasks.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataMaskingTasksResponseBodyItems> Items { get; set; }
         public class DescribeDataMaskingTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The member account to which the desensitization target belongs.</para>
+            /// <para>The member account that the data masking destination belongs to.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192479427903xxxx</para>
@@ -44,7 +44,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DstPath { get; set; }
 
             /// <summary>
-            /// <para>The service to which the data to be de-identified belongs. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+            /// <para>The product that the destination data source belongs to. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>1</b>: MaxCompute.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: OSS.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: ADS.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: OTS.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: RDS.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: SELF_DB.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -54,7 +68,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? DstType { get; set; }
 
             /// <summary>
-            /// <para>The type of the service to which the de-identified data belongs. Valid values: <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The type of the destination product. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>MaxCompute</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>ADS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>OTS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>RDS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>SELF_DB</b>.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -64,7 +92,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DstTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the de-identification task is created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582992000000</para>
@@ -74,7 +102,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the de-identification task is running.</para>
+            /// <para>Indicates whether the task is running.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -84,7 +112,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? HasUnfinishProcess { get; set; }
 
             /// <summary>
-            /// <para>The task ID.</para>
+            /// <para>The numerical ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -94,7 +122,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the source table is de-identified.</para>
+            /// <para>Indicates whether the source table is masked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -104,7 +132,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? OriginalTable { get; set; }
 
             /// <summary>
-            /// <para>The user who created the de-identification task.</para>
+            /// <para>The creator of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>owner</para>
@@ -114,7 +142,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the de-identification task is run.</para>
+            /// <para>The number of executions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -124,7 +152,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RunCount { get; set; }
 
             /// <summary>
-            /// <para>The member account to which the desensitization source belongs.</para>
+            /// <para>The member account that the data masking source belongs to.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192479427903xxxx</para>
@@ -141,7 +169,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SrcPath { get; set; }
 
             /// <summary>
-            /// <para>The type of the service to which the data to be de-identified belongs. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+            /// <para>The type of the source product. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>1</b>: MaxCompute.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: OSS.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: ADS.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: OTS.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: RDS.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: SELF_DB.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -151,7 +193,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SrcType { get; set; }
 
             /// <summary>
-            /// <para>The type of the service to which the data to be de-identified belongs. Valid values: <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The type of the source product. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>MaxCompute</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>ADS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>OTS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>RDS</b>.</para>
+            /// </description></item>
+            /// <item><description><para><b>SELF_DB</b>.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -163,8 +219,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled</description></item>
-            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><para><b>0</b>: Disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -175,7 +233,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The string ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mt4HBgtw1B******</para>
@@ -195,11 +253,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The mode in which the de-identification task is run. Valid values:</para>
+            /// <para>The execution method of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: manual</description></item>
-            /// <item><description><b>2</b>: scheduled</description></item>
-            /// <item><description><b>3</b>: manual and scheduled</description></item>
+            /// <item><description><para><b>1</b>: Manual.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Scheduled.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Manual and scheduled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

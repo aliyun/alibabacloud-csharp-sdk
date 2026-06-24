@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateDataLimitRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the security audit feature. Valid values:</para>
+        /// <para>Specifies whether to enable auditing. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><para><b>0</b>: Do not enable auditing.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Enable auditing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,13 +26,15 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? AuditStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically trigger a re-scan after a rule is modified. Valid values:</para>
+        /// <para>Specifies whether to automatically trigger a rescan when a rule changes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><para><b>0</b>: Do not trigger an automatic scan.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Trigger an automatic scan.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When a re-scan is triggered, DSC scans all data in your data asset.</para>
+        /// <para>If you enable this feature, a rule change triggers a full scan of all data in the data source.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,10 +45,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? AutoScan { get; set; }
 
         /// <summary>
-        /// <para>The permissions. Valid values:</para>
+        /// <para>The permission level of the credential. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadOnly</b>: read-only permissions</description></item>
-        /// <item><description><b>ReadWrite</b>: read and write permissions</description></item>
+        /// <item><description><para><b>ReadOnly</b>: Read-only permissions.</para>
+        /// </description></item>
+        /// <item><description><para><b>ReadWrite</b>: Read and write permissions.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,11 +63,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>Specifies whether to enable sensitive data detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this is your first time to authorize DSC to access the data asset, the default value is 1. If this is not your first time to authorize DSC to access the data asset, the default value is the same as that used in the last authorization operation. Both 1 and 0 are possible.</para>
+        /// <para>The default value is 1 for the first authorization. For later authorizations, the value from the previous authorization is used. Set this parameter to 1 to detect sensitive data.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,10 +80,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? Enable { get; set; }
 
         /// <summary>
-        /// <para>The database engine that is run by the instance. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>SQLServer</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SQLServer</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,10 +96,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable anomalous event detection. Valid values:</para>
+        /// <para>Specifies whether to enable anomalous activity detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes (default)</description></item>
+        /// <item><description><para><b>0</b>: Disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Enabled. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,10 +122,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately scan the authorized asset. Valid values:</para>
+        /// <para>Specifies whether to immediately scan the authorized data asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>false</b>: Do not scan immediately.</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: Scan immediately.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +138,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public bool? InstantlyScan { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the content that is returned in the response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,12 +154,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The retention period of raw logs after you enable the security audit feature. Unit: days. Valid values:</para>
+        /// <para>The retention period of raw logs after you enable auditing. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>90</b></description></item>
-        /// <item><description><b>180</b></description></item>
-        /// <item><description><b>365</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>90</b></para>
+        /// </description></item>
+        /// <item><description><para><b>180</b></para>
+        /// </description></item>
+        /// <item><description><para><b>365</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,10 +174,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? LogStoreDay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable optical character recognition (OCR). Valid values:</para>
+        /// <para>Specifies whether to enable Optical Character Recognition (OCR). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,27 +190,27 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? OcrStatus { get; set; }
 
         /// <summary>
-        /// <para>The name of the asset. The value is a connection string. It consists of an instance ID and a database name, which are separated by a comma (,). This parameter is required.</para>
+        /// <para>The name of the data asset. The name consists of the instance ID and the database name, separated by a period (.).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-11**</para>
+        /// <para>rm-****34.******name</para>
         /// </summary>
         [NameInMap("ParentId")]
         [Validation(Required=false)]
         public string ParentId { get; set; }
 
         /// <summary>
-        /// <para>The password that is used to access the database.</para>
+        /// <para>The password to access the database.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>passwd</para>
+        /// <para>p****d</para>
         /// </summary>
         [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The port that is used to connect to the database.</para>
+        /// <para>The database connection port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3306</para>
@@ -198,13 +220,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The type of service to which the data asset belongs. Valid values:</para>
+        /// <para>The service to which the data asset belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> :MaxCompute</description></item>
-        /// <item><description><b>2</b>: Object Storage Service (OSS)</description></item>
-        /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-        /// <item><description><b>4</b> :Tablestore</description></item>
-        /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+        /// <item><description><para><b>1</b>: MaxCompute</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: OSS</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: ADS</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: OTS</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: RDS</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -216,12 +243,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The number of sensitive data samples that are collected after sensitive data detection is enabled. Valid values:</para>
+        /// <para>The number of sensitive data samples to return after a scan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b></description></item>
-        /// <item><description><b>5</b></description></item>
-        /// <item><description><b>10</b></description></item>
+        /// <item><description><para><b>0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5</b></para>
+        /// </description></item>
+        /// <item><description><para><b>10</b></para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>The default value is 10.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -231,15 +264,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? SamplingSize { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data asset resides. Valid values:</para>
+        /// <para>The region where the data asset is located. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-beijing</b>: China (Beijing).</description></item>
-        /// <item><description><b>cn-zhangjiakou</b>: China (Zhangjiakou)</description></item>
-        /// <item><description><b>cn-huhehaote</b>: China (Hohhot)</description></item>
-        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou)</description></item>
-        /// <item><description><b>cn-shanghai</b>: China (Shanghai)</description></item>
-        /// <item><description><b>cn-shenzhen</b>: China (Shenzhen)</description></item>
-        /// <item><description><b>cn-hongkong</b>: China (Hong Kong)</description></item>
+        /// <item><description><para><b>cn-beijing</b>: China (Beijing)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-zhangjiakou</b>: China (Zhangjiakou)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-huhehaote</b>: China (Hohhot)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hangzhou</b>: China (Hangzhou)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shanghai</b>: China (Shanghai)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-shenzhen</b>: China (Shenzhen)</para>
+        /// </description></item>
+        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -253,17 +293,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>39.170.XX.XX</para>
+        /// <para>106.11.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The username that is used to access the database.</para>
+        /// <para>The username for the database.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>yhm</para>
+        /// <para>y*****m</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

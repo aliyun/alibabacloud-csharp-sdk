@@ -13,17 +13,19 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,11 +36,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of anomalous event for which you want to query the anomalous events of subtypes. Valid values:</para>
+        /// <para>The ID of the parent anomalous activity type to which the child anomalous activity type belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>01</b>: anomalous permission usage</description></item>
-        /// <item><description><b>02</b>: anomalous data flow</description></item>
-        /// <item><description><b>03</b>: anomalous data operation</description></item>
+        /// <item><description><para><b>01</b>: anomalous permission access.</para>
+        /// </description></item>
+        /// <item><description><para><b>02</b>: anomalous data flow.</para>
+        /// </description></item>
+        /// <item><description><para><b>03</b>: anomalous data operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +54,19 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? ParentTypeId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values include <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+        /// <para>The resource type of the product. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: MaxCompute.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Object Storage Service (OSS).</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: AnalyticDB for MySQL.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Tablestore.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>. ApsaraDB RDS.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -59,10 +76,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the anomalous event. Valid values:</para>
+        /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>2</b>: disabled</description></item>
+        /// <item><description><para><b>1</b>: active.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: inactive.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

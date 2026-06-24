@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values: <b>zh</b> and <b>en</b>. The value zh indicates Chinese, and the value en indicates English.</para>
+        /// <para>The language of the data asset. Valid values: -<b>zh</b>: Chinese -<b>en</b>: English</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>39.170.XX.XX</para>
+        /// <para>106.11.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

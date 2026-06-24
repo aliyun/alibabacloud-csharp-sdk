@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The objects in the OSS bucket that you want to scan. You can specify up to 50 objects at a time.</para>
+        /// <para>A list of objects to scan in the OSS bucket. You can specify up to 50 ObjectKeys.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ObjectKeyList")]
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public List<string> ObjectKeyList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the OSS bucket is located.</para>
+        /// <para>The ID of the region where the OSS bucket is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,9 +56,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the industry-specific classification template.</para>
+        /// <para>The ID of the industry-specific template.</para>
         /// <remarks>
-        /// <para> You can call the <b>DescribeCategoryTemplateList</b> operation to query industry-specific classification templates. If you do not specify this parameter, the system automatically uses the main template.</para>
+        /// <para>Call <b>DescribeCategoryTemplateList</b> to get a list of templates. If you do not specify this parameter, the default active template is used for the scan.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

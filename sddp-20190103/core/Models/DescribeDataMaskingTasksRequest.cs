@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataMaskingTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The service to which the data to be de-identified belongs. Valid values include <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+        /// <para>The product that the destination data source belongs to. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>1</b>: MaxCompute.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: OSS.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: ADS.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: OTS.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: RDS.</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: SELF_DB.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +44,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? DstType { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time for creating the data masking task. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1583856000000</para>
@@ -40,10 +54,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +80,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword used to query the de-identification tasks, which can be the task name or ID.</para>
+        /// <para>A keyword to search for tasks. You can search by task name or task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -74,7 +90,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range during which the de-identification tasks to be queried are created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time for creating the task. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582992000000</para>

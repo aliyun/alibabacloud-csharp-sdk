@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeInstanceSourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the security audit feature. Valid values:</para>
+        /// <para>The audit status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: Auditing is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Auditing is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? AuditStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether DSC is authorized to access the data asset.</para>
+        /// <para>The authorization status of the data asset instance.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no</description></item>
-        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><para><b>0</b>: Unauthorized.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Authorized.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? AuthStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -48,13 +52,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The engine type. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>MariaDB</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>SQLServer</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>MariaDB</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SQLServer</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -68,14 +77,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance-demo-****</para>
@@ -85,10 +94,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Simplified Chinese (default)</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Simplified Chinese. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +110,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paginated query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +120,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the service to which the data asset to query belongs. Valid values: <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+        /// <para>The name of the product to query. Valid values: MaxCompute, OSS, ADS, OTS, and RDS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MaxCompute</para>
@@ -119,14 +130,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service to which the asset belongs. Valid values:</para>
+        /// <para>The product type ID to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: MaxCompute</description></item>
-        /// <item><description><b>2</b>: Object Storage Service (OSS)</description></item>
-        /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-        /// <item><description><b>4</b>: Tablestore (OTS)</description></item>
-        /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
-        /// <item><description><b>6</b>: self-managed databases</description></item>
+        /// <item><description><para><b>1</b>: MaxCompute</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: OSS</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: ADS</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: OTS</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: RDS</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: SELF_DB</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +154,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The content based on which a fuzzy search is performed.</para>
+        /// <para>The keyword for the fuzzy search of data assets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -147,11 +164,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SearchKey { get; set; }
 
         /// <summary>
-        /// <para>The data asset type based on which a fuzzy search is performed.</para>
+        /// <para>The type of the fuzzy search for data assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>InstanceId</b>: the ID of the instance.</description></item>
-        /// <item><description><b>InstanceName</b>: the name of the instance.</description></item>
-        /// <item><description><b>DatabaseName</b>: the name of the database.</description></item>
+        /// <item><description><para><b>InstanceId</b>: The instance ID.</para>
+        /// </description></item>
+        /// <item><description><para><b>InstanceName</b>: The instance name.</para>
+        /// </description></item>
+        /// <item><description><para><b>DatabaseName</b>: The database name.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +182,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SearchType { get; set; }
 
         /// <summary>
-        /// <para>The region in which the data asset resides. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</para>
+        /// <para>The region where the asset is located. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

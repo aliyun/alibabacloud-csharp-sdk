@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The execution information about the de-identification task.</para>
+        /// <para>A list of data masking task details.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataMaskingRunHistoryResponseBodyItems> Items { get; set; }
         public class DescribeDataMaskingRunHistoryResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of rows that are in conflict with the data to be de-identified in the destination table to which the data to be de-identified is moved.</para>
+            /// <para>The number of data conflicts. This is the number of rows to be inserted into the destination table that conflict with existing data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? ConflictCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the service to which the de-identified data belongs. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+            /// <para>The type of service to which the masked data is destined. Valid values: <b>1</b> for MaxCompute, <b>2</b> for OSS, <b>3</b> for ADS, <b>4</b> for OTS, and <b>5</b> for RDS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? DstType { get; set; }
 
             /// <summary>
-            /// <para>The service that stores the de-identified data. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The type of the destination service. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DstTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The end time of the de-identification task.</para>
+            /// <para>The time when the execution ended. This is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582251233000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The error code that is returned when the de-identification task fails.</para>
+            /// <para>The error code returned when the task fails. This parameter has a value only if the task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>masking_task_not_found</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string FailCode { get; set; }
 
             /// <summary>
-            /// <para>The reason why the de-identification task fails.</para>
+            /// <para>The reason the task failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error</para>
@@ -87,10 +87,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string FailMsg { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a file is available for download.</para>
+            /// <para>Indicates whether a download file is available.</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: yes</description></item>
-            /// <item><description><b>0</b>: no</description></item>
+            /// <item><description><para><b>1</b>: Yes.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: No.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? HasSubProcess { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task execution record.</para>
+            /// <para>The ID of the execution record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,7 +123,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The number of rows that are de-identified.</para>
+            /// <para>The number of masked rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? MaskingCount { get; set; }
 
             /// <summary>
-            /// <para>The progress of the de-identification task.</para>
+            /// <para>The execution progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Percentage { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the de-identification task is executed.</para>
+            /// <para>The number of times the task has been executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -161,7 +163,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SrcTableName { get; set; }
 
             /// <summary>
-            /// <para>The type of the service to which the data to be de-identified belongs. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+            /// <para>The type of service to which the source data belongs. Valid values: <b>1</b> for MaxCompute, <b>2</b> for OSS, <b>3</b> for ADS, <b>4</b> for OTS, and <b>5</b> for RDS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -171,7 +173,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SrcType { get; set; }
 
             /// <summary>
-            /// <para>The service to which the data to be de-identified belongs. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The type of the source service. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
@@ -181,7 +183,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SrcTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the de-identification task was executed. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the execution started. This is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1582251233000</para>
@@ -191,14 +193,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the de-identification task. Valid values:</para>
+            /// <para>The execution status of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>-1</b>: waiting</description></item>
-            /// <item><description><b>0</b>: being executed</description></item>
-            /// <item><description><b>1</b>: executed</description></item>
-            /// <item><description><b>2</b>: failed to be executed</description></item>
-            /// <item><description><b>3</b>: terminated</description></item>
-            /// <item><description><b>4</b>: partially failed</description></item>
+            /// <item><description><para>-<b>1</b>: pending.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: running.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: stopped by user.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: partially failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +217,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the identification task.</para>
+            /// <para>The ID of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mt4HBgtw1B******</para>
@@ -219,10 +227,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The mode in which the de-identification task is executed. Valid values:</para>
+            /// <para>The execution method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: manual</description></item>
-            /// <item><description><b>2</b>: scheduled</description></item>
+            /// <item><description><para><b>1</b>: manual.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: scheduled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

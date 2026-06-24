@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeCategoryTemplateRuleListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. The default value is <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Simplified Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Simplified Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: US English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of template rules to return on each page. The default value is <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,20 +56,32 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the data that is not compliant with the rule. Valid values: <b>1</b> to <b>11</b>. Default value: <b>null</b>.</para>
+        /// <para>The risk level of the template rule. The value ranges from <b>1</b> to <b>11</b>. The default value is <b>null</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: No sensitive data is detected.</description></item>
-        /// <item><description><b>2</b>: specifies the S1 sensitivity level.</description></item>
-        /// <item><description><b>3</b>: specifies the S2 sensitivity level.</description></item>
-        /// <item><description><b>4</b>: specifies the S3 sensitivity level.</description></item>
-        /// <item><description><b>5</b>: specifies the S4 sensitivity level.</description></item>
-        /// <item><description><b>6</b>: specifies the S5 sensitivity level.</description></item>
-        /// <item><description><b>7</b>: specifies the S6 sensitivity level.</description></item>
-        /// <item><description><b>8</b>: specifies the S7 sensitivity level.</description></item>
-        /// <item><description><b>9</b>: specifies the S8 sensitivity level.</description></item>
-        /// <item><description><b>10</b>: specifies the S9 sensitivity level.</description></item>
-        /// <item><description><b>11</b>: specifies the S10 sensitivity level.</description></item>
-        /// <item><description><b>null</b>: specifies all preceding sensitivity levels.</description></item>
+        /// <item><description><para><b>1</b>: No risk.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: S1.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: S2.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: S3.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: S4.</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: S5.</para>
+        /// </description></item>
+        /// <item><description><para><b>7</b>: S6.</para>
+        /// </description></item>
+        /// <item><description><para><b>8</b>: S7.</para>
+        /// </description></item>
+        /// <item><description><para><b>9</b>: S8.</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: S9.</para>
+        /// </description></item>
+        /// <item><description><para><b>11</b>: S10.</para>
+        /// </description></item>
+        /// <item><description><para><b>null</b>: All risk levels, including No risk, S1, S2, S3, S4, S5, S6, S7, S8, S9, and S10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,11 +92,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The status of the rule. Default value: <b>null</b>. Valid values:</para>
+        /// <para>The status of the template rule. The default value is <b>null</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disabled</description></item>
-        /// <item><description><b>1</b>: enabled</description></item>
-        /// <item><description><b>null</b>: all states</description></item>
+        /// <item><description><para><b>0</b>: The rule is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: The rule is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>null</b>: All rules are returned, regardless of their status.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

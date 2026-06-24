@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeCategoryTemplateRuleListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The list of rules.</para>
+        /// <para>A list of template rules.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <para>The description of the rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Rule for identifying ID card numbers</para>
+            /// <para>Template rule for identifying ID card numbers</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the rule.</para>
+            /// <para>The unique ID of the template rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The IDs of sensitive data types. Multiple IDs are separated by commas (,).</para>
+            /// <para>A comma-separated list of IDs of the associated atomic models.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1001,1002</para>
@@ -57,15 +57,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string IdentificationRuleIds { get; set; }
 
             /// <summary>
-            /// <para>The scan scope of the rule. The value is a JSON array of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</para>
+            /// <para>The scope of data that the template rule scans. This parameter is a string converted from a JSON array. Each element in the JSON array represents a data scanning scope and contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Asset</b>: the data asset type. Valid values: RDS, DRDS, PolarDB, OTS, ADB, and OceanBase. The value is of the STRING type.</para>
+            /// <item><description><para><b>Asset</b>: A string that indicates the asset type. Valid values include RDS, DRDS, PolarDB, OTS, ADB, OceanBase, and ODPS.</para>
             /// </description></item>
-            /// <item><description><para><b>Content</b>: the scan scope. The value is of the STRING type. Each element in a JSON array indicates a scan scope that contains the following fields:</para>
+            /// <item><description><para><b>Content</b>: The specific scope of the asset to scan. This is an array of objects, where each object contains the following fields:</para>
             /// <list type="bullet">
-            /// <item><description><b>Range</b>: the matching condition. Valid values: Instance, database, table, column, project, bucket, and object. The value project is valid only for data assets in MaxCompute. The values bucket and object are valid only for data assets in Object Storage Service (OSS). The value of this parameter is of the STRING type.</description></item>
-            /// <item><description><b>Operator</b>: the operator. Valid values: equals, regex, prefix, and suffix. The operator equals indicates a full match. The operator regex indicates a match by regular expression. The operator prefix indicates a match by prefix. The operator suffix indicates a match by suffix.</description></item>
-            /// <item><description><b>Value</b>: the matching content. The value is of the STRING type.</description></item>
+            /// <item><description><para><b>Range</b>: A string that indicates the matching range. Valid values include instance, database, table, column, project (for MaxCompute assets only), bucket (for OSS assets only), and object (for OSS assets only).</para>
+            /// </description></item>
+            /// <item><description><para><b>Operator</b>: A string that indicates the matching condition. Valid values include equals, regex (regular expression), prefix, and suffix.</para>
+            /// </description></item>
+            /// <item><description><para><b>Value</b>: A string that indicates the content to match.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -78,30 +81,42 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string IdentificationScope { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The name of the template rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ID card number</para>
+            /// <para>ID card</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the data that is not compliant with the rule. Valid values: <b>1</b> to <b>11</b>.</para>
+            /// <para>The risk level of the template rule. The value ranges from <b>1</b> to <b>11</b>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: No sensitive data is detected.</description></item>
-            /// <item><description><b>2</b>: indicates the S1 sensitivity level.</description></item>
-            /// <item><description><b>3</b>: indicates the S2 sensitivity level.</description></item>
-            /// <item><description><b>4</b>: indicates the S3 sensitivity level.</description></item>
-            /// <item><description><b>5</b>: indicates the S4 sensitivity level.</description></item>
-            /// <item><description><b>6</b>: indicates the S5 sensitivity level.</description></item>
-            /// <item><description><b>7</b>: indicates the S6 sensitivity level.</description></item>
-            /// <item><description><b>8</b>: indicates the S7 sensitivity level.</description></item>
-            /// <item><description><b>9</b>: indicates the S8 sensitivity level.</description></item>
-            /// <item><description><b>10</b>: indicates the S9 sensitivity level.</description></item>
-            /// <item><description><b>11</b>: indicates the S10 sensitivity level.</description></item>
-            /// <item><description><b>null</b>: indicates all preceding sensitivity levels.</description></item>
+            /// <item><description><para><b>1</b>: No risk.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: S1.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: S2.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: S3.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: S4.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: S5.</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: S6.</para>
+            /// </description></item>
+            /// <item><description><para><b>8</b>: S7.</para>
+            /// </description></item>
+            /// <item><description><para><b>9</b>: S8.</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>: S9.</para>
+            /// </description></item>
+            /// <item><description><para><b>11</b>: S10.</para>
+            /// </description></item>
+            /// <item><description><para><b>null</b>: Indicates all risk levels, including No risk, S1, S2, S3, S4, S5, S6, S7, S8, S9, and S10.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,11 +127,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The status of the rule. Valid values:</para>
+            /// <para>The status of the template rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled</description></item>
-            /// <item><description><b>1</b>: enabled</description></item>
-            /// <item><description><b>null</b>: all states</description></item>
+            /// <item><description><para><b>0</b>: disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>null</b>: Represents all statuses, including enabled and disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -129,7 +147,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of template rules returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

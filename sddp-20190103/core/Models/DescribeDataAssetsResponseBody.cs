@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of data assets.</para>
+        /// <para>An array of data assets.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDataAssetsResponseBodyItems> Items { get; set; }
         public class DescribeDataAssetsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The access control list (ACL) that controls the access permissions on the OSS bucket.</para>
+            /// <para>The access control list (ACL) of the OSS bucket.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when you set the parameter <b>RangeId</b> to <b>21</b>.</para>
+            /// <para>This parameter is returned only when <b>RangeId</b> is <b>21&#x20;</b>(OSS buckets).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Acl { get; set; }
 
             /// <summary>
-            /// <para>The time when the data asset was created. Unit: milliseconds.</para>
+            /// <para>The time when the data asset was created. The value is a UNIX timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1536751124000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The data type of the data asset.</para>
+            /// <para>The type of the data asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS_BUCKET</para>
@@ -70,12 +70,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity tag of the data. The value is fixed as <b>0</b>. <b>0</b>, <b>1</b>, <b>2</b>, or <b>3</b> is returned for this parameter only when you set the parameter <b>RangeId</b> to <b>1</b>.</para>
+            /// <para>The sensitivity level of the data. This is a static field and is returned only when <b>RangeId</b> is <b>1</b> (MaxCompute projects).</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: unclassified</description></item>
-            /// <item><description><b>1</b>: confidential</description></item>
-            /// <item><description><b>2</b>: sensitive</description></item>
-            /// <item><description><b>3</b>: highly sensitive</description></item>
+            /// <item><description><para><b>0</b>: Unclassified</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Confidential</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Sensitive</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Highly sensitive</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,28 +100,32 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The key value of the OSS object.</para>
+            /// <para>The key of the OSS object.</para>
             /// <remarks>
-            /// <para>This parameter is returned only when you set the parameter <b>RangeId</b> to <b>22</b>.</para>
+            /// <para>This parameter is returned only when <b>RangeId</b> is <b>22</b> (OSS objects).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>Internal</para>
+            /// <para>test.txt</para>
             /// </summary>
             [NameInMap("ObjectKey")]
             [Validation(Required=false)]
             public string ObjectKey { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the MaxCompute data asset. Valid values:</para>
+            /// <para>The name of the risk level for the MaxCompute data asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>S1</b>: low sensitivity level</description></item>
-            /// <item><description><b>S2</b>: medium sensitivity level</description></item>
-            /// <item><description><b>S3</b>: high sensitivity level</description></item>
-            /// <item><description><b>S4</b>: highest sensitivity level</description></item>
+            /// <item><description><para><b>S1</b>: Low</para>
+            /// </description></item>
+            /// <item><description><para><b>S2</b>: Medium</para>
+            /// </description></item>
+            /// <item><description><para><b>S3</b>: High</para>
+            /// </description></item>
+            /// <item><description><para><b>S4</b>: Highest</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is returned only when you set the parameter <b>RangeId</b> to <b>1</b>.</para>
+            /// <para>This parameter is returned only when \<c>RangeId\\</c> is \<c>1\\</c> (MaxCompute projects).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -128,7 +136,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string OdpsRiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The account that owns the data asset.</para>
+            /// <para>The owner of the data asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dtdep-239-******</para>
@@ -138,7 +146,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The name of the service to which the data asset belongs.</para>
+            /// <para>The code of the service to which the data asset belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -150,11 +158,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The ID of the service to which the data asset belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: MaxCompute</description></item>
-            /// <item><description><b>2</b>: OSS</description></item>
-            /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-            /// <item><description><b>4</b>: Tablestore</description></item>
-            /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+            /// <item><description><para><b>1</b>: MaxCompute</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: OSS</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: AnalyticDB for MySQL</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: Tablestore</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: RDS</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,10 +178,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ProductId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the data protection mechanism is enabled for the data asset. The value is fixed as <b>false</b>. <b>true</b> or <b>false</b> is returned for this parameter only when you set the parameter <b>RangeId</b> to <b>1</b>.</para>
+            /// <para>Indicates whether data protection is enabled. This is a static field and is returned only when <b>RangeId</b> is <b>1</b> (MaxCompute projects).</para>
             /// <list type="bullet">
-            /// <item><description><b>false</b>: The data protection mechanism is disabled.</description></item>
-            /// <item><description><b>true</b>: The data protection mechanism is enabled. Only data inbound is supported. Data outbound is not supported.</description></item>
+            /// <item><description><para><b>false</b>: Data protection is disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>true</b>: Data protection is enabled. Data can only flow into the project, not out of it.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,19 +194,30 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Protection { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the data asset. A higher sensitivity level indicates that the identified data is more sensitive. Valid values:</para>
+            /// <para>The ID of the risk level. A larger value indicates a higher risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: No sensitive data is identified.</description></item>
-            /// <item><description><b>2</b>: sensitive data at level 1.</description></item>
-            /// <item><description><b>3</b>: sensitive data at level 2.</description></item>
-            /// <item><description><b>3</b>: sensitive data at level 3.</description></item>
-            /// <item><description><b>5</b>: sensitive data at level 4.</description></item>
-            /// <item><description><b>6</b>: sensitive data at level 5.</description></item>
-            /// <item><description><b>7</b>: sensitive data at level 6.</description></item>
-            /// <item><description><b>8</b>: sensitive data at level 7.</description></item>
-            /// <item><description><b>9</b>: sensitive data at level 8.</description></item>
-            /// <item><description><b>10</b>: sensitive data at level 9.</description></item>
-            /// <item><description><b>11</b>: sensitive data at level 10.</description></item>
+            /// <item><description><para><b>1</b>: No sensitive data detected</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Level 1</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Level 2</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: Level 3</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: Level 4</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: Level 5</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: Level 6</para>
+            /// </description></item>
+            /// <item><description><para><b>8</b>: Level 7</para>
+            /// </description></item>
+            /// <item><description><para><b>9</b>: Level 8</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>: Level 9</para>
+            /// </description></item>
+            /// <item><description><para><b>11</b>: Level 10</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,20 +228,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitivity level for the data asset.</para>
+            /// <para>The name of the risk level.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Medium sensitivity level</para>
+            /// <para>High risk</para>
             /// </summary>
             [NameInMap("RiskLevelName")]
             [Validation(Required=false)]
             public string RiskLevelName { get; set; }
 
             /// <summary>
-            /// <para>The name of the sensitive data detection rule that the data asset hits.</para>
+            /// <para>The name of the sensitive data detection rule that the data asset matches.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>\<em>\</em>\* rule</para>
+            /// <para>***Rule</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
@@ -224,8 +250,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>Indicates whether the data asset contains sensitive data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: yes</description></item>
-            /// <item><description><b>false</b>: no</description></item>
+            /// <item><description><para><b>true</b>: Yes</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: No</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -236,7 +264,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public bool? Sensitive { get; set; }
 
             /// <summary>
-            /// <para>The total number of sensitive data assets. For example, the value can be the total number of sensitive MaxCompute projects, packages, or tables, the total number of sensitive ApsaraDB RDS databases or tables, or the total number of sensitive OSS buckets or objects.</para>
+            /// <para>The total number of sensitive items in the data asset. For example, the total number of sensitive projects, packages, or tables in MaxCompute, the total number of sensitive databases or tables in RDS, or the total number of sensitive buckets or objects in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -246,7 +274,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SensitiveCount { get; set; }
 
             /// <summary>
-            /// <para>The percentage of sensitive data in all data assets.</para>
+            /// <para>The percentage of sensitive data in the data asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45%</para>
@@ -256,7 +284,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string SensitiveRatio { get; set; }
 
             /// <summary>
-            /// <para>The total number of data assets. For example, the value can be the total number of MaxCompute projects, packages, or tables, the total number of ApsaraDB RDS databases or tables, or the total number of OSS buckets or objects.</para>
+            /// <para>The total number of items in the data asset. For example, the total number of projects, packages, or tables in MaxCompute, the total number of databases or tables in RDS, or the total number of buckets or objects in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>432</para>
@@ -268,7 +296,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -288,7 +316,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of queried data assets that contain sensitive data.</para>
+        /// <para>The total number of data assets that contain sensitive data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

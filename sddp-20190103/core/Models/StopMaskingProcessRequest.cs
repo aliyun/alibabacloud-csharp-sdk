@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class StopMaskingProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the de-identification task. You can query the task ID by calling the <a href="~~DescribeDataMaskingTasks~~">DescribeDataMaskingTasks</a> operation.</para>
+        /// <para>The unique ID of the data masking task. You can obtain the ID of a data masking task from the return value of the <a href="~~DescribeDataMaskingTasks~~">DescribeDataMaskingTasks</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Simplified Chinese (default)</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese (Simplified). This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English (US).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

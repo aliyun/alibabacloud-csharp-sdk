@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDocTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of OSS object types.</para>
+        /// <para>A list of OSS file types.</para>
         /// </summary>
         [NameInMap("DocTypeList")]
         [Validation(Required=false)]
         public List<DescribeDocTypesResponseBodyDocTypeList> DocTypeList { get; set; }
         public class DescribeDocTypesResponseBodyDocTypeList : TeaModel {
             /// <summary>
-            /// <para>The code of the object type.</para>
+            /// <para>The code of the file type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100001</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Code { get; set; }
 
             /// <summary>
-            /// <para>The ID of the object type.</para>
+            /// <para>The unique ID of the file type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the object type.</para>
+            /// <para>The name of the file type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C/C++ Source Code</para>

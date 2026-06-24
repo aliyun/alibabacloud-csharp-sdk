@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("FeatureType")]
         [Validation(Required=false)]
@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Simplified Chinese.</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Simplified Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,8 +52,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         /// <summary>
         /// <para>The network type of the data asset that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: virtual private cloud (VPC)</description></item>
-        /// <item><description><b>2</b>: classic network</description></item>
+        /// <item><description><para><b>1</b>: virtual private cloud (VPC)</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: classic network</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

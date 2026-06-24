@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeTablesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1.</para>
+        /// <para>The number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data asset to which the table belongs. You can call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to obtain the ID of the data asset.</para>
+        /// <para>The ID of the instance to which the data asset table belongs. Call the <a href="~~DescribeInstances~~">DescribeInstances</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy match is supported. For example, if you specify test, all tables whose names contain test are retrieved.</para>
+        /// <para>The search keyword. Fuzzy search is supported. For example, if you enter test, all results that contain test are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the package to which the table belongs. You can call the <a href="~~DescribePackages~~">DescribePackages</a> operation to obtain the ID of the package.</para>
+        /// <para>The ID of the package to which the data asset table belongs. Call the <a href="~~DescribePackages~~">DescribePackages</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>555555</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? PackageId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// <para>The maximum number of entries to return on each page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the service to which the table belongs, such as MaxCompute, OSS, and ApsaraDB RDS. For more information about the types of data assets from which Data Security Center (DSC) can scan for sensitive data, see <a href="https://help.aliyun.com/document_detail/212906.html">Supported data assets</a>.</para>
+        /// <para>The name of the product to which the data asset table belongs. Valid values include MaxCompute, OSS, ADS, OTS, and RDS. For more information about the supported products, see <a href="https://help.aliyun.com/document_detail/212906.html">Data asset types that support sensitive data detection</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MaxCompute</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service to which the table belongs. You can call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to obtain the ID of the service.</para>
+        /// <para>The ID of the product to which the data asset table belongs. Call the <a href="~~DescribeDataAssets~~">DescribeDataAssets</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,13 +96,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the table. Each sensitivity level ID corresponds to a sensitivity level name. Valid values:</para>
+        /// <para>The ID of the risk level for the data asset table. Each risk level ID corresponds to a risk level name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: N/A, which indicates that no sensitive data is detected.</description></item>
-        /// <item><description><b>2</b>: S1, which indicates the low sensitivity level.</description></item>
-        /// <item><description><b>3</b>: S2, which indicates the medium sensitivity level.</description></item>
-        /// <item><description><b>4</b>: S3, which indicates the high sensitivity level.</description></item>
-        /// <item><description><b>5</b>: S4, which indicates the highest sensitivity level.</description></item>
+        /// <item><description><para><b>1</b>: N/A. No sensitive data is detected.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: S1. Level 1 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: S2. Level 2 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: S3. Level 3 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: S4. Level 4 sensitive data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -111,7 +118,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitive data detection rule that the table hits. You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain the ID of the sensitive data detection rule.</para>
+        /// <para>The ID of the sensitive data detection rule that the data asset table hits. Call the <a href="~~DescribeRules~~">DescribeRules</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>333322</para>
@@ -121,7 +128,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The region in which DSC is activated. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</para>
+        /// <para>The region where Data Security Center is available. For more information, see <a href="https://help.aliyun.com/document_detail/214257.html">Supported regions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -131,7 +138,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the industry-specific rule template.</para>
+        /// <para>The ID of the industry-specific template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

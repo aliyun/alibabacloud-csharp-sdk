@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateScanTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom scan task.</para>
+        /// <para>The resource ID of the custom scan task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

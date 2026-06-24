@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataObjectColumnDetailV2Request : TeaModel {
         /// <summary>
-        /// <para>When performing a paginated query, set the current page number. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? FeatureType { get; set; }
 
         /// <summary>
-        /// <para>Set the unique identifier ID of the data object to be queried.</para>
+        /// <para>The unique ID of the data object to query.</para>
         /// <remarks>
-        /// <para>You can obtain the identifier ID by calling <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> operation to obtain the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages, default is <b>zh_cn</b>. Values:</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese.</description></item>
-        /// <item><description><b>en_us</b>: English.</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>When performing a paginated query, set the maximum number of data asset instances to display per page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,20 +70,32 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID corresponding to the product name of the data object. Values:</para>
+        /// <para>The ID of the product to which the data object belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: MaxCompute</description></item>
-        /// <item><description><b>2</b>: OSS</description></item>
-        /// <item><description><b>3</b>: ADB-MYSQL</description></item>
-        /// <item><description><b>4</b>: TableStore</description></item>
-        /// <item><description><b>5</b>: RDS</description></item>
-        /// <item><description><b>6</b>: SELF_DB</description></item>
-        /// <item><description><b>7</b>: PolarDB-X</description></item>
-        /// <item><description><b>8</b>: PolarDB</description></item>
-        /// <item><description><b>9</b>: ADB-PG</description></item>
-        /// <item><description><b>10</b>: OceanBase</description></item>
-        /// <item><description><b>11</b>: MongoDB</description></item>
-        /// <item><description><b>25</b>: Redis</description></item>
+        /// <item><description><para><b>1</b>: MaxCompute</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: OSS</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: ADB-MYSQL</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Tablestore</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: RDS</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: SELF_DB</para>
+        /// </description></item>
+        /// <item><description><para><b>7</b>: PolarDB-X</para>
+        /// </description></item>
+        /// <item><description><para><b>8</b>: PolarDB</para>
+        /// </description></item>
+        /// <item><description><para><b>9</b>: ADB-PG</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: OceanBase</para>
+        /// </description></item>
+        /// <item><description><para><b>11</b>: MongoDB</para>
+        /// </description></item>
+        /// <item><description><para><b>25</b>: Redis</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,9 +106,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>Industry template ID.</para>
+        /// <para>The ID of the industry-specific template.</para>
         /// <remarks>
-        /// <para>You can obtain the industry template identifier ID by calling <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2399253.html">DescribeDataObjects</a> operation to obtain the ID of the industry-specific template.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

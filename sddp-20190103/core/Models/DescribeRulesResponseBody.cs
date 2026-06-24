@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The sensitive data detection rules.</para>
+        /// <para>A list of sensitive data detection rules.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeRulesResponseBodyItems> Items { get; set; }
         public class DescribeRulesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The audit mode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? AuditMode { get; set; }
 
             /// <summary>
-            /// <para>The content type of the sensitive data detection rule. Valid values:</para>
+            /// <para>The type of content in the sensitive data detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: keyword</description></item>
-            /// <item><description><b>2</b>: regular expression</description></item>
+            /// <item><description><para><b>0</b>: keyword</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: regular expression</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Category { get; set; }
 
             /// <summary>
-            /// <para>The name of the content type of the sensitive data detection rule.</para>
+            /// <para>The name of the content type for the sensitive data detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Regular expression</para>
@@ -59,9 +63,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The content in the sensitive data detection rule.</para>
+            /// <para>The content of the sensitive data detection rule.</para>
             /// <remarks>
-            /// <para> A built-in detection rule whose CustomType is 0 does not return the content of the rule.</para>
+            /// <para>The content of a built-in rule, for which CustomType is 0, is not returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,7 +76,19 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The type of the content in the sensitive data detection rule. Valid values include <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates attempts to exploit SQL injections. The value 2 indicates bypass by using SQL injections. The value 3 indicates abuse of stored procedures. The value 4 indicates buffer overflow. The value 5 indicates SQL injections based on errors.</para>
+            /// <para>The content type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>1</b>: SQL injection exploits</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: SQL injection bypass attempts</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: stored procedure abuse</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: buffer overflows</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: error-based SQL injections</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -84,8 +100,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The type of the sensitive data detection rule.</para>
             /// <list type="bullet">
-            /// <item><description>0: built-in rule</description></item>
-            /// <item><description>1: custom rule</description></item>
+            /// <item><description><para>0: built-in</para>
+            /// </description></item>
+            /// <item><description><para>1: custom</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,14 +117,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <para>The description of the sensitive data detection rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The sensitive data detection rule is used to detect IP addresses.</para>
+            /// <para>Used to identify IP addresses</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The display name of the account that is used to create the sensitive data detection rule.</para>
+            /// <para>The display name of the user who created the sensitive data detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>****test</para>
@@ -116,7 +134,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The time when the sensitive data detection rule is created. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the sensitive data detection rule was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1545277010000</para>
@@ -126,7 +144,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the sensitive data detection rule is modified. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the sensitive data detection rule was last modified. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1545277010000</para>
@@ -136,7 +154,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The parent group type of the rule.</para>
+            /// <para>The parent group of the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4_1</para>
@@ -146,7 +164,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the sensitive data detection rule is hit.</para>
+            /// <para>The number of times the rule was hit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -156,7 +174,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? HitTotalCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the sensitive data detection rule.</para>
+            /// <para>The unique ID of the sensitive data detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20000</para>
@@ -166,7 +184,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The username of the account that is used to create the sensitive data detection rule.</para>
+            /// <para>The logon name of the user who created the sensitive data detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>det1111</para>
@@ -176,7 +194,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string LoginName { get; set; }
 
             /// <summary>
-            /// <para>The key of the primary dimension.</para>
+            /// <para>The primary dimension key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -188,8 +206,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             /// <summary>
             /// <para>The match type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: rule-based match</description></item>
-            /// <item><description><b>2</b>: dictionary-based match</description></item>
+            /// <item><description><para><b>1</b>: rule-based match</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: dictionary-based match</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,7 +220,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? MatchType { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the models for sensitive data audit.</para>
+            /// <para>A collection of model IDs for sensitive data auditing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1452</para>
@@ -220,7 +240,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The name of the service to which the data asset belongs. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The name of the service to which the data asset belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>MaxCompute</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>ADS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OTS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>RDS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SELF_DB</b></para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
@@ -230,7 +264,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service to which the sensitive data detection rule is applied. Valid values include <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+            /// <para>The ID of the service to which the data asset belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>1</b>: MaxCompute</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: OSS</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: ADS</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: OTS</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: RDS</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: SELF_DB</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -240,13 +288,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? ProductId { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</para>
+            /// <para>The sensitivity level ID of the sensitive data detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: N/A, which indicates that no sensitive data is detected.</description></item>
-            /// <item><description><b>2</b>: S1, which indicates the low sensitivity level.</description></item>
-            /// <item><description><b>3</b>: S2, which indicates the medium sensitivity level.</description></item>
-            /// <item><description><b>4</b>: S3, which indicates the high sensitivity level.</description></item>
-            /// <item><description><b>5</b>: S4, which indicates the highest sensitivity level.</description></item>
+            /// <item><description><para><b>1</b>: N/A. No sensitive data is detected.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: S1. Level 1 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: S2. Level 2 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: S3. Level 3 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: S4. Level 4 sensitive data.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -257,13 +310,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The sensitivity level of data that hits the sensitive data detection rule. Valid values:</para>
+            /// <para>The name of the sensitivity level for the sensitive data detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>N/A</b>: indicates that no sensitive data is detected.</description></item>
-            /// <item><description><b>S1</b>: indicates the low sensitivity level.</description></item>
-            /// <item><description><b>S2</b>: indicates the medium sensitivity level.</description></item>
-            /// <item><description><b>S3</b>: indicates the high sensitivity level.</description></item>
-            /// <item><description><b>S4</b>: indicates the highest sensitivity level.</description></item>
+            /// <item><description><para><b>N/A</b>: No sensitive data is detected.</para>
+            /// </description></item>
+            /// <item><description><para><b>S1</b>: Level 1 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>S2</b>: Level 2 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>S3</b>: Level 3 sensitive data.</para>
+            /// </description></item>
+            /// <item><description><para><b>S4</b>: Level 4 sensitive data.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -284,10 +342,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string StatExpress { get; set; }
 
             /// <summary>
-            /// <para>The status of the sensitive data detection rule. Valid values:</para>
+            /// <para>The detection status of the sensitive data detection rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled</description></item>
-            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><para><b>0</b>: disabled</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: enabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -298,11 +358,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The data asset type that is supported by the sensitive data detection rule. Valid values:</para>
+            /// <para>The type of data asset that the rule supports. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: all data assets</description></item>
-            /// <item><description><b>1</b>: structured data assets</description></item>
-            /// <item><description><b>2</b>: unstructured data assets</description></item>
+            /// <item><description><para><b>0</b>: all assets</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: structured assets</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: unstructured assets</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -313,7 +376,21 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? SupportForm { get; set; }
 
             /// <summary>
-            /// <para>The name of the service to which the data asset belongs. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+            /// <para>The name of the service to which the data asset belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>MaxCompute</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>ADS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OTS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>RDS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SELF_DB</b></para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
@@ -323,7 +400,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the templates that are used to audit sensitive data.</para>
+            /// <para>A collection of template IDs for sensitive data auditing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -333,6 +410,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string TemplateRuleIds { get; set; }
 
             /// <summary>
+            /// <para>The threat analysis mode status. Valid values: 0 (disabled), 1 (enabled).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -341,7 +420,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? ThreatAnalysisStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that is used to create the sensitive data detection rule.</para>
+            /// <para>The ID of the user who created the sensitive data detection rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -351,11 +430,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? UserId { get; set; }
 
             /// <summary>
-            /// <para>The severity level. Valid values:</para>
+            /// <para>The risk level.</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: low</description></item>
-            /// <item><description><b>2</b>: medium</description></item>
-            /// <item><description><b>3</b>: high</description></item>
+            /// <item><description><para><b>1</b>: Low</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Medium</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: High</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

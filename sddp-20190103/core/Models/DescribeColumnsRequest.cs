@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeColumnsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number for paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,13 +20,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The engine type. Valid values:</para>
+        /// <para>Engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>MariaDB</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>SQLServer</b></description></item>
+        /// <item><description><para><b>MySQL</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>MariaDB</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>SQLServer</b>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,9 +42,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string EngineType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which data in the column of the table belongs.</para>
+        /// <para>The ID of the asset instance to which the column data in the data asset table belongs.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeRules~~">DescribeInstances</a> operation to query the IDs of instances.</para>
+        /// <para>Query column data in data asset tables authorized to connect to Data Security Center using the ID of the asset instance to which the column data in the data asset table belongs. Obtain the asset instance ID by calling the <a href="~~DescribeRules~~">DescribeInstances</a> API.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance to which data in the column of the table belongs.</para>
+        /// <para>The name of the asset instance to which the column data in the data asset table belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-bp17t1htja573l5i8****</para>
@@ -60,10 +65,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language type for requests and responses. The default value is <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,10 +81,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The data tag.</para>
+        /// <para>Data tag.</para>
         /// <list type="bullet">
-        /// <item><description>101: personal sensitive information</description></item>
-        /// <item><description>102: personal information</description></item>
+        /// <item><description><para>101: Personal sensitive information</para>
+        /// </description></item>
+        /// <item><description><para>102: Personal information</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,8 +97,8 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ModelTagId { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy match is supported.</para>
-        /// <para>For example, if you enter <b>test</b>, all columns whose names contain <b>test</b> are retrieved.</para>
+        /// <para>The keyword for search. Supports fuzzy match.</para>
+        /// <para>For example, entering <b>test</b> returns all data containing <b>test</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -99,7 +108,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of data entries displayed per page in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +118,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the service to which data in the column of the table belongs. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+        /// <para>The product name to which the column data in the data asset table belongs. Valid values: <b>MaxCompute, OSS, ADS, OTS, RDS</b>, and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MaxCompute</para>
@@ -119,20 +128,32 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service to which the data object belongs. Valid values:</para>
+        /// <para>The ID corresponding to the product name to which the data object belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: MaxCompute</description></item>
-        /// <item><description><b>2</b>: Object Storage Service (OSS)</description></item>
-        /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-        /// <item><description><b>4</b>: Tablestore (OTS)</description></item>
-        /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
-        /// <item><description><b>6</b>: self-managed database</description></item>
-        /// <item><description><b>7</b>: PolarDB for Xscale (PolarDB-X)</description></item>
-        /// <item><description><b>8</b>: PolarDB</description></item>
-        /// <item><description><b>9</b>: AnalyticDB for PostgreSQL</description></item>
-        /// <item><description><b>10</b>: ApsaraDB for OceanBase</description></item>
-        /// <item><description><b>11</b>: ApsaraDB for MongoDB</description></item>
-        /// <item><description><b>25</b>: ApsaraDB for Redis</description></item>
+        /// <item><description><para><b>1</b>: MaxCompute</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: OSS</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: ADB-MYSQL</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: TableStore</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: RDS</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: SELF_DB</para>
+        /// </description></item>
+        /// <item><description><para><b>7</b>: PolarDB-X</para>
+        /// </description></item>
+        /// <item><description><para><b>8</b>: PolarDB</para>
+        /// </description></item>
+        /// <item><description><para><b>9</b>: ADB-PG</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: OceanBase</para>
+        /// </description></item>
+        /// <item><description><para><b>11</b>: MongoDB</para>
+        /// </description></item>
+        /// <item><description><para><b>25</b>: Redis</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -143,13 +164,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ProductId { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the sensitive data that hits the sensitive data detection rule. Valid values:</para>
+        /// <para>The risk level ID of the sensitive data detection rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: N/A</description></item>
-        /// <item><description><b>2</b>: S1</description></item>
-        /// <item><description><b>3</b>: S2</description></item>
-        /// <item><description><b>4</b>: S3</description></item>
-        /// <item><description><b>5</b>: S4</description></item>
+        /// <item><description><para><b>1</b>: N/A.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: S1.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: S2.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: S3.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: S4.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -160,9 +186,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitive data detection rule that data in the column of the table hits.</para>
+        /// <para>The unique ID of the sensitive data detection rule hit by the column data in the asset table.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeRules~~">DescribeRules</a> operation to query the IDs of sensitive data detection rules.</para>
+        /// <para>Query column data in data asset tables authorized to connect to Data Security Center using the ID of the sensitive data detection rule hit by the column data in the asset table. Obtain the sensitive data detection rule ID by calling the <a href="~~DescribeRules~~">DescribeRules</a> API.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -173,23 +199,28 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the sensitive data detection rule that data in the column of the table hits.</para>
+        /// <para>The name of the sensitive data detection rule hit by the column data in the data asset table.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ID card number (the Chinese mainland)</para>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("RuleName")]
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The name of the sensitivity level of the data that hits the sensitive data detection rule. Valid values:</para>
+        /// <para>Sensitivity level name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>N/A</b>: No sensitive data is detected.</description></item>
-        /// <item><description><b>S1</b>: indicates the low sensitivity level.</description></item>
-        /// <item><description><b>S2</b>: indicates the medium sensitivity level.</description></item>
-        /// <item><description><b>S3</b>: indicates the high sensitivity level.</description></item>
-        /// <item><description><b>S4</b>: indicates the highest sensitivity level.</description></item>
+        /// <item><description><para><b>N/A</b>: No sensitive data detected.</para>
+        /// </description></item>
+        /// <item><description><para><b>S1</b>: Level 1 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>S2</b>: Level 2 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>S3</b>: Level 3 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>S4</b>: Level 4 sensitive data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -208,9 +239,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table to which the column belongs.</para>
+        /// <para>The unique ID of the asset table that contains the columns in data asset tables such as MaxCompute and RDS.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeTables~~">DescribeTables</a> operation to query the IDs of tables.</para>
+        /// <para>Query column data in data asset tables authorized to connect to Data Security Center using the asset table ID. Obtain the asset table ID by calling the <a href="~~DescribeTables~~">DescribeTables</a> API.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -221,7 +252,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? TableId { get; set; }
 
         /// <summary>
-        /// <para>The name of the table.</para>
+        /// <para>The name of the data asset table.</para>
         /// 
         /// <b>Example:</b>
         /// <para>it_table</para>
@@ -231,9 +262,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the industry-specific classification template.</para>
+        /// <para>Industry template ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a> operation to obtain the IDs of industry-specific classification templates.</para>
+        /// <para>Obtain the industry template ID by calling <a href="https://help.aliyun.com/document_detail/2399296.html">DescribeCategoryTemplateList</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -244,9 +275,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template rule that is hit.</para>
+        /// <para>The ID of the hit template rule.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a> operation to obtain the IDs of hit template rules.</para>
+        /// <para>Obtain the hit template rule ID by calling <a href="https://help.aliyun.com/document_detail/410143.html">DescribeCategoryTemplateRuleList</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class CreateDataLimitResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the data asset.</para>
+        /// <para>The ID of the authorized data asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

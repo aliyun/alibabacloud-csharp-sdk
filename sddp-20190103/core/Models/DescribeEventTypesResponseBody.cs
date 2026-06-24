@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeEventTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the types of anomalous events.</para>
+        /// <para>The list of anomalous activity types.</para>
         /// <remarks>
-        /// <para>If you leave the ParentTypeId parameter empty, anomalous event types are returned. If you set the ParentTypeId parameter, anomalous event subtypes under the specified anomalous event type are returned.</para>
+        /// <para>If ParentTypeId is empty, the parent anomalous activity types are returned. If ParentTypeId is not empty, the child anomalous activity types are returned.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("EventTypeList")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public List<DescribeEventTypesResponseBodyEventTypeList> EventTypeList { get; set; }
         public class DescribeEventTypesResponseBodyEventTypeList : TeaModel {
             /// <summary>
-            /// <para>The code of the anomalous event type.</para>
+            /// <para>The code of the parent anomalous activity type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>01</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The description of the anomalous event type.</para>
+            /// <para>The description of the parent anomalous activity type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Anomalous permission usage,\<em>\</em>\<em>\</em></para>
+            /// <para>Permission usage anomaly, ****</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the anomalous event type.</para>
+            /// <para>The unique ID of the parent anomalous activity type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -50,24 +50,24 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the anomalous event type.</para>
+            /// <para>The name of the parent anomalous activity type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Anomalous permission usage</para>
+            /// <para>Permission usage anomaly</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of anomalous event subtypes.</para>
+            /// <para>The list of child anomalous activity types.</para>
             /// </summary>
             [NameInMap("SubTypeList")]
             [Validation(Required=false)]
             public List<DescribeEventTypesResponseBodyEventTypeListSubTypeList> SubTypeList { get; set; }
             public class DescribeEventTypesResponseBodyEventTypeListSubTypeList : TeaModel {
                 /// <summary>
-                /// <para>The service to which the anomalous event detection rule applies. Valid values include <b>MaxCompute, OSS, ADS, OTS, and RDS</b>.</para>
+                /// <para>The products to which the rule applies, including MaxCompute, OSS, AnalyticDB for MySQL, Tablestore, and ApsaraDB RDS.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RDS</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string AdaptedProduct { get; set; }
 
                 /// <summary>
-                /// <para>The code of the anomalous event subtype.</para>
+                /// <para>The code of the child anomalous activity type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>020008</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The code of the configuration.</para>
+                /// <para>The configuration code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0100**</para>
@@ -97,10 +97,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string ConfigCode { get; set; }
 
                 /// <summary>
-                /// <para>The content format of anomalous event detection rule. Valid values:</para>
+                /// <para>The format of the rule item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: numeric values such as thresholds</description></item>
-                /// <item><description><b>1</b>: text such as IP addresses</description></item>
+                /// <item><description><para><b>0</b>: numeric (such as a threshold).</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: text (such as an IP address).</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -111,17 +113,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public int? ConfigContentType { get; set; }
 
                 /// <summary>
-                /// <para>The description of the configuration.</para>
+                /// <para>The configuration description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The period of time for which the permission is not used exceeds the threshold. The specified threshold is ${value} calendar days.</para>
+                /// <para>Permission idle period exceeds threshold: current threshold is defined as 7 natural days</para>
                 /// </summary>
                 [NameInMap("ConfigDescription")]
                 [Validation(Required=false)]
                 public string ConfigDescription { get; set; }
 
                 /// <summary>
-                /// <para>The value of the configuration.</para>
+                /// <para>The configuration value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>90</para>
@@ -131,17 +133,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string ConfigValue { get; set; }
 
                 /// <summary>
-                /// <para>The description of the anomalous event subtype.</para>
+                /// <para>The description of the child anomalous activity type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Inappropriate configuration-No protection for the MaxCompute sensitive project, \<em>\</em>\<em>\</em></para>
+                /// <para>Configuration error - MaxCompute sensitive project not protected，****</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The number of times that the anomalous event hits the anomalous event detection rule.</para>
+                /// <para>The number of times the rule is hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -151,7 +153,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public int? EventHitCount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the anomalous event subtype.</para>
+                /// <para>The unique ID of the child anomalous activity type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -161,20 +163,22 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the anomalous event subtype.</para>
+                /// <para>The name of the child anomalous activity type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Inappropriate configuration-No protection for the MaxCompute sensitive project</para>
+                /// <para>Configuration error - MaxCompute sensitive project not protected</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether detection is enabled for the anomalous event subtype. Valid values:</para>
+                /// <para>The detection feature of Data Security Center (DSC) for the child anomalous activity type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: yes</description></item>
-                /// <item><description><b>0</b>: no</description></item>
+                /// <item><description><para><b>1</b>: enabled.</para>
+                /// </description></item>
+                /// <item><description><para><b>0</b>: disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

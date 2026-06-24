@@ -10,25 +10,28 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataLimitSetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the data asset.</para>
+        /// <para>Information about the authorized data assets.</para>
         /// </summary>
         [NameInMap("DataLimitSet")]
         [Validation(Required=false)]
         public DescribeDataLimitSetResponseBodyDataLimitSet DataLimitSet { get; set; }
         public class DescribeDataLimitSetResponseBodyDataLimitSet : TeaModel {
             /// <summary>
-            /// <para>An array that consists of data assets that DSC is authorized to scan.</para>
+            /// <para>A list of authorized data assets.</para>
             /// </summary>
             [NameInMap("DataLimitList")]
             [Validation(Required=false)]
             public List<DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList> DataLimitList { get; set; }
             public class DescribeDataLimitSetResponseBodyDataLimitSetDataLimitList : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the test of connectivity between DSC and the data asset is passed.</para>
+                /// <para>The status of the connectivity test between Security Center and the authorized data asset.</para>
                 /// <list type="bullet">
-                /// <item><description><b>2</b>: The connectivity test is in progress.</description></item>
-                /// <item><description><b>3</b>: The connectivity test is passed.</description></item>
-                /// <item><description><b>4</b>: The connectivity test failed.</description></item>
+                /// <item><description><para><b>2</b>: The connectivity test is in progress.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: The connectivity test is passed.</para>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: The connectivity test has failed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -39,27 +42,27 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public int? CheckStatus { get; set; }
 
                 /// <summary>
-                /// <para>The name of the data detection status.</para>
+                /// <para>The name of the connectivity test status.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Connectivity test status</para>
+                /// <para>Connected</para>
                 /// </summary>
                 [NameInMap("CheckStatusName")]
                 [Validation(Required=false)]
                 public string CheckStatusName { get; set; }
 
                 /// <summary>
-                /// <para>The connection string that is used to access the data asset.</para>
+                /// <para>The connection string for the data asset.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Connection string</para>
+                /// <para>jdbc:mysql://10.<em>.</em>.94:3306/test_demo</para>
                 /// </summary>
                 [NameInMap("Connector")]
                 [Validation(Required=false)]
                 public string Connector { get; set; }
 
                 /// <summary>
-                /// <para>The time when the data asset was created. Unit: milliseconds.</para>
+                /// <para>The time when the data asset was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1625587423000</para>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the data asset.</para>
+                /// <para>The unique ID of the data asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -79,17 +82,17 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the data asset resides.</para>
+                /// <para>The name of the region where the data asset is located.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>China (Hangzhou)</para>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>The parent asset ID of the data asset.</para>
+                /// <para>The ID of the parent asset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>db</para>
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The region in which the data asset resides.</para>
+                /// <para>The ID of the region where the data asset is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-****</para>
@@ -109,13 +112,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The type of service to which the data asset belongs. Valid values:</para>
+                /// <para>The type of the data asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>1</b>: MaxCompute</description></item>
-                /// <item><description><b>2</b>: OSS</description></item>
-                /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-                /// <item><description><b>4</b>: Tablestore</description></item>
-                /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+                /// <item><description><para><b>1</b>: MaxCompute.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: OSS.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: ADS.</para>
+                /// </description></item>
+                /// <item><description><para><b>4</b>: OTS.</para>
+                /// </description></item>
+                /// <item><description><para><b>5</b>: RDS.</para>
+                /// </description></item>
+                /// <item><description><para><b>6</b>: SELF_DB.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -126,13 +136,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The code of the service to which the data asset belongs. Valid values:</para>
+                /// <para>The code for the data asset type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ODPS</b></description></item>
-                /// <item><description><b>OSS</b></description></item>
-                /// <item><description><b>ADS</b></description></item>
-                /// <item><description><b>OTS</b></description></item>
-                /// <item><description><b>RDS</b></description></item>
+                /// <item><description><para><b>MaxCompute</b></para>
+                /// </description></item>
+                /// <item><description><para><b>OSS</b></para>
+                /// </description></item>
+                /// <item><description><para><b>ADS</b></para>
+                /// </description></item>
+                /// <item><description><para><b>OTS</b></para>
+                /// </description></item>
+                /// <item><description><para><b>RDS</b></para>
+                /// </description></item>
+                /// <item><description><para><b>SELF_DB</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,7 +160,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string ResourceTypeCode { get; set; }
 
                 /// <summary>
-                /// <para>The username that is used to access the data asset.</para>
+                /// <para>The username of the data owner.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tsts</para>
@@ -155,14 +172,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>An array consisting of the OSS objects that DSC is authorized to scan.</para>
+            /// <para>A list of authorized OSS buckets.</para>
             /// </summary>
             [NameInMap("OssBucketList")]
             [Validation(Required=false)]
             public List<DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList> OssBucketList { get; set; }
             public class DescribeDataLimitSetResponseBodyDataLimitSetOssBucketList : TeaModel {
                 /// <summary>
-                /// <para>The name of the OSS bucket to which the OSS object belongs.</para>
+                /// <para>The name of the OSS bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss-bucket</para>
@@ -172,7 +189,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string BucketName { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the OSS object.</para>
+                /// <para>The ID of the region where the OSS bucket is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-****</para>
@@ -184,24 +201,24 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>An array consisting of the regions in which the data assets can be scanned.</para>
+            /// <para>A list of regions that support scanning.</para>
             /// </summary>
             [NameInMap("RegionList")]
             [Validation(Required=false)]
             public List<DescribeDataLimitSetResponseBodyDataLimitSetRegionList> RegionList { get; set; }
             public class DescribeDataLimitSetResponseBodyDataLimitSetRegionList : TeaModel {
                 /// <summary>
-                /// <para>The name of the region.</para>
+                /// <para>The region name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>China (Hangzhou)</para>
+                /// <para>cn-hangzhou</para>
                 /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-****</para>
@@ -213,13 +230,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             }
 
             /// <summary>
-            /// <para>The type of service to which the data asset belongs. Valid values:</para>
+            /// <para>The type of the data asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: MaxCompute</description></item>
-            /// <item><description><b>2</b>: OSS</description></item>
-            /// <item><description><b>3</b>: AnalyticDB for MySQL</description></item>
-            /// <item><description><b>4</b>: Tablestore</description></item>
-            /// <item><description><b>5</b>: ApsaraDB RDS</description></item>
+            /// <item><description><para><b>1</b>: MaxCompute.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: OSS.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: ADS.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: OTS.</para>
+            /// </description></item>
+            /// <item><description><para><b>5</b>: RDS.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: SELF_DB.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -230,13 +254,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The service to which the data asset belongs. Valid values:</para>
+            /// <para>The code for the data asset type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ODPS</b></description></item>
-            /// <item><description><b>OSS</b></description></item>
-            /// <item><description><b>ADS</b></description></item>
-            /// <item><description><b>OTS</b></description></item>
-            /// <item><description><b>RDS</b></description></item>
+            /// <item><description><para><b>MaxCompute</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OSS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>ADS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>OTS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>RDS</b></para>
+            /// </description></item>
+            /// <item><description><para><b>SELF_DB</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -247,7 +278,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ResourceTypeCode { get; set; }
 
             /// <summary>
-            /// <para>The total number of data objects in the data assets.</para>
+            /// <para>The total number of assets found.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

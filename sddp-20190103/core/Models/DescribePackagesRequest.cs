@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribePackagesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The page number to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to which the package belongs.</para>
+        /// <para>The ID of the asset instance to which the data asset package belongs.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeInstances</b> operation to query the ID of the instance.</para>
+        /// <para>To query the list of MaxCompute data asset packages that are authorized for an SDPP connection by instance ID, call the <b>DescribeInstances</b> operation to obtain the instance ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,10 +33,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. The default value is <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy match is supported.</para>
+        /// <para>The keyword for the search. Fuzzy matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,9 +69,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service to which the package belongs.</para>
+        /// <para>The ID of the product to which the data asset package belongs.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeDataAssets</b> operation to query the ID of the service.</para>
+        /// <para>To query the list of MaxCompute data asset packages that are authorized for an SDPP connection by product ID, call the <b>DescribeDataAssets</b> operation to obtain the product ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,13 +82,18 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? ProductId { get; set; }
 
         /// <summary>
-        /// <para>The sensitivity level of the package. Valid values:</para>
+        /// <para>The ID of the risk level for the data asset package.</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: N/A, which indicates that no sensitive data is detected.</description></item>
-        /// <item><description><b>2</b>: S1, which indicates the low sensitivity level.</description></item>
-        /// <item><description><b>3</b>: S2, which indicates the medium sensitivity level.</description></item>
-        /// <item><description><b>4</b>: S3, which indicates the high sensitivity level.</description></item>
-        /// <item><description><b>5</b>: S4, which indicates the highest sensitivity level.</description></item>
+        /// <item><description><para><b>1</b>: N/A: No sensitive data is detected.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: S1: Level 1 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: S2: Level 2 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: S3: Level 3 sensitive data.</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: S4: Level 4 sensitive data.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,9 +104,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? RiskLevelId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitive data detection rule that the package hits.</para>
+        /// <para>The ID of the sensitive data detection rule that the data asset package matches.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeRules</b> operation to query the ID of the sensitive data detection rule.</para>
+        /// <para>To query the list of MaxCompute data asset packages that are authorized for an SDPP connection by the ID of a matching sensitive data detection rule, call the <b>DescribeRules</b> operation to obtain the rule ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataMaskingRunHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The type of the service to which the de-identified data belongs. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+        /// <para>The type of service to which the masked data is destined. Valid values: <b>1</b> for MaxCompute, <b>2</b> for OSS, <b>3</b> for ADS, <b>4</b> for OTS, and <b>5</b> for RDS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? DstType { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time to query for task executions. This is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1583856000000</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh_cn</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Chinese</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,9 +56,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The ID of the main task.</para>
         /// <remarks>
-        /// <para>If a task has one or more subtasks, the value of the parameter must be the ID of the task. Otherwise, leave this parameter empty.</para>
+        /// <para>If a task has subtasks, this parameter specifies the ID of the main task. Otherwise, this parameter is empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string SrcTableName { get; set; }
 
         /// <summary>
-        /// <para>The type of the service to which the data to be de-identified belongs. Valid values: <b>1</b>, <b>2</b>, <b>3</b>, <b>4</b>, and <b>5</b>. The value 1 indicates MaxCompute. The value 2 indicates Object Storage Service (OSS). The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.</para>
+        /// <para>The type of service to which the source data belongs. Valid values: <b>1</b> for MaxCompute, <b>2</b> for OSS, <b>3</b> for ADS, <b>4</b> for OTS, and <b>5</b> for RDS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? SrcType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time to query for task executions. This is a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1582992000000</para>
@@ -107,14 +109,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the de-identification task. Valid values:</para>
+        /// <para>The execution status of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>-1</b>: waiting</description></item>
-        /// <item><description><b>0</b>: being executed</description></item>
-        /// <item><description><b>1</b>: executed</description></item>
-        /// <item><description><b>2</b>: failed to be executed</description></item>
-        /// <item><description><b>3</b>: terminated</description></item>
-        /// <item><description><b>4</b>: partially failed</description></item>
+        /// <item><description><para><b>-1</b>: pending.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: running.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: stopped by user.</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: partially failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,7 +133,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the de-identification task.</para>
+        /// <para>The ID of the data masking task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mt4HBgtw1B******</para>

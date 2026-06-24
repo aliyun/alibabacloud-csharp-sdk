@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ExecDatamaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The de-identified data, which is described in a JSON string. The JSON string contains the following parameters:</para>
+        /// <para>The data after it is masked. The data is a string in JSON format and includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>dataHeaderList</b>: the names of columns that contain the de-identified data.</description></item>
-        /// <item><description><b>dataList</b>: the de-identified data. The column order of the de-identified data is the same as that indicated by the dataHeaderList parameter.</description></item>
-        /// <item><description><b>ruleList</b>: the IDs of sensitive data detection rules.</description></item>
+        /// <item><description><para><b>dataHeaderList</b>: The column names of the masked data.</para>
+        /// </description></item>
+        /// <item><description><para><b>dataList</b>: The masked data. The order of the fields corresponds to the order of the column names.</para>
+        /// </description></item>
+        /// <item><description><para><b>ruleList</b>: The sensitive data type IDs. Each ID corresponds to the unique ID of a sensitive data type that is returned by the <a href="https://help.aliyun.com/document_detail/410141.html">DescribeRules</a> operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>813BA9FA-D062-42C4-8CD5-11A7640B96E6</para>

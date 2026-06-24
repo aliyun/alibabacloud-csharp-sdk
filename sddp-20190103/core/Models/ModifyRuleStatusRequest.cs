@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class ModifyRuleStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the sensitive data detection rule.</para>
+        /// <para>The unique ID of the sensitive data detection rule.</para>
         /// <remarks>
-        /// <para>You can query the ID of the sensitive data detection rule by calling the <b>DescribeRules</b> operation.</para>
+        /// <para>To enable or disable the detection feature for a sensitive data detection rule, provide the unique ID of the rule. Call the <b>DescribeRules</b> operation to obtain the ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sensitive data detection rule. Separate multiple IDs with commas (,).</para>
+        /// <para>The unique IDs of the sensitive data detection rules. Separate multiple IDs with commas.</para>
         /// <remarks>
-        /// <para>You can query the ID of the sensitive data detection rule by calling the <b>DescribeRules</b> operation.</para>
+        /// <para>To enable or disable the detection feature for sensitive data detection rules, provide the unique IDs of the rules. Call the <b>DescribeRules</b> operation to obtain the IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,10 +36,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Ids { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,10 +52,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable or disable the sensitive data detection rule. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the detection feature for the sensitive data detection rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: disables the sensitive data detection rule.</description></item>
-        /// <item><description><b>1</b>: enables the sensitive data detection rule.</description></item>
+        /// <item><description><para><b>0</b>: Disable.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Enable.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
