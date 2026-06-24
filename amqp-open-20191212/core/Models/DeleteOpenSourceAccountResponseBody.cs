@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
-    public class UpdateInstanceServerlessSwitchResponseBody : TeaModel {
+    public class DeleteOpenSourceAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The return code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -18,13 +18,6 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("Code")]
         [Validation(Required=false)]
         public int? Code { get; set; }
-
-        /// <summary>
-        /// <para>The returned data.</para>
-        /// </summary>
-        [NameInMap("Data")]
-        [Validation(Required=false)]
-        public bool? Data { get; set; }
 
         /// <summary>
         /// <para>The returned message.</para>
@@ -40,21 +33,21 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CCBB1225-C392-480E-8C7F-D09AB2CD2***</para>
+        /// <para>035F5EEF-730F-5579-86E3-F1B394A5CBB6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The result of the request.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string Success { get; set; }
 
     }
 

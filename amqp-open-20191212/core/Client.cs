@@ -1106,6 +1106,326 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates an open-source username and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourceAccountResponse
+        /// </returns>
+        public CreateOpenSourceAccountResponse CreateOpenSourceAccountWithOptions(CreateOpenSourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOpenSourceAccount",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOpenSourceAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an open-source username and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourceAccountResponse
+        /// </returns>
+        public async Task<CreateOpenSourceAccountResponse> CreateOpenSourceAccountWithOptionsAsync(CreateOpenSourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOpenSourceAccount",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOpenSourceAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an open-source username and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourceAccountResponse
+        /// </returns>
+        public CreateOpenSourceAccountResponse CreateOpenSourceAccount(CreateOpenSourceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOpenSourceAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an open-source username and password.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourceAccountResponse
+        /// </returns>
+        public async Task<CreateOpenSourceAccountResponse> CreateOpenSourceAccountAsync(CreateOpenSourceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOpenSourceAccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourcePermissionResponse
+        /// </returns>
+        public CreateOpenSourcePermissionResponse CreateOpenSourcePermissionWithOptions(CreateOpenSourcePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configure))
+            {
+                query["Configure"] = request.Configure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Read))
+            {
+                query["Read"] = request.Read;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vhost))
+            {
+                query["Vhost"] = request.Vhost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Write))
+            {
+                query["Write"] = request.Write;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOpenSourcePermission",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOpenSourcePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourcePermissionResponse
+        /// </returns>
+        public async Task<CreateOpenSourcePermissionResponse> CreateOpenSourcePermissionWithOptionsAsync(CreateOpenSourcePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configure))
+            {
+                query["Configure"] = request.Configure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Read))
+            {
+                query["Read"] = request.Read;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vhost))
+            {
+                query["Vhost"] = request.Vhost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Write))
+            {
+                query["Write"] = request.Write;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOpenSourcePermission",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOpenSourcePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourcePermissionResponse
+        /// </returns>
+        public CreateOpenSourcePermissionResponse CreateOpenSourcePermission(CreateOpenSourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOpenSourcePermissionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOpenSourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOpenSourcePermissionResponse
+        /// </returns>
+        public async Task<CreateOpenSourcePermissionResponse> CreateOpenSourcePermissionAsync(CreateOpenSourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOpenSourcePermissionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>A queue is a buffer that stores messages. In ApsaraMQ for RabbitMQ, messages are sent to a specified exchange and then routed to a bound queue.</para>
         /// </summary>
         /// 
@@ -1890,6 +2210,270 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteExchangeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the username and password of an open-source user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourceAccountResponse
+        /// </returns>
+        public DeleteOpenSourceAccountResponse DeleteOpenSourceAccountWithOptions(DeleteOpenSourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOpenSourceAccount",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOpenSourceAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the username and password of an open-source user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourceAccountResponse
+        /// </returns>
+        public async Task<DeleteOpenSourceAccountResponse> DeleteOpenSourceAccountWithOptionsAsync(DeleteOpenSourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOpenSourceAccount",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOpenSourceAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the username and password of an open-source user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourceAccountResponse
+        /// </returns>
+        public DeleteOpenSourceAccountResponse DeleteOpenSourceAccount(DeleteOpenSourceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOpenSourceAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the username and password of an open-source user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourceAccountResponse
+        /// </returns>
+        public async Task<DeleteOpenSourceAccountResponse> DeleteOpenSourceAccountAsync(DeleteOpenSourceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOpenSourceAccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourcePermissionResponse
+        /// </returns>
+        public DeleteOpenSourcePermissionResponse DeleteOpenSourcePermissionWithOptions(DeleteOpenSourcePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vhost))
+            {
+                query["Vhost"] = request.Vhost;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOpenSourcePermission",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOpenSourcePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourcePermissionResponse
+        /// </returns>
+        public async Task<DeleteOpenSourcePermissionResponse> DeleteOpenSourcePermissionWithOptionsAsync(DeleteOpenSourcePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vhost))
+            {
+                query["Vhost"] = request.Vhost;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOpenSourcePermission",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOpenSourcePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourcePermissionResponse
+        /// </returns>
+        public DeleteOpenSourcePermissionResponse DeleteOpenSourcePermission(DeleteOpenSourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOpenSourcePermissionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an open source permission.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOpenSourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOpenSourcePermissionResponse
+        /// </returns>
+        public async Task<DeleteOpenSourcePermissionResponse> DeleteOpenSourcePermissionAsync(DeleteOpenSourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOpenSourcePermissionWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3210,6 +3794,286 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Enumerates open-source usernames and passwords.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourceAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourceAccountsResponse
+        /// </returns>
+        public ListOpenSourceAccountsResponse ListOpenSourceAccountsWithOptions(ListOpenSourceAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOpenSourceAccounts",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOpenSourceAccountsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enumerates open-source usernames and passwords.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourceAccountsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourceAccountsResponse
+        /// </returns>
+        public async Task<ListOpenSourceAccountsResponse> ListOpenSourceAccountsWithOptionsAsync(ListOpenSourceAccountsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOpenSourceAccounts",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOpenSourceAccountsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enumerates open-source usernames and passwords.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourceAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourceAccountsResponse
+        /// </returns>
+        public ListOpenSourceAccountsResponse ListOpenSourceAccounts(ListOpenSourceAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListOpenSourceAccountsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enumerates open-source usernames and passwords.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourceAccountsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourceAccountsResponse
+        /// </returns>
+        public async Task<ListOpenSourceAccountsResponse> ListOpenSourceAccountsAsync(ListOpenSourceAccountsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListOpenSourceAccountsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourcePermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourcePermissionsResponse
+        /// </returns>
+        public ListOpenSourcePermissionsResponse ListOpenSourcePermissionsWithOptions(ListOpenSourcePermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOpenSourcePermissions",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOpenSourcePermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourcePermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourcePermissionsResponse
+        /// </returns>
+        public async Task<ListOpenSourcePermissionsResponse> ListOpenSourcePermissionsWithOptionsAsync(ListOpenSourcePermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOpenSourcePermissions",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOpenSourcePermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourcePermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourcePermissionsResponse
+        /// </returns>
+        public ListOpenSourcePermissionsResponse ListOpenSourcePermissions(ListOpenSourcePermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListOpenSourcePermissionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOpenSourcePermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOpenSourcePermissionsResponse
+        /// </returns>
+        public async Task<ListOpenSourcePermissionsResponse> ListOpenSourcePermissionsAsync(ListOpenSourcePermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListOpenSourcePermissionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the online consumer clients of a specified queue.</para>
         /// </summary>
         /// 
@@ -4190,7 +5054,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// <para>Update serverless switch</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4240,7 +5104,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// <para>Update serverless switch</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4290,7 +5154,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// <para>Update serverless switch</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4308,7 +5172,7 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the elastic scaling switch of a serverless instance.</para>
+        /// <para>Update serverless switch</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4322,6 +5186,326 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateInstanceServerlessSwitchWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the username and password for open-source access.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourceAccountResponse
+        /// </returns>
+        public UpdateOpenSourceAccountResponse UpdateOpenSourceAccountWithOptions(UpdateOpenSourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOpenSourceAccount",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOpenSourceAccountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the username and password for open-source access.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourceAccountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourceAccountResponse
+        /// </returns>
+        public async Task<UpdateOpenSourceAccountResponse> UpdateOpenSourceAccountWithOptionsAsync(UpdateOpenSourceAccountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOpenSourceAccount",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOpenSourceAccountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the username and password for open-source access.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourceAccountResponse
+        /// </returns>
+        public UpdateOpenSourceAccountResponse UpdateOpenSourceAccount(UpdateOpenSourceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateOpenSourceAccountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the username and password for open-source access.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourceAccountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourceAccountResponse
+        /// </returns>
+        public async Task<UpdateOpenSourceAccountResponse> UpdateOpenSourceAccountAsync(UpdateOpenSourceAccountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateOpenSourceAccountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourcePermissionResponse
+        /// </returns>
+        public UpdateOpenSourcePermissionResponse UpdateOpenSourcePermissionWithOptions(UpdateOpenSourcePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configure))
+            {
+                query["Configure"] = request.Configure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Read))
+            {
+                query["Read"] = request.Read;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vhost))
+            {
+                query["Vhost"] = request.Vhost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Write))
+            {
+                query["Write"] = request.Write;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOpenSourcePermission",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOpenSourcePermissionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourcePermissionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourcePermissionResponse
+        /// </returns>
+        public async Task<UpdateOpenSourcePermissionResponse> UpdateOpenSourcePermissionWithOptionsAsync(UpdateOpenSourcePermissionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configure))
+            {
+                query["Configure"] = request.Configure;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Read))
+            {
+                query["Read"] = request.Read;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                query["UserName"] = request.UserName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vhost))
+            {
+                query["Vhost"] = request.Vhost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Write))
+            {
+                query["Write"] = request.Write;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOpenSourcePermission",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOpenSourcePermissionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourcePermissionResponse
+        /// </returns>
+        public UpdateOpenSourcePermissionResponse UpdateOpenSourcePermission(UpdateOpenSourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateOpenSourcePermissionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates open source permissions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOpenSourcePermissionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOpenSourcePermissionResponse
+        /// </returns>
+        public async Task<UpdateOpenSourcePermissionResponse> UpdateOpenSourcePermissionAsync(UpdateOpenSourcePermissionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateOpenSourcePermissionWithOptionsAsync(request, runtime);
         }
 
     }
