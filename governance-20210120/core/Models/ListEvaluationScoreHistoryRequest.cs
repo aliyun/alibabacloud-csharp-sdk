@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationScoreHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</para>
+        /// <para>The ID of the member accounts. This parameter is applicable only to the multi-account detection pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>176618589410****</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public long? AccountId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>By default, the historical scores that were generated in the seven days before the current date are queried.</para>
+        /// <para>The end date of the query. Format: YYYY-MM-DD.</para>
+        /// <para>By default, the historical scores from the last 7 days are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-11</para>
@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [NameInMap("EndDate")]
         [Validation(Required=false)]
         public string EndDate { get; set; }
+
+        [NameInMap("EvaluationDomain")]
+        [Validation(Required=false)]
+        public string EvaluationDomain { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -41,8 +45,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-DD format.</para>
-        /// <para>You can query the historical scores within the previous 180 days.</para>
+        /// <para>The start date of the query. Format: YYYY-MM-DD.</para>
+        /// <para>You can query records from the last 180 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-11</para>

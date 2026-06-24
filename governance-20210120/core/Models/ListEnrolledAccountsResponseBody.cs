@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public List<ListEnrolledAccountsResponseBodyEnrolledAccounts> EnrolledAccounts { get; set; }
         public class ListEnrolledAccountsResponseBodyEnrolledAccounts : TeaModel {
             /// <summary>
-            /// <para>The account ID.</para>
+            /// <para>The ID of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19534534552*****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public long? AccountUid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the baseline that is implemented.</para>
+            /// <para>The ID of the baseline that is applied.</para>
             /// 
             /// <b>Example:</b>
             /// <para>afb-bp1durvn3lgqe28v****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the settlement account.</para>
+            /// <para>The ID of the billing account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13161210500*****</para>
@@ -77,14 +77,20 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public long? PayerAccountUid { get; set; }
 
             /// <summary>
-            /// <para>The creation status. Valid values:</para>
+            /// <para>The enrollment status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The account is pending to be created.</description></item>
-            /// <item><description>Running: The account is being created.</description></item>
-            /// <item><description>Finished: The account is created.</description></item>
-            /// <item><description>Failed: The account fails to be created.</description></item>
-            /// <item><description>Scheduling: The account is being scheduled.</description></item>
-            /// <item><description>ScheduleFailed: The account fails to be scheduled.</description></item>
+            /// <item><description><para>Pending: The account is waiting to be enrolled.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The account is being enrolled.</para>
+            /// </description></item>
+            /// <item><description><para>Finished: The account is enrolled.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The account failed to be enrolled.</para>
+            /// </description></item>
+            /// <item><description><para>Scheduling: The account is being scheduled.</para>
+            /// </description></item>
+            /// <item><description><para>ScheduleFailed: The account failed to be scheduled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAALHWGpGoYCcYMxiFfmlhvh62Xr2DzYbz/SAfc*****</para>

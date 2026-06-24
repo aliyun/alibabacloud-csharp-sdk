@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class GenerateEvaluationReportResponseBody : TeaModel {
         /// <summary>
+        /// <para>The account ID for which the report is generated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>103144549568****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public long? AccountId { get; set; }
 
         /// <summary>
+        /// <para>The governance maturity evaluation score.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.7684</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public double? EvaluationScore { get; set; }
 
         /// <summary>
+        /// <para>The evaluation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-01-12T07:25:33Z</para>
         /// </summary>
@@ -34,6 +40,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string EvaluationTime { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the report generation is complete.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>true: The report generation is complete.</description></item>
+        /// <item><description>false: The report generation is not complete.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +56,13 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string Finished { get; set; }
 
         /// <summary>
+        /// <para>The report type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EvaluationAccountHtmlReport: single-account HTML report.</description></item>
+        /// <item><description>EvaluationAccountExcelReport: single-account Excel report.</description></item>
+        /// <item><description>EvaluationMultiAccountExcelReport: multi-account Excel report.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>EvaluationAccountExcelReport</para>
         /// </summary>
@@ -50,6 +71,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string ReportType { get; set; }
 
         /// <summary>
+        /// <para>The download URL of the report.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://governance-prod-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/reports-html/">https://governance-prod-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/reports-html/</a>*****</para>
         /// </summary>

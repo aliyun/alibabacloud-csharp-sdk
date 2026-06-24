@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <para>The configurations of the baseline item. The value of this parameter is a JSON string.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;EnabledServices\&quot;:[\&quot;CEN_TR\&quot;,\&quot;CDT\&quot;,\&quot;CMS\&quot;,\&quot;KMS\&quot;]}</para>
+            /// <para>{&quot;EnabledServices&quot;:[&quot;CEN_TR&quot;,&quot;CDT&quot;,&quot;CMS&quot;,&quot;KMS&quot;]}</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]

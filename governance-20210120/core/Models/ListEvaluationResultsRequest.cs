@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</para>
+        /// <para>Member account ID. This parameter is only applicable to multi-account evaluation mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>176618589410****</para>
@@ -19,19 +19,23 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public long? AccountId { get; set; }
 
+        [NameInMap("EvaluationDomain")]
+        [Validation(Required=false)]
+        public string EvaluationDomain { get; set; }
+
         /// <summary>
-        /// <para>The filter conditions.</para>
+        /// <para>Filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<ListEvaluationResultsRequestFilters> Filters { get; set; }
         public class ListEvaluationResultsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The key of the filter condition. Valid values:</para>
+            /// <para>Filter condition key. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ResourceId: the resource ID.</description></item>
-            /// <item><description>ResourceName: the name of the resource.</description></item>
-            /// <item><description>ResourceType: the resource type.</description></item>
+            /// <item><description>ResourceId: Resource ID.</description></item>
+            /// <item><description>ResourceName: Resource name.</description></item>
+            /// <item><description>ResourceType: Resource type.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The list of filter condition values.</para>
+            /// <para>List of filter condition values.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -51,6 +55,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         }
 
         /// <summary>
+        /// <para>Special evaluation code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>basic (default): Basic model (governance maturity) evaluation.</description></item>
+        /// <item><description>ack: Container construction special evaluation.</description></item>
+        /// <item><description>ai: Machine learning special evaluation.</description></item>
+        /// <item><description>nis: Network service special evaluation.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>basic</para>
         /// </summary>
@@ -59,7 +71,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string LensCode { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -69,6 +81,12 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Governance maturity evaluation scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Account (default): Performs single-account governance maturity evaluation, evaluating only the current account.</description></item>
+        /// <item><description>ResourceDirectory: Performs multi-account governance maturity evaluation, evaluating all member accounts in the resource directory. Before performing this operation, you must first upgrade to multi-account governance maturity evaluation.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ResourceDirectory</para>
         /// </summary>
@@ -77,6 +95,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string Scope { get; set; }
 
         /// <summary>
+        /// <para>Evaluation snapshot ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>es-bp1r**************</para>
         /// </summary>
@@ -85,6 +105,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
+        /// <para>Governance topic code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IdentityAndAccessManagement</para>
         /// </summary>

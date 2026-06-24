@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class GetEnrolledAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The account ID.</para>
+        /// <para>The ID of the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12868156179*****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public long? AccountUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the baseline that is implemented.</para>
+        /// <para>The ID of the baseline that is applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>afb-bp1adadfadsf***</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string BaselineId { get; set; }
 
         /// <summary>
-        /// <para>The array that contains baseline items.</para>
+        /// <para>The baseline items.</para>
         /// </summary>
         [NameInMap("BaselineItems")]
         [Validation(Required=false)]
@@ -57,10 +57,12 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether baseline item is skipped. Valid values:</para>
+            /// <para>Indicates whether the baseline item is skipped. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false</description></item>
-            /// <item><description>true</description></item>
+            /// <item><description><para>false: The baseline item is not skipped.</para>
+            /// </description></item>
+            /// <item><description><para>true: The baseline item is skipped.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         /// <summary>
         /// <para>The error message.</para>
         /// <remarks>
-        /// <para> This parameter is returned if the value of <c>Status</c> is <c>Failed</c> or <c>ScheduleFailed</c>.</para>
+        /// <para>This parameter is returned if the value of <c>Status</c> is <c>Failed</c> or <c>ScheduleFailed</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ErrorInfo")]
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CompliancePackExists</para>
+            /// <para>EntityAlreadyExists.Role</para>
             /// </summary>
             [NameInMap("Code")]
             [Validation(Required=false)]
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The compliance pack already exists.</para>
+            /// <para>The role already exists.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <para>The recommended solution.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists%5C%5C%5C%5Cu0026product=Config">https://next.api.aliyun.com/troubleshoot?q=CompliancePackExists\\\\u0026product=Config</a></para>
+            /// <para><a href="https://next.api.aliyun.com/troubleshoot?q=EntityAlreadyExists.Role%5C%5Cu0026product=Ram">https://next.api.aliyun.com/troubleshoot?q=EntityAlreadyExists.Role\\u0026product=Ram</a></para>
             /// </summary>
             [NameInMap("Recommend")]
             [Validation(Required=false)]
@@ -167,8 +169,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         /// <summary>
         /// <para>Indicates whether the initialization is complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false: The initialization is not complete.</para>
+        /// </description></item>
+        /// <item><description><para>true: The initialization is complete.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -179,7 +183,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public bool? Initialized { get; set; }
 
         /// <summary>
-        /// <para>Input parameters used to create an account.</para>
+        /// <para>The input parameters that were specified when the account was enrolled.</para>
         /// </summary>
         [NameInMap("Inputs")]
         [Validation(Required=false)]
@@ -196,7 +200,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string AccountNamePrefix { get; set; }
 
             /// <summary>
-            /// <para>The account ID.</para>
+            /// <para>The ID of the account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12868156179*****</para>
@@ -216,7 +220,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 /// <para>The configurations of the baseline item.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;governance\&quot;,\&quot;Email\&quot;:\&quot;wibud****@gmail.com\&quot;,\&quot;Mobile\&quot;:\&quot;1234\&quot;,\&quot;Position\&quot;:\&quot;Other\&quot;}]}</para>
+                /// <para>{\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;governance\&quot;,\&quot;Email\&quot;:\&quot;<a href="mailto:wibud5210+10@gmail.com">wibud5210+10@gmail.com</a>\&quot;,\&quot;Mobile\&quot;:\&quot;1234\&quot;,\&quot;Position\&quot;:\&quot;Other\&quot;}]}</para>
                 /// </summary>
                 [NameInMap("Config")]
                 [Validation(Required=false)]
@@ -233,10 +237,12 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether baseline item is skipped. Valid values:</para>
+                /// <para>Indicates whether the baseline item is skipped. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>false</description></item>
-                /// <item><description>true</description></item>
+                /// <item><description><para>false: The baseline item is not skipped.</para>
+                /// </description></item>
+                /// <item><description><para>true: The baseline item is skipped.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -279,7 +285,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the settlement account.</para>
+            /// <para>The ID of the billing account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>19534534552*****</para>
@@ -330,7 +336,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public long? MasterAccountUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the settlement account.</para>
+        /// <para>The ID of the billing account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19534534552*****</para>
@@ -340,7 +346,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public long? PayerAccountUid { get; set; }
 
         /// <summary>
-        /// <para>The progress of the applying the baseline to the account.</para>
+        /// <para>The progress of applying the baseline to the account.</para>
         /// </summary>
         [NameInMap("Progress")]
         [Validation(Required=false)]
@@ -359,10 +365,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <summary>
             /// <para>The status of applying the baseline to the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The baseline is pending to be applied to the account.</description></item>
-            /// <item><description>Running: The baseline is being applied to the account.</description></item>
-            /// <item><description>Finished: : The baseline is applied to the account.</description></item>
-            /// <item><description>Failed: : The baseline fails to be applied to the account.</description></item>
+            /// <item><description><para>Pending: The baseline is waiting to be applied to the account.</para>
+            /// </description></item>
+            /// <item><description><para>Running: The baseline is being applied to the account.</para>
+            /// </description></item>
+            /// <item><description><para>Finished: The baseline is applied to the account.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The baseline failed to be applied to the account.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -387,12 +397,18 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         /// <summary>
         /// <para>The status of the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending: The account is pending to be created.</description></item>
-        /// <item><description>Running: The account is being created.</description></item>
-        /// <item><description>Finished: The account is created.</description></item>
-        /// <item><description>Failed: The account fails to be created.</description></item>
-        /// <item><description>Scheduling: The account is being scheduled.</description></item>
-        /// <item><description>ScheduleFailed: The account fails to be scheduled.</description></item>
+        /// <item><description><para>Pending: The account is waiting to be enrolled.</para>
+        /// </description></item>
+        /// <item><description><para>Running: The account is being enrolled.</para>
+        /// </description></item>
+        /// <item><description><para>Finished: The account is enrolled.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The account failed to be enrolled.</para>
+        /// </description></item>
+        /// <item><description><para>Scheduling: The account is being scheduled.</para>
+        /// </description></item>
+        /// <item><description><para>ScheduleFailed: The account failed to be scheduled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

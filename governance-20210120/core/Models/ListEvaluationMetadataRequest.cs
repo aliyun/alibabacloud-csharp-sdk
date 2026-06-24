@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationMetadataRequest : TeaModel {
+        [NameInMap("EvaluationDomain")]
+        [Validation(Required=false)]
+        public string EvaluationDomain { get; set; }
+
         /// <summary>
-        /// <para>The language. The information is returned in the specified language. Valid values:</para>
+        /// <para>The language type. Governance evaluation definitions are returned in this language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>en: English</description></item>
-        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,6 +27,18 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        /// <summary>
+        /// <para>The specialized evaluation code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>basic (default): foundation model (governance maturity) evaluation.</description></item>
+        /// <item><description>ack: container building specialized evaluation.</description></item>
+        /// <item><description>ai: machine learning specialized evaluation.</description></item>
+        /// <item><description>nis: network service specialized evaluation.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ack</para>
+        /// </summary>
         [NameInMap("LensCode")]
         [Validation(Required=false)]
         public string LensCode { get; set; }
@@ -38,6 +54,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The governance topic code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ResourceUtilization</para>
         /// </summary>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public List<ListAccountFactoryBaselinesResponseBodyBaselines> Baselines { get; set; }
         public class ListAccountFactoryBaselinesResponseBodyBaselines : TeaModel {
             /// <summary>
-            /// <para>The baseline ID.</para>
+            /// <para>The ID of the baseline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>afb-bp1durvn3lgqe28v****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string BaselineName { get; set; }
 
             /// <summary>
-            /// <para>The time at which the baseline was created.</para>
+            /// <para>The time when the baseline was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-30T09:09:28Z</para>
@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <summary>
             /// <para>The type of the baseline. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>System: default baseline.</description></item>
-            /// <item><description>Custom: custom baseline.</description></item>
+            /// <item><description><para>System: The baseline is a default baseline.</para>
+            /// </description></item>
+            /// <item><description><para>Custom: The baseline is a custom baseline.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

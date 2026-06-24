@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public List<BatchEnrollAccountsRequestAccounts> Accounts { get; set; }
         public class BatchEnrollAccountsRequestAccounts : TeaModel {
             /// <summary>
-            /// <para>The account ID. This parameter is required.</para>
+            /// <para>The ID of the account to enroll. This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12868156179****</para>
@@ -29,8 +29,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         }
 
         /// <summary>
-        /// <para>The baseline ID.</para>
-        /// <para>If this parameter is left empty, the default baseline is used.</para>
+        /// <para>The ID of the baseline. If you leave this parameter empty, the default baseline is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>afb-bp1durvn3lgqe28v****</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
         /// <summary>
         /// <para>The baseline items.</para>
-        /// <para>If this parameter is specified, the configurations of the baseline items are merged with the baseline applied to the specified account. The configurations of the same baseline items are subject to the configurations of this parameter. We recommend that you leave this parameter empty and configure the <c>BaselineId</c> parameter to specify an account baseline and apply the configurations of the account baseline to the account.</para>
+        /// <para>If you specify this parameter, the baseline item configurations are merged with the configurations of the baseline specified by <c>BaselineId</c>. For duplicate baseline items, the configurations in this parameter take precedence. We recommend that you leave this parameter empty and use <c>BaselineId</c> to apply baseline configurations.</para>
         /// </summary>
         [NameInMap("BaselineItems")]
         [Validation(Required=false)]
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <para>The configurations of the baseline item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Notifications\&quot;:[{\&quot;GroupKey\&quot;:\&quot;account_msg\&quot;,\&quot;Contacts\&quot;:[{\&quot;Name\&quot;:\&quot;aa\&quot;}],\&quot;PmsgStatus\&quot;:1,\&quot;EmailStatus\&quot;:1,\&quot;SmsStatus\&quot;:1}]}</para>
+            /// <para>{&quot;Notifications&quot;:[{&quot;GroupKey&quot;:&quot;account_msg&quot;,&quot;Contacts&quot;:[{&quot;Name&quot;:&quot;aa&quot;}],&quot;PmsgStatus&quot;:1,&quot;EmailStatus&quot;:1,&quot;SmsStatus&quot;:1}]}</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
@@ -70,8 +69,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <summary>
             /// <para>Specifies whether to skip the baseline item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>false</description></item>
-            /// <item><description>true</description></item>
+            /// <item><description><para>false (default): does not skip the baseline item.</para>
+            /// </description></item>
+            /// <item><description><para>true: skips the baseline item.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <para>The configurations of the baseline item. The value of this parameter is a JSON string.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;EnabledServices\&quot;:[\&quot;CEN_TR\&quot;,\&quot;CDT\&quot;,\&quot;CMS\&quot;,\&quot;KMS\&quot;]}</para>
+            /// <para>{&quot;EnabledServices&quot;:[&quot;CEN_TR&quot;,&quot;CDT&quot;,&quot;CMS&quot;,&quot;KMS&quot;]}</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
@@ -61,6 +61,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
         /// <summary>
         /// <para>The name of the baseline.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom baseline</para>
         /// </summary>
         [NameInMap("BaselineName")]
         [Validation(Required=false)]
@@ -68,6 +71,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 
         /// <summary>
         /// <para>The description of the baseline.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Default baseline</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

@@ -19,6 +19,13 @@ namespace AlibabaCloud.SDK.Governance20210120
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"eu-central-1", "governance.eu-central-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "governance.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-hangzhou", "governance.cn-hangzhou.aliyuncs.com"},
+                {"ap-southeast-1", "governance.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("governance", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -44,8 +51,8 @@ namespace AlibabaCloud.SDK.Governance20210120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
-        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.
+        /// Account enrollment is an asynchronous process. After the accounts are enrolled, the account factory baseline is applied to each account. To query the enrollment details and check the baseline application result, call <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -104,8 +111,8 @@ namespace AlibabaCloud.SDK.Governance20210120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
-        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.
+        /// Account enrollment is an asynchronous process. After the accounts are enrolled, the account factory baseline is applied to each account. To query the enrollment details and check the baseline application result, call <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -164,8 +171,8 @@ namespace AlibabaCloud.SDK.Governance20210120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
-        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.
+        /// Account enrollment is an asynchronous process. After the accounts are enrolled, the account factory baseline is applied to each account. To query the enrollment details and check the baseline application result, call <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -188,8 +195,8 @@ namespace AlibabaCloud.SDK.Governance20210120
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to apply an account baseline to existing resource accounts.
-        /// Accounts are enrolled in the account factory in asynchronous mode. After a resource account is created, an account baseline is applied to the account. You can call the <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a> operation to query the details of the account enrolled in the account factory and check whether the account baseline is applied to the account.</para>
+        /// <para>Applies an account baseline to multiple existing resource accounts at a time.
+        /// Account enrollment is an asynchronous process. After the accounts are enrolled, the account factory baseline is applied to each account. To query the enrollment details and check the baseline application result, call <a href="https://help.aliyun.com/document_detail/609062.html">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -479,13 +486,13 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enrolls an account. You can create a new account or manage an existing account in the account factory.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account in Account Factory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-        /// Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account, and applies the account factory baseline to the account.
+        /// Account enrollment is an asynchronous process. After an account is created, the account factory baseline is applied to the account. To query the enrollment details and check the baseline application result, call <a href="~~GetEnrolledAccount~~">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -569,13 +576,13 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enrolls an account. You can create a new account or manage an existing account in the account factory.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account in Account Factory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-        /// Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account, and applies the account factory baseline to the account.
+        /// Account enrollment is an asynchronous process. After an account is created, the account factory baseline is applied to the account. To query the enrollment details and check the baseline application result, call <a href="~~GetEnrolledAccount~~">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -659,13 +666,13 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enrolls an account. You can create a new account or manage an existing account in the account factory.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account in Account Factory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-        /// Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account, and applies the account factory baseline to the account.
+        /// Account enrollment is an asynchronous process. After an account is created, the account factory baseline is applied to the account. To query the enrollment details and check the baseline application result, call <a href="~~GetEnrolledAccount~~">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -683,13 +690,13 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enrolls an account. You can create a new account or manage an existing account in the account factory.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account in Account Factory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this API operation to create a new account or manage an existing account and apply the account baseline to the account.
-        /// Accounts are created in asynchronous mode. After you create an account, you can apply the account baseline to the account. You can call the <a href="~~GetEnrolledAccount~~">GetEnrolledAccount API</a> operation to view the details about the account to obtain the result of applying the account baseline to the account.</para>
+        /// <para>Creates a new resource account or enrolls an existing resource account, and applies the account factory baseline to the account.
+        /// Account enrollment is an asynchronous process. After an account is created, the account factory baseline is applied to the account. To query the enrollment details and check the baseline application result, call <a href="~~GetEnrolledAccount~~">GetEnrolledAccount</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -707,8 +714,18 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成治理检测报告</para>
+        /// <para>Generate Governance Evaluation Report</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a governance evaluation report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous API. You can check the <c>Finished</c> field in the response to determine the report generation status.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GenerateEvaluationReportRequest
@@ -737,6 +754,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsShrink))
             {
                 query["AccountIds"] = request.AccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -767,8 +788,18 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成治理检测报告</para>
+        /// <para>Generate Governance Evaluation Report</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a governance evaluation report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous API. You can check the <c>Finished</c> field in the response to determine the report generation status.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GenerateEvaluationReportRequest
@@ -797,6 +828,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsShrink))
             {
                 query["AccountIds"] = request.AccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -827,8 +862,18 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成治理检测报告</para>
+        /// <para>Generate Governance Evaluation Report</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a governance evaluation report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous API. You can check the <c>Finished</c> field in the response to determine the report generation status.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateEvaluationReportRequest
@@ -845,8 +890,18 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成治理检测报告</para>
+        /// <para>Generate Governance Evaluation Report</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Generates a governance evaluation report.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous API. You can check the <c>Finished</c> field in the response to determine the report generation status.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateEvaluationReportRequest
@@ -1551,7 +1606,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
+        /// <para>Retrieves information about all available governance evaluation items, including names, IDs, descriptions, stages, resource detail metadata, and remediation guidance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1568,6 +1623,10 @@ namespace AlibabaCloud.SDK.Governance20210120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
@@ -1605,7 +1664,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
+        /// <para>Retrieves information about all available governance evaluation items, including names, IDs, descriptions, stages, resource detail metadata, and remediation guidance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1622,6 +1681,10 @@ namespace AlibabaCloud.SDK.Governance20210120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
@@ -1659,7 +1722,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
+        /// <para>Retrieves information about all available governance evaluation items, including names, IDs, descriptions, stages, resource detail metadata, and remediation guidance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1677,7 +1740,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all available information about check items in a governance maturity check, including the name, ID, description, stage, resource metadata, and fixing guide.</para>
+        /// <para>Retrieves information about all available governance evaluation items, including names, IDs, descriptions, stages, resource detail metadata, and remediation guidance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1695,7 +1758,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
+        /// <para>Retrieves non-compliant resource information for a specified check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1719,6 +1782,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
             {
                 query["Date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
@@ -1765,7 +1832,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
+        /// <para>Retrieves non-compliant resource information for a specified check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1789,6 +1856,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
             {
                 query["Date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
@@ -1835,7 +1906,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
+        /// <para>Retrieves non-compliant resource information for a specified check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1853,7 +1924,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the non-compliant resource information of a check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
+        /// <para>Retrieves non-compliant resource information for a specified check item, including the name, ID, category, type, region, and related metadata of non-compliant resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1871,7 +1942,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result and status of a governance check.</para>
+        /// <para>Get governance evaluation results and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1891,6 +1962,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
             {
@@ -1937,7 +2012,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result and status of a governance check.</para>
+        /// <para>Get governance evaluation results and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1957,6 +2032,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
             {
@@ -2003,7 +2082,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result and status of a governance check.</para>
+        /// <para>Get governance evaluation results and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2021,7 +2100,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the result and status of a governance check.</para>
+        /// <para>Get governance evaluation results and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2039,7 +2118,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical scores of a governance maturity check.</para>
+        /// <para>Retrieves the historical scores of governance detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2063,6 +2142,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2093,7 +2176,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical scores of a governance maturity check.</para>
+        /// <para>Retrieves the historical scores of governance detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2117,6 +2200,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
             {
                 query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -2147,7 +2234,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical scores of a governance maturity check.</para>
+        /// <para>Retrieves the historical scores of governance detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2165,7 +2252,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical scores of a governance maturity check.</para>
+        /// <para>Retrieves the historical scores of governance detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +2270,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a governance maturity check.</para>
+        /// <para>Runs a Cloud Governance Center governance check.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2209,6 +2296,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricIdsShrink))
             {
@@ -2243,7 +2334,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a governance maturity check.</para>
+        /// <para>Runs a Cloud Governance Center governance check.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2269,6 +2360,10 @@ namespace AlibabaCloud.SDK.Governance20210120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
             {
                 query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EvaluationDomain))
+            {
+                query["EvaluationDomain"] = request.EvaluationDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricIdsShrink))
             {
@@ -2303,7 +2398,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a governance maturity check.</para>
+        /// <para>Runs a Cloud Governance Center governance check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2321,7 +2416,7 @@ namespace AlibabaCloud.SDK.Governance20210120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a governance maturity check.</para>
+        /// <para>Runs a Cloud Governance Center governance check.</para>
         /// </summary>
         /// 
         /// <param name="request">

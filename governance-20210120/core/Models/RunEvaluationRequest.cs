@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class RunEvaluationRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member. This parameter takes effect only when a multi-account governance maturity check is performed.</para>
+        /// <para>The ID of the member account. This parameter is applicable only to the multi-account check pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>176618589410****</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         [Validation(Required=false)]
         public long? AccountId { get; set; }
 
+        [NameInMap("EvaluationDomain")]
+        [Validation(Required=false)]
+        public string EvaluationDomain { get; set; }
+
         /// <summary>
-        /// <para>The IDs of the check items to be checked.</para>
+        /// <para>The list of check item IDs to check.</para>
         /// </summary>
         [NameInMap("MetricIds")]
         [Validation(Required=false)]
@@ -37,10 +41,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The check range of the governance maturity check. Valid values:</para>
+        /// <para>The scope of the governance maturity check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Account (default): A single-account governance maturity check is performed to check only the Alibaba Cloud account that you use to access Cloud Governance Center.</description></item>
-        /// <item><description>ResourceDirectory: A multi-account governance maturity check is performed to check all members within a resource directory. Before you perform a multi-account governance maturity check, you must enable the multi-account governance maturity check feature.</description></item>
+        /// <item><description>Account (default): runs a single-account governance maturity check that checks only the current account.</description></item>
+        /// <item><description>ResourceDirectory: runs a multi-account governance maturity check that checks all member accounts in the resource directory. Before you perform this operation, upgrade to the multi-account governance maturity check.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

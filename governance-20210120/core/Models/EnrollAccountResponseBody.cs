@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class EnrollAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The account ID.</para>
+        /// <para>The ID of the enrolled account.</para>
+        /// <para>colspan=&quot;1&quot; rowspan=&quot;1&quot;&gt;</para>
+        /// <para>143165363236\<em>\</em>\<em>\</em></para>
         /// 
         /// <b>Example:</b>
         /// <para>143165363236****</para>

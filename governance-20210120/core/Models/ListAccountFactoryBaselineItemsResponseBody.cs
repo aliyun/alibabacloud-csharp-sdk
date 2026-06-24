@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public List<ListAccountFactoryBaselineItemsResponseBodyBaselineItems> BaselineItems { get; set; }
         public class ListAccountFactoryBaselineItemsResponseBodyBaselineItems : TeaModel {
             /// <summary>
-            /// <para>The dependency of the baseline item.</para>
+            /// <para>The dependencies of the baseline item.</para>
             /// </summary>
             [NameInMap("DependsOn")]
             [Validation(Required=false)]

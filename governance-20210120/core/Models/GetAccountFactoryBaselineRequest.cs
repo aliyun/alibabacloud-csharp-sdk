@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class GetAccountFactoryBaselineRequest : TeaModel {
         /// <summary>
-        /// <para>The baseline ID.</para>
+        /// <para>The ID of the baseline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>afb-bp1nf0enuzb89az*****</para>

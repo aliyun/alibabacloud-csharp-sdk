@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class GetEnrolledAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The account ID.</para>
+        /// <para>The ID of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

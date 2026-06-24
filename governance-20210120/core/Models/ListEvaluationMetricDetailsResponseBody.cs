@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationMetricDetailsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The date.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2026-01-01</para>
+        /// </summary>
         [NameInMap("Date")]
         [Validation(Required=false)]
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token used to retrieve the next page of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAGEaXR18y1rqykZHIqRuBejOqED4S3Xne33c7zbn****</para>
@@ -34,19 +40,19 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the non-compliant resources.</para>
+        /// <para>The details of non-compliant resources.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<ListEvaluationMetricDetailsResponseBodyResources> Resources { get; set; }
         public class ListEvaluationMetricDetailsResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The compliance status of the resource. Valid values:</para>
+            /// <para>The compliance status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NonCompliant: non-compliant.</description></item>
             /// <item><description>Excluded: ignored.</description></item>
-            /// <item><description>PendingExclusion: to be ignored.</description></item>
-            /// <item><description>PendingInclusion: to be unignored.</description></item>
+            /// <item><description>PendingExclusion: ignored but not yet effective.</description></item>
+            /// <item><description>PendingInclusion: unignored but not yet effective.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,9 +73,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The check results further analyzed by auxiliary decision-making.</para>
+            /// <para>The decision assistance classification.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the check item supports the auxiliary decision-making feature.</para>
+            /// <para>This parameter is returned only for check items that support decision assistance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string ResourceClassification { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26435103783237****</para>
@@ -90,7 +96,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource.</para>
+            /// <para>The resource name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the resource.</para>
+            /// <para>The Alibaba Cloud account ID to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>176618589410****</para>
@@ -110,14 +116,14 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             public long? ResourceOwnerId { get; set; }
 
             /// <summary>
-            /// <para>The attributes of the resource.</para>
+            /// <para>The list of additional resource properties.</para>
             /// </summary>
             [NameInMap("ResourceProperties")]
             [Validation(Required=false)]
             public List<ListEvaluationMetricDetailsResponseBodyResourcesResourceProperties> ResourceProperties { get; set; }
             public class ListEvaluationMetricDetailsResponseBodyResourcesResourceProperties : TeaModel {
                 /// <summary>
-                /// <para>The name of the resource attribute.</para>
+                /// <para>The name of the resource property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DisplayName</para>
@@ -127,10 +133,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string PropertyName { get; set; }
 
                 /// <summary>
-                /// <para>The value of the resource attribute.</para>
+                /// <para>The value of the resource property.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>example</para>
+                /// <para>TestAccount</para>
                 /// </summary>
                 [NameInMap("PropertyValue")]
                 [Validation(Required=false)]
@@ -139,7 +145,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             }
 
             /// <summary>
-            /// <para>The type of the resource.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACS::RAM::User</para>

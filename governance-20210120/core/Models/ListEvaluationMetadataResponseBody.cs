@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class ListEvaluationMetadataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The metadata of a governance maturity check.</para>
+        /// <para>The governance evaluation definition metadata.</para>
         /// </summary>
         [NameInMap("EvaluationMetadata")]
         [Validation(Required=false)]
         public List<ListEvaluationMetadataResponseBodyEvaluationMetadata> EvaluationMetadata { get; set; }
         public class ListEvaluationMetadataResponseBodyEvaluationMetadata : TeaModel {
             /// <summary>
-            /// <para>The metadata objects of a specific metadata type.</para>
+            /// <para>The list of metadata objects under a specific metadata type.</para>
             /// </summary>
             [NameInMap("Metadata")]
             [Validation(Required=false)]
             public List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata> Metadata { get; set; }
             public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadata : TeaModel {
                 /// <summary>
-                /// <para>The category of the check item.</para>
+                /// <para>The pillar to which the evaluation item belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Security</para>
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The description of the check item.</para>
+                /// <para>The description of the evaluation item.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>If you use an AccessKey pair of an Alibaba Cloud account, you have full permissions on the resources of the account. You cannot set limits on the account, such as setting limits on source IP addresses or access duration. If the AccessKey pair is leaked, resources within the account are exposed to high security risks. If your Alibaba Cloud account has an existing AccessKey pair, the check result is Non-compliant.</para>
+                /// <para>If you use an AccessKey pair of an Alibaba Cloud account, you have full permissions that cannot be restricted by conditions such as source IP address or access time. Once leaked, the risk is extremely high. If an AccessKey pair exists for the Alibaba Cloud account, it is considered non-compliant.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the check item.</para>
+                /// <para>The display name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>An AccessKey pair is enabled for the Alibaba Cloud account.</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the metadata.</para>
+                /// <para>The random ID of the metadata.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pxgtda****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The governance level of the check item.</para>
+                /// <para>The recommended governance level of the evaluation item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>High</para>
@@ -74,30 +74,30 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string RecommendationLevel { get; set; }
 
                 /// <summary>
-                /// <para>The metadata of the fixing task.</para>
+                /// <para>The remediation metadata.</para>
                 /// </summary>
                 [NameInMap("RemediationMetadata")]
                 [Validation(Required=false)]
                 public ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadata RemediationMetadata { get; set; }
                 public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadata : TeaModel {
                     /// <summary>
-                    /// <para>The fixing items.</para>
+                    /// <para>The remediation item.</para>
                     /// </summary>
                     [NameInMap("Remediation")]
                     [Validation(Required=false)]
                     public List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediation> Remediation { get; set; }
                     public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediation : TeaModel {
                         /// <summary>
-                        /// <para>The fixing operations.</para>
+                        /// <para>The remediation actions.</para>
                         /// </summary>
                         [NameInMap("Actions")]
                         [Validation(Required=false)]
                         public List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions> Actions { get; set; }
                         public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActions : TeaModel {
                             /// <summary>
-                            /// <para>The fixing method.</para>
+                            /// <para>The remediation method category.</para>
                             /// <remarks>
-                            /// <para> This parameter is returned only if the value of <c>RemediationType</c> is <c>Analysis</c>.</para>
+                            /// <para>This parameter is returned only when <c>RemediationType</c> is set to <c>Analysis</c>.</para>
                             /// </remarks>
                             /// 
                             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                             public string Classification { get; set; }
 
                             /// <summary>
-                            /// <para>The fixing cost.</para>
+                            /// <para>The remediation cost.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>You are not charged for this operation.</para>
@@ -118,37 +118,37 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                             public string CostDescription { get; set; }
 
                             /// <summary>
-                            /// <para>The description of the fixing item.</para>
+                            /// <para>The remediation description.</para>
                             /// <remarks>
-                            /// <para> This parameter is returned only if the value of <c>RemediationType</c> is <c>Analysis</c>.</para>
+                            /// <para>This parameter is returned only when <c>RemediationType</c> is set to <c>Analysis</c>.</para>
                             /// </remarks>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>Console logon is enabled for the RAM user. The RAM user owns an AccessKey pair that is never used.</para>
+                            /// <para>A RAM user has both console logon and an AccessKey pair enabled, but the AccessKey pair has never been used.</para>
                             /// </summary>
                             [NameInMap("Description")]
                             [Validation(Required=false)]
                             public string Description { get; set; }
 
                             /// <summary>
-                            /// <para>The content of the fixing items.</para>
+                            /// <para>The remediation guidance.</para>
                             /// </summary>
                             [NameInMap("Guidance")]
                             [Validation(Required=false)]
                             public List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActionsGuidance> Guidance { get; set; }
                             public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataRemediationMetadataRemediationActionsGuidance : TeaModel {
                                 /// <summary>
-                                /// <para>The display name of the fixing button.</para>
+                                /// <para>The display name of the remediation step button.</para>
                                 /// 
                                 /// <b>Example:</b>
-                                /// <para>Manual fixing</para>
+                                /// <para>Manual fix</para>
                                 /// </summary>
                                 [NameInMap("ButtonName")]
                                 [Validation(Required=false)]
                                 public string ButtonName { get; set; }
 
                                 /// <summary>
-                                /// <para>The navigation URL of the fixing button.</para>
+                                /// <para>The URL that the remediation step button links to.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para><a href="https://ram.console.aliyun.com/users">https://ram.console.aliyun.com/users</a></para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                                 public string ButtonRef { get; set; }
 
                                 /// <summary>
-                                /// <para>The fixing procedure.</para>
+                                /// <para>The content of the remediation step.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>You must replace the AccessKey pair of your Alibaba Cloud account. To do so, perform the following steps:</br>1. Log on to the RAM console. In the left-side navigation pane, choose Identities &gt; Users. On the Users page, click Create User.</br>2. On the Create User page, enter a logon name and select OpenAPI Access for the Access Mode parameter.</br>3. After the RAM user is created, save the AccessKey pair. Then, find the user that you created on the Users page and click Add Permissions in the Actions column. In the Grant Permission panel, find the AdministratorAccess policy and attach it to the RAM user.</br>4. In a program, replace the AccessKey pair of the Alibaba Cloud account with the AccessKey pair of the RAM user created in the previous step and check whether the program runs as expected in the test environment.</br>5. If the program runs as expected, publish the program to the production environment and disable the previous AccessKey pair of your Alibaba Cloud account. Then, check whether the program runs as expected.</br>6. If the program runs as expected, delete the disabled AccessKey pair after the specified period of time, such as 90 days.</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                                 public string Content { get; set; }
 
                                 /// <summary>
-                                /// <para>The title of the fixing procedure.</para>
+                                /// <para>The title of the remediation step.</para>
                                 /// 
                                 /// <b>Example:</b>
                                 /// <para>Scenario 3: AccessKey pair that is used within the last 90 days</para>
@@ -180,19 +180,19 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                             }
 
                             /// <summary>
-                            /// <para>The usage notes of the fixing item.</para>
+                            /// <para>The remediation precautions.</para>
                             /// 
                             /// <b>Example:</b>
-                            /// <para>The BestPracticesForIdentityAndPermissions compliance package is enabled in Cloud Config to check the settings and usage of the AccessKey pair, Alibaba Cloud account, and RAM users.</para>
+                            /// <para>This governance item enables the Best Practices for AccessKey and Permission Governance compliance package in Cloud Config to check the settings and usage of AccessKey pairs, Alibaba Cloud accounts, and RAM users.</para>
                             /// </summary>
                             [NameInMap("Notice")]
                             [Validation(Required=false)]
                             public string Notice { get; set; }
 
                             /// <summary>
-                            /// <para>The fixing suggestion.</para>
+                            /// <para>The remediation suggestion.</para>
                             /// <remarks>
-                            /// <para> This parameter is returned only if the value of <c>RemediationType</c> is <c>Analysis</c>.</para>
+                            /// <para>This parameter is returned only when <c>RemediationType</c> is set to <c>Analysis</c>.</para>
                             /// </remarks>
                             /// 
                             /// <b>Example:</b>
@@ -205,11 +205,11 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                         }
 
                         /// <summary>
-                        /// <para>The type of the fixing method. Valid values:</para>
+                        /// <para>The remediation type. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Manual: manual fixing</description></item>
-                        /// <item><description>QuickFix: quick fixing</description></item>
-                        /// <item><description>Analysis: auxiliary decision-making</description></item>
+                        /// <item><description>Manual: Manual remediation.</description></item>
+                        /// <item><description>QuickFix: Quick fix.</description></item>
+                        /// <item><description>Analysis: Assisted decision-making.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -224,31 +224,31 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 }
 
                 /// <summary>
-                /// <para>The metadata of the checked resources.</para>
+                /// <para>The resource metadata of the evaluation item.</para>
                 /// </summary>
                 [NameInMap("ResourceMetadata")]
                 [Validation(Required=false)]
                 public ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadata ResourceMetadata { get; set; }
                 public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadata : TeaModel {
                     /// <summary>
-                    /// <para>The metadata of the resource properties.</para>
+                    /// <para>The resource property metadata.</para>
                     /// </summary>
                     [NameInMap("ResourcePropertyMetadata")]
                     [Validation(Required=false)]
                     public List<ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadataResourcePropertyMetadata> ResourcePropertyMetadata { get; set; }
                     public class ListEvaluationMetadataResponseBodyEvaluationMetadataMetadataResourceMetadataResourcePropertyMetadata : TeaModel {
                         /// <summary>
-                        /// <para>The display name of the resource property.</para>
+                        /// <para>The display name of the property.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>AccessKey Pair Last Used At</para>
+                        /// <para>Last time the AccessKey pair was used</para>
                         /// </summary>
                         [NameInMap("DisplayName")]
                         [Validation(Required=false)]
                         public string DisplayName { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the resource property.</para>
+                        /// <para>The resource property name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>AkLastUsedTime</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                         public string PropertyName { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the resource property.</para>
+                        /// <para>The resource property type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>String</para>
@@ -272,10 +272,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 }
 
                 /// <summary>
-                /// <para>The scope of the check item. Valid values:</para>
+                /// <para>The scope to which the evaluation item belongs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Account: the check item in a single-account governance maturity check</description></item>
-                /// <item><description>ResourceDirectory: the check item in a multi-account governance maturity check</description></item>
+                /// <item><description>Account: single-account evaluation item.</description></item>
+                /// <item><description>ResourceDirectory: multi-account evaluation item.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -286,10 +286,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string Scope { get; set; }
 
                 /// <summary>
-                /// <para>The status of the check item. Valid values:</para>
+                /// <para>The status of the evaluation item. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Released: The check item is released.</description></item>
-                /// <item><description>Beta: The check item is pre-released.</description></item>
+                /// <item><description>Released: officially released.</description></item>
+                /// <item><description>Beta: pre-release.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -300,6 +300,8 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
                 public string Stage { get; set; }
 
                 /// <summary>
+                /// <para>The governance topic code to which the evaluation item belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ResourceUtilization</para>
                 /// </summary>
@@ -310,9 +312,9 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             }
 
             /// <summary>
-            /// <para>The type of the metadata. Valid values:</para>
+            /// <para>The metadata type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Metric: the check item</description></item>
+            /// <item><description>Metric: evaluation item.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

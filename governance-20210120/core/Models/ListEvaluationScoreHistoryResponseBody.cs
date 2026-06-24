@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The historical scores.</para>
+        /// <para>The historical detection scores.</para>
         /// </summary>
         [NameInMap("ScoreHistory")]
         [Validation(Required=false)]
         public ListEvaluationScoreHistoryResponseBodyScoreHistory ScoreHistory { get; set; }
         public class ListEvaluationScoreHistoryResponseBodyScoreHistory : TeaModel {
             /// <summary>
-            /// <para>The historical scores.</para>
+            /// <para>The historical detection scores.</para>
             /// </summary>
             [NameInMap("TotalScoreHistory")]
             [Validation(Required=false)]
             public List<ListEvaluationScoreHistoryResponseBodyScoreHistoryTotalScoreHistory> TotalScoreHistory { get; set; }
             public class ListEvaluationScoreHistoryResponseBodyScoreHistoryTotalScoreHistory : TeaModel {
                 /// <summary>
-                /// <para>The time when the score was generated. The time is in UTC.</para>
+                /// <para>The time when the score was generated, in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-06-30T03:34:02Z</para>

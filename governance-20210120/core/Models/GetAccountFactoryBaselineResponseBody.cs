@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
 {
     public class GetAccountFactoryBaselineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The baseline ID.</para>
+        /// <para>The ID of the baseline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>afb-bp16ae2k8a3yo3d*****</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
             /// <para>The name of the baseline item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1097526274671790</para>
+            /// <para>ACS-BP_ACCOUNT_FACTORY_VPC</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -102,8 +102,10 @@ namespace AlibabaCloud.SDK.Governance20210120.Models
         /// <summary>
         /// <para>The type of the baseline. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>System: default baseline.</description></item>
-        /// <item><description>Custom: custom baseline.</description></item>
+        /// <item><description><para>System: The baseline is a default baseline.</para>
+        /// </description></item>
+        /// <item><description><para>Custom: The baseline is a custom baseline.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
