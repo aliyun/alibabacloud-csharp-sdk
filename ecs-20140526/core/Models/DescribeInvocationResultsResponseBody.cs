@@ -10,53 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInvocationResultsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution status of the command task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Running:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</para>
-        /// </description></item>
-        /// <item><description><para>One-time task: If the command is being run on instances, the execution state is Running.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Finished:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Scheduled task: The execution state can never be Finished.</para>
-        /// </description></item>
-        /// <item><description><para>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Success:</para>
-        /// <list type="bullet">
-        /// <item><description><para>One-time task: The execution is complete, and the exit code is 0.</para>
-        /// </description></item>
-        /// <item><description><para>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Failed:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Scheduled task: The execution state can never be Failed.</para>
-        /// </description></item>
-        /// <item><description><para>One-time task: The execution fails on all instances.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>PartialFailed:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Scheduled task: The execution state can never be PartialFailed.</para>
-        /// </description></item>
-        /// <item><description><para>One-time task: The execution fails on some instances.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Stopped: The task is stopped.</para>
-        /// </description></item>
-        /// <item><description><para>Stopping: The task is being stopped.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The collection of command execution results.</para>
         /// </summary>
         [NameInMap("Invocation")]
         [Validation(Required=false)]
@@ -191,9 +145,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <remarks>
-            /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
-            /// </remarks>
+            /// <para>The pagination token returned in this call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AAAAAdDWBF2</para>
@@ -203,14 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The encoding mode of the <c>CommandContent</c> and <c>Output</c> values in the response. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>PlainText: returns the original command content and command output.</para>
-            /// </description></item>
-            /// <item><description><para>Base64: returns the Base64-encoded command content and command output.</para>
-            /// </description></item>
-            /// </list>
-            /// <para>Default value: Base64.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -220,14 +165,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to return the results of historical scheduled executions. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</para>
-            /// </description></item>
-            /// <item><description><para>false: does not return the results of historical scheduled executions.</para>
-            /// </description></item>
-            /// </list>
-            /// <para>Default value: false.</para>
+            /// <para>The number of entries per page in the paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -237,9 +175,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <remarks>
-            /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
-            /// </remarks>
+            /// <para>The total number of commands.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -251,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the command.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</para>

@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of file sending tasks queried.</para>
+        /// <para>The total number of scripts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

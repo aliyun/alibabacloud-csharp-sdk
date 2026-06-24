@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSendFileResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance for which you want to query file sending records.</para>
+        /// <para>The instance ID. If you specify this parameter, all file sending records of the specified instance are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-hz0jdfwd9f****</para>
@@ -20,18 +20,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:</para>
+        /// <para>The overall sending status of the file. The overall status depends on the shared execution status of all target instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</para>
-        /// </description></item>
-        /// <item><description><para>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</para>
-        /// </description></item>
-        /// <item><description><para>Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</para>
-        /// </description></item>
-        /// <item><description><para>Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.</para>
-        /// </description></item>
-        /// <item><description><para>PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</para>
-        /// </description></item>
+        /// <item><description>Pending: The system is validating or sending the file. The overall status is Pending if the file sending status of at least one instance is Pending.</description></item>
+        /// <item><description>Running: The file is being sent to instances. The overall status is Running if the file sending status of at least one instance is Running.</description></item>
+        /// <item><description>Success: The file is sent. The overall status is Success if the file sending status of all instances is Success.</description></item>
+        /// <item><description>Failed: The file failed to be sent. The overall status is Failed if the file sending status of all instances is Failed.</description></item>
+        /// <item><description>PartialFailed: The file is sent to some instances but failed on others. The overall status is PartialFailed if the file sending status of all instances is Success or Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvocationStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file sending task.</para>
+        /// <para>The execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f-hz0jdfwd9f****</para>
@@ -52,8 +47,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InvokeId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
-        /// <para>Valid values: 1 to 50.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The name of the file whose sending records you want to query.</para>
+        /// <para>The name of the file. If you specify this parameter, all sending records of the file with the specified name are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.txt</para>
@@ -74,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -93,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to execute paging query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to execute paging query operations.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ECS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the ECS instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. After you set this parameter, file sending results in the specified resource group are queried.</para>
+        /// <para>The ID of the resource group to which the file sending task belongs. After you specify this parameter, you must also specify ResourceGroupId when sending a file. This way, you can filter the file sending results of the specified resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -145,16 +140,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the file sending task.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeSendFileResultsRequestTag> Tag { get; set; }
         public class DescribeSendFileResultsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
+            /// <para>If you use one tag to filter resources, the resource count with the specified tag cannot exceed 1000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1000. If the resource count exceeds 1000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -164,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
+            /// <para>The tag value of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</para>
             /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>

@@ -29,6 +29,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("NetworkNodes")]
+                [Validation(Required=false)]
+                public DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes NetworkNodes { get; set; }
+                public class DescribeInstanceTopologyResponseBodyTopologysTopologyNetworkNodes : TeaModel {
+                    [NameInMap("NetworkNodes")]
+                    [Validation(Required=false)]
+                    public List<string> NetworkNodes { get; set; }
+
+                }
+
             }
 
         }

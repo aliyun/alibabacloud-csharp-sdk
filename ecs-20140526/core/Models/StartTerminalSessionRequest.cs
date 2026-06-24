@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartTerminalSessionRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures the idempotence of the request. Generate a unique parameter value from your client to guarantee uniqueness across different requests. <b>ClientToken</b> supports only ASCII characters and must not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The value of <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The command to run after the session is initiated. The command length cannot exceed 512 characters.</para>
+        /// <para>The command to run after the session is initiated. The command can be up to 512 characters in length.</para>
         /// <remarks>
-        /// <para>If you specify the <c>CommandLine</c> parameter, you cannot specify the <c>PortNumber</c> or <c>TargetServer</c> parameter.</para>
+        /// <para>After you specify CommandLine, you cannot specify PortNumber or TargetServer.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,12 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandLine { get; set; }
 
         /// <summary>
-        /// <para>The network type of the WebSocket URL required to connect to the instance. Valid values:</para>
+        /// <para>The network type of the WebSocket URL for the remote connection to the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Internet (default)</para>
-        /// </description></item>
-        /// <item><description><para>Intranet</para>
-        /// </description></item>
+        /// <item><description>Internet: public network. This is the default value.</description></item>
+        /// <item><description>Intranet: internal network.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,14 +47,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ConnectionType { get; set; }
 
         /// <summary>
-        /// <para>Session encryption configuration items.</para>
+        /// <para>The session encryption configuration.</para>
         /// </summary>
         [NameInMap("EncryptionOptions")]
         [Validation(Required=false)]
         public StartTerminalSessionRequestEncryptionOptions EncryptionOptions { get; set; }
         public class StartTerminalSessionRequestEncryptionOptions : TeaModel {
             /// <summary>
-            /// <para>Enable end-to-end encryption for the session connection.</para>
+            /// <para>Specifies whether to enable end-to-end encryption for the session connection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -66,13 +64,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>KMS key ID.<br>
-            /// Notes:</para>
+            /// <para>The KMS key ID.
+            /// Note:</para>
             /// <list type="bullet">
-            /// <item><description><para>Only KMS symmetric keys are supported.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter can be specified only when the encryption mode is Kms.</para>
-            /// </description></item>
+            /// <item><description>Only KMS symmetric keys are supported.</description></item>
+            /// <item><description>This parameter is supported only when the encryption mode is set to Kms.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,18 +79,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string KMSKeyId { get; set; }
 
             /// <summary>
-            /// <para>Encryption mode. Valid values:</para>
+            /// <para>The encryption pattern. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Auto: Use autonegotiation to encrypt the session with a secret key.</para>
-            /// </description></item>
-            /// <item><description><para>Kms: Use a KMS key to encrypt the session.</para>
-            /// </description></item>
-            /// <item><description><para>Default value: Auto.</para>
-            /// </description></item>
+            /// <item><description>Auto: uses an automatically negotiated secret key encryption for the session.</description></item>
+            /// <item><description>Kms: uses a KMS secret key encryption for the session.</description></item>
+            /// <item><description>Default value: Auto.</description></item>
             /// </list>
-            /// <para>Notes:</para>
+            /// <para>Note:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter can be specified only when session encryption is enabled.</description></item>
+            /// <item><description>This parameter is supported only when session encryption is enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The instance ID list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
@@ -123,8 +116,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password name of the user when using Session Manager on a Windows instance. The length cannot exceed 255 characters.<br>
-        /// When you want to use Session Manager on a Windows instance as a non-default user (System), you must pass both Username and this parameter. To reduce the risk of password disclosure, store the plaintext password in the parameter repository of CloudOps Orchestration Service, and pass only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">encrypted parameters</a>.</para>
+        /// <para>The name of the password used by the user when using Session Manager on a Windows instance. The name can be up to 255 characters in length.
+        /// When you want to use Session Manager on a Windows instance as a non-default user (System), you must specify both Username and this parameter. To reduce the risk of password leaks, store the plaintext password in the parameter repository of operations management and specify only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">Encryption parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>axtSecretPassword</para>
@@ -134,8 +127,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PasswordName { get; set; }
 
         /// <summary>
-        /// <para>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</para>
-        /// <para>This parameter is empty by default, which indicates that no port is configured to forward data.</para>
+        /// <para>The port number of the ECS instance for data forwarding. After this parameter is set, Cloud Assistant Agent forwards data to the specified port for port forwarding. For example, SSH uses port 22.</para>
+        /// <para>Default value: empty, which indicates that no port number is set for data forwarding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>22</para>
@@ -145,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PortNumber { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -164,9 +157,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</para>
+        /// <para>The address of the destination server in the VPC that you want to access through the instance.</para>
         /// <remarks>
-        /// <para>If this parameter is not empty, <c>PortNumber</c> specifies the port number that is used by the managed instance to access the destination service in the VPC.</para>
+        /// <para>When this parameter is not empty, PortNumber specifies the port number of the destination server in the VPC that you want to access through the managed instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -177,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetServer { get; set; }
 
         /// <summary>
-        /// <para>The username used for connection establishment.</para>
+        /// <para>The username used for the connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testUser</para>

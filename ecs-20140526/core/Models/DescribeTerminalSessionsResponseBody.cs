@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeTerminalSessionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>

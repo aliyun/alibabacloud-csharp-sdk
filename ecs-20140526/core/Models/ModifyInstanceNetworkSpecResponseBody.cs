@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInstanceNetworkSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order ID. This parameter is returned only when the bandwidth configuration of a subscription (PrePaid) instance is modified.</para>
+        /// <para>The order ID. This parameter is returned only when you modify the bandwidth configuration of a subscription (PrePaid) instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123457890</para>

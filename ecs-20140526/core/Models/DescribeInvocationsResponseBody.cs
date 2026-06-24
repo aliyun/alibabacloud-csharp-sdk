@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Query credential value returned by this call.</para>
+        /// <para>The pagination token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Page number of the query result.</para>
+        /// <para>The page number of the query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of commands.</para>
+        /// <para>The total number of commands.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
