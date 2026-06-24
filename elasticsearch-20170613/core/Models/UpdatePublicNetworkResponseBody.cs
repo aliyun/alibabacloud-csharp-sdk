@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdatePublicNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2A88ECA1-D827-4581-AD39-05149586****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public UpdatePublicNetworkResponseBodyResult Result { get; set; }
         public class UpdatePublicNetworkResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The status of the public network access switch.</para>
+            /// <para>The status of the public network address switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

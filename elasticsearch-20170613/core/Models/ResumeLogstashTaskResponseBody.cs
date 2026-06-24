@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ResumeLogstashTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned. If the API operation is successfully called, this parameter is not returned.</para>
+        /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceNotFound</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned. If the API operation is successfully called, this parameter is not returned.</para>
+        /// <para>The error message. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The specified cluster does not exist. Check the cluster status and try again.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0FA05123-745C-42FD-A69B-AFF48EF9****</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the change task is resumed. Valid values:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The change task is resumed.</description></item>
-        /// <item><description>false: The change task fails to be resumed.</description></item>
+        /// <item><description>true: The task is resumed.</description></item>
+        /// <item><description>false: The task failed to be resumed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The key of the tag.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</para>
@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListTagsResponseBodyResult> Result { get; set; }
         public class ListTagsResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The label key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>env</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string TagKey { get; set; }
 
             /// <summary>
+            /// <para>The label value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dev</para>
             /// </summary>

@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseReportIdsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value must be a UNIX timestamp.</para>
+        /// <para>The end timestamp of the query.
+        /// Minimum value: 1000000000000 ms
+        /// Maximum value: 2000000000000 ms.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +23,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the reports.</para>
+        /// <para>The language of the reports to retrieve. Default value: the browser language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Simplified Chinese</description></item>
+        /// <item><description>zt: Traditional Chinese</description></item>
+        /// <item><description>es: Spanish</description></item>
+        /// <item><description>fr: French.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>spanish</para>
+        /// <para>en</para>
         /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: 1 to 200. Default value: 1.</para>
+        /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 500. Default value: 10.</para>
+        /// <para>The number of report IDs per page. Default value: 10. Minimum value: 1. Maximum value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -51,7 +60,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value must be a UNIX timestamp.</para>
+        /// <para>The start timestamp of the query.
+        /// Minimum value: 1000000000000 ms
+        /// Maximum value: 2000000000000 ms.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +73,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The method that is used to trigger health diagnostics. Valid values: SYSTEM, INNER, and USER.</para>
+        /// <para>The trigger method of the health diagnostics. Valid values: SYSTEM (automatically triggered by the system), INNER (internally triggered), and USER (manually triggered by the user).</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>

@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAllNodeRequest : TeaModel {
         /// <summary>
-        /// <para>The Java Virtual Machine (JVM) heap memory usage of the node.</para>
+        /// <para>Specifies whether to return monitoring information for the nodes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true (default): Returns monitoring information.</para>
+        /// </description></item>
+        /// <item><description><para>false: Does not return monitoring information.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

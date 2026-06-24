@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CapacityPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the current request.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E91B7129-A669-4D9D-A743-F90A0FF1F5EF</para>
@@ -20,23 +20,23 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result of the request.</para>
+        /// <para>The result of the request.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CapacityPlanResponseBodyResult Result { get; set; }
         public class CapacityPlanResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Extended configuration information.</para>
+            /// <para>The extended configuration information.</para>
             /// </summary>
             [NameInMap("ExtendConfigs")]
             [Validation(Required=false)]
             public List<CapacityPlanResponseBodyResultExtendConfigs> ExtendConfigs { get; set; }
             public class CapacityPlanResponseBodyResultExtendConfigs : TeaModel {
                 /// <summary>
-                /// <para>Configuration type, with a single value: sharedDisk.</para>
+                /// <para>The configuration type. The only valid value is sharedDisk.</para>
                 /// <remarks>
-                /// <para>This extendConfigs attribute may appear when the planned instance type is Advanced.</para>
+                /// <para>This extendConfigs property may appear when the planned instance type is Advanced Edition (advanced).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ConfigType { get; set; }
 
                 /// <summary>
-                /// <para>Disk size, in GiB.</para>
+                /// <para>The disk size, in GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public long? Disk { get; set; }
 
                 /// <summary>
-                /// <para>Disk type, with a single value: CPFS_PREMIUM.</para>
+                /// <para>The disk type. The only valid value is CPFS_PREMIUM.</para>
                 /// <remarks>
-                /// <para>This extendConfigs attribute may appear when the planned instance type is Advanced.</para>
+                /// <para>This extendConfigs property may appear when the planned instance type is Advanced Edition (advanced).</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -72,13 +72,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Edition type, with values meaning as follows:</para>
+            /// <para>The edition type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>advanced: Enhanced Edition</para>
+            /// <item><description><para>advanced: Advanced Edition</para>
             /// </description></item>
             /// <item><description><para>x-pack: Commercial Edition</para>
             /// </description></item>
-            /// <item><description><para>community: Community Edition</para>
+            /// <item><description><para>community: Community Edition.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -90,14 +90,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceCategory { get; set; }
 
             /// <summary>
-            /// <para>Node information.</para>
+            /// <para>The node information.</para>
             /// </summary>
             [NameInMap("NodeConfigurations")]
             [Validation(Required=false)]
             public List<CapacityPlanResponseBodyResultNodeConfigurations> NodeConfigurations { get; set; }
             public class CapacityPlanResponseBodyResultNodeConfigurations : TeaModel {
                 /// <summary>
-                /// <para>Number of nodes.</para>
+                /// <para>The number of nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public long? Amount { get; set; }
 
                 /// <summary>
-                /// <para>Number of CPUs.</para>
+                /// <para>The number of CPUs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public long? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>Disk size, in GiB.</para>
+                /// <para>The disk size, in GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -127,17 +127,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public long? Disk { get; set; }
 
                 /// <summary>
-                /// <para>Disk type, with meanings as follows:</para>
+                /// <para>The disk type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>cloud_essd: ESSD Cloud Disk</para>
+                /// <item><description><para>cloud_essd: ESSD</para>
                 /// </description></item>
-                /// <item><description><para>cloud_ssd: SSD Cloud Disk</para>
+                /// <item><description><para>cloud_ssd: standard SSD</para>
                 /// </description></item>
-                /// <item><description><para>cloud_efficiency: Efficient Cloud Disk</para>
+                /// <item><description><para>cloud_efficiency: ultra cloud disk</para>
                 /// </description></item>
-                /// <item><description><para>local_ssd: Local SSD Disk</para>
+                /// <item><description><para>local_ssd: local SSD</para>
                 /// </description></item>
-                /// <item><description><para>local_efficiency: Local Efficient Disk</para>
+                /// <item><description><para>local_efficiency: local ultra disk.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>Specified memory size for the current node role.</para>
+                /// <para>The memory size of the specifications for the current node role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -159,19 +159,19 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public long? Memory { get; set; }
 
                 /// <summary>
-                /// <para>Node type, with supported types as follows:</para>
+                /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>WORKER: Data Node</para>
+                /// <item><description><para>WORKER: data node</para>
                 /// </description></item>
-                /// <item><description><para>WORKER_WARM: Cold Data Node</para>
+                /// <item><description><para>WORKER_WARM: warm node</para>
                 /// </description></item>
-                /// <item><description><para>MASTER: Dedicated Master Node</para>
+                /// <item><description><para>MASTER: dedicated master node</para>
                 /// </description></item>
-                /// <item><description><para>KIBANA: Kibana Node</para>
+                /// <item><description><para>KIBANA: Kibana node</para>
                 /// </description></item>
-                /// <item><description><para>COORDINATING: Coordinator Node</para>
+                /// <item><description><para>COORDINATING: client node</para>
                 /// </description></item>
-                /// <item><description><para>ELASTIC_WORKER: Elastic Node</para>
+                /// <item><description><para>ELASTIC_WORKER: elastic node.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -185,11 +185,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>Based on the capacity planning calculation, there is no default value. The meanings of the values are as follows:</para>
+            /// <para>The result calculated based on capacity planning. No default value is available. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Represents an oversized cluster, indicating that the number of data nodes calculated by the capacity planning exceeds the threshold of 50.</para>
+            /// <item><description><para>true: The cluster is oversized. The number of data nodes calculated by capacity planning exceeds the threshold of 50.</para>
             /// </description></item>
-            /// <item><description><para>false: The number of data nodes calculated by the capacity planning is within 50.</para>
+            /// <item><description><para>false: The number of data nodes calculated by capacity planning is within 50.</para>
             /// </description></item>
             /// </list>
             /// 

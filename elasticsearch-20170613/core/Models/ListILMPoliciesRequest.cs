@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListILMPoliciesRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the index lifecycle policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>policy-1</para>
         /// </summary>

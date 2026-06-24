@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateILMPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The returned result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-policy</para>
         /// </summary>

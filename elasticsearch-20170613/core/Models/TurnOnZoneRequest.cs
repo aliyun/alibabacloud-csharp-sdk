@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? HpAlbZoneDrained { get; set; }
 
         /// <summary>
+        /// <para>The zone of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>
         /// </summary>

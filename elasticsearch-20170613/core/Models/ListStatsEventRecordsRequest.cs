@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListStatsEventRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>Event type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UserOperator</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventType { get; set; }
 
         /// <summary>
+        /// <para>Event level</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Info</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Level { get; set; }
 
         /// <summary>
+        /// <para>Status of the management event</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Executed</para>
         /// </summary>

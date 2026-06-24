@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class MasterNodeConfiguration : TeaModel {
         /// <summary>
+        /// <para>The number of dedicated master nodes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? Amount { get; set; }
 
         /// <summary>
+        /// <para>The storage space of dedicated master nodes. Unit: GB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? Disk { get; set; }
 
         /// <summary>
+        /// <para>The storage type of dedicated master nodes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>cloud_ssd: standard SSD</description></item>
+        /// <item><description>cloud_essd (default): Enterprise SSD (ESSD).</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string DiskType { get; set; }
 
         /// <summary>
+        /// <para>The node specifications of dedicated master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateFalconSeekRequest : TeaModel {
         /// <summary>
+        /// <para>true: Enabled, false: shutdown</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("enable")]

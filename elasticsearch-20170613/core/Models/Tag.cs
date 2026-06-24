@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class Tag : TeaModel {
         /// <summary>
+        /// <para>The tag key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>env</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string TagKey { get; set; }
 
         /// <summary>
+        /// <para>The tag value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dev</para>
         /// </summary>

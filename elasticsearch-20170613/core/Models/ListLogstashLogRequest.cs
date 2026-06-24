@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashLogRequest : TeaModel {
         /// <summary>
-        /// <para>20</para>
+        /// <para>The beginning of the time range to query logs. This value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1531910852074</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The end of the time range to query logs. This value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1531910852074</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The page number of the instance list. Default value: 1. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>1</para>
+        /// <para>The keyword to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the log entry. Including trace, debug, info, warn, error, etc. (GC logs have no level).</para>
+        /// <para>The number of entries per page for a paged query. Default value: 20. Minimum value: 1. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,7 +61,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>1531910852074</para>
+        /// <para>The log type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>LOGSTASH_INSTANCE_LOG: main log.</description></item>
+        /// <item><description>SEARCHSLOW: searching slow log.</description></item>
+        /// <item><description>INDEXINGSLOW: indexing slow log.</description></item>
+        /// <item><description>JVMLOG: GC log.</description></item>
+        /// <item><description>LOGSTASH_DEBUG_LOG: debug log.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

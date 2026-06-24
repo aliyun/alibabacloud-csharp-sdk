@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListPluginsRequest : TeaModel {
         /// <summary>
-        /// <para>SYSTEM</para>
+        /// <para>The plugin name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>analysis-ik</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Page { get; set; }
 
         /// <summary>
-        /// <para>The header of the response.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The plugin source type. Only SYSTEM (system plugin) is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>

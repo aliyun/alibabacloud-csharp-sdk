@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateKibanaWhiteIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the Elasticsearch cluster.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E5EF11F1-DBAE-4020-AC24-DFA6C4345CAE</para>
@@ -20,35 +20,35 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The private IP address whitelists for access to the Kibana console of the cluster.</para>
+        /// <para>The details of the Elasticsearch instance.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public UpdateKibanaWhiteIpsResponseBodyResult Result { get; set; }
         public class UpdateKibanaWhiteIpsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The public IP address whitelists for access to the Kibana console of the cluster.</para>
+            /// <para>The Kibana access whitelist.</para>
             /// </summary>
             [NameInMap("kibanaIPWhitelist")]
             [Validation(Required=false)]
             public List<string> KibanaIPWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The private IP address whitelists for access to the Kibana console of the cluster.</para>
+            /// <para>The Kibana internal-facing whitelist.</para>
             /// </summary>
             [NameInMap("kibanaPrivateIPWhitelist")]
             [Validation(Required=false)]
             public List<string> KibanaPrivateIPWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The network configuration.</para>
             /// </summary>
             [NameInMap("networkConfig")]
             [Validation(Required=false)]
             public UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig NetworkConfig { get; set; }
             public class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfig : TeaModel {
                 /// <summary>
-                /// <para>The IP address whitelists.</para>
+                /// <para>The network type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp1jy348ibzulk6hn****</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The network type.</para>
+                /// <para>The region where the instance resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-h</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VsArea { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp1a0mifpletdd1da****</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VswitchId { get; set; }
 
                 /// <summary>
-                /// <para>The IP address whitelists.</para>
+                /// <para>The whitelist group list.</para>
                 /// </summary>
                 [NameInMap("whiteIpGroupList")]
                 [Validation(Required=false)]
                 public List<UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> WhiteIpGroupList { get; set; }
                 public class UpdateKibanaWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList : TeaModel {
                     /// <summary>
-                    /// <para>The IP addresses in the whitelist.</para>
+                    /// <para>The name of the whitelist group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test_group_name</para>
@@ -105,13 +105,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     public string GroupName { get; set; }
 
                     /// <summary>
-                    /// <para>The IP addresses in the whitelist.</para>
+                    /// <para>The list of IP addresses in the whitelist group.</para>
                     /// </summary>
                     [NameInMap("ips")]
                     [Validation(Required=false)]
                     public List<string> Ips { get; set; }
 
                     /// <summary>
+                    /// <para>The whitelist type.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>PUBLIC_KIBANA</para>
                     /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CancelTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return results:</para>
+        /// <para>The result of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: the task was cancelled successfully</description></item>
-        /// <item><description>false: the task was cancelled successfully failed</description></item>
+        /// <item><description>true: The task was canceled.</description></item>
+        /// <item><description>false: The task failed to be canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ActivateZonesRequest : TeaModel {
         /// <summary>
-        /// <para>请求体参数。</para>
+        /// <para>The request body parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;cn-hangzhou-i&quot;,&quot;cn-hangzhou-h&quot;]</para>
+        /// <para>空</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

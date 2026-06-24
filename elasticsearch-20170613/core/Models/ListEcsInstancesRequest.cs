@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListEcsInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>test</para>
+        /// <para>The list of ECS instance IDs. The value can be a JSON array that consists of up to 100 instance IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;i-bp13y63575oypr9d****&quot;,&quot;i-bp1gyhphjaj73jsr****&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EcsInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</para>
+        /// <para>The name of the ECS instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EcsInstanceName { get; set; }
 
         /// <summary>
-        /// <para>10</para>
+        /// <para>The page number of the returned results. Maximum value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>[&quot;i-bp13y63575oypr9d\<em>\</em>\<em>\</em>&quot;,&quot;i-bp1gyhphjaj73jsr\<em>\</em>\<em>\</em>&quot;]</para>
+        /// <para>The number of results per page. Default value: 10. Maximum value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>vpc-bp16k1dvzxtmagcva\<em>\</em>\<em>\</em></para>
+        /// <para>Instance tags of the ECS instance. The following fields must be included:</para>
+        /// <list type="bullet">
+        /// <item><description>tagKey: instance tag key.</description></item>
+        /// <item><description>tagValue: instance tag value.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>[{ &quot;tagKey&quot;:&quot;a&quot;,&quot;tagValue&quot;:&quot;b&quot;}]</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the VPC where the ECS instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp16k1dvzxtmagcva****</para>

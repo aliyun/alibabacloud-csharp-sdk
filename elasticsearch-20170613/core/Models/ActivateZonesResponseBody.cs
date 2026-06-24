@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the nodes in disabled zones are restored. Valid values:</para>
+        /// <para>The result of the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The zone is resumed.</description></item>
+        /// <item><description>false: The zone failed to be resumed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

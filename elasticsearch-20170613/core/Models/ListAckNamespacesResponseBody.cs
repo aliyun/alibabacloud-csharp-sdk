@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAckNamespacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>95789100-A329-473B-9D14-9E0B7DB4BD5A</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The status of the namespace.</para>
+            /// <para>The namespace status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>

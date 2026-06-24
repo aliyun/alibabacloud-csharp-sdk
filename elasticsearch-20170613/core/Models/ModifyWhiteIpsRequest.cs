@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ModifyWhiteIpsRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the IP address whitelist that you want to update. You can specify only one whitelist.</para>
-        /// <remarks>
-        /// <para>You cannot configure both the whiteIpList and whiteIpGroup parameters.</para>
-        /// </remarks>
+        /// <para>The modification mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Cover (default): overwrites the original IP whitelist with the value of the ips parameter.</description></item>
+        /// <item><description>Append: adds the IP addresses specified in the ips parameter to the original IP whitelist.</description></item>
+        /// <item><description>Delete: removes the IP addresses specified in the ips parameter from the original IP whitelist. At least one IP address must be retained.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Cover</para>
@@ -23,10 +25,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ModifyMode { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</para>
-        /// <remarks>
-        /// <para>You cannot configure both the whiteIpList and whiteIpGroup parameters.</para>
-        /// </remarks>
+        /// <para>The network type. This parameter is required if you specify the whiteIpList parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PRIVATE: private network</description></item>
+        /// <item><description>PUBLIC: public network.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -36,7 +39,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the whitelist. This parameter is available if the whiteIpGroup parameter is left empty. The default IP address whitelist is updated based on the value of this parameter.</para>
+        /// <para>The node type. This parameter is required if you specify the whiteIpList parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>WORKER: Elasticsearch cluster</description></item>
+        /// <item><description>KIBANA: Kibana cluster.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>WORKER</para>
@@ -46,20 +53,18 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string NodeType { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses in the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</para>
+        /// <para>Updates the instance whitelist configuration by whitelist group. Only one whitelist group can be updated at a time.</para>
+        /// <remarks>
+        /// <para>Notice: You cannot specify both whiteIpList and whiteIpGroup at the same time.
+        /// .</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("whiteIpGroup")]
         [Validation(Required=false)]
         public ModifyWhiteIpsRequestWhiteIpGroup WhiteIpGroup { get; set; }
         public class ModifyWhiteIpsRequestWhiteIpGroup : TeaModel {
             /// <summary>
-            /// <para>The type of the IP address whitelist. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PRIVATE_KIBANA</description></item>
-            /// <item><description>PRIVATE_ES</description></item>
-            /// <item><description>PUBLIC_ES</description></item>
-            /// <item><description>PUBLIC_KIBANA</description></item>
-            /// </list>
+            /// <para>The name of the whitelist group. This parameter is required if you specify the whiteIpGroup parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_group</para>
@@ -69,14 +74,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The returned result.</para>
+            /// <para>The list of IP addresses in the whitelist group. This parameter is required if you specify the whiteIpGroup parameter.</para>
             /// </summary>
             [NameInMap("ips")]
             [Validation(Required=false)]
             public List<string> Ips { get; set; }
 
             /// <summary>
-            /// <para>The request ID.</para>
+            /// <para>The type of the IP whitelist. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PRIVATE_KIBANA: Kibana internal-facing whitelist</description></item>
+            /// <item><description>PRIVATE_ES: Elasticsearch internal-facing whitelist</description></item>
+            /// <item><description>PUBLIC_ES: Elasticsearch public network access whitelist</description></item>
+            /// <item><description>PUBLIC_KIBANA: Kibana public network access whitelist.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>PRIVATE_ES</para>
@@ -88,18 +99,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The name of the whitelist. This parameter is required if you configure the whiteIpGroup parameter.</para>
+        /// <para>The IP address whitelist. This parameter is available when whiteIpGroup is empty and updates the default group whitelist.</para>
         /// </summary>
         [NameInMap("whiteIpList")]
         [Validation(Required=false)]
         public List<string> WhiteIpList { get; set; }
 
         /// <summary>
-        /// <para>The network type. This parameter is required if you configure the whiteIpList parameter. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PRIVATE</description></item>
-        /// <item><description>PUBLIC</description></item>
-        /// </list>
+        /// <para>A unique token generated by the client to guarantee the idempotency of the request. The maximum length is 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<UpdateAliwsDictResponseBodyResult> Result { get; set; }
         public class UpdateAliwsDictResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The size of the dictionary file. Unit: bytes.</para>
+            /// <para>The file size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6226</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The name of the uploaded dictionary file.</para>
+            /// <para>The name of the uploaded file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliws_ext_dict.txt</para>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The source type of the dictionary file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS</description></item>
-            /// <item><description>ORIGIN</description></item>
+            /// <item><description>OSS: uses OSS open storage.</description></item>
+            /// <item><description>ORIGIN: retains the previously uploaded dictionary.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The dictionary type. The value is fixed as ALI_WS.</para>
+            /// <para>The dictionary type. Valid values: ALI_WS (AliNLP tokenizer).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALI_WS</para>

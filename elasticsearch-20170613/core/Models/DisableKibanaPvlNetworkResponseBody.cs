@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DisableKibanaPvlNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>request id</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1DERFG</para>
@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The returned result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The operation is successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

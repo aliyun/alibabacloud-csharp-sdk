@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the ECS instances.</para>
+        /// <para>The list of ECS instance IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp1ei8ysh7orb6eq****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EcsInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the ECS instance.</para>
+        /// <para>The ECS instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EcsInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number of the returned results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of results per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The tags of the ECS instance. You must configure tagKey and tagValue.</para>
+        /// <para>The tag information of the ECS instance. The tag key (tagKey) and tag value (tagValue) must be included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;tagKey&quot;:&quot;abc&quot;,&quot;tagValue&quot;:&quot;xyz&quot;}]</para>

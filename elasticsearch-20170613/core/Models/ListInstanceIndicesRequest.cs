@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceIndicesRequest : TeaModel {
         /// <summary>
-        /// <para>false</para>
+        /// <para>Specifies whether to retrieve all indexes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Returns the index list that includes system indexes.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Returns the index list that excludes system indexes.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +26,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>15</para>
+        /// <para>Specifies whether to display only managed indexes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Displays only managed indexes.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Displays all indexes.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +42,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? IsManaged { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Specifies whether to display only OpenStore cold-phase indexes. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Displays only OpenStore cold-phase indexes.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Displays all indexes.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +58,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? IsOpenstore { get; set; }
 
         /// <summary>
-        /// <para>1</para>
+        /// <para>The index name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>log-0001</para>
@@ -50,7 +68,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The header of the response.</para>
+        /// <para>The page number of the instance list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +78,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The total size of the index in Cloud Hosting. Unit: bytes.</para>
+        /// <para>The number of entries per page for paging. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

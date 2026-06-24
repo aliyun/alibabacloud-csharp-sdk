@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeDiagnosisSettingsRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the returned result. Default value: en.</para>
+        /// <para>The language of the returned results. Default value: en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

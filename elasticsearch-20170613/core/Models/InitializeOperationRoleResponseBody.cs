@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InitializeOperationRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29101430-4797-4D1D-96C3-9FCBCCA8F845</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the service-linked role is created. Valid values:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The service-linked role is created.</description></item>
-        /// <item><description>false: The service-linked role fails to be created.</description></item>
+        /// <item><description>false: The service-linked role failed to be created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

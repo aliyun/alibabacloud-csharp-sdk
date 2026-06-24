@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DeleteDeprecatedTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC47D9</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The result. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: succeeded.</description></item>
+        /// <item><description>false: failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

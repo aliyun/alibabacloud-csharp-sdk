@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InterruptElasticsearchTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. Only displayed if an exception is returned.</para>
+        /// <para>The error code. This parameter is returned only when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InstanceStatusNotSupportCurrentAction</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message. Only displayed if an exception is returned.</para>
+        /// <para>The error message. This parameter is returned only when an exception occurs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The cluster is running tasks or in an error status. Try again later.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return results:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: interrupted change successfully</description></item>
-        /// <item><description>false: interrupted change failed</description></item>
+        /// <item><description>true: The change is interrupted.</description></item>
+        /// <item><description>false: The change failed to be interrupted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

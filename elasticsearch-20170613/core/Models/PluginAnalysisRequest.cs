@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class PluginAnalysisRequest : TeaModel {
         /// <summary>
+        /// <para>Request body parameters  </para>
+        /// <pre><code class="language-json">
+        /// </c></pre>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;name&quot;: &quot;plugin_name.zip&quot;,// plugin name
@@ -24,6 +28,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
+        /// <para>Whether to perform pre-upgrade validation:  </para>
+        /// <list type="bullet">
+        /// <item><description>true: Validate only  </description></item>
+        /// <item><description>false: Upload directly</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListShardRecoveriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC47D9</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListShardRecoveriesResponseBodyResult> Result { get; set; }
         public class ListShardRecoveriesResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The data restoration progress.</para>
+            /// <para>The data recovery progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80%</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string BytesPercent { get; set; }
 
             /// <summary>
-            /// <para>The total amount of data that is restored.</para>
+            /// <para>The total amount of data to be recovered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12086</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? BytesTotal { get; set; }
 
             /// <summary>
-            /// <para>The file execution progress.</para>
+            /// <para>The file recovery progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80.0%</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? FilesTotal { get; set; }
 
             /// <summary>
-            /// <para>The name of the index.</para>
+            /// <para>The index name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-index-000001</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceHost { get; set; }
 
             /// <summary>
-            /// <para>The name of the source node.</para>
+            /// <para>The source node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2Kni3dJ</para>
@@ -97,14 +97,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceNode { get; set; }
 
             /// <summary>
-            /// <para>The data restoration status. Valid values:</para>
+            /// <para>The stage of the data recovery process. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>done: Data restoration is complete.</description></item>
-            /// <item><description>finalize: Data is being cleared.</description></item>
-            /// <item><description>index: Index metadata is being read, and bytes are being copied from source to destination.</description></item>
-            /// <item><description>init: Data restoration is not started.</description></item>
-            /// <item><description>start: Data restoration is started.</description></item>
-            /// <item><description>translog: Translogs are being redone.</description></item>
+            /// <item><description><para>done: Recovery is complete.</para>
+            /// </description></item>
+            /// <item><description><para>finalize: Cleanup operations are in progress.</para>
+            /// </description></item>
+            /// <item><description><para>index: Reading index metadata and copying bytes from the source to the target.</para>
+            /// </description></item>
+            /// <item><description><para>init: Recovery has not started.</para>
+            /// </description></item>
+            /// <item><description><para>start: Recovery is starting.</para>
+            /// </description></item>
+            /// <item><description><para>translog: Replaying the transaction log.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Stage { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the destination node.</para>
+            /// <para>The IP address of the target node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -125,7 +131,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string TargetHost { get; set; }
 
             /// <summary>
-            /// <para>The name of the destination node.</para>
+            /// <para>The target node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YVVKLmW</para>
@@ -135,7 +141,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string TargetNode { get; set; }
 
             /// <summary>
-            /// <para>The number of translog operations to be restored.</para>
+            /// <para>The number of translog operations to be recovered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12086</para>
@@ -145,7 +151,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? TranslogOps { get; set; }
 
             /// <summary>
-            /// <para>The restoration progress of translog operations.</para>
+            /// <para>The progress of translog operation recovery.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80%</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeXpackMonitorConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -27,10 +27,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public DescribeXpackMonitorConfigResponseBodyResult Result { get; set; }
         public class DescribeXpackMonitorConfigResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the X-Pack Monitoring feature is enabled. Valid values:</para>
+            /// <para>Indicates whether X-Pack monitoring is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled</description></item>
-            /// <item><description>false: disabled</description></item>
+            /// <item><description>true: enabled.</description></item>
+            /// <item><description>false: not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<string> Endpoints { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated Elasticsearch cluster.</para>
+            /// <para>The instance ID of the Elasticsearch instance associated with X-Pack monitoring.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-n6w1o1x0w001c****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public List<string> PipelineIds { get; set; }
 
             /// <summary>
-            /// <para>The username that is used to access the associated Elasticsearch cluster.</para>
+            /// <para>The username used to access the Elasticsearch instance associated with X-Pack monitoring.</para>
             /// 
             /// <b>Example:</b>
             /// <para>elastic</para>

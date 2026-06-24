@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetSuggestShrinkableNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of nodes that you want to remove.</para>
+        /// <para>The expected number of removable nodes to retrieve.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? IgnoreStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of removing nodes. WORKER indicates hot node and WORKER_WARM indicates warm node.</para>
+        /// <para>The type of nodes to scale in. <b>WORKER</b> indicates hot nodes. <b>WORKER_WARM</b> indicates warm nodes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

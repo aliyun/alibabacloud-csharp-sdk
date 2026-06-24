@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class OpenHttpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return results:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: open the HTTPS protocol successfully</description></item>
-        /// <item><description>false: open the HTTPS protocol failed</description></item>
+        /// <item><description>true: The HTTPS protocol is enabled.</description></item>
+        /// <item><description>false: The HTTPS protocol failed to be enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

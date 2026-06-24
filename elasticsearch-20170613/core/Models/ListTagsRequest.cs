@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The return results.</para>
+        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The tag value of the ENI.</para>
+        /// <para>The resource type. Fixed value: INSTANCE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>

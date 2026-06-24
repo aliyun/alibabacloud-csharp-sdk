@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly restart the cluster. Default value: false.</para>
+        /// <para>Specifies whether to forcibly restart the instance. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

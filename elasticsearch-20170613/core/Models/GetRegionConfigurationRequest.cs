@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetRegionConfigurationRequest : TeaModel {
         /// <summary>
+        /// <para>The current zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-f</para>
         /// </summary>

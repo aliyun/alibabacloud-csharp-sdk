@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListPipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</para>
+        /// <para>The response headers.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListPipelineResponseBodyHeaders Headers { get; set; }
         public class ListPipelineResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The time when the pipeline was updated.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The response.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -39,13 +39,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the pipeline was created.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListPipelineResponseBodyResult> Result { get; set; }
         public class ListPipelineResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The time when the pipeline was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-08-05T03:10:38.188Z</para>
             /// </summary>
@@ -54,6 +56,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtCreatedTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the pipeline was last updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-08-05T08:43:31.757Z</para>
             /// </summary>
@@ -62,12 +66,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the pipeline. Supported:</para>
-            /// <list type="bullet">
-            /// <item><description>NOT_DEPLOYED: The node is not deployed.</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>DELETED: Deleted. The console does not display this status.</description></item>
-            /// </list>
+            /// <para>The pipeline ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pipeline_test</para>
@@ -77,6 +76,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PipelineId { get; set; }
 
             /// <summary>
+            /// <para>The pipeline status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NOT_DEPLOYED: not deployed.</description></item>
+            /// <item><description>RUNNING: running.</description></item>
+            /// <item><description>DELETED: deleted. This status is not displayed in the console.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>NOT_DEPLOYED</para>
             /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateAdvancedSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return results:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: garbage collector configuration changed successfully</description></item>
-        /// <item><description>false: garbage collector configuration changed successfully failed</description></item>
+        /// <item><description>true: The garbage collector configuration is changed.</description></item>
+        /// <item><description>false: The garbage collector configuration failed to be changed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

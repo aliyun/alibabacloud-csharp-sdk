@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The list of ACK clusters returned by the current request.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListAckClustersResponseBodyResult> Result { get; set; }
         public class ListAckClustersResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The ID of cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c5ea2c2d9a3cf499481292f60425d****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The type of the cluster. The value is fixed as ManagedKubernetes.</para>
+            /// <para>The cluster type. Only ManagedKubernetes is supported, which indicates a managed Kubernetes cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ManagedKubernetes</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ClusterType { get; set; }
 
             /// <summary>
-            /// <para>The name of the cluster.</para>
+            /// <para>The cluster name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC to which the cluster belongs.</para>
+            /// <para>The ID of the VPC where the cluster resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp12nu14urf0upaf4****</para>

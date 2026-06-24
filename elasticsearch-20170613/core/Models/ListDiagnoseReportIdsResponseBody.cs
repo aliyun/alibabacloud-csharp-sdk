@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseReportIdsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The header of the response.</para>
+        /// <para>The response headers.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListDiagnoseReportIdsResponseBodyHeaders Headers { get; set; }
         public class ListDiagnoseReportIdsResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The returned results.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<string> Result { get; set; }

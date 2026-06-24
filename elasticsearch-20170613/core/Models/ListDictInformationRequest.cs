@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDictInformationRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the OSS dictionary to be added. Valid values: IK_HOT, IK, SYNONYMS, and ALIWS. Default value: IK.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ALIWS</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string AnalyzerType { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS bucket where the dictionary file is stored.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string BucketName { get; set; }
 
         /// <summary>
+        /// <para>The storage path of the dictionary file in the OSS bucket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

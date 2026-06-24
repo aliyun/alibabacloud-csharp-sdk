@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class KibanaNodeConfiguration : TeaModel {
         /// <summary>
+        /// <para>The number of Kibana nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? Amount { get; set; }
 
         /// <summary>
+        /// <para>The storage space of the Kibana node. Unit: GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? Disk { get; set; }
 
         /// <summary>
+        /// <para>The Kibana node specifications. For more information, see <a href="https://help.aliyun.com/document_detail/271718.html">Product specifications</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

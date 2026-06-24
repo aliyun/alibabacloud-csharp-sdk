@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DeleteCollectorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the shipper is deleted. Valid values:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The shipper is deleted.</description></item>
-        /// <item><description>false: The shipper fails to be deleted.</description></item>
+        /// <item><description>true: The deletion was successful.</description></item>
+        /// <item><description>false: The deletion failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

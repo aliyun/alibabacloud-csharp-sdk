@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateAdminPasswordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0FA05123-745C-42FD-A69B-AFF48EF9****</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the password is updated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The password is updated.</description></item>
+        /// <item><description>false: The password failed to be updated.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

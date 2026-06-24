@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateXpackMonitorConfigRequest : TeaModel {
         /// <summary>
+        /// <para>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable X-Pack monitoring. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Enable X-Pack monitoring.</description></item>
+        /// <item><description>false: Disable X-Pack monitoring.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -25,11 +33,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <para>The access endpoint of the Elasticsearch instance.</para>
+        /// </summary>
         [NameInMap("endpoints")]
         [Validation(Required=false)]
         public List<string> Endpoints { get; set; }
 
         /// <summary>
+        /// <para>The password of the Elasticsearch instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// 
@@ -41,6 +54,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Password { get; set; }
 
         /// <summary>
+        /// <para>The username of the Elasticsearch instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>elastic</para>
         /// 

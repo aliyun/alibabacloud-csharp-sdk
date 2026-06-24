@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <summary>
         /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful</description></item>
-        /// <item><description>false: failed</description></item>
+        /// <item><description>true: The deployment succeeded.</description></item>
+        /// <item><description>false: The deployment failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

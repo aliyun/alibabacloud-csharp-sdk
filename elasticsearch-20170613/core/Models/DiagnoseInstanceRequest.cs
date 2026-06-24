@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DiagnoseInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The timestamp when the diagnostic report was generated.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
@@ -19,15 +19,27 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The diagnostic items.</para>
+        /// </summary>
         [NameInMap("diagnoseItems")]
         [Validation(Required=false)]
         public List<string> DiagnoseItems { get; set; }
 
+        /// <summary>
+        /// <para>The list of indexes to diagnose.</para>
+        /// </summary>
         [NameInMap("indices")]
         [Validation(Required=false)]
         public List<string> Indices { get; set; }
 
         /// <summary>
+        /// <para>The type of the diagnostic task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ALL: Diagnoses all indexes.</description></item>
+        /// <item><description>SELECT: Diagnoses selected indexes.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
         /// </summary>
@@ -36,7 +48,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The language of the report. Default value: browser language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Simplified Chinese</description></item>
+        /// <item><description>zt: Traditional Chinese</description></item>
+        /// <item><description>es: Spanish</description></item>
+        /// <item><description>fr: French.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>

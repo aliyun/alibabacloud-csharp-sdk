@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListAllNodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The zone ID of the node.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0D71B597-F3FF-5B56-88D7-74F9D3F7****</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The CPU utilization.</para>
-        /// <remarks>
-        /// <para> If the <b>extended</b> request parameter is set to <b>true</b> and the monitoring information of the nodes in the cluster is being synchronized, the value of the cpuPercent parameter is null. In this case, you need to send a request again after 10 seconds to obtain the value of the cpuPercent parameter.</para>
-        /// </remarks>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListAllNodeResponseBodyResult> Result { get; set; }
         public class ListAllNodeResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The disk usage.</para>
+            /// <para>The CPU usage.</para>
+            /// <remarks>
+            /// <para>When <b>extended</b> is set to <b>true</b> and the monitoring information of the node is being synchronized, the parameter value returns null. In this case, wait 10 seconds and send the request again to retrieve the value.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>4.2%</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string CpuPercent { get; set; }
 
             /// <summary>
-            /// <para>The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.</para>
+            /// <para>The disk usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0%</para>
@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string DiskUsedPercent { get; set; }
 
             /// <summary>
+            /// <para>The health status of the node. Valid values: GREEN, YELLOW, RED, and GRAY.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GREEN</para>
             /// </summary>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Health { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the node.</para>
+            /// <para>The JVM memory usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21.6%</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string HeapPercent { get; set; }
 
             /// <summary>
-            /// <para>The port that is used to connect to the node.</para>
+            /// <para>The IP address of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.15.XX.XX</para>
@@ -78,6 +80,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Host { get; set; }
 
             /// <summary>
+            /// <para>The one-minute load average.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.12</para>
             /// </summary>
@@ -86,7 +90,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string LoadOneM { get; set; }
 
             /// <summary>
-            /// <para>The 1-minute load of the node.</para>
+            /// <para>The node type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MASTER: dedicated master node</description></item>
+            /// <item><description>WORKER: hot node</description></item>
+            /// <item><description>WORKER_WARM: warm node</description></item>
+            /// <item><description>COORDINATING: client node</description></item>
+            /// <item><description>KIBANA: Kibana node.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>WORKER</para>
@@ -96,6 +107,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string NodeType { get; set; }
 
             /// <summary>
+            /// <para>The access port of the node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>9200</para>
             /// </summary>
@@ -104,14 +117,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The type of the nodes. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>MASTER: dedicated master node</description></item>
-            /// <item><description>WORKER: hot node</description></item>
-            /// <item><description>WORKER_WARM: warm node</description></item>
-            /// <item><description>COORDINATING: client node</description></item>
-            /// <item><description>KIBANA: Kibana node</description></item>
-            /// </list>
+            /// <para>The zone where the node resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>

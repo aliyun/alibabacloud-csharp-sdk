@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the log.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F40EAA1-6F1D-4DD9-8DB8-C5F00C4E****</para>
@@ -20,20 +20,22 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The timestamp of log generation. Unit: ms.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListLogstashLogResponseBodyResult> Result { get; set; }
         public class ListLogstashLogResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The IP address of the node that generates the log.</para>
+            /// <para>The detailed content of the log.</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The IP address of the node that generated the log.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.xx.xx</para>
             /// </summary>
@@ -42,6 +44,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Host { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ls-cn-v0h1kzca****</para>
             /// </summary>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The log level. Valid values: trace, debug, info, warn, and error. GC logs do not have a level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>info</para>
@@ -60,6 +64,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Level { get; set; }
 
             /// <summary>
+            /// <para>The timestamp when the log was generated. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1531985112420</para>
             /// </summary>

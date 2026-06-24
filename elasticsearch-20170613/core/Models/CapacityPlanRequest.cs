@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CapacityPlanRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether there is a need for complex aggregation queries. Options:</para>
+        /// <para>Specifies whether complex aggregate query is required. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Yes</description></item>
-        /// <item><description>false (default): No</description></item>
+        /// <item><description>true: Required.</description></item>
+        /// <item><description>false (default): Not required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? ComplexQueryAvailable { get; set; }
 
         /// <summary>
-        /// <para>Disk usage status.</para>
+        /// <para>The disk usage information.</para>
         /// </summary>
         [NameInMap("dataInfo")]
         [Validation(Required=false)]
         public List<CapacityPlanRequestDataInfo> DataInfo { get; set; }
         public class CapacityPlanRequestDataInfo : TeaModel {
             /// <summary>
-            /// <para>Disk data metric code. Options:</para>
+            /// <para>The disk data metric code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>totalRawData: Raw data information</description></item>
-            /// <item><description>document: Data document information, estimated document count</description></item>
-            /// <item><description>dailyIncrement: Daily data growth</description></item>
-            /// <item><description>dailyIncrementDoc: Daily incremental document count</description></item>
-            /// <item><description>retentionTime: Data retention period</description></item>
-            /// <item><description>replica: Replica settings</description></item>
+            /// <item><description>totalRawData: source data information</description></item>
+            /// <item><description>document: data document information, estimated number of documents</description></item>
+            /// <item><description>dailyIncrement: daily data growth</description></item>
+            /// <item><description>dailyIncrement: daily incremental documents</description></item>
+            /// <item><description>retentionTime: data retention period</description></item>
+            /// <item><description>replica: replica settings.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Disk usage metric value.</para>
+            /// <para>The metric value of disk usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>Total number of data entries.</para>
+            /// <para>The total number of data entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -69,10 +69,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>Disk data type. Options:</para>
+            /// <para>The disk data type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>hot: Hot data</description></item>
-            /// <item><description>warm: Cold data</description></item>
+            /// <item><description>hot: hot data</description></item>
+            /// <item><description>warm: warm data.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Data or time unit. Options:</para>
+            /// <para>The data unit or time unit. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Data units: MiB, GiB, TB, PB</description></item>
-            /// <item><description>Time units: DAYS, WEEKS, MONTHS, YEARS</description></item>
+            /// <item><description>Time units: DAYS, WEEKS, MONTHS, YEARS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,14 +99,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>Metrics information including disk usage, search and write operations, aggregation requests, etc.</para>
+        /// <para>The metric information, including disk usage, search and write operations, and aggregation requests.</para>
         /// </summary>
         [NameInMap("metric")]
         [Validation(Required=false)]
         public List<CapacityPlanRequestMetric> Metric { get; set; }
         public class CapacityPlanRequestMetric : TeaModel {
             /// <summary>
-            /// <para>Average QPS.</para>
+            /// <para>The average QPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -116,10 +116,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? AverageQps { get; set; }
 
             /// <summary>
-            /// <para>Search or write metric code. Options:</para>
+            /// <para>The search or write metric code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>write: Write</description></item>
-            /// <item><description>search: Search</description></item>
+            /// <item><description>write: write</description></item>
+            /// <item><description>search: search.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Concurrent number.</para>
+            /// <para>The number of concurrent connections.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? Concurrent { get; set; }
 
             /// <summary>
-            /// <para>Peak QPS.</para>
+            /// <para>The peak QPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? PeakQps { get; set; }
 
             /// <summary>
-            /// <para>Expected average response time, unit: milliseconds.</para>
+            /// <para>The expected average response time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? ResponseTime { get; set; }
 
             /// <summary>
-            /// <para>Throughput, unit: MB/S.</para>
+            /// <para>The throughput, in MB/s.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -170,10 +170,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? Throughput { get; set; }
 
             /// <summary>
-            /// <para>Search/write peak type. Options:</para>
+            /// <para>The search or write peak type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>common: Regular</description></item>
-            /// <item><description>peak: Peak</description></item>
+            /// <item><description>common: normal</description></item>
+            /// <item><description>peak: peak.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,13 +186,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>Usage scenarios, options:</para>
+        /// <para>Scenarios. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>general: General scenario</description></item>
-        /// <item><description>analysisVisualization: Data analysis scenario</description></item>
-        /// <item><description>dbAcceleration: Database acceleration scenario</description></item>
-        /// <item><description>search: Search scenario</description></item>
-        /// <item><description>log: Log scenario</description></item>
+        /// <item><description>general: general-purpose scenario</description></item>
+        /// <item><description>analysisVisualization: data analytics scenario</description></item>
+        /// <item><description>dbAcceleration: database acceleration scenario</description></item>
+        /// <item><description>search: search scenario</description></item>
+        /// <item><description>log: log scenario.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

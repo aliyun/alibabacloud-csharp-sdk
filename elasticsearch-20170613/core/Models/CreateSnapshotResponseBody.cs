@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateSnapshotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return results:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: manual snapshot backup successfully</description></item>
-        /// <item><description>false: manual snapshot backup failed</description></item>
+        /// <item><description>true: The manual snapshot backup is successful.</description></item>
+        /// <item><description>false: The manual snapshot backup failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

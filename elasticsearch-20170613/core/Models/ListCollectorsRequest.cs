@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListCollectorsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the resource with which the shipper is associated.</para>
+        /// <para>The instance ID associated with the collector.</para>
         /// 
         /// <b>Example:</b>
         /// <para>es-cn-nif1q8auz0003****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the shipper.</para>
+        /// <para>The collector name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>collectorName1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Valid values: 1 to 200. Default value: 1.</para>
+        /// <para>The page number of the returned results. Default value: 1. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shipper.</para>
+        /// <para>The collector ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ct-cn-77uqof2s7rg5c****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 500. Default value: 20.</para>
+        /// <para>The number of results per page. Default value: 20. Minimum value: 1. Maximum value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The type of the machine on which the shipper is deployed. If you leave this parameter empty, shippers deployed on all types of machines are returned. Valid values:</para>
+        /// <para>The type of machine on which the collector is deployed. If this parameter is not specified, all types are returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ECS</description></item>
-        /// <item><description>ACK</description></item>
+        /// <item><description><para>ECS: ECS instance</para>
+        /// </description></item>
+        /// <item><description><para>ACK: Container Kubernetes cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

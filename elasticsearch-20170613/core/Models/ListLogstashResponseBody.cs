@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method of the instance. Supported: prepaid (subscription) and postpaid (pay-as-you-go).</para>
+        /// <para>The request header information.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListLogstashResponseBodyHeaders Headers { get; set; }
         public class ListLogstashResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The number of data nodes.</para>
+            /// <para>The total number of instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>Detailed information about the matching instances.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AC442F2F-5068-4434-AA21-E78947A9****</para>
@@ -39,21 +39,21 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The name of the VPC.</para>
+        /// <para>The list of instances returned by the current request.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListLogstashResponseBodyResult> Result { get; set; }
         public class ListLogstashResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The configuration information of the data node.</para>
+            /// <para>The instance tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListLogstashResponseBodyResultTags> Tags { get; set; }
             public class ListLogstashResponseBodyResultTags : TeaModel {
                 /// <summary>
-                /// <para>The disk size of the node.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The instance type of the ECS instance.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dev</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The time when the instance was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-07-13T03:58:07.253Z</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was last updated.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ls-cn-abc</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the cloud disk.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ls-cn-n6w1o5jq****</para>
@@ -113,13 +113,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</para>
+            /// <para>The network configuration.</para>
             /// </summary>
             [NameInMap("networkConfig")]
             [Validation(Required=false)]
             public ListLogstashResponseBodyResultNetworkConfig NetworkConfig { get; set; }
             public class ListLogstashResponseBodyResultNetworkConfig : TeaModel {
                 /// <summary>
+                /// <para>The network type. Currently, only Virtual Private Cloud (VPC) is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vpc</para>
                 /// </summary>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-abc</para>
@@ -138,6 +140,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
+                /// <para>The zone where the instance resides.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-*</para>
                 /// </summary>
@@ -146,6 +150,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VsArea { get; set; }
 
                 /// <summary>
+                /// <para>The vSwitch ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-def</para>
                 /// </summary>
@@ -156,7 +162,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The state of the instance. Valid values: Normal, Active, Inactive, and Invalid.</para>
+            /// <para>The number of nodes in the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -166,18 +172,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use disk encryption. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: Enables the concurrent query feature for queries other than aggregate queries.</description></item>
-            /// <item><description>false: Disables the concurrent query feature for queries other than aggregate queries.</description></item>
-            /// </list>
+            /// <para>The configuration information of data nodes.</para>
             /// </summary>
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
             public ListLogstashResponseBodyResultNodeSpec NodeSpec { get; set; }
             public class ListLogstashResponseBodyResultNodeSpec : TeaModel {
                 /// <summary>
-                /// <para>The network configurations.</para>
+                /// <para>The disk size of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -187,7 +189,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Disk { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC.</para>
+                /// <para>Indicates whether disk encryption is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Enabled.</description></item>
+                /// <item><description>false: Disabled.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -197,7 +203,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public bool? DiskEncryption { get; set; }
 
                 /// <summary>
-                /// <para>The zone where the cluster resides.</para>
+                /// <para>The disk type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_ssd</para>
@@ -207,7 +213,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the disk.</para>
+                /// <para>The instance specification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>logstash.n4.small</para>
@@ -219,7 +225,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The time when the instance was created.</para>
+            /// <para>The billing method of the instance. Valid values: prepaid (subscription) and postpaid (pay-as-you-go).</para>
             /// 
             /// <b>Example:</b>
             /// <para>postpaid</para>
@@ -233,7 +239,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The version of the instance. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</para>
+            /// <para>The status of the instance. Valid values: active (Normal), activating (Taking Effect), inactive (Frozen), and invalid (Expired).</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -243,7 +249,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tag of the instance. Valid values:</para>
+            /// <para>The time when the instance was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-07-18T10:10:04.484Z</para>
@@ -253,7 +259,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>The tag key of the cloud disk.</para>
+            /// <para>The instance version. Currently, only 6.7.0_with_X-Pack and 7.4.0_with_X-Pack are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6.7.0_with_X-Pack</para>

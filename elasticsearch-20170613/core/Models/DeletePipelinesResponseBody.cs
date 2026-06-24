@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DeletePipelinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the pipeline is deleted. Valid values:</para>
+        /// <para>The returned result:</para>
         /// <list type="bullet">
-        /// <item><description>true: The pipeline is deleted.</description></item>
-        /// <item><description>false: The pipeline fails to be deleted.</description></item>
+        /// <item><description>true: The pipelines are deleted.</description></item>
+        /// <item><description>false: The pipelines failed to be deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDeprecatedTemplatesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response headers.</para>
+        /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListDeprecatedTemplatesResponseBodyHeaders Headers { get; set; }
         public class ListDeprecatedTemplatesResponseBodyHeaders : TeaModel {
             /// <summary>
+            /// <para>The total number of entries returned.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC47D9</para>
         /// </summary>
@@ -31,11 +38,20 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The returned results.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDeprecatedTemplatesResponseBodyResult> Result { get; set; }
         public class ListDeprecatedTemplatesResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the template matches a data stream. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: matched</description></item>
+            /// <item><description>false: not matched.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -43,11 +59,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public bool? DataStream { get; set; }
 
+            /// <summary>
+            /// <para>The index template information.</para>
+            /// </summary>
             [NameInMap("indexPatterns")]
             [Validation(Required=false)]
             public List<string> IndexPatterns { get; set; }
 
             /// <summary>
+            /// <para>The index template name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>openstore-index-template</para>
             /// </summary>
@@ -56,6 +77,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string IndexTemplate { get; set; }
 
             /// <summary>
+            /// <para>The priority.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -63,11 +86,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             [Validation(Required=false)]
             public long? Order { get; set; }
 
+            /// <summary>
+            /// <para>The index template configuration.</para>
+            /// </summary>
             [NameInMap("template")]
             [Validation(Required=false)]
             public ListDeprecatedTemplatesResponseBodyResultTemplate Template { get; set; }
             public class ListDeprecatedTemplatesResponseBodyResultTemplate : TeaModel {
                 /// <summary>
+                /// <para>The alias configuration of the template.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>&quot;{}&quot;</para>
                 /// </summary>
@@ -76,6 +104,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Aliases { get; set; }
 
                 /// <summary>
+                /// <para>The mappings configuration of the template.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>&quot;{\&quot;properties\&quot;:{\&quot;created_at\&quot;:{\&quot;format\&quot;:\&quot;EEE MMM dd HH:mm:ss Z yyyy\&quot;,\&quot;type\&quot;:\&quot;date\&quot;},\&quot;host_name\&quot;:{\&quot;type\&quot;:\&quot;keyword\&quot;}}}&quot;</para>
                 /// </summary>
@@ -84,6 +114,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Mappings { get; set; }
 
                 /// <summary>
+                /// <para>The settings configuration of the template.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>&quot;{\&quot;index.number_of_shards\&quot;:\&quot;1\&quot;}&quot;</para>
                 /// </summary>
@@ -94,6 +126,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
+            /// <para>The version of the index template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>70000</para>
             /// </summary>

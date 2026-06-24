@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<ListExtendfilesResponseBodyResult> Result { get; set; }
         public class ListExtendfilesResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The path of the driver file.</para>
+            /// <para>The extension file path.</para>
             /// </summary>
             [NameInMap("filePath")]
             [Validation(Required=false)]
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The size of the driver file.</para>
+            /// <para>The extension file size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>968668</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The name of the driver file.</para>
+            /// <para>The extension file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql-connector-java-5.1.35.jar</para>

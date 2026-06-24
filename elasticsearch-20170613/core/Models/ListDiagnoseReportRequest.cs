@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDiagnoseReportRequest : TeaModel {
         /// <summary>
-        /// <para>SYSTEM</para>
+        /// <para>Specifies whether to display the details of diagnostic items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? Detail { get; set; }
 
         /// <summary>
-        /// <para>1</para>
+        /// <para>The end timestamp of the query. Unit: milliseconds.</para>
+        /// <list type="bullet">
+        /// <item><description>Minimum value: 1000000000000</description></item>
+        /// <item><description>Maximum value: 2000000000000.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,17 +35,24 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>1594569600000</para>
+        /// <para>The language of the reports to retrieve. Default value: the browser language. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Simplified Chinese</description></item>
+        /// <item><description>zt: Traditional Chinese</description></item>
+        /// <item><description>es: Spanish</description></item>
+        /// <item><description>fr: French.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>spanish</para>
+        /// <para>es</para>
         /// </summary>
         [NameInMap("lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>20</para>
+        /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +62,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>true</para>
+        /// <para>The number of reports per page. Default value: 10. Minimum value: 1. Maximum value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,7 +72,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>1595174399999</para>
+        /// <para>The start timestamp of the query. Unit: milliseconds.</para>
+        /// <list type="bullet">
+        /// <item><description>Minimum value: 1000000000000</description></item>
+        /// <item><description>Maximum value: 2000000000000.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +87,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The trigger method of the health diagnostics. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SYSTEM (default): automatically triggered by the system</description></item>
+        /// <item><description>INNER: internally triggered</description></item>
+        /// <item><description>USER: manually triggered by the user.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DeactivateZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Zone offline successful</description></item>
-        /// <item><description>false: Zone offline failed</description></item>
+        /// <item><description>true: The zones are taken offline.</description></item>
+        /// <item><description>false: The zones failed to be taken offline.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

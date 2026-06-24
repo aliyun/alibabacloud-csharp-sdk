@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the plug-in.</para>
+        /// <para>The response headers.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListPluginsResponseBodyHeaders Headers { get; set; }
         public class ListPluginsResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The address of the plug-in description document.</para>
+            /// <para>The total number of records returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The return results.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A5D8E74-565C-43DC-B031-29289FA9****</para>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the plug-in.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListPluginsResponseBodyResult> Result { get; set; }
         public class ListPluginsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The source type of the plug-in.</para>
+            /// <para>The plugin description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IK analysis plug-in for Elasticsearch.</para>
@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The plugin name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>analysis-ik</para>
             /// </summary>
@@ -64,6 +66,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The plugin source type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
             /// </summary>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The name of the plug-in.</para>
+            /// <para>The URL of the plugin documentation.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx.html">https://xxxx.html</a></para>
@@ -82,6 +86,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SpecificationUrl { get; set; }
 
             /// <summary>
+            /// <para>The plugin status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>INSTALLED</para>
             /// </summary>

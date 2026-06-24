@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ResumeElasticsearchTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return results:</para>
+        /// <para>The return result:</para>
         /// <list type="bullet">
-        /// <item><description>true: resume the interrupted change successfully</description></item>
-        /// <item><description>false: resume the interrupted change successfully failed</description></item>
+        /// <item><description>true: The interrupted change was resumed successfully.</description></item>
+        /// <item><description>false: The interrupted change failed to be resumed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

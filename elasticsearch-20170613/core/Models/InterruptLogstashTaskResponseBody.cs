@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class InterruptLogstashTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned. If the API operation is successfully called, this parameter is not returned.</para>
+        /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>.</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned. If the API operation is successfully called, this parameter is not returned.</para>
+        /// <para>The error message. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>.</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task is suspended. Valid values:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The task is suspended.</description></item>
+        /// <item><description>false: The task failed to be suspended.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

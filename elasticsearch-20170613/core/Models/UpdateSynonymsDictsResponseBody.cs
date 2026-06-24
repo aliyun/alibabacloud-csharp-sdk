@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The source type of the dictionary file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS</description></item>
-            /// <item><description>ORIGIN</description></item>
+            /// <item><description>OSS: OSS open storage.</description></item>
+            /// <item><description>ORIGIN: retains the previously uploaded dictionary.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The dictionary type. The value is fixed as SYNONYMS.</para>
+            /// <para>The dictionary type. Valid values: SYNONYMS (synonym).</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYNONYMS</para>

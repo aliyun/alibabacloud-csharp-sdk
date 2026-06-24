@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available status of the region.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1ADFG</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the region.</para>
+        /// <para>The list of returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyResult> Result { get; set; }
         public class DescribeRegionsResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The endpoint of the region exposed in the console.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://elasticsearch-cn-hangzhou.console.aliyun.com">https://elasticsearch-cn-hangzhou.console.aliyun.com</a></para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string ConsoleEndpoint { get; set; }
 
             /// <summary>
+            /// <para>The name of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>China (Hangzhou)</para>
             /// </summary>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string LocalName { get; set; }
 
             /// <summary>
+            /// <para>The endpoint of the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>elasticsearch.cn-hangzhou.aliyuncs.com</para>
             /// </summary>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string RegionEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The name of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the region that is exposed in the console.</para>
+            /// <para>The availability status of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>available</para>

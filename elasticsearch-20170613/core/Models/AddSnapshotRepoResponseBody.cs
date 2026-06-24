@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class AddSnapshotRepoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return results:</para>
+        /// <para>The result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Reference warehouse created successfully</description></item>
-        /// <item><description>false: Reference warehouse created failed</description></item>
+        /// <item><description>true: The reference repository is created.</description></item>
+        /// <item><description>false: The reference repository failed to be created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

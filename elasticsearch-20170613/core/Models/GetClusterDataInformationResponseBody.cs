@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class GetClusterDataInformationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetClusterDataInformationResponseBodyResult Result { get; set; }
         public class GetClusterDataInformationResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Whether it is connectable.</para>
+            /// <para>Indicates whether the cluster is connectable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,28 +37,22 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public bool? Connectable { get; set; }
 
             /// <summary>
-            /// <para>The metadata of the cluster.</para>
+            /// <para>The metadata information of the cluster.</para>
             /// </summary>
             [NameInMap("metaInfo")]
             [Validation(Required=false)]
             public GetClusterDataInformationResponseBodyResultMetaInfo MetaInfo { get; set; }
             public class GetClusterDataInformationResponseBodyResultMetaInfo : TeaModel {
-                /// <summary>
-                /// <para>The fields in the Mapping for the index.</para>
-                /// </summary>
                 [NameInMap("fields")]
                 [Validation(Required=false)]
                 public List<string> Fields { get; set; }
 
-                /// <summary>
-                /// <para>The index list of the cluster.</para>
-                /// </summary>
                 [NameInMap("indices")]
                 [Validation(Required=false)]
                 public List<string> Indices { get; set; }
 
                 /// <summary>
-                /// <para>The Mapping configuration of the cluster.</para>
+                /// <para>The mapping configuration of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;_doc\&quot;:{\&quot;properties\&quot;:{\&quot;user\&quot;:{\&quot;properties\&quot;:{\&quot;last\&quot;:{\&quot;type\&quot;:\&quot;text\&quot;,...}}}}}}</para>
@@ -68,7 +62,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Mapping { get; set; }
 
                 /// <summary>
-                /// <para>The Settings of the cluster.</para>
+                /// <para>The settings configuration of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\n  \&quot;index\&quot;: {\n    \&quot;replication\&quot;: {\n}.....}}</para>
@@ -77,9 +71,6 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 [Validation(Required=false)]
                 public string Settings { get; set; }
 
-                /// <summary>
-                /// <para>Specifies the type of the index.</para>
-                /// </summary>
                 [NameInMap("typeName")]
                 [Validation(Required=false)]
                 public List<string> TypeName { get; set; }

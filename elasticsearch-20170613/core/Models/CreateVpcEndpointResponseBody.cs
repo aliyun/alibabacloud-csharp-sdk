@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CreateVpcEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The endpoint domain name, which is used to configure the connection.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC47D9</para>
@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint on the service VPC side.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CreateVpcEndpointResponseBodyResult Result { get; set; }
         public class CreateVpcEndpointResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The endpoint domain name, which is used for connection configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ep-bp1tah7zbrwmkjef****.epsrv-bp1w0p3jdirbfmt6****.cn-hangzhou.privatelink.aliyuncs.com</para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EndpointDomain { get; set; }
 
             /// <summary>
+            /// <para>The ID of the service VPC endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ep-bp1tah7zbrwmkjef****</para>
             /// </summary>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EndpointId { get; set; }
 
             /// <summary>
+            /// <para>The name of the service VPC endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpcElasticSearchABC</para>
             /// </summary>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EndpointName { get; set; }
 
             /// <summary>
-            /// <para>The name of the service VPC-side endpoint.</para>
+            /// <para>The ID of the user endpoint service associated with the endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>epsrv-bp1w0p3jdirbfmt6****</para>

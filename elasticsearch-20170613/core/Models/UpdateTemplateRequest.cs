@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The template configuration content. For more information, see the RequestBody section below.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;content&quot;: &quot;{\n\t\&quot;persistent\&quot;:{\n\t\t\&quot;search\&quot;:{\n\t\t\t\&quot;max_buckets\&quot;:\&quot;10000\&quot;\n\t\t}\n\t}\n}&quot; }</para>
         /// </summary>

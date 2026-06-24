@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ZoneInfo : TeaModel {
         /// <summary>
+        /// <para>The zone status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ISOLATION: offline</description></item>
+        /// <item><description>NORMAL: Normal.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
         /// </summary>
@@ -18,6 +24,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The zone ID, which uniquely identifies the zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>
         /// </summary>

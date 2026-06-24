@@ -14,7 +14,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Body { get; set; }
 
         /// <summary>
-        /// <para>Verify whether the zone node can be migrated. true indicates that the data is only verified and the migration task is not executed. false indicates that the migration task is executed after the verification is successful.</para>
+        /// <para>Specifies whether to perform a dry run to check whether zone node migration is feasible. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a validation check without executing the migration task.</description></item>
+        /// <item><description>false: executes the migration task after the validation check succeeds.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

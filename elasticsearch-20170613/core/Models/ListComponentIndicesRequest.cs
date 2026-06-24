@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListComponentIndicesRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the composable template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>template</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number for paging. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// 
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page for paging. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// 

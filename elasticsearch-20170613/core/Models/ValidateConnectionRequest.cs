@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ValidateConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A unique token used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A2CFF0E-5718-45B5-9D4D-70B3FF****</para>
@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The information about the Elasticsearch instance to which you want to validate connectivity.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{     &quot;endpoints&quot;: [         &quot;<a href="http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200">http://es-cn-n6w1o1x0w001c****.elasticsearch.aliyuncs.com:9200</a>&quot;     ],     &quot;userName&quot;: &quot;elastic&quot;,     &quot;password&quot;: &quot;xxxx&quot; }</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string Body { get; set; }

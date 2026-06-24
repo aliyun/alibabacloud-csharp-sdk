@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListILMPoliciesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of index lifecycle policies returned by the request.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListILMPoliciesResponseBodyResult> Result { get; set; }
         public class ListILMPoliciesResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The name of the index lifecycle policy.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>policy-1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The index lifecycle content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;hot&quot;:{&quot;minAge&quot;:&quot;0ms&quot;,&quot;actions&quot;:{&quot;rollover&quot;:{&quot;maxSize&quot;:&quot;50gb&quot;,&quot;maxAge&quot;:&quot;30d&quot;},&quot;setPriority&quot;:{&quot;priority&quot;:100}}},&quot;delete&quot;:{&quot;minAge&quot;:&quot;3d&quot;,&quot;actions&quot;:{&quot;delete&quot;:{}}}}</para>
             /// </summary>

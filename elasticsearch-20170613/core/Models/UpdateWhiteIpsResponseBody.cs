@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateWhiteIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The updated whitelist.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8D58B014-BBD7-4D80-B219-00B9D5C6860C</para>
@@ -20,35 +20,35 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The network configurations.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public UpdateWhiteIpsResponseBodyResult Result { get; set; }
         public class UpdateWhiteIpsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The list of whitelists.</para>
+            /// <para>The private network internal-facing access whitelist (deprecated).</para>
             /// </summary>
             [NameInMap("esIPWhitelist")]
             [Validation(Required=false)]
             public List<string> EsIPWhitelist { get; set; }
 
             /// <summary>
-            /// <para>The name of the whitelist. By default, the default whitelist is included.</para>
+            /// <para>The network configuration.</para>
             /// </summary>
             [NameInMap("networkConfig")]
             [Validation(Required=false)]
             public UpdateWhiteIpsResponseBodyResultNetworkConfig NetworkConfig { get; set; }
             public class UpdateWhiteIpsResponseBodyResultNetworkConfig : TeaModel {
                 /// <summary>
-                /// <para>The IP addresses in the whitelist.</para>
+                /// <para>The list of whitelist groups.</para>
                 /// </summary>
                 [NameInMap("whiteIpGroupList")]
                 [Validation(Required=false)]
                 public List<UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList> WhiteIpGroupList { get; set; }
                 public class UpdateWhiteIpsResponseBodyResultNetworkConfigWhiteIpGroupList : TeaModel {
                     /// <summary>
-                    /// <para>The type of the whitelist. The value of this parameter is fixed as PRIVATE_ES, which indicates a private IP address whitelist.</para>
+                    /// <para>The name of the whitelist group. The default group is included by default.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test_group</para>
@@ -57,11 +57,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                     [Validation(Required=false)]
                     public string GroupName { get; set; }
 
+                    /// <summary>
+                    /// <para>The IP address information in the whitelist group.</para>
+                    /// </summary>
                     [NameInMap("ips")]
                     [Validation(Required=false)]
                     public List<string> Ips { get; set; }
 
                     /// <summary>
+                    /// <para>The whitelist type. The value is fixed as PRIVATE_ES, which indicates the private network internal-facing access whitelist.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>PRIVATE_ES</para>
                     /// </summary>

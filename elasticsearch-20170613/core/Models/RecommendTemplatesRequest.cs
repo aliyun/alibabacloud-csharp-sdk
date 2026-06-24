@@ -10,15 +10,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RecommendTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The scenario-specific templatetype used by the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
-        /// <item><description></description></item>
+        /// <item><description>general: general-purpose scenario</description></item>
+        /// <item><description>analysisVisualization: data analytics scenario</description></item>
+        /// <item><description>dbAcceleration: database acceleration scenario</description></item>
+        /// <item><description>search: search scenario</description></item>
+        /// <item><description>log: log scenario</description></item>
         /// </list>
-        /// <para>**</para>
-        /// <hr>
+        /// <remarks>
+        /// <para>Commercial model instances support the general-purpose, data analytics, database acceleration, and search scenarios. Advanced Edition instances support only the log scenario.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

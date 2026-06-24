@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribeConnectableClustersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance that can communicate with each other.</para>
+        /// <para>Specifies whether to return instances that are already connected. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default): The returned instance list includes instances that are already connected.</description></item>
+        /// <item><description>false: The returned instance list does not include instances that are already connected.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

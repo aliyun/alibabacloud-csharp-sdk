@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1d2db86sca4384811e0b5e8707e******</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>1d2db86sca4384811e0b5e8707e\<em>\</em>\<em>\</em>\<em>\</em></para>
+        /// <para>The page number of the resource relationship list. This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The list of instance IDs to query. The value is in JSON array format and can contain up to 20 items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</para>
+        /// <para>The resource type definition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[&quot;es-cn-aaa&quot;,&quot;es-cn-bbb&quot;]</para>
+        /// <para>The number of entries per page in Settings for paged query and paging. This field is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,13 +67,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The header of the response. This parameter is empty and is for reference only. You cannot force this parameter to be relied on in the program.</para>
-        /// <remarks>
-        /// <para> The return examples does not contain this parameter.</para>
-        /// </remarks>
+        /// <para>The list of tags to query. The value is in JSON string format and can contain up to 20 items.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;,&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;,  &quot;value&quot;:&quot;IT&quot;}]</para>
+        /// <para>[{&quot;key&quot;:&quot;env&quot;, &quot;value&quot;:&quot;dev&quot;},{&quot;key&quot;:&quot;dev&quot;, &quot;value&quot;:&quot;IT&quot;}]</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

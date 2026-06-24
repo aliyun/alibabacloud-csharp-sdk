@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateKibanaSsoRequest : TeaModel {
         /// <summary>
+        /// <para>true: Enabled; false: shutdown</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

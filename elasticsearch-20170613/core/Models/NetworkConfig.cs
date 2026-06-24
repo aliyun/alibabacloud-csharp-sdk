@@ -17,11 +17,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public List<NetworkConfigLoadBalanceConfig> LoadBalanceConfig { get; set; }
         public class NetworkConfigLoadBalanceConfig : TeaModel {
+            /// <summary>
+            /// <para>可用区信息，如: cn-hangzhou-i</para>
+            /// </summary>
             [NameInMap("vsArea")]
             [Validation(Required=false)]
             public string VsArea { get; set; }
 
             /// <summary>
+            /// <para>vswitchId</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-xxxx</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
+        /// <para>The load balancing type. Default value: DEFAULT.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DEFAULT</para>
         /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string LoadBalanceType { get; set; }
 
         /// <summary>
+        /// <para>The network type. Only Virtual Private Cloud (VPC) is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc</para>
         /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The VPC ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1xk0naij7jx4ph1****</para>
         /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID of the network.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-e</para>
         /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string VsArea { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1ogpdintii5qvyx****</para>
         /// </summary>
@@ -71,6 +86,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         [Validation(Required=false)]
         public string VswitchId { get; set; }
 
+        /// <summary>
+        /// <para>The IP whitelist group configuration. You do not need to set this parameter when you call the createInstance operation to create an instance because the setting does not take effect during instance creation. Use a separate API operation to configure whitelists for different roles.</para>
+        /// </summary>
         [NameInMap("whiteIpGroupList")]
         [Validation(Required=false)]
         public List<WhiteIpGroup> WhiteIpGroupList { get; set; }

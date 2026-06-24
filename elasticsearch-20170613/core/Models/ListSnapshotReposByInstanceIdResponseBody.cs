@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListSnapshotReposByInstanceIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return results.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListSnapshotReposByInstanceIdResponseBodyResult> Result { get; set; }
         public class ListSnapshotReposByInstanceIdResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Reference instance ID.</para>
+            /// <para>The referenced instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-6ja1ro4jt000c****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The address of the repository.</para>
+            /// <para>The repository address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-6ja1ro4jt000c****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string RepoPath { get; set; }
 
             /// <summary>
-            /// <para>Reference warehouse name.</para>
+            /// <para>The name of the referenced repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_snapshot_from_es-cn-6ja1ro4jt000c****</para>
@@ -57,7 +57,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SnapWarehouse { get; set; }
 
             /// <summary>
-            /// <para>Reference warehouse status. available indicates that it is valid. unavailable indicates that it is invalid.</para>
+            /// <para>The status of the referenced repository. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>available: The repository is active.</description></item>
+            /// <item><description>unavailable: The repository is inactive.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>available</para>

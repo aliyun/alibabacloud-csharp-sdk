@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>A tag.</para>
+        /// <para>The resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The resource type. Set this parameter to INSTANCE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The value of the tag.</para>
+        /// <para>The tag information.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tags")]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public List<TagResourcesRequestTags> Tags { get; set; }
         public class TagResourcesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The returned object.</para>
+            /// <para>The tag key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,11 +48,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether tags are added to the clusters. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>The tag value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

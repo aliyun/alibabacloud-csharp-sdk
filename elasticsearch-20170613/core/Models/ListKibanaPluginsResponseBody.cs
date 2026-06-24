@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListKibanaPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request header.</para>
+        /// <para>The request headers.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the plug-ins.</para>
+        /// <para>The plugin information returned by the current request.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListKibanaPluginsResponseBodyResult> Result { get; set; }
         public class ListKibanaPluginsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The description of the plug-in.</para>
+            /// <para>The plugin description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Customize DSL statements to query data.</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the plug-in.</para>
+            /// <para>The plugin name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bsearch_querybuilder</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The source of the plug-in.</para>
+            /// <para>The source of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The URL of the introduction to the plug-in. The value null is supported.</para>
+            /// <para>The URL of the plugin introduction. The value can be null.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxx">https://xxxx</a></para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SpecificationUrl { get; set; }
 
             /// <summary>
-            /// <para>The installation status of the plug-in.</para>
+            /// <para>The installation status of the plugin.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INSTALLED</para>

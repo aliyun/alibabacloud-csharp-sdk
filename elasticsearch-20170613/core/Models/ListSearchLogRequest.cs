@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListSearchLogRequest : TeaModel {
         /// <summary>
-        /// <para>20</para>
+        /// <para>The start timestamp of the log, in milliseconds. The value must be within the last 7 days. If this parameter is not specified, all logs within the [current time - 7 days, endTime\] range are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1531910852074</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The end timestamp of the log, in milliseconds. The value must be within the last 7 days. Specify this parameter. If this parameter is not specified, an empty result is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1531910852074</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The header of the response.</para>
+        /// <para>The page number of the plug-in list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>1</para>
+        /// <para>The keyword to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 20. Minimum value: 1. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -61,7 +61,16 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>1531910852074</para>
+        /// <para>The log type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>INSTANCELOG: primary log.</description></item>
+        /// <item><description>SEARCHSLOW: searching slow log.</description></item>
+        /// <item><description>INDEXINGSLOW: indexing slow log.</description></item>
+        /// <item><description>JVMLOG: GC log.</description></item>
+        /// <item><description>ES_SEARCH_ACCESS_LOG: Elasticsearch access log.</description></item>
+        /// <item><description>AUDIT: audit log.</description></item>
+        /// </list>
+        /// <para>For limits on viewing logs, see <a href="https://help.aliyun.com/document_detail/72026.html">Query logs</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

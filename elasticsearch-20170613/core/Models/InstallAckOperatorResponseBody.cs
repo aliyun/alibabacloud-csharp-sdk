@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether ES-operator is installed. Valid values:</para>
+        /// <para>The returned result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The installation was successful.</description></item>
+        /// <item><description>false: The installation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,18 +10,25 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UpdateKibanaPvlNetworkRequest : TeaModel {
         /// <summary>
+        /// <para>The endpoint name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>es-cn-27a3mul6l00***-kibana</para>
+        /// <para>es-cn-text-kibana</para>
         /// </summary>
         [NameInMap("endpointName")]
         [Validation(Required=false)]
         public string EndpointName { get; set; }
 
+        /// <summary>
+        /// <para>The list of security groups.</para>
+        /// </summary>
         [NameInMap("securityGroups")]
         [Validation(Required=false)]
         public List<string> SecurityGroups { get; set; }
 
         /// <summary>
+        /// <para>Used to ensure the idempotency of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -30,8 +37,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The Kibana private network connection ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>es-cn-27a3mul6l0***-kibana-internal</para>
+        /// <para>es-cn-vo93ngti8000a****-kibana-internal-internal</para>
         /// </summary>
         [NameInMap("pvlId")]
         [Validation(Required=false)]

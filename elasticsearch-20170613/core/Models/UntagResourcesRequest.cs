@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete all parts. Default value: <b>false</b> . This parameter is valid only when <b>TagKeys</b> is not specified.</para>
+        /// <para>Specifies whether to delete all tags. Default value: <b>false</b>. This parameter is valid only when <b>TagKeys</b> is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The resource list that you want to delete.</para>
+        /// <para>The list of resources to delete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;es-cn-09k1rocex0006****&quot;,&quot;es-cn-oew1rgiev0009****&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Fixed to <b>INSTANCE</b> .</para>
+        /// <para>The resource type. Set this to <b>INSTANCE</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INSTANCE</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of tags that you want to delete. The list can contain up to 20 subitems.</para>
+        /// <para>The list of tags to delete. A maximum of 20 items can be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;tagKey1&quot;,&quot;tagKey2&quot;]</para>

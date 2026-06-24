@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListLogstashPluginsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The address of the documentation for the plug-in.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>99407AB-2FA9-489E-A259-40CF6DCC****</para>
@@ -20,23 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the plug-in. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>INSTALLED: Installed</description></item>
-        /// <item><description>UNINSTALLED: Not installed</description></item>
-        /// <item><description>INSTALLING: The instance is being installed.</description></item>
-        /// <item><description>UNINSTALLING: The instance is being uninstalled.</description></item>
-        /// <item><description>UPGRADING: The backup gateway is being upgraded.</description></item>
-        /// <item><description>FAILED: Installation failed</description></item>
-        /// <item><description>UNKNOWN: The cluster is lost and cannot be created.</description></item>
-        /// </list>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListLogstashPluginsResponseBodyResult> Result { get; set; }
         public class ListLogstashPluginsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The source of the plug-in.</para>
+            /// <para>The plugin description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The clone filter is for duplicating events.</para>
@@ -46,6 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The plugin name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>logstash-filter-clone</para>
             /// </summary>
@@ -54,6 +47,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The plugin source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
             /// </summary>
@@ -62,7 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The name of the plug-in.</para>
+            /// <para>The URL of the plugin documentation.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.html">https://xxx.html</a></para>
@@ -72,6 +67,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SpecificationUrl { get; set; }
 
             /// <summary>
+            /// <para>The plugin status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>INSTALLED: installed</description></item>
+            /// <item><description>UNINSTALLED: not installed</description></item>
+            /// <item><description>INSTALLING: being installed</description></item>
+            /// <item><description>UNINSTALLING: being uninstalled</description></item>
+            /// <item><description>UPGRADING: being upgraded</description></item>
+            /// <item><description>FAILED: installation failed</description></item>
+            /// <item><description>UNKNOWN: the cluster is disconnected and the creation status cannot be retrieved.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>INSTALLED</para>
             /// </summary>

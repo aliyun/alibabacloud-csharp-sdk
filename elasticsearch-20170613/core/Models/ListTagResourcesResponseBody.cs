@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The labels of the resource.</para>
+        /// <para>The response header information. This parameter is empty and is for reference only. Do not create a dependency on this parameter in your program.</para>
+        /// <remarks>
+        /// <para>This parameter is not included in the response example.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyHeaders Headers { get; set; }
         public class ListTagResourcesResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The resource count of TagResource resources found.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -29,7 +32,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The number of resources to query.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>A list of resources that have tags.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6D******</para>
@@ -49,20 +52,22 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Fixed to <c>ALIYUN::ELASTICSEARCH::INSTANCE</c>.</para>
+        /// <para>The tag resource group.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>Indicates the ID of a resource.</para>
+            /// <para>The tag resource.</para>
             /// </summary>
             [NameInMap("TagResource")]
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
                 /// <summary>
+                /// <para>The resource ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>es-cn-oew1q8bev0002****</para>
                 /// </summary>
@@ -71,6 +76,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
+                /// <para>The resource type. The value is fixed as <c>ALIYUN::ELASTICSEARCH::INSTANCE</c>.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::ELASTICSEARCH::INSTANCE</para>
                 /// </summary>
@@ -79,6 +86,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>env</para>
                 /// </summary>
@@ -87,7 +96,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dev</para>

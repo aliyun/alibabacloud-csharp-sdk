@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>cn-hangzhou-i</para>
+        /// <para>The instance name. Fuzzy search is supported. For example, if you search for all instances matching <b>abc</b>, all instances named <b>abc</b>, <b>abcde</b>, <b>xyabc</b>, and <b>xabcy</b> may be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyunes_test1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>advanced</para>
+        /// <para>The instance version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6.7_with_X-Pack</para>
@@ -30,7 +30,15 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EsVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of data nodes.</para>
+        /// <para>The edition type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>x-pack: Commercial Edition</para>
+        /// </description></item>
+        /// <item><description><para>advanced/IS: Enhanced Edition</para>
+        /// </description></item>
+        /// <item><description><para>community: Basic Edition</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string InstanceCategory { get; set; }
 
         /// <summary>
-        /// <para>postpaid</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>es-cn-v641a0ta3000g****</para>
@@ -50,7 +58,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</para>
+        /// <para>The page number of the instance list.
+        /// Start value: <b>1</b>, default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,10 +69,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include dedicated master nodes. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The files contain data that is dumped to the IA storage medium.</description></item>
-        /// <item><description>false: The files do not contain data that is dumped to the IA storage medium.</description></item>
+        /// <item><description><para>postpaid: pay-as-you-go</para>
+        /// </description></item>
+        /// <item><description><para>prepaid: subscription</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +85,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the resource group to which the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzvowej3i****</para>
@@ -84,7 +95,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>vpc-bp16k1dvzxtmagcva\<em>\</em>\<em>\</em></para>
+        /// <para>The number of entries per page for paginated queries. Maximum value: <b>100</b>, default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -98,7 +109,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The header of the response.</para>
+        /// <para>The instance tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;tagKey&quot;:&quot;key1&quot;,&quot;tagValue&quot;:&quot;value1&quot;}]</para>
@@ -108,7 +119,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The ID of the virtual private cloud (VPC) where the instance is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp16k1dvzxtmagcva****</para>
@@ -118,7 +129,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The zone ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

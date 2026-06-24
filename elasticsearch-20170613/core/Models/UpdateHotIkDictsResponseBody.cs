@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The source type of the dictionary file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>OSS</description></item>
-            /// <item><description>ORIGIN</description></item>
+            /// <item><description>OSS: uses OSS open storage.</description></item>
+            /// <item><description>ORIGIN: retains a previously uploaded dictionary.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,10 +61,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The type of the dictionaries. Valid values:</para>
+            /// <para>The dictionary type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>MAIN: IK main dictionary</description></item>
-            /// <item><description>STOP: IK stopword list</description></item>
+            /// <item><description>MAIN: IK main tokenizer dictionary.</description></item>
+            /// <item><description>STOP: IK stopword dictionary.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ModifyScheduleExecuteTimeRequest : TeaModel {
         /// <summary>
+        /// <para>Event ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eb7efbc90864a0***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string EventId { get; set; }
 
         /// <summary>
+        /// <para>Scheduled execution time (UTC)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-01-30T08:45:00Z</para>
         /// </summary>

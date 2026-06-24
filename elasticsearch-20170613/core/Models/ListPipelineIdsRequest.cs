@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListPipelineIdsRequest : TeaModel {
         /// <summary>
+        /// <para>The request body parameters. For more information, see the RequestBody section below.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;userName&quot;:&quot;elastic&quot;,     &quot;password&quot;:&quot;xxxxxx&quot; }</para>
         /// </summary>

@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Return Result</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

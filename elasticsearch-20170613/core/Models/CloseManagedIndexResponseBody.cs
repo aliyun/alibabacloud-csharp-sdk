@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class CloseManagedIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the index\&quot;s cloud management has been successfully closed:</para>
+        /// <para>Indicates whether the cloud managed feature for the index is disabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Success</para>
+        /// <item><description><para>true: The feature is disabled.</para>
         /// </description></item>
-        /// <item><description><para>false: Failure</para>
+        /// <item><description><para>false: The feature failed to be disabled.</para>
         /// </description></item>
         /// </list>
         /// 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class RestartInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DC****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return results.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-abc</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the IK dictionaries.</para>
+            /// <para>The IK dictionary configuration.</para>
             /// </summary>
             [NameInMap("dictList")]
             [Validation(Required=false)]
             public List<RestartInstanceResponseBodyResultDictList> DictList { get; set; }
             public class RestartInstanceResponseBodyResultDictList : TeaModel {
                 /// <summary>
-                /// <para>The size of the Dictionary File. Unit: bytes.</para>
+                /// <para>The size of the dictionary file. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2782602</para>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The source type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS: OSS open storage (need to ensure that OSS storage space is public readable.)</description></item>
-                /// <item><description>ORIGIN: Open source Elasticsearch</description></item>
-                /// <item><description>UPLOAD: Uploaded files</description></item>
+                /// <item><description>OSS: Object Storage Service (OSS). The OSS bucket must have public-read permissions.</description></item>
+                /// <item><description>ORIGIN: open-source Elasticsearch</description></item>
+                /// <item><description>UPLOAD: uploaded file.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -89,12 +89,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the dictionary. Valid values:</para>
+                /// <para>The dictionary type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>STOP: The STOP word.</description></item>
-                /// <item><description>MAIN: MAIN Dictionary</description></item>
-                /// <item><description>SYNONYMS: SYNONYMS</description></item>
-                /// <item><description>ALI_WS: an Alibaba Dictionary.</description></item>
+                /// <item><description>STOP: stopword dictionary</description></item>
+                /// <item><description>MAIN: main dictionary</description></item>
+                /// <item><description>SYNONYMS: synonym dictionary</description></item>
+                /// <item><description>ALI_WS: Alibaba dictionary.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The intranet access address of the instance.</para>
+            /// <para>The internal endpoint of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-nif1q8auz0003****.elasticsearch.aliyuncs.com</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The version of the instance.</para>
+            /// <para>The instance version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6.7.0_with_X-Pack</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string EsVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-n6w1o1x0w001c****</para>
@@ -137,14 +137,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The configuration of Kibana nodes.</para>
+            /// <para>The Kibana node configuration.</para>
             /// </summary>
             [NameInMap("kibanaConfiguration")]
             [Validation(Required=false)]
             public RestartInstanceResponseBodyResultKibanaConfiguration KibanaConfiguration { get; set; }
             public class RestartInstanceResponseBodyResultKibanaConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The number of performance metrics.</para>
+                /// <para>The number of nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The size of the node storage space. Unit: GB.</para>
+                /// <para>The storage size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The specification of data nodes.</para>
+                /// <para>The node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.n4.small</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The public network access address of Kibana.</para>
+            /// <para>The Kibana public network access address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>es-cn-nif1q8auz0003****.kibana.elasticsearch.aliyuncs.com</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string KibanaDomain { get; set; }
 
             /// <summary>
-            /// <para>The public port of the Kibana network.</para>
+            /// <para>The public port of Kibana.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5601</para>
@@ -206,14 +206,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? KibanaPort { get; set; }
 
             /// <summary>
-            /// <para>The configuration of dedicated master nodes.</para>
+            /// <para>The master node configuration.</para>
             /// </summary>
             [NameInMap("masterConfiguration")]
             [Validation(Required=false)]
             public RestartInstanceResponseBodyResultMasterConfiguration MasterConfiguration { get; set; }
             public class RestartInstanceResponseBodyResultMasterConfiguration : TeaModel {
                 /// <summary>
-                /// <para>The number of nodes in the cluster.</para>
+                /// <para>The number of nodes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Amount { get; set; }
 
                 /// <summary>
-                /// <para>The size of the node storage space. Unit: GB.</para>
+                /// <para>The storage size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Disk { get; set; }
 
                 /// <summary>
-                /// <para>The storage type of the node. This tool only supports cloud_ssd (cloud SSD) disks.</para>
+                /// <para>The storage type of the node. Only cloud_ssd (standard SSD) is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_ssd</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The node specifications of the cluster.</para>
+                /// <para>The node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.sn2ne.large</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC.</para>
+                /// <para>The VPC ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-bp16k1dvzxtmagcva****</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VsArea { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch associated with the specified VPC.</para>
+                /// <para>The vSwitch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-bp1k4ec6s7sjdbudw****</para>
@@ -304,7 +304,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The number of data nodes.</para>
+            /// <para>The number of data nodes in the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -314,14 +314,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? NodeAmount { get; set; }
 
             /// <summary>
-            /// <para>The configuration of data nodes.</para>
+            /// <para>The data node configuration.</para>
             /// </summary>
             [NameInMap("nodeSpec")]
             [Validation(Required=false)]
             public RestartInstanceResponseBodyResultNodeSpec NodeSpec { get; set; }
             public class RestartInstanceResponseBodyResultNodeSpec : TeaModel {
                 /// <summary>
-                /// <para>The storage space size per data node. Unit: GB.</para>
+                /// <para>The storage size of the node. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public int? Disk { get; set; }
 
                 /// <summary>
-                /// <para>The storage type of the node. Valid values: cloud_ssd and cloud_efficiency.</para>
+                /// <para>The storage type of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_ssd</para>
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DiskType { get; set; }
 
                 /// <summary>
-                /// <para>The specification of data nodes.</para>
+                /// <para>The node specifications.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>elasticsearch.n4.small</para>
@@ -353,8 +353,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The billing method of the created ECS instance.</para>
-            /// <para>Valid values: prepaid and postpaid.</para>
+            /// <para>The billing method of the instance.</para>
+            /// <para>Valid values: prepaid (subscription) and postpaid (pay-as-you-go).</para>
             /// 
             /// <b>Example:</b>
             /// <para>postpaid</para>
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PublicDomain { get; set; }
 
             /// <summary>
-            /// <para>The public network port.</para>
+            /// <para>The public port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9200</para>
@@ -384,8 +384,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? PublicPort { get; set; }
 
             /// <summary>
-            /// <para>The state of the cluster.</para>
-            /// <para>Supported: active (normal), activating (initializing), inactive (blocked), and invalid (expired).</para>
+            /// <para>The status of the instance.</para>
+            /// <para>Valid values: active, activating, inactive, and invalid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -395,14 +395,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The configuration of the synonym dictionaries.</para>
+            /// <para>The synonym dictionary configuration.</para>
             /// </summary>
             [NameInMap("synonymsDicts")]
             [Validation(Required=false)]
             public List<RestartInstanceResponseBodyResultSynonymsDicts> SynonymsDicts { get; set; }
             public class RestartInstanceResponseBodyResultSynonymsDicts : TeaModel {
                 /// <summary>
-                /// <para>The size of the Dictionary File. Unit: bytes.</para>
+                /// <para>The size of the dictionary file. Unit: bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2782602</para>
@@ -424,9 +424,9 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 /// <summary>
                 /// <para>The source type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>OSS:OSS open storage (the OSS storage space must be publicly readable.)</description></item>
+                /// <item><description>OSS: Object Storage Service (OSS). The OSS bucket must have public-read permissions.</description></item>
                 /// <item><description>ORIGIN: open-source Elasticsearch</description></item>
-                /// <item><description>UPLOAD</description></item>
+                /// <item><description>UPLOAD: uploaded file.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -437,12 +437,12 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The type of the dictionary. Valid values:</para>
+                /// <para>The dictionary type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>STOP: The STOP word.</description></item>
-                /// <item><description>MAIN: MAIN Dictionary</description></item>
-                /// <item><description>SYNONYMS: SYNONYMS</description></item>
-                /// <item><description>ALI_WS: an Alibaba Dictionary.</description></item>
+                /// <item><description>STOP: stopword dictionary</description></item>
+                /// <item><description>MAIN: main dictionary</description></item>
+                /// <item><description>SYNONYMS: synonym dictionary</description></item>
+                /// <item><description>ALI_WS: Alibaba dictionary.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

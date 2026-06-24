@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public Dictionary<string, object> Headers { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F99407AB-2FA9-489E-A259-40CF6DCC****</para>
         /// </summary>

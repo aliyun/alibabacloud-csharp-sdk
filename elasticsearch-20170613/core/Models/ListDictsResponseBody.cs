@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDictsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The header of the response.</para>
+        /// <para>The response headers.</para>
         /// </summary>
         [NameInMap("Headers")]
         [Validation(Required=false)]
         public ListDictsResponseBodyHeaders Headers { get; set; }
         public class ListDictsResponseBodyHeaders : TeaModel {
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2937F832-F39E-41EF-89BA-B528342A2A3A</para>
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDictsResponseBodyResult> Result { get; set; }
         public class ListDictsResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The link that is used to download the dictionary over the Internet. The link is valid for 90s.</para>
+            /// <para>The publicly accessible download URL. The URL is valid for 90 seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&OSSAccessKeyId=LTAI*****V9&Signature=PNPO********BBGsJDO4V3VfU4sE%3D">http://test_bucket.oss-cn-hangzhou.aliyuncs.com/AliyunEs/test.dic?Expires=162573****&amp;OSSAccessKeyId=LTAI*****V9&amp;Signature=PNPO********BBGsJDO4V3VfU4sE%3D</a></para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The size of the dictionary file. Unit: byte.</para>
+            /// <para>The size of the dictionary file, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2782602</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The name of the dictionary file.</para>
+            /// <para>The file name of the dictionary file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM_MAIN.dic</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The source type.</para>
+            /// <para>A fixed value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ORIGIN</para>
@@ -88,8 +88,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             /// <summary>
             /// <para>The type of the IK dictionary. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>MAIN: main dictionary</description></item>
-            /// <item><description>STOP: stopword list</description></item>
+            /// <item><description><para>MAIN: main tokenization dictionary.</para>
+            /// </description></item>
+            /// <item><description><para>STOP: stopword dictionary.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

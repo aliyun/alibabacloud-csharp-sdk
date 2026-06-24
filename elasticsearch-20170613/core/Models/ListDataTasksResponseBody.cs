@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class ListDataTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5FFD9ED4-C2EC-4E89-B22B-1ACB6FE1D***</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The return results.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDataTasksResponseBodyResult> Result { get; set; }
         public class ListDataTasksResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the site monitoring task was created.</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-07-30 06:32:18</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The information of the target cluster.</para>
+            /// <para>The destination cluster information.</para>
             /// </summary>
             [NameInMap("sinkCluster")]
             [Validation(Required=false)]
             public ListDataTasksResponseBodyResultSinkCluster SinkCluster { get; set; }
             public class ListDataTasksResponseBodyResultSinkCluster : TeaModel {
                 /// <summary>
-                /// <para>The type of the target cluster. Default value: elasticsearch.</para>
+                /// <para>The destination cluster type. Default value: elasticsearch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DataSourceType { get; set; }
 
                 /// <summary>
-                /// <para>The public network access address of the target cluster.</para>
+                /// <para>The public network access address of the destination cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://192.168.xx.xx:4101">http://192.168.xx.xx:4101</a></para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The target index.</para>
+                /// <para>The destination index.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product_info</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Index { get; set; }
 
                 /// <summary>
-                /// <para>The type of the destination index.</para>
+                /// <para>The index type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>_doc</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC to which the cluster belongs.</para>
+                /// <para>The ID of the virtual private cloud (VPC) where the cluster resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-2ze55voww95g82gak****</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID or Server Load Balancer (SLB) ID of the current cluster.</para>
+                /// <para>The instance ID of the current cluster or the load balancing SLB (Server Load Balancer) instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>es-cn-09k1rnu3g0002****-worker</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string VpcInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The access port number of the cluster.</para>
+                /// <para>The port number used to access the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9200</para>
@@ -116,14 +116,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The information about the source cluster.</para>
+            /// <para>The source cluster information.</para>
             /// </summary>
             [NameInMap("sourceCluster")]
             [Validation(Required=false)]
             public ListDataTasksResponseBodyResultSourceCluster SourceCluster { get; set; }
             public class ListDataTasksResponseBodyResultSourceCluster : TeaModel {
                 /// <summary>
-                /// <para>The type of the source cluster. Default value: elasticsearch.</para>
+                /// <para>The source cluster type. Default value: elasticsearch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string DataSourceType { get; set; }
 
                 /// <summary>
-                /// <para>The index whose data you want to migrate.</para>
+                /// <para>The index to be migrated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>product_info</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Mapping { get; set; }
 
                 /// <summary>
-                /// <para>The routing field to index the table. It is set to the primary key by default.</para>
+                /// <para>The routing field of the index. The primary key field is used by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>_id</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Routing { get; set; }
 
                 /// <summary>
-                /// <para>The Settings of the cluster.</para>
+                /// <para>The Settings configuration of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\n  \&quot;index\&quot;: {\n    \&quot;replication\&quot;: {\n}.....}}</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
                 public string Settings { get; set; }
 
                 /// <summary>
-                /// <para>The type of the destination index.</para>
+                /// <para>The index type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>_doc</para>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>et_cn_mfv1233r47272****</para>

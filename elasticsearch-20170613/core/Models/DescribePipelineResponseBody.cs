@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class DescribePipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the pipeline was updated.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>829F38F6-E2D6-4109-90A6-888160BD1***</para>
@@ -20,18 +20,14 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the queue. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>MEMORY: a traditional memory-based queue.</description></item>
-        /// <item><description>PERSISTED: disk-based ACKed queue (persistent queue).</description></item>
-        /// </list>
+        /// <para>The returned pipeline information. For more information, see <a href="https://www.elastic.co/guide/en/logstash/6.7/logstash-settings-file.html">logstash.yml</a>.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DescribePipelineResponseBodyResult Result { get; set; }
         public class DescribePipelineResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The time when the pipeline was created.</para>
+            /// <para>The batch delay of the pipeline. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -41,6 +37,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? BatchDelay { get; set; }
 
             /// <summary>
+            /// <para>The batch size of the pipeline.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>125</para>
             /// </summary>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? BatchSize { get; set; }
 
             /// <summary>
-            /// <para>The description of the pipeline.</para>
+            /// <para>The specific configuration of the pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>input {  }  filter {  }  output {  }</para>
@@ -59,12 +57,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Config { get; set; }
 
             /// <summary>
-            /// <para>The state of the MPS queue. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>NOT_DEPLOYED: The node is not deployed.</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>DELETED: Deleted. The console does not display this status.</description></item>
-            /// </list>
+            /// <para>The pipeline description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is a test</para>
@@ -74,6 +67,8 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The time when the pipeline was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-06-20T07:26:47.000+0000</para>
             /// </summary>
@@ -82,7 +77,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtCreatedTime { get; set; }
 
             /// <summary>
-            /// <para>The total capacity of the queue in bytes. Unit: MB.</para>
+            /// <para>The time when the pipeline was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-20T07:26:47.000+0000</para>
@@ -92,7 +87,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string GmtUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Number of queue checkpoint writes.</para>
+            /// <para>The pipeline ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pipeline_test</para>
@@ -102,6 +97,13 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PipelineId { get; set; }
 
             /// <summary>
+            /// <para>The pipeline status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NOT_DEPLOYED: not deployed.</description></item>
+            /// <item><description>RUNNING: running.</description></item>
+            /// <item><description>DELETED: deleted. This status is not displayed in the console.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string PipelineStatus { get; set; }
 
             /// <summary>
-            /// <para>Pipeline batch delay. Unit: milliseconds.</para>
+            /// <para>The number of queue checkpoint writes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -120,7 +122,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? QueueCheckPointWrites { get; set; }
 
             /// <summary>
-            /// <para>The number of pipeline workers.</para>
+            /// <para>The total capacity of the queue, in bytes. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -130,7 +132,11 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public int? QueueMaxBytes { get; set; }
 
             /// <summary>
-            /// <para>The specific configuration of the pipeline.</para>
+            /// <para>The queue type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>MEMORY: a traditional memory-based queue.</description></item>
+            /// <item><description>PERSISTED: a disk-based ACKed queue (persistent queue).</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>MEMORY</para>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
             public string QueueType { get; set; }
 
             /// <summary>
-            /// <para>The size of the pipeline batch.</para>
+            /// <para>The number of pipeline worker threads.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
