@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public bool? IcpStatus { get; set; }
 
+            [NameInMap("Id")]
+            [Validation(Required=false)]
+            public long? Id { get; set; }
+
             [NameInMap("Introduction")]
             [Validation(Required=false)]
             public string Introduction { get; set; }
