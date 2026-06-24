@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>RMB</para>
+                /// <para>CNY</para>
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>2025-07-07 23:59:59</para>
+                /// <para>2024-05-01 00:00:00</para>
                 /// </summary>
                 [NameInMap("DeliveryTime")]
                 [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>kythelmet.cn</para>
+                /// <para>test.com</para>
                 /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>2025-07-07 23:59:59</para>
+                /// <para>2024-05-01 00:00:00</para>
                 /// </summary>
                 [NameInMap("PayTime")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>SUCCESS</para>
+                /// <para>FAIL</para>
                 /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>5b05d1f7-26f0-4ad7-97d9-ac96fd9b65ba</para>
+                /// <para>TR2025120110192900****</para>
                 /// </summary>
                 [NameInMap("TradeId")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>27660.0</para>
+                /// <para>100</para>
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("PageSize")]
             [Validation(Required=false)]
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>294</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalItemNum")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>4</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalPageNum")]
             [Validation(Required=false)]
@@ -126,8 +126,6 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>8F5BC888-521D-503A-A79B-CEDC9A23D716</para>
         /// </summary>

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
-    public class ReserveDomainResponseBody : TeaModel {
-        [NameInMap("AuctionId")]
+    public class CreateCloseoutOrderRequest : TeaModel {
+        [NameInMap("ContactId")]
         [Validation(Required=false)]
-        public string AuctionId { get; set; }
+        public long? ContactId { get; set; }
 
-        [NameInMap("RequestId")]
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DomainName { get; set; }
 
     }
 

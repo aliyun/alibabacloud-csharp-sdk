@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
     public class BidDomainRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>12345678</para>
         /// </summary>
         [NameInMap("AuctionId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>RMB</para>
         /// </summary>
         [NameInMap("Currency")]
         [Validation(Required=false)]
@@ -31,9 +25,6 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>100</para>
         /// </summary>
         [NameInMap("MaxBid")]
         [Validation(Required=false)]

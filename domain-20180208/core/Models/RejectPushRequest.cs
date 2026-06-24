@@ -8,13 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
-    public class QueryAuctionDetailRequest : TeaModel {
+    public class RejectPushRequest : TeaModel {
         /// <summary>
+        /// <para>Push编号</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>push_20250101_abc123</para>
         /// </summary>
-        [NameInMap("AuctionId")]
+        [NameInMap("PushNo")]
         [Validation(Required=false)]
-        public string AuctionId { get; set; }
+        public string PushNo { get; set; }
 
     }
 

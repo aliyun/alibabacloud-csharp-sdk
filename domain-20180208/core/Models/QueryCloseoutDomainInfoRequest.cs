@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
-    public class RequestPayDemandResponseBody : TeaModel {
-        [NameInMap("RequestId")]
+    public class QueryCloseoutDomainInfoRequest : TeaModel {
+        [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string DomainName { get; set; }
 
     }
 

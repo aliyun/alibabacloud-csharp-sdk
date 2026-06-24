@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
     public class QueryBookingDomainInfoRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>abc.com</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
     public class QueryBrokerDemandRecordResponseBody : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("CurrentPageNum")]
         [Validation(Required=false)]
         public int? CurrentPageNum { get; set; }
@@ -41,34 +37,18 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>497F7522-82B0-4BD4-84FE-AE8749E4C2F9</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
         [NameInMap("TotalItemNum")]
         [Validation(Required=false)]
         public int? TotalItemNum { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("TotalPageNum")]
         [Validation(Required=false)]
         public int? TotalPageNum { get; set; }

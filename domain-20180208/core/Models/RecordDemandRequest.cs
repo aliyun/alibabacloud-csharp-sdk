@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
     public class RecordDemandRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>SE20183A0Q7C5556</para>
         /// </summary>
         [NameInMap("BizId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>some message</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

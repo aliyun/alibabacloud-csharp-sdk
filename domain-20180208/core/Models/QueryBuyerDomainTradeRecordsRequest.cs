@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2025-07-07 23:59:59</para>
+        /// <para>2024-05-01 00:00:00</para>
         /// </summary>
         [NameInMap("EndDate")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>{\&quot;payTime\&quot;:\&quot;desc\&quot;}</para>
+        /// <para>{&quot;payTime&quot;:&quot;desc&quot;}</para>
         /// </summary>
         [NameInMap("Sorter")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("StartPrice")]
         [Validation(Required=false)]
