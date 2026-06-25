@@ -21928,7 +21928,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21959,6 +21959,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreWarningCheck))
+            {
+                body["ignore_warning_check"] = request.IgnoreWarningCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["image_id"] = request.ImageId;
@@ -22009,7 +22013,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22040,6 +22044,10 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreWarningCheck))
+            {
+                body["ignore_warning_check"] = request.IgnoreWarningCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageId))
             {
                 body["image_id"] = request.ImageId;
@@ -22090,7 +22098,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22120,7 +22128,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades the kubelet version (recommended to match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
+        /// <para>Upgrades the kubelet version (which should match the control plane version), operating system version, or container runtime version of a specified cluster node pool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

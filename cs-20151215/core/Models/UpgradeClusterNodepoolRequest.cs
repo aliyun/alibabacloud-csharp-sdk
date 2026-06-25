@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class UpgradeClusterNodepoolRequest : TeaModel {
+        [NameInMap("ignore_warning_check")]
+        [Validation(Required=false)]
+        public bool? IgnoreWarningCheck { get; set; }
+
         /// <summary>
         /// <para>The system image ID of the node.</para>
         /// 
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public int? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can be upgraded in parallel per batch. Nodes in the node pool are upgraded in batches.</para>
+            /// <para>The maximum number of nodes that can be updated in parallel per batch. Nodes in the node pool are updated in batches.</para>
             /// <para>Valid values: [1,10].</para>
             /// <para>Default value: 10.</para>
             /// 
@@ -70,8 +74,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The automatic pause policy during node upgrades. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FirstBatch: pauses after the first batch is completed.</description></item>
-            /// <item><description>EveryBatch: pauses after each batch is completed.</description></item>
+            /// <item><description>FirstBatch: pauses after the first batch is complete.</description></item>
+            /// <item><description>EveryBatch: pauses after each batch is complete.</description></item>
             /// <item><description>NotPause: does not pause.</description></item>
             /// </list>
             /// 
