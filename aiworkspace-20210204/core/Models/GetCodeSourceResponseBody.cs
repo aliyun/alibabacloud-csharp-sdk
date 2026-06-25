@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetCodeSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The visibility of the code source. Valid values:</para>
+        /// <para>The visibility of the code configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE: Visible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: Visible to all members in the workspace.</description></item>
+        /// <item><description><para>PRIVATE: The configuration is visible only to you and the administrator in the workspace.</para>
+        /// </description></item>
+        /// <item><description><para>PUBLIC: The configuration is visible to everyone in the workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? CloneType { get; set; }
 
         /// <summary>
-        /// <para>The code repository branch.</para>
+        /// <para>The branch of the code repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>master</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeBranch { get; set; }
 
         /// <summary>
-        /// <para>The code commit ID.</para>
+        /// <para>The commit ID of the code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44da10***********</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeCommit { get; set; }
 
         /// <summary>
-        /// <para>The address of the code repository.</para>
+        /// <para>The URL of the code repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://code.aliyun.com/pai-dlc/examples.git">https://code.aliyun.com/pai-dlc/examples.git</a></para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepoAccessToken { get; set; }
 
         /// <summary>
-        /// <para>The username of the code repository.</para>
+        /// <para>The username for the code repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user1</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepoUserName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the code source.</para>
+        /// <para>The ID of the code source configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-202**********</para>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeSourceId { get; set; }
 
         /// <summary>
-        /// <para>The description of the code source.</para>
+        /// <para>The detailed description of the code configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is my data source 1.</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the code source.</para>
+        /// <para>The name of the code source configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyCodeSource1</para>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The time when the code source was created, in the ISO8601 format.</para>
+        /// <para>The time when the code configuration was created. The time is in the ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T23:36:01.123Z</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the code source was modified, in the ISO8601 format.</para>
+        /// <para>The time when the code configuration was last modified. The time is in the ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-12T23:36:01.123Z</para>
@@ -128,7 +130,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The local mount path of the code.</para>
+        /// <para>The local mount path for the code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/code</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the creator.</para>
+        /// <para>The ID of the user who created the code source configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1722********</para>
@@ -158,7 +160,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234</para>

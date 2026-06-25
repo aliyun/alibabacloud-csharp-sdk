@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to display supplementary information such as the workspace owner. Valid values:</para>
+        /// <para>Specifies whether to return additional information, such as the workspace owner. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false (default): Does not return additional information.</para>
+        /// </description></item>
+        /// <item><description><para>true: Returns additional information.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

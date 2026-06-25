@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<Experiment> Experiments { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page. Save this token and include it in the next request to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? NextPageToken { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

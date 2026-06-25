@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListQuotasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned quotas.</para>
+        /// <para>The list of resource quotas.</para>
         /// </summary>
         [NameInMap("Quotas")]
         [Validation(Required=false)]
         public List<ListQuotasResponseBodyQuotas> Quotas { get; set; }
         public class ListQuotasResponseBodyQuotas : TeaModel {
             /// <summary>
-            /// <para>The alias of the quota.</para>
+            /// <para>The alias of the resource quota.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>默认Quota。</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -36,8 +39,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>isolate: subscription</description></item>
-            /// <item><description>share: pay-as-you-go</description></item>
+            /// <item><description><para>isolate: subscription.</para>
+            /// </description></item>
+            /// <item><description><para>share: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -58,32 +63,34 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The product code. Valid values:</para>
+            /// <para>The product name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PAI_isolate: CPU subscription resource groups of PAI</description></item>
-            /// <item><description>PAI_share: GPU pay-as-you-go resource groups of PAI</description></item>
+            /// <item><description><para>PAI_isolate: a subscription PAI resource group (PAI CPU).</para>
+            /// </description></item>
+            /// <item><description><para>PAI_share: a pay-as-you-go PAI resource group (PAI GPU).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>MaxCompute_share</para>
+            /// <para>PAI_share</para>
             /// </summary>
             [NameInMap("ProductCode")]
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The quota type. Valid value:</para>
-            /// <para>PAI: indicates GPU resource groups of MaxCompute.</para>
+            /// <para>The type of the resource quota. Valid value:</para>
+            /// <para>PAI: a GPU resource group cluster of MaxCompute.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>MaxCompute</para>
+            /// <para>PAI</para>
             /// </summary>
             [NameInMap("QuotaType")]
             [Validation(Required=false)]
             public string QuotaType { get; set; }
 
             /// <summary>
-            /// <para>The quota specifications.</para>
+            /// <para>The list of specification descriptions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;cu\&quot;:\&quot;11500\&quot;,\&quot;minCu\&quot;:\&quot;2300\&quot;,\&quot;parentId\&quot;:\&quot;0\&quot;}</para>
@@ -103,7 +110,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The specification type. The parameter can be left empty.</para>
+                /// <para>The type. This parameter can be empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -137,7 +144,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of quotas that meet the filter conditions.</para>
+        /// <para>The number of resource quotas that meet the filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

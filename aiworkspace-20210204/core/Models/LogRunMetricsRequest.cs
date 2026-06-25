@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class LogRunMetricsRequest : TeaModel {
         /// <summary>
-        /// <para>The metrics.</para>
+        /// <para>The list of metrics.</para>
         /// </summary>
         [NameInMap("Metrics")]
         [Validation(Required=false)]

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class LineageEntity : TeaModel {
         /// <summary>
-        /// <para>Attributes</para>
+        /// <para>The entity\&quot;s attributes.</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
         public Dictionary<string, object> Attributes { get; set; }
 
         /// <summary>
-        /// <para>EntityType</para>
+        /// <para>The entity type.</para>
         /// </summary>
         [NameInMap("EntityType")]
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>Name</para>
+        /// <para>The entity\&quot;s name.</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>QualifiedName</para>
+        /// <para>The entity\&quot;s qualified name.</para>
         /// </summary>
         [NameInMap("QualifiedName")]
         [Validation(Required=false)]

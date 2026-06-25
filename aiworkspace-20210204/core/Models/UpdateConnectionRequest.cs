@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The connection configuration. The connection configuration is in the key-value format. The keys configured for different connection types are different. For more information, see the supplementary description of the request parameters in CreateConnection.</para>
+        /// <para>The configuration of the connection, specified as key-value pairs. The keys in the Configs parameter vary based on the connection type. For more information, see the request parameters in the CreateConnection topic.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public Dictionary<string, string> Configs { get; set; }
 
         /// <summary>
-        /// <para>The connection description.</para>
+        /// <para>The description of the connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Connection for data labeling.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The models.</para>
+        /// <para>A list of model information.</para>
         /// </summary>
         [NameInMap("Models")]
         [Validation(Required=false)]
@@ -53,9 +56,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The model type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>LLM</description></item>
-            /// <item><description>Embedding</description></item>
-            /// <item><description>ReRank</description></item>
+            /// <item><description><para>LLM</para>
+            /// </description></item>
+            /// <item><description><para>Embedding</para>
+            /// </description></item>
+            /// <item><description><para>ReRank</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -68,8 +74,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>Indicates whether tool calling is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Tool calling is supported.</para>
+            /// </description></item>
+            /// <item><description><para>false: Tool calling is not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +90,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The key-value configuration to be encrypted, such as the database logon password and the key for model connection.</para>
+        /// <para>Key-value pairs that require encryption, such as database logon passwords and keys for model connections.</para>
         /// </summary>
         [NameInMap("Secrets")]
         [Validation(Required=false)]

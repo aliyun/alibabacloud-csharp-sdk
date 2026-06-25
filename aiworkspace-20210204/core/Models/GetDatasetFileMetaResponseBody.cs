@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDatasetFileMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried metadata records of dataset files.</para>
+        /// <para>The details of the dataset file metadata.</para>
         /// </summary>
         [NameInMap("DatasetFileMeta")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The dataset version.</para>
+        /// <para>The name of the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

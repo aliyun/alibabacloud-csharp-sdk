@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dataset ID.</para>
+        /// <para>The ID of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-rbvg5*****jhc9ks92</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2C51F93-1C07-5477-9705-5FDB****F19F</para>

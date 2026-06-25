@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The visibility of the model in the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE: The model is visible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: The model is visible to all users in the workspace.</description></item>
+        /// <item><description><para>PRIVATE: The model is visible only to you and administrators in the workspace.</para>
+        /// </description></item>
+        /// <item><description><para>PUBLIC: The model is visible to everyone in the workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The domain. This parameter describes the domain in which the model is applied. Valid values: nlp (natural language processing) and cv (computer vision).</para>
+        /// <para>The domain of the model. This parameter specifies the field where the model is applied. Examples: nlp (natural language processing) and cv (computer vision).</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlp</para>
@@ -53,13 +55,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The model description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>News classification.</para>
         /// </summary>
         [NameInMap("ModelDescription")]
         [Validation(Required=false)]
         public string ModelDescription { get; set; }
 
         /// <summary>
-        /// <para>The documentation of the model.</para>
+        /// <para>The model document.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://*.md</para>
@@ -69,14 +74,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModelDoc { get; set; }
 
         /// <summary>
-        /// <para>The model name, which must be 1 to 127 characters in length.</para>
+        /// <para>The name of the model. The name must be 1 to 127 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>News classification</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model type. Valid values: Checkpoint and LoRA.</para>
+        /// <para>The model type, such as Checkpoint or LoRA.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Checkpoint</para>
@@ -86,7 +94,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>The sequence number of the model. This parameter can be used for custom sorting.</para>
+        /// <para>The ordinal number of the model. You can use this parameter for custom sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -96,7 +104,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? OrderNumber { get; set; }
 
         /// <summary>
-        /// <para>The source of the model. This parameter describes the community or organization to which the source model belongs. Valid values: ModelScope and HuggingFace.</para>
+        /// <para>The source of the model. This parameter describes the community or organization to which the source model belongs, such as ModelScope and HuggingFace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ModelScope</para>
@@ -105,12 +113,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        /// <summary>
+        /// <para>The number of parameters, in millions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
+        /// </summary>
         [NameInMap("ParameterSize")]
         [Validation(Required=false)]
         public long? ParameterSize { get; set; }
 
         /// <summary>
-        /// <para>The task. This parameter specifies the specific issue that the model resolves. Example: text-classification.</para>
+        /// <para>The task of the model. This parameter describes the specific problem that the model solves. For example, text-classification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-classification</para>

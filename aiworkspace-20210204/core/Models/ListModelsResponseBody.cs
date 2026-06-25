@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListModelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The models.</para>
+        /// <para>The list of models.</para>
         /// </summary>
         [NameInMap("Models")]
         [Validation(Required=false)]

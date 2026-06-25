@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateProductOrdersRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically pay for the provided products.</para>
+        /// <para>Specifies whether to automatically pay for all products listed in the Products parameter.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enables automatic payment.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables automatic payment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,17 +26,19 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The list of products to be purchased. Separate them with commas (,).</para>
+        /// <para>The list of products to purchase.</para>
         /// </summary>
         [NameInMap("Products")]
         [Validation(Required=false)]
         public List<CreateProductOrdersRequestProducts> Products { get; set; }
         public class CreateProductOrdersRequestProducts : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically renew the product.</para>
+            /// <para>Specifies whether to enable auto-renewal.</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enables auto-renewal.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disables auto-renewal.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +49,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Only POSTPAY is supported.</para>
+            /// <para>The billing method. Currently, only POSTPAY is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The purchase duration. You can use this parameter together with pricingCycle. Only 1 is supported.</para>
+            /// <para>The subscription duration. This parameter is used with PricingCycle. Currently, only a value of 1 is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -65,13 +69,58 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>The properties of the instance.</para>
+            /// <para>The list of instance properties.</para>
             /// <list type="bullet">
-            /// <item><description>DataWorks_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-shanghai&quot; } ]</description></item>
-            /// <item><description>OSS_share: [ { &quot;Code&quot;: &quot;commodity_type&quot;, &quot;Value&quot;: &quot;oss&quot;, &quot;Name&quot;: &quot;Object Storage Service&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot;, &quot;Name&quot;: &quot;1 Hour&quot; } ]</description></item>
-            /// <item><description>PAI_share: None</description></item>
-            /// <item><description>China bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;odps_specification_type&quot;, &quot;Value&quot;: &quot;OdpsStandard&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</description></item>
-            /// <item><description>International bid MaxCompute_share: [ { &quot;Code&quot;: &quot;region&quot;, &quot;Value&quot;: &quot;cn-hangzhou&quot; }, { &quot;Code&quot;: &quot;ord_time&quot;, &quot;Value&quot;: &quot;1:Hour&quot; } ]</description></item>
+            /// <item><description><para>DataWorks_share:
+            /// [ {
+            /// &quot;Code&quot;: &quot;region&quot;,
+            /// &quot;Value&quot;: &quot;cn-shanghai&quot;
+            /// }
+            /// ]</para>
+            /// </description></item>
+            /// <item><description><para>OSS_share:
+            /// [ {
+            /// &quot;Code&quot;: &quot;commodity_type&quot;,
+            /// &quot;Value&quot;: &quot;oss&quot;,
+            /// &quot;Name&quot;: &quot;Object Storage Service&quot;
+            /// },
+            /// {
+            /// &quot;Code&quot;: &quot;ord_time&quot;,
+            /// &quot;Value&quot;: &quot;1:Hour&quot;,
+            /// &quot;Name&quot;: &quot;1 Hour&quot;
+            /// }
+            /// ]</para>
+            /// </description></item>
+            /// <item><description><para>PAI_share: None</para>
+            /// </description></item>
+            /// <item><description><para>MaxCompute_share for accounts in mainland China:
+            /// [
+            /// {
+            /// &quot;Code&quot;: &quot;region&quot;,
+            /// &quot;Value&quot;: &quot;cn-hangzhou&quot;
+            /// },
+            /// {
+            /// &quot;Code&quot;: &quot;odps_specification_type&quot;,
+            /// &quot;Value&quot;: &quot;OdpsStandard&quot;
+            /// },
+            /// {
+            /// &quot;Code&quot;: &quot;ord_time&quot;,
+            /// &quot;Value&quot;: &quot;1:Hour&quot;
+            /// }
+            /// ]</para>
+            /// </description></item>
+            /// <item><description><para>MaxCompute_share for accounts outside mainland China:
+            /// [
+            /// {
+            /// &quot;Code&quot;: &quot;region&quot;,
+            /// &quot;Value&quot;: &quot;cn-hangzhou&quot;
+            /// },
+            /// {
+            /// &quot;Code&quot;: &quot;ord_time&quot;,
+            /// &quot;Value&quot;: &quot;1:Hour&quot;
+            /// }
+            /// ]</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("InstanceProperties")]
@@ -79,7 +128,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public List<CreateProductOrdersRequestProductsInstanceProperties> InstanceProperties { get; set; }
             public class CreateProductOrdersRequestProductsInstanceProperties : TeaModel {
                 /// <summary>
-                /// <para>The property code.</para>
+                /// <para>The code of the instance property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>commodity_type</para>
@@ -89,14 +138,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The name of the instance property.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Object Storage Service</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The property value.</para>
+                /// <para>The value of the instance property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss</para>
@@ -108,7 +160,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             }
 
             /// <summary>
-            /// <para>The type of the order. Only BUY is supported.</para>
+            /// <para>The order type. Currently, only BUY is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BUY</para>
@@ -118,10 +170,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle. Valid values:</para>
+            /// <para>The billing cycle. The following values are supported:</para>
             /// <list type="bullet">
-            /// <item><description>Month: The price is calculated every month. DataWorks_share only supports Month.</description></item>
-            /// <item><description>Hour: The price is calculated every hour. OSS_share and MaxCompute_share only support Hour.</description></item>
+            /// <item><description><para>Month: Monthly billing. Only DataWorks_share supports this value.</para>
+            /// </description></item>
+            /// <item><description><para>Hour: Hourly billing. Only OSS_share and MaxCompute_share support this value.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -132,12 +186,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string PricingCycle { get; set; }
 
             /// <summary>
-            /// <para>The product code. Valid values:</para>
+            /// <para>The product code. The following codes are supported:</para>
             /// <list type="bullet">
-            /// <item><description>DataWorks_share: pay-as-you-go DataWorks</description></item>
-            /// <item><description>MaxCompute_share: pay-as-you-go MaxCompute</description></item>
-            /// <item><description>PAI_share: pay-as-you-go PAI.</description></item>
-            /// <item><description>OSS_share: pay-as-you-go OSS</description></item>
+            /// <item><description><para>DataWorks_share: The pay-as-you-go DataWorks product.</para>
+            /// </description></item>
+            /// <item><description><para>MaxCompute_share: The pay-as-you-go MaxCompute product.</para>
+            /// </description></item>
+            /// <item><description><para>PAI_share: The pay-as-you-go PAI product.</para>
+            /// </description></item>
+            /// <item><description><para>OSS_share: The pay-as-you-go OSS product.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

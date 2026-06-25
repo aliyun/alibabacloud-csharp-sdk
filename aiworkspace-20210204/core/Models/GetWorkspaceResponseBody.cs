@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The names of the administrator accounts.</para>
+        /// <para>The list of administrator account names.</para>
         /// </summary>
         [NameInMap("AdminNames")]
         [Validation(Required=false)]
         public List<string> AdminNames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who creates the workspace.</para>
+        /// <para>The ID of the user who created the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1157******94123</para>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The environment information of the workspace.</para>
+        /// <para>The environments that the workspace contains. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Workspaces in basic mode can run only in the production environment.</description></item>
-        /// <item><description>Workspaces in standard mode can run in both the development and production environments.</description></item>
+        /// <item><description><para>A workspace in basic mode has only the production environment (prod).</para>
+        /// </description></item>
+        /// <item><description><para>A workspace in standard mode has both the development environment (dev) and the production environment (prod).</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("EnvTypes")]
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<string> EnvTypes { get; set; }
 
         /// <summary>
-        /// <para>The additional information, which only contains the TenantId field.</para>
+        /// <para>Additional information. This parameter currently contains the tenant ID (TenantId).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;TenantId&quot;: &quot;4286******98&quot;}</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfos { get; set; }
 
         /// <summary>
-        /// <para>The time when the workspace is created, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the workspace was created. The time is in UTC and follows the ISO 8601 standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the workspace is modified, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the workspace was last modified. The time is in UTC and follows the ISO 8601 standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -90,8 +92,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>Indicates whether the workspace is the default workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false: The workspace is not the default workspace.</para>
+        /// </description></item>
+        /// <item><description><para>true: The workspace is the default workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +106,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// <para>The information about the workspace owner. This parameter is valid only when Verbose is set to true.</para>
+        /// <para>The information about the workspace owner. This parameter is returned only when Verbose is set to true.</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
@@ -129,7 +133,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1157******94123</para>
@@ -171,14 +175,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The workspace state. Valid values:</para>
+        /// <para>The status of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLED</description></item>
-        /// <item><description>INITIALIZING</description></item>
-        /// <item><description>FAILURE:</description></item>
-        /// <item><description>DISABLED</description></item>
-        /// <item><description>FROZEN</description></item>
-        /// <item><description>UPDATING</description></item>
+        /// <item><description><para>ENABLED: The workspace is running as normal.</para>
+        /// </description></item>
+        /// <item><description><para>INITIALIZING: The workspace is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para>FAILURE: The workspace failed to be created.</para>
+        /// </description></item>
+        /// <item><description><para>DISABLED: The workspace is manually disabled.</para>
+        /// </description></item>
+        /// <item><description><para>FROZEN: The workspace is frozen due to an overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>UPDATING: The workspace is being updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,7 +209,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-example</para>

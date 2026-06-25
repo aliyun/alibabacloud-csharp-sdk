@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources.</para>
+        /// <para>A list of resources.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]

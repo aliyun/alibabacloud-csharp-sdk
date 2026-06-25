@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListModelVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The approval status based on which the model versions are queried. Valid values:</para>
+        /// <para>The approval status. This parameter is used to filter the model version list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending</description></item>
-        /// <item><description>Approved</description></item>
-        /// <item><description>Rejected</description></item>
+        /// <item><description><para>Pending: The model version is pending approval.</para>
+        /// </description></item>
+        /// <item><description><para>Approved: The model version is approved for publishing.</para>
+        /// </description></item>
+        /// <item><description><para>Rejected: The model version is rejected for publishing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,18 +28,28 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ApprovalStatus { get; set; }
 
         /// <summary>
-        /// <para>The model format used to filter model versions. Valid values:</para>
+        /// <para>The model format. This parameter is used to filter the model version list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OfflineModel</description></item>
-        /// <item><description>SavedModel</description></item>
-        /// <item><description>Keras H5</description></item>
-        /// <item><description>Frozen Pb</description></item>
-        /// <item><description>Caffe Prototxt</description></item>
-        /// <item><description>TorchScript</description></item>
-        /// <item><description>XGBoost</description></item>
-        /// <item><description>PMML</description></item>
-        /// <item><description>AlinkModel</description></item>
-        /// <item><description>ONNX</description></item>
+        /// <item><description><para>OfflineModel</para>
+        /// </description></item>
+        /// <item><description><para>SavedModel</para>
+        /// </description></item>
+        /// <item><description><para>Keras H5</para>
+        /// </description></item>
+        /// <item><description><para>Frozen Pb</para>
+        /// </description></item>
+        /// <item><description><para>Caffe Prototxt</para>
+        /// </description></item>
+        /// <item><description><para>TorchScript</para>
+        /// </description></item>
+        /// <item><description><para>XGBoost</para>
+        /// </description></item>
+        /// <item><description><para>PMML</para>
+        /// </description></item>
+        /// <item><description><para>AlinkModel</para>
+        /// </description></item>
+        /// <item><description><para>ONNX</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,14 +60,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FormatType { get; set; }
 
         /// <summary>
-        /// <para>The framework used to filter model versions.</para>
+        /// <para>The model framework. This parameter is used to filter the model version list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pytorch -XGBoost</description></item>
-        /// <item><description>Keras</description></item>
-        /// <item><description>Caffe</description></item>
-        /// <item><description>Alink</description></item>
-        /// <item><description>Xflow</description></item>
-        /// <item><description>TensorFlow</description></item>
+        /// <item><description><para>Pytorch
+        /// -XGBoost</para>
+        /// </description></item>
+        /// <item><description><para>Keras</para>
+        /// </description></item>
+        /// <item><description><para>Caffe</para>
+        /// </description></item>
+        /// <item><description><para>Alink</para>
+        /// </description></item>
+        /// <item><description><para>Xflow</para>
+        /// </description></item>
+        /// <item><description><para>TensorFlow</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +85,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FrameworkType { get; set; }
 
         /// <summary>
-        /// <para>The label. Model versions whose label key or label value contains a specific label are filtered.</para>
+        /// <para>The label string. This parameter is used to filter the list. Model versions that have the specified string in the key or value of their labels are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1</para>
@@ -75,10 +95,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</para>
+        /// <para>The order in which to sort the entries in the paged query. The default value is ASC.</para>
         /// <list type="bullet">
-        /// <item><description>ASC</description></item>
-        /// <item><description>DESC</description></item>
+        /// <item><description><para>ASC: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>DESC: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +111,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the model version list. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +121,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of entries to return on each page for a paged query. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -109,7 +131,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort the results. The GmtCreateTime field is used for sorting.</para>
+        /// <para>The field to use for sorting in the paged query. Currently, the GmtCreateTime field is used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -121,19 +143,23 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The source ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the source type is Custom, this field is not limited.</description></item>
-        /// <item><description>If the source type is PAIFlow or TrainingService, the format is:</description></item>
+        /// <item><description><para>If the source type is Custom, this parameter is not restricted.</para>
+        /// </description></item>
+        /// <item><description><para>If the source is PAIFlow or TrainingService, the format is as follows:</para>
+        /// </description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
         /// </c></pre>
-        /// <para>Take note of the following parameters:</para>
+        /// <para>where:</para>
         /// <list type="bullet">
-        /// <item><description>region is the region ID.</description></item>
-        /// <item><description>workspaceId is the ID of the workspace.</description></item>
-        /// <item><description>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</description></item>
-        /// <item><description>id is a unique identifier.</description></item>
+        /// <item><description><para>region is the Alibaba Cloud region ID.</para>
+        /// </description></item>
+        /// <item><description><para>workspaceId is the workspace ID.</para>
+        /// </description></item>
+        /// <item><description><para>kind: the type. Valid values: PipelineRun (PAIFlow pipeline) and ServiceJob (training service).</para>
+        /// </description></item>
+        /// <item><description><para>id: the unique identifier.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,11 +170,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The source type used to filter model versions. Valid values:</para>
+        /// <para>The source type of the model. This parameter is used to filter the model version list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Custom (default)</description></item>
-        /// <item><description>PAIFlow</description></item>
-        /// <item><description>TrainingService</description></item>
+        /// <item><description><para>Custom (default): a custom model.</para>
+        /// </description></item>
+        /// <item><description><para>PAIFlow: a model from a PAI pipeline.</para>
+        /// </description></item>
+        /// <item><description><para>TrainingService: a model from a PAI training service.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -159,7 +188,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The model version used to filter model versions.</para>
+        /// <para>The model version name. This parameter is used to filter the model version list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.1</para>

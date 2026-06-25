@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The workspace description.</para>
+        /// <para>The description of the workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Description</para>
+        /// <para>This is an example workspace.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The display name of the workspace.</para>
+        /// <para>The display name of the workspace. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 3 to 23 characters in length, and can contain letters, underscores (_), and digits.</description></item>
-        /// <item><description>The name must start with a letter.</description></item>
-        /// <item><description>The name must be unique in the current region.</description></item>
+        /// <item><description><para>The name must be 3 to 23 characters in length and can contain letters, underscores (_), and digits.</para>
+        /// </description></item>
+        /// <item><description><para>The name must start with a letter.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be unique within the current region.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,15 +20,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type and quantity of resources that can be activated in a workspace. This list is returned when the Option is set to GetResourceLimits. Valid values:</para>
+        /// <para>The resource types and quantity limits that a user can activate within a workspace. This list is returned when Option is set to GetResourceLimits.
+        /// Currently supported resource types include:</para>
         /// <list type="bullet">
-        /// <item><description>MaxCompute_share: pay-as-you-go MaxCompute</description></item>
-        /// <item><description>MaxCompute_isolate: subscription MaxCompute</description></item>
-        /// <item><description>DLC_share: pay-as-you-go DLC</description></item>
-        /// <item><description>PAI_Isolate: subscription PAI</description></item>
-        /// <item><description>PAI_share: pay-as-you-go PAI</description></item>
-        /// <item><description>DataWorks_isolate: subscription DataWorks</description></item>
-        /// <item><description>DataWorks_share: pay-as-you-go DataWorks</description></item>
+        /// <item><description>MaxCompute_share: MaxCompute pay-as-you-go.</description></item>
+        /// <item><description>MaxCompute_isolate: MaxCompute subscription.</description></item>
+        /// <item><description>DLC_share: DLC pay-as-you-go.</description></item>
+        /// <item><description>PAI_isolate: PAI subscription.</description></item>
+        /// <item><description>PAI_share: PAI pay-as-you-go.</description></item>
+        /// <item><description>DataWorks_isolate: DataWorks subscription.</description></item>
+        /// <item><description>DataWorks_share: DataWorks pay-as-you-go.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ResourceLimits { get; set; }
 
         /// <summary>
-        /// <para>The number of workspaces that meet the query conditions.</para>
+        /// <para>The total number of workspaces that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +61,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<ListWorkspacesResponseBodyWorkspaces> Workspaces { get; set; }
         public class ListWorkspacesResponseBodyWorkspaces : TeaModel {
             /// <summary>
-            /// <para>The names of the administrator accounts.</para>
+            /// <para>The list of administrator account names.</para>
             /// </summary>
             [NameInMap("AdminNames")]
             [Validation(Required=false)]
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The description of the workspace.</para>
+            /// <para>The workspace description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace description example</para>
@@ -86,15 +87,19 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("DisplayName")]
+            [Validation(Required=false)]
+            public string DisplayName { get; set; }
+
             /// <summary>
-            /// <para>The environment types of the workspace.</para>
+            /// <para>The list of environments in the workspace.</para>
             /// </summary>
             [NameInMap("EnvTypes")]
             [Validation(Required=false)]
             public List<string> EnvTypes { get; set; }
 
             /// <summary>
-            /// <para>the additional information. Only contains TenantId.</para>
+            /// <para>The extended information. Currently, this includes TenantId, which represents the tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;TenantId&quot;: &quot;4286******98&quot;}</para>
@@ -104,7 +109,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public Dictionary<string, object> ExtraInfos { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was created. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</para>
+            /// <para>The time when the workspace was created. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mm:ss.SSSZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -114,7 +119,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was modified. The time (UTC+0) follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ss.SSSZ format.</para>
+            /// <para>The time when the workspace was last modified. The time follows the ISO 8601 standard in UTC+0. Format: yyyy-MM-ddTHH:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -134,7 +139,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The status of the workspace.</para>
+            /// <para>The workspace status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLED</para>
@@ -154,7 +159,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the workspace.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>workspace-example</para>

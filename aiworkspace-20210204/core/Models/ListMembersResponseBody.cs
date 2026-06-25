@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The members.</para>
+        /// <para>The list of workspace members.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<ListMembersResponseBodyMembers> Members { get; set; }
         public class ListMembersResponseBodyMembers : TeaModel {
             /// <summary>
+            /// <para>Account name of the member.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testAccount</para>
             /// </summary>
@@ -25,6 +27,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string AccountName { get; set; }
 
             /// <summary>
+            /// <para>Account type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>1: Alibaba Cloud account</para>
+            /// </description></item>
+            /// <item><description><para>5: RAM user</para>
+            /// </description></item>
+            /// <item><description><para>6: RAM role</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -33,7 +45,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The display name of the member.</para>
+            /// <para>Display name of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myDisplayName</para>
@@ -43,7 +55,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The time when the user is created, in UTC. The time follows the ISO 8601 standard.</para>
+            /// <para>Time when the member was added, in UTC. Format: ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -53,7 +65,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The member ID.</para>
+            /// <para>Member ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14588*****51688039</para>
@@ -63,7 +75,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string MemberId { get; set; }
 
             /// <summary>
-            /// <para>The username.</para>
+            /// <para>Username of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user1</para>
@@ -73,14 +85,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string MemberName { get; set; }
 
             /// <summary>
-            /// <para>The list of roles.</para>
+            /// <para>Roles assigned to the member.</para>
             /// </summary>
             [NameInMap("Roles")]
             [Validation(Required=false)]
             public List<string> Roles { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>Alibaba Cloud account ID of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>215139******88039</para>
@@ -102,7 +114,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of members that meet the filter conditions.</para>
+        /// <para>Total number of members that match the filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

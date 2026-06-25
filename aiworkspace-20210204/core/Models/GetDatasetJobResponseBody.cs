@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? CompletedFileCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the job is started.</para>
+        /// <para>The time when the task was started.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-11-15T07:06:42Z</para>
@@ -30,7 +30,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The job description.</para>
+        /// <para>The task description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a task description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? FailedFileCount { get; set; }
 
         /// <summary>
-        /// <para>The time when the job ends.</para>
+        /// <para>The time when the task was finished.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-07-16T02:03:23Z</para>
@@ -57,13 +60,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FinishTime { get; set; }
 
         /// <summary>
-        /// <para>The action that is performed on the job.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SemanticIndex: semantic indexing</description></item>
-        /// <item><description>IntelligentTag: smart labeling</description></item>
-        /// <item><description>FileMetaExport: metadata export</description></item>
-        /// </list>
+        /// <para>The task operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SemanticIndex</para>
@@ -73,11 +70,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobAction { get; set; }
 
         /// <summary>
-        /// <para>The job mode.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>Full: full data mode.</description></item>
-        /// </list>
+        /// <para>The task pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Full</para>
@@ -87,7 +80,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobMode { get; set; }
 
         /// <summary>
-        /// <para>The job details.</para>
+        /// <para>The task details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</para>
@@ -97,7 +90,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobSpec { get; set; }
 
         /// <summary>
-        /// <para>The job logs.</para>
+        /// <para>The list of task logs.</para>
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
@@ -114,17 +107,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The job state.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Succeeded</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Pending</description></item>
-        /// <item><description>PartialFailed</description></item>
-        /// <item><description>Deleting</description></item>
-        /// <item><description>ManuallyStop</description></item>
-        /// </list>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -134,7 +117,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The total number of job files.</para>
+        /// <para>The total number of files for the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

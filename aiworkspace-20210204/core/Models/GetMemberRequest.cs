@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The member ID. You must specify only one of the following parameters: UserId and MemberId.</para>
+        /// <para>The member UID. You must specify either UserId or MemberId. You cannot specify both.</para>
         /// 
         /// <b>Example:</b>
         /// <para>145883-21513926******88039</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MemberId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account. You can call <a href="https://help.aliyun.com/document_detail/449133.html">ListWorkspaceUsers</a> to obtain the ID of the Alibaba Cloud account. You must specify only one of the following parameters: UserId and MemberId.</para>
+        /// <para>The user UID. For more information about how to view the user UID, see <a href="https://help.aliyun.com/document_detail/449133.html">ListWorkspaceUsers</a>. You must specify either UserId or MemberId. You cannot specify both.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21513926******88039</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the target resource group. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The ID of the new resource group. For more information about how to obtain a resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-df********534dy</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID, which is the workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The resource ID. This ID is the same as the workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12**56</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource group type, which must be set to workspace.</para>
+        /// <para>The type of the resource. You must set this parameter to workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace</para>

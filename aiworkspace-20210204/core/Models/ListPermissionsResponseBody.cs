@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListPermissionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The permissions.</para>
+        /// <para>The list of permissions.</para>
         /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public List<ListPermissionsResponseBodyPermissions> Permissions { get; set; }
         public class ListPermissionsResponseBodyPermissions : TeaModel {
             /// <summary>
-            /// <para>The permission name, which is unique in a region. For more information about permissions, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>. The example value PaiDLC:GetTensorboard indicates the permission to view details about a TensorBoard job on the Deep Learning Containers (DLC) page.</para>
+            /// <para>The name of the permission point. The name is unique within the same region. For more information about permission points, see <a href="https://help.aliyun.com/document_detail/2840449.html">Appendix: Roles and permissions</a>.
+            /// For example, the value PaiDLC:GetTensorboard grants the permission to view Tensorboard details for the DLC feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PaiDLC:GetTensorboard</para>
@@ -27,18 +28,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string PermissionCode { get; set; }
 
             /// <summary>
-            /// <para>The permission rules.</para>
+            /// <para>The list of permission rules.</para>
             /// </summary>
             [NameInMap("PermissionRules")]
             [Validation(Required=false)]
             public List<ListPermissionsResponseBodyPermissionsPermissionRules> PermissionRules { get; set; }
             public class ListPermissionsResponseBodyPermissionsPermissionRules : TeaModel {
                 /// <summary>
-                /// <para>The accessibility of the permission rule. Valid values:</para>
+                /// <para>The access type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PUBLIC: All members in the workspace can access the permission rule.</description></item>
-                /// <item><description>PRIVATE: Only the creator can access the permission rule.</description></item>
-                /// <item><description>ANY: All users can access the permission rule.</description></item>
+                /// <item><description><para>PUBLIC: All members in the current workspace can perform the operation.</para>
+                /// </description></item>
+                /// <item><description><para>PRIVATE: Only the creator can perform the operation.</para>
+                /// </description></item>
+                /// <item><description><para>ANY: Both the creator and non-creators can perform the operation.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -49,10 +53,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 public string Accessibility { get; set; }
 
                 /// <summary>
-                /// <para>The type of access. If you set Accessibility to PUBLIC, all users can access the workspace. This parameter is invalid. If you set Accessibility to PRIVATE, the permissions are determined based on the value of EntityAccessType. The value of EntityAccessType can be:</para>
+                /// <para>The entity access type.
+                /// This parameter is invalid if Accessibility is set to PUBLIC. In this case, all users can perform the operation.
+                /// If Accessibility is set to PRIVATE, the permission is determined by the value of EntityAccessType. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>CREATOR: Only the creator can access the workspace.</description></item>
-                /// <item><description>ANY: All users can access the workspace.</description></item>
+                /// <item><description><para>CREATOR: Only the creator can perform the operation.</para>
+                /// </description></item>
+                /// <item><description><para>ANY: Both the creator and non-creators can perform the operation.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -77,7 +85,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of permissions that meet the filter conditions.</para>
+        /// <para>The number of entries that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

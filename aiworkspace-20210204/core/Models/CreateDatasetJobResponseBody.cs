@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the dataset job.</para>
+        /// <para>The dataset task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsjob-9jx1******uj9e</para>

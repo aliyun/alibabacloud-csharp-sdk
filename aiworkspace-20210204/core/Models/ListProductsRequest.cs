@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListProductsRequest : TeaModel {
         /// <summary>
+        /// <para>The product codes, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PAI_isolate</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ProductCodes { get; set; }
 
         /// <summary>
+        /// <para>The service codes, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss</para>
         /// </summary>

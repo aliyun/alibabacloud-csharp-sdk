@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteModelLabelsRequest : TeaModel {
         /// <summary>
-        /// <para>The label key to be deleted. To delete multiple label keys, separate them with commas (,).</para>
+        /// <para>The tag keys to delete. Separate multiple tag keys with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1,key2</para>

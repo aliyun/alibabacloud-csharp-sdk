@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The resource accessibility. Valid values:</para>
+        /// <para>The visibility of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: All members in the workspace can access the workspace.</description></item>
-        /// <item><description>PRIVATE: Only the creator can access the workspace.</description></item>
+        /// <item><description><para>PUBLIC: All members in the current workspace can access the resource.</para>
+        /// </description></item>
+        /// <item><description><para>PRIVATE: Only the creator can access the resource.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The connection configuration.</para>
+        /// <para>The configuration information of the connection.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -41,7 +43,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The connection name.</para>
+        /// <para>The name of the connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Database connection</para>
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
@@ -50,15 +55,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The type of the connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DashScopeConnection: Alibaba Cloud Model Studio connection.</description></item>
-        /// <item><description>OpenLLMConnection: Open source model connection.</description></item>
-        /// <item><description>MilvusConnection: Milvus connection.</description></item>
-        /// <item><description>OpenSearchConnection: OpenSearch connection.</description></item>
-        /// <item><description>LindormConnection: Lindorm connection.</description></item>
-        /// <item><description>ElasticsearchConnection: Elasticsearch connection.</description></item>
-        /// <item><description>HologresConnection: Hologres connection.</description></item>
-        /// <item><description>RDSConnection: RDS connection.</description></item>
-        /// <item><description>CustomConnection: Custom connection.</description></item>
+        /// <item><description><para>DashScopeConnection: A connection to a Model Studio service.</para>
+        /// </description></item>
+        /// <item><description><para>OpenLLMConnection: A connection to an open-source model.</para>
+        /// </description></item>
+        /// <item><description><para>MilvusConnection: A connection to Milvus.</para>
+        /// </description></item>
+        /// <item><description><para>OpenSearchConnection: A connection to OpenSearch.</para>
+        /// </description></item>
+        /// <item><description><para>LindormConnection: A connection to Lindorm.</para>
+        /// </description></item>
+        /// <item><description><para>ElasticsearchConnection: A connection to Elasticsearch.</para>
+        /// </description></item>
+        /// <item><description><para>HologresConnection: A connection to Hologres.</para>
+        /// </description></item>
+        /// <item><description><para>RDSConnection: A connection to RDS.</para>
+        /// </description></item>
+        /// <item><description><para>CustomConnection: A custom connection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,14 +93,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The connection description.</para>
+        /// <para>The description of the connection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>用于数据集检索。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the connection is created, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The UTC time when the connection was created. The time is in the ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-07T07:54:56Z</para>
@@ -96,7 +113,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the connection is modified, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The UTC time when the connection was last modified. The time is in the ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-07T07:54:56Z</para>
@@ -106,7 +123,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The models, which apply to model service connections.</para>
+        /// <para>The list of models. This parameter is applicable to connections of the model service type.</para>
         /// </summary>
         [NameInMap("Models")]
         [Validation(Required=false)]
@@ -114,6 +131,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public class GetConnectionResponseBodyModels : TeaModel {
             /// <summary>
             /// <para>The display name of the model.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试语言模型。</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -132,9 +152,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The model type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>LLM</description></item>
-            /// <item><description>Embedding</description></item>
-            /// <item><description>ReRank</description></item>
+            /// <item><description><para>LLM: A large language model (LLM).</para>
+            /// </description></item>
+            /// <item><description><para>Embedding: An embedding model.</para>
+            /// </description></item>
+            /// <item><description><para>ReRank: A reranking model.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,10 +168,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ModelType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a tool can be called by using ToolCall. Valid values:</para>
+            /// <para>Indicates whether tool calling is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Tool calling is supported.</para>
+            /// </description></item>
+            /// <item><description><para>false: Tool calling is not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -161,7 +186,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5A14FA81-DD4E-******-6343FE44B941</para>
@@ -171,12 +196,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The instance resource information of the connection, which applies to database connections.</para>
+        /// <para>The instance resource information of the connection. This parameter is typically used for database connections.</para>
         /// </summary>
         [NameInMap("ResourceMeta")]
         [Validation(Required=false)]
         public GetConnectionResponseBodyResourceMeta ResourceMeta { get; set; }
         public class GetConnectionResponseBodyResourceMeta : TeaModel {
+            /// <summary>
+            /// <para>Additional configuration information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;vpcId&quot;:&quot;vpc-xxxx&quot;}</para>
+            /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public string Extra { get; set; }
@@ -193,6 +224,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
             /// <summary>
             /// <para>The instance name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test instance.</para>
             /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
@@ -201,7 +235,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The encrypted configuration, in key-value pairs. Examples: the database logon password and the key of the model connection.</para>
+        /// <para>The key-value pairs that need to be encrypted. Examples include the logon password for a database and the key for a model connection.</para>
         /// </summary>
         [NameInMap("Secrets")]
         [Validation(Required=false)]

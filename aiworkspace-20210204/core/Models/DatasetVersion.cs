@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DatasetVersion : TeaModel {
         /// <summary>
-        /// <para>DataCount</para>
+        /// <para>The total number of data items in the version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataCount { get; set; }
 
         /// <summary>
-        /// <para>DataSize</para>
+        /// <para>The total size of the data in the version, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>DataSourceType</para>
+        /// <para>The data source type. For example, the value <c>OSS</c> indicates Object Storage Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>Description</para>
+        /// <para>A custom description for the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base model v1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>create time</para>
+        /// <para>The creation time of the dataset version, in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>modify time</para>
+        /// <para>The time the dataset version was last modified, in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>ImportInfo</para>
+        /// <para>Information about the import source, in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImportInfo { get; set; }
 
         /// <summary>
-        /// <para>Labels</para>
+        /// <para>A list of labels applied to the dataset version.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>MountAccess</para>
+        /// <para>The access permission for the mounted dataset. For example, <c>RO</c> means read-only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RO</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MountAccess { get; set; }
 
         /// <summary>
-        /// <para>Options</para>
+        /// <para>Additional configurations for the dataset version, in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Options { get; set; }
 
         /// <summary>
-        /// <para>property</para>
+        /// <para>The data format of the dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FILE</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Property { get; set; }
 
         /// <summary>
-        /// <para>SourceId</para>
+        /// <para>The ID of the source from which the version was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-65mrsr5fub4u74lej3</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>SourceType</para>
+        /// <para>The method used to create the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>Uri</para>
+        /// <para>The URI of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS://xxx</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Uri { get; set; }
 
         /// <summary>
-        /// <para>version name</para>
+        /// <para>The name of the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

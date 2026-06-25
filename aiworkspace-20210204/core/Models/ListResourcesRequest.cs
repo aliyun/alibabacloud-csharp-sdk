@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the resource group. You can call <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a> to obtain the name of the resource group.</para>
+        /// <para>The name of the resource group. To get the resource group name, see <a href="https://help.aliyun.com/document_detail/449143.html">ListResources</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Tag-based filter conditions. Multiple conditions are separated by commas (,). Only resources that meet all the specified tag-based filter conditions are returned.</para>
-        /// <para>This parameter is available only for resources whose ProductType is ACS.</para>
+        /// <para>A comma-separated list of labels. This operation returns only the resources that have all the specified labels.</para>
+        /// <para>This parameter is available only for resources whose <c>ResourceTypes</c> is set to <c>ACS</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system.supported.dsw=true,system.supported.dlc=true</para>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>The operation to perform. Valid values:</para>
+        /// <para>The option to query resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ListResourceByWorkspace: obtains the resources in the workspace. This is the default value.</description></item>
-        /// <item><description>ListResource: obtains the resources of the user.</description></item>
+        /// <item><description><para><c>ListResourceByWorkspace</c> (Default): lists the resources in a workspace.</para>
+        /// </description></item>
+        /// <item><description><para><c>ListResource</c>: lists the resources of the current user.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Option { get; set; }
 
         /// <summary>
-        /// <para>The page number. The pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than or equal to 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>**This field is no longer used and will be removed. Use the ResourceType field instead.</para>
+        /// <para><b>Deprecated.</b> This parameter is deprecated. Use the <c>ResourceType</c> parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MaxCompute</para>
@@ -75,9 +77,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ProductTypes { get; set; }
 
         /// <summary>
-        /// <para>The quota IDs, which are separated by commas (,). Only resources that contain all the specified quotas are returned.</para>
+        /// <para>A comma-separated list of quota IDs. This operation returns only the resources that are associated with all the specified quota IDs.</para>
         /// <remarks>
-        /// <para> This parameter is available only for resources whose ResourceTypes is ACS.</para>
+        /// <para>This parameter is available only for resources whose <c>ResourceTypes</c> is set to <c>ACS</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,10 +90,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string QuotaIds { get; set; }
 
         /// <summary>
-        /// <para>The resource name. The value must meet the following requirements:</para>
+        /// <para>The resource name. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 3 to 28 characters in length.</description></item>
-        /// <item><description>The name is unique in the region.</description></item>
+        /// <item><description><para>The name must be 3 to 28 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be unique within a region.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,11 +108,22 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The resource types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MaxCompute</description></item>
-        /// <item><description>ECS</description></item>
-        /// <item><description>Lingjun</description></item>
-        /// <item><description>ACS</description></item>
-        /// <item><description>FLINK</description></item>
+        /// <item><description><para><c>MaxCompute</c>: MaxCompute resources.</para>
+        /// </description></item>
+        /// <item><description><para><c>ECS</c>: ECS resources.</para>
+        /// </description></item>
+        /// <item><description><para><c>Lingjun</c>: Lingjun computing resources.</para>
+        /// </description></item>
+        /// <item><description><para><c>ACS</c>: ACS computing resources.</para>
+        /// </description></item>
+        /// <item><description><para><c>Flink</c>: Flink resources.</para>
+        /// </description></item>
+        /// <item><description><para><c>SelfManagedAckPro</c>: self-managed AckPro cluster resources.</para>
+        /// </description></item>
+        /// <item><description><para><c>SelfManagedAckLingjun</c>: self-managed AckLingjun cluster resources.</para>
+        /// </description></item>
+        /// <item><description><para><c>SelfManagedASI</c>: self-managed ASI cluster resources from a third-party cloud.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,10 +134,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to show detailed information, which includes the Quotas field. Valid values:</para>
+        /// <para>Specifies whether to return detailed information. The detailed information includes the <c>Quotas</c> field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default)</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c> (Default): returns detailed information.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: does not return detailed information.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,11 +150,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>The fields to return. Multiple fields are separated by commas (,). Valid values:</para>
+        /// <para>A comma-separated list of fields that you want to return. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Quota</description></item>
-        /// <item><description>Label</description></item>
-        /// <item><description>IsDefault</description></item>
+        /// <item><description><para><c>Quota</c></para>
+        /// </description></item>
+        /// <item><description><para><c>Label</c></para>
+        /// </description></item>
+        /// <item><description><para><c>IsDefault</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,10 +168,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string VerboseFields { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The ID of the workspace. To get the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is required when the Option parameter is set to ListResourceByWorkspace.</description></item>
-        /// <item><description>You do not need to configure this parameter when the Option parameter is set to ListResource.</description></item>
+        /// <item><description><para>This parameter is required if <c>Option</c> is set to <c>ListResourceByWorkspace</c>.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is not required if <c>Option</c> is set to <c>ListResource</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

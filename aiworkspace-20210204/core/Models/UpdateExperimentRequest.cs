@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateExperimentRequest : TeaModel {
         /// <summary>
-        /// <para>The accessibility of the experiment in the workspace. Valid values:</para>
+        /// <para>The visibility of the experiment in the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE: The experiment is accessible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: The experiment is accessible to all users in the workspace.</description></item>
+        /// <item><description><para>PRIVATE: The experiment is visible only to you and the administrator in the workspace.</para>
+        /// </description></item>
+        /// <item><description><para>PUBLIC: The experiment is visible to everyone in the workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +26,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The experiment name. The name must meet the following requirements:</para>
+        /// <para>The name of the experiment. The naming convention is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The name must start with a letter.</description></item>
-        /// <item><description>The name can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>The name must be 1 to 63 characters in length.</description></item>
+        /// <item><description><para>Must start with a lowercase or uppercase letter.</para>
+        /// </description></item>
+        /// <item><description><para>Can contain lowercase letters, uppercase letters, digits, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>The length must be 1 to 63 characters.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

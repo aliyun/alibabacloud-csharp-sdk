@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetJobRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset version.</para>
+        /// <para>The name of the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -20,19 +20,30 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The job description.</para>
+        /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a job description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The job action.</para>
-        /// <para>Valid values:</para>
+        /// <para>The task operation.</para>
         /// <list type="bullet">
-        /// <item><description>SemanticIndex</description></item>
-        /// <item><description>IntelligentTag</description></item>
-        /// <item><description>FileMetaExport</description></item>
+        /// <item><description><para>SemanticIndex: semantic index</para>
+        /// </description></item>
+        /// <item><description><para>IntelligentTag: intelligent tagging</para>
+        /// </description></item>
+        /// <item><description><para>FileMetaExport: metadata export</para>
+        /// </description></item>
+        /// <item><description><para>FileMetaBuild: build and update metadata</para>
+        /// </description></item>
+        /// <item><description><para>IntelligentTagRevert: revoke intelligent tagging</para>
+        /// </description></item>
+        /// <item><description><para>FileMetaImport: metadata import</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,10 +55,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobAction { get; set; }
 
         /// <summary>
-        /// <para>The job mode.</para>
-        /// <para>Valid values:</para>
+        /// <para>The task type.</para>
         /// <list type="bullet">
-        /// <item><description>Full: full mode.</description></item>
+        /// <item><description><para>Full (default): forces the processing of all metadata. This task takes a long time to execute.</para>
+        /// </description></item>
+        /// <item><description><para>Increment: processes only changed or unsuccessfully processed metadata. The SemanticIndex and IntelligentTag tasks support Increment and Full. Other tasks support only Full.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +71,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobMode { get; set; }
 
         /// <summary>
-        /// <para>The job configuration.</para>
+        /// <para>The task details.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +82,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobSpec { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The workspace ID. For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

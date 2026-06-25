@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetModelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The visibility of the workspace.</para>
+        /// <para>The visibility of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE: The workspace is visible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: The workspace is visible to all users.</description></item>
+        /// <item><description><para>PRIVATE: The model is visible only to you and administrators in the workspace.</para>
+        /// </description></item>
+        /// <item><description><para>PUBLIC: The model is visible to everyone in the workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The domain. This parameter specifies the domain for which the model is developed. Valid values: nlp and cv. nlp indicates natural language processing and cv indicates computer vision.</para>
+        /// <para>The domain. This indicates the domain of the problem that the model is designed to solve, such as natural language processing (NLP) and computer vision (CV).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cv</para>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The time when the model is created, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The UTC time when the model was created. The time is in the ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
@@ -61,12 +63,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
+        /// <summary>
+        /// <para>The time when the latest version was updated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-30T12:51:33.028Z</para>
+        /// </summary>
         [NameInMap("GmtLatestVersionModifiedTime")]
         [Validation(Required=false)]
         public string GmtLatestVersionModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the model is last modified, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The UTC time when the model was last updated. The time is in the ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-30T12:51:33.028Z</para>
@@ -76,7 +84,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The model tags.</para>
+        /// <para>The list of labels for the model.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
@@ -91,13 +99,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The model description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>General sentiment analysis.</para>
         /// </summary>
         [NameInMap("ModelDescription")]
         [Validation(Required=false)]
         public string ModelDescription { get; set; }
 
         /// <summary>
-        /// <para>The documentation of the model.</para>
+        /// <para>The model document.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***.md</para>
@@ -118,6 +129,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The model name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sentiment analysis</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
@@ -134,7 +148,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>The sequence number of the model.</para>
+        /// <para>The ordinal number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -144,7 +158,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? OrderNumber { get; set; }
 
         /// <summary>
-        /// <para>The source of the model. The community or organization to which the model belongs, such as ModelScope or HuggingFace.</para>
+        /// <para>The source of the model. This indicates the community or organization to which the source model belongs, such as ModelScope and HuggingFace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ModelScope</para>
@@ -163,6 +177,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The number of parameters, in millions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
+        /// </summary>
         [NameInMap("ParameterSize")]
         [Validation(Required=false)]
         public long? ParameterSize { get; set; }
@@ -188,7 +208,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task of the model. This parameter describes specific issues that the model solves, such as text-classification.</para>
+        /// <para>The task. This indicates the specific problem that the model is designed to solve, such as text classification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-classification</para>

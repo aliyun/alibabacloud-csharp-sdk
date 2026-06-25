@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetJobRequest : TeaModel {
         /// <summary>
-        /// <para>The dataset version name.</para>
+        /// <para>The name of the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The dataset job description.</para>
+        /// <para>The description of the dataset job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>This is a job description of a dataset.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The ID of the workspace. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>478**</para>

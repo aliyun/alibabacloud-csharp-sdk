@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListRunsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the experiment that the run belongs.</para>
+        /// <para>The ID of the experiment to which the run belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exp-1zpfthdx******</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The label. Exact match is supported. Valid values:</para>
+        /// <para>The labels of the run for an exact match. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Single-label query: Set the value to is_evaluation.</description></item>
-        /// <item><description>Multi-label query (not recommended in non-special scenarios and may have performance issues): Set the value to is_evaluation:true,LLM_evaluation:true. Multiple labels are separated with commas (,), indicating that the key-value pairs of multiple labels must be matched at the same time.</description></item>
+        /// <item><description><para>Single-label query: &quot;is_evaluation:true&quot;</para>
+        /// </description></item>
+        /// <item><description><para>Multi-label query: &quot;is_evaluation:true,LLM_evaluation:true&quot;. This method is not recommended for common scenarios because it may degrade performance. Use commas (,) to separate multiple labels. The system matches all specified key-value pairs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Labels { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries in the request. Default value: 10.</para>
+        /// <para>The maximum number of results to return. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The run name.</para>
+        /// <para>The name of the run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myName</para>
@@ -64,10 +66,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy.</para>
+        /// <para>The sort order for the paged query. Use this parameter with SortBy.</para>
         /// <list type="bullet">
-        /// <item><description>ASC</description></item>
-        /// <item><description>DESC (default)</description></item>
+        /// <item><description><para>ASC: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>DESC (default): descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The strings by which the results are sorted. The following parameters can be used to sort the results: GmtCreateTime and Name. The sorting order can be ASC (default) and DESC. Separate multiple strings with commas (,).</para>
+        /// <para>The fields to sort by and the sort order. You can sort by GmtCreateTime and Name. Valid sort orders are DESC and ASC. The default is ASC. To sort by multiple fields, separate them with a comma (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime DESC,Name ASC</para>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records to display on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -108,7 +112,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The pagination token, which starts from 0. Default value: 0.</para>
+        /// <para>The paging token. The value starts from 0. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -118,10 +122,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? PageToken { get; set; }
 
         /// <summary>
-        /// <para>The field used for sorting. Valid values:</para>
+        /// <para>The field to use for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Name: the name of the run.</description></item>
-        /// <item><description>GmtCreateTime: the time when the run is created.</description></item>
+        /// <item><description><para>Name: the name of the run.</para>
+        /// </description></item>
+        /// <item><description><para>GmtCreateTime (default): the time when the run was created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workload associated with the run.</para>
+        /// <para>The ID of the PAI workload associated with the run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job-rbvg5wzlj****</para>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the workload associated with the run.</para>
+        /// <para>The type of the PAI workload associated with the run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TrainingService</para>
@@ -152,10 +158,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to show detailed information, including Metrics, Params, and Labels. Valid values:</para>
+        /// <para>Specifies whether to display details, including Metrics, Params, and Labels. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true: displays details.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): does not display details.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,13 +174,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the experiment belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The ID of the workspace where the experiment resides. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify a workspace ID, the system returns the runs of the default workspace.</para>
+        /// <para>If you do not specify a workspace ID, the system returns the list of runs in the default workspace.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>22840</para>
+        /// <para>228**</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

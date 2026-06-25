@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the resource is the default resource. This parameter can only be set to true and cannot be set to false.</para>
+        /// <para>Specifies whether to set the resource as the default resource for the workspace. Currently, only <c>true</c> is a valid value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// <para>The resource tags. If you specify multiple tags, only resources that meet all the specified tag-based filter conditions are returned.</para>
+        /// <para>An array of tags. The update affects only resources that have all of the specified tags.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<UpdateWorkspaceResourceRequestLabels> Labels { get; set; }
         public class UpdateWorkspaceResourceRequestLabels : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>system.******</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>**This field is no longer used and will be removed. Use the ResourceType field.</para>
+        /// <para><b>This parameter is deprecated. Use <c>ResourceType</c> instead.</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>MaxCompute</para>
@@ -69,21 +69,32 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ProductType { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
-        /// <para>You cannot leave both GroupName and ResourceIds empty. If you specify both the parameters, the value of GroupName of each resource ID in the dataset must be the same.</para>
+        /// <para>An array of resource IDs.</para>
+        /// <para>You cannot leave both <c>GroupName</c> and <c>ResourceIds</c> empty. If you specify both parameters, the group name must be the same for all specified resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceIds")]
         [Validation(Required=false)]
         public List<string> ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid values:</para>
+        /// <para>The resource type. Valid values are:</para>
         /// <list type="bullet">
-        /// <item><description>MaxCompute</description></item>
-        /// <item><description>ECS</description></item>
-        /// <item><description>Lingjun</description></item>
-        /// <item><description>ACS</description></item>
-        /// <item><description>FLINK</description></item>
+        /// <item><description><para>MaxCompute: MaxCompute resources.</para>
+        /// </description></item>
+        /// <item><description><para>ECS: General-purpose computing resources.</para>
+        /// </description></item>
+        /// <item><description><para>Lingjun: Lingjun intelligent computing resources.</para>
+        /// </description></item>
+        /// <item><description><para>ACS: ACS computing resources.</para>
+        /// </description></item>
+        /// <item><description><para>Flink: Flink resources.</para>
+        /// </description></item>
+        /// <item><description><para>SelfManagedAckPro: Resources for self-managed ACK Pro clusters.</para>
+        /// </description></item>
+        /// <item><description><para>SelfManagedAckLingjun: Resources for self-managed ACK Lingjun clusters.</para>
+        /// </description></item>
+        /// <item><description><para>SelfManagedASI: Resources for self-managed clusters on third-party clouds.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +105,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The specification of the resource.</para>
+        /// <para>The specifications of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

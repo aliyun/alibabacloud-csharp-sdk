@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
     public class CreateDatasetVersionResponseBody : TeaModel {
         /// <summary>
         /// <para>Id of the request</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>41A847C8-3D12-5F24-8CE9-7F9EB2DA9ECD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The dataset version name.</para>
+        /// <para>The name of the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

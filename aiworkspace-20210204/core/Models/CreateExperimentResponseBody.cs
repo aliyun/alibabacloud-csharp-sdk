@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateExperimentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data. If the operation is asynchronously implemented, the job ID is returned.</para>
+        /// <para>If the call is asynchronous, the API returns a JobId.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ExperimentId-example-id-****</para>
         /// </summary>
         [NameInMap("ExperimentId")]
         [Validation(Required=false)]
         public string ExperimentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Request ID</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

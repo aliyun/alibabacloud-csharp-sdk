@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateImageBuildResponseBody : TeaModel {
         /// <summary>
-        /// <para>代表资源一级ID的资源属性字段</para>
+        /// <para>The image build ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>build-****ks92</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageBuildId { get; set; }
 
         /// <summary>
+        /// <para>The build task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlc-****ks92</para>
         /// </summary>

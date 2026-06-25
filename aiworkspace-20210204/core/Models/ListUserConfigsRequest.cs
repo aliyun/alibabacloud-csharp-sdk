@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListUserConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The category. Currently, only DataPrivacyConfig is supported.</para>
+        /// <para>The category. Only DataPrivacyConfig is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DataPrivacyConfig</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CategoryNames { get; set; }
 
         /// <summary>
-        /// <para>The configuration item keys. Currently, only customizePAIAssumedRole is supported.</para>
+        /// <para>A collection of configuration keys. Only customizePAIAssumedRole is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>customizePAIAssumedRole</para>

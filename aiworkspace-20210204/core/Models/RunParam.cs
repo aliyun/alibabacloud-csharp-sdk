@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class RunParam : TeaModel {
         /// <summary>
-        /// <para>The name of the parameter.</para>
+        /// <para>The run parameter\&quot;s key.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Key")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The value of the parameter.</para>
+        /// <para>The run parameter\&quot;s value.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Value")]

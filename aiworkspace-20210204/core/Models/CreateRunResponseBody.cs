@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The run ID.</para>
+        /// <para>The ID of the run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>run-1meoz7VJd2C6f****</para>

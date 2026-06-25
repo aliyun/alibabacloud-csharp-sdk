@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class AddImageLabelsRequest : TeaModel {
         /// <summary>
-        /// <para>The list of image tags.</para>
+        /// <para>A list of image labels.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Labels")]
@@ -18,26 +18,44 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<AddImageLabelsRequestLabels> Labels { get; set; }
         public class AddImageLabelsRequestLabels : TeaModel {
             /// <summary>
-            /// <para>The tag key. The following keys can be added:</para>
+            /// <para>The key of the label. The following keys are supported:</para>
             /// <list type="bullet">
-            /// <item><description>system.chipType</description></item>
-            /// <item><description>system.dsw.cudaVersion</description></item>
-            /// <item><description>system.dsw.fromImageId</description></item>
-            /// <item><description>system.dsw.fromInstanceId</description></item>
-            /// <item><description>system.dsw.id</description></item>
-            /// <item><description>system.dsw.os</description></item>
-            /// <item><description>system.dsw.osVersion</description></item>
-            /// <item><description>system.dsw.resourceType</description></item>
-            /// <item><description>system.dsw.rootImageId</description></item>
-            /// <item><description>system.dsw.stage</description></item>
-            /// <item><description>system.dsw.tag</description></item>
-            /// <item><description>system.dsw.type</description></item>
-            /// <item><description>system.framework</description></item>
-            /// <item><description>system.origin</description></item>
-            /// <item><description>system.pythonVersion</description></item>
-            /// <item><description>system.source</description></item>
-            /// <item><description>system.supported.dlc</description></item>
-            /// <item><description>system.supported.dsw</description></item>
+            /// <item><description><para>system.chipType</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.cudaVersion</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.fromImageId</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.fromInstanceId</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.id</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.os</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.osVersion</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.resourceType</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.rootImageId</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.stage</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.tag</para>
+            /// </description></item>
+            /// <item><description><para>system.dsw\.type</para>
+            /// </description></item>
+            /// <item><description><para>system.framework</para>
+            /// </description></item>
+            /// <item><description><para>system.origin</para>
+            /// </description></item>
+            /// <item><description><para>system.pythonVersion</para>
+            /// </description></item>
+            /// <item><description><para>system.source</para>
+            /// </description></item>
+            /// <item><description><para>system.supported.dlc</para>
+            /// </description></item>
+            /// <item><description><para>system.supported.dsw</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -48,7 +66,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GPU</para>

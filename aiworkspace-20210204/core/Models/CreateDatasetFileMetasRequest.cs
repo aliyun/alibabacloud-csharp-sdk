@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetFileMetasRequest : TeaModel {
         /// <summary>
-        /// <para>The metadata of the file.</para>
+        /// <para>A list of file metadata content.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DatasetFileMetas")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<DatasetFileMetaContentCreate> DatasetFileMetas { get; set; }
 
         /// <summary>
-        /// <para>The dataset version name.</para>
+        /// <para>The name of the dataset version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the dataset belongs. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The ID of the workspace where the dataset is located. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

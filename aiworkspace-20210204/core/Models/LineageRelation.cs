@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class LineageRelation : TeaModel {
         /// <summary>
-        /// <para>DestEntityQualifiedName</para>
+        /// <para>The fully qualified name of the target entity in the relationship.</para>
         /// </summary>
         [NameInMap("DestEntityQualifiedName")]
         [Validation(Required=false)]
         public string DestEntityQualifiedName { get; set; }
 
         /// <summary>
-        /// <para>RelationshipGuid</para>
+        /// <para>The system-assigned unique identifier (GUID) for the relationship.</para>
         /// </summary>
         [NameInMap("RelationshipGuid")]
         [Validation(Required=false)]
         public string RelationshipGuid { get; set; }
 
         /// <summary>
-        /// <para>SrcEntityQualifiedName</para>
+        /// <para>The fully qualified name of the source entity in the relationship.</para>
         /// </summary>
         [NameInMap("SrcEntityQualifiedName")]
         [Validation(Required=false)]

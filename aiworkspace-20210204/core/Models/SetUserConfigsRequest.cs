@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class SetUserConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations list.</para>
+        /// <para>The list of configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<SetUserConfigsRequestConfigs> Configs { get; set; }
         public class SetUserConfigsRequestConfigs : TeaModel {
             /// <summary>
-            /// <para>The category. Only DataPrivacyConfig is supported.</para>
+            /// <para>The classification. Only DataPrivacyConfig is supported.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The key of the configuration item.</para>
+            /// <para>The configuration key.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ConfigKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the configuration item.</para>
+            /// <para>The configuration value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

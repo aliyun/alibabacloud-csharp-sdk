@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDatasetFileMetasStatisticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the returned aggregation list, including the number of each aggregate item. The list is by default sorted in descending order based on the count number.</para>
+        /// <para>The details of the returned aggregation list. You can get the count for each aggregated item. The list is sorted by Count in descending order by default.</para>
         /// </summary>
         [NameInMap("DatasetFileMetasStats")]
         [Validation(Required=false)]
         public List<DatasetFileMetasStat> DatasetFileMetasStats { get; set; }
 
         /// <summary>
-        /// <para>The returned number. Example: the number of metadata records or the number of user-defined tags.</para>
+        /// <para>The number of statistical results returned. For example, the number of metadata entries or the number of user tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>73</para>

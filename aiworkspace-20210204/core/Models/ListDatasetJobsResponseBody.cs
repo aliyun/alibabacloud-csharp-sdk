@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetJobsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The jobs in the dataset.</para>
+        /// <para>A list of dataset jobs.</para>
         /// </summary>
         [NameInMap("DatasetJobs")]
         [Validation(Required=false)]
@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The total number of jobs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

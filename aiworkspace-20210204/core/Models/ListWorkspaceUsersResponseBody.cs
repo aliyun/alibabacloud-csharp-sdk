@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of users who meet the filter conditions.</para>
+        /// <para>The number of users that meet the filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The users.</para>
+        /// <para>The list of users.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]

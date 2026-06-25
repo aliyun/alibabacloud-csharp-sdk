@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateCodeSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the created code build.</para>
+        /// <para>The ID of the created code configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code-20********</para>

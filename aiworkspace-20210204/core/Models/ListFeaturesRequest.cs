@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListFeaturesRequest : TeaModel {
         /// <summary>
+        /// <para>Feature names, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PaiConsole:IntegrateWithWorkspace</para>
         /// </summary>

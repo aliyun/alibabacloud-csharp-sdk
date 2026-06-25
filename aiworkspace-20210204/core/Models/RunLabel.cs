@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class RunLabel : TeaModel {
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>Time when the label was created</para>
         /// </summary>
         [NameInMap("GmtCreateTime")]
         [Validation(Required=false)]
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The last modified time.</para>
+        /// <para>Time when the label was last modified</para>
         /// </summary>
         [NameInMap("GmtModifiedTime")]
         [Validation(Required=false)]
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The label key.</para>
+        /// <para>Key of the label</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Key")]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The ID of the run.</para>
+        /// <para>ID of the Run that owns this label</para>
         /// </summary>
         [NameInMap("RunId")]
         [Validation(Required=false)]
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The label value.</para>
+        /// <para>Value of the label</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Value")]

@@ -34,6 +34,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public Dictionary<string, object> CompressionSpec { get; set; }
 
+        /// <summary>
+        /// <para>蒸馏配置。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("DistillationSpec")]
         [Validation(Required=false)]
         public Dictionary<string, object> DistillationSpec { get; set; }
@@ -141,10 +147,22 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public List<ModelVersionLabels> Labels { get; set; }
         public class ModelVersionLabels : TeaModel {
+            /// <summary>
+            /// <para>标签的key</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>标签的value</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>v1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -263,6 +281,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The model version description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>情感分析。</para>
         /// </summary>
         [NameInMap("VersionDescription")]
         [Validation(Required=false)]

@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListImagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The images.</para>
+        /// <para>The list of images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public List<ListImagesResponseBodyImages> Images { get; set; }
         public class ListImagesResponseBodyImages : TeaModel {
             /// <summary>
-            /// <para>The accessibility of the image. Valid values:</para>
+            /// <para>The visibility of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PUBLIC: All members can access the image.</description></item>
-            /// <item><description>PRIVATE: Only the creator can access the image.</description></item>
+            /// <item><description><para>PUBLIC: All members in the current workspace can perform operations on the image.</para>
+            /// </description></item>
+            /// <item><description><para>PRIVATE: Only the creator can perform operations on the image.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the image is created, in UTC. The time follows the ISO 8601 standard.</para>
+            /// <para>The time when the image was created. The time is in UTC and the format is ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the image is modified, in UTC. The time follows the ISO 8601 standard.</para>
+            /// <para>The time when the image was last modified. The time is in UTC and the format is ISO 8601.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-01-21T17:12:35.232Z</para>
@@ -71,21 +73,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The image address, which includes the version number.</para>
+            /// <para>The image URL, which includes the version number.</para>
             /// </summary>
             [NameInMap("ImageUri")]
             [Validation(Required=false)]
             public string ImageUri { get; set; }
 
             /// <summary>
-            /// <para>The image tags.</para>
+            /// <para>The list of image labels.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<ListImagesResponseBodyImagesLabels> Labels { get; set; }
             public class ListImagesResponseBodyImagesLabels : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The key of the label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>system.chipType</para>
@@ -95,7 +97,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The value of the label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GPU</para>
@@ -117,17 +119,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The UID of the Alibaba Cloud account that created the image.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>15577******82932</para>
+            /// <para>155**********904</para>
             /// </summary>
             [NameInMap("ParentUserId")]
             [Validation(Required=false)]
             public string ParentUserId { get; set; }
 
             /// <summary>
-            /// <para>The image size. Unit: GB.</para>
+            /// <para>The image size in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -137,24 +139,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>镜像来源 ID</para>
+            /// <para>The ID of the image source.</para>
             /// </summary>
             [NameInMap("SourceId")]
             [Validation(Required=false)]
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>镜像来源类型</para>
+            /// <para>The type of the image source.</para>
             /// </summary>
             [NameInMap("SourceType")]
             [Validation(Required=false)]
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The UID of the Alibaba Cloud account that created the image.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>15577******82932</para>
+            /// <para>155**********904</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]

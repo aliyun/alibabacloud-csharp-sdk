@@ -10,14 +10,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the configuration item. Valid values:</para>
+        /// <para>The classification of the configuration item. The following classifications are supported:</para>
         /// <list type="bullet">
-        /// <item><description>CommonResourceConfig</description></item>
-        /// <item><description>DLCAutoRecycle</description></item>
-        /// <item><description>DLCPriorityConfig</description></item>
-        /// <item><description>DSWPriorityConfig</description></item>
-        /// <item><description>QuotaMaximumDuration</description></item>
-        /// <item><description>CommonTagConfig</description></item>
+        /// <item><description><para>CommonResourceConfig: The common resource configuration.</para>
+        /// </description></item>
+        /// <item><description><para>DLCAutoRecycle: The DLC auto-recycle configuration.</para>
+        /// </description></item>
+        /// <item><description><para>DLCPriorityConfig: The DLC priority settings.</para>
+        /// </description></item>
+        /// <item><description><para>DSWPriorityConfig: The DSW priority settings.</para>
+        /// </description></item>
+        /// <item><description><para>QuotaMaximumDuration: The maximum runtime of a DLC task for a quota.</para>
+        /// </description></item>
+        /// <item><description><para>CommonTagConfig: The tag settings.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,13 +34,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CategoryName { get; set; }
 
         /// <summary>
-        /// <para>The key of the configuration item. Valid values:</para>
+        /// <para>The key of the configuration item. The following keys are supported:</para>
         /// <list type="bullet">
-        /// <item><description>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</description></item>
-        /// <item><description>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</description></item>
-        /// <item><description>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</description></item>
-        /// <item><description>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</description></item>
-        /// <item><description>predefinedTags: Preset tags of the workspace. Created resources must include tags.</description></item>
+        /// <item><description><para>tempStoragePath: The path for temporary storage. This key is valid only when CategoryName is set to CommonResourceConfig.</para>
+        /// </description></item>
+        /// <item><description><para>isAutoRecycle: The auto-recycle configuration. This key is valid only when CategoryName is set to DLCAutoRecycle.</para>
+        /// </description></item>
+        /// <item><description><para>priorityConfig: The priority configuration. This key is valid only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</para>
+        /// </description></item>
+        /// <item><description><para>quotaMaximumDuration: The maximum runtime of a DLC task for a quota. This key is valid only when CategoryName is set to QuotaMaximumDuration.</para>
+        /// </description></item>
+        /// <item><description><para>predefinedTags: The predefined tags for the workspace. Created resources must have these tags.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,14 +66,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
-        /// <para>The tags of the configuration item.</para>
+        /// <para>The list of labels for the configuration item.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<UpdateConfigRequestLabels> Labels { get; set; }
         public class UpdateConfigRequestLabels : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -72,7 +83,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

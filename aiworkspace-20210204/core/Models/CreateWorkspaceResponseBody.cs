@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234</para>
+        /// <para>12**</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

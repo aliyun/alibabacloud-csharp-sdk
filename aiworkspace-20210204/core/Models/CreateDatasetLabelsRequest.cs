@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetLabelsRequest : TeaModel {
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]

@@ -10,14 +10,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDatasetFileMetasStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>Aggregates statistics based on the specified metadata field. The value is not case-sensitive. If not specified, the total number of dataset file metadata will be returned, instead of aggregation lists. Valid values:</para>
+        /// <para>The metadata field used for statistical aggregation. The value is not case-sensitive. If you do not specify this parameter, the total number of file metadata entries in the dataset is returned, and the aggregation list is not returned.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>filedir: the directory path of the file</description></item>
-        /// <item><description>file_type: the file type</description></item>
-        /// <item><description>tags.user: user-defined tag</description></item>
-        /// <item><description>tags.user-delete-ai-tags: algorithm tags deleted by the user</description></item>
-        /// <item><description>tags.ai: algorithm tags (aggregated by all tagging tasks)</description></item>
-        /// <item><description>tags.all: algorithm tags and user-defined tags (excluding alogorithm tags deleted by the user)</description></item>
+        /// <item><description><para>filedir: The directory path of the file.</para>
+        /// </description></item>
+        /// <item><description><para>filetype: The file type.</para>
+        /// </description></item>
+        /// <item><description><para>tags.user: Custom user tags.</para>
+        /// </description></item>
+        /// <item><description><para>tags.user-delete-ai-tags: Algorithm tags deleted by the user.</para>
+        /// </description></item>
+        /// <item><description><para>tags.ai: Algorithm tags that are aggregated from all labeling tasks.</para>
+        /// </description></item>
+        /// <item><description><para>tags.all: A combination of algorithm tags and custom user tags, excluding any algorithm tags deleted by the user.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +35,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string AggregateBy { get; set; }
 
         /// <summary>
-        /// <para>The dataset version.</para>
+        /// <para>The name of the dataset version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +46,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of results to return for each query that uses the NextToken parameter. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,7 +56,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

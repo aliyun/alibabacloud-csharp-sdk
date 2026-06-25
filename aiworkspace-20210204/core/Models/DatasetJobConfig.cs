@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DatasetJobConfig : TeaModel {
         /// <summary>
-        /// <para>The content of the dataset job configuration, in the JSON format.</para>
+        /// <para>The content of the dataset job configuration, in JSON format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The time when the dataset job was created.</para>
+        /// <para>The creation time of the dataset job configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-14T01:37:37Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dataset job configuration.</para>
+        /// <para>The unique ID for the dataset job configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dscfg-xxxxxxxxxxxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The time when the dataset job was modified.</para>
+        /// <para>The last modification time of the dataset job configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-11T02:18:54Z</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>234*34</para>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetPermissionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The accessibility. Valid values:</para>
+        /// <para>The access type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PUBLIC: All members in the workspace can access the workspace.</description></item>
-        /// <item><description>PRIVATE: Only the creator can access the workspace.</description></item>
+        /// <item><description><para>PUBLIC: All members in the workspace can perform the operation.</para>
+        /// </description></item>
+        /// <item><description><para>PRIVATE: Only the creator can perform the operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CallerUid { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account that is used to create the workspace.</para>
+        /// <para>The UID of the Alibaba Cloud account that created the workspace permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17915******4216</para>
@@ -46,10 +48,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string LabelsShrink { get; set; }
 
         /// <summary>
-        /// <para>The configuration. Separate multiple configurations with commas (,). Valid values:</para>
+        /// <para>Optional configurations. Separate multiple configurations with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ResourceEmpty: The Resource parameter is not configured.</description></item>
-        /// <item><description>DisableRam: The RAM check is not performed.</description></item>
+        /// <item><description><para>ResourceEmpty: The resource is empty. This value is used if you do not set the Resource parameter.</para>
+        /// </description></item>
+        /// <item><description><para>DisableRam: RAM verification is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,15 +10,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetJobConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration content. Formats:</para>
+        /// <para>The configuration content.
+        /// The format is as follows:</para>
         /// <list type="bullet">
         /// <item><description>MultimodalIntelligentTag</description></item>
         /// </list>
-        /// <para>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</para>
+        /// <para>{
+        /// &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot;
+        /// }</para>
         /// <list type="bullet">
         /// <item><description>MultimodalSemanticIndex</description></item>
         /// </list>
-        /// <para>{ &quot;defaultModelId&quot;: &quot;xxx&quot; &quot;defaultModelVersion&quot;:&quot;1.0.0&quot; }</para>
+        /// <para>{
+        /// &quot;defaultModelId&quot;: &quot;xxx&quot;,
+        /// &quot;defaultModelVersion&quot;:&quot;1.0.0&quot;
+        /// }</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;apiKey&quot;:&quot;sk-xxxxxxxxxxxxxxxxxxxxx&quot; }</para>
@@ -30,8 +36,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The configuration type.</para>
         /// <list type="bullet">
-        /// <item><description>MultimodalIntelligentTag</description></item>
-        /// <item><description>MultimodalSemanticIndex</description></item>
+        /// <item><description><para>MultimodalIntelligentTag</para>
+        /// </description></item>
+        /// <item><description><para>MultimodalSemanticIndex</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The ID of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>167497</para>

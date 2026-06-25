@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8D7B2E70-F770-505B-A672-09F1D8F2EC1E</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

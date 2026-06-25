@@ -10,36 +10,27 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DatasetFileMetaContentGet : TeaModel {
         /// <summary>
-        /// <para>The file comment.</para>
+        /// <para>The comment on the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The first image file in the dataset.</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The MIME type of the file. It contains a Type and a SubType.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>image/png: PNG</description></item>
-        /// <item><description>image/jpeg: JPEG</description></item>
-        /// <item><description>image/tiff: TIFF</description></item>
-        /// <item><description>image/bmp: BMP</description></item>
-        /// <item><description>image/gif: GIF</description></item>
-        /// <item><description>image/x-icon: ICON</description></item>
-        /// <item><description>image/svg + xml: SVG</description></item>
-        /// <item><description>image/heic: HEIC</description></item>
-        /// <item><description>image/webp: WEBP</description></item>
-        /// </list>
+        /// <para>The MIME type of the file. It includes a type and a subtype.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>text/png</para>
+        /// <para>image/png</para>
         /// </summary>
         [NameInMap("ContentType")]
         [Validation(Required=false)]
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The file size. Unit: byte.</para>
+        /// <para>The file size in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -49,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The metadata ID of the dataset file.</para>
+        /// <para>The ID of the dataset file metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>07914c9534586e4e7aa6e9dbca5009082df******fd8a0d857b33296c59bf6</para>
@@ -59,7 +50,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetFileMetaId { get; set; }
 
         /// <summary>
-        /// <para>The time when the file was created. Format: ISO8601.</para>
+        /// <para>The time when the file was created. The time is in the ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +61,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The directory of the file that is stored in OSS, NAS, or Cloud Parallel File Storage (CPFS).</para>
+        /// <para>The path of the folder where the OSS, NAS, or CPFS file is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>icp_certificate_card/icp/1577179298694813/1716429710367</para>
@@ -80,7 +71,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileDir { get; set; }
 
         /// <summary>
-        /// <para>The fingerprint value of the file. Used to check the uniqueness of the file. This value changes after the file content is modified. OSS files use ETags, and NAS files use MD5.</para>
+        /// <para>The fingerprint of the file. This value ensures the uniqueness of the file content. The value changes if the file content is modified. For OSS files, the ETag is used. For NAS files, the MD5 hash is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D41D8CD98F*****E9800998ECF8</para>
@@ -100,15 +91,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The file type. The same as MIME type.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>application</description></item>
-        /// <item><description>audio</description></item>
-        /// <item><description>video</description></item>
-        /// <item><description>text</description></item>
-        /// </list>
+        /// <para>The file type. This is the same as the Multipurpose Internet Mail Extensions (MIME) type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>
@@ -118,7 +101,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The time when the file was last modified. Format: ISO8601.</para>
+        /// <para>The time when the file was last modified. The time is in the ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -129,16 +112,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileUpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The specific metadata of the file. You cannot retrieve the metadata. In JSON String format.</para>
+        /// <para>The specific metadata of the file. This metadata cannot be used for retrieval. The format is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;Image&quot;:
-        ///     {
-        ///         &quot;Width&quot;: 1920,
-        ///         &quot;Height&quot;: 1080,
-        ///         &quot;Channel&quot;: 3
-        ///     }
+        ///     &quot;ImageHeight&quot;: 1080,
+        ///     &quot;ImageWidth&quot;: 1920
         /// }</para>
         /// </summary>
         [NameInMap("MetaAttributes")]
@@ -146,7 +125,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MetaAttributes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the semantic index-based job.</para>
+        /// <para>The ID of the job that builds the semantic index.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsjob-klfwtjtov*****scvt3</para>
@@ -156,7 +135,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SemanticIndexJobId { get; set; }
 
         /// <summary>
-        /// <para>The time when the semantic index-based job is created.</para>
+        /// <para>The time when the semantic index was built.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -171,7 +150,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the tag is last modified. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the tag was last modified. The time is in the ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -182,17 +161,19 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string TagUpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The tags for the metadata. The tags are divided into the following groups:</para>
+        /// <para>A collection of tags for the metadata. It includes the following groups:</para>
         /// <list type="bullet">
         /// <item><description><para>Algorithm tag group:</para>
         /// <list type="bullet">
-        /// <item><description>ai: a list of tags that are aggregated by all algorithm tagging tasks for a single piece of metadata.</description></item>
+        /// <item><description>ai: A list of tag names aggregated from all algorithmic tagging tasks for a single metadata record.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>User-defined tag groups:</para>
+        /// <item><description><para>User-defined tag group:</para>
         /// <list type="bullet">
-        /// <item><description>user: a list of user-defined tags that are added to a single piece of metadata.</description></item>
-        /// <item><description>user-delete-ai-tags: a list of tags that you want to delete from an algorithm tag group.</description></item>
+        /// <item><description><para>user: A list of tag names that a user adds to a single metadata record.</para>
+        /// </description></item>
+        /// <item><description><para>user-delete-ai-tags: A list of tag names from the algorithm tag group that the user wants to delete from a single metadata record.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -201,13 +182,19 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <para>{
         ///     &quot;ai&quot;:
         ///     [
-        ///         &quot;Felis catus&quot;,
-        ///         &quot;Shorthair&quot;
+        ///         &quot;Lane line&quot;,
+        ///         &quot;Water horse&quot;,
+        ///         &quot;Sunny day&quot;
         ///     ],
         ///     &quot;user&quot;:
         ///     [
-        ///         &quot;cat&quot;,
-        ///         &quot;White&quot;
+        ///         &quot;Everett&quot;,
+        ///         &quot;Intelligent driving Dataset 1&quot;,
+        ///         &quot;Cloudy day&quot;
+        ///     ],
+        ///     &quot;user-delete-ai-tags&quot;:
+        ///     [
+        ///         &quot;Sunny day&quot;
         ///     ]
         /// }</para>
         /// </summary>
@@ -216,11 +203,26 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The unique URI of the file. Used to record the unique path of the file. File paths in OSS and NAS are supported.</para>
-        /// <para><b>OSS</b></para>
-        /// <para>oss://${bucket}/${path}</para>
-        /// <para><b>NAS</b></para>
-        /// <para>nas://${fileSystemId}/${path}</para>
+        /// <para>The unique URI of the file. This URI records the unique path of the file. Paths for files in OSS and NAS are supported.</para>
+        /// <details>
+        /// 
+        /// <summary>
+        /// 
+        /// <para>OSS</para>
+        /// </summary>
+        /// 
+        /// <para>oss\://${bucket}/${path}</para>
+        /// </details>
+        /// 
+        /// <details>
+        /// 
+        /// <summary>
+        /// 
+        /// <para>NAS</para>
+        /// </summary>
+        /// 
+        /// <para>nas\://${fileSystemId}/${path}</para>
+        /// </details>
         /// 
         /// <b>Example:</b>
         /// <para>oss://*****-test/dataset/1653421.jpg

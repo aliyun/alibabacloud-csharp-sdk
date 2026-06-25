@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The approval status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending</description></item>
-        /// <item><description>Approved</description></item>
-        /// <item><description>Rejected</description></item>
+        /// <item><description><para>Pending: The model is pending approval.</para>
+        /// </description></item>
+        /// <item><description><para>Approved: The model is approved to be published.</para>
+        /// </description></item>
+        /// <item><description><para>Rejected: The model is not approved to be published.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,6 +37,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public Dictionary<string, object> CompressionSpec { get; set; }
 
+        /// <summary>
+        /// <para>The distillation configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("DistillationSpec")]
         [Validation(Required=false)]
         public Dictionary<string, object> DistillationSpec { get; set; }
@@ -49,7 +58,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> EvaluationSpec { get; set; }
 
         /// <summary>
-        /// <para>The additional information.</para>
+        /// <para>Other information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -62,17 +71,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>Describes how to apply to downstream inference services. For example, describes the processor and container of Elastic Algorithm Service (EAS). Example: <c>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</c>.</para>
+        /// <para>Describes how to apply the model to downstream inference applications. For example, describe the processor and container for Elastic Algorithm Service (EAS). Example:
+        /// <c>{ &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot; }</para>
+        /// <para>{
+        ///     &quot;processor&quot;: &quot;tensorflow_gpu_1.12&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("InferenceSpec")]
         [Validation(Required=false)]
         public Dictionary<string, object> InferenceSpec { get; set; }
 
         /// <summary>
-        /// <para>The model metrics. The length after serialization is limited to 8,192.</para>
+        /// <para>The model metrics.
+        /// The length cannot exceed 8,192 characters after serialization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -98,7 +111,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> Metrics { get; set; }
 
         /// <summary>
-        /// <para>The extended field, which is of the JsonString type.</para>
+        /// <para>The extended field. This field is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -110,19 +123,23 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The source ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the source type is Custom, this field is not limited.</description></item>
-        /// <item><description>If the source type is PAIFlow or TrainingService, the format is:</description></item>
+        /// <item><description><para>If the source type is Custom, this field has no restrictions.</para>
+        /// </description></item>
+        /// <item><description><para>If the source is PAIFlow or TrainingService, the format is as follows:</para>
+        /// </description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>region=&lt;region_id&gt;,workspaceId=&lt;workspace_id&gt;,kind=&lt;kind&gt;,id=&lt;id&gt;
         /// </c></pre>
-        /// <para>Take note of the following parameters:</para>
+        /// <para>The parameters are described as follows:</para>
         /// <list type="bullet">
-        /// <item><description>region is the region ID.</description></item>
-        /// <item><description>workspaceId is the ID of the workspace.</description></item>
-        /// <item><description>kind is the type. Valid values: PipelineRun (PAIFlow) and ServiceJob (training service).</description></item>
-        /// <item><description>id is a unique identifier.</description></item>
+        /// <item><description><para>region: the Alibaba Cloud region ID.</para>
+        /// </description></item>
+        /// <item><description><para>workspaceId: the workspace ID.</para>
+        /// </description></item>
+        /// <item><description><para>kind: the type. Valid values: PipelineRun (PAI pipeline) or ServiceJob (training service).</para>
+        /// </description></item>
+        /// <item><description><para>id: the unique identifier.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -133,11 +150,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the model source. Valid values:</para>
+        /// <para>The source type of the model. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Custom (default)</description></item>
-        /// <item><description>PAIFlow</description></item>
-        /// <item><description>TrainingService</description></item>
+        /// <item><description><para>Custom (default): The model is a custom model.</para>
+        /// </description></item>
+        /// <item><description><para>PAIFlow: The model is from a PAI pipeline.</para>
+        /// </description></item>
+        /// <item><description><para>TrainingService: The model is from a PAI training service.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +168,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The training configurations used for fine-tuning and incremental training.</para>
+        /// <para>The training configuration. This is used for fine-tuning and incremental training.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -158,7 +178,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> TrainingSpec { get; set; }
 
         /// <summary>
-        /// <para>The model version description.</para>
+        /// <para>The description of the model version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>General sentiment analysis.</para>
         /// </summary>
         [NameInMap("VersionDescription")]
         [Validation(Required=false)]

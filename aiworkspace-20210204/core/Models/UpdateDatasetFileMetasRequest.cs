@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateDatasetFileMetasRequest : TeaModel {
         /// <summary>
-        /// <para>The metadata records to be updated for the dataset files.</para>
+        /// <para>A list of dataset file metadata to update.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DatasetFileMetas")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<DatasetFileMetaConentUpdate> DatasetFileMetas { get; set; }
 
         /// <summary>
-        /// <para>The dataset version.</para>
+        /// <para>The name of the dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the tagging job that is associated with the metadata tag of the dataset file.</para>
+        /// <para>The ID of the tagging job for updating metadata tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsjob-hv0b1****u8taig3y</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string TagJobId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the dataset belongs. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The ID of the workspace that contains the dataset. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>796**</para>

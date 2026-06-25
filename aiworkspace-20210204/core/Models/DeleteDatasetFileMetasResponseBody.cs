@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteDatasetFileMetasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The metadata records that fail to be deleted for the dataset files.</para>
+        /// <para>A list of file metadata records that failed to be deleted.</para>
         /// </summary>
         [NameInMap("FailedDetails")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the metadata records of all dataset files were deleted. The value true indicates that the metadata records of all dataset files are deleted. If the value is false, view the failure details specified by FailedDetails.</para>
+        /// <para>The status of the batch deletion. A value of \<c>true\\</c> indicates that all metadata records were deleted. If the value is \<c>false\\</c>, check the \<c>FailedDetails\\</c> parameter for more information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

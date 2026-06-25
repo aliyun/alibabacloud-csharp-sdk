@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The connection list.</para>
+        /// <para>List of connections.</para>
         /// </summary>
         [NameInMap("Connections")]
         [Validation(Required=false)]
         public List<Connection> Connections { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>Maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the start position from which to retrieve data on the next page.</para>
+        /// <para>Token for retrieving the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID. Used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2C51F93-1C07-5477-9705-5FDB****F19F</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of connections that meet the filter conditions.</para>
+        /// <para>Total number of connections that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27</para>

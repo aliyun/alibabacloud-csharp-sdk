@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDefaultWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The conditions of the default workspace in the creation process.</para>
+        /// <para>The details about the creation stages of the default workspace.</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<GetDefaultWorkspaceResponseBodyConditions> Conditions { get; set; }
         public class GetDefaultWorkspaceResponseBodyConditions : TeaModel {
             /// <summary>
-            /// <para>The returned status code. HTTP status code 200 indicates that the request was successful. Other HTTP status codes indicate that the request failed.</para>
+            /// <para>The status code. A value of 200 indicates that the request was successful. Other values indicate that the request failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public long? Code { get; set; }
 
             /// <summary>
-            /// <para>The error message. If the returned status code is 200, this parameter is empty.</para>
+            /// <para>The error message. This parameter is empty if the status code is 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Create Failed</para>
@@ -39,10 +39,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CREATING: The workspace is being created.</description></item>
-            /// <item><description>WORKSPACE_CREATED: The workspace is created.</description></item>
-            /// <item><description>MEMBERS_ADDED: The member is added.</description></item>
-            /// <item><description>ENABLED: The workspace is created and the member is added.</description></item>
+            /// <item><description><para>CREATING: Creating.</para>
+            /// </description></item>
+            /// <item><description><para>WORKSPACE_CREATED: The workspace is created.</para>
+            /// </description></item>
+            /// <item><description><para>MEMBERS_ADDED: Members are added.</para>
+            /// </description></item>
+            /// <item><description><para>ENABLED: The process is complete.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account that created the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17915******4216</para>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The workspace description.</para>
+        /// <para>The description of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace description example</para>
@@ -85,10 +89,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The environments of the workspace. Valid values:</para>
+        /// <para>The environments in the workspace.</para>
         /// <list type="bullet">
-        /// <item><description>Workspaces in basic mode can run only in the production environment.</description></item>
-        /// <item><description>Workspaces in standard mode can run in both the development and production environments.</description></item>
+        /// <item><description><para>A workspace in basic mode contains only the production (prod) environment.</para>
+        /// </description></item>
+        /// <item><description><para>A workspace in standard mode contains the development (dev) and production (prod) environments.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("EnvTypes")]
@@ -96,7 +102,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<string> EnvTypes { get; set; }
 
         /// <summary>
-        /// <para>The time when the workspace was created, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the workspace was created. The time is in Coordinated Universal Time (UTC) and is formatted in ISO 8601.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -106,7 +112,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the workspace was modified, in UTC. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the workspace was last modified. The time is in UTC and is formatted in ISO 8601.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35.232Z</para>
@@ -116,14 +122,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The UID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account that created the workspace.</para>
         /// </summary>
         [NameInMap("Owner")]
         [Validation(Required=false)]
         public GetDefaultWorkspaceResponseBodyOwner Owner { get; set; }
         public class GetDefaultWorkspaceResponseBodyOwner : TeaModel {
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The UID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17915******4216</para>
@@ -133,7 +139,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The user ID.</para>
+            /// <para>The UID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17915******4216</para>
@@ -165,14 +171,20 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The workspace status. Valid values:</para>
+        /// <para>The status of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLED</description></item>
-        /// <item><description>INITIALIZING</description></item>
-        /// <item><description>FAILURE</description></item>
-        /// <item><description>DISABLED</description></item>
-        /// <item><description>FROZEN</description></item>
-        /// <item><description>UPDATING</description></item>
+        /// <item><description><para>ENABLED: Normal.</para>
+        /// </description></item>
+        /// <item><description><para>INITIALIZING: Initializing.</para>
+        /// </description></item>
+        /// <item><description><para>FAILURE: Failed.</para>
+        /// </description></item>
+        /// <item><description><para>DISABLED: Disabled.</para>
+        /// </description></item>
+        /// <item><description><para>FROZEN: Frozen due to an overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>UPDATING: The workspace is being updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,7 +205,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The workspace name, which is unique in a region.</para>
+        /// <para>The name of the workspace. The name must be unique within the same region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-example</para>

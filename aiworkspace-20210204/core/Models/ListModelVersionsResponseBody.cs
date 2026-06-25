@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The model versions.</para>
+        /// <para>The list of model versions.</para>
         /// </summary>
         [NameInMap("Versions")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version of the model.</para>
+        /// <para>The model version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1.0</para>

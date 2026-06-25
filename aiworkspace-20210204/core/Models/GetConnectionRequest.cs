@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetConnectionRequest : TeaModel {
         /// <summary>
-        /// <para>The encryption settings. Valid values:</para>
+        /// <para>The encryption setting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText</description></item>
-        /// <item><description>Secret</description></item>
+        /// <item><description><para>PlainText: The value is in plaintext.</para>
+        /// </description></item>
+        /// <item><description><para>Secret: The value is in ciphertext.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

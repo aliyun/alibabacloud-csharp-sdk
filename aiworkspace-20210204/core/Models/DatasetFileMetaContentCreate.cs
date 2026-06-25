@@ -10,26 +10,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DatasetFileMetaContentCreate : TeaModel {
         /// <summary>
-        /// <para>The file comment.</para>
+        /// <para>The comment on the file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The first image file in the dataset.</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The MIME type of the file. It contains Type and SubType.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>image/png: PNG.</description></item>
-        /// <item><description>image/jpeg: JPEG.</description></item>
-        /// <item><description>image/tiff: TIFF.</description></item>
-        /// <item><description>image/bmp: BMP.</description></item>
-        /// <item><description>image/gif: GIF.</description></item>
-        /// <item><description>image/x-icon: ICON.</description></item>
-        /// <item><description>image/svg+xml: SVG.</description></item>
-        /// <item><description>image/webp: WEBP.</description></item>
-        /// <item><description>image/heic: HEIC</description></item>
-        /// </list>
+        /// <para>The MIME type of the file. It includes a type and a subtype.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +31,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The file size. Unit: bytes.</para>
+        /// <para>The size of the file in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -50,7 +41,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The time when the file was created. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the file was created. The time is in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +52,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The file fingerprint. Used to check the uniqueness of the file. This value changes after the file content is modified. OSS files use ETags, and NAS files use MD5 values.</para>
+        /// <para>The fingerprint of the file. This value ensures the uniqueness of the file content and changes if the content is modified. For OSS files, this is the ETag. For NAS files, this is the MD5 value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +63,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileFingerPrint { get; set; }
 
         /// <summary>
-        /// <para>The file name.</para>
+        /// <para>The name of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00001.jpeg</para>
@@ -82,15 +73,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The file type. The same as MIME type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>application</description></item>
-        /// <item><description>audio</description></item>
-        /// <item><description>video</description></item>
-        /// <item><description>text</description></item>
-        /// </list>
+        /// <para>The type of the file. This is the same as the Multipurpose Internet Mail Extensions (MIME) type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +84,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The time when the file was last modified. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the file was last modified. The time is in ISO 8601 format.</para>
         /// <para>This parameter is required.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
@@ -113,16 +96,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileUpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The specific metadata of the file. You cannot retrieve the metadata. The value is a JSON string.</para>
+        /// <para>The specific metadata of the file. This metadata cannot be used for retrieval. The value must be a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///     &quot;Image&quot;:
-        ///     {
-        ///         &quot;Width&quot;: 1920,
-        ///         &quot;Height&quot;: 1080,
-        ///         &quot;Channel&quot;: 3
-        ///     }
+        ///     &quot;ImageHeight&quot;: 1080,
+        ///     &quot;ImageWidth&quot;: 1920
         /// }</para>
         /// </summary>
         [NameInMap("MetaAttributes")]
@@ -130,32 +109,51 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MetaAttributes { get; set; }
 
         /// <summary>
-        /// <para>The tags manually added. The value is a JSON string. Operable tag group:</para>
+        /// <para>The tags that are manually added by users. The \<c>add\\</c> operation is used to add tags to a tag group. The value must be a JSON string.
+        /// The following tag group is available:</para>
         /// <list type="bullet">
-        /// <item><description>user: the list of tags to add to a metadata entry.</description></item>
+        /// <item><description>user: A list of tag names added to a single piece of metadata.</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///     &quot;user&quot;:{
-        ///         &quot;add&quot;:[&quot;lane line&quot;,&quot;sunny&quot;]
+        ///         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
         ///     }
         /// }
         /// </c></pre>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;user&quot;:[&quot;cat&quot;, &quot;White&quot;]}</para>
+        /// <para>{
+        ///     &quot;user&quot;:{
+        ///         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;]
+        ///     }
+        /// }</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>The URI of the file. Used to record the unique path of the file. File paths in Object Storage Service (OSS) and File Storage NAS (NAS) are supported.</para>
-        /// <para><b>OSS</b></para>
-        /// <para>oss://${bucket}/${path}</para>
-        /// <para><b>NAS</b></para>
-        /// <para>nas://${fileSystemId}/${path}</para>
+        /// <para>The unique URI of the file. This URI records the unique path of the file. The path can be an OSS or NAS path.</para>
+        /// <details>
+        /// 
+        /// <summary>
+        /// 
+        /// <para>OSS</para>
+        /// </summary>
+        /// 
+        /// <para>oss\://${bucket}/${path}</para>
+        /// </details>
+        /// 
+        /// <details>
+        /// 
+        /// <summary>
+        /// 
+        /// <para>NAS</para>
+        /// </summary>
+        /// 
+        /// <para>nas\://${fileSystemId}/${path}</para>
+        /// </details>
+        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

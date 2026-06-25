@@ -9,40 +9,63 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListConnectionsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Visibility of the connection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>PUBLIC: visible to all workspace members.</para>
+        /// </description></item>
+        /// <item><description><para>PRIVATE: visible only to the creator.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PRIVATE</para>
+        /// </summary>
         [NameInMap("Accessibility")]
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The list of connection IDs.</para>
+        /// <para>List of connection IDs to filter by.</para>
         /// </summary>
         [NameInMap("ConnectionIds")]
         [Validation(Required=false)]
         public string ConnectionIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The connection name.</para>
+        /// <para>Connection name. Supports fuzzy matching.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Database connection</para>
         /// </summary>
         [NameInMap("ConnectionName")]
         [Validation(Required=false)]
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// <para>The list of connection types.</para>
+        /// <para>List of connection types to filter by.</para>
         /// </summary>
         [NameInMap("ConnectionTypes")]
         [Validation(Required=false)]
         public string ConnectionTypesShrink { get; set; }
 
+        /// <summary>
+        /// <para>Alibaba Cloud account ID of the creator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>12908*******3242</para>
+        /// </summary>
         [NameInMap("Creator")]
         [Validation(Required=false)]
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The encryption settings. Valid values:</para>
+        /// <para>Encryption option for sensitive fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText</description></item>
-        /// <item><description>Secret</description></item>
+        /// <item><description><para>PlainText: returns values in plaintext.</para>
+        /// </description></item>
+        /// <item><description><para>Secret: returns values in ciphertext.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +76,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string EncryptOption { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>Maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -63,7 +86,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The model identifier.</para>
+        /// <para>Model identifier. Filters connections associated with this model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>model_001</para>
@@ -73,14 +96,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>The list of model types.</para>
+        /// <para>List of model types to filter by.</para>
         /// </summary>
         [NameInMap("ModelTypes")]
         [Validation(Required=false)]
         public string ModelTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that indicates the start position from which to retrieve data on the next page.</para>
+        /// <para>The token that marks the starting position for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -90,10 +113,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The order in which the entries are sorted by the specific field on the returned page. This parameter must be used together with SortBy.</para>
+        /// <para>Sort order. Use with the SortBy parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ASC: ascending order.</description></item>
-        /// <item><description>DESC: descending order. This is the default value.</description></item>
+        /// <item><description><para>ASC: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>DESC (default): descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,9 +129,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort the results in queries by page. Default value: GmtCreateTime. Valid value:</para>
+        /// <para>Field by which to sort results. Default value: GmtCreateTime. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GmtCreateTime: The results are sorted by creation time. This is the default value.</description></item>
+        /// <item><description>GmtCreateTime (default): sorts by creation time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,10 +142,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a tool can be called by using ToolCall. Valid values:</para>
+        /// <para>Whether tool calling is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: supported.</para>
+        /// </description></item>
+        /// <item><description><para>false: not supported.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +158,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? ToolCall { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>Workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>478**</para>

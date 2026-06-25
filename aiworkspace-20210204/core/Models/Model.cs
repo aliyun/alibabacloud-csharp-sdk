@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>最后版本更新时间。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-01-21T17:12:35Z</para>
         /// </summary>
@@ -95,6 +97,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The model description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>情感分析。</para>
         /// </summary>
         [NameInMap("ModelDescription")]
         [Validation(Required=false)]
@@ -122,6 +127,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The model name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>情感分析</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
@@ -168,6 +176,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string OwnerId { get; set; }
 
         /// <summary>
+        /// <para>参数量，单位M。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1024</para>
         /// </summary>
@@ -185,6 +195,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Provider { get; set; }
 
+        /// <summary>
+        /// <para>标签列表</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<Label> Tags { get; set; }

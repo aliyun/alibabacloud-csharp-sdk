@@ -10,18 +10,21 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateRunRequest : TeaModel {
         /// <summary>
-        /// <para>The labels.</para>
+        /// <para>A list of labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The run name. The name must meet the following requirements:</para>
+        /// <para>The name of the run. The naming conventions are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The name must start with a letter.</description></item>
-        /// <item><description>The name can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>The name must be 1 to 63 characters in length.</description></item>
+        /// <item><description><para>Must start with a lowercase or uppercase letter.</para>
+        /// </description></item>
+        /// <item><description><para>Can contain lowercase letters, uppercase letters, digits, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>The length must be 1 to 63 characters.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,7 +35,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The parameters.</para>
+        /// <para>A list of parameters.</para>
         /// </summary>
         [NameInMap("Params")]
         [Validation(Required=false)]

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDefaultWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to show the details of the default workspace. The details include the conditions of the workspace in different phases. Valid values:</para>
+        /// <para>Specifies whether to return detailed information about the default workspace. The detailed information includes the Conditions list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false (default): Detailed information is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>true: Detailed information is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

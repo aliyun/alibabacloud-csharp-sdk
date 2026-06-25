@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The visibility of the model in the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE (default): Visible only to you and the administrator of the workspace.</description></item>
-        /// <item><description>PUBLIC: Vvisible to all users in the workspace.</description></item>
+        /// <item><description><para>PRIVATE (default): The model is visible only to you and administrators in the workspace.</para>
+        /// </description></item>
+        /// <item><description><para>PUBLIC: The model is visible to everyone in the workspace.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The domain of the model. Describes the domain in which the model is for. Example: nlp (natural language processing), cv (computer vision), and others.</para>
+        /// <para>The domain. This describes the field that the model is designed for, such as nlp (Natural Language Processing) or cv (computer vision).</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlp</para>
@@ -55,21 +57,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public Dictionary<string, object> ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The tags. This parameter will be deprecated and replaced by Tag.</para>
+        /// <para>A list of labels. This parameter is deprecated and is replaced by the Tag parameter.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The model description, used to distinguish different models.</para>
+        /// <para>The description of the model. Use this to distinguish different models.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>News classification.</para>
         /// </summary>
         [NameInMap("ModelDescription")]
         [Validation(Required=false)]
         public string ModelDescription { get; set; }
 
         /// <summary>
-        /// <para>The documentation of the model.</para>
+        /// <para>The model documentation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://*.md</para>
@@ -81,13 +86,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The name of the model. The name must be 1 to 127 characters in length.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>News classification</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>The model type. Example: Checkpoint or LoRA.</para>
+        /// <para>The model type, such as Checkpoint or LoRA.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Checkpoint</para>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>The sequence number of the model. Can be used for custom sorting.</para>
+        /// <para>The ordinal number of the model. You can use this for custom sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -107,7 +115,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? OrderNumber { get; set; }
 
         /// <summary>
-        /// <para>The source of the model. The community or organization to which the source model belongs, such as ModelScope or HuggingFace.</para>
+        /// <para>The source of the model. This specifies the community or organization that the source model belongs to, such as ModelScope and HuggingFace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ModelScope</para>
@@ -116,19 +124,25 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Origin { get; set; }
 
+        /// <summary>
+        /// <para>The number of parameters, in millions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3000</para>
+        /// </summary>
         [NameInMap("ParameterSize")]
         [Validation(Required=false)]
         public long? ParameterSize { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<Label> Tag { get; set; }
 
         /// <summary>
-        /// <para>The task of the model. Describes the specific problem that the model solves. Example: text-classification.</para>
+        /// <para>The task. This describes the specific problem that the model solves, such as text-classification (text classification).</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-classification</para>
@@ -138,7 +152,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Task { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The ID of the workspace. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>796**</para>

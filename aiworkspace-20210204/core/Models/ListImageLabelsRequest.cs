@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListImageLabelsRequest : TeaModel {
         /// <summary>
-        /// <para>The image ID. You can call <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a> to obtain the image ID.</para>
+        /// <para>The image ID. For more information about how to obtain an image ID, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImages</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image-4c62******53uor</para>
@@ -20,7 +20,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The tag filter conditions, separated with commas (,). The format of a single condition filter is <c>key=value</c>. Takes effect independently from LabelKeys.</para>
+        /// <para>The filter conditions for labels. Separate multiple conditions with commas.
+        /// The format for a single condition is <c>key=value</c>.
+        /// This parameter works independently of the LabelKeys parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system.framework=XGBoost 1.6.0,system.official=true</para>
@@ -30,7 +32,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string LabelFilter { get; set; }
 
         /// <summary>
-        /// <para>The tag keys, separated with commas (,). System tags start with system and take effect independently from LabelFilter.</para>
+        /// <para>The list of tag keys. Separate multiple keys with commas (,).
+        /// System tags start with &quot;system&quot;. This parameter works independently of the LabelFilter parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system.framework,system.official</para>
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The workspace ID. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>

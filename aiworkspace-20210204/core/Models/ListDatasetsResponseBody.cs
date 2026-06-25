@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The datasets.</para>
+        /// <para>The list of datasets.</para>
         /// </summary>
         [NameInMap("Datasets")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total count of datasets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

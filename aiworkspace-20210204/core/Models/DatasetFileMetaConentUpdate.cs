@@ -11,25 +11,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
     public class DatasetFileMetaConentUpdate : TeaModel {
         /// <summary>
         /// <para>The file comment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The first image file in the dataset.</para>
         /// </summary>
         [NameInMap("Comment")]
         [Validation(Required=false)]
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The MIME type of the file. The value consists of a type and a subtype.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>image/png</description></item>
-        /// <item><description>image/svg+xml</description></item>
-        /// <item><description>image/jpeg</description></item>
-        /// <item><description>image/tiff</description></item>
-        /// <item><description>image/gif</description></item>
-        /// <item><description>image/bmp</description></item>
-        /// <item><description>image/x-icon</description></item>
-        /// <item><description>image/heic</description></item>
-        /// <item><description>image/webp</description></item>
-        /// </list>
+        /// <para>The MIME type of the file. It includes a type and a subtype.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image/jpeg</para>
@@ -39,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The file size. Unit: byte.</para>
+        /// <para>The file size in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -49,7 +40,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The metadata ID of the dataset file.</para>
+        /// <para>The ID of the dataset file metadata.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,18 +51,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetFileMetaId { get; set; }
 
         /// <summary>
-        /// <para>The time when the file is created. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the file was created, in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-01-12T14:36:01Z</para>
+        /// <para>2025-01-12T14:36:01.001Z</para>
         /// </summary>
         [NameInMap("FileCreateTime")]
         [Validation(Required=false)]
         public string FileCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The fingerprint information of the file.</para>
+        /// <para>The file fingerprint information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>124FB71******7BE45608CDEA4DE54B3</para>
@@ -91,15 +82,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The file type, which is the same as Multipurpose Internet Mail Extensions (MIME) type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>image</description></item>
-        /// <item><description>application</description></item>
-        /// <item><description>audio</description></item>
-        /// <item><description>video</description></item>
-        /// <item><description>text</description></item>
-        /// </list>
+        /// <para>The file type. This is the primary type from the Multipurpose Internet Mail Extensions (MIME) type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image</para>
@@ -109,18 +92,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The time when the file is last modified. The time follows the ISO 8601 standard.</para>
+        /// <para>The time when the file was last modified, in ISO 8601 format.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2025-01-12T14:36:01Z</para>
+        /// <para>2025-01-12T14:36:01.001Z</para>
         /// </summary>
         [NameInMap("FileUpdateTime")]
         [Validation(Required=false)]
         public string FileUpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The specific metadata of the file, such as the width and height of an image and the bitrate and resolution of a video file. You cannot retrieve the metadata. The value is a JSON string.</para>
+        /// <para>Specific file metadata, such as the width and height of an image, and the bitrate and resolution of a video. Retrieval based on this metadata is not yet supported. The value is a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -137,7 +120,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MetaAttributes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the semantic index-based job.</para>
+        /// <para>The ID of the job that builds the semantic index.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dsjob-klfwt*****l0escvt3</para>
@@ -147,7 +130,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SemanticIndexJobId { get; set; }
 
         /// <summary>
-        /// <para>The time when the semantic index is created.</para>
+        /// <para>The time when the semantic index was built.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
         /// <b>Example:</b>
@@ -158,39 +141,47 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SemanticIndexUpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The tags to be updated.</para>
+        /// <para>The tag groups to update.</para>
         /// <list type="bullet">
-        /// <item><description>Update an algorithm tag group (a valid TagJobId must be set):</description></item>
+        /// <item><description>Update tags using an algorithm. Set a valid TagJobId.</description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
-        ///    &quot;ai&quot;:[&quot;Lane line&quot;, &quot;Water horse&quot;, &quot;Sunny day&quot;]
+        ///    &quot;ai&quot;:[&quot;lane line&quot;, &quot;water barrier&quot;, &quot;sunny day&quot;]
         /// }
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description><para>Update a user-defined tag group (add or remove indicates that tags are added or deleted): Tag groups that can be updated:</para>
+        /// <item><description><para>Manual tagging: Use add or remove to add or delete tags within a tag group. The modifiable tag groups are:</para>
         /// <list type="bullet">
-        /// <item><description>user: a list of user-defined tags that can be added to or deleted from a single piece of metadata.</description></item>
-        /// <item><description>user-delete-ai-tags: a list of tags that you want to delete from an algorithm tag group.</description></item>
+        /// <item><description><para>user: A list of tag names to add to or delete from a single metadata entry.</para>
+        /// </description></item>
+        /// <item><description><para>user-delete-ai-tags: A list of tag names to delete from the algorithm-generated tag group for a single metadata entry.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <!---->
-        /// 
         /// <pre><c>{
         ///     &quot;user&quot;:{
-        ///         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;],
-        ///         &quot;remove&quot;:[&quot;Water horse&quot;]    },
+        ///         &quot;add&quot;:[&quot;lane line&quot;,&quot;sunny day&quot;],
+        ///         &quot;remove&quot;:[&quot;water barrier&quot;]
+        ///     },
         ///     &quot;user-delete-ai-tags&quot;:{
-        ///         &quot;add&quot;: [&quot;Ground shadow&quot;],
+        ///         &quot;add&quot;: [&quot;ground shade&quot;],
         ///         &quot;remove&quot;: []
         ///     }
         /// }
         /// </c></pre>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ai&quot;:[&quot;cat&quot;], &quot;user&quot;:[&quot;black&quot;]}</para>
+        /// <para>{
+        ///     &quot;user&quot;:{
+        ///         &quot;add&quot;:[&quot;Lane line&quot;,&quot;Sunny day&quot;],
+        ///         &quot;remove&quot;:[&quot;Water horse&quot;]
+        ///     },
+        ///     &quot;user-delete-ai-tags&quot;:{
+        ///         &quot;add&quot;: [&quot;Ground shadow&quot;],
+        ///         &quot;remove&quot;: []
+        ///     }
+        /// }</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The visibility of the code source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PRIVATE: Visible only to you and the administrator in the workspace.</description></item>
-        /// <item><description>PUBLIC: Visible to all users in the workspace.</description></item>
+        /// <item><description><para><c>PRIVATE</c>: Visible only to you and workspace administrators.</para>
+        /// </description></item>
+        /// <item><description><para><c>PUBLIC</c>: Visible to all workspace members.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,6 +25,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        /// <summary>
+        /// <para>The clone type.</para>
+        /// </summary>
         [NameInMap("CloneType")]
         [Validation(Required=false)]
         public int? CloneType { get; set; }
@@ -38,7 +43,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeBranch { get; set; }
 
         /// <summary>
-        /// <para>The code commit ID</para>
+        /// <para>The commit ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44da10**********</para>
@@ -48,7 +53,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeCommit { get; set; }
 
         /// <summary>
-        /// <para>The address of the code repository.</para>
+        /// <para>The code repository URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://code.aliyun.com/">https://code.aliyun.com/</a>****</para>
@@ -58,14 +63,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeRepo { get; set; }
 
         /// <summary>
-        /// <para>The token used to access the code repository.</para>
+        /// <para>The access token for the code repository.</para>
         /// </summary>
         [NameInMap("CodeRepoAccessToken")]
         [Validation(Required=false)]
         public string CodeRepoAccessToken { get; set; }
 
         /// <summary>
-        /// <para>The username of the code repository.</para>
+        /// <para>The username for the code repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -85,7 +90,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string CodeSourceId { get; set; }
 
         /// <summary>
-        /// <para>The code source description.</para>
+        /// <para>The description of the code source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>code source of dlc examples</para>
@@ -95,7 +100,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The code source name.</para>
+        /// <para>The display name of the code source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyCodeSourceName1</para>
@@ -105,7 +110,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the code source was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-18T12:52:15Z</para>
@@ -115,7 +120,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The last modified time.</para>
+        /// <para>The time when the code source was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-18T12:52:15Z</para>
@@ -125,7 +130,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The local mount path of the code.</para>
+        /// <para>The local mount path for the code repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/root/code/</para>

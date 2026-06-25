@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateMemberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned members.</para>
+        /// <para>The list of members.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DatasetJob : TeaModel {
         /// <summary>
-        /// <para>The number of completed files.</para>
+        /// <para>The total number of completed files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>990</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? CompletedFileCount { get; set; }
 
         /// <summary>
-        /// <para>The job creation time (UTC).</para>
+        /// <para>The time when the job was created (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-20T04:05:59Z</para>
@@ -51,13 +51,16 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The job description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>这是一个数据集任务描述。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The number of failed files.</para>
+        /// <para>The total number of failed files.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? FailedFileCount { get; set; }
 
         /// <summary>
-        /// <para>The job finish time (UTC).</para>
+        /// <para>The time when the job was finished (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-20T06:03:48Z</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string FinishTime { get; set; }
 
         /// <summary>
-        /// <para>The job action.</para>
+        /// <para>The job operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SemanticIndex</para>
@@ -88,10 +91,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 
         /// <summary>
         /// <para>The job mode.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>Full</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Full</para>
@@ -101,7 +100,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobMode { get; set; }
 
         /// <summary>
-        /// <para>The job details.</para>
+        /// <para>The job specifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;modelId\&quot;:\&quot;xxx\&quot;}</para>
@@ -111,7 +110,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string JobSpec { get; set; }
 
         /// <summary>
-        /// <para>The job logs.</para>
+        /// <para>A list of task logs.</para>
         /// </summary>
         [NameInMap("Logs")]
         [Validation(Required=false)]
@@ -128,7 +127,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The number of job files.</para>
+        /// <para>The total number of files for the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>

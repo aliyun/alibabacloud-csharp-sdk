@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListUserConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations list.</para>
+        /// <para>The list of configurations.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListUserConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListUserConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>The category. Currently, only DataPrivacyConfig is supported.</para>
+            /// <para>The category. Only DataPrivacyConfig is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataPrivacyConfig</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The key of the configuration item.</para>
+            /// <para>The configuration key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customizePAIAssumedRole</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ConfigKey { get; set; }
 
             /// <summary>
-            /// <para>The value of the configuration item.</para>
+            /// <para>The configuration value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>role</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ConfigValue { get; set; }
 
             /// <summary>
-            /// <para>The scope. Currently, subUser and owner are supported.</para>
+            /// <para>The scope. Supported values are subUser and owner.</para>
             /// 
             /// <b>Example:</b>
             /// <para>subUser</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of items returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListImageLabelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The image tags.</para>
+        /// <para>The list of image labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<ListImageLabelsResponseBodyLabels> Labels { get; set; }
         public class ListImageLabelsResponseBodyLabels : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>system.chipType</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GPU</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the images that meet the filter conditions.</para>
+        /// <para>The total number of image labels that meet the filter conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

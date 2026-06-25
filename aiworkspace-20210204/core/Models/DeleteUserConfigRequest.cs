@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class DeleteUserConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration item keys. Currently, only customizePAIAssumedRole.</para>
+        /// <para>The configuration key. Only customizePAIAssumedRole is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tempStoragePath</para>

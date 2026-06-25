@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string BuyProductRequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the purchase.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The purchase order ID.</para>
+        /// <para>The ID of the purchase order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210292536260646</para>

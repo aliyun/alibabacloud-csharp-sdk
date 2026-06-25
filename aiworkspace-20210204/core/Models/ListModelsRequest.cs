@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListModelsRequest : TeaModel {
         /// <summary>
-        /// <para>The collection where the model is located. You can specify multiple collections and separate them with commas (,).</para>
+        /// <para>The collections to which the model belongs. You can specify multiple collections. Separate them with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI4D,QuickStart</para>
@@ -19,18 +19,39 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Collections { get; set; }
 
+        /// <summary>
+        /// <para>The conditions.</para>
+        /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public List<ListModelsRequestConditions> Conditions { get; set; }
         public class ListModelsRequestConditions : TeaModel {
+            /// <summary>
+            /// <para>The parameter name. Example: ParameterSize.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ParameterSize</para>
+            /// </summary>
             [NameInMap("Column")]
             [Validation(Required=false)]
             public string Column { get; set; }
 
+            /// <summary>
+            /// <para>The operator. Example: LessThan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LessThan</para>
+            /// </summary>
             [NameInMap("Operator")]
             [Validation(Required=false)]
             public string Operator { get; set; }
 
+            /// <summary>
+            /// <para>The value. Example: 3000.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3000</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -38,7 +59,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The domain. Only models in the domain are returned. Valid values: nlp (Natural Language Processing) and cv (Computer Vision).</para>
+        /// <para>The domain. This parameter is used to filter the model list by domain. Examples: nlp (natural language processing) and cv (computer vision).</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlp</para>
@@ -48,7 +69,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The label. Models whose label key or label value contains a specific label are filtered.</para>
+        /// <para>The label string. This parameter is used to filter the list. Models are returned if their label keys or values contain the specified string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1</para>
@@ -58,7 +79,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The model name used to filter the returned models.</para>
+        /// <para>The model name. This parameter is used to filter the model list.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sentiment analysis</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
@@ -75,10 +99,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>The order in which the entries are sorted by the specific field on the returned page. Default value: ASC.</para>
+        /// <para>The order in which to sort the results of a paged query. The default value is ASC.</para>
         /// <list type="bullet">
-        /// <item><description>ASC</description></item>
-        /// <item><description>DESC</description></item>
+        /// <item><description><para>ASC: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>DESC: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +115,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The model source used to filter the models that belong to a community or organization, such as ModelScope and Hugging Face.</para>
+        /// <para>The model source. This parameter is used to filter the model list by community or organization. Examples: ModelScope and HuggingFace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ModelScope</para>
@@ -99,7 +125,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Origin { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number of the model list. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +135,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of models to display on each page in a paged query. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -119,7 +145,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The provider. If you configure this parameter, only the models exposed by the provider are returned. If you leave this parameter empty, only models owned by the user are returned.</para>
+        /// <para>The provider. If you specify a provider, only the public models from that provider are returned. If you leave this parameter empty, your own models are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pai</para>
@@ -129,7 +155,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>The query condition. For example, if you set the value to nlp, all models that match ModelName, Domain, Task, LabelKey, and LabelValue are returned.</para>
+        /// <para>The query condition. This parameter performs a fuzzy match on ModelName, Domain, Task, LabelKey, and LabelValue. For example, if you enter nlp, models that match in any of these fields are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nlp</para>
@@ -139,7 +165,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort the results. The GmtCreateTime field is used for sorting.</para>
+        /// <para>The field to use for sorting in a paged query. Currently, only the GmtCreateTime field is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -149,14 +175,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The tags of the model.</para>
+        /// <para>The list of tags.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Endpoint</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListModelsRequestTag> Tag { get; set; }
         public class ListModelsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -166,7 +195,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -178,7 +207,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The task used to filter the models that belong to the task type. Example: text-classification.</para>
+        /// <para>The task. This parameter is used to filter the model list by task type. Example: text-classification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>text-classification</para>
@@ -188,7 +217,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Task { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID. Only models in this workspace are queried. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+        /// <para>The workspace ID. The returned list contains only the models in the specified workspace. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>324**</para>

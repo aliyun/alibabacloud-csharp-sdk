@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetExperimentRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to obtain the latest run information associated with the experiment</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>Specifies whether to retrieve the latest run information for the experiment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

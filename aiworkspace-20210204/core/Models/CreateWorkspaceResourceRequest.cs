@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateWorkspaceResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The operation to perform. Valid values:</para>
+        /// <para>The creation behavior. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateAndAttach: creates resources and associates the resources with a workspace.</description></item>
-        /// <item><description>Attach: associates resources with a workspace.</description></item>
+        /// <item><description><para><c>CreateAndAttach</c>: Creates a resource and attaches it to the workspace.</para>
+        /// </description></item>
+        /// <item><description><para><c>Attach</c>: Attaches an existing resource to the workspace. This option requires you to specify the <c>Name</c>, <c>ResourceType</c>, <c>GroupName</c>, and <c>EnvType</c> parameters.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> MaxCompute supports only the Attach operation.</para>
+        /// <para>MaxCompute resources only support the <c>Attach</c> option.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Option { get; set; }
 
         /// <summary>
-        /// <para>The resources.</para>
+        /// <para>The list of resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resources")]
@@ -37,8 +39,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The environment type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>dev: development environment</description></item>
-            /// <item><description>prod: production environment</description></item>
+            /// <item><description><para><c>dev</c>: development environment</para>
+            /// </description></item>
+            /// <item><description><para><c>prod</c>: production environment</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group, which is unique within your Alibaba Cloud account. This parameter is required for MaxCompute, Elastic Compute Service (ECS), Lingjun, Alibaba Cloud Container Compute Service (ACS), and Realtime Compute for Apache Flink resources.</para>
+            /// <para>The name of the resource group. The name must be unique within an Alibaba Cloud account. This parameter is required for MaxCompute, ECS, Lingjun, ACS, and Flink resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>groupName</para>
@@ -60,10 +64,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the resource is the default resource. Each type of resources has a default resource. Valid values:</para>
+            /// <para>Indicates whether this is the default resource for its type. Each resource type can have only one default resource.</para>
             /// <list type="bullet">
-            /// <item><description>false (default)</description></item>
-            /// <item><description>true</description></item>
+            /// <item><description><para><c>false</c> (default): The resource is not the default resource.</para>
+            /// </description></item>
+            /// <item><description><para><c>true</c>: The resource is the default resource.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,14 +80,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The labels added to the resource.</para>
+            /// <para>An array of resource tags.</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<CreateWorkspaceResourceRequestResourcesLabels> Labels { get; set; }
             public class CreateWorkspaceResourceRequestResourcesLabels : TeaModel {
                 /// <summary>
-                /// <para>The label key.</para>
+                /// <para>The key of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>system.support.eas</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The label value.</para>
+                /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -105,8 +111,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             /// <summary>
             /// <para>The resource name. The name must meet the following requirements:</para>
             /// <list type="bullet">
-            /// <item><description>The name must be 3 to 28 characters in length, and can contain only letters, digits, and underscores (_). The name must start with a letter.</description></item>
-            /// <item><description>The name must be unique in the region.</description></item>
+            /// <item><description><para>Must be 3 to 28 characters long, start with a letter, and can contain only letters, digits, and underscores (_).</para>
+            /// </description></item>
+            /// <item><description><para>Must be unique within the same region.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>Option</c> is set to <c>Attach</c> and <c>ResourceType</c> is set to <c>MaxCompute</c>, this parameter specifies the project name.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -118,7 +128,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>**This parameter is no longer used and will be removed. Use the ResourceType parameter instead.</para>
+            /// <para><b>[Deprecated]</b> This parameter is deprecated and will be removed in a future version. Use the <c>ResourceType</c> parameter instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
@@ -128,14 +138,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The quotas. Only MaxCompute quotas are available.</para>
+            /// <para>The resource quotas. Currently, only MaxCompute resources have resource quotas.</para>
             /// </summary>
             [NameInMap("Quotas")]
             [Validation(Required=false)]
             public List<CreateWorkspaceResourceRequestResourcesQuotas> Quotas { get; set; }
             public class CreateWorkspaceResourceRequestResourcesQuotas : TeaModel {
                 /// <summary>
-                /// <para>The quota ID. You can call <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a> to obtain the quota ID.</para>
+                /// <para>The ID of the resource quota. To obtain the resource quota ID, see <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a>. This parameter is required only for subscription MaxCompute resources.
+                /// For ECS, Lingjun, and ACS resources, you do not need to specify this parameter. Their quota information is configured in the <c>Spec</c> parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>232892******92912</para>
@@ -147,13 +158,24 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             }
 
             /// <summary>
-            /// <para>The resource types. Valid values:</para>
+            /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>MaxCompute</description></item>
-            /// <item><description>ECS</description></item>
-            /// <item><description>Lingjun</description></item>
-            /// <item><description>ACS</description></item>
-            /// <item><description>FLINK</description></item>
+            /// <item><description><para><c>MaxCompute</c>: MaxCompute resources</para>
+            /// </description></item>
+            /// <item><description><para><c>ECS</c>: general-purpose computing resources</para>
+            /// </description></item>
+            /// <item><description><para><c>Lingjun</c>: Lingjun intelligent computing resources</para>
+            /// </description></item>
+            /// <item><description><para><c>ACS</c>: ACS computing resources</para>
+            /// </description></item>
+            /// <item><description><para><c>Flink</c>: Flink resources</para>
+            /// </description></item>
+            /// <item><description><para><c>SelfManagedAckPro</c>: unified managed cluster resource (AckPro)</para>
+            /// </description></item>
+            /// <item><description><para><c>SelfManagedAckLingjun</c>: unified managed cluster resource (AckLingjun)</para>
+            /// </description></item>
+            /// <item><description><para><c>SelfManagedASI</c>: unified managed cluster resource for third-party clouds (ASI)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -164,14 +186,35 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The resource specifications in the JSON format.</para>
+            /// <para>The resource specification in JSON format. For ECS and Lingjun resources, the format is as follows:
+            /// {<br>
+            /// &quot;clusterType&quot;: &quot;The type of the cluster&quot;,
+            /// &quot;resourceId&quot;: &quot;The ID of the quota&quot;,
+            /// &quot;resourceName&quot;: &quot;The name of the quota&quot;
+            /// }
+            /// The <c>clusterType</c> parameter can have the following values:<br></para>
+            /// <list type="bullet">
+            /// <item><description><para><c>share</c>: shared resource group</para>
+            /// </description></item>
+            /// <item><description><para><c>private</c>: dedicated resource group</para>
+            /// </description></item>
+            /// <item><description><para><c>FullyManaged</c>: fully managed ACS resource</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{
+            ///         &quot;clusterType&quot;: &quot;private&quot;,
+            ///         &quot;resourceId&quot;: &quot;quota1c<b><b><b>b4&quot;,
+            ///         &quot;resourceName&quot;: &quot;unif</b></b></b>90&quot;
+            ///       }</para>
             /// </summary>
             [NameInMap("Spec")]
             [Validation(Required=false)]
             public Dictionary<string, object> Spec { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</para>
+            /// <para>The ID of the workspace to which the resource belongs. To obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

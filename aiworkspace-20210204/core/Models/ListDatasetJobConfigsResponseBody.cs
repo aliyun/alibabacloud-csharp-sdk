@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetJobConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dataset job configurations.</para>
+        /// <para>A list of dataset job configurations.</para>
         /// </summary>
         [NameInMap("DatasetJobConfigs")]
         [Validation(Required=false)]
