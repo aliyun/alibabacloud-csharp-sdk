@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class DescTemplateRequest : TeaModel {
+    public class DeleteTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>Deprecated. Retained for backward compatibility.</para>
+        /// <para>The channel through which the user accesses the service. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Abandoned, historical reasons for compatibility</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FromType")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3xxxx2</para>
+        /// <para>409481</para>
         /// </summary>
         [NameInMap("TemplateId")]
         [Validation(Required=false)]

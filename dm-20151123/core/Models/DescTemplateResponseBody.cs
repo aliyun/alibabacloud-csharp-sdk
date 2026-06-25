@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// <para>Deprecated. Retained for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Abandoned, historical reasons for compatibility</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// <para>Deprecated. Retained for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Abandoned, historical reasons for compatibility</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string SmsContent { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// <para>Deprecated. Retained for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Abandoned, historical reasons for compatibility</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// <para>Deprecated. Retained for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Abandoned, historical reasons for compatibility</para>
@@ -80,16 +80,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TemplateNickName { get; set; }
 
         /// <summary>
-        /// <para>The status of the template. Valid values:</para>
+        /// <para>The template status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The template is a draft.</para>
-        /// </description></item>
-        /// <item><description><para>1: The template is pending approval.</para>
-        /// </description></item>
-        /// <item><description><para>2: The template is approved.</para>
-        /// </description></item>
-        /// <item><description><para>3: The template is rejected.</para>
-        /// </description></item>
+        /// <item><description>0: draft.</description></item>
+        /// <item><description>1: pending review.</description></item>
+        /// <item><description>2: approved.</description></item>
+        /// <item><description>3: rejected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,7 +96,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TemplateStatus { get; set; }
 
         /// <summary>
-        /// <para>The template subject, which is used to create the email subject.</para>
+        /// <para>The template subject, which is used to compose the email subject.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -120,7 +116,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TemplateText { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// <para>Deprecated. Retained for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Abandoned, historical reasons for compatibility</para>

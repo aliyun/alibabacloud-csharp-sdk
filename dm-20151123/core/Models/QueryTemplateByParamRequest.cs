@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTemplateByParamRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// <para>Deprecated. Retained for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Abandoned, historical reasons for compatibility</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? FromType { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the template name. By default, a paged query is performed for all templates.</para>
+        /// <para>The keyword of the template name. By default, a paging query is performed on all templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The default value is 1.</para>
+        /// <para>The current page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. The default value is 20.</para>
+        /// <para>The number of entries per page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// <para>Deprecated. Retained for backward compatibility.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Abandoned, historical reasons for compatibility</para>
