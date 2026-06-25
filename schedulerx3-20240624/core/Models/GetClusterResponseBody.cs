@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,16 +19,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetClusterResponseBodyData Data { get; set; }
         public class GetClusterResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The billing method. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PREPAY: subscription.</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>POSTPAY</para>
             /// </summary>
@@ -35,6 +38,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string ChargeType { get; set; }
 
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxljob-e0d018c6df8</para>
             /// </summary>
@@ -43,6 +48,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string ClusterId { get; set; }
 
             /// <summary>
+            /// <para>The cluster name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxl-job-test-1730427575152</para>
             /// </summary>
@@ -51,6 +58,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string ClusterName { get; set; }
 
             /// <summary>
+            /// <para>The cluster specification. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>scx.dev.x1.</description></item>
+            /// <item><description>scx.small.x1.</description></item>
+            /// <item><description>scx.small.x2.</description></item>
+            /// <item><description>scx.medium.x1.</description></item>
+            /// <item><description>scx.medium.x2.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>scx.small.x2</para>
             /// </summary>
@@ -67,6 +83,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? ClusterType { get; set; }
 
             /// <summary>
+            /// <para>The time when the cluster was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-29 15:56:36</para>
             /// </summary>
@@ -75,6 +93,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-29 15:56:36</para>
             /// </summary>
@@ -83,6 +103,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>The engine type. Valid value: xxljob.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxljob</para>
             /// </summary>
@@ -91,6 +113,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string EngineType { get; set; }
 
             /// <summary>
+            /// <para>The engine version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2.0.0</para>
             /// </summary>
@@ -98,11 +122,22 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public string EngineVersion { get; set; }
 
+            /// <summary>
+            /// <para>The public endpoint.</para>
+            /// <remarks>
+            /// <para>Currently not supported.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>暂无</para>
+            /// </summary>
             [NameInMap("InternetDomain")]
             [Validation(Required=false)]
             public string InternetDomain { get; set; }
 
             /// <summary>
+            /// <para>The internal endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxljob-xxxxxx.schedulerx.mse.aliyuncs.com">http://xxljob-xxxxxx.schedulerx.mse.aliyuncs.com</a></para>
             /// </summary>
@@ -119,6 +154,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string IpWhitelist { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of jobs for the current specification.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -127,6 +164,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? JobNum { get; set; }
 
             /// <summary>
+            /// <para>The configuration of the Kubernetes server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///   &quot;vSwitchIdList&quot;: [
@@ -158,6 +197,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string KubeConfig { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of jobs for the current specification.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -166,6 +207,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? MaxJobNum { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of workflows supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -174,6 +217,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? MaxWorkflowNum { get; set; }
 
             /// <summary>
+            /// <para>The product edition.</para>
+            /// <list type="bullet">
+            /// <item><description><para>1: Developer Edition.</para>
+            /// </description></item>
+            /// <item><description><para>2: Professional Edition.</para>
+            /// </description></item>
+            /// <item><description><para>3: Enterprise Edition.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -181,7 +234,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public int? ProductType { get; set; }
 
+            [NameInMap("Source")]
+            [Validation(Required=false)]
+            public string Source { get; set; }
+
             /// <summary>
+            /// <para>The peak number of scheduling operations per minute.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -190,6 +249,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? Spm { get; set; }
 
             /// <summary>
+            /// <para>The cluster status.</para>
+            /// <list type="bullet">
+            /// <item><description>1: Being created.</description></item>
+            /// <item><description>2: Running.</description></item>
+            /// <item><description>3: Restarting.</description></item>
+            /// <item><description>4: Being released.</description></item>
+            /// <item><description>5: Creation failed.</description></item>
+            /// <item><description>6: Stopped.</description></item>
+            /// <item><description>99: Deleted.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -201,11 +271,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public Dictionary<string, object> Tags { get; set; }
 
+            /// <summary>
+            /// <para>The vSwitch information of zones.</para>
+            /// </summary>
             [NameInMap("VSwitches")]
             [Validation(Required=false)]
             public List<GetClusterResponseBodyDataVSwitches> VSwitches { get; set; }
             public class GetClusterResponseBodyDataVSwitches : TeaModel {
                 /// <summary>
+                /// <para>The vSwitch ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-8vbf1n216nshvfjdyff8a</para>
                 /// </summary>
@@ -214,6 +289,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
+                /// <para>The zone ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-k</para>
                 /// </summary>
@@ -228,7 +305,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string VersionLifecycle { get; set; }
 
             /// <summary>
-            /// <para>VPC ID</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1fiz967u39lt8yuxcs0</para>
@@ -238,6 +315,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The number of workers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -246,6 +325,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? WorkerNum { get; set; }
 
             /// <summary>
+            /// <para>The current number of workflows.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -253,6 +334,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public int? WorkflowNum { get; set; }
 
+            /// <summary>
+            /// <para>The list of zones.</para>
+            /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
             public List<string> Zones { get; set; }
@@ -260,6 +344,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -268,6 +354,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID. The value is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D0DE9C33-992A-580B-89C4-B609A292748D</para>
         /// </summary>
@@ -276,6 +364,12 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

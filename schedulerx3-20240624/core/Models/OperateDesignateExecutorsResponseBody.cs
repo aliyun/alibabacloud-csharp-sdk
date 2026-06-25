@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateDesignateExecutorsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code. A value of <c>200</c> indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The error message that is returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter check error</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID generated for the request. Use this ID for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AFD5B166-4A7D-50DF-91BF-EFAFD41F7335</para>
         /// </summary>
@@ -34,6 +40,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

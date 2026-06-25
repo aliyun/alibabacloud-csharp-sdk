@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListJobExecutionsRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-app</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-11-12 20:50:56</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The job execution ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1310630367761285120</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>74</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? JobId { get; set; }
 
         /// <summary>
+        /// <para>The job name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-job</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobName { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-11-12 20:50:55</para>
         /// </summary>
@@ -84,6 +101,36 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The job execution status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: <b>UNKNOWN</b>.</para>
+        /// </description></item>
+        /// <item><description><para>1: <b>WAITING</b>.</para>
+        /// </description></item>
+        /// <item><description><para>2: <b>READY</b>.</para>
+        /// </description></item>
+        /// <item><description><para>3: <b>RUNNING</b>.</para>
+        /// </description></item>
+        /// <item><description><para>4: <b>SUCCESS</b>.</para>
+        /// </description></item>
+        /// <item><description><para>5: <b>FAILED</b>.</para>
+        /// </description></item>
+        /// <item><description><para>6: <b>PAUSED</b>.</para>
+        /// </description></item>
+        /// <item><description><para>7: <b>SUBMITTED</b>.</para>
+        /// </description></item>
+        /// <item><description><para>8: <b>REJECTED</b>.</para>
+        /// </description></item>
+        /// <item><description><para>9: <b>ACCEPTED</b>.</para>
+        /// </description></item>
+        /// <item><description><para>10: <b>PARTIAL_FAILED</b>.</para>
+        /// </description></item>
+        /// <item><description><para>11: <b>SKIPPED</b>.</para>
+        /// </description></item>
+        /// <item><description><para>12: <b>REMOVED</b>.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -92,6 +139,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Status { get; set; }
 
         /// <summary>
+        /// <para>The workflow execution ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

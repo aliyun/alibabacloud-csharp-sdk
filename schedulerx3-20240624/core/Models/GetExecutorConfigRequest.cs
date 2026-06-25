@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetExecutorConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

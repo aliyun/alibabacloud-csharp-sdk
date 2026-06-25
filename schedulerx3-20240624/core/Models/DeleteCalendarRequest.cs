@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class DeleteCalendarRequest : TeaModel {
         /// <summary>
+        /// <para>The calendar name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string CalendarName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The year.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

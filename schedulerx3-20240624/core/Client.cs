@@ -18,7 +18,22 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"eu-central-1", "schedulerx3.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "schedulerx3.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "schedulerx3.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "schedulerx3.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "schedulerx3.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "schedulerx3.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "schedulerx3.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "schedulerx3.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "schedulerx3.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "schedulerx3.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "schedulerx3.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "schedulerx3.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("schedulerx3", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +54,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Creates an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109,7 +124,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Creates an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -179,7 +194,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Creates an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -197,7 +212,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Creates an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -215,8 +230,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建日历</para>
+        /// <para>Creates a custom calendar.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a custom calendar for SchedulerX.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCalendarRequest
@@ -273,8 +293,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建日历</para>
+        /// <para>Creates a custom calendar.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a custom calendar for SchedulerX.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCalendarRequest
@@ -331,8 +356,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建日历</para>
+        /// <para>Creates a custom calendar.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a custom calendar for SchedulerX.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCalendarRequest
@@ -349,8 +379,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建日历</para>
+        /// <para>Creates a custom calendar.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a custom calendar for SchedulerX.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCalendarRequest
@@ -422,6 +457,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingCycle))
             {
                 body["PricingCycle"] = request.PricingCycle;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["Source"] = request.Source;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchesShrink))
             {
@@ -509,6 +548,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["PricingCycle"] = request.PricingCycle;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                body["Source"] = request.Source;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchesShrink))
             {
                 body["VSwitches"] = request.VSwitchesShrink;
@@ -575,7 +618,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Create a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -637,7 +680,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Create a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -699,7 +742,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Create a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -717,7 +760,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Create a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -737,6 +780,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <summary>
         /// <para>添加执行器组</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>手动导入执行器</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateExecutorGroupRequest
@@ -828,6 +876,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>添加执行器组</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>手动导入执行器</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateExecutorGroupRequest
         /// </param>
@@ -918,6 +971,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>添加执行器组</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>手动导入执行器</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateExecutorGroupRequest
         /// </param>
@@ -936,6 +994,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>添加执行器组</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>手动导入执行器</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateExecutorGroupRequest
         /// </param>
@@ -951,8 +1014,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加执行器</para>
+        /// <para>Imports one or more executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Imports one or more executors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateExecutorsRequest
@@ -1005,8 +1073,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加执行器</para>
+        /// <para>Imports one or more executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Imports one or more executors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateExecutorsRequest
@@ -1059,8 +1132,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加执行器</para>
+        /// <para>Imports one or more executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Imports one or more executors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateExecutorsRequest
@@ -1077,8 +1155,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加执行器</para>
+        /// <para>Imports one or more executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Imports one or more executors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateExecutorsRequest
@@ -1095,7 +1178,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job.</para>
+        /// <para>Creates a node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1259,7 +1342,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job.</para>
+        /// <para>Creates a node.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1423,7 +1506,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job.</para>
+        /// <para>Creates a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1441,7 +1524,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a job.</para>
+        /// <para>Creates a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1459,7 +1542,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1541,7 +1624,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1623,7 +1706,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1641,7 +1724,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1659,7 +1742,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes an App Group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1705,7 +1788,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes an App Group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1751,7 +1834,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes an App Group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1769,7 +1852,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application group.</para>
+        /// <para>Deletes an App Group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1787,7 +1870,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日历</para>
+        /// <para>Deletes the specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1837,7 +1920,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日历</para>
+        /// <para>Deletes the specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1887,7 +1970,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日历</para>
+        /// <para>Deletes the specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1905,7 +1988,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除日历</para>
+        /// <para>Deletes the specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2043,7 +2126,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Delete data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2089,7 +2172,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Delete data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2135,7 +2218,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Delete data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2153,7 +2236,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据源</para>
+        /// <para>Delete data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2307,7 +2390,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs at a time.</para>
+        /// <para>Deletes multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2363,7 +2446,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs at a time.</para>
+        /// <para>Deletes multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2419,7 +2502,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs at a time.</para>
+        /// <para>Deletes multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2520,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple jobs at a time.</para>
+        /// <para>Deletes multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2455,7 +2538,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2509,7 +2592,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2563,7 +2646,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2581,7 +2664,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2599,7 +2682,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除工作流</para>
+        /// <para>Deletes one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2659,7 +2742,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除工作流</para>
+        /// <para>Deletes one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2719,7 +2802,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除工作流</para>
+        /// <para>Deletes one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2737,7 +2820,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除工作流</para>
+        /// <para>Deletes one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2755,7 +2838,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the information about jobs at a time.</para>
+        /// <para>Exports job information in bulk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2815,7 +2898,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the information about jobs at a time.</para>
+        /// <para>Exports job information in bulk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2875,7 +2958,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the information about jobs at a time.</para>
+        /// <para>Exports job information in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2893,7 +2976,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the information about jobs at a time.</para>
+        /// <para>Exports job information in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2911,7 +2994,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出工作流信息</para>
+        /// <para>Exports the definitions of one or more Workflows in JSON format. The exported data includes the basic information, all Nodes, and the Directed Acyclic Graph (DAG) dependencies for each Workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2967,7 +3050,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出工作流信息</para>
+        /// <para>Exports the definitions of one or more Workflows in JSON format. The exported data includes the basic information, all Nodes, and the Directed Acyclic Graph (DAG) dependencies for each Workflow.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3023,7 +3106,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出工作流信息</para>
+        /// <para>Exports the definitions of one or more Workflows in JSON format. The exported data includes the basic information, all Nodes, and the Directed Acyclic Graph (DAG) dependencies for each Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3041,7 +3124,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出工作流信息</para>
+        /// <para>Exports the definitions of one or more Workflows in JSON format. The exported data includes the basic information, all Nodes, and the Directed Acyclic Graph (DAG) dependencies for each Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3059,7 +3142,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定应用</para>
+        /// <para>Retrieves the details of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3105,7 +3188,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定应用</para>
+        /// <para>Retrieves the details of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3151,7 +3234,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定应用</para>
+        /// <para>Retrieves the details of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3169,7 +3252,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定应用</para>
+        /// <para>Retrieves the details of a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3187,7 +3270,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历信息</para>
+        /// <para>Retrieves the details of a specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3237,7 +3320,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历信息</para>
+        /// <para>Retrieves the details of a specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3287,7 +3370,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历信息</para>
+        /// <para>Retrieves the details of a specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3305,7 +3388,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历信息</para>
+        /// <para>Retrieves the details of a specified calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3323,7 +3406,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Obtains the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3361,7 +3444,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Obtains the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3399,7 +3482,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Obtains the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3417,7 +3500,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cluster.</para>
+        /// <para>Obtains the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3435,7 +3518,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified machine.</para>
+        /// <para>Retrieves the designation information for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3473,7 +3556,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified machine.</para>
+        /// <para>Retrieves the designation information for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3511,7 +3594,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified machine.</para>
+        /// <para>Retrieves the designation information for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3529,7 +3612,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a specified machine.</para>
+        /// <para>Retrieves the designation information for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3547,8 +3630,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询执行器配置信息</para>
+        /// <para>Retrieves the configuration for a specified Executor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>before</b> the <c>xxl-job-core</c> dependency in the <c>pom.xml</c> file.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecutorConfigRequest
@@ -3593,8 +3684,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询执行器配置信息</para>
+        /// <para>Retrieves the configuration for a specified Executor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>before</b> the <c>xxl-job-core</c> dependency in the <c>pom.xml</c> file.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecutorConfigRequest
@@ -3639,8 +3738,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询执行器配置信息</para>
+        /// <para>Retrieves the configuration for a specified Executor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>before</b> the <c>xxl-job-core</c> dependency in the <c>pom.xml</c> file.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecutorConfigRequest
@@ -3657,8 +3764,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询执行器配置信息</para>
+        /// <para>Retrieves the configuration for a specified Executor.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>before</b> the <c>xxl-job-core</c> dependency in the <c>pom.xml</c> file.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetExecutorConfigRequest
@@ -3675,7 +3790,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详细信息</para>
+        /// <para>Returns the details of a Task Execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3729,7 +3844,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详细信息</para>
+        /// <para>Returns the details of a Task Execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3783,7 +3898,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详细信息</para>
+        /// <para>Returns the details of a Task Execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3801,7 +3916,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详细信息</para>
+        /// <para>Returns the details of a Task Execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3819,8 +3934,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the execution details of a job.</para>
+        /// <para>Gets the details of a sharding task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
+        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionProgressRequest
@@ -3857,8 +3980,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the execution details of a job.</para>
+        /// <para>Gets the details of a sharding task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
+        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionProgressRequest
@@ -3895,8 +4026,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the execution details of a job.</para>
+        /// <para>Gets the details of a sharding task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
+        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionProgressRequest
@@ -3913,8 +4052,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the execution details of a job.</para>
+        /// <para>Gets the details of a sharding task execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to enhance the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml.
+        /// <b>See also</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Release Notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionProgressRequest
@@ -3931,8 +4078,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务的线程堆栈</para>
+        /// <para>Retrieves the thread dump for a specific job execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionThreadDumpRequest
@@ -3969,8 +4124,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务的线程堆栈</para>
+        /// <para>Retrieves the thread dump for a specific job execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionThreadDumpRequest
@@ -4007,8 +4170,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务的线程堆栈</para>
+        /// <para>Retrieves the thread dump for a specific job execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionThreadDumpRequest
@@ -4025,8 +4196,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务的线程堆栈</para>
+        /// <para>Retrieves the thread dump for a specific job execution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the Enhancement Plugin to your <c>pom.xml</c> file to extend the executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency.
+        /// <b>For more information, see</b>: <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin versioning documentation</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetJobExecutionThreadDumpRequest
@@ -4043,7 +4222,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries logs.</para>
+        /// <para>Retrieves log entries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4081,7 +4260,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries logs.</para>
+        /// <para>Retrieves log entries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4119,7 +4298,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries logs.</para>
+        /// <para>Retrieves log entries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4137,7 +4316,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries logs.</para>
+        /// <para>Retrieves log entries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4155,7 +4334,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件</para>
+        /// <para>Query Events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4193,7 +4372,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件</para>
+        /// <para>Query Events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4231,7 +4410,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件</para>
+        /// <para>Query Events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4249,7 +4428,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询事件</para>
+        /// <para>Query Events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4269,6 +4448,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <summary>
         /// <para>获取分页日志</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetPageLogRequest
@@ -4352,6 +4539,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>获取分页日志</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetPageLogRequest
         /// </param>
@@ -4434,6 +4629,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>获取分页日志</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetPageLogRequest
         /// </param>
@@ -4452,6 +4655,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>获取分页日志</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetPageLogRequest
         /// </param>
@@ -4467,7 +4678,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流</para>
+        /// <para>Retrieves the basic information for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4517,7 +4728,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流</para>
+        /// <para>Retrieves the basic information for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4567,7 +4778,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流</para>
+        /// <para>Retrieves the basic information for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4585,7 +4796,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流</para>
+        /// <para>Retrieves the basic information for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4603,7 +4814,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the Directed Acyclic Graph (DAG) of a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4653,7 +4864,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the Directed Acyclic Graph (DAG) of a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4703,7 +4914,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the Directed Acyclic Graph (DAG) of a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4721,7 +4932,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the Directed Acyclic Graph (DAG) of a workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4739,7 +4950,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the DAG for a previous workflow version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4793,7 +5004,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the DAG for a previous workflow version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4847,7 +5058,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the DAG for a previous workflow version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4865,7 +5076,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流的DAG信息</para>
+        /// <para>Gets the DAG for a previous workflow version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4883,7 +5094,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流实例DAG信息</para>
+        /// <para>Retrieve the DAG information for a workflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4933,7 +5144,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流实例DAG信息</para>
+        /// <para>Retrieve the DAG information for a workflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4983,7 +5194,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流实例DAG信息</para>
+        /// <para>Retrieve the DAG information for a workflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5001,7 +5212,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流实例DAG信息</para>
+        /// <para>Retrieve the DAG information for a workflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5163,7 +5374,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports jobs at a time.</para>
+        /// <para>Imports jobs in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5217,7 +5428,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports jobs at a time.</para>
+        /// <para>Imports jobs in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5271,7 +5482,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports jobs at a time.</para>
+        /// <para>Imports jobs in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5289,7 +5500,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports jobs at a time.</para>
+        /// <para>Imports jobs in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5307,7 +5518,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入工作流</para>
+        /// <para>Imports one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5361,7 +5572,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入工作流</para>
+        /// <para>Imports one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5415,7 +5626,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入工作流</para>
+        /// <para>Imports one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5433,7 +5644,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入工作流</para>
+        /// <para>Imports one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5451,7 +5662,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of alert events.</para>
+        /// <para>Retrieves alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5489,7 +5700,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of alert events.</para>
+        /// <para>Retrieves alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5527,7 +5738,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of alert events.</para>
+        /// <para>Retrieves alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5545,7 +5756,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of alert events.</para>
+        /// <para>Retrieves alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5563,7 +5774,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of application names.</para>
+        /// <para>Returns a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5601,7 +5812,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of application names.</para>
+        /// <para>Returns a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5639,7 +5850,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of application names.</para>
+        /// <para>Returns a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5657,7 +5868,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of application names.</para>
+        /// <para>Returns a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5675,7 +5886,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Get the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5713,7 +5924,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Get the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5751,7 +5962,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Get the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5769,7 +5980,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of applications.</para>
+        /// <para>Get the list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5787,7 +5998,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of calendar names.</para>
+        /// <para>Lists all Calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5825,7 +6036,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of calendar names.</para>
+        /// <para>Lists all Calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5863,7 +6074,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of calendar names.</para>
+        /// <para>Lists all Calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5881,7 +6092,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of calendar names.</para>
+        /// <para>Lists all Calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5899,7 +6110,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日历</para>
+        /// <para>Retrieves a list of calendars.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5961,7 +6172,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日历</para>
+        /// <para>Retrieves a list of calendars.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6023,7 +6234,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日历</para>
+        /// <para>Retrieves a list of calendars.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6041,7 +6252,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日历</para>
+        /// <para>Retrieves a list of calendars.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6059,7 +6270,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Query the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6097,7 +6308,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Query the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6135,7 +6346,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Query the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6153,7 +6364,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances.</para>
+        /// <para>Query the list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6171,7 +6382,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表</para>
+        /// <para>Retrieve the data source list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6237,7 +6448,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表</para>
+        /// <para>Retrieve the data source list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6303,7 +6514,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表</para>
+        /// <para>Retrieve the data source list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6321,7 +6532,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表</para>
+        /// <para>Retrieve the data source list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6341,6 +6552,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <summary>
         /// <para>获取执行器组列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListExecutorGroupRequest
@@ -6408,6 +6627,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>获取执行器组列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListExecutorGroupRequest
         /// </param>
@@ -6474,6 +6701,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>获取执行器组列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListExecutorGroupRequest
         /// </param>
@@ -6492,6 +6727,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>获取执行器组列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListExecutorGroupRequest
         /// </param>
@@ -6507,7 +6750,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of executors.</para>
+        /// <para>Lists executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6545,7 +6788,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of executors.</para>
+        /// <para>Lists executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6583,7 +6826,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of executors.</para>
+        /// <para>Lists executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6601,7 +6844,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of executors.</para>
+        /// <para>Lists executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6619,7 +6862,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of job instances.</para>
+        /// <para>Returns a list of task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6701,7 +6944,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of job instances.</para>
+        /// <para>Returns a list of task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6783,7 +7026,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of job instances.</para>
+        /// <para>Returns a list of task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6801,7 +7044,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of job instances.</para>
+        /// <para>Returns a list of task instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6819,7 +7062,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Lists the script history for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6877,7 +7120,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Lists the script history for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6935,7 +7178,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Lists the script history for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6953,7 +7196,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务脚本历史列表</para>
+        /// <para>Lists the script history for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6971,7 +7214,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs.</para>
+        /// <para>Returns a task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7049,7 +7292,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs.</para>
+        /// <para>Returns a task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7127,7 +7370,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs.</para>
+        /// <para>Returns a task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7145,7 +7388,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of jobs.</para>
+        /// <para>Returns a task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7163,8 +7406,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取k8s资源列表</para>
+        /// <para>Lists k8s resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml file.
+        /// <b>For more information:</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListK8sResourceRequest
@@ -7221,8 +7472,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取k8s资源列表</para>
+        /// <para>Lists k8s resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml file.
+        /// <b>For more information:</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListK8sResourceRequest
@@ -7279,8 +7538,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取k8s资源列表</para>
+        /// <para>Lists k8s resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml file.
+        /// <b>For more information:</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListK8sResourceRequest
@@ -7297,8 +7564,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取k8s资源列表</para>
+        /// <para>Lists k8s resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to your <c>pom.xml</c> file to extend the Executor\&quot;s capabilities.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in your pom.xml file.
+        /// <b>For more information:</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin version release notes</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListK8sResourceRequest
@@ -7315,7 +7590,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of tags of an executor.</para>
+        /// <para>Retrieves a list of labels for an Executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7353,7 +7628,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of tags of an executor.</para>
+        /// <para>Retrieves a list of labels for an Executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7391,7 +7666,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of tags of an executor.</para>
+        /// <para>Retrieves a list of labels for an Executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7409,7 +7684,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of tags of an executor.</para>
+        /// <para>Retrieves a list of labels for an Executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7427,7 +7702,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of zones.</para>
+        /// <para>Obtain the zone list.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -7457,7 +7732,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of zones.</para>
+        /// <para>Obtain the zone list.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -7487,7 +7762,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of zones.</para>
+        /// <para>Obtain the zone list.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7501,7 +7776,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of zones.</para>
+        /// <para>Obtain the zone list.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7515,7 +7790,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all regions.</para>
+        /// <para>Obtain the List of all Regions.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -7545,7 +7820,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all regions.</para>
+        /// <para>Obtain the List of all Regions.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -7575,7 +7850,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all regions.</para>
+        /// <para>Obtain the List of all Regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7589,7 +7864,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all regions.</para>
+        /// <para>Obtain the List of all Regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7603,7 +7878,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries scheduling events.</para>
+        /// <para>Lists scheduled events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7641,7 +7916,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries scheduling events.</para>
+        /// <para>Lists scheduled events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7679,7 +7954,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries scheduling events.</para>
+        /// <para>Lists scheduled events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7697,7 +7972,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries scheduling events.</para>
+        /// <para>Lists scheduled events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7715,7 +7990,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
+        /// <para>Retrieves the next five scheduled times based on the specified time type and time expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7753,7 +8028,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
+        /// <para>Retrieves the next five scheduled times based on the specified time type and time expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7791,7 +8066,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
+        /// <para>Retrieves the next five scheduled times based on the specified time type and time expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7809,7 +8084,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
+        /// <para>Retrieves the next five scheduled times based on the specified time type and time expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7827,7 +8102,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取流程实例列表</para>
+        /// <para>Retrieves a list of workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7913,7 +8188,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取流程实例列表</para>
+        /// <para>Retrieves a list of workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7999,7 +8274,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取流程实例列表</para>
+        /// <para>Retrieves a list of workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8017,7 +8292,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取流程实例列表</para>
+        /// <para>Retrieves a list of workflow instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8035,7 +8310,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前工作流版本列表</para>
+        /// <para>Lists the versions for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8093,7 +8368,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前工作流版本列表</para>
+        /// <para>Lists the versions for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8151,7 +8426,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前工作流版本列表</para>
+        /// <para>Lists the versions for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8169,7 +8444,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前工作流版本列表</para>
+        /// <para>Lists the versions for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8187,7 +8462,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流列表</para>
+        /// <para>Lists your workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8265,7 +8540,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流列表</para>
+        /// <para>Lists your workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8343,7 +8618,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流列表</para>
+        /// <para>Lists your workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8361,7 +8636,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流列表</para>
+        /// <para>Lists your workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8379,7 +8654,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>补数工作流</para>
+        /// <para>Backfills historical data for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8437,7 +8712,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>补数工作流</para>
+        /// <para>Backfills historical data for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8495,7 +8770,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>补数工作流</para>
+        /// <para>Backfills historical data for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8513,7 +8788,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>补数工作流</para>
+        /// <para>Backfills historical data for a specified workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8531,7 +8806,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>连接数据源</para>
+        /// <para>Connect to a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8585,7 +8860,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>连接数据源</para>
+        /// <para>Connect to a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8639,7 +8914,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>连接数据源</para>
+        /// <para>Connect to a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8657,7 +8932,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>连接数据源</para>
+        /// <para>Connect to a data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8675,7 +8950,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates executors.</para>
+        /// <para>Designates one or more executors for a job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8743,7 +9018,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates executors.</para>
+        /// <para>Designates one or more executors for a job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8811,7 +9086,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates executors.</para>
+        /// <para>Designates one or more executors for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8829,7 +9104,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Designates executors.</para>
+        /// <para>Designates one or more executors for a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8847,7 +9122,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs at a time.</para>
+        /// <para>Disables multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8903,7 +9178,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs at a time.</para>
+        /// <para>Disables multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8959,7 +9234,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs at a time.</para>
+        /// <para>Disables multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8977,7 +9252,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables multiple jobs at a time.</para>
+        /// <para>Disables multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8995,8 +9270,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用工作流</para>
+        /// <para>Disables one or more workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables one or more specified workflows.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// OperateDisableWorkflowsRequest
@@ -9051,8 +9331,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用工作流</para>
+        /// <para>Disables one or more workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables one or more specified workflows.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// OperateDisableWorkflowsRequest
@@ -9107,8 +9392,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用工作流</para>
+        /// <para>Disables one or more workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables one or more specified workflows.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateDisableWorkflowsRequest
@@ -9125,8 +9415,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用工作流</para>
+        /// <para>Disables one or more workflows.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Disables one or more specified workflows.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateDisableWorkflowsRequest
@@ -9143,7 +9438,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs at a time.</para>
+        /// <para>Enables multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9199,7 +9494,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs at a time.</para>
+        /// <para>Enables multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9255,7 +9550,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs at a time.</para>
+        /// <para>Enables multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9273,7 +9568,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables multiple jobs at a time.</para>
+        /// <para>Enables multiple jobs in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9291,7 +9586,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用工作流</para>
+        /// <para>Enables one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9347,7 +9642,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用工作流</para>
+        /// <para>Enables one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9403,7 +9698,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用工作流</para>
+        /// <para>Enables one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9421,7 +9716,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用工作流</para>
+        /// <para>Enables one or more workflows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9439,7 +9734,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a job once.</para>
+        /// <para>Executes a job on demand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9501,7 +9796,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a job once.</para>
+        /// <para>Executes a job on demand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9563,7 +9858,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a job once.</para>
+        /// <para>Executes a job on demand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9581,7 +9876,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a job once.</para>
+        /// <para>Executes a job on demand.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9599,8 +9894,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次工作流</para>
+        /// <para>Executes a workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation starts a new workflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateExecuteWorkflowRequest
@@ -9649,8 +9949,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次工作流</para>
+        /// <para>Executes a workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation starts a new workflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateExecuteWorkflowRequest
@@ -9699,8 +10004,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次工作流</para>
+        /// <para>Executes a workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation starts a new workflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateExecuteWorkflowRequest
@@ -9717,8 +10027,13 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次工作流</para>
+        /// <para>Executes a workflow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation starts a new workflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// OperateExecuteWorkflowRequest
@@ -9735,7 +10050,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hold住任务实例</para>
+        /// <para>Holds a pending job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9785,7 +10100,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hold住任务实例</para>
+        /// <para>Holds a pending job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9835,7 +10150,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hold住任务实例</para>
+        /// <para>Holds a pending job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9853,7 +10168,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hold住任务实例</para>
+        /// <para>Holds a pending job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9871,7 +10186,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// <para>Puts a Workflow Execution on hold, suspending all its unexecuted nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9921,7 +10236,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// <para>Puts a Workflow Execution on hold, suspending all its unexecuted nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9971,7 +10286,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// <para>Puts a Workflow Execution on hold, suspending all its unexecuted nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9989,7 +10304,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中未开始的节点置为Held状态</para>
+        /// <para>Puts a Workflow Execution on hold, suspending all its unexecuted nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10007,7 +10322,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标记任务实例为成功状态</para>
+        /// <para>Marks a job execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10057,7 +10372,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标记任务实例为成功状态</para>
+        /// <para>Marks a job execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10107,7 +10422,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标记任务实例为成功状态</para>
+        /// <para>Marks a job execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10125,7 +10440,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标记任务实例为成功状态</para>
+        /// <para>Marks a job execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10143,7 +10458,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流实例标记为成功</para>
+        /// <para>Marks a workflow execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10193,7 +10508,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流实例标记为成功</para>
+        /// <para>Marks a workflow execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10243,7 +10558,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流实例标记为成功</para>
+        /// <para>Marks a workflow execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10261,7 +10576,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流实例标记为成功</para>
+        /// <para>Marks a workflow execution as successful.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10279,7 +10594,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reprocesses the historical data of a job.</para>
+        /// <para>Reruns historical data for a job within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10341,7 +10656,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reprocesses the historical data of a job.</para>
+        /// <para>Reruns historical data for a job within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10403,7 +10718,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reprocesses the historical data of a job.</para>
+        /// <para>Reruns historical data for a job within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10421,7 +10736,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reprocesses the historical data of a job.</para>
+        /// <para>Reruns historical data for a job within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10439,7 +10754,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns failed job instances.</para>
+        /// <para>Retries a failed Job Instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10503,7 +10818,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns failed job instances.</para>
+        /// <para>Retries a failed Job Instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10567,7 +10882,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns failed job instances.</para>
+        /// <para>Retries a failed Job Instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10585,7 +10900,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns failed job instances.</para>
+        /// <para>Retries a failed Job Instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10603,7 +10918,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Retries a workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10657,7 +10972,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Retries a workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10711,7 +11026,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Retries a workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10729,7 +11044,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑工作流实例</para>
+        /// <para>Retries a workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10747,7 +11062,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过任务实例</para>
+        /// <para>Skips a job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10797,7 +11112,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过任务实例</para>
+        /// <para>Skips a job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10847,7 +11162,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过任务实例</para>
+        /// <para>Skips a job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10865,7 +11180,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过任务实例</para>
+        /// <para>Skips a job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10883,7 +11198,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops running instances.</para>
+        /// <para>Stops a running Job Execution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10943,7 +11258,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops running instances.</para>
+        /// <para>Stops a running Job Execution.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11003,7 +11318,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops running instances.</para>
+        /// <para>Stops a running Job Execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11021,7 +11336,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops running instances.</para>
+        /// <para>Stops a running Job Execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11039,7 +11354,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止正在运行的工作流实例</para>
+        /// <para>Stops a running workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11089,7 +11404,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止正在运行的工作流实例</para>
+        /// <para>Stops a running workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11139,7 +11454,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止正在运行的工作流实例</para>
+        /// <para>Stops a running workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11157,7 +11472,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止正在运行的工作流实例</para>
+        /// <para>Stops a running workflow execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11175,7 +11490,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将held状态的任务恢复</para>
+        /// <para>Resumes a Job Execution that is in the Hold state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11225,7 +11540,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将held状态的任务恢复</para>
+        /// <para>Resumes a Job Execution that is in the Hold state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11275,7 +11590,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将held状态的任务恢复</para>
+        /// <para>Resumes a Job Execution that is in the Hold state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11293,7 +11608,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将held状态的任务恢复</para>
+        /// <para>Resumes a Job Execution that is in the Hold state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11311,7 +11626,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中held状态的节点恢复</para>
+        /// <para>Resumes a workflow execution that is on hold.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11361,7 +11676,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中held状态的节点恢复</para>
+        /// <para>Resumes a workflow execution that is on hold.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11411,7 +11726,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中held状态的节点恢复</para>
+        /// <para>Resumes a workflow execution that is on hold.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11429,7 +11744,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将工作流中held状态的节点恢复</para>
+        /// <para>Resumes a workflow execution that is on hold.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11447,7 +11762,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将skipped状态的任务恢复</para>
+        /// <para>Resumes a skipped job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11497,7 +11812,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将skipped状态的任务恢复</para>
+        /// <para>Resumes a skipped job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11547,7 +11862,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将skipped状态的任务恢复</para>
+        /// <para>Resumes a skipped job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11565,7 +11880,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将skipped状态的任务恢复</para>
+        /// <para>Resumes a skipped job execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11583,7 +11898,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Synchronizes jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11647,7 +11962,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Synchronizes jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11711,7 +12026,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Synchronizes jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11729,7 +12044,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>同步任务</para>
+        /// <para>Synchronizes jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11923,7 +12238,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新日历</para>
+        /// <para>Updates a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11985,7 +12300,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新日历</para>
+        /// <para>Updates a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12047,7 +12362,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新日历</para>
+        /// <para>Updates a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12065,7 +12380,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新日历</para>
+        /// <para>Updates a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12219,7 +12534,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源</para>
+        /// <para>Update data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12281,7 +12596,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源</para>
+        /// <para>Update data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12343,7 +12658,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源</para>
+        /// <para>Update data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12361,7 +12676,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源</para>
+        /// <para>Update data source</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12381,6 +12696,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <summary>
         /// <para>更新执行器组</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateExecutorGroupRequest
@@ -12472,6 +12795,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>更新执行器组</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateExecutorGroupRequest
         /// </param>
@@ -12562,6 +12893,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>更新执行器组</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateExecutorGroupRequest
         /// </param>
@@ -12580,6 +12919,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         /// <para>更新执行器组</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>引入增强插件</h1>
+        /// <para>在<c>pom.xml</c>文件中添加增强插件以提升Executor的能力。
+        /// <b>注意</b>：请确保该插件在pom中放置在<c>xxl-job-core</c> 依赖的<b>上方</b>。
+        /// <b>详细信息请参考</b>：<a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">插件版本说明文档</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateExecutorGroupRequest
         /// </param>
@@ -12595,8 +12942,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新执行器</para>
+        /// <para>Updates the configuration of one or more Executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to the <c>pom.xml</c> file to extend the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in the pom.xml file.
+        /// <b>For more information, see the</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateExecutorsRequest
@@ -12649,8 +13004,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新执行器</para>
+        /// <para>Updates the configuration of one or more Executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to the <c>pom.xml</c> file to extend the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in the pom.xml file.
+        /// <b>For more information, see the</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateExecutorsRequest
@@ -12703,8 +13066,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新执行器</para>
+        /// <para>Updates the configuration of one or more Executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to the <c>pom.xml</c> file to extend the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in the pom.xml file.
+        /// <b>For more information, see the</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateExecutorsRequest
@@ -12721,8 +13092,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新执行器</para>
+        /// <para>Updates the configuration of one or more Executors.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h1>Add the enhancement plugin</h1>
+        /// <para>Add the enhancement plugin to the <c>pom.xml</c> file to extend the capabilities of the Executor.
+        /// <b>Note</b>: Place this plugin <b>above</b> the <c>xxl-job-core</c> dependency in the pom.xml file.
+        /// <b>For more information, see the</b> <a href="https://help.aliyun.com/zh/schedulerx/schedulerx-xxljob/product-overview/plugin-version-description">Plugin Version Description Document</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateExecutorsRequest
@@ -12739,7 +13118,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the job information.</para>
+        /// <para>Update task details.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12891,7 +13270,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the job information.</para>
+        /// <para>Update task details.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13043,7 +13422,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the job information.</para>
+        /// <para>Update task details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13061,7 +13440,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the job information.</para>
+        /// <para>Update task details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13079,7 +13458,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务实例</para>
+        /// <para>Update task instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13133,7 +13512,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务实例</para>
+        /// <para>Update task instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13187,7 +13566,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务实例</para>
+        /// <para>Update task instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13205,7 +13584,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务实例</para>
+        /// <para>Update task instance</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13223,7 +13602,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务脚本内容</para>
+        /// <para>Updates a job script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13281,7 +13660,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务脚本内容</para>
+        /// <para>Updates a job script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13339,7 +13718,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务脚本内容</para>
+        /// <para>Updates a job script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13357,7 +13736,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务脚本内容</para>
+        /// <para>Updates a job script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13375,7 +13754,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates an existing workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13457,7 +13836,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates an existing workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13539,7 +13918,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates an existing workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13557,7 +13936,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates an existing workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13575,7 +13954,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流DAG</para>
+        /// <para>Updates a workflow\&quot;s Directed Acyclic Graph (DAG), including node coordinates and edges.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13639,7 +14018,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流DAG</para>
+        /// <para>Updates a workflow\&quot;s Directed Acyclic Graph (DAG), including node coordinates and edges.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13703,7 +14082,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流DAG</para>
+        /// <para>Updates a workflow\&quot;s Directed Acyclic Graph (DAG), including node coordinates and edges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13721,7 +14100,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流DAG</para>
+        /// <para>Updates a workflow\&quot;s Directed Acyclic Graph (DAG), including node coordinates and edges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13739,7 +14118,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换工作流DAG版本</para>
+        /// <para>Updates the Directed Acyclic Graph (DAG) version for a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13793,7 +14172,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换工作流DAG版本</para>
+        /// <para>Updates the Directed Acyclic Graph (DAG) version for a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13847,7 +14226,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换工作流DAG版本</para>
+        /// <para>Updates the Directed Acyclic Graph (DAG) version for a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13865,7 +14244,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换工作流DAG版本</para>
+        /// <para>Updates the Directed Acyclic Graph (DAG) version for a Workflow.</para>
         /// </summary>
         /// 
         /// <param name="request">

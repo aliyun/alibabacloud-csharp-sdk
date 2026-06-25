@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetWorkflowDAGPreviewRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The version of the workflow DAG.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string DagVersion { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the workflow.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

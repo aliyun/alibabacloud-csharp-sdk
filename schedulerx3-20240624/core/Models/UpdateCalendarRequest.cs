@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateCalendarRequest : TeaModel {
         /// <summary>
+        /// <para>The calendar name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string CalendarName { get; set; }
 
         /// <summary>
+        /// <para>A client-generated token that ensures request idempotence. This token must be unique for each request and be no more than 64 ASCII characters long.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D0DE9C33-992A-580B-89C4-B609A292748D</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to perform an incremental update. Default value: <c>false</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>false</c>: Replaces all existing calendar data with the data in this request, deleting configurations for any unspecified months.</para>
+        /// </description></item>
+        /// <item><description><para><c>true</c>: Updates only the data for the specified months, preserving existing configurations for all other months.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -46,6 +58,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? Incremental { get; set; }
 
         /// <summary>
+        /// <para>A JSON string that defines the days for one or more months.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +69,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Months { get; set; }
 
         /// <summary>
+        /// <para>The year.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

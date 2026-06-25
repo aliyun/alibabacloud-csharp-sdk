@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetLogEventResponseBody : TeaModel {
         /// <summary>
+        /// <para>The HTTP status code. A value of <c>200</c> indicates a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public GetLogEventResponseBodyData Data { get; set; }
         public class GetLogEventResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The page number of the returned page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public List<GetLogEventResponseBodyDataRecords> Records { get; set; }
             public class GetLogEventResponseBodyDataRecords : TeaModel {
                 /// <summary>
+                /// <para>The name of the application.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>portal-dev</para>
                 /// </summary>
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string AppName { get; set; }
 
                 /// <summary>
+                /// <para>The log content.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>hello word</para>
                 /// </summary>
@@ -68,6 +78,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Content { get; set; }
 
                 /// <summary>
+                /// <para>The severity level of the event.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>info</para>
                 /// </summary>
@@ -76,6 +88,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Event { get; set; }
 
                 /// <summary>
+                /// <para>The type of the event.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>JOB</para>
                 /// </summary>
@@ -84,6 +98,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string EventType { get; set; }
 
                 /// <summary>
+                /// <para>The job execution ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>101</para>
                 /// </summary>
@@ -92,6 +108,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string JobExecutionId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the job.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -100,6 +118,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string JobName { get; set; }
 
                 /// <summary>
+                /// <para>The time when the log was recorded. The time is in the <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-10-31 16:43:51</para>
                 /// </summary>
@@ -108,6 +128,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Time { get; set; }
 
                 /// <summary>
+                /// <para>The address of the worker that runs the job.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="mailto:030225016025_9357_60125@127.0.0.1">030225016025_9357_60125@127.0.0.1</a>:51363</para>
                 /// </summary>
@@ -116,6 +138,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string WorkerAddr { get; set; }
 
                 /// <summary>
+                /// <para>The workflow execution ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1450568762586578000</para>
                 /// </summary>
@@ -124,6 +148,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string WorkflowExecutionId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the workflow.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>工作流0001</para>
                 /// </summary>
@@ -134,6 +160,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>33</para>
             /// </summary>
@@ -144,6 +172,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message that is returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter check error</para>
         /// </summary>
@@ -152,6 +182,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique, server-generated ID for the request. This ID is used for troubleshooting purposes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</para>
         /// </summary>
@@ -160,6 +192,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

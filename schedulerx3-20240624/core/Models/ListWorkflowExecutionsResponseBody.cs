@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListWorkflowExecutionsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code. A value of <c>200</c> indicates a successful request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public ListWorkflowExecutionsResponseBodyData Data { get; set; }
         public class ListWorkflowExecutionsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries returned per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -52,6 +58,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public List<ListWorkflowExecutionsResponseBodyDataRecords> Records { get; set; }
             public class ListWorkflowExecutionsResponseBodyDataRecords : TeaModel {
                 /// <summary>
+                /// <para>The application name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test-app</para>
                 /// </summary>
@@ -60,6 +68,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string AppName { get; set; }
 
                 /// <summary>
+                /// <para>The data time of the workflow execution.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-12 14:52:42</para>
                 /// </summary>
@@ -68,6 +78,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string DataTime { get; set; }
 
                 /// <summary>
+                /// <para>The end time of the workflow execution.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-12 14:52:42</para>
                 /// </summary>
@@ -76,6 +88,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
+                /// <para>The executor ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1827811800526000</para>
                 /// </summary>
@@ -84,6 +98,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Executor { get; set; }
 
                 /// <summary>
+                /// <para>The schedule time of the workflow execution.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-11-12 14:52:42</para>
                 /// </summary>
@@ -92,6 +108,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string ScheduleTime { get; set; }
 
                 /// <summary>
+                /// <para>The start time of the workflow execution.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-11-04 01:09:27</para>
                 /// </summary>
@@ -100,6 +118,36 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
+                /// <para>The status of the workflow execution. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>0: UNKNOWN</para>
+                /// </description></item>
+                /// <item><description><para>1: WAITING</para>
+                /// </description></item>
+                /// <item><description><para>2: READY</para>
+                /// </description></item>
+                /// <item><description><para>3: RUNNING</para>
+                /// </description></item>
+                /// <item><description><para>4: SUCCESS</para>
+                /// </description></item>
+                /// <item><description><para>5: FAILED</para>
+                /// </description></item>
+                /// <item><description><para>6: PAUSED</para>
+                /// </description></item>
+                /// <item><description><para>7: SUBMITTED</para>
+                /// </description></item>
+                /// <item><description><para>8: REJECTED</para>
+                /// </description></item>
+                /// <item><description><para>9: ACCEPTED</para>
+                /// </description></item>
+                /// <item><description><para>10: PARTIAL_FAILED</para>
+                /// </description></item>
+                /// <item><description><para>11: SKIPPED</para>
+                /// </description></item>
+                /// <item><description><para>12: REMOVED</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -108,6 +156,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public int? Status { get; set; }
 
                 /// <summary>
+                /// <para>The workflow execution ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -116,6 +166,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string WorkflowExecutionId { get; set; }
 
                 /// <summary>
+                /// <para>The workflow ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -124,6 +176,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string WorkflowId { get; set; }
 
                 /// <summary>
+                /// <para>The workflow name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>myWorkflow</para>
                 /// </summary>
@@ -134,6 +188,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
+            /// <para>The total number of matching workflow executions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>65</para>
             /// </summary>
@@ -144,6 +200,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of entries to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -152,6 +210,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The response message. If the request fails, this parameter provides details about the error.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -162,6 +221,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is not returned, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
         /// </summary>
@@ -170,7 +231,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique request ID. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BAC1ADB5-EEB5-5834-93D8-522E067AF8D9</para>
@@ -180,6 +241,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

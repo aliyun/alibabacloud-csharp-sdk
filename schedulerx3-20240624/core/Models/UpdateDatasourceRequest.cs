@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateDatasourceRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Data source connection parameters</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;host&quot;:&quot;rm-bp1f03mxxxxx.mysql.rds.aliyuncs.com&quot;,&quot;port&quot;:3306,&quot;userName&quot;:&quot;test01&quot;,&quot;database&quot;:&quot;test01&quot;,&quot;other&quot;:{&quot;useSSL&quot;:&quot;false&quot;}}</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ConnectionParams { get; set; }
 
         /// <summary>
+        /// <para>DataSource ID, which can be obtained by calling the ListDatasources API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? DatasourceId { get; set; }
 
         /// <summary>
+        /// <para>Data source description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>None</para>
         /// </summary>
@@ -45,11 +51,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Datasource Name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>账单拉取-支付宝团购</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Database password</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2F9e9@a69c!e18b569c8</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListK8sResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description></description></item>
+        /// <item><description>An array of k8s resources.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Data")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public List<ListK8sResourceResponseBodyData> Data { get; set; }
         public class ListK8sResourceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the k8s resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxljob-01632622cda2f</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string ResourceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the k8s resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>q_ecs_enterprise_spot_c</para>
             /// </summary>
@@ -45,6 +51,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -53,7 +61,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ECA6FC9-7557-5576-AF5F-FC3E7BCC9C21</para>
@@ -63,6 +71,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

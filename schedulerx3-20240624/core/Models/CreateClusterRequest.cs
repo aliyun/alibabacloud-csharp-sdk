@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The billing type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
         /// </summary>
@@ -18,24 +20,30 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ChargeType { get; set; }
 
         /// <summary>
+        /// <para>The name of the cluster.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>qianxi-test-0812</para>
         /// </summary>
         [NameInMap("ClusterName")]
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>scx.dev.x1</para>
+        /// <para>The cluster specification. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>scx.dev.x1</description></item>
+        /// <item><description>scx.small.x1</description></item>
+        /// <item><description>scx.small.x2</description></item>
+        /// <item><description>scx.medium.x1</description></item>
+        /// <item><description>scx.medium.x2.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ClusterSpec")]
         [Validation(Required=false)]
         public string ClusterSpec { get; set; }
 
         /// <summary>
+        /// <para>The cluster type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? ClusterType { get; set; }
 
         /// <summary>
+        /// <para>The duration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -52,14 +62,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>xxljob</para>
+        /// <para>The engine type. Valid values: xxljob.</para>
         /// </summary>
         [NameInMap("EngineType")]
         [Validation(Required=false)]
         public string EngineType { get; set; }
 
         /// <summary>
+        /// <para>The pricing cycle.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Year</para>
         /// </summary>
@@ -67,35 +78,55 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string PricingCycle { get; set; }
 
+        /// <summary>
+        /// <para>The source.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>schedulerx</para>
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        /// <summary>
+        /// <para>The list of tags. A maximum of 20 tags are supported.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateClusterRequestTag> Tag { get; set; }
         public class CreateClusterRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The information about the vSwitches.</para>
+        /// </summary>
         [NameInMap("VSwitches")]
         [Validation(Required=false)]
         public List<CreateClusterRequestVSwitches> VSwitches { get; set; }
         public class CreateClusterRequestVSwitches : TeaModel {
             /// <summary>
-            /// <b>Example:</b>
-            /// <para>vsw-2ze745n3r2sfqtahhubpl</para>
+            /// <para>The ID of the vSwitch.</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <b>Example:</b>
-            /// <para>cn-hangzhou-j</para>
+            /// <para>The zone ID of the vSwitch.</para>
             /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
@@ -104,10 +135,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
-        /// <para>VPC id</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vpc-aa1a18236n90rqhuhhnhh</para>
+        /// <para>The ID of the VPC.</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

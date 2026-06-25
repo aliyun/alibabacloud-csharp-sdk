@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateExecutorsRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The Worker type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>k8s_service</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string WorkerType { get; set; }
 
         /// <summary>
+        /// <para>A JSON-formatted string that contains a list of Workers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</para>
         /// </summary>

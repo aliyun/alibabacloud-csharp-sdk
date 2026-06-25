@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class DeleteDatasourceRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>DataSource ID, which can be obtained by invoking the ListDatasources API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

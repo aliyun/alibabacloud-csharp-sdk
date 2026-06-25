@@ -17,11 +17,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetPageLogResponseBodyData Data { get; set; }
@@ -42,11 +37,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public int? PageSize { get; set; }
 
-            /// <summary>
-            /// <list type="bullet">
-            /// <item><description></description></item>
-            /// </list>
-            /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<GetPageLogResponseBodyDataRecords> Records { get; set; }
@@ -128,8 +118,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>5EF879D0-3B43-5AD1-9BF7-52418F9C5E73</para>
         /// </summary>

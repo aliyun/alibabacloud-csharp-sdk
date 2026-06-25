@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetAppResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description></description></item>
+        /// <item><description>The details of the application.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Data")]
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public GetAppResponseBodyData Data { get; set; }
         public class GetAppResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>AccessToken。</para>
+            /// <para>The access token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2f4ddeab8e344ed68e0402cf9b8502ffv3</para>
@@ -37,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string AccessToken { get; set; }
 
             /// <summary>
+            /// <para>The application name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-app</para>
             /// </summary>
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The application type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? AppType { get; set; }
 
             /// <summary>
+            /// <para>The creator of the application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>18582193685027xx</para>
             /// </summary>
@@ -61,6 +69,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether logging is enabled.</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>true</c>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -69,6 +85,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public bool? EnableLog { get; set; }
 
             /// <summary>
+            /// <para>The number of executors.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -77,6 +95,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public long? ExecutorNum { get; set; }
 
             /// <summary>
+            /// <para>The primary key ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3402</para>
             /// </summary>
@@ -85,6 +105,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public long? Id { get; set; }
 
             /// <summary>
+            /// <para>The number of jobs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -97,6 +119,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? LabelRouteStrategy { get; set; }
 
             /// <summary>
+            /// <para>The leader address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://28.***.***.3:80">http://28.***.***.3:80</a></para>
             /// </summary>
@@ -105,6 +129,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Leader { get; set; }
 
             /// <summary>
+            /// <para>The maximum concurrency.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -113,6 +139,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? MaxConcurrency { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of jobs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -120,11 +148,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public int? MaxJobs { get; set; }
 
+            /// <summary>
+            /// <para>The title of the application.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试应用</para>
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>The last user to update the application.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>18582193685027xx</para>
             /// </summary>
@@ -135,6 +171,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Not found: appName not found.</para>
         /// </summary>
@@ -143,6 +181,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the request, generated by Alibaba Cloud. Use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D0DE9C33-992A-580B-89C4-B609A292748D</para>
         /// </summary>
@@ -151,6 +191,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

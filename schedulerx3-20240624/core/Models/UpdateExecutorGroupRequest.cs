@@ -54,7 +54,6 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

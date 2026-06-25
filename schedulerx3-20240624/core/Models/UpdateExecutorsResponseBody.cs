@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateExecutorsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description></description></item>
+        /// <item><description>The returned data.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Data")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public UpdateExecutorsResponseBodyData Data { get; set; }
         public class UpdateExecutorsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Application Group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public long? AppGroupId { get; set; }
 
             /// <summary>
+            /// <para>The Application type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? AppType { get; set; }
 
             /// <summary>
+            /// <para>The Kubernetes services that failed to import.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</para>
             /// </summary>
@@ -51,6 +59,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string FailedService { get; set; }
 
             /// <summary>
+            /// <para>The Worker ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? WorkId { get; set; }
 
             /// <summary>
+            /// <para>The Worker type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>k8s_service</para>
             /// </summary>
@@ -67,6 +79,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string WorkerType { get; set; }
 
             /// <summary>
+            /// <para>A JSON-formatted string that contains a list of Workers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[{&quot;cluster&quot;:&quot;xxxxx&quot;,&quot;namespace&quot;:&quot;xxxxx&quot;,&quot;service&quot;:&quot;xxxxx&quot;}]</para>
             /// </summary>
@@ -77,6 +91,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The returned error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -85,7 +101,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3835AA29-2298-5434-BC53-9CC377CDFD2C</para>
@@ -95,6 +111,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

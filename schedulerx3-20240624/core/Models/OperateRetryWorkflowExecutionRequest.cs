@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateRetryWorkflowExecutionRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Set to <c>true</c> to rerun only failed nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? OnlyFailed { get; set; }
 
         /// <summary>
+        /// <para>The workflow execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

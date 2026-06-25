@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetWorkflowResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public GetWorkflowResponseBodyData Data { get; set; }
         public class GetWorkflowResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The application name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-app</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The custom calendar.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workday</para>
             /// </summary>
@@ -43,6 +49,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Calendar { get; set; }
 
             /// <summary>
+            /// <para>The user who created the workflow.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>18582193685027xx</para>
             /// </summary>
@@ -51,6 +59,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The workflow description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my first workflow</para>
             /// </summary>
@@ -59,6 +69,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The maximum concurrency.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -67,6 +79,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? MaxConcurrency { get; set; }
 
             /// <summary>
+            /// <para>The workflow name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>myWorkflow</para>
             /// </summary>
@@ -75,6 +89,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The workflow status.</para>
+            /// <list type="bullet">
+            /// <item><description><para>0: disabled</para>
+            /// </description></item>
+            /// <item><description><para>1: enabled</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -83,6 +105,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>The time expression. The value of this parameter depends on the schedule type.</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>None</b>: No expression is required.</para>
+            /// </description></item>
+            /// <item><description><para><b>cron</b>: A standard cron expression.</para>
+            /// </description></item>
+            /// <item><description><para><b>API</b>: No expression is required.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0 0 12 * * ?</para>
             /// </summary>
@@ -91,6 +123,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string TimeExpression { get; set; }
 
             /// <summary>
+            /// <para>The schedule type.</para>
+            /// <list type="bullet">
+            /// <item><description><para>-1: None</para>
+            /// </description></item>
+            /// <item><description><para>1: cron</para>
+            /// </description></item>
+            /// <item><description><para>100: API</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -99,6 +141,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? TimeType { get; set; }
 
             /// <summary>
+            /// <para>The time zone.</para>
+            /// <remarks>
+            /// <para>If this parameter is omitted, the time zone of the server in the current region is used.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>GMT+8</para>
             /// </summary>
@@ -107,6 +154,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Timezone { get; set; }
 
             /// <summary>
+            /// <para>The user who last updated the workflow.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>18582193685027xx</para>
             /// </summary>
@@ -115,6 +164,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Updater { get; set; }
 
             /// <summary>
+            /// <para>The workflow ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -123,6 +174,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public long? WorkflowId { get; set; }
 
             /// <summary>
+            /// <para>The extended attributes.</para>
+            /// <remarks>
+            /// <para>This parameter is not supported.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -133,6 +189,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -141,6 +199,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request. This ID is unique to each request. You can use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>27B1345D-5F71-5972-8E4C-AABA6C6232F0</para>
         /// </summary>
@@ -149,6 +209,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

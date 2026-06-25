@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetLogRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-app</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end time. This value is a UNIX timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1721636220</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The job execution ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1310630367761285120</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobExecutionId { get; set; }
 
         /// <summary>
+        /// <para>The keyword to search for.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hello word</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The log level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>INFO</para>
         /// </summary>
@@ -60,7 +71,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>LineNum</para>
+        /// <para>The number of log entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -70,6 +81,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? LineNum { get; set; }
 
         /// <summary>
+        /// <para>The log ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>344008</para>
         /// </summary>
@@ -78,6 +91,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? LogId { get; set; }
 
         /// <summary>
+        /// <para>The offset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -86,6 +101,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Offset { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to sort the results in descending order.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: sorts the results in descending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: sorts the results in ascending order.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
+        /// <para>The time when the job was scheduled. This value is a UNIX timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-10-01 12:00:00</para>
         /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? ScheduleTime { get; set; }
 
         /// <summary>
+        /// <para>The start time. This value is a UNIX timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1721636220</para>
         /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The worker address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.168.1.100</para>
         /// </summary>

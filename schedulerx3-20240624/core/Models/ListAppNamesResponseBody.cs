@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListAppNamesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public List<ListAppNamesResponseBodyData> Data { get; set; }
         public class ListAppNamesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the application group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-app</para>
             /// </summary>
@@ -33,6 +37,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string AppGroupId { get; set; }
 
             /// <summary>
+            /// <para>The application name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-app</para>
             /// </summary>
@@ -41,6 +47,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string AppName { get; set; }
 
             /// <summary>
+            /// <para>The app type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? AppType { get; set; }
 
             /// <summary>
+            /// <para>The unique identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>15</para>
             /// </summary>
@@ -56,11 +66,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>The application title.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试应用</para>
+            /// </summary>
             [NameInMap("Title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
+            /// <para>The registry type for manually registered workers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>k8s_service</para>
             /// </summary>
@@ -71,6 +89,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -79,6 +99,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID. Use this ID for troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3881C59F-59F1-5B2E-8110-7D689CA9B207</para>
         /// </summary>
@@ -87,6 +109,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates if the request succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

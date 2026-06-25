@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListLablesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,15 +20,15 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The returned list of labels.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListLablesResponseBodyData> Data { get; set; }
         public class ListLablesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the label is designated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -35,6 +37,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public bool? IsDesignated { get; set; }
 
             /// <summary>
+            /// <para>The label.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gray</para>
             /// </summary>
@@ -43,6 +47,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Label { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Executor is online.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -51,6 +57,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public bool? Online { get; set; }
 
             /// <summary>
+            /// <para>The number of machines with this label.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -61,6 +69,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter check error</para>
         /// </summary>
@@ -69,6 +79,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>A unique identifier for the request. Use this ID to troubleshoot issues.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9079A828-9138-50F1-801E-F2BC3D222A06</para>
         /// </summary>
@@ -77,6 +89,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

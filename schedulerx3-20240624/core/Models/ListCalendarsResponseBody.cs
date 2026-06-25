@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListCalendarsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description></description></item>
+        /// <item><description>The returned data.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Data")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public ListCalendarsResponseBodyData Data { get; set; }
         public class ListCalendarsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The maximum number of entries returned per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
+            /// <para>The token for the next page of results. If this parameter is not returned, all results have been retrieved.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>eCKqVlS5FKF5EWGGOo8EgQ==</para>
             /// </summary>
@@ -42,11 +48,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
+            /// <summary>
+            /// <para>A list of calendars.</para>
+            /// </summary>
             [NameInMap("Records")]
             [Validation(Required=false)]
             public List<ListCalendarsResponseBodyDataRecords> Records { get; set; }
             public class ListCalendarsResponseBodyDataRecords : TeaModel {
                 /// <summary>
+                /// <para>The name of the calendar.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>workday</para>
                 /// </summary>
@@ -55,6 +66,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string CalendarName { get; set; }
 
                 /// <summary>
+                /// <para>A JSON string that represents an array of months and their corresponding days.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[
                 ///   {&quot;month&quot;:1,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
@@ -76,6 +89,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public string Months { get; set; }
 
                 /// <summary>
+                /// <para>The year.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025</para>
                 /// </summary>
@@ -86,6 +101,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -96,6 +113,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -104,7 +123,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3835AA29-2298-5434-BC53-9CC377CDFD2C</para>
@@ -114,6 +133,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class CreateAppRequest : TeaModel {
         /// <summary>
+        /// <para>The access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ltk1ZXHv6LvibZypFkPHzRA</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AccessToken { get; set; }
 
         /// <summary>
+        /// <para>The app name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The app type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? AppType { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether to enable logging.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -53,11 +61,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public bool? EnableLog { get; set; }
 
+        /// <summary>
+        /// <para>The label routing strategy.</para>
+        /// </summary>
         [NameInMap("LabelRouteStrategy")]
         [Validation(Required=false)]
         public int? LabelRouteStrategy { get; set; }
 
         /// <summary>
+        /// <para>The maximum concurrency.</para>
+        /// <remarks>
+        /// <para>This parameter specifies the maximum number of task instances that can run concurrently for the app. Task instances that exceed this limit are not discarded. They are queued for execution.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -66,7 +82,11 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? MaxConcurrency { get; set; }
 
         /// <summary>
+        /// <para>The title of the app.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

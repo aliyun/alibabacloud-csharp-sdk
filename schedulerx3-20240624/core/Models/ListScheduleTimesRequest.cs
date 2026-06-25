@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListScheduleTimesRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The name of the calendar to use for scheduling, such as a business day calendar.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workday</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Calendar { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The time expression, such as a cron expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string TimeExpression { get; set; }
 
         /// <summary>
+        /// <para>The time type. The only supported type is cron.</para>
+        /// <list type="bullet">
+        /// <item><description>1: cron</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +67,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? TimeType { get; set; }
 
         /// <summary>
+        /// <para>The time zone used to evaluate the time expression.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Asia/Beijing</para>
         /// </summary>

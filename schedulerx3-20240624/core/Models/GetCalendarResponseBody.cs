@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class GetCalendarResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -19,7 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description></description></item>
+        /// <item><description>The data returned.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Data")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public GetCalendarResponseBodyData Data { get; set; }
         public class GetCalendarResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The name of the calendar.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workday</para>
             /// </summary>
@@ -35,6 +39,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string CalendarName { get; set; }
 
             /// <summary>
+            /// <para>A JSON string that represents an array of objects. Each object specifies the days for a particular month.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[
             ///   {&quot;month&quot;:1,&quot;days&quot;:[1,2,3,6,7,8,9,10,13,14,15,16,17,20,21,22,23,24,27,28,29,30,31]},
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             public string Months { get; set; }
 
             /// <summary>
+            /// <para>The year.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2030</para>
             /// </summary>
@@ -66,6 +74,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter error: content is null.</para>
         /// </summary>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</para>
@@ -84,6 +94,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

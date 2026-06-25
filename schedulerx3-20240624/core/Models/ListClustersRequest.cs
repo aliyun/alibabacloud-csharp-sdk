@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class ListClustersRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxljob-d6a5243b6fa</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The cluster name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cluster-test</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? ClusterType { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -42,6 +48,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page for paginated queries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

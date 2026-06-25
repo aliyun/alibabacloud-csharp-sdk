@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class OperateRetryJobExecutionShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The Application Name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The Cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The Job Execution ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,10 +42,19 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string JobExecutionId { get; set; }
 
+        /// <summary>
+        /// <para>A list of Sub-task execution IDs for a Broadcast Sharding Job.</para>
+        /// <remarks>
+        /// <para>To retry a specific Sub-task of a Broadcast Sharding Job, set this parameter to the execution ID of that Sub-task.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("TaskList")]
         [Validation(Required=false)]
         public string TaskListShrink { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to trigger downstream jobs.</para>
+        /// </summary>
         [NameInMap("TriggerChild")]
         [Validation(Required=false)]
         public bool? TriggerChild { get; set; }

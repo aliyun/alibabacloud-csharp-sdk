@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class UpdateWorkflowDAGRequest : TeaModel {
         /// <summary>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,17 +32,23 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The directed acyclic graph (DAG) of the workflow.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Dag")]
         [Validation(Required=false)]
         public UpdateWorkflowDAGRequestDag Dag { get; set; }
         public class UpdateWorkflowDAGRequestDag : TeaModel {
+            /// <summary>
+            /// <para>A list of edges in the workflow.</para>
+            /// </summary>
             [NameInMap("Edges")]
             [Validation(Required=false)]
             public List<UpdateWorkflowDAGRequestDagEdges> Edges { get; set; }
             public class UpdateWorkflowDAGRequestDagEdges : TeaModel {
                 /// <summary>
+                /// <para>The job ID of the source node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 public long? Source { get; set; }
 
                 /// <summary>
+                /// <para>The job ID of the target node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -58,11 +68,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
             }
 
+            /// <summary>
+            /// <para>A list of nodes in the workflow.</para>
+            /// </summary>
             [NameInMap("Nodes")]
             [Validation(Required=false)]
             public List<UpdateWorkflowDAGRequestDagNodes> Nodes { get; set; }
             public class UpdateWorkflowDAGRequestDagNodes : TeaModel {
                 /// <summary>
+                /// <para>The logical expression of the node.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{
                 ///     &quot;logicType&quot;: &quot;status_branch&quot;,
@@ -122,11 +137,16 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
+                /// <summary>
+                /// <para>The coordinates of the node.</para>
+                /// </summary>
                 [NameInMap("Coordinate")]
                 [Validation(Required=false)]
                 public UpdateWorkflowDAGRequestDagNodesCoordinate Coordinate { get; set; }
                 public class UpdateWorkflowDAGRequestDagNodesCoordinate : TeaModel {
                     /// <summary>
+                    /// <para>Optional. The height of the node.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
                     /// </summary>
@@ -135,6 +155,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? Height { get; set; }
 
                     /// <summary>
+                    /// <para>Optional. The width of the node.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
                     /// </summary>
@@ -143,6 +165,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? Width { get; set; }
 
                     /// <summary>
+                    /// <para>The x-coordinate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
                     /// </summary>
@@ -151,6 +175,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                     public float? X { get; set; }
 
                     /// <summary>
+                    /// <para>The y-coordinate.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
                     /// </summary>
@@ -161,6 +187,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 }
 
                 /// <summary>
+                /// <para>The job ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -173,6 +201,8 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         }
 
         /// <summary>
+        /// <para>The version of the DAG. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/465989.html">ListDAGVersions</a> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1137005</para>
         /// </summary>
@@ -181,6 +211,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string DagVersion { get; set; }
 
         /// <summary>
+        /// <para>The workflow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

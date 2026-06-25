@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 {
     public class SyncJobsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>A list of job IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JobIds")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string JobIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The name of the source application that contains the jobs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string OriginalAppName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the source cluster that contains the jobs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string OriginalClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +51,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         public string TargetAppName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the destination cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
