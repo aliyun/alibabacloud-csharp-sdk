@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UnbindNlbResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: Client error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: Server error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public UnbindNlbResponseBodyData Data { get; set; }
         public class UnbindNlbResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the change order. The ID can be used to query the status of the change task.</para>
+            /// <para>The change order ID. Use this ID to check the task\&quot;s execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ba386059-69b1-4e65-b1e5-0682d9fa****</para>
@@ -45,10 +49,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The status code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> section of this topic.</description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is returned if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -56,10 +62,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +78,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -80,10 +88,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the internal-facing or Internet-facing NLB instance was disassociated. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The NLB instance was disassociated.</description></item>
-        /// <item><description><b>false</b>: The NLB instance failed to be disassociated.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The trace ID for the request. Use this ID to query request details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a981dd515966966104121683d****</para>

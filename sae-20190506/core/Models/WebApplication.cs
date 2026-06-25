@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The time when the application was created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-07-11 15:54:49</para>
+        /// <para>2024-07-17T06:12:17Z</para>
         /// </summary>
         [NameInMap("CreatedTime")]
         [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The time when the application was last modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2019-07-11 20:12:58</para>
+        /// <para>2024-07-17T06:12:18Z</para>
         /// </summary>
         [NameInMap("LastModifiedTime")]
         [Validation(Required=false)]

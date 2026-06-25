@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b> indicates that the request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b> indicates that the request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b> indicates that a client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b> indicates that a server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyData Data { get; set; }
         public class ListTagResourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.</para>
+            /// <para>The token that is used to retrieve the next page of results. A query returns a maximum of 50 results. If the results are truncated, you can use this token in a subsequent request to retrieve the next page of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The mapping relationships between applications and tags.</para>
+            /// <para>The list of tags and their associated resources.</para>
             /// </summary>
             [NameInMap("TagResources")]
             [Validation(Required=false)]
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource. Valid value: <c>application</c>.</para>
+                /// <para>The type of the resource. The value is fixed as <c>application</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::SAE::APPLICATION</para>
@@ -94,10 +98,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>This parameter is returned only if the request fails.</para>
+        /// </description></item>
+        /// <item><description><para>For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -105,10 +111,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The message returned for the request.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,10 +137,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the mapping relationships between applications and tags were queried. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The mapping relationships were queried.</description></item>
-        /// <item><description><b>false</b>: The mapping relationships failed to be queried.</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -143,7 +153,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID that is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc5f84e15916043198032146d****</para>

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAppEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code returned for the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: Client error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: Server error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,25 +30,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The events.</para>
+        /// <para>The event list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListAppEventsResponseBodyData Data { get; set; }
         public class ListAppEventsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The events.</para>
+            /// <para>An array of application events.</para>
             /// </summary>
             [NameInMap("AppEventEntity")]
             [Validation(Required=false)]
             public List<ListAppEventsResponseBodyDataAppEventEntity> AppEventEntity { get; set; }
             public class ListAppEventsResponseBodyDataAppEventEntity : TeaModel {
+                /// <summary>
+                /// <para>The cause analysis.</para>
+                /// </summary>
                 [NameInMap("CauseAnalysis")]
                 [Validation(Required=false)]
                 public string CauseAnalysis { get; set; }
 
                 /// <summary>
-                /// <para>The type of the event. Valid values:</para>
+                /// <para>The event type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Normal</para>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the first occurrence of the event.</para>
+                /// <para>The timestamp of the event\&quot;s first occurrence.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-02-19T05:01:28Z</para>
@@ -64,7 +71,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string FirstTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the last occurrence of the event.</para>
+                /// <para>The timestamp of the event\&quot;s last occurrence.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-02-19T05:01:28Z</para>
@@ -74,7 +81,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string LastTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The information about the event.</para>
+                /// <para>The event message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Created container</para>
@@ -84,7 +91,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The type of the object.</para>
+                /// <para>The object kind.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Pod</para>
@@ -94,7 +101,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ObjectKind { get; set; }
 
                 /// <summary>
-                /// <para>The name of the object.</para>
+                /// <para>The object name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-2****</para>
@@ -104,7 +111,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ObjectName { get; set; }
 
                 /// <summary>
-                /// <para>The cause of the event.</para>
+                /// <para>The reason for the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Created</para>
@@ -116,7 +123,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -136,7 +143,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of events that occurred in an application.</para>
+            /// <para>The total count of application events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -148,10 +155,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the call failed. Take note of the following rules:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</description></item>
+        /// <item><description><para>If the request is successful, the <b>ErrorCode</b> parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error Codes</b> section.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -159,7 +168,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Additional information about the request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -179,10 +188,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the events that occurred in the application were queried. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The events were queried.</description></item>
-        /// <item><description><b>false</b>: The events failed to be queried.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

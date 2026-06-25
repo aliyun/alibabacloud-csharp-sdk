@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateIngressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code or the error code. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurs.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Responses.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -45,24 +49,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>Error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, no <b>ErrorCode</b> fields are returned.</description></item>
-        /// <item><description>Request failed: <b>ErrorCode</b> fields are returned. For more information, see <b>Error codes</b>.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>success</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>The error message returned because the request is normal and <b>success</b> is returned.</description></item>
-        /// <item><description>If the request is abnormal, the specific exception error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,8 +90,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the routing rule was created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The ConfigMap was created.</description></item>
-        /// <item><description><b>false</b>: The ConfigMap failed to be created.</description></item>
+        /// <item><description><para><b>true</b>: The routing rule was created.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The routing rule failed to be created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. This parameter is used to query the exact call information.</para>
+        /// <para>The trace ID that is used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

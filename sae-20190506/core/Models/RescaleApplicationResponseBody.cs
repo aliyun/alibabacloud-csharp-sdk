@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The call was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The call failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,12 +51,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code returned if the request failed. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</para>
+        /// </description></item>
+        /// <item><description><para>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -81,8 +84,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the application is successfully scaled. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

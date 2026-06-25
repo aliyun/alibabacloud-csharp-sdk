@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateNamespaceSlsConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The short ID of the namespace. No need to specify a region ID. We recommend configuring this parameter.</para>
+        /// <para>The short ID of the namespace. You do not need to include the region. This parameter is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID.</para>
+        /// <para>The ID of the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
@@ -30,22 +30,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The logging configurations of Simple Log Service.</para>
+        /// <para>The configuration for collecting logs to SLS.</para>
         /// <list type="bullet">
-        /// <item><description><c>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</c>: Simple Log Service resources automatically created by Serverless App Engine (SAE) are used.</description></item>
-        /// <item><description>To use custom Simple Log Service resources, set this parameter to <c>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</c>.</description></item>
+        /// <item><description><para>To use an SLS resource that is automatically created by SAE: <c>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To use a custom SLS resource: <c>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</c>.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Take note of the following subparameters:</para>
+        /// <para>The parameters are described as follows:</para>
         /// <list type="bullet">
-        /// <item><description><b>projectName</b>: the name of the Simple Log Service project.</description></item>
-        /// <item><description><b>logDir</b>: the path in which logs are stored.</description></item>
-        /// <item><description><b>logType</b>: the log type. <b>stdout</b> indicates the standard output (stdout) logs of the container. You can specify only one stdout value for this parameter. If not specified, file logs are collected.</description></item>
-        /// <item><description><b>logstoreName</b>: the name of the Logstore in Simple Log Service.</description></item>
-        /// <item><description><b>logtailName</b>: the name of the Logtail in Simple Log Service. If not specified, a new Logtail is created.</description></item>
+        /// <item><description><para><c>projectName</c>: The name of the SLS project.</para>
+        /// </description></item>
+        /// <item><description><para><c>logDir</c>: The log path.</para>
+        /// </description></item>
+        /// <item><description><para><c>logType</c>: The log type. A value of <c>stdout</c> specifies container standard output logs. You can specify only one <c>stdout</c> configuration. If you do not set this parameter, file logs are collected.</para>
+        /// </description></item>
+        /// <item><description><para><c>logstoreName</c>: The name of the SLS logstore.</para>
+        /// </description></item>
+        /// <item><description><para><c>logtailName</c>: The name of the Logtail. If you do not specify this parameter, a new Logtail is created.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If logging configuration changes are not needed during job template deployment, specify <b>SlsConfigs</b> only in the first request. Omit this parameter in later requests. To stop using Simple Log Service, leave <b>SlsConfigs</b> empty.</para>
+        /// <para>If the SLS configuration remains the same across deployments, you can omit this parameter. To disable log collection to SLS, set the value of <c>SlsConfigs</c> to an empty string (&quot;&quot;).</para>
         /// <remarks>
-        /// <para>Projects automatically created by SAE for job templates are deleted when their corresponding job templates are deleted. Therefore, you should not select an existing SAE-created project for log collection.</para>
+        /// <para>SAE automatically deletes a project when you delete the task template used to create it. Therefore, when you select an existing project, do not select a project that was automatically created by SAE.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,6 +62,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string SlsConfigs { get; set; }
 
+        /// <summary>
+        /// <para>The SLS log tags.</para>
+        /// </summary>
         [NameInMap("SlsLogEnvTags")]
         [Validation(Required=false)]
         public string SlsLogEnvTags { get; set; }

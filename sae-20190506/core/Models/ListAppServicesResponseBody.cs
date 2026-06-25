@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAppServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned. Valid values:</para>
+        /// <para>The HTTP status code or a POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the microservice.</para>
+        /// <para>The list of services.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAppServicesResponseBodyData> Data { get; set; }
         public class ListAppServicesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The application ID.</para>
+            /// <para>The app ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0099b7be-5f5b-4512-a7fc-56049ef1****</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The name of the app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo-app</para>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The number of instances of the microservice.</para>
+            /// <para>The number of instances of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string InstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the namespace to which the application belongs.</para>
+            /// <para>The ID of the namespace that contains the app.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing:test</para>
@@ -74,18 +78,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
             /// <summary>
             /// <para>The name of the namespace.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test namespace</para>
             /// </summary>
             [NameInMap("NamespaceName")]
             [Validation(Required=false)]
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The registry type. Valid values:</para>
+            /// <para>The type of the service registry. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>：SAE Nacos</description></item>
-            /// <item><description><b>1</b>: SAE built-in Nacos</description></item>
-            /// <item><description><b>2</b>: MSE Nacos</description></item>
-            /// <item><description><b>9</b>: SAE Kubernets service</description></item>
+            /// <item><description><para><b>0</b>: SAE Nacos</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: self-managed registry</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: MSE Nacos</para>
+            /// </description></item>
+            /// <item><description><para><b>9</b>: SAE K8s Service</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +107,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RegistryType { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the security groups.</para>
+            /// <para>The security group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-wz969ngg2e49q5i4****</para>
@@ -106,7 +117,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The group to which the microservice belongs.</para>
+            /// <para>The service group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT_GROUP</para>
@@ -116,7 +127,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ServiceGroup { get; set; }
 
             /// <summary>
-            /// <para>The name of the microservice.</para>
+            /// <para>The name of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>frontend</para>
@@ -126,21 +137,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The ports and protocols.</para>
+            /// <para>A map of ports and protocols.</para>
             /// </summary>
             [NameInMap("ServicePortAndProtocol")]
             [Validation(Required=false)]
             public Dictionary<string, string> ServicePortAndProtocol { get; set; }
 
             /// <summary>
-            /// <para>The list of ports.</para>
+            /// <para>A list of ports.</para>
             /// </summary>
             [NameInMap("ServicePorts")]
             [Validation(Required=false)]
             public List<int?> ServicePorts { get; set; }
 
             /// <summary>
-            /// <para>The protocol used by the microservice.</para>
+            /// <para>The protocol used by the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -150,12 +161,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ServiceProtocol { get; set; }
 
             /// <summary>
-            /// <para>The type of the microservice. Valid values:</para>
+            /// <para>The type of the service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>dubbo</b></description></item>
-            /// <item><description><b>springCloud</b></description></item>
-            /// <item><description><b>hsf</b></description></item>
-            /// <item><description><b>k8sService</b></description></item>
+            /// <item><description><para><b>dubbo</b></para>
+            /// </description></item>
+            /// <item><description><para><b>springCloud</b></para>
+            /// </description></item>
+            /// <item><description><para><b>hsf</b></para>
+            /// </description></item>
+            /// <item><description><para><b>k8sService</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +181,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The version of the microservice.</para>
+            /// <para>The version of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -178,10 +193,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The status code. Valid values:</para>
+        /// <para>The error code. This parameter is returned only if the request fails. For more information, see the <b>Error codes</b> section.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>Successful requests do not return the <b>ErrorCode</b> field.</para>
+        /// </description></item>
+        /// <item><description><para>Failed requests return the <b>ErrorCode</b> field. For more information, see the <b>error code</b> list in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -189,10 +206,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned. Valid values:</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -213,10 +232,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><para><b>true</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -227,7 +248,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The trace ID. You can use this ID to query the details of a call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

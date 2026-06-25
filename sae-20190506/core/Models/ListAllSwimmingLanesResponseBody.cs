@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAllSwimmingLanesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The interface status or POP error code. Valid values:</para>
+        /// <para>The HTTP status code returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: Redirection.</description></item>
-        /// <item><description><b>4xx</b>: Request error.</description></item>
-        /// <item><description><b>5xx</b>: Server error.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,24 +30,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The output parameters of the node.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAllSwimmingLanesResponseBodyData> Data { get; set; }
         public class ListAllSwimmingLanesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Apply ingress rules.</para>
+            /// <para>The application entry rule.</para>
             /// </summary>
             [NameInMap("AppEntryRule")]
             [Validation(Required=false)]
             public ListAllSwimmingLanesResponseBodyDataAppEntryRule AppEntryRule { get; set; }
             public class ListAllSwimmingLanesResponseBodyDataAppEntryRule : TeaModel {
                 /// <summary>
-                /// <para>Logical connectors between conditions:</para>
+                /// <para>The logical operator used to join conditions:</para>
                 /// <list type="bullet">
-                /// <item><description>AND: All conditions are met at the same time.</description></item>
-                /// <item><description>OR: Any condition is met.</description></item>
+                /// <item><description><para>AND: All conditions must be met.</para>
+                /// </description></item>
+                /// <item><description><para>OR: One of the conditions must be met.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ConditionJoiner { get; set; }
 
                 /// <summary>
-                /// <para>The matching condition.</para>
+                /// <para>The matching conditions.</para>
                 /// </summary>
                 [NameInMap("Conditions")]
                 [Validation(Required=false)]
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the parameter.</para>
+                    /// <para>The parameter type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Header</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The match value.</para>
+                    /// <para>The value to match in the condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>g1</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Value { get; set; }
 
                     /// <summary>
-                    /// <para>The match value of the condition.</para>
+                    /// <para>The values to match in the condition.</para>
                     /// </summary>
                     [NameInMap("Values")]
                     [Validation(Required=false)]
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>Whether to enable proportional grayscale.</para>
+                /// <para>Indicates whether to enable canary release by percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -120,14 +126,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? IndependentPercentageEnable { get; set; }
 
                 /// <summary>
-                /// <para>The request path.</para>
+                /// <para>The request paths.</para>
                 /// </summary>
                 [NameInMap("Paths")]
                 [Validation(Required=false)]
                 public List<string> Paths { get; set; }
 
                 /// <summary>
-                /// <para>The traffic ratio. Valid values: 0 to 100.</para>
+                /// <para>The percentage of traffic (0-100) to be routed when the route by percentage model is used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -137,7 +143,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Percentage { get; set; }
 
                 /// <summary>
-                /// <para>Traffic matching.</para>
+                /// <para>A map of paths to their corresponding traffic percentages.</para>
                 /// </summary>
                 [NameInMap("PercentageByPath")]
                 [Validation(Required=false)]
@@ -146,14 +152,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The associated application.</para>
+            /// <para>The applications associated with the swimming lane.</para>
             /// </summary>
             [NameInMap("Apps")]
             [Validation(Required=false)]
             public List<ListAllSwimmingLanesResponseBodyDataApps> Apps { get; set; }
             public class ListAllSwimmingLanesResponseBodyDataApps : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8ea0c468-8165-416d-beae-531abb******</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the application.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -173,7 +179,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string AppName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the MSE instance.</para>
+                /// <para>The MSE instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mse-cn-53y49******</para>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MseAppId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the MSE instance.</para>
+                /// <para>The MSE instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sae-test</para>
@@ -193,10 +199,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MseAppName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the namespace to which the MSE instance belongs.</para>
+                /// <para>The ID of the namespace in which the MSE instance resides.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>space</para>
+                /// <para>sae-ent</para>
                 /// </summary>
                 [NameInMap("MseNamespaceId")]
                 [Validation(Required=false)]
@@ -205,10 +211,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>Full-link Grayscale Mode:</para>
+            /// <para>The canary model for the end-to-end canary release:</para>
             /// <list type="bullet">
-            /// <item><description>0: The request is routed based on the content of the request.</description></item>
-            /// <item><description>1: Proportional routing</description></item>
+            /// <item><description><para>0: Route by request content.</para>
+            /// </description></item>
+            /// <item><description><para>1: Route by percentage.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -219,10 +227,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? CanaryModel { get; set; }
 
             /// <summary>
-            /// <para>Lane status:</para>
+            /// <para>Indicates whether the swimming lane is enabled.</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled</description></item>
-            /// <item><description>false: disabled</description></item>
+            /// <item><description><para>true: enabled</para>
+            /// </description></item>
+            /// <item><description><para>false: disabled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -233,7 +243,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>Whether the traffic rule is enabled.</para>
+            /// <para>Indicates whether traffic rules are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -243,7 +253,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? EnableRules { get; set; }
 
             /// <summary>
-            /// <para>The ID of the lane.</para>
+            /// <para>The swimming lane ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16401</para>
@@ -253,7 +263,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? LaneId { get; set; }
 
             /// <summary>
-            /// <para>The name of the lane group.</para>
+            /// <para>The swimming lane name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -263,24 +273,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string LaneName { get; set; }
 
             /// <summary>
-            /// <para>The tag of the lane.</para>
+            /// <para>The swimming lane tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</para>
+            /// <para>g1</para>
             /// </summary>
             [NameInMap("LaneTag")]
             [Validation(Required=false)]
             public string LaneTag { get; set; }
 
             /// <summary>
-            /// <para>MSE gateway routing</para>
+            /// <para>The MSE gateway route.</para>
             /// </summary>
             [NameInMap("MseGatewayEntryRule")]
             [Validation(Required=false)]
             public ListAllSwimmingLanesResponseBodyDataMseGatewayEntryRule MseGatewayEntryRule { get; set; }
             public class ListAllSwimmingLanesResponseBodyDataMseGatewayEntryRule : TeaModel {
                 /// <summary>
-                /// <para>The logical connector between conditions.</para>
+                /// <para>The logical operator used to join conditions.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AND</para>
@@ -290,7 +300,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ConditionJoiner { get; set; }
 
                 /// <summary>
-                /// <para>The matching condition.</para>
+                /// <para>The matching conditions.</para>
                 /// </summary>
                 [NameInMap("Conditions")]
                 [Validation(Required=false)]
@@ -317,7 +327,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the parameter.</para>
+                    /// <para>The parameter type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Header</para>
@@ -327,7 +337,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The match value of the condition.</para>
+                    /// <para>The value to match in the condition.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>g1</para>
@@ -339,7 +349,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>Whether to enable proportional grayscale.</para>
+                /// <para>Indicates whether to enable canary release by percentage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -349,7 +359,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? IndependentPercentageEnable { get; set; }
 
                 /// <summary>
-                /// <para>The proportion of path traffic.</para>
+                /// <para>The percentage of traffic for the path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -359,21 +369,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Percentage { get; set; }
 
                 /// <summary>
-                /// <para>The traffic configuration.</para>
+                /// <para>A map of route IDs to their corresponding traffic percentages.</para>
                 /// </summary>
                 [NameInMap("PercentageByRoute")]
                 [Validation(Required=false)]
                 public Dictionary<string, int?> PercentageByRoute { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the route tables.</para>
+                /// <para>The route IDs.</para>
                 /// </summary>
                 [NameInMap("RouteIds")]
                 [Validation(Required=false)]
                 public List<long?> RouteIds { get; set; }
 
                 /// <summary>
-                /// <para>The detailed configuration of the routing rule.</para>
+                /// <para>The route configurations.</para>
                 /// </summary>
                 [NameInMap("Routes")]
                 [Validation(Required=false)]
@@ -390,7 +400,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public long? RouteId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the route.</para>
+                    /// <para>The route name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>demo</para>
@@ -400,7 +410,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string RouteName { get; set; }
 
                     /// <summary>
-                    /// <para>The routing rule.</para>
+                    /// <para>The route\&quot;s matching rule.</para>
                     /// </summary>
                     [NameInMap("RoutePredicate")]
                     [Validation(Required=false)]
@@ -444,10 +454,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>Error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, no <b>ErrorCode</b> fields are returned.</description></item>
-        /// <item><description>Request failed: <b>ErrorCode</b> fields are returned. For more information, see <b>Error codes</b>.</description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is omitted if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is returned if the request fails. For details, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -455,10 +467,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information. Valid values:</para>
+        /// <para>The response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The error message returned because the request is normal and <b>success</b> is returned.</description></item>
-        /// <item><description>If the request is abnormal, the specific exception error code is returned.</description></item>
+        /// <item><description><para>Returns <b>success</b> if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Returns a specific error code if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -479,10 +493,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the data is successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The application instances were restarted.</description></item>
-        /// <item><description><b>false</b>: Restart failed.</description></item>
+        /// <item><description><para><b>true</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -493,7 +509,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. This parameter is used to query the exact call information.</para>
+        /// <para>The trace ID used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

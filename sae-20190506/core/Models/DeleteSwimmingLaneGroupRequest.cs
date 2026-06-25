@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteSwimmingLaneGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the lane group.</para>
+        /// <para>The ID of the swimming lane group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2074</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a namespace.</para>
+        /// <para>The namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:demo</para>

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UntagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,10 +40,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>This parameter is not returned on a successful request.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned on a failed request. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -47,10 +53,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>A successful request returns <b>success</b>.</para>
+        /// </description></item>
+        /// <item><description><para>A failed request returns an error code.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,10 +79,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the tags were removed. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The tags were removed.</description></item>
-        /// <item><description><b>false</b>: The tags failed to be removed.</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID for querying the details of a call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

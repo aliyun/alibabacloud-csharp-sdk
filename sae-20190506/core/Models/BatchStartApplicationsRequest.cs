@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The IDs of the applications that you want to start. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</para>
+        /// <para>00893b3a-0e24-45ed-be0c-1f20e07b****</para>
         /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]

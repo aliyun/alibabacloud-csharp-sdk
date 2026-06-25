@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>The ID of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The application name.</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

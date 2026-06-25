@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the instance types.</para>
+        /// <para>The instance specifications.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeInstanceSpecificationsResponseBodyData> Data { get; set; }
         public class DescribeInstanceSpecificationsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The CPU specification of the instance type. Unit: millicore.</para>
+            /// <para>The CPU specification. Unit: millicores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -43,10 +47,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance type is available. Valid values:</para>
+            /// <para>Indicates whether the instance specification is available. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: available</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: unavailable</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,7 +63,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance type.</para>
+            /// <para>The ID of the instance specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the instance type. Unit: MB.</para>
+            /// <para>The memory specification. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4096</para>
@@ -77,14 +83,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Memory { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance type.</para>
+            /// <para>The name of the instance specification.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>General-purpose 4</para>
             /// </summary>
             [NameInMap("SpecInfo")]
             [Validation(Required=false)]
             public string SpecInfo { get; set; }
 
             /// <summary>
-            /// <para>The version number of the instance type.</para>
+            /// <para>The version of the instance specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -96,10 +105,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is returned if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -107,10 +118,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,10 +144,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance types were queried. Valid values:</para>
+        /// <para>Indicates whether the instance specifications are obtained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The instance types were queried.</description></item>
-        /// <item><description><b>false</b>: The instance types failed to be queried.</description></item>
+        /// <item><description><para><b>true</b>: The instance specifications are obtained.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The instance specifications fail to be obtained.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -145,7 +160,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID that is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

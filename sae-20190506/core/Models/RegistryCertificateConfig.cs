@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class RegistryCertificateConfig : TeaModel {
         /// <summary>
+        /// <para>The Base64-encoded certificate of the image repository.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCmZha2VDZXJ0aWZpY2F0ZQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0t</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CertBase64 { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to access the image repository in an insecure manner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

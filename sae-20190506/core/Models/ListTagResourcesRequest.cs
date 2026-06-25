@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>A maximum of 50 entries can be returned for a query. If a query generates more than 50 entries, the NextToken parameter is returned with the first 50 entries. You can use the NextToken parameter value to retrieve the subsequent entries that are not returned in the current query result.</para>
+        /// <para>A query can return a maximum of 50 results. If the number of results exceeds this limit, the response includes a NextToken. To retrieve the next page of results, pass this token in your next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A2RN</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID. Separate multiple resource IDs with comma (,). This parameter is required if you do not specify the <b>Tags</b> parameter.</para>
+        /// <para>The resource IDs, specified as a JSON array of strings. This parameter is required if the <b>Tags</b> parameter is not specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;d42921c4-5433-4abd-8075-0e536f8b****&quot;]</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <c>application</c>.</para>
+        /// <para>The resource type. Only <c>application</c> is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,13 +52,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag in the format of a key-value pair. This parameter is required if you do not specify the <b>ResourceIds</b> parameter. The following parameters are involved:</para>
+        /// <para>The tags used to filter resources. This parameter is required if the <b>ResourceIds</b> parameter is not specified. A tag is a key-value pair.</para>
         /// <list type="bullet">
-        /// <item><description><b>key</b>: the tag key. It cannot exceed 128 characters in length.</description></item>
-        /// <item><description><b>value</b>: the tag value. It cannot exceed 128 characters in length.</description></item>
+        /// <item><description><para><b>key</b>: The tag key. The key can be 1 to 128 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para><b>value</b>: The tag value. The value can be 1 to 128 characters in length.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</para>
-        /// <para>Tag keys and tag values cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Tag keys and tag values are case-sensitive. If you specify multiple tags, the operation returns only resources that have all the specified tags.</para>
+        /// <para>A tag key cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</para>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether to enable SAE built-in registry:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <para>If you set this parameter to true, a shared registry is created for the namespace. The registry cannot be disabled after it is created.</para>
         /// 

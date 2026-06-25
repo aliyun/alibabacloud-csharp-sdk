@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public SuspendTrafficResponseBodyData Data { get; set; }
         public class SuspendTrafficResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The description of the returned code.</para>
+            /// <para>A detailed description of the result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -43,10 +47,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the traffic was removed. Valid values:</para>
+            /// <para>Indicates whether the traffic was successfully removed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The traffic was removed.</description></item>
-            /// <item><description><b>false</b>: The traffic failed to be removed.</description></item>
+            /// <item><description><para><b>true</b>: The traffic was removed.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The traffic was not removed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,24 +65,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. </para>
-        /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
+        /// <para>The error code. This parameter is returned only if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned. Valid values:</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, a specific error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,11 +98,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the traffic was removed. Valid values: </para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The traffic was removed.</description></item>
-        /// <item><description><b>false</b>: The traffic failed to be removed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

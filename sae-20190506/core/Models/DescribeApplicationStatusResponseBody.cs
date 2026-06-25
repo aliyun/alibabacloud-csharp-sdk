@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request was invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeApplicationStatusResponseBodyData Data { get; set; }
         public class DescribeApplicationStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0099b7be-5f5b-4512-a7fc-56049ef1****</para>
@@ -43,10 +47,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Application Real-Time Monitoring Service (ARMS) advanced monitoring is enabled. Valid values:</para>
+            /// <para>Indicates whether ARMS Advanced Edition is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +73,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ArmsApmInfo { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created.</para>
+            /// <para>The time when the application was created. This value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1563373372746</para>
@@ -79,9 +85,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>The current status of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RUNNING</b></description></item>
-            /// <item><description><b>STOPPED</b></description></item>
-            /// <item><description><b>UNKNOWN</b></description></item>
+            /// <item><description><para><b>RUNNING</b>: The application is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>STOPPED</b>: The application is stopped.</para>
+            /// </description></item>
+            /// <item><description><para><b>UNKNOWN</b>: The application status is unknown.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,10 +101,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string CurrentStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SAE agent is enabled.</para>
+            /// <para>Indicates whether the SAE agent is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +127,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? FileSizeLimit { get; set; }
 
             /// <summary>
-            /// <para>The ID of the latest change order that is executed. If no change orders are executed or if change orders expire, this parameter is left empty.</para>
+            /// <para>The ID of the most recently executed change order. This parameter is empty if no change order was executed or if the information about the change order has expired.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1ccc2339-fc19-49aa-bda0-1e7b8497****</para>
@@ -126,10 +137,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string LastChangeOrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the latest change order is being executed. Valid values:</para>
+            /// <para>Indicates whether the most recent change order is being executed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,18 +153,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? LastChangeOrderRunning { get; set; }
 
             /// <summary>
-            /// <para>The status of the latest change order. Valid values:</para>
+            /// <para>The status of the most recent change order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>READY</b>: The change order is ready.</description></item>
-            /// <item><description><b>RUNNING</b>: The change order is being executed.</description></item>
-            /// <item><description><b>SUCCESS</b>: The change order was executed.</description></item>
-            /// <item><description><b>FAIL</b>: The change order failed to be executed.</description></item>
-            /// <item><description><b>ABORT</b>: The change order is stopped.</description></item>
-            /// <item><description><b>WAIT_BATCH_CONFIRM</b>: The change order is pending execution. You must manually confirm the release batch.</description></item>
-            /// <item><description><b>AUTO_BATCH_WAIT</b>: The change order is pending execution. SAE will automatically confirm the release batch.</description></item>
-            /// <item><description><b>SYSTEM_FAIL</b>: A system exception occurred.</description></item>
-            /// <item><description><b>WAIT_APPROVAL</b>: The change order is pending approval.</description></item>
-            /// <item><description><b>APPROVED</b>: The change order is approved and is pending execution.</description></item>
+            /// <item><description><para><b>READY</b>: The change order is ready.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The change order is being executed.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUCCESS</b>: The change order was successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAIL</b>: The change order failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>ABORT</b>: The change order was aborted.</para>
+            /// </description></item>
+            /// <item><description><para><b>WAIT_BATCH_CONFIRM</b>: The change order is waiting for manual confirmation for the next batch.</para>
+            /// </description></item>
+            /// <item><description><para><b>AUTO_BATCH_WAIT</b>: The change order is in a waiting state for an automatic batch.</para>
+            /// </description></item>
+            /// <item><description><para><b>SYSTEM_FAIL</b>: A system error occurred.</para>
+            /// </description></item>
+            /// <item><description><para><b>WAIT_APPROVAL</b>: The change order is pending approval.</para>
+            /// </description></item>
+            /// <item><description><para><b>APPROVED</b>: The change order is approved and is pending execution.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -172,10 +195,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? RunningInstances { get; set; }
 
             /// <summary>
-            /// <para>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</para>
+            /// <para>The substatus of the change order. This parameter is used to determine whether an exception occurs during the release process. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NORMAL</b></description></item>
-            /// <item><description><b>RUNNING_BUT_HAS_ERROR</b>: For example, if an error occurs during a phased release, you must manually roll back the application. In this case, the change order cannot be completed because the change order is still being executed.</description></item>
+            /// <item><description><para><b>NORMAL</b>: The release is normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING_BUT_HAS_ERROR</b>: The release is abnormal. For example, if an error occurs during a phased release, you must manually roll back the release. In this case, the change order cannot be completed and the status of the change order remains <b>RUNNING</b>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -188,10 +213,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>If the request is successful, this parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, this parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -199,10 +226,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>If the call is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the call fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -223,10 +252,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the status of the application was queried. Valid values:</para>
+        /// <para>Indicates whether the application status was obtained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The status was queried.</description></item>
-        /// <item><description><b>false</b>: The status failed to be queried.</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -237,7 +268,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID that is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

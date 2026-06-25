@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The call was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The call failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,9 +95,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                 /// <summary>
                 /// <para>The message returned if exceptions occur during job running.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Null</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
@@ -112,10 +113,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 /// <summary>
                 /// <para>The status of the job. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The job was not executed.</description></item>
-                /// <item><description><b>1</b>: The job was executed.</description></item>
-                /// <item><description><b>2</b>: The job failed to be executed.</description></item>
-                /// <item><description><b>3</b>: The job is being executed.</description></item>
+                /// <item><description><para><b>0</b>: The job was not executed.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: The job was executed.</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: The job failed to be executed.</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: The job is being executed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -162,12 +167,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code returned. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</description></item>
+        /// <item><description><para>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -176,8 +180,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The message returned. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>If the call is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the call fails, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -200,8 +206,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

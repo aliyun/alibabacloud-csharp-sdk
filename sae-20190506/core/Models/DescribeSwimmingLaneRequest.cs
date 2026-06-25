@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeSwimmingLaneRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the lane group.</para>
+        /// <para>The lane group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2074</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane.</para>
+        /// <para>The swimming lane ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9637</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? LaneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a namespace.</para>
+        /// <para>The namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>

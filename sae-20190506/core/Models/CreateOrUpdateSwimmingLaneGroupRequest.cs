@@ -10,28 +10,31 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateOrUpdateSwimmingLaneGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the baseline application.</para>
+        /// <para>The IDs of the baseline applications.</para>
         /// </summary>
         [NameInMap("AppIds")]
         [Validation(Required=false)]
         public List<string> AppIds { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the corresponding gateway.</para>
+        /// <para>The unique ID of the gateway.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mse_ingresspost-cn-axc49******</para>
+        /// <para>gw-ea43f648ac46485aa8c894ba1b******</para>
         /// </summary>
         [NameInMap("EntryAppId")]
         [Validation(Required=false)]
         public string EntryAppId { get; set; }
 
         /// <summary>
-        /// <para>The application entry type (gateway type).</para>
+        /// <para>The type of the gateway that acts as the application\&quot;s entry point.</para>
         /// <list type="bullet">
-        /// <item><description><b>apig:</b> cloud-native API Gateway</description></item>
-        /// <item><description><b>mse:</b> Java Services Gateway</description></item>
-        /// <item><description><b>mse-gw:</b> MSE cloud-native Gateway</description></item>
+        /// <item><description><para><b>apig:</b> cloud-native API gateway</para>
+        /// </description></item>
+        /// <item><description><para><b>mse:</b> java service gateway</para>
+        /// </description></item>
+        /// <item><description><para><b>mse-gw:</b> MSE Cloud Native Gateway</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,17 +45,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EntryAppType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane group. This is required when you update a lane group.</para>
+        /// <para>The ID of the swimming lane group. This parameter is required when you update a swimming lane group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2047</para>
+        /// <para>110272</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lane group.</para>
+        /// <para>The name of the swimming lane group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-test</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of a namespace.</para>
+        /// <para>The ID of the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
@@ -72,7 +75,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The end-to-end grayscale version. Valid values: 0 and 2 (recommended).</para>
+        /// <para>The version of the end-to-end canary release. Valid values: 0 and 2. The value 2 is recommended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

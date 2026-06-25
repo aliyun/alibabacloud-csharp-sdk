@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeGreyTagRouteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The status code of the API call or a POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,18 +30,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the canary release rule.</para>
+        /// <para>The details of the canary rule.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeGreyTagRouteResponseBodyData Data { get; set; }
         public class DescribeGreyTagRouteResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The canary rules for the Application Load Balancer (ALB) instance.</para>
+            /// </summary>
             [NameInMap("AlbRules")]
             [Validation(Required=false)]
             public List<DescribeGreyTagRouteResponseBodyDataAlbRules> AlbRules { get; set; }
             public class DescribeGreyTagRouteResponseBodyDataAlbRules : TeaModel {
                 /// <summary>
-                /// <para>The condition mode of the canary release rule. Valid value: AND. This value indicates that that all conditions must be met.</para>
+                /// <para>The relationship between the conditions in the canary rule. Only <b>AND</b> is supported, which indicates that all conditions must be met.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AND</para>
@@ -47,7 +54,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Condition { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the gateway routing rule.</para>
+                /// <para>The ID of the Ingress.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>23</para>
@@ -56,12 +63,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public string IngressId { get; set; }
 
+                /// <summary>
+                /// <para>The list of conditions.</para>
+                /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<DescribeGreyTagRouteResponseBodyDataAlbRulesItems> Items { get; set; }
                 public class DescribeGreyTagRouteResponseBodyDataAlbRulesItems : TeaModel {
                     /// <summary>
-                    /// <para>Valid value: ==.</para>
+                    /// <para>Currently supports ==.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>==</para>
@@ -71,7 +81,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Cond { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is not returned for applications that are associated with ALB instances.</para>
+                    /// <para>Not required for ALB applications.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>N/A</para>
@@ -81,7 +91,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Expr { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is not returned for applications that are associated with Application Load Balancer (ALB) instances.</para>
+                    /// <para>Not required for ALB applications.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>N/A</para>
@@ -91,7 +101,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? Index { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the parameter.</para>
+                    /// <para>The name of the element to match, such as a header or cookie name. This parameter is not used if type is set to sourceIp.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>example</para>
@@ -101,7 +111,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The operator. Valid value: <b>rawvalue</b>. This value indicates direct comparison.</para>
+                    /// <para>The matching operator. Only <b>rawvalue</b> is supported, which indicates a direct comparison.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>rawvalue</para>
@@ -111,11 +121,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the comparison. Valid values:</para>
+                    /// <para>The type of request element to match against. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>sourceIp</b>: SourceIp</description></item>
-                    /// <item><description><b>cookie</b>: cookie</description></item>
-                    /// <item><description><b>header</b>: header</description></item>
+                    /// <item><description><para><b>sourceIp</b>: The source IP address.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>cookie</b>: A cookie.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>header</b>: A request header.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -126,7 +139,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the parameter. This value is compared with the value that is obtained based on the type and name parameters.</para>
+                    /// <para>The value to match. This value is compared with the actual value of the element specified by <b>type</b> and <b>name</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -138,7 +151,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The service ID.</para>
+                /// <para>The routing service ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22</para>
@@ -150,7 +163,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3faaf993-7aed-4bcd-b189-625e6a5a****</para>
@@ -160,7 +173,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the canary release rule was created. Unit: milliseconds.</para>
+            /// <para>The creation timestamp of the rule, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1619007592013</para>
@@ -170,7 +183,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the canary release rule.</para>
+            /// <para>The description of the canary rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -180,17 +193,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The canary release rule of the Dubbo service.</para>
+            /// <para>The canary rules for the Dubbo service.</para>
             /// </summary>
             [NameInMap("DubboRules")]
             [Validation(Required=false)]
             public List<DescribeGreyTagRouteResponseBodyDataDubboRules> DubboRules { get; set; }
             public class DescribeGreyTagRouteResponseBodyDataDubboRules : TeaModel {
                 /// <summary>
-                /// <para>The relationship between the conditions in the canary release rule. Valid values:</para>
+                /// <para>The relationship between the conditions in the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>AND</b>: The conditions are in the logical AND relation. All conditions must be met at the same time.</description></item>
-                /// <item><description><b>OR</b>: The conditions are in the logical OR relation. At least one of the conditions must be met.</description></item>
+                /// <item><description><para><b>AND</b>: All conditions must be met.</para>
+                /// </description></item>
+                /// <item><description><para><b>OR</b>: At least one condition must be met.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -201,7 +216,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Condition { get; set; }
 
                 /// <summary>
-                /// <para>The group of the Dubbo service that corresponds to the canary release rule.</para>
+                /// <para>The service group to which the canary rule applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DUBBO</para>
@@ -211,14 +226,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Group { get; set; }
 
                 /// <summary>
-                /// <para>The conditions.</para>
+                /// <para>The list of conditions.</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<DescribeGreyTagRouteResponseBodyDataDubboRulesItems> Items { get; set; }
                 public class DescribeGreyTagRouteResponseBodyDataDubboRulesItems : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator. Valid values: <b>&gt;</b>, <b>&lt;**, **&gt;=</b>, <b>&lt;=</b>, <b>==</b>, and <b>! =</b>.</para>
+                    /// <para>The comparison operator. Valid values are <b>&gt;</b>, <b>&lt;**, **&gt;=</b>, <b>&lt;=</b>, <b>==</b>, and <b>!=</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>==</para>
@@ -228,14 +243,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Cond { get; set; }
 
                     /// <summary>
-                    /// <para>The expression that is used to obtain the value of the parameter. Valid values:</para>
+                    /// <para>The expression that is used to obtain the parameter value. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Empty</b>: obtains the value of the parameter.</description></item>
-                    /// <item><description><b>.name</b>: obtains the name property of the parameter. This expression works the same way as args0.getName().</description></item>
-                    /// <item><description><b>.isEnabled()</b>: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().</description></item>
-                    /// <item><description><b>[0]</b>: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).</description></item>
-                    /// <item><description><b>.get(0)</b>: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).</description></item>
-                    /// <item><description><b>.get(&quot;key&quot;)</b>: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get(&quot;key&quot;).</description></item>
+                    /// <item><description><para><b>Leave empty</b>: If left empty, the value of the parameter itself is used.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>.name</b>: Obtains the value of the <c>name</c> attribute of the parameter. This is equivalent to <c>args0.getName()</c>.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>.isEnabled()</b>: Obtains the value of the <c>enabled</c> attribute of the parameter. This is equivalent to <c>args0.isEnabled()</c>.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>[0]</b>: The parameter must be an array. This expression obtains the first value of the array, which is equivalent to <c>args0[0]</c>. Note that the expression does not start with a period (.).</para>
+                    /// </description></item>
+                    /// <item><description><para><b>.get(0)</b>: The parameter must be a list. This expression obtains the first value of the list, which is equivalent to <c>args0.get(0)</c>.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>.get(&quot;key&quot;)</b>: The parameter must be a map. This expression obtains the value that corresponds to a key. This is equivalent to <c>args0.get(&quot;key&quot;)</c>.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -246,7 +267,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Expr { get; set; }
 
                     /// <summary>
-                    /// <para>The index of the parameter. The value 0 indicates the first parameter.</para>
+                    /// <para>The parameter index. <c>0</c> indicates the first parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -256,7 +277,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? Index { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is not returned for Dubbo services.</para>
+                    /// <para>Not used in Dubbo services.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>N/A</para>
@@ -266,12 +287,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The operator. Valid values:</para>
+                    /// <para>The matching operator. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>rawvalue</b>: direct comparison.</description></item>
-                    /// <item><description><b>list</b>: whitelist.</description></item>
-                    /// <item><description><b>mod</b>: mods 100.</description></item>
-                    /// <item><description><b>deterministic_proportional_steaming_division</b>: percentage.</description></item>
+                    /// <item><description><para><b>rawvalue</b>: Performs a direct comparison.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>list</b>: Matches against an allowlist of values.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>mod</b>: Calculates the remainder of a division by 100.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>deterministic_proportional_steaming_division</b>: Performs a percentage-based match.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -282,7 +307,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is not returned for Dubbo services.</para>
+                    /// <para>Not used in Dubbo services.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>N/A</para>
@@ -292,7 +317,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the parameter. This value is compared with the value that is obtained based on the <b>expr</b> and <b>index</b> parameters.</para>
+                    /// <para>The value to match. This value is compared with the actual value retrieved by using the specified <b>expr</b> and <b>index</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -314,7 +339,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MethodName { get; set; }
 
                 /// <summary>
-                /// <para>The name of the Dubbo service.</para>
+                /// <para>The Dubbo service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>com.alibaba.edas.boot.EchoService</para>
@@ -324,7 +349,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// <para>The version of the Dubbo service.</para>
+                /// <para>The Dubbo service version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -336,7 +361,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The ID of the canary release rule. The ID is globally unique.</para>
+            /// <para>The globally unique ID of the canary rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -346,7 +371,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? GreyTagRouteId { get; set; }
 
             /// <summary>
-            /// <para>The name of the canary release rule.</para>
+            /// <para>The name of the canary rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule-name</para>
@@ -356,17 +381,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The canary release rule of the Spring Cloud application.</para>
+            /// <para>The canary rules for the Spring Cloud application.</para>
             /// </summary>
             [NameInMap("ScRules")]
             [Validation(Required=false)]
             public List<DescribeGreyTagRouteResponseBodyDataScRules> ScRules { get; set; }
             public class DescribeGreyTagRouteResponseBodyDataScRules : TeaModel {
                 /// <summary>
-                /// <para>The relationship between the conditions in the canary release rule. Valid values:</para>
+                /// <para>The relationship between the conditions in the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>AND</b>: The conditions are in the logical AND relation. All conditions must be met at the same time.</description></item>
-                /// <item><description><b>OR</b>: The conditions are in the logical OR relation. At least one of the conditions must be met.</description></item>
+                /// <item><description><para><b>AND</b>: All conditions must be met.</para>
+                /// </description></item>
+                /// <item><description><para><b>OR</b>: At least one condition must be met.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -377,14 +404,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Condition { get; set; }
 
                 /// <summary>
-                /// <para>The conditions.</para>
+                /// <para>The list of conditions.</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<DescribeGreyTagRouteResponseBodyDataScRulesItems> Items { get; set; }
                 public class DescribeGreyTagRouteResponseBodyDataScRulesItems : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator. Valid values: <b>&gt;</b>, <b>&lt;**, **&gt;=</b>, <b>&lt;=</b>, <b>==</b>, and <b>! =</b>.</para>
+                    /// <para>The comparison operator. Valid values are <b>&gt;</b>, <b>&lt;**, **&gt;=</b>, <b>&lt;=</b>, <b>==</b>, and <b>!=</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>==</para>
@@ -394,7 +421,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Cond { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is not returned for Spring Cloud applications.</para>
+                    /// <para>Not used in Spring Cloud applications.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>N/A</para>
@@ -404,7 +431,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Expr { get; set; }
 
                     /// <summary>
-                    /// <para>This parameter is not returned for Spring Cloud applications.</para>
+                    /// <para>Not used in Spring Cloud applications.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>N/A</para>
@@ -414,7 +441,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? Index { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the parameter.</para>
+                    /// <para>The name of the element to match, as specified by the type parameter. For example, a header name or cookie name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -424,12 +451,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The operator. Valid values:</para>
+                    /// <para>The matching operator. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>rawvalue</b>: direct comparison.</description></item>
-                    /// <item><description><b>list</b>: whitelist.</description></item>
-                    /// <item><description><b>mod</b>: mods 100.</description></item>
-                    /// <item><description><b>deterministic_proportional_steaming_division</b>: percentage.</description></item>
+                    /// <item><description><para><b>rawvalue</b>: Performs a direct comparison.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>list</b>: Matches against an allowlist of values.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>mod</b>: Calculates the remainder of a division by 100.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>deterministic_proportional_steaming_division</b>: Performs a percentage-based match.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -440,11 +471,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the comparison. Valid values:</para>
+                    /// <para>The type of request element to match against. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>param</b>: parameter</description></item>
-                    /// <item><description><b>cookie</b>: cookie</description></item>
-                    /// <item><description><b>header</b>: header</description></item>
+                    /// <item><description><para><b>param</b>: A request parameter.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>cookie</b>: A cookie.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>header</b>: A request header.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -455,7 +489,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the parameter. This value is compared with the value that is obtained based on the <b>type</b> and <b>name</b> parameters.</para>
+                    /// <para>The value to match. This value is compared with the actual value of the element specified by <b>type</b> and <b>name</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -467,7 +501,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The path of the canary release rule of the Spring Cloud application.</para>
+                /// <para>The path to which the rule applies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/path</para>
@@ -479,7 +513,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The timestamp when the canary release rule was updated. Unit: milliseconds.</para>
+            /// <para>The timestamp of the rule\&quot;s last update, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1609434061000</para>
@@ -493,8 +527,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -502,7 +538,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message that indicates the result of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -522,10 +558,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the information of the change order was queried. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The information was queried.</description></item>
-        /// <item><description><b>false</b>: The information failed to be queried.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -536,7 +574,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID for querying the details of a call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

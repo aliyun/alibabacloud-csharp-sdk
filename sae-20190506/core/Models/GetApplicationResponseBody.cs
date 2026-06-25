@@ -17,7 +17,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public GetApplicationResponseBodyApplication Application { get; set; }
         public class GetApplicationResponseBodyApplication : TeaModel {
             /// <summary>
-            /// <para>The description of the application.</para>
+            /// <para>The application description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("AppDescription")]
             [Validation(Required=false)]
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the basic application.</para>
+            /// <para>The base application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ee99cce6-1c8e-4bfa-96c3-3e2fa9******</para>
@@ -54,16 +57,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string BaseAppId { get; set; }
 
             /// <summary>
-            /// <para>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</para>
+            /// <para>The CPU required for each instance, in millicores. This value cannot be 0. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>500</b></description></item>
-            /// <item><description><b>1000</b></description></item>
-            /// <item><description><b>2000</b></description></item>
-            /// <item><description><b>4000</b></description></item>
-            /// <item><description><b>8000</b></description></item>
-            /// <item><description><b>12000</b></description></item>
-            /// <item><description><b>16000</b></description></item>
-            /// <item><description><b>32000</b></description></item>
+            /// <item><description><para><b>500</b></para>
+            /// </description></item>
+            /// <item><description><para><b>1000</b></para>
+            /// </description></item>
+            /// <item><description><para><b>2000</b></para>
+            /// </description></item>
+            /// <item><description><para><b>4000</b></para>
+            /// </description></item>
+            /// <item><description><para><b>8000</b></para>
+            /// </description></item>
+            /// <item><description><para><b>12000</b></para>
+            /// </description></item>
+            /// <item><description><para><b>16000</b></para>
+            /// </description></item>
+            /// <item><description><para><b>32000</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -74,32 +85,45 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The number of application instances.</para>
+            /// <para>The total number of application instances.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i-8ps2o182102o1jv05bys</para>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("Instances")]
             [Validation(Required=false)]
             public int? Instances { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the application is stateful.</para>
+            /// </summary>
             [NameInMap("IsStateful")]
             [Validation(Required=false)]
             public bool? IsStateful { get; set; }
 
             /// <summary>
-            /// <para>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</para>
+            /// <para>The memory required for each instance, in MB. This value cannot be 0. The memory specification is coupled with the CPU specification. The following configurations are supported:</para>
             /// <list type="bullet">
-            /// <item><description>This parameter is set to <b>1024</b> if the Cpu parameter is set to 500 or 1000.</description></item>
-            /// <item><description>This parameter is set to <b>2048</b> if the Cpu parameter is set to 500, 1000, or 2000.</description></item>
-            /// <item><description>This parameter is set to <b>4096</b> if the Cpu parameter is set to 1000, 2000, or 4000.</description></item>
-            /// <item><description>This parameter is set to <b>8192</b> if the Cpu parameter is set to 2000, 4000, or 8000.</description></item>
-            /// <item><description>This parameter is set to <b>12288</b> if the Cpu parameter is set to 12000.</description></item>
-            /// <item><description>This parameter is set to <b>16384</b> if the Cpu parameter is set to 4000, 8000, or 16000.</description></item>
-            /// <item><description>This parameter is set to <b>24576</b> if the Cpu parameter is set to 12000.</description></item>
-            /// <item><description>This parameter is set to <b>32768</b> if the Cpu parameter is set to 16000.</description></item>
-            /// <item><description>This parameter is set to <b>65536</b> if the Cpu parameter is set to 8000, 16000, or 32000.</description></item>
-            /// <item><description>This parameter is set to <b>131072</b> if the Cpu parameter is set to 32000.</description></item>
+            /// <item><description><para><b>1024</b>: corresponds to 500 or 1,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>2048</b>: corresponds to 500, 1,000, or 2,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>4096</b>: corresponds to 1,000, 2,000, or 4,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>8192</b>: corresponds to 2,000, 4,000, or 8,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>12288</b>: corresponds to 12,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>16384</b>: corresponds to 4,000, 8,000, or 16,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>24576</b>: corresponds to 12,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>32768</b>: corresponds to 16,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>65536</b>: corresponds to 8,000, 16,000, or 32,000 millicores of CPU.</para>
+            /// </description></item>
+            /// <item><description><para><b>131072</b>: corresponds to 32,000 millicores of CPU.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,10 +134,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Mem { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable WebAssembly Filter. Valid values:</para>
+            /// <para>Indicates whether WebAssemblyFilter is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enables this parameter.</description></item>
-            /// <item><description>false: disables this parameter.</description></item>
+            /// <item><description><para><b>true</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +150,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? MseEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the namespace to which the MSE instance belongs.</para>
+            /// <para>The namespace ID of the MSE instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -144,11 +170,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// <para>The programming language that is used to create the application. Valid values:</para>
+            /// <para>The programming language of the application. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>java</b> :Java.</description></item>
-            /// <item><description><b>php</b>: PHP.</description></item>
-            /// <item><description><b>other</b>: other programming languages, such as Python, C++, Go, .NET, and Node.js</description></item>
+            /// <item><description><para><b>java</b>: Java.</para>
+            /// </description></item>
+            /// <item><description><para><b>php</b>: PHP.</para>
+            /// </description></item>
+            /// <item><description><para><b>other</b>: other languages, such as Python, C++, Go, .NET, and Node.js.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,10 +188,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ProgrammingLanguage { get; set; }
 
             /// <summary>
-            /// <para>The number of application instances that are running.</para>
+            /// <para>The number of running instances.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>6</para>
             /// </summary>
             [NameInMap("RunningInstances")]
             [Validation(Required=false)]
@@ -171,8 +200,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>Indicates whether the auto scaling policy is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The auto scaling policy is enabled.</description></item>
-            /// <item><description><b>false</b>: The auto scaling policy is disabled.</description></item>
+            /// <item><description><para><b>true</b>: The policy is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The policy is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,9 +216,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>The type of the auto scaling policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>timing</b>: a scheduled auto scaling policy.</description></item>
-            /// <item><description><b>metric</b>: a metric-based auto scaling policy.</description></item>
-            /// <item><description><b>mix</b>: a hybrid auto scaling policy.</description></item>
+            /// <item><description><para><b>timing</b>: scheduled auto scaling.</para>
+            /// </description></item>
+            /// <item><description><para><b>metric</b>: metric-based auto scaling.</para>
+            /// </description></item>
+            /// <item><description><para><b>mix</b>: hybrid auto scaling.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -200,10 +234,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The additional information returned. Valid values:</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description>When a request is successful, <b>success</b>is returned.</description></item>
-        /// <item><description>An error code is returned when a request failed.</description></item>
+        /// <item><description><para>If the request is successful, the value is <b>success</b>.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, the value is a specific error code.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +250,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</para>
@@ -224,7 +260,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The trace ID used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac1a0b2215622920113732501e****</para>

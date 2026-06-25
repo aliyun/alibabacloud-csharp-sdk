@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class RescaleApplicationVerticallyRequest : TeaModel {
         /// <summary>
-        /// <para>The app ID.</para>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Target CPU specification. Unit: millicore.</para>
+        /// <para>The CPU specifications, in millicores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Deploy { get; set; }
 
         /// <summary>
-        /// <para>The disk size. Unit: GB.</para>
+        /// <para>The disk size for each node, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string DiskSize { get; set; }
 
         /// <summary>
-        /// <para>Target memory specification. Unit: MB.</para>
+        /// <para>The memory size, in MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>Enable application scale rules automatically.</para>
+        /// <para>Specifies whether to automatically enable the auto scaling rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? AutoEnableApplicationScalingRule { get; set; }
 
         /// <summary>
-        /// <para>The ratio of minimum ready instances.</para>
+        /// <para>The minimum percentage of ready instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? MinReadyInstanceRatio { get; set; }
 
         /// <summary>
-        /// <para>Minimum ready instances.</para>
+        /// <para>The minimum number of ready instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ExecJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values: </para>
+        /// <para>The HTTP status code or a POP error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: Request error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: Server error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,12 +37,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public ExecJobResponseBodyData Data { get; set; }
         public class ExecJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The HTTP status code. Valid values: </para>
+            /// <para>The HTTP status code or a POP error code.</para>
             /// <list type="bullet">
-            /// <item><description><b>2xx</b>: The call was successful.</description></item>
-            /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-            /// <item><description><b>4xx</b>: The call failed.</description></item>
-            /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+            /// <item><description><para><b>2xx</b>: Success.</para>
+            /// </description></item>
+            /// <item><description><para><b>3xx</b>: Redirection.</para>
+            /// </description></item>
+            /// <item><description><para><b>4xx</b>: Request error.</para>
+            /// </description></item>
+            /// <item><description><para><b>5xx</b>: Server error.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,10 +67,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Data { get; set; }
 
             /// <summary>
-            /// <para>The returned message. Valid values:</para>
+            /// <para>The returned message.</para>
             /// <list type="bullet">
-            /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-            /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+            /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If the request fails, an error code is returned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,10 +83,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the request was successful. Valid values:</para>
+            /// <para>Whether the job was successfully executed.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The execution was successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The execution failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,10 +101,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>This parameter is omitted for successful requests.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is included for failed requests. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -100,10 +114,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +140,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +156,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. This parameter is used to query the exact call information.</para>
+        /// <para>The trace ID for retrieving detailed information about the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0b87b7e716575071334387401e****</para>

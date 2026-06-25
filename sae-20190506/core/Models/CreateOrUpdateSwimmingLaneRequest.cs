@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateOrUpdateSwimmingLaneRequest : TeaModel {
         /// <summary>
-        /// <para>The route configuration of the gateway.</para>
+        /// <para>The configuration of the gateway route.</para>
         /// <remarks>
-        /// <para> This parameter is required if the gateway entry of the lane group is Java.</para>
+        /// <para>This parameter is required if the gateway entry application for the swimlane group is a Java application.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AppEntryRule")]
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public CreateOrUpdateSwimmingLaneRequestAppEntryRule AppEntryRule { get; set; }
         public class CreateOrUpdateSwimmingLaneRequestAppEntryRule : TeaModel {
             /// <summary>
-            /// <para>Logical connectors between conditions:</para>
+            /// <para>The logical operator used to combine conditions.</para>
             /// <list type="bullet">
-            /// <item><description>AND: All conditions are met at the same time.</description></item>
-            /// <item><description>OR: Any condition is met.</description></item>
+            /// <item><description><para><c>AND</c>: All conditions must be met.</para>
+            /// </description></item>
+            /// <item><description><para><c>OR</c>: At least one of the conditions must be met.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,20 +36,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ConditionJoiner { get; set; }
 
             /// <summary>
-            /// <para>The conditions that trigger circuit breaking.</para>
+            /// <para>The match conditions.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<CreateOrUpdateSwimmingLaneRequestAppEntryRuleConditions> Conditions { get; set; }
             public class CreateOrUpdateSwimmingLaneRequestAppEntryRuleConditions : TeaModel {
                 /// <summary>
-                /// <para>Matching Rule:</para>
+                /// <para>The matching rule.</para>
                 /// <list type="bullet">
-                /// <item><description>The exact match. The condition is met if the traffic value and the condition value are exactly the same.</description></item>
-                /// <item><description>The exact match. The condition is met if the traffic value and the condition value are exactly the same.</description></item>
-                /// <item><description>The inclusive match. The condition is met if the traffic value is included in the specified list.</description></item>
-                /// <item><description>The percentage match. Principle: The condition is met if \&quot;hash(get(<c>key</c>)) % 100 &lt; value\&quot;.</description></item>
-                /// <item><description>Regular match: a regular expression match. The condition is met when the match is based on regular expression rules.</description></item>
+                /// <item><description><para><c>==</c>: Exact match. The attribute\&quot;s value must be identical to the value specified.</para>
+                /// </description></item>
+                /// <item><description><para><c>!=</c>: Negated exact match. The attribute\&quot;s value must not be identical to the value specified.</para>
+                /// </description></item>
+                /// <item><description><para><c>in</c>: Inclusion match. The attribute\&quot;s value must be present in the specified comma-separated list of values.</para>
+                /// </description></item>
+                /// <item><description><para><c>percentage</c>: Percentage-based match. The expression <c>hash(get(key)) % 100 &lt; value</c> must be true.</para>
+                /// </description></item>
+                /// <item><description><para><c>regex</c>: Regular expression match. The attribute\&quot;s value must match the specified regular expression.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -58,7 +65,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Condition { get; set; }
 
                 /// <summary>
-                /// <para>The parameter name.</para>
+                /// <para>The name of the header, parameter, or cookie.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>t</para>
@@ -68,11 +75,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The parameter type. Valid values:</para>
+                /// <para>The type of the request attribute to match.</para>
                 /// <list type="bullet">
-                /// <item><description>header</description></item>
-                /// <item><description>param</description></item>
-                /// <item><description>Cookie: forwards requests based on cookies.</description></item>
+                /// <item><description><para><c>header</c>: A request header.</para>
+                /// </description></item>
+                /// <item><description><para><c>param</c>: A request parameter.</para>
+                /// </description></item>
+                /// <item><description><para><c>cookie</c>: A request cookie.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -83,7 +93,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The match value of the condition.</para>
+                /// <para>The value to match against the request attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>g1</para>
@@ -95,10 +105,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>Whether to enable proportional grayscale.</para>
+            /// <para>Specifies whether to enable percentage-based routing.</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled. After you enable this parameter, you must configure the PercentageByPath.</description></item>
-            /// <item><description>false: disables the service.</description></item>
+            /// <item><description><para><c>true</c>: Enables percentage-based routing. You must also configure the <c>PercentageByPath</c> parameter.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables percentage-based routing.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,14 +121,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? IndependentPercentageEnable { get; set; }
 
             /// <summary>
-            /// <para>The matched request path.</para>
+            /// <para>The request paths to match.</para>
             /// </summary>
             [NameInMap("Paths")]
             [Validation(Required=false)]
             public List<string> Paths { get; set; }
 
             /// <summary>
-            /// <para>The traffic ratio. Valid values: 0 to 100.</para>
+            /// <para>The traffic percentage for percentage-based routing. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -126,7 +138,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Percentage { get; set; }
 
             /// <summary>
-            /// <para>The traffic configuration.</para>
+            /// <para>An object that maps request paths to traffic percentages.</para>
             /// </summary>
             [NameInMap("PercentageByPath")]
             [Validation(Required=false)]
@@ -135,10 +147,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>Full-link Grayscale Mode:</para>
+        /// <para>The end-to-end canary release mode.</para>
         /// <list type="bullet">
-        /// <item><description>0: The request is routed based on the content of the request.</description></item>
-        /// <item><description>1: routing based on percentages</description></item>
+        /// <item><description><para><c>0</c>: content-based routing</para>
+        /// </description></item>
+        /// <item><description><para><c>1</c>: percentage-based routing</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,10 +163,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CanaryModel { get; set; }
 
         /// <summary>
-        /// <para>Lane Status</para>
+        /// <para>The status of the swimlane.</para>
         /// <list type="bullet">
-        /// <item><description>true: enabled</description></item>
-        /// <item><description>false: disabled</description></item>
+        /// <item><description><para><c>true</c>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +179,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane group to which the lane belongs.</para>
+        /// <para>The ID of the swimlane group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b2a8a925-477a-eswa-b823-d5e22500****</para>
@@ -173,7 +189,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane.</para>
+        /// <para>The ID of the swimlane.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13857</para>
@@ -183,7 +199,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? LaneId { get; set; }
 
         /// <summary>
-        /// <para>The name of the lane.</para>
+        /// <para>The name of the swimlane.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -193,19 +209,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string LaneName { get; set; }
 
         /// <summary>
-        /// <para>The tag of the lane.</para>
+        /// <para>The tag of the swimlane.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</para>
+        /// <para>g1</para>
         /// </summary>
         [NameInMap("LaneTag")]
         [Validation(Required=false)]
         public string LaneTag { get; set; }
 
         /// <summary>
-        /// <para>The route configuration of the MSE gateway.</para>
+        /// <para>Configuration for the MSE gateway route.</para>
         /// <remarks>
-        /// <para> If the <b>EntryAppType</b> is set to <b>apig</b> or <b>mse-gw</b>, it is required.</para>
+        /// <para>This parameter is required if the <b>EntryAppType</b> parameter is set to <b>apig</b> or <b>mse-gw</b>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("MseGatewayEntryRule")]
@@ -213,10 +229,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public CreateOrUpdateSwimmingLaneRequestMseGatewayEntryRule MseGatewayEntryRule { get; set; }
         public class CreateOrUpdateSwimmingLaneRequestMseGatewayEntryRule : TeaModel {
             /// <summary>
-            /// <para>Logical connectors between conditions:</para>
+            /// <para>The logical operator used to combine conditions.</para>
             /// <list type="bullet">
-            /// <item><description>AND: All conditions are met at the same time.</description></item>
-            /// <item><description>OR: Any condition is met.</description></item>
+            /// <item><description><para><c>AND</c>: All conditions must be met.</para>
+            /// </description></item>
+            /// <item><description><para><c>OR</c>: At least one of the conditions must be met.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -227,7 +245,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ConditionJoiner { get; set; }
 
             /// <summary>
-            /// <para>Routing Condition</para>
+            /// <para>The match conditions.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
@@ -236,11 +254,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 /// <summary>
                 /// <para>The matching rule.</para>
                 /// <list type="bullet">
-                /// <item><description>\==: exact match.</description></item>
-                /// <item><description>! =: exact match.</description></item>
-                /// <item><description>in: contains matches.</description></item>
-                /// <item><description>Percentage: Percentage matching.</description></item>
-                /// <item><description>Regular matching: specifies whether a regular expression is used to search for the original string.</description></item>
+                /// <item><description><para><c>==</c>: Exact match. The attribute\&quot;s value must be identical to the value specified.</para>
+                /// </description></item>
+                /// <item><description><para><c>!=</c>: Negated exact match. The attribute\&quot;s value must not be identical to the value specified.</para>
+                /// </description></item>
+                /// <item><description><para><c>in</c>: Inclusion match. The attribute\&quot;s value must be present in the specified comma-separated list of values.</para>
+                /// </description></item>
+                /// <item><description><para><c>percentage</c>: Percentage-based match. The expression <c>hash(get(key)) % 100 &lt; value</c> must be true.</para>
+                /// </description></item>
+                /// <item><description><para><c>regex</c>: Regular expression match. The attribute\&quot;s value must match the specified regular expression.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -251,7 +274,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Condition { get; set; }
 
                 /// <summary>
-                /// <para>The parameter name.</para>
+                /// <para>The name of the header, parameter, or cookie.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -261,11 +284,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The parameter type. Valid values:</para>
+                /// <para>The type of the request attribute to match.</para>
                 /// <list type="bullet">
-                /// <item><description>header</description></item>
-                /// <item><description>param</description></item>
-                /// <item><description>Cookie: forwards requests based on cookies.</description></item>
+                /// <item><description><para><c>header</c>: A request header.</para>
+                /// </description></item>
+                /// <item><description><para><c>param</c>: A request parameter.</para>
+                /// </description></item>
+                /// <item><description><para><c>cookie</c>: A request cookie.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -276,7 +302,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The match value of the condition.</para>
+                /// <para>The value to match against the request attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>g1</para>
@@ -288,10 +314,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>Whether to enable proportional grayscale.</para>
+            /// <para>Specifies whether to enable percentage-based routing.</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled. After you enable this parameter, you must configure the PercentageByPath.</description></item>
-            /// <item><description>false: Disabled.</description></item>
+            /// <item><description><para><c>true</c>: Enables percentage-based routing. You must also configure the <c>PercentageByRoute</c> parameter.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables percentage-based routing.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -302,7 +330,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? IndependentPercentageEnable { get; set; }
 
             /// <summary>
-            /// <para>The percentage of traffic replication. Valid values: 0 to 100.</para>
+            /// <para>The traffic mirroring percentage. Valid values: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -312,14 +340,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Percentage { get; set; }
 
             /// <summary>
-            /// <para>The traffic configuration.</para>
+            /// <para>An object that maps route IDs to traffic percentages.</para>
             /// </summary>
             [NameInMap("PercentageByRoute")]
             [Validation(Required=false)]
             public Dictionary<string, int?> PercentageByRoute { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route.</para>
+            /// <para>The route IDs.</para>
             /// </summary>
             [NameInMap("RouteIds")]
             [Validation(Required=false)]
@@ -328,7 +356,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The namespace ID.</para>
+        /// <para>The ID of the namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>

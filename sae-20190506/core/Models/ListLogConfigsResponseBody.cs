@@ -10,10 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListLogConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the logging configurations of an application were obtained. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the configurations were obtained.</description></item>
-        /// <item><description><b>false</b>: indicates that the configurations could not be obtained.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The logging configurations.</para>
+        /// <para>The information about the file logs.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListLogConfigsResponseBodyData Data { get; set; }
         public class ListLogConfigsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of returned entries.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -41,14 +47,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The details of the logging configuration.</para>
+            /// <para>The log configurations.</para>
             /// </summary>
             [NameInMap("LogConfigs")]
             [Validation(Required=false)]
             public List<ListLogConfigsResponseBodyDataLogConfigs> LogConfigs { get; set; }
             public class ListLogConfigsResponseBodyDataLogConfigs : TeaModel {
                 /// <summary>
-                /// <para>The path of logs.</para>
+                /// <para>The name of the Simple Log Service configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sae-1f240907a6faf58c653f09e81b7e****</para>
@@ -58,7 +64,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ConfigName { get; set; }
 
                 /// <summary>
-                /// <para>The storage type of logs.</para>
+                /// <para>The time when the log configuration was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-08-29 17:18:00</para>
@@ -68,7 +74,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The path of the log file (log source).</para>
+                /// <para>The path of the log file. This is the log source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/root/logs/hsf/hsf.log</para>
@@ -78,7 +84,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string LogDir { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The log type. Only <b>file_log</b> is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file_log</para>
@@ -88,7 +94,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string LogType { get; set; }
 
                 /// <summary>
-                /// <para>The number of the returned page.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -98,7 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the configuration was created.</para>
+                /// <para>The name of the Logstore in Simple Log Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sae-1f240907a6faf58c653f09e81b7e****</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string SlsLogStore { get; set; }
 
                 /// <summary>
-                /// <para>The type of the log. Set this value to <b>file_log</b>.</para>
+                /// <para>The ID of the Simple Log Service project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sae-56f77b65-788d-442a-9885-7f20d91f****</para>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string SlsProject { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Log Service project.</para>
+                /// <para>The storage class for Simple Log Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sls</para>
@@ -130,11 +136,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The error code.</para>
-            /// <list type="bullet">
-            /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-            /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
-            /// </list>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -156,12 +158,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> list in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -169,7 +171,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// <para>The returned message.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -179,11 +187,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
-        /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error code is returned when the request fails.</description></item>
-        /// </list>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -193,6 +197,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the list of application logs was obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The list was obtained.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The list failed to be obtained.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -201,7 +213,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The logging configurations.</para>
+        /// <para>The trace ID of the request. You can use the trace ID to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac1d5e2c15671581252413581d****</para>

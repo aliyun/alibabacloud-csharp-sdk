@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class QueryResourceStaticsRequest : TeaModel {
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\<em>\</em>\<em>\</em></para>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

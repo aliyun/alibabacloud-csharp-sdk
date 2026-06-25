@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeConfigurationPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code or POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,21 +30,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The price.</para>
+        /// <para>The pricing information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeConfigurationPriceResponseBodyData Data { get; set; }
         public class DescribeConfigurationPriceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The remaining capacity of the resource plan.</para>
+            /// <para>The remaining quota of the resource plan.</para>
             /// </summary>
             [NameInMap("BagUsage")]
             [Validation(Required=false)]
             public DescribeConfigurationPriceResponseBodyDataBagUsage BagUsage { get; set; }
             public class DescribeConfigurationPriceResponseBodyDataBagUsage : TeaModel {
                 /// <summary>
-                /// <para>The available CPU capacity. Unit: cores \*.</para>
+                /// <para>The remaining CPU quota. Unit: core-hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>497570.450009</para>
@@ -49,12 +53,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 [Validation(Required=false)]
                 public float? Cpu { get; set; }
 
+                /// <summary>
+                /// <para>The remaining computing units (CUs) of the resource plan.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10000</para>
+                /// </summary>
                 [NameInMap("Cu")]
                 [Validation(Required=false)]
                 public float? Cu { get; set; }
 
                 /// <summary>
-                /// <para>The available memory size. Unit: GiB ×.</para>
+                /// <para>The remaining memory quota. Unit: GiB-hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>989802.563546</para>
@@ -73,14 +83,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public DescribeConfigurationPriceResponseBodyDataCpuMemPrice CpuMemPrice { get; set; }
             public class DescribeConfigurationPriceResponseBodyDataCpuMemPrice : TeaModel {
                 /// <summary>
-                /// <para>The information about pricing.</para>
+                /// <para>The pricing information.</para>
                 /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
                 public DescribeConfigurationPriceResponseBodyDataCpuMemPriceOrder Order { get; set; }
                 public class DescribeConfigurationPriceResponseBodyDataCpuMemPriceOrder : TeaModel {
                     /// <summary>
-                    /// <para>The discount amount.</para>
+                    /// <para>The discount amount of the order.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0009259</para>
@@ -100,14 +110,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public float? OriginalAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the discount rule.</para>
+                    /// <para>The rule ID.</para>
                     /// </summary>
                     [NameInMap("RuleIds")]
                     [Validation(Required=false)]
                     public List<string> RuleIds { get; set; }
 
                     /// <summary>
-                    /// <para>The final price of the order.</para>
+                    /// <para>The actual transaction price of the order.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0037037</para>
@@ -119,21 +129,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The discount rules.</para>
+                /// <para>The promotion rules.</para>
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
                 public List<DescribeConfigurationPriceResponseBodyDataCpuMemPriceRules> Rules { get; set; }
                 public class DescribeConfigurationPriceResponseBodyDataCpuMemPriceRules : TeaModel {
                     /// <summary>
-                    /// <para>The name of discount rule.</para>
+                    /// <para>The name of the rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20% discount on pay-as-you-go</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the discount rule.</para>
+                    /// <para>The rule ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2000010******</para>
@@ -147,14 +160,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The information about pricing.</para>
+            /// <para>The pricing information.</para>
             /// </summary>
             [NameInMap("Order")]
             [Validation(Required=false)]
             public DescribeConfigurationPriceResponseBodyDataOrder Order { get; set; }
             public class DescribeConfigurationPriceResponseBodyDataOrder : TeaModel {
                 /// <summary>
-                /// <para>The discount amount.</para>
+                /// <para>The discount amount of the order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0018518</para>
@@ -174,14 +187,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? OriginalAmount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the promotion rule.</para>
+                /// <para>The promotion ID.</para>
                 /// </summary>
                 [NameInMap("RuleIds")]
                 [Validation(Required=false)]
                 public List<string> RuleIds { get; set; }
 
                 /// <summary>
-                /// <para>The transaction price.</para>
+                /// <para>The final price of the order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.0074074</para>
@@ -193,21 +206,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The price based on the number of requests.</para>
+            /// <para>The price per request.</para>
             /// </summary>
             [NameInMap("RequestPrice")]
             [Validation(Required=false)]
             public DescribeConfigurationPriceResponseBodyDataRequestPrice RequestPrice { get; set; }
             public class DescribeConfigurationPriceResponseBodyDataRequestPrice : TeaModel {
                 /// <summary>
-                /// <para>The information about pricing.</para>
+                /// <para>The pricing information.</para>
                 /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
                 public DescribeConfigurationPriceResponseBodyDataRequestPriceOrder Order { get; set; }
                 public class DescribeConfigurationPriceResponseBodyDataRequestPriceOrder : TeaModel {
                     /// <summary>
-                    /// <para>The discount amount.</para>
+                    /// <para>The discount amount of the order.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0009259</para>
@@ -227,14 +240,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public float? OriginalAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the discount rule.</para>
+                    /// <para>The rule ID.</para>
                     /// </summary>
                     [NameInMap("RuleIds")]
                     [Validation(Required=false)]
                     public List<string> RuleIds { get; set; }
 
                     /// <summary>
-                    /// <para>The actual price of the order.</para>
+                    /// <para>The actual transaction price of the order.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0037037</para>
@@ -246,21 +259,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The discount rule.</para>
+                /// <para>The promotion rules.</para>
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
                 public List<DescribeConfigurationPriceResponseBodyDataRequestPriceRules> Rules { get; set; }
                 public class DescribeConfigurationPriceResponseBodyDataRequestPriceRules : TeaModel {
                     /// <summary>
-                    /// <para>The name of the discount rule.</para>
+                    /// <para>The name of the rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20% discount on pay-as-you-go</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the discount policy.</para>
+                    /// <para>The policy ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2000010******</para>
@@ -281,14 +297,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public List<DescribeConfigurationPriceResponseBodyDataRules> Rules { get; set; }
             public class DescribeConfigurationPriceResponseBodyDataRules : TeaModel {
                 /// <summary>
-                /// <para>The name of the promotion rule.</para>
+                /// <para>The name of the rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20% discount on pay-as-you-go</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the promotion rule.</para>
+                /// <para>The rule ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000010******</para>
@@ -300,21 +319,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The traffic price.</para>
+            /// <para>The price of traffic.</para>
             /// </summary>
             [NameInMap("TrafficPrice")]
             [Validation(Required=false)]
             public DescribeConfigurationPriceResponseBodyDataTrafficPrice TrafficPrice { get; set; }
             public class DescribeConfigurationPriceResponseBodyDataTrafficPrice : TeaModel {
                 /// <summary>
-                /// <para>The information about pricing.</para>
+                /// <para>The pricing information.</para>
                 /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
                 public DescribeConfigurationPriceResponseBodyDataTrafficPriceOrder Order { get; set; }
                 public class DescribeConfigurationPriceResponseBodyDataTrafficPriceOrder : TeaModel {
                     /// <summary>
-                    /// <para>The discount amount.</para>
+                    /// <para>The discount amount of the order.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0009259</para>
@@ -334,14 +353,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public float? OriginalAmount { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the discount rule.</para>
+                    /// <para>The promotion ID.</para>
                     /// </summary>
                     [NameInMap("RuleIds")]
                     [Validation(Required=false)]
                     public List<string> RuleIds { get; set; }
 
                     /// <summary>
-                    /// <para>The final price of the order.</para>
+                    /// <para>The actual transaction price of the order.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0.0037037</para>
@@ -353,21 +372,24 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The discount rule.</para>
+                /// <para>The promotion rules.</para>
                 /// </summary>
                 [NameInMap("Rules")]
                 [Validation(Required=false)]
                 public List<DescribeConfigurationPriceResponseBodyDataTrafficPriceRules> Rules { get; set; }
                 public class DescribeConfigurationPriceResponseBodyDataTrafficPriceRules : TeaModel {
                     /// <summary>
-                    /// <para>The name of the discount rule.</para>
+                    /// <para>The name of the rule.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>20% discount on pay-as-you-go</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the discount rule.</para>
+                    /// <para>The rule ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2000010******</para>
@@ -383,10 +405,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -394,10 +418,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -408,7 +434,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADCEC067-86AD-19E2-BD43-E83F3841****</para>
@@ -418,10 +444,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the configuration price was obtained.</para>
+        /// <para>Indicates whether the price of the configuration was obtained.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The price was obtained.</description></item>
-        /// <item><description><b>false</b>: The price failed to be queried.</description></item>
+        /// <item><description><para><b>true</b>: The price was obtained.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The price failed to be obtained.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -432,7 +460,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace.</para>
+        /// <para>The trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1a0dcc771722848598056771******</para>

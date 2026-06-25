@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ConfirmPipelineBatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code for the request.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The batch information.</para>
+        /// <para>The pipeline information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ConfirmPipelineBatchResponseBodyData Data { get; set; }
         public class ConfirmPipelineBatchResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the batch.</para>
+            /// <para>The pipeline ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e2e-vds-feh-***</para>
@@ -47,8 +51,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>The <b>ErrorCode</b> field is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>The <b>ErrorCode</b> field is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -76,10 +82,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the processing of the next batch started as required. Valid values:</para>
+        /// <para>Indicates whether the batch confirmation was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The processing started.</description></item>
-        /// <item><description><b>false</b>: The processing could not start.</description></item>
+        /// <item><description><para><b>true</b>: The confirmation was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The confirmation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +98,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// <para>The trace ID. You can use this ID to look up the details of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

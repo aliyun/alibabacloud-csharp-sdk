@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether to enable SAE built-in registry:</para>
+        /// <para>Specifies whether to enable the built-in service registry of SAE.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: true. If you do not use the built-in registry, you can set this parameter to false to accelerate the creation of a namespace.</para>
+        /// <para>The default value is true. If you do not use the built-in service registry, set this parameter to false to speed up namespace creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? EnableMicroRegistration { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The short-format namespace ID. You do not need to specify a region ID. This parameter is recommended. The ID cannot exceed 20 characters in length and can contain only lowercase letters and digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the operation.</para>
+        /// <para>The description of the namespace. The description cannot exceed 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceDescription { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The long-format namespace ID. If you specify this parameter, NameSpaceShortId is ignored. This parameter is retained for compatibility. Use the short-format namespace ID instead. The format is <c>&lt;RegionId&gt;:&lt;NamespaceId&gt;</c>. The <c>NamespaceId</c> can contain only lowercase letters and digits and cannot exceed 32 characters in length. Example: <c>cn-beijing:test</c>. For information about the regions that SAE supports, see <a href="https://help.aliyun.com/document_detail/126213.html">DescribeRegions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The name of the namespace. The name cannot exceed 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

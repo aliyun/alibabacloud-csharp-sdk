@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Specifies whether to automatically enable an auto scaling policy for the application. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: turns on Logon-free Sharing</description></item>
-        /// <item><description><b>false</b>: turns off Logon-free Sharing</description></item>
+        /// <item><description><para><b>true</b>: turns on Logon-free Sharing</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: turns off Logon-free Sharing</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,11 +49,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The percentage of the minimum number of available instances. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the value to <b>-1</b>, the minimum number of available instances is not determined based on this parameter. Default value: -1.</description></item>
-        /// <item><description>If you set the value to a number <b>from 0 to 100</b>, the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). The value is the nearest integer rounded up from the calculated result. For example, if the percentage is set to <b>50</b>% and five instances are available, the minimum number of available instances is 3.</description></item>
+        /// <item><description><para>If you set the value to <b>-1</b>, the minimum number of available instances is not determined based on this parameter. Default value: -1.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the value to a number <b>from 0 to 100</b>, the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). The value is the nearest integer rounded up from the calculated result. For example, if the percentage is set to <b>50</b>% and five instances are available, the minimum number of available instances is 3.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When both <b>MinReadyInstance</b> and <b>MinReadyInstanceRatio</b> are specified and <b>MinReadyInstanceRatio</b> is set to a number from 0 to 100, the value of <b>MinReadyInstanceRatio</b> takes precedence.** For example, if <b>MinReadyInstances</b> is set to **5, and <b>MinReadyInstanceRatio</b> is set to <b>50</b>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Current number of instances × <b>50%</b>.</para>
+        /// <para>When both <b>MinReadyInstance</b> and <b>MinReadyInstanceRatio</b> are specified and <b>MinReadyInstanceRatio</b> is set to a number from 0 to 100, the value of <b>MinReadyInstanceRatio</b> takes precedence.\<em>\</em> For example, if <b>MinReadyInstances</b> is set to \*\*5, and <b>MinReadyInstanceRatio</b> is set to <b>50</b>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Current number of instances × <b>50%</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,8 +68,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The minimum number of available instances. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the value to <b>0</b>, business interruptions occur when the application is updated.</description></item>
-        /// <item><description>If you set the value to \<em>\</em>-1\<em>\</em>, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</description></item>
+        /// <item><description><para>If you set the value to <b>0</b>, business interruptions occur when the application is updated.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the value to \<em>\</em>-1\<em>\</em>, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.</para>
@@ -97,9 +103,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// </description></item>
         /// <item><description><para><b>batchUpdate</b>: the phased release policy.</para>
         /// <list type="bullet">
-        /// <item><description><b>batch</b>: the number of release batches.</description></item>
-        /// <item><description><b>releaseType</b>: the processing method for the batches. Valid values: <b>auto</b> and <b>manual</b>.</description></item>
-        /// <item><description><b>batchWaitTime</b>: the interval between release batches. Unit: seconds.</description></item>
+        /// <item><description><para><b>batch</b>: the number of release batches.</para>
+        /// </description></item>
+        /// <item><description><para><b>releaseType</b>: the processing method for the batches. Valid values: <b>auto</b> and <b>manual</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>batchWaitTime</b>: the interval between release batches. Unit: seconds.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><b>grayUpdate</b>: the number of release batches in the phased release after a canary release. This parameter is returned only if the <b>type</b> parameter is set to <b>GrayBatchUpdate</b>.</para>

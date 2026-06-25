@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code or the error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,12 +51,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The status code. Value values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>If the request was successful, <b>ErrorCode</b> is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>400</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -81,8 +84,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the Secret was created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The ConfigMap was created.</description></item>
-        /// <item><description><b>false</b>: The ConfigMap failed to be created.</description></item>
+        /// <item><description><para><b>true</b>: The ConfigMap was created.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The ConfigMap failed to be created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

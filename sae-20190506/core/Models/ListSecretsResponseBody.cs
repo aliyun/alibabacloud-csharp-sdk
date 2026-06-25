@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,21 +30,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListSecretsResponseBodyData Data { get; set; }
         public class ListSecretsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Secrets.</para>
+            /// <para>A list of Secret instances.</para>
             /// </summary>
             [NameInMap("Secrets")]
             [Validation(Required=false)]
             public List<ListSecretsResponseBodyDataSecrets> Secrets { get; set; }
             public class ListSecretsResponseBodyDataSecrets : TeaModel {
                 /// <summary>
-                /// <para>The time when the Secret was created.</para>
+                /// <para>The time when the Secret instance was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593760185111</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The Secret ID.</para>
+                /// <para>The Secret instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public long? SecretId { get; set; }
 
                 /// <summary>
-                /// <para>The Secret name.</para>
+                /// <para>The Secret instance name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>registry-auth</para>
@@ -109,8 +113,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string SecretName { get; set; }
 
                 /// <summary>
-                /// <para>The Secret type.</para>
-                /// <para>Set the value to <b>kubernetes.io/dockerconfigjson</b>. The value indicates the secret for the username and password of the image repository and is used for authentication when images are pulled during application deployment.</para>
+                /// <para>The type of the Secret instance. The only valid value is:</para>
+                /// <para><b>kubernetes.io/dockerconfigjson</b>: a Secret that stores credentials for a container image registry and is used to authenticate image pulls during deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kubernetes.io/dockerconfigjson</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string SecretType { get; set; }
 
                 /// <summary>
-                /// <para>The time when the Secret was updated.</para>
+                /// <para>The time when the Secret instance was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593760185111</para>
@@ -134,24 +138,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code returned. Take note of the following rules:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Take note of the following rules:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,10 +177,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -186,7 +193,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID. You can use this ID to query the details of a call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

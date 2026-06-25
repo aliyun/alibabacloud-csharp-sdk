@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance to be deleted.</para>
+        /// <para>The IDs of the application instances to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

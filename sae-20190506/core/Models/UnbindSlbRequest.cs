@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disassociate the Internet-facing SLB instance. Valid values:</para>
+        /// <para>Specifies whether to unbind the public network SLB. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: dissociates the Internet-facing SLB instance.</description></item>
-        /// <item><description><b>false</b>: does not dissociate the Internet-facing SLB instance.</description></item>
+        /// <item><description><para><b>true</b>: unbinds the public network SLB.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not unbind the public network SLB.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Internet { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disassociate the internal-facing SLB instance. Valid values:</para>
+        /// <para>Specifies whether to unbind the private network SLB. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: dissociates the internal-facing SLB instance.</description></item>
-        /// <item><description><b>false</b>: does not dissociate the internal-facing SLB instance.</description></item>
+        /// <item><description><para><b>true</b>: unbinds the private network SLB.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not unbind the private network SLB.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListNamespaceChangeOrdersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code or POP error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public List<ListNamespaceChangeOrdersResponseBodyDataChangeOrderList> ChangeOrderList { get; set; }
             public class ListNamespaceChangeOrdersResponseBodyDataChangeOrderList : TeaModel {
                 /// <summary>
-                /// <para>The number of release batches.</para>
+                /// <para>The batch count.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -50,18 +54,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? BatchCount { get; set; }
 
                 /// <summary>
-                /// <para>The mode in which the release batches are determined. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>auto</b>: SAE automatically determines the release batches.</description></item>
-                /// <item><description><b>manual</b>: You must manually determine the release batches.</description></item>
-                /// </list>
+                /// <para>The batch type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Automatic</para>
                 /// </summary>
                 [NameInMap("BatchType")]
                 [Validation(Required=false)]
                 public string BatchType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the change order.</para>
+                /// <para>The change order ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7fa5c0-9ebb-4bb4-b383-1f885447****</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ChangeOrderId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the change order, which corresponds the <b>CoTypeCode</b> parameter.</para>
+                /// <para>The type of the change order, which corresponds to the <c>CoTypeCode</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>msg.docker.app.actions.CoBatchStartApplication</para>
@@ -81,10 +84,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string CoType { get; set; }
 
                 /// <summary>
-                /// <para>The code of the change order type. Valid values:</para>
+                /// <para>The type code of the change order. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>CoBatchStartApplication</b>: starts multiple applications concurrently.</description></item>
-                /// <item><description><b>CoBatchStopApplication</b>: stops multiple applications concurrently.</description></item>
+                /// <item><description><para><b>CoBatchStartApplication</b>: Starts applications in batches.</para>
+                /// </description></item>
+                /// <item><description><para><b>CoBatchStopApplication</b>: Stops applications in batches.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,7 +100,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string CoTypeCode { get; set; }
 
                 /// <summary>
-                /// <para>The time when the change order was created.</para>
+                /// <para>The creation time of the change order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-07-11 15:54:49</para>
@@ -116,13 +121,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
                 /// <summary>
                 /// <para>The description of the change order.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Batch Start Applications</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The time when the change order was completed.</para>
+                /// <para>The completion time of the change order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2019-07-11 20:12:58</para>
@@ -132,7 +140,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string FinishTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the group.</para>
+                /// <para>The group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c9ecd2-cf6c-46c3-9f20-525de202****</para>
@@ -142,7 +150,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string GroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the namespace.</para>
+                /// <para>The namespace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai:test</para>
@@ -152,7 +160,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NamespaceId { get; set; }
 
                 /// <summary>
-                /// <para>The information about release batches.</para>
+                /// <para>The pipeline.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -162,7 +170,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Pipelines { get; set; }
 
                 /// <summary>
-                /// <para>The source of the change order.</para>
+                /// <para>The initiation source for the change order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>console</para>
@@ -174,12 +182,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 /// <summary>
                 /// <para>The status of the change order. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The change order is being prepared.</description></item>
-                /// <item><description><b>1</b>: The change order is being executed.</description></item>
-                /// <item><description><b>2</b>: The change order was executed.</description></item>
-                /// <item><description><b>3</b>: The change order could not be executed.</description></item>
-                /// <item><description><b>6</b>: The change order was terminated.</description></item>
-                /// <item><description><b>10</b>: The change order could not be executed due to a system exception.</description></item>
+                /// <item><description><para><b>0</b>: Preparing</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: In progress</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: Succeeded</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: Failed</para>
+                /// </description></item>
+                /// <item><description><para><b>6</b>: Terminated</para>
+                /// </description></item>
+                /// <item><description><para><b>10</b>: Failed due to a system exception</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -190,7 +204,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the user.</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_sae</para>
@@ -202,7 +216,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The number of the returned page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -212,7 +226,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -236,8 +250,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>This parameter is returned only when a request fails.</para>
+        /// </description></item>
+        /// <item><description><para>For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -245,7 +261,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -255,7 +271,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc3915638507554994370d****</para>
@@ -265,10 +281,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the list of change orders was obtained. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the list was obtained.</description></item>
-        /// <item><description><b>false</b>: indicates that the list could not be obtained.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -279,7 +297,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It is used to query the details of a request.</para>
+        /// <para>The trace ID, which is used to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc3915638507554994370d****</para>

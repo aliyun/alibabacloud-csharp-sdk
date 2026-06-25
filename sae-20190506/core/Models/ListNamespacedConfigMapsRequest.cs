@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListNamespacedConfigMapsRequest : TeaModel {
         /// <summary>
-        /// <para>cn-hangzhou</para>
+        /// <para>The ID of the namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

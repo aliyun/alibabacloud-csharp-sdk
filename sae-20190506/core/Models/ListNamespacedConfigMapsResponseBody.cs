@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the call was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the call failed.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The data returned by the request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListNamespacedConfigMapsResponseBodyData Data { get; set; }
         public class ListNamespacedConfigMapsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ConfigMap instances.</para>
+            /// <para>The list of ConfigMap instances.</para>
             /// </summary>
             [NameInMap("ConfigMaps")]
             [Validation(Required=false)]
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public long? ConfigMapId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the instance was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593760185111</para>
@@ -60,9 +64,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The data of ConfigMap key-value pairs. Format:</para>
-                /// <para>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</para>
-                /// <para>k specifies a key and v specifies a value. For more information, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configurations</a>.</para>
+                /// <para>The key-value pairs of the ConfigMap instance.</para>
+                /// <para>For more information about the ConfigMap, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configuration items</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</para>
@@ -82,7 +85,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The name of the ConfigMap instance.</para>
+                /// <para>The name of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-name</para>
@@ -92,7 +95,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the namespace.</para>
+                /// <para>The namespace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -102,14 +105,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NamespaceId { get; set; }
 
                 /// <summary>
-                /// <para>The application that is associated with the instance.</para>
+                /// <para>The associated applications.</para>
                 /// </summary>
                 [NameInMap("RelateApps")]
                 [Validation(Required=false)]
                 public List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> RelateApps { get; set; }
                 public class ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the application.</para>
+                    /// <para>The application ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>f16b4000-9058-4c22-a49d-49a28f0b****</para>
@@ -119,7 +122,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string AppId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the application.</para>
+                    /// <para>The application name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test-app</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 }
 
                 /// <summary>
-                /// <para>The time when the instance was last modified.</para>
+                /// <para>The last update time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1593760185111</para>
@@ -145,10 +148,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The returned error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+        /// <item><description></description></item>
+        /// <item><description><para>This parameter is returned only if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -156,10 +160,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned information. Valid values:</para>
+        /// <para>The response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>Returns <b>success</b> if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Returns an error message if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -170,7 +176,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -180,10 +186,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the ConfigMap instances were obtained. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The instances were obtained.</description></item>
-        /// <item><description><b>false</b>: The instances failed to be obtained.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -194,7 +202,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The trace ID. You can use this ID to trace the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

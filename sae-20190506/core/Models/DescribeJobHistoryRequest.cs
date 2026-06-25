@@ -43,10 +43,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The status of the job. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The job is not executed.</description></item>
-        /// <item><description><b>1</b>: The job is executed.</description></item>
-        /// <item><description><b>2</b>: The job fails to be executed.</description></item>
-        /// <item><description><b>3</b>: The job is being executed.</description></item>
+        /// <item><description><para><b>0</b>: The job is not executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: The job is executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: The job fails to be executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: The job is being executed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DisableApplicationScalingRuleRequest : TeaModel {
         /// <summary>
-        /// <para>timer-0800-2100</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The name of the Auto Scaling policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

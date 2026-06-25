@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the namespace in which the Secret resides. By default, the namespace ID is the same as the region ID.</para>
+        /// <para>The ID of the namespace. If the secret is in the default namespace, you need to specify only the region ID, for example, <c>cn-beijing</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Secret to be deleted. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to view the Secret IDs.</para>
+        /// <para>The ID of the secret to delete. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

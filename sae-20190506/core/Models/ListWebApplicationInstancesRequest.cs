@@ -62,6 +62,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 
         /// <summary>
         /// <para>The status of the application instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Running</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

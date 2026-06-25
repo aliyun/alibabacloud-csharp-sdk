@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The type of the event. Valid values:</para>
+        /// <para>The event type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Warning</b>: an alert.</description></item>
-        /// <item><description><b>Normal</b>: a normal event.</description></item>
+        /// <item><description><para><b>Warning</b>: An event that indicates a potential problem.</para>
+        /// </description></item>
+        /// <item><description><para><b>Normal</b>: An event that indicates a routine operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The namespace ID.</para>
+        /// <para>The ID of the region where the namespace is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,13 +57,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The type of the object. Valid values:</para>
+        /// <para>The object kind. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Deployment</b>: an application.</description></item>
-        /// <item><description><b>Pod</b>: an application instance.</description></item>
-        /// <item><description><b>Service</b>: a Server Load Balancer (SLB) instance.</description></item>
-        /// <item><description><b>HorizontalPodAutoscaler</b>: an auto scaling policy.</description></item>
-        /// <item><description><b>CloneSet</b>: an application.</description></item>
+        /// <item><description><para><b>Deployment</b>: The application.</para>
+        /// </description></item>
+        /// <item><description><para><b>Pod</b>: The application instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>Service</b>: The Server Load Balancer (SLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>HorizontalPodAutoscaler</b>: The auto scaling policy.</para>
+        /// </description></item>
+        /// <item><description><para><b>CloneSet</b>: The application.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +79,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ObjectKind { get; set; }
 
         /// <summary>
-        /// <para>The name of the object. Fuzzy search by prefix is supported.</para>
+        /// <para>The name of the object. Prefix matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>errew-b86bf540-b4dc-47d8-a42f-b4997c14bd8f-5595cbddd6-x****</para>
@@ -82,7 +89,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ObjectName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 0 to 10000.</para>
+        /// <para>The number of entries to return per page. The value must be an integer from 0 to 10,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -92,7 +99,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The cause of the event. Fuzzy search by prefix is supported.</para>
+        /// <para>The reason for the event. Prefix matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Started</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources. Separate multiple resource IDs with comma (,). This parameter is required if you do not specify the <b>Tags</b> parameter.</para>
+        /// <para>The resource IDs. You can specify up to 50 resource IDs in a JSON array. This parameter is required unless you specify the <b>Tags</b> parameter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <c>application</c>.</para>
+        /// <para>The resource type. Only <c>application</c> is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,13 +42,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag in the format of a key-value pair. This parameter is required if you do not specify the <b>ResourceIds</b> parameter. The following parameters are involved:</para>
+        /// <para>The key-value pairs of the tags. This parameter is required unless you specify the <b>ResourceIds</b> parameter. The following rules apply:</para>
         /// <list type="bullet">
-        /// <item><description><b>key</b>: the tag key. It cannot exceed 128 characters in length.</description></item>
-        /// <item><description><b>value</b>: the tag value. It cannot exceed 128 characters in length.</description></item>
+        /// <item><description><para><b>key</b>: The tag key. The key must be 1 to 128 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para><b>value</b>: The tag value. The value must be 1 to 128 characters in length.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Tag keys and tag values are case-sensitive. If you specify multiple tags, the system adds all the tags to the specified resources. Each tag key on a resource can have only one tag value. If you create a tag that has the same key as an existing tag, the value of the existing tag is overwritten.</para>
-        /// <para>Tag keys and tag values cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+        /// <para>Tags are case-sensitive. If you specify multiple tags, they are created and bound to the specified resources. For a single resource, each tag key must be unique. If you specify a tag key that already exists for a resource, the operation updates the existing tag value.</para>
+        /// <para>A tag key cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;:&quot;k1&quot;,&quot;value&quot;:&quot;v1&quot;}]</para>

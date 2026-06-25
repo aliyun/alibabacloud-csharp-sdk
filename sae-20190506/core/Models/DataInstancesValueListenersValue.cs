@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The listener port of the NLB instance.</para>
+        /// <para>The listener port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -30,13 +30,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The status of the NLB listener.</para>
+        /// <para>The state of the NLB listener. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: The listener is being created.</description></item>
-        /// <item><description><b>Configuring</b>: The listener is being configured.</description></item>
-        /// <item><description><b>Bounded</b>: The listener runs as expected.</description></item>
-        /// <item><description><b>Unbinding</b>: The listener is being deleted.</description></item>
-        /// <item><description><b>Failed</b>: The listener is unavailable.</description></item>
+        /// <item><description><para><b>Creating</b>: The listener is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Configuring</b>: The listener is being configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>Bounded</b>: The listener is running as expected.</para>
+        /// </description></item>
+        /// <item><description><para><b>Unbinding</b>: The listener is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>Failed</b>: The listener is unavailable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +52,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The open ports of the NLB instance.</para>
+        /// <para>The target port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -57,7 +62,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? TargetPort { get; set; }
 
         /// <summary>
-        /// <para>The server certificates.</para>
+        /// <para>The server certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123157******</para>

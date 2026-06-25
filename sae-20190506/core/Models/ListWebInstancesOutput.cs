@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class ListWebInstancesOutput : TeaModel {
         /// <summary>
         /// <para>The error message of instance creation. If the instance creation was successful, this parameter is not returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("CurrentError")]
         [Validation(Required=false)]

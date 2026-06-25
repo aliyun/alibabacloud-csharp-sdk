@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: success</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: redirection</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: request error</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: server error</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The components.</para>
+        /// <para>A list of components.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -35,8 +39,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>Indicates whether the component is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The component is disabled.</description></item>
-            /// <item><description><b>false</b>: The component is not disabled.</description></item>
+            /// <item><description><para><b>true</b>: The component is disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The component is not disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? Disabled { get; set; }
 
             /// <summary>
-            /// <para>The version of the container, such as Ali-Tomcat, in which an application that is developed based on High-speed Service Framework (HSF) is deployed.</para>
+            /// <para>The version of the application container provided by the HSF framework, such as the Ali-Tomcat container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.5.3</para>
@@ -59,10 +65,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code. This parameter is returned only if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>If the request is successful, the <b>ErrorCode</b> field is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, the <b>ErrorCode</b> field is returned. For more information, see the <b>Error codes</b> section.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -70,7 +78,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -90,10 +98,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the list of container components of a microservices application was obtained. Valid values:</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The list was obtained.</description></item>
-        /// <item><description><b>false</b>: The list failed to be obtained.</description></item>
+        /// <item><description><para><b>true</b>: The operation succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +114,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

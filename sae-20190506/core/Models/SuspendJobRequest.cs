@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Start or suspend a job template.</para>
         /// <list type="bullet">
-        /// <item><description>true: Start a job template.</description></item>
-        /// <item><description>false: Suspend a job template.</description></item>
+        /// <item><description><para>true: Start a job template.</para>
+        /// </description></item>
+        /// <item><description><para>false: Suspend a job template.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

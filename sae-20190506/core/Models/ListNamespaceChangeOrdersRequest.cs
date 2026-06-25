@@ -10,7 +10,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListNamespaceChangeOrdersRequest : TeaModel {
         /// <summary>
-        /// <para>2</para>
+        /// <para>The change order status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>0</b>: Preparing.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Executing.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: Terminated.</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: System Error.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +34,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CoStatus { get; set; }
 
         /// <summary>
-        /// <para>CoBatchStartApplication</para>
+        /// <para>The change order type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>CoBatchStartApplication</b>: Batch Start Application.</para>
+        /// </description></item>
+        /// <item><description><para><b>CoBatchStopApplication</b>: Batch Stop Application.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CoBatchStartApplication</para>
@@ -30,7 +50,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string CoType { get; set; }
 
         /// <summary>
-        /// <para>1</para>
+        /// <para>The current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +60,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>test</para>
+        /// <para>A keyword for a fuzzy search of change order descriptions. Change orders whose descriptions contain this <b>key</b> are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -50,7 +70,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>cn-shanghai:test</para>
+        /// <para>The namespace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +81,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>20</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

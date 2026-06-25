@@ -10,10 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAppVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the historical versions of the application were obtained. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the historical versions of the application were obtained.</description></item>
-        /// <item><description><b>false</b>: indicates that the historical versions of the application could not be obtained.</description></item>
+        /// <item><description><para><b>2xx</b>: The call is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The call is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,17 +30,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the versions.</para>
+        /// <para>The version information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAppVersionsResponseBodyData> Data { get; set; }
         public class ListAppVersionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The URL of the code package. If you use the SAE console to upload the code package, take note of the following items:</para>
+            /// <para>The download URL of the code package. If you uploaded the package using SAE, note the following:</para>
             /// <list type="bullet">
-            /// <item><description>You cannot download the URL. You must call the GetPackageVersionAccessableUrl operation to obtain the URL. The obtained URL is valid for 10 minutes.</description></item>
-            /// <item><description>SAE can retain the package up to 90 days. After 90 days, the URL cannot be returned or downloaded.</description></item>
+            /// <item><description><para>This URL is not a direct download link. You must call the GetPackageVersionAccessableUrl operation to obtain a downloadable URL that is valid for 10 minutes.</para>
+            /// </description></item>
+            /// <item><description><para>SAE stores the package for a maximum of 90 days. After this period, the URL is not returned and the package cannot be downloaded.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("BuildPackageUrl")]
@@ -42,7 +50,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string BuildPackageUrl { get; set; }
 
             /// <summary>
-            /// <para>The download link of the WAR or JAR package. This parameter is returned when the <b>Type</b> parameter is set to <b>url</b>.</para>
+            /// <para>The time when the version was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1590124643553</para>
@@ -52,11 +60,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
-            /// <list type="bullet">
-            /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-            /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
-            /// </list>
+            /// <para>The version ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a0ce266c-d354-423a-9bd6-4083405a****</para>
@@ -66,10 +70,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The deployment method of the application. Valid values:</para>
+            /// <para>The application type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>image</b>: indicates that the application is deployed by using an image.</description></item>
-            /// <item><description><b>url</b>: indicates that the application is deployed by using a code package.</description></item>
+            /// <item><description><para><b>image</b>: The application is deployed using an image.</para>
+            /// </description></item>
+            /// <item><description><para><b>url</b>: The application is deployed using a code package.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The URL of the image.</para>
+            /// <para>The URL of the WAR package.</para>
             /// </summary>
             [NameInMap("WarUrl")]
             [Validation(Required=false)]
@@ -89,12 +95,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -102,7 +108,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Additional information about the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -112,7 +118,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The information about the versions.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</para>
@@ -122,6 +128,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the historical versions of the application were successfully queried. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The query was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The query failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Specifies whether to return custom namespaces. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The system returns custom namespaces.</description></item>
-        /// <item><description><b>false</b>: The system does not return custom namespaces.</description></item>
+        /// <item><description><para><b>true</b>: The system returns custom namespaces.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The system does not return custom namespaces.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether hybrid cloud namespaces are excluded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Hybrid cloud namespaces are excluded.</description></item>
-        /// <item><description><b>false</b>: Hybrid cloud namespaces are included.</description></item>
+        /// <item><description><para><b>true</b>: Hybrid cloud namespaces are excluded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Hybrid cloud namespaces are included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

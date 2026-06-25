@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
     public class WebVersionStatus : TeaModel {
         /// <summary>
         /// <para>The error message of the application execution. If the execution is successful, a null value is returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>空</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]

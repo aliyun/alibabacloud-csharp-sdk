@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeAppServiceDetailRequest : TeaModel {
         /// <summary>
-        /// <para>6dcc8c9e-d3da-478a-a066-86dcf820\<em>\</em>\<em>\</em></para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NacosInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace for the MSE Nacos instance.</para>
+        /// <para>The ID of the MSE Nacos namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NacosNamespaceId { get; set; }
 
         /// <summary>
-        /// <para>springCloud</para>
+        /// <para>The service group. This is a custom parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>springCloud</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ServiceGroup { get; set; }
 
         /// <summary>
-        /// <para>edas.service.provider</para>
+        /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>edas.service.provider</para>
@@ -61,7 +61,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>springCloud</para>
+        /// <para>The service type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>dubbo</b></para>
+        /// </description></item>
+        /// <item><description><para><b>springCloud</b></para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>springCloud</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>1.0.0</para>
+        /// <para>The service version. This is a custom parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0.0</para>

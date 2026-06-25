@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeGreyTagRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the canary release rule.</para>
+        /// <para>The ID of the rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

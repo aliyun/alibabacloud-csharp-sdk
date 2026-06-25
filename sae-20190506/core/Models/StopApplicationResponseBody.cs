@@ -10,6 +10,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class StopApplicationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status of the API call or a POP error code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,24 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
-        /// <list type="bullet">
-        /// <item><description>If the request is successful, this parameter is not returned.****</description></item>
-        /// <item><description>This parameter is returned only if the request failed.**** For more information, see <b>Error codes</b> in this topic.</description></item>
-        /// </list>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public StopApplicationResponseBodyData Data { get; set; }
         public class StopApplicationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The HTTP status code. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-            /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-            /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-            /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
-            /// </list>
+            /// <para>The ID of the change order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4a815998-b468-4bea-b7d8-59f52a44****</para>
@@ -47,10 +49,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the specified application is stopped. Valid values:</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -58,7 +62,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned message. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -68,7 +78,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -78,6 +88,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the application was stopped. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The application was stopped.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The application failed to be stopped.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -86,7 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the change order.</para>
+        /// <para>The ID of the call chain. Use this ID to query detailed information about the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc3b6e215637275918588187d****</para>

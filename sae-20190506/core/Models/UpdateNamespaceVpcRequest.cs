@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateNamespaceVpcRequest : TeaModel {
         /// <summary>
+        /// <para>The short-format namespace ID. You do not need to include the region ID. We recommend that you use this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// <para>vpc-2ze0i263cnn311nvj\<em>\</em>\<em>\</em></para>
+        /// <para>The long-format namespace ID. If you set this parameter, it takes precedence over NameSpaceShortId. This parameter is for backward compatibility. Use the short-format namespace ID to simplify the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the VPC. This VPC replaces the original VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

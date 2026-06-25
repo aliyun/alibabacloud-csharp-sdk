@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The resource usage.</para>
+        /// <para>The resource usage information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public QueryResourceStaticsResponseBodyDataRealTimeRes RealTimeRes { get; set; }
             public class QueryResourceStaticsResponseBodyDataRealTimeRes : TeaModel {
                 /// <summary>
-                /// <para>The CPU usage. Unit: core per minute.</para>
+                /// <para>The CPU usage, in Core·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>13</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of the temporary storage space. Unit: GiB.</para>
+                /// <para>The ephemeral storage usage, in GiB·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? EphemeralStorage { get; set; }
 
                 /// <summary>
-                /// <para>The memory usage. Unit: GiB per minute.</para>
+                /// <para>The memory usage, in GiB·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>26</para>
@@ -72,14 +76,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The resource usage of the current month.</para>
+            /// <para>The resource usage in the current month.</para>
             /// </summary>
             [NameInMap("Summary")]
             [Validation(Required=false)]
             public QueryResourceStaticsResponseBodyDataSummary Summary { get; set; }
             public class QueryResourceStaticsResponseBodyDataSummary : TeaModel {
                 /// <summary>
-                /// <para>The usage of active vCPU. Unit: Core*min.</para>
+                /// <para>The active vCPU usage, in Core·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? ActiveCpu { get; set; }
 
                 /// <summary>
-                /// <para>The CPU usage. Unit: core per minute.</para>
+                /// <para>The CPU usage, in Core·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3354</para>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The CU usage.</para>
+                /// <para>The number of CUs used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2312145</para>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? Cu { get; set; }
 
                 /// <summary>
-                /// <para>The storage size of the temporary storage space. Unit: GiB.</para>
+                /// <para>The ephemeral storage usage, in GiB·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -119,19 +123,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? EphemeralStorage { get; set; }
 
                 /// <summary>
-                /// <b>Example:</b>
-                /// <para>c8g1</para>
+                /// <para>The GpuA10 usage.</para>
                 /// </summary>
                 [NameInMap("GpuA10")]
                 [Validation(Required=false)]
                 public float? GpuA10 { get; set; }
 
+                /// <summary>
+                /// <para>The GpuPpu810e usage.</para>
+                /// </summary>
                 [NameInMap("GpuPpu810e")]
                 [Validation(Required=false)]
                 public float? GpuPpu810e { get; set; }
 
                 /// <summary>
-                /// <para>The usage of idle CPU. Unit: Core*min.</para>
+                /// <para>The idle vCPU usage, in Core·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public float? IdleCpu { get; set; }
 
                 /// <summary>
-                /// <para>The memory usage. Unit: GiB per minute.</para>
+                /// <para>The memory usage, in GiB·min.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6708</para>
@@ -155,24 +161,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. </para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error code is returned when the request fails.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,7 +190,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7CCF7092-72CA-4431-90D6-C7D98752****</para>
@@ -193,10 +200,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the resource usage of an application was obtained. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the resource usage was obtained.</description></item>
-        /// <item><description><b>false</b>: indicates that the resource usage could not be obtained.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -207,7 +216,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// <para>The trace ID used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac1a08a015623098794277264e****</para>

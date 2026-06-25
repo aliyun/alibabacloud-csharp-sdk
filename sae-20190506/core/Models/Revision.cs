@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The ID of the revision version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>001</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RevisionId")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The traffic weight of the version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>0.5</para>
         /// </summary>
         [NameInMap("Weight")]
         [Validation(Required=false)]

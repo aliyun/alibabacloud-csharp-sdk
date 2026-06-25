@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. Valid values: 0 to 9999.</para>
+        /// <para>The page size. The value must be an integer from 0 to 9,999.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9999</para>
@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dubbo</b></description></item>
-        /// <item><description><b>springCloud</b></description></item>
+        /// <item><description><para><b>Dubbo</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Spring Cloud</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

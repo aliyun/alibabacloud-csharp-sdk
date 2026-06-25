@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a namespace.</para>
+        /// <para>The namespace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The canary tag</para>
+        /// <para>The canary tag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;alicloud.service.tag&quot;:&quot;gray&quot;}</para>

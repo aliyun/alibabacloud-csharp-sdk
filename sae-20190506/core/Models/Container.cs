@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class Container : TeaModel {
         /// <summary>
-        /// <para>The startup parameters of the container.</para>
+        /// <para>Container startup arguments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Args { get; set; }
 
         /// <summary>
-        /// <para>The startup command of the container.</para>
+        /// <para>Container start command.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;/bin/sh&quot;]</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Command { get; set; }
 
         /// <summary>
-        /// <para>The container environment variables.</para>
+        /// <para>Container environment variables.</para>
         /// </summary>
         [NameInMap("EnvironmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
         /// <summary>
-        /// <para>The container image.</para>
+        /// <para>Container image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,21 +48,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the image repository.</para>
+        /// <para>Image repository configuration.</para>
         /// </summary>
         [NameInMap("ImageRegistryConfig")]
         [Validation(Required=false)]
         public ImageRegistryConfig ImageRegistryConfig { get; set; }
 
         /// <summary>
-        /// <para>The configuration for collecting monitoring records.</para>
+        /// <para>Monitoring collection configuration.</para>
         /// </summary>
         [NameInMap("MetricsCollectConfig")]
         [Validation(Required=false)]
         public MetricsCollectConfig MetricsCollectConfig { get; set; }
 
         /// <summary>
-        /// <para>The port of the container.</para>
+        /// <para>Container port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The number of concurrent requests on a single instance.</para>
+        /// <para>Maximum concurrent requests per instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? RequestConcurrency { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of the container request.</para>
+        /// <para>Container request timeout, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? RequestTimeout { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the container resources.</para>
+        /// <para>Container resource configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resources")]
@@ -100,28 +100,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public ContainerResources Resources { get; set; }
 
         /// <summary>
-        /// <para>The configuration of container log collection.</para>
+        /// <para>Container log collection configuration.</para>
         /// </summary>
         [NameInMap("SLSCollectConfigs")]
         [Validation(Required=false)]
         public SLSCollectConfigs SLSCollectConfigs { get; set; }
 
         /// <summary>
-        /// <para>The container startup check configuration.</para>
+        /// <para>Container startup probe configuration.</para>
         /// </summary>
         [NameInMap("StartupProbe")]
         [Validation(Required=false)]
         public StartupProbe StartupProbe { get; set; }
 
         /// <summary>
-        /// <para>The container NAS configuration.</para>
+        /// <para>Container NAS configuration.</para>
         /// </summary>
         [NameInMap("WebNASConfig")]
         [Validation(Required=false)]
         public WebNASConfig WebNASConfig { get; set; }
 
         /// <summary>
-        /// <para>The container OSS mount configuration.</para>
+        /// <para>Container OSS mount configuration.</para>
         /// </summary>
         [NameInMap("WebOSSConfig")]
         [Validation(Required=false)]

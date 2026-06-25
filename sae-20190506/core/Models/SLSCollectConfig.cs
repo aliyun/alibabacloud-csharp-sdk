@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>file_log</para>
+        /// <para>文件采集日志</para>
         /// </summary>
         [NameInMap("LogType")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>sag-shanghai</para>
+        /// <para>my-logstore</para>
         /// </summary>
         [NameInMap("LogstoreName")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The name of the SLS project.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>log-service-1199085698835****-cn-neijing</para>
         /// </summary>
         [NameInMap("ProjectName")]
         [Validation(Required=false)]

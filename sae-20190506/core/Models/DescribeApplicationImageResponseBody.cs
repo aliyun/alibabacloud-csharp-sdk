@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the image of the application.</para>
+        /// <para>The application image information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the repository.</para>
+            /// <para>The image repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace to which the image repository belongs.</para>
+            /// <para>The image namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The type of the repository. Only Container Registry is supported.</para>
+            /// <para>The image repository type. Currently, only Container Registry is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALI_HUB</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RepoOriginType { get; set; }
 
             /// <summary>
-            /// <para>The tag of the image.</para>
+            /// <para>The image tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>latest</para>
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string RepoTag { get; set; }
 
             /// <summary>
-            /// <para>This parameter is reserved.</para>
+            /// <para>A reserved field.</para>
             /// </summary>
             [NameInMap("RepoType")]
             [Validation(Required=false)]
@@ -106,10 +110,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>This parameter is left empty if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter returns an error code if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -117,10 +123,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description><para><b>success</b> is returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>An error code is returned if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,10 +149,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the information about the image was obtained. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The information was obtained.</description></item>
-        /// <item><description><b>false</b>: The information failed to be obtained.</description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -155,7 +165,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID that is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

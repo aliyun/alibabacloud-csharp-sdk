@@ -19,6 +19,24 @@ namespace AlibabaCloud.SDK.Sae20190506
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "sae.us-west-1.aliyuncs.com"},
+                {"us-east-1", "sae.us-east-1.aliyuncs.com"},
+                {"eu-central-1", "sae.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "sae.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "sae.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "sae.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "sae.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "sae.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "sae.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "sae.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "sae.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "sae.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "sae.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "sae.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "sae.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sae", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -169,7 +187,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminate a change order.</para>
+        /// <para>This operation stops a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -219,7 +237,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminate a change order.</para>
+        /// <para>This operation stops a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -269,7 +287,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminate a change order.</para>
+        /// <para>This operation stops a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -288,7 +306,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Terminate a change order.</para>
+        /// <para>This operation stops a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -737,7 +755,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// <para>Binds a Network Load Balancer (NLB) instance to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -799,7 +817,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// <para>Binds a Network Load Balancer (NLB) instance to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -861,7 +879,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// <para>Binds a Network Load Balancer (NLB) instance to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -880,7 +898,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Network Load Balancer (NLB) instance with an application.</para>
+        /// <para>Binds a Network Load Balancer (NLB) instance to an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1215,7 +1233,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Create an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1621,7 +1639,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Create an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2027,7 +2045,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Create an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2046,7 +2064,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application.</para>
+        /// <para>Create an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2065,18 +2083,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Create an application auto scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Precautions</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
-        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
-        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
-        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
-        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
+        /// <item><description>You can create up to five elasticity policies per application.</description></item>
+        /// <item><description>For each scheduled elasticity policy, you can create up to 20 trigger points per day.</description></item>
+        /// <item><description>While an elasticity policy is enabled, do not manually perform operations on the application, such as scaling, deployment, changing specifications, restarting, or stopping. To perform these operations, disable the policy first.</description></item>
+        /// <item><description>You cannot add or enable an elasticity policy for an application that is undergoing a scale-out, scale-in, deployment (single-batch, phased, or canary), specification change, restart, or stop.</description></item>
+        /// <item><description>To scale out an application to more than 50 instances, contact SAE technical support to be added to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2155,18 +2173,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Create an application auto scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Precautions</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
-        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
-        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
-        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
-        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
+        /// <item><description>You can create up to five elasticity policies per application.</description></item>
+        /// <item><description>For each scheduled elasticity policy, you can create up to 20 trigger points per day.</description></item>
+        /// <item><description>While an elasticity policy is enabled, do not manually perform operations on the application, such as scaling, deployment, changing specifications, restarting, or stopping. To perform these operations, disable the policy first.</description></item>
+        /// <item><description>You cannot add or enable an elasticity policy for an application that is undergoing a scale-out, scale-in, deployment (single-batch, phased, or canary), specification change, restart, or stop.</description></item>
+        /// <item><description>To scale out an application to more than 50 instances, contact SAE technical support to be added to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2245,18 +2263,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Create an application auto scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Precautions</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
-        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
-        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
-        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
-        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
+        /// <item><description>You can create up to five elasticity policies per application.</description></item>
+        /// <item><description>For each scheduled elasticity policy, you can create up to 20 trigger points per day.</description></item>
+        /// <item><description>While an elasticity policy is enabled, do not manually perform operations on the application, such as scaling, deployment, changing specifications, restarting, or stopping. To perform these operations, disable the policy first.</description></item>
+        /// <item><description>You cannot add or enable an elasticity policy for an application that is undergoing a scale-out, scale-in, deployment (single-batch, phased, or canary), specification change, restart, or stop.</description></item>
+        /// <item><description>To scale out an application to more than 50 instances, contact SAE technical support to be added to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2276,18 +2294,18 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto scaling policy for an application.</para>
+        /// <para>Create an application auto scaling policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Precautions</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description>You can create up to five auto scaling policies for one application.</description></item>
-        /// <item><description>You can create up to 20 trigger points within one day in a scheduled auto scaling policy.</description></item>
-        /// <item><description>If an auto scaling policy is enabled for an application, you cannot manually manage the lifecycle of the application. For example, you cannot scale, deploy (including single-batch release, phased release, and canary release), stop, or restart the application, or change the instance type. If you want to perform the preceding operations on the application, disable the auto scaling policy and then manually perform the operations.</description></item>
-        /// <item><description>If an application is in the process of scale-out, scale-in, deployment (including single-batch release, phased release, and canary release), instance type change, restart, or stop, you cannot add or enable an auto scaling policy for the application.</description></item>
-        /// <item><description>If you want to configure more than 50 instances for an application, you must contact SAE technical support to add your account to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
+        /// <item><description>You can create up to five elasticity policies per application.</description></item>
+        /// <item><description>For each scheduled elasticity policy, you can create up to 20 trigger points per day.</description></item>
+        /// <item><description>While an elasticity policy is enabled, do not manually perform operations on the application, such as scaling, deployment, changing specifications, restarting, or stopping. To perform these operations, disable the policy first.</description></item>
+        /// <item><description>You cannot add or enable an elasticity policy for an application that is undergoing a scale-out, scale-in, deployment (single-batch, phased, or canary), specification change, restart, or stop.</description></item>
+        /// <item><description>To scale out an application to more than 50 instances, contact SAE technical support to be added to the whitelist. For more information, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2465,13 +2483,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a canary release rule for a Spring Cloud or Dubbo application.</para>
+        /// <para>Create a canary release rule for a Spring Cloud or Dubbo application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can currently configure only one canary rule per application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2538,13 +2556,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a canary release rule for a Spring Cloud or Dubbo application.</para>
+        /// <para>Create a canary release rule for a Spring Cloud or Dubbo application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can currently configure only one canary rule per application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2611,13 +2629,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a canary release rule for a Spring Cloud or Dubbo application.</para>
+        /// <para>Create a canary release rule for a Spring Cloud or Dubbo application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can currently configure only one canary rule per application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2637,13 +2655,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a canary release rule for a Spring Cloud or Dubbo application.</para>
+        /// <para>Create a canary release rule for a Spring Cloud or Dubbo application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can currently configure only one canary rule per application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -2663,7 +2681,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule.</para>
+        /// <para>Create a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2799,7 +2817,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule.</para>
+        /// <para>Create a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2935,7 +2953,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule.</para>
+        /// <para>Create a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2954,7 +2972,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a routing rule.</para>
+        /// <para>Create a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2973,7 +2991,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>This operation creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3241,7 +3259,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>This operation creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3509,7 +3527,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>This operation creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3528,7 +3546,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a job template.</para>
+        /// <para>This operation creates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3547,7 +3565,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a namespace.</para>
+        /// <para>Creates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3609,7 +3627,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a namespace.</para>
+        /// <para>Creates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3671,7 +3689,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a namespace.</para>
+        /// <para>Creates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3690,7 +3708,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a namespace.</para>
+        /// <para>Creates a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3709,7 +3727,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane.</para>
+        /// <para>Create or update a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3797,7 +3815,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane.</para>
+        /// <para>Create or update a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3885,7 +3903,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane.</para>
+        /// <para>Create or update a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3904,7 +3922,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane.</para>
+        /// <para>Create or update a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3923,7 +3941,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane group.</para>
+        /// <para>Creates or updates a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3999,7 +4017,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane group.</para>
+        /// <para>Creates or updates a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4075,7 +4093,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane group.</para>
+        /// <para>Creates or updates a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4094,7 +4112,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a lane group.</para>
+        /// <para>Creates or updates a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4713,7 +4731,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
+        /// <para>Deletes an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4763,7 +4781,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
+        /// <para>Deletes an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4813,7 +4831,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
+        /// <para>Deletes an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4832,7 +4850,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69\\<em>\\</em>\\<em>\\</em></para>
+        /// <para>Deletes an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4851,7 +4869,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ConfigMap.</para>
+        /// <para>Deletes a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4897,7 +4915,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ConfigMap.</para>
+        /// <para>Deletes a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4943,7 +4961,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ConfigMap.</para>
+        /// <para>Deletes a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4962,7 +4980,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ConfigMap.</para>
+        /// <para>Deletes a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4981,7 +4999,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a canary release rule based on the specified rule ID.</para>
+        /// <para>Deletes a grey tag route by the specified rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5027,7 +5045,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a canary release rule based on the specified rule ID.</para>
+        /// <para>Deletes a grey tag route by the specified rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5073,7 +5091,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a canary release rule based on the specified rule ID.</para>
+        /// <para>Deletes a grey tag route by the specified rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5092,7 +5110,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a canary release rule based on the specified rule ID.</para>
+        /// <para>Deletes a grey tag route by the specified rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5249,7 +5267,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a routing rule.</para>
+        /// <para>Deletes an ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5295,7 +5313,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a routing rule.</para>
+        /// <para>Deletes an ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5341,7 +5359,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a routing rule.</para>
+        /// <para>Deletes an ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5360,7 +5378,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a routing rule.</para>
+        /// <para>Deletes an ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5379,7 +5397,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application instance.</para>
+        /// <para>Deletes one or more application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5429,7 +5447,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application instance.</para>
+        /// <para>Deletes one or more application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5479,7 +5497,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application instance.</para>
+        /// <para>Deletes one or more application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5498,7 +5516,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application instance.</para>
+        /// <para>Deletes one or more application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5647,7 +5665,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a namespace.</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5697,7 +5715,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a namespace.</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5747,7 +5765,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a namespace.</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5766,7 +5784,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a namespace.</para>
+        /// <para>Deletes a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5785,7 +5803,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Secret.</para>
+        /// <para>Deletes a secret.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5835,7 +5853,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Secret.</para>
+        /// <para>Deletes a secret.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5885,7 +5903,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Secret.</para>
+        /// <para>Deletes a secret.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5904,7 +5922,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Secret.</para>
+        /// <para>Deletes a secret.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5923,7 +5941,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lane group.</para>
+        /// <para>Deletes a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5973,7 +5991,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lane group.</para>
+        /// <para>Deletes a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6023,7 +6041,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lane group.</para>
+        /// <para>Deletes a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6042,7 +6060,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a lane group.</para>
+        /// <para>Deletes a swimming lane group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6511,7 +6529,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application.</para>
+        /// <para>Deploy an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6909,7 +6927,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application.</para>
+        /// <para>Deploy an application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7307,7 +7325,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application.</para>
+        /// <para>Deploy an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7326,7 +7344,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys an application.</para>
+        /// <para>Deploy an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7345,7 +7363,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata details of the service of an application.</para>
+        /// <para>Describes the metadata details of an application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7415,7 +7433,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata details of the service of an application.</para>
+        /// <para>Describes the metadata details of an application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7485,7 +7503,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata details of the service of an application.</para>
+        /// <para>Describes the metadata details of an application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7504,7 +7522,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata details of the service of an application.</para>
+        /// <para>Describes the metadata details of an application service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7523,7 +7541,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of an application.</para>
+        /// <para>Retrieves the configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7573,7 +7591,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of an application.</para>
+        /// <para>Retrieves the configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7623,7 +7641,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of an application.</para>
+        /// <para>Retrieves the configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7642,7 +7660,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of an application.</para>
+        /// <para>Retrieves the configuration of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7661,7 +7679,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups of an application.</para>
+        /// <para>Use <c>DescribeApplicationGroups</c> to retrieve application instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7715,7 +7733,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups of an application.</para>
+        /// <para>Use <c>DescribeApplicationGroups</c> to retrieve application instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7769,7 +7787,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups of an application.</para>
+        /// <para>Use <c>DescribeApplicationGroups</c> to retrieve application instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7788,7 +7806,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the instance groups of an application.</para>
+        /// <para>Use <c>DescribeApplicationGroups</c> to retrieve application instance groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7807,7 +7825,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the image of an application.</para>
+        /// <para>Retrieves information about an application image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7857,7 +7875,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the image of an application.</para>
+        /// <para>Retrieves information about an application image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7907,7 +7925,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the image of an application.</para>
+        /// <para>Retrieves information about an application image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7926,7 +7944,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the image of an application.</para>
+        /// <para>Retrieves information about an application image.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7945,7 +7963,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application instances.</para>
+        /// <para>Retrieves a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8015,7 +8033,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application instances.</para>
+        /// <para>Retrieves a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8085,7 +8103,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application instances.</para>
+        /// <para>Retrieves a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8104,7 +8122,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application instances.</para>
+        /// <para>Retrieves a list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8261,7 +8279,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// <para>View the NLB configuration for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8307,7 +8325,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// <para>View the NLB configuration for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8353,7 +8371,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// <para>View the NLB configuration for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8372,7 +8390,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</para>
+        /// <para>View the NLB configuration for the application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8391,7 +8409,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Auto Scaling policy of an application.</para>
+        /// <para>Describes a single auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8441,7 +8459,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Auto Scaling policy of an application.</para>
+        /// <para>Describes a single auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8491,7 +8509,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Auto Scaling policy of an application.</para>
+        /// <para>Describes a single auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8510,7 +8528,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an Auto Scaling policy of an application.</para>
+        /// <para>Describes a single auto scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8529,7 +8547,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Describes the Auto Scaling policies for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8575,7 +8593,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Describes the Auto Scaling policies for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8621,7 +8639,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Describes the Auto Scaling policies for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8640,7 +8658,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the auto scaling policies of an application.</para>
+        /// <para>Describes the Auto Scaling policies for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8659,7 +8677,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the SLB configuration of an application.</para>
+        /// <para>Queries the configurations of Server Load Balancer (SLB) instances for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8705,7 +8723,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the SLB configuration of an application.</para>
+        /// <para>Queries the configurations of Server Load Balancer (SLB) instances for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8751,7 +8769,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the SLB configuration of an application.</para>
+        /// <para>Queries the configurations of Server Load Balancer (SLB) instances for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8770,7 +8788,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the SLB configuration of an application.</para>
+        /// <para>Queries the configurations of Server Load Balancer (SLB) instances for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8789,7 +8807,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an application.</para>
+        /// <para>Call the DescribeApplicationStatus API to get an application\&quot;s status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8835,7 +8853,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an application.</para>
+        /// <para>Call the DescribeApplicationStatus API to get an application\&quot;s status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8881,7 +8899,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an application.</para>
+        /// <para>Call the DescribeApplicationStatus API to get an application\&quot;s status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8900,7 +8918,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of an application.</para>
+        /// <para>Call the DescribeApplicationStatus API to get an application\&quot;s status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8919,7 +8937,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a change order.</para>
+        /// <para>Call DescribeChangeOrder to get information about a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8965,7 +8983,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a change order.</para>
+        /// <para>Call DescribeChangeOrder to get information about a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9011,7 +9029,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a change order.</para>
+        /// <para>Call DescribeChangeOrder to get information about a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9030,7 +9048,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information of a change order.</para>
+        /// <para>Call DescribeChangeOrder to get information about a change order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9049,7 +9067,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of the component that is required when you create and deploy an application.</para>
+        /// <para>Call the DescribeComponents API to retrieve the component versions required to create an application deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9099,7 +9117,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of the component that is required when you create and deploy an application.</para>
+        /// <para>Call the DescribeComponents API to retrieve the component versions required to create an application deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9149,7 +9167,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of the component that is required when you create and deploy an application.</para>
+        /// <para>Call the DescribeComponents API to retrieve the component versions required to create an application deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9168,7 +9186,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the version of the component that is required when you create and deploy an application.</para>
+        /// <para>Call the DescribeComponents API to retrieve the component versions required to create an application deployment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9187,7 +9205,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a ConfigMap.</para>
+        /// <para>Queries the details of a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9233,7 +9251,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a ConfigMap.</para>
+        /// <para>Queries the details of a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9279,7 +9297,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a ConfigMap.</para>
+        /// <para>Queries the details of a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9298,7 +9316,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a ConfigMap.</para>
+        /// <para>Queries the details of a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9317,7 +9335,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query configuration price.</para>
+        /// <para>Queries the price of a configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9391,7 +9409,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query configuration price.</para>
+        /// <para>Queries the price of a configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9465,7 +9483,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query configuration price.</para>
+        /// <para>Queries the price of a configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9484,7 +9502,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query configuration price.</para>
+        /// <para>Queries the price of a configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9503,7 +9521,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the container components of a microservices application.</para>
+        /// <para>Retrieves the microservice container components for an application.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9539,7 +9557,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the container components of a microservices application.</para>
+        /// <para>Retrieves the microservice container components for an application.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -9575,7 +9593,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the container components of a microservices application.</para>
+        /// <para>Retrieves the microservice container components for an application.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9590,7 +9608,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the container components of a microservices application.</para>
+        /// <para>Retrieves the microservice container components for an application.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9605,7 +9623,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on the specified rule ID.</para>
+        /// <para>Gets a canary release rule by rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9651,7 +9669,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on the specified rule ID.</para>
+        /// <para>Gets a canary release rule by rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9697,7 +9715,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on the specified rule ID.</para>
+        /// <para>Gets a canary release rule by rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9716,7 +9734,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on the specified rule ID.</para>
+        /// <para>Gets a canary release rule by rule ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9735,7 +9753,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeIngress operation to query the details of an Ingress.</para>
+        /// <para>Queries the details of an Ingress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9781,7 +9799,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeIngress operation to query the details of an Ingress.</para>
+        /// <para>Queries the details of an Ingress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9827,7 +9845,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeIngress operation to query the details of an Ingress.</para>
+        /// <para>Queries the details of an Ingress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9846,7 +9864,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Call the DescribeIngress operation to query the details of an Ingress.</para>
+        /// <para>Queries the details of an Ingress.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9865,7 +9883,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// <para>Retrieves the log of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9919,7 +9937,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// <para>Retrieves the log of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9973,7 +9991,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// <para>Retrieves the log of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9992,7 +10010,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the logs of a sidecar container instance.</para>
+        /// <para>Retrieves the log of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10011,7 +10029,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all instance types.</para>
+        /// <para>Retrieves a list of available application instance specifications.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10047,7 +10065,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all instance types.</para>
+        /// <para>Retrieves a list of available application instance specifications.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10083,7 +10101,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all instance types.</para>
+        /// <para>Retrieves a list of available application instance specifications.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10098,7 +10116,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all instance types.</para>
+        /// <para>Retrieves a list of available application instance specifications.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10113,7 +10131,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a job template.</para>
+        /// <para>Calls the <c>DescribeJob</c> API to retrieve job template configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10163,7 +10181,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a job template.</para>
+        /// <para>Calls the <c>DescribeJob</c> API to retrieve job template configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10213,7 +10231,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a job template.</para>
+        /// <para>Calls the <c>DescribeJob</c> API to retrieve job template configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10232,7 +10250,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configurations of a job template.</para>
+        /// <para>Calls the <c>DescribeJob</c> API to retrieve job template configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10819,7 +10837,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the information about resources in a namespace.</para>
+        /// <para>Queries the resources in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10869,7 +10887,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the information about resources in a namespace.</para>
+        /// <para>Queries the resources in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10919,7 +10937,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the information about resources in a namespace.</para>
+        /// <para>Queries the resources in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10938,7 +10956,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the information about resources in a namespace.</para>
+        /// <para>Queries the resources in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11225,7 +11243,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11261,7 +11279,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -11297,7 +11315,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11312,7 +11330,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions.</para>
+        /// <para>Queries the available regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11465,7 +11483,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about swimlanes.</para>
+        /// <para>Retrieves the details of a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11519,7 +11537,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about swimlanes.</para>
+        /// <para>Retrieves the details of a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11573,7 +11591,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about swimlanes.</para>
+        /// <para>Retrieves the details of a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11592,7 +11610,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries details about swimlanes.</para>
+        /// <para>Retrieves the details of a swimlane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12811,7 +12829,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an auto scaling policy for an application.</para>
+        /// <para>Disables an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12861,7 +12879,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an auto scaling policy for an application.</para>
+        /// <para>Disables an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12911,7 +12929,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an auto scaling policy for an application.</para>
+        /// <para>Disables an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12930,7 +12948,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables an auto scaling policy for an application.</para>
+        /// <para>Disables an Auto Scaling policy for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13347,7 +13365,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job.</para>
+        /// <para>Call ExecJob to run a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13429,7 +13447,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job.</para>
+        /// <para>Call ExecJob to run a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13511,7 +13529,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job.</para>
+        /// <para>Call ExecJob to run a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13530,7 +13548,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes a job.</para>
+        /// <para>Call ExecJob to run a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13549,7 +13567,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of an application.</para>
+        /// <para>Retrieves basic information about an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13603,7 +13621,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of an application.</para>
+        /// <para>Retrieves basic information about an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13657,7 +13675,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of an application.</para>
+        /// <para>Retrieves basic information about an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13676,7 +13694,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information of an application.</para>
+        /// <para>Retrieves basic information about an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14027,7 +14045,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries top N applications in abnormal change orders.</para>
+        /// <para>To retrieve the top N applications with abnormal change orders, call the <c>GetChangeOrderMetric</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14101,7 +14119,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries top N applications in abnormal change orders.</para>
+        /// <para>To retrieve the top N applications with abnormal change orders, call the <c>GetChangeOrderMetric</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14175,7 +14193,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries top N applications in abnormal change orders.</para>
+        /// <para>To retrieve the top N applications with abnormal change orders, call the <c>GetChangeOrderMetric</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14194,7 +14212,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries top N applications in abnormal change orders.</para>
+        /// <para>To retrieve the top N applications with abnormal change orders, call the <c>GetChangeOrderMetric</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14683,7 +14701,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane groups.</para>
+        /// <para>Returns a list of all swimlane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14729,7 +14747,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane groups.</para>
+        /// <para>Returns a list of all swimlane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14775,7 +14793,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane groups.</para>
+        /// <para>Returns a list of all swimlane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14794,7 +14812,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane groups.</para>
+        /// <para>Returns a list of all swimlane groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14813,7 +14831,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all swimlanes.</para>
+        /// <para>Lists all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14863,7 +14881,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all swimlanes.</para>
+        /// <para>Lists all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14913,7 +14931,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all swimlanes.</para>
+        /// <para>Lists all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14932,7 +14950,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all swimlanes.</para>
+        /// <para>Lists all swimlanes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14951,7 +14969,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events that occurred in an application.</para>
+        /// <para>To list application events, call the <c>ListAppEvents</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15025,7 +15043,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events that occurred in an application.</para>
+        /// <para>To list application events, call the <c>ListAppEvents</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15099,7 +15117,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events that occurred in an application.</para>
+        /// <para>To list application events, call the <c>ListAppEvents</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15118,7 +15136,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the events that occurred in an application.</para>
+        /// <para>To list application events, call the <c>ListAppEvents</c> API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15137,7 +15155,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices.</para>
+        /// <para>Lists microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15215,7 +15233,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices.</para>
+        /// <para>Lists microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15293,7 +15311,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices.</para>
+        /// <para>Lists microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15312,7 +15330,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of microservices.</para>
+        /// <para>Lists microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15331,7 +15349,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services of an application.</para>
+        /// <para>Call <c>ListAppServicesPage</c> to get a list of application services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15389,7 +15407,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services of an application.</para>
+        /// <para>Call <c>ListAppServicesPage</c> to get a list of application services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15447,7 +15465,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services of an application.</para>
+        /// <para>Call <c>ListAppServicesPage</c> to get a list of application services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15466,7 +15484,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services of an application.</para>
+        /// <para>Call <c>ListAppServicesPage</c> to get a list of application services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15485,7 +15503,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment versions of an application.</para>
+        /// <para>Lists the historical versions of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15531,7 +15549,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment versions of an application.</para>
+        /// <para>Lists the historical versions of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15577,7 +15595,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment versions of an application.</para>
+        /// <para>Lists the historical versions of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15596,7 +15614,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the deployment versions of an application.</para>
+        /// <para>Lists the historical versions of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15753,7 +15771,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of applications.</para>
+        /// <para>Get a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15843,7 +15861,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of applications.</para>
+        /// <para>Get a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15933,7 +15951,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of applications.</para>
+        /// <para>Get a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15952,7 +15970,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of applications.</para>
+        /// <para>Get a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15971,7 +15989,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
+        /// <para>Retrieves a list of applications for full-link canary releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16025,7 +16043,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
+        /// <para>Retrieves a list of applications for full-link canary releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16079,7 +16097,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
+        /// <para>Retrieves a list of applications for full-link canary releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16098,7 +16116,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the application list for the end-to-end grayscale pull application list.</para>
+        /// <para>Retrieves a list of applications for full-link canary releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16117,7 +16135,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of change orders.</para>
+        /// <para>Lists change orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16191,7 +16209,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of change orders.</para>
+        /// <para>Lists change orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16265,7 +16283,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of change orders.</para>
+        /// <para>Lists change orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16284,7 +16302,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a list of change orders.</para>
+        /// <para>Lists change orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16303,7 +16321,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are subscribed.</para>
+        /// <para>You can call the ListConsumedServices operation to retrieve a list of subscribed microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16349,7 +16367,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are subscribed.</para>
+        /// <para>You can call the ListConsumedServices operation to retrieve a list of subscribed microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16395,7 +16413,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are subscribed.</para>
+        /// <para>You can call the ListConsumedServices operation to retrieve a list of subscribed microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16414,7 +16432,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are subscribed.</para>
+        /// <para>You can call the ListConsumedServices operation to retrieve a list of subscribed microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16433,13 +16451,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on an application ID.</para>
+        /// <para>Queries the details of a grayscale rule based on an application ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can configure only one grayscale rule for each application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16486,13 +16504,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on an application ID.</para>
+        /// <para>Queries the details of a grayscale rule based on an application ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can configure only one grayscale rule for each application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16539,13 +16557,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on an application ID.</para>
+        /// <para>Queries the details of a grayscale rule based on an application ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can configure only one grayscale rule for each application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16565,13 +16583,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a canary release rule based on an application ID.</para>
+        /// <para>Queries the details of a grayscale rule based on an application ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para> You can configure only one canary release rule for each application.</para>
+        /// <para>You can configure only one grayscale rule for each application.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -16591,7 +16609,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use ListIngress API call to query Ingress list</para>
+        /// <para>Retrieves a list of Ingresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16649,7 +16667,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use ListIngress API call to query Ingress list</para>
+        /// <para>Retrieves a list of Ingresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16707,7 +16725,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use ListIngress API call to query Ingress list</para>
+        /// <para>Retrieves a list of Ingresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16726,7 +16744,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Use ListIngress API call to query Ingress list</para>
+        /// <para>Retrieves a list of Ingresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16745,7 +16763,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about job templates.</para>
+        /// <para>Retrieves a list of job templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16827,7 +16845,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about job templates.</para>
+        /// <para>Retrieves a list of job templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16909,7 +16927,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about job templates.</para>
+        /// <para>Retrieves a list of job templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16928,7 +16946,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about job templates.</para>
+        /// <para>Retrieves a list of job templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16947,7 +16965,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application logs.</para>
+        /// <para>Returns a list of application logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17001,7 +17019,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application logs.</para>
+        /// <para>Returns a list of application logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17055,7 +17073,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application logs.</para>
+        /// <para>Returns a list of application logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17074,7 +17092,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of application logs.</para>
+        /// <para>Returns a list of application logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17093,7 +17111,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of change orders in a namespace.</para>
+        /// <para>Lists deployment orders in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17159,7 +17177,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of change orders in a namespace.</para>
+        /// <para>Lists deployment orders in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17225,7 +17243,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of change orders in a namespace.</para>
+        /// <para>Lists deployment orders in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17244,7 +17262,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of change orders in a namespace.</para>
+        /// <para>Lists deployment orders in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17263,7 +17281,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ConfigMap instances in a namespace.</para>
+        /// <para>Lists ConfigMap instances in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17309,7 +17327,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ConfigMap instances in a namespace.</para>
+        /// <para>Lists ConfigMap instances in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17355,7 +17373,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ConfigMap instances in a namespace.</para>
+        /// <para>Lists ConfigMap instances in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17374,7 +17392,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ConfigMap instances in a namespace.</para>
+        /// <para>Lists ConfigMap instances in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17393,7 +17411,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are published.</para>
+        /// <para>Queries a list of published microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17439,7 +17457,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are published.</para>
+        /// <para>Queries a list of published microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17485,7 +17503,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are published.</para>
+        /// <para>Queries a list of published microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17504,7 +17522,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of microservices that are published.</para>
+        /// <para>Queries a list of published microservices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17523,7 +17541,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Secrets in a namespace.</para>
+        /// <para>Call ListSecrets to list Secrets in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17569,7 +17587,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Secrets in a namespace.</para>
+        /// <para>Call ListSecrets to list Secrets in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17615,7 +17633,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Secrets in a namespace.</para>
+        /// <para>Call ListSecrets to list Secrets in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17634,7 +17652,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Secrets in a namespace.</para>
+        /// <para>Call ListSecrets to list Secrets in a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17653,7 +17671,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the gateway routes that are available for a lane</para>
+        /// <para>Lists the gateway routes that can be associated with a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17703,7 +17721,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the gateway routes that are available for a lane</para>
+        /// <para>Lists the gateway routes that can be associated with a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17753,7 +17771,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the gateway routes that are available for a lane</para>
+        /// <para>Lists the gateway routes that can be associated with a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17772,7 +17790,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the gateway routes that are available for a lane</para>
+        /// <para>Lists the gateway routes that can be associated with a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17791,7 +17809,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane tags.</para>
+        /// <para>Lists all swimming lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17841,7 +17859,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane tags.</para>
+        /// <para>Lists all swimming lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17891,7 +17909,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane tags.</para>
+        /// <para>Lists all swimming lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17910,7 +17928,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all lane tags.</para>
+        /// <para>Lists all swimming lane tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17929,7 +17947,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mapping relationships between applications and tags.</para>
+        /// <para>Call the <c>ListTagResources</c> API to list the tags associated with your applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17991,7 +18009,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mapping relationships between applications and tags.</para>
+        /// <para>Call the <c>ListTagResources</c> API to list the tags associated with your applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18053,7 +18071,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mapping relationships between applications and tags.</para>
+        /// <para>Call the <c>ListTagResources</c> API to list the tags associated with your applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18072,7 +18090,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the mapping relationships between applications and tags.</para>
+        /// <para>Call the <c>ListTagResources</c> API to list the tags associated with your applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19251,7 +19269,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of an application.</para>
+        /// <para>Gets the resource usage for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19297,7 +19315,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of an application.</para>
+        /// <para>Gets the resource usage for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19343,7 +19361,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of an application.</para>
+        /// <para>Gets the resource usage for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19362,7 +19380,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resource usage of an application.</para>
+        /// <para>Gets the resource usage for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19681,7 +19699,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance specifications of an application.</para>
+        /// <para>Changes the instance type of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19763,7 +19781,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance specifications of an application.</para>
+        /// <para>Changes the instance type of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19845,7 +19863,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance specifications of an application.</para>
+        /// <para>Changes the instance type of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19864,7 +19882,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the instance specifications of an application.</para>
+        /// <para>Changes the instance type of an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20175,7 +20193,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
+        /// <para>Resumes traffic on an instance from Classic Load Balancer (CLB), Network Load Balancer (NLB), CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20225,7 +20243,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
+        /// <para>Resumes traffic on an instance from Classic Load Balancer (CLB), Network Load Balancer (NLB), CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20275,7 +20293,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
+        /// <para>Resumes traffic on an instance from Classic Load Balancer (CLB), Network Load Balancer (NLB), CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20294,7 +20312,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Services on an instance.</para>
+        /// <para>Resumes traffic on an instance from Classic Load Balancer (CLB), Network Load Balancer (NLB), CLB gateway routing, Application Load Balancer (ALB) gateway routing, and Kubernetes Service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21189,7 +21207,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
+        /// <para>Stops routing traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services to the specified instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21239,7 +21257,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
+        /// <para>Stops routing traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services to the specified instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21289,7 +21307,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
+        /// <para>Stops routing traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services to the specified instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21308,7 +21326,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes traffic routed from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services.</para>
+        /// <para>Stops routing traffic from Classic Load Balancer (CLB) application access, Network Load Balancer (NLB) application access, CLB gateway routes, Application Load Balancer (ALB) gateway routes, or Kubernetes (K8s) services to the specified instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21327,7 +21345,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds one or more tags to specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21385,7 +21403,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds one or more tags to specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21443,7 +21461,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds one or more tags to specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21462,7 +21480,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds one or more tags to specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21481,7 +21499,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnbindNlb operation to delete an NLB listener bound for application access</para>
+        /// <para>Unbinds an NLB listener from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21539,7 +21557,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnbindNlb operation to delete an NLB listener bound for application access</para>
+        /// <para>Unbinds an NLB listener from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21597,7 +21615,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnbindNlb operation to delete an NLB listener bound for application access</para>
+        /// <para>Unbinds an NLB listener from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21616,7 +21634,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnbindNlb operation to delete an NLB listener bound for application access</para>
+        /// <para>Unbinds an NLB listener from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21635,7 +21653,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an internal-facing or Internet-facing SLB instance from an application.</para>
+        /// <para>Unbinds a public or private SLB instance from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21689,7 +21707,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an internal-facing or Internet-facing SLB instance from an application.</para>
+        /// <para>Unbinds a public or private SLB instance from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21743,7 +21761,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an internal-facing or Internet-facing SLB instance from an application.</para>
+        /// <para>Unbinds a public or private SLB instance from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21762,7 +21780,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an internal-facing or Internet-facing SLB instance from an application.</para>
+        /// <para>Unbinds a public or private SLB instance from an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21781,7 +21799,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes one or more tags from specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21843,7 +21861,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes one or more tags from specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21905,7 +21923,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes one or more tags from specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21924,7 +21942,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes one or more tags from specified resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21943,7 +21961,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Application Idle Mode Update</para>
+        /// <para>Updates the idle mode for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22005,7 +22023,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Application Idle Mode Update</para>
+        /// <para>Updates the idle mode for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22067,7 +22085,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Application Idle Mode Update</para>
+        /// <para>Updates the idle mode for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22086,7 +22104,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Application Idle Mode Update</para>
+        /// <para>Updates the idle mode for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22105,7 +22123,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the security group of an application.</para>
+        /// <para>Updates an application security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22155,7 +22173,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the security group of an application.</para>
+        /// <para>Updates an application security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22205,7 +22223,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the security group of an application.</para>
+        /// <para>Updates an application security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22224,7 +22242,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the security group of an application.</para>
+        /// <para>Updates an application security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22381,13 +22399,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the auto scaling policy of an application.</para>
+        /// <para>Updating the application auto-scaling policy</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>To scale an application beyond 50 instances, contact SAE technical support to be added to the allowlist. For details, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22461,13 +22479,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the auto scaling policy of an application.</para>
+        /// <para>Updating the application auto-scaling policy</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>To scale an application beyond 50 instances, contact SAE technical support to be added to the allowlist. For details, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22541,13 +22559,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the auto scaling policy of an application.</para>
+        /// <para>Updating the application auto-scaling policy</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>To scale an application beyond 50 instances, contact SAE technical support to be added to the allowlist. For details, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22566,13 +22584,13 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the auto scaling policy of an application.</para>
+        /// <para>Updating the application auto-scaling policy</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>If you want to configure more than 50 instances for an application, you must submit a <a href="https://workorder.console.aliyun.com/#/ticket/createIndex">ticket</a> to add your account to the whitelist.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>To scale an application beyond 50 instances, contact SAE technical support to be added to the allowlist. For details, see <a href="https://help.aliyun.com/document_detail/146530.html">Contact us</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22591,7 +22609,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration of a vSwitch.</para>
+        /// <para>Updates the vSwitch configuration for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22653,7 +22671,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration of a vSwitch.</para>
+        /// <para>Updates the vSwitch configuration for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22715,7 +22733,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration of a vSwitch.</para>
+        /// <para>Updates the vSwitch configuration for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22734,7 +22752,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configuration of a vSwitch.</para>
+        /// <para>Updates the vSwitch configuration for an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22753,7 +22771,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22809,7 +22827,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22865,7 +22883,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22884,7 +22902,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a ConfigMap.</para>
+        /// <para>Updates a ConfigMap instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22903,7 +22921,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a canary release rule.</para>
+        /// <para>Updates a grey tag route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22965,7 +22983,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a canary release rule.</para>
+        /// <para>Updates a grey tag route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23027,7 +23045,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a canary release rule.</para>
+        /// <para>Updates a grey tag route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23046,7 +23064,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a canary release rule.</para>
+        /// <para>Updates a grey tag route.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23065,7 +23083,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configurations of an Ingress instance.</para>
+        /// <para>Update the configuration of an Ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23185,7 +23203,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configurations of an Ingress instance.</para>
+        /// <para>Update the configuration of an Ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23305,7 +23323,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configurations of an Ingress instance.</para>
+        /// <para>Update the configuration of an Ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23324,7 +23342,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the configurations of an Ingress instance.</para>
+        /// <para>Update the configuration of an Ingress instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23343,7 +23361,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Call the UpdateJob API to update a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23575,7 +23593,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Call the UpdateJob API to update a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23807,7 +23825,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Call the UpdateJob API to update a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23826,7 +23844,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a job template.</para>
+        /// <para>Call the UpdateJob API to update a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24007,7 +24025,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
+        /// <para>Updates the namespace-level SLS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24065,7 +24083,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
+        /// <para>Updates the namespace-level SLS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24123,7 +24141,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
+        /// <para>Updates the namespace-level SLS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24142,7 +24160,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Simple Log Service configuration for a namespace.</para>
+        /// <para>Updates the namespace-level SLS configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24161,7 +24179,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing:test</para>
+        /// <para>Updates the VPC that is attached to a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24215,7 +24233,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing:test</para>
+        /// <para>Updates the VPC that is attached to a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24269,7 +24287,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing:test</para>
+        /// <para>Updates the VPC that is attached to a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24288,7 +24306,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>cn-beijing:test</para>
+        /// <para>Updates the VPC that is attached to a namespace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24307,11 +24325,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:
-        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
-        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
-        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
-        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
+        /// <para>Updates a Secret instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24371,11 +24385,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:
-        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
-        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
-        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
-        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
+        /// <para>Updates a Secret instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24435,11 +24445,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:
-        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
-        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
-        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
-        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
+        /// <para>Updates a Secret instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24458,11 +24464,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The HTTP status code. Valid values:
-        /// \*   \<em>\<em>2xx\</em>\</em>: The call was successful.
-        /// \*   \<em>\<em>3xx\</em>\</em>: The call was redirected.
-        /// \*   \<em>\<em>4xx\</em>\</em>: The call failed.
-        /// \*   \<em>\<em>5xx\</em>\</em>: A server error occurred.</para>
+        /// <para>Updates a Secret instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24481,7 +24483,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the enabled property of the swimlane.</para>
+        /// <para>Updates the enabled status of a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24539,7 +24541,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the enabled property of the swimlane.</para>
+        /// <para>Updates the enabled status of a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24597,7 +24599,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the enabled property of the swimlane.</para>
+        /// <para>Updates the enabled status of a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24616,7 +24618,7 @@ namespace AlibabaCloud.SDK.Sae20190506
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the enabled property of the swimlane.</para>
+        /// <para>Updates the enabled status of a swimming lane.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,10 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationSlbsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the information about the SLB instances that are associated with an application was obtained successfully. Valid values:</para>
+        /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the information was obtained successfully.</description></item>
-        /// <item><description><b>false</b>: indicates that the information failed to be obtained.</description></item>
+        /// <item><description><para><c>2xx</c>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>3xx</c>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><c>4xx</c>: A client error occurs.</para>
+        /// </description></item>
+        /// <item><description><para><c>5xx</c>: A server error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,20 +30,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeApplicationSlbsResponseBodyData Data { get; set; }
         public class DescribeApplicationSlbsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The application ID.</para>
+            /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
+            /// <summary>
+            /// <para>The application name.</para>
+            /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            /// <summary>
+            /// <para>The cluster ID.</para>
+            /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
@@ -54,6 +69,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? ConnectionDrainTimeout { get; set; }
 
                 /// <summary>
+                /// <para>The cookie that is configured on the server.</para>
+                /// <para>The cookie must be 1 to 200 characters in length and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or spaces. It cannot start with a dollar sign ($).</para>
+                /// <remarks>
+                /// <para>This parameter is required when <c>StickySession</c> is set to <c>true</c> and <c>StickySessionType</c> is set to <c>server</c>.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>wwe</para>
                 /// </summary>
@@ -62,6 +83,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Cookie { get; set; }
 
                 /// <summary>
+                /// <para>The cookie timeout period. Unit: seconds. Valid values: <c>1</c> to <c>86400</c>.</para>
+                /// <remarks>
+                /// <para>This parameter is required when <c>StickySession</c> is set to <c>true</c> and <c>StickySessionType</c> is set to <c>insert</c>.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>56</para>
                 /// </summary>
@@ -70,7 +96,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? CookieTimeout { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the canary release rule was created.</para>
+                /// <para>The time when the rule was created. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1741247308294</para>
@@ -84,6 +110,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? EnableConnectionDrain { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the CA certificate for the HTTPS protocol.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1513561019707729_16f37aae5f3_-375882821_-169099****</para>
                 /// </summary>
@@ -92,7 +120,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string HttpsCaCertId { get; set; }
 
                 /// <summary>
-                /// <para>The supported protocol.</para>
+                /// <para>The ID of the certificate for the HTTPS protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1513561019707729_16f37aae5f3_-375882821_-169099****</para>
@@ -102,7 +130,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string HttpsCertId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the internal-facing SLB instance.</para>
+                /// <para>The listening port of the SLB instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -112,7 +140,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The container port.</para>
+                /// <para>The supported protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TCP</para>
@@ -122,6 +150,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether session persistence is enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -130,6 +160,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? StickySession { get; set; }
 
                 /// <summary>
+                /// <para>The cookie handling method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>insert</c>: inserts a cookie. When a client makes the first request, the SLB instance inserts a cookie into the response. The next request from the client contains the cookie, and the SLB instance forwards the request to the same backend server.</para>
+                /// </description></item>
+                /// <item><description><para><c>server</c>: rewrites a cookie. When the SLB instance detects a user-defined cookie, it rewrites the cookie. The next request from the client contains the new cookie, and the SLB instance forwards the request to the same backend server.</para>
+                /// </description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter is required when <c>StickySession</c> is set to <c>true</c>.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>insert</para>
                 /// </summary>
@@ -138,7 +179,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string StickySessionType { get; set; }
 
                 /// <summary>
-                /// <para>The port specified for the SLB listener.</para>
+                /// <para>The container port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -154,7 +195,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The ID of the Internet-facing SLB instance.</para>
+            /// <para>The public IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><c>59.74.**.**</c></para>
@@ -164,6 +205,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string InternetIp { get; set; }
 
             /// <summary>
+            /// <para>The billing method of the Internet-facing SLB instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PayBySpec</para>
             /// </summary>
@@ -172,6 +215,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string InternetSlbChargeType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Internet-facing SLB instance has expired.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -180,7 +225,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? InternetSlbExpired { get; set; }
 
             /// <summary>
-            /// <para>Configurations of Internet-facing SLB instances.</para>
+            /// <para>The ID of the Internet-facing SLB instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-uf6xc7wybefehnv45****</para>
@@ -201,6 +246,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? ConnectionDrainTimeout { get; set; }
 
                 /// <summary>
+                /// <para>The cookie that is configured on the server.</para>
+                /// <para>The cookie must be 1 to 200 characters in length and can contain only ASCII letters and digits. It cannot contain commas (,), semicolons (;), or spaces. It cannot start with a dollar sign ($).</para>
+                /// <remarks>
+                /// <para>This parameter is required when <c>StickySession</c> is set to <c>true</c> and <c>StickySessionType</c> is set to <c>server</c>.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>wwe</para>
                 /// </summary>
@@ -209,6 +260,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Cookie { get; set; }
 
                 /// <summary>
+                /// <para>The cookie timeout period. Unit: seconds. Valid values: <c>1</c> to <c>86400</c>.</para>
+                /// <remarks>
+                /// <para>This parameter is required when <c>StickySession</c> is set to <c>true</c> and <c>StickySessionType</c> is set to <c>insert</c>.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>56</para>
                 /// </summary>
@@ -217,7 +273,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? CookieTimeout { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the canary release rule was created.</para>
+                /// <para>The time when the rule was created. This value is a UNIX timestamp.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1741247308294</para>
@@ -231,6 +287,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? EnableConnectionDrain { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the CA certificate for the HTTPS protocol.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1513561019707729_16f37aae5f3_-375882821_-169099****</para>
                 /// </summary>
@@ -239,7 +297,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string HttpsCaCertId { get; set; }
 
                 /// <summary>
-                /// <para>The supported protocol.</para>
+                /// <para>The ID of the certificate for the HTTPS protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1513561019707729_16f37aae5f3_-375882821_-169099****</para>
@@ -249,7 +307,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string HttpsCertId { get; set; }
 
                 /// <summary>
-                /// <para>The IP address of the Internet-facing SLB instance.</para>
+                /// <para>The listening port of the SLB instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -259,7 +317,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The container port.</para>
+                /// <para>The supported protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TCP</para>
@@ -269,6 +327,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether session persistence is enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -277,6 +337,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public bool? StickySession { get; set; }
 
                 /// <summary>
+                /// <para>The cookie handling method. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>insert</c>: inserts a cookie. When a client makes the first request, the SLB instance inserts a cookie into the response. The next request from the client contains the cookie, and the SLB instance forwards the request to the same backend server.</para>
+                /// </description></item>
+                /// <item><description><para><c>server</c>: rewrites a cookie. When the SLB instance detects a user-defined cookie, it rewrites the cookie. The next request from the client contains the new cookie, and the SLB instance forwards the request to the same backend server.</para>
+                /// </description></item>
+                /// </list>
+                /// <remarks>
+                /// <para>This parameter is required when <c>StickySession</c> is set to <c>true</c>.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>insert</para>
                 /// </summary>
@@ -285,7 +356,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string StickySessionType { get; set; }
 
                 /// <summary>
-                /// <para>The port specified for the SLB listener.</para>
+                /// <para>The container port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -301,20 +372,18 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The error code.</para>
-            /// <list type="bullet">
-            /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-            /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
-            /// </list>
+            /// <para>The private IP address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>192.168.0.0</para>
+            /// <para>192.168.XX.XX</para>
             /// </summary>
             [NameInMap("IntranetIp")]
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
             /// <summary>
+            /// <para>The billing method of the internal-facing SLB instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PayBySpec</para>
             /// </summary>
@@ -323,6 +392,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string IntranetSlbChargeType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the internal-facing SLB instance has expired.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -331,7 +402,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? IntranetSlbExpired { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the internal-facing SLB instance.</para>
+            /// <para>The ID of the internal-facing SLB instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-uf6xc7wybefehnv45****</para>
@@ -343,12 +414,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -356,7 +427,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// <para>The returned message.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If the request is successful, <c>success</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, a specific error code is returned.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -366,11 +443,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
-        /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error code is returned when the request fails.</description></item>
-        /// </list>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -380,6 +453,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the configuration of the SLB instance was obtained. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The configuration was obtained.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The configuration failed to be obtained.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -388,7 +469,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The trace ID that is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

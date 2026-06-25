@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class PathConfig : TeaModel {
         /// <summary>
-        /// <para>applicationName</para>
+        /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>applicationName</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>path</para>
+        /// <para>The path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/packages</para>

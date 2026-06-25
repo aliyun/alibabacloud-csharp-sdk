@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The app id.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The version id.</para>
+        /// <para>The version ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0026ff7f-2b57-4127-bdd0-9bf202bb****</para>

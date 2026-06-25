@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeApplicationGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code or the POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the instance groups of the application.</para>
+        /// <para>A list of application groups.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApplicationGroupsResponseBodyData> Data { get; set; }
         public class DescribeApplicationGroupsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The version of the container, such as Ali-Tomcat, in which an application that is developed based on High-speed Service Framework (HSF) is deployed.</para>
+            /// <para>The version of the application runtime environment in the High-Speed Service Framework (HSF), such as an Ali-Tomcat container.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.5.3</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string EdasContainerVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance group.</para>
+            /// <para>The ID of the application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b2a8a925-477a-eswa-b823-d5e22500****</para>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance group.</para>
+            /// <para>The name of the application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_DEFAULT_GROUP</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The type of the instance group.</para>
+            /// <para>The type of the application group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? GroupType { get; set; }
 
             /// <summary>
-            /// <para>The URL of the image. This parameter is returned only if the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
+            /// <para>The image URL. This parameter is required when <b>package type</b> is set to <b>Image</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</para>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The version of the JDK on which the deployment package of the application depends. This parameter is not returned if the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
+            /// <para>The JDK version required by the deployment package. This parameter is not supported when <b>package type</b> is set to <b>Image</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Open JDK 8</para>
@@ -95,25 +99,40 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>The type of the deployment package. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>If you deploy a Java application, the value of this parameter can be <b>FatJar</b>, <b>War</b>, or <b>Image</b>.</para>
+            /// <item><description><para>For Java applications, the supported types are <b>FatJar</b>, <b>War</b>, and <b>Image</b>.</para>
             /// </description></item>
-            /// <item><description><para>If you deploy a PHP application, the value of this parameter can be one of the following values:</para>
+            /// <item><description><para>For PHP applications, the supported types are:</para>
             /// <list type="bullet">
-            /// <item><description><b>PhpZip</b></description></item>
-            /// <item><description><b>IMAGE_PHP_5_4</b></description></item>
-            /// <item><description><b>IMAGE_PHP_5_4_ALPINE</b></description></item>
-            /// <item><description><b>IMAGE_PHP_5_5</b></description></item>
-            /// <item><description><b>IMAGE_PHP_5_5_ALPINE</b></description></item>
-            /// <item><description><b>IMAGE_PHP_5_6</b></description></item>
-            /// <item><description><b>IMAGE_PHP_5_6_ALPINE</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_0</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_0_ALPINE</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_1</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_1_ALPINE</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_2</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_2_ALPINE</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_3</b></description></item>
-            /// <item><description><b>IMAGE_PHP_7_3_ALPINE</b></description></item>
+            /// <item><description><para><b>PhpZip</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_5_4</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_5_4_ALPINE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_5_5</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_5_5_ALPINE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_5_6</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_5_6_ALPINE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_0</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_0_ALPINE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_1</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_1_ALPINE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_2</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_2_ALPINE</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_3</b></para>
+            /// </description></item>
+            /// <item><description><para><b>IMAGE_PHP_7_3_ALPINE</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -126,7 +145,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PackageType { get; set; }
 
             /// <summary>
-            /// <para>The URL of the deployment package. This parameter is returned only if the <b>PackageType</b> parameter is set to <b>FatJar</b>, <b>War</b>, or <b>PhpZip</b>.</para>
+            /// <para>The URL of the deployment package. This parameter is required when <b>package type</b> is set to <b>FatJar</b>, <b>War</b>, or <b>PhpZip</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/demo/nginx:latest</para>
@@ -136,7 +155,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PackageUrl { get; set; }
 
             /// <summary>
-            /// <para>The version of the deployment package. This parameter is returned only if the <b>PackageType</b> parameter is set to <b>FatJar</b>, <b>War</b>, or <b>PhpZip</b>. The value of this parameter is automatically generated only if the <b>ImageUrl</b> is returned.</para>
+            /// <para>The deployment package version. This parameter is required when <b>package type</b> is set to <b>FatJar</b>, <b>War</b>, or <b>PhpZip</b>. This parameter is automatically generated if you deploy the application by using an <b>image</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -145,6 +164,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string PackageVersion { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the deployment package version.</para>
+            /// </summary>
             [NameInMap("PackageVersionId")]
             [Validation(Required=false)]
             public string PackageVersionId { get; set; }
@@ -170,7 +192,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? RunningInstances { get; set; }
 
             /// <summary>
-            /// <para>The version of the Tomcat container on which the deployment package depends. This parameter is not returned if the <b>PackageType</b> parameter is set to <b>Image</b>.</para>
+            /// <para>The Tomcat container version required by the deployment package. This parameter is not supported when <b>package type</b> is set to <b>Image</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Apache Tomcat 7</para>
@@ -182,10 +204,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>error codes</b> section.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -213,10 +237,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance groups of an application were obtained. Valid values:</para>
+        /// <para>Indicates whether the application groups were successfully retrieved. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The instance groups were obtained.</description></item>
-        /// <item><description><b>false</b>: The instance groups failed to be obtained.</description></item>
+        /// <item><description><para><b>true</b>: The application groups were retrieved.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The application groups were not retrieved.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -227,7 +253,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

@@ -1,3 +1,6 @@
+2026-06-25 Version: 2.9.4
+- Generated csharp 2019-05-06 for sae.
+
 2026-04-29 Version: 2.9.3
 - Update API UpdateApplicationScalingRule: add request parameters ScalingRuleType.
 

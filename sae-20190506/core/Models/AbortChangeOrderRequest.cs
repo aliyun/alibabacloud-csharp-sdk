@@ -20,6 +20,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ChangeOrderId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to roll back the change order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Rollback")]
         [Validation(Required=false)]
         public bool? Rollback { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteNamespaceRequest : TeaModel {
         /// <summary>
+        /// <para>The short-format ID of the namespace. You do not need to specify the region. We recommend that you use this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// <para>cn-beijing:test</para>
+        /// <para>The long-format ID of the namespace. If you specify this parameter, NameSpaceShortId is ignored. This parameter is for backward compatibility. We recommend that you use the short-format namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>

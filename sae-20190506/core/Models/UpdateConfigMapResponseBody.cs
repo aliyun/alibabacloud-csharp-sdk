@@ -10,10 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateConfigMapResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the ConfigMap instance was updated. Valid values:</para>
+        /// <para>The HTTP status code or the POP error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The instance was updated.</description></item>
-        /// <item><description><b>false</b>: The instance failed to be updated.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,18 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ConfigMap instance.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateConfigMapResponseBodyData Data { get; set; }
         public class UpdateConfigMapResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The returned error code. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-            /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
-            /// </list>
+            /// <para>The ID of the ConfigMap instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,12 +49,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx:</b>: indicates that the call was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the call failed.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>Additional information about the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The returned information.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -80,6 +82,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the ConfigMap instance was updated.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The instance was updated.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The instance failed to be updated.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -88,7 +98,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The trace ID that is used to query the details of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

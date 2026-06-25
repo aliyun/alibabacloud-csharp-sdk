@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request is redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client error occurs.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the microservices.</para>
+        /// <para>The list of published microservices.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListPublishedServicesResponseBodyData> Data { get; set; }
         public class ListPublishedServicesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>b2a8a925-477a-4ed7-b825-d5e22500****</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The reserved parameter. This parameter does not take effect.</para>
+            /// <para>A reserved field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -53,21 +57,21 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Group2Ip { get; set; }
 
             /// <summary>
-            /// <para>The service group that corresponds to the consumed service.</para>
+            /// <para>The groups to which the service belongs.</para>
             /// </summary>
             [NameInMap("Groups")]
             [Validation(Required=false)]
             public List<string> Groups { get; set; }
 
             /// <summary>
-            /// <para>The addresses where services can be subscribed to.</para>
+            /// <para>The service subscription addresses.</para>
             /// </summary>
             [NameInMap("Ips")]
             [Validation(Required=false)]
             public List<string> Ips { get; set; }
 
             /// <summary>
-            /// <para>The name of the published service.</para>
+            /// <para>The published service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.alibaba.nodejs.ItemService</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The type of the published service.</para>
+            /// <para>The published service type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RPC</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The version of the published services.</para>
+            /// <para>The published service version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -99,10 +103,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>For more information about error codes, see the <b>Error codes</b> section.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -110,10 +116,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>Returns <b>success</b> if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Returns an error code if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,10 +142,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the list of microservices was queried. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The list was queried.</description></item>
-        /// <item><description><b>false</b>: The list failed to be queried.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -148,7 +158,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID for querying call details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

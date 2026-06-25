@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The type of the supported components. Valid values:</para>
+        /// <para>The supported component type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TOMCAT</b></description></item>
-        /// <item><description><b>JDK</b></description></item>
+        /// <item><description><para><b>TOMCAT</b></para>
+        /// </description></item>
+        /// <item><description><para><b>JDK</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

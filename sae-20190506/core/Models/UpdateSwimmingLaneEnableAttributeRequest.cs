@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateSwimmingLaneEnableAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Lane status:</para>
+        /// <para>The enabled status of the swimming lane. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enabled</description></item>
-        /// <item><description>false: disabled</description></item>
+        /// <item><description><para>true: enabled</para>
+        /// </description></item>
+        /// <item><description><para>false: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane group.</para>
+        /// <para>The swimming lane group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2074</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lane.</para>
+        /// <para>The swimming lane ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9637</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public long? LaneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of a namespace.</para>
+        /// <para>The namespace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>

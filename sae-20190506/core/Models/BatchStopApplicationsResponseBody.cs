@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The call was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The call failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,8 +39,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>The error code.</para>
             /// <list type="bullet">
-            /// <item><description>If the request is successful, this parameter is not returned.****</description></item>
-            /// <item><description>This parameter is returned only if the request failed.**** For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</description></item>
+            /// <item><description><para>If the request is successful, this parameter is not returned.\<em>\</em>\<em>\</em></para>
+            /// </description></item>
+            /// <item><description><para>This parameter is returned only if the request failed.\<em>\</em>\<em>\</em> For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,12 +57,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code returned if the request failed. Take note of the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>The ErrorCode parameter is not returned if the request succeeds.</description></item>
-        /// <item><description>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</description></item>
+        /// <item><description><para>The ErrorCode parameter is not returned if the request succeeds.</para>
+        /// </description></item>
+        /// <item><description><para>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -75,8 +80,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error code is returned when the request fails.</description></item>
+        /// <item><description><para><b>success</b> is returned when the request succeeds.</para>
+        /// </description></item>
+        /// <item><description><para>An error code is returned when the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,8 +96,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the application is created. Valid values</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

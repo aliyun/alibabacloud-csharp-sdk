@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: Client error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: Server error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>Additional information about the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

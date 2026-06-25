@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAppServicesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application. You must specify only one of the following parameters: vpcId, namespace ID, and application ID.</para>
+        /// <para>The application ID. Specify exactly one of the following parameters: <c>VpcId</c>, <c>NamespaceId</c>, or <c>AppId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>017f39b8-dfa4-4e16-a84b-1dcee4b1****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the MSE Nacos instance. This parameter is required when the registry type is set to MSE Nacos.</para>
+        /// <para>The instance ID of MSE Nacos. This parameter is required if the service registry is MSE Nacos.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-cn-sco3r0u****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NacosInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the MSE Nacos namespace. This parameter is required when the registry type is set to MSE Nacos.</para>
+        /// <para>The namespace ID of MSE Nacos. This parameter is required if the service registry is MSE Nacos.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-test</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NacosNamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace. You must specify only one of the following parameters: VPC ID, namespace ID, and application ID.</para>
+        /// <para>The namespace ID. Specify exactly one of the following parameters: <c>VpcId</c>, <c>NamespaceId</c>, or <c>AppId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing:test</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,12 +70,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The registry type. Valid values:</para>
+        /// <para>The service registry type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: SAE Nacos</description></item>
-        /// <item><description><b>1</b>: SAE built-in Nacos</description></item>
-        /// <item><description><b>2</b> :MSE Nacos</description></item>
-        /// <item><description><b>9</b>: SAE Kubernetes service</description></item>
+        /// <item><description><para><b>0</b>: SAE Nacos</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: self-managed service registry</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: MSE Nacos</para>
+        /// </description></item>
+        /// <item><description><para><b>9</b>: SAE K8s Service</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,10 +92,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dubbo</b></description></item>
-        /// <item><description><b>springCloud</b></description></item>
-        /// <item><description><b>hsf</b></description></item>
-        /// <item><description><b>k8sService</b></description></item>
+        /// <item><description><para><b>dubbo</b></para>
+        /// </description></item>
+        /// <item><description><para><b>springCloud</b></para>
+        /// </description></item>
+        /// <item><description><para><b>hsf</b></para>
+        /// </description></item>
+        /// <item><description><para><b>k8sService</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +110,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the VPC. You must specify only one of the following parameters: VPC ID, namespace ID, and application ID.</para>
+        /// <para>The ID of the VPC. Specify exactly one of the following parameters: <c>VpcId</c>, <c>NamespaceId</c>, or <c>AppId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2ze0i263cnn311nvj****</para>

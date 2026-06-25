@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code or the error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,12 +32,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code returned if the call failed. Value values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>If the request was successful, <b>ErrorCode</b> is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>400</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -42,8 +45,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The message returned. The following limits are imposed on the ID:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code is returned when a request failed.</description></item>
+        /// <item><description><para>If the request was successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>An error code is returned when a request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,8 +71,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the application was deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The application was deployed.</description></item>
-        /// <item><description><b>false</b>: The application failed to be deployed.</description></item>
+        /// <item><description><para><b>true</b>: The application was deployed.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The application failed to be deployed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

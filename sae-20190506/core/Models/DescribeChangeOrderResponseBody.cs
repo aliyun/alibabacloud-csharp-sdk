@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeChangeOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code or POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public DescribeChangeOrderResponseBodyData Data { get; set; }
         public class DescribeChangeOrderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the application.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bbbbb-3fd370b2-3646-4ba6-91f9-9423e19ab0cd-*****</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app-test</para>
@@ -52,16 +56,22 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string AppName { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether gray tag routing is enabled.</para>
+            /// </summary>
             [NameInMap("ApplicationEnableGreyTagRoute")]
             [Validation(Required=false)]
             public bool? ApplicationEnableGreyTagRoute { get; set; }
 
+            /// <summary>
+            /// <para>The update strategy for the application.</para>
+            /// </summary>
             [NameInMap("ApplicationUpdateStrategy")]
             [Validation(Required=false)]
             public string ApplicationUpdateStrategy { get; set; }
 
             /// <summary>
-            /// <para>The approval ID of the change order.</para>
+            /// <para>The approval ID for the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>67de0b39-a9d4-4c09-a170-cf438208****</para>
@@ -71,10 +81,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ApprovalId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether SAE automatically releases the batches. Valid values:</para>
+            /// <para>Indicates whether to automatically release the change in batches. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: SAE automatically releases the batches.</description></item>
-            /// <item><description><b>false</b>: SAE does not automatically release the batches.</description></item>
+            /// <item><description><para><b>true</b>: The change is automatically released.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The change is not automatically released.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +97,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? Auto { get; set; }
 
             /// <summary>
-            /// <para>The number of release batches.</para>
+            /// <para>The number of batches.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -95,10 +107,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? BatchCount { get; set; }
 
             /// <summary>
-            /// <para>The processing method for the batches. Valid values:</para>
+            /// <para>The release mode for batches. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>auto</b>: SAE automatically releases the batches.</description></item>
-            /// <item><description><b>Manual</b>: You must manually release the batches.</description></item>
+            /// <item><description><para><b>auto</b>: Automatic release.</para>
+            /// </description></item>
+            /// <item><description><para><b>manual</b>: Manual release.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +123,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string BatchType { get; set; }
 
             /// <summary>
-            /// <para>The interval between batches in a phased release. SAE automatically releases batches at the specified interval. Unit: minutes.</para>
+            /// <para>The wait time, in minutes, between batches in an automatic release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -119,7 +133,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? BatchWaitTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the change order.</para>
+            /// <para>The change order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>765fa5c0-9ebb-4bb4-b383-1f885447**</para>
@@ -129,35 +143,58 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ChangeOrderId { get; set; }
 
             /// <summary>
-            /// <para>The change type, which corresponds to the <b>CoTypeCode</b> parameter.</para>
+            /// <para>The change type. This parameter is a description of <c>CoTypeCode</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Batch Restart Instances</para>
             /// </summary>
             [NameInMap("CoType")]
             [Validation(Required=false)]
             public string CoType { get; set; }
 
             /// <summary>
-            /// <para>The code of the change type. Valid values:</para>
+            /// <para>The change type code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CoBindSlb</b>: associates a Sever Load Balancer (SLB) instance with the application.</description></item>
-            /// <item><description><b>CoUnbindSlb</b>: disassociates the SLB instance from the application.</description></item>
-            /// <item><description><b>CoCreateApp</b>: creates the application.</description></item>
-            /// <item><description><b>CoDeleteApp</b>: deletes the application.</description></item>
-            /// <item><description><b>CoDeploy</b>: deploys the application.</description></item>
-            /// <item><description><b>CoRestartApplication</b>: restarts the application.</description></item>
-            /// <item><description><b>CoRollback</b>: rolls back the application.</description></item>
-            /// <item><description><b>CoScaleIn</b>: scales in the application.</description></item>
-            /// <item><description><b>CoScaleOut</b>: scales out the application.</description></item>
-            /// <item><description><b>CoStart</b>: starts the application.</description></item>
-            /// <item><description><b>CoStop</b>: stops the application.</description></item>
-            /// <item><description><b>CoRescaleApplicationVertically</b>: modifies the instance type.</description></item>
-            /// <item><description><b>CoDeployHistroy</b>: rolls back the application to a historical version.</description></item>
-            /// <item><description><b>CoBindNas</b>: associates a NAS file system with the application.</description></item>
-            /// <item><description><b>CoUnbindNas</b>: disassociates the NAS file system from the application.</description></item>
-            /// <item><description><b>CoBatchStartApplication</b>: starts multiple applications concurrently.</description></item>
-            /// <item><description><b>CoBatchStopApplication</b>: stops multiple applications concurrently.</description></item>
-            /// <item><description><b>CoRestartInstances</b>: restarts the instances.</description></item>
-            /// <item><description><b>CoDeleteInstances</b>: deletes the instances.</description></item>
-            /// <item><description><b>CoScaleInAppWithInstances</b>: reduces the specified number of application instances.</description></item>
+            /// <item><description><para><b>CoBindSlb</b>: Binds an SLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoUnbindSlb</b>: Unbinds an SLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoCreateApp</b>: Creates an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoDeleteApp</b>: Deletes an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoDeploy</b>: Deploys an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoRestartApplication</b>: Restarts an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoRollback</b>: Rolls back an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoScaleIn</b>: Scales in an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoScaleOut</b>: Scales out an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoStart</b>: Starts an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoStop</b>: Stops an application.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoRescaleApplicationVertically</b>: Modifies instance specifications.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoDeployHistroy</b>: Rolls back to a historical version.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoBindNas</b>: Binds a NAS file system.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoUnbindNas</b>: Unbinds a NAS file system.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoBatchStartApplication</b>: Starts applications in batches.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoBatchStopApplication</b>: Stops applications in batches.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoRestartInstances</b>: Restarts instances.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoDeleteInstances</b>: Deletes instances.</para>
+            /// </description></item>
+            /// <item><description><para><b>CoScaleInAppWithInstances</b>: Scales in an application by specifying instances.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -235,7 +272,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? ParallelCount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the batch.</para>
+                /// <para>The batch ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0e4acf82-c9b1-4c1e-ac28-55776338****</para>
@@ -245,7 +282,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string PipelineId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the batch.</para>
+                /// <para>The batch name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Batch 1 Change</para>
@@ -255,7 +292,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string PipelineName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the batch processing started.</para>
+                /// <para>The start time of the batch.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1562831689704</para>
@@ -267,16 +304,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 /// <summary>
                 /// <para>The status of the batch. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: The batch is being prepared.</description></item>
-                /// <item><description><b>1</b>: The batch is being processed.</description></item>
-                /// <item><description><b>2</b>: The batch was processed.</description></item>
-                /// <item><description><b>3</b>: The batch failed to be processed.</description></item>
-                /// <item><description><b>6</b>: The batch processing was terminated.</description></item>
-                /// <item><description><b>8</b>: The execution process is pending. You must manually release the batch.</description></item>
-                /// <item><description><b>9</b>: The execution process is pending. SAE will automatically release the batch.</description></item>
-                /// <item><description><b>10</b>: The batch failed to be processed due to a system exception.</description></item>
-                /// <item><description><b>11</b>: The batch is pending approval.</description></item>
-                /// <item><description><b>12</b>: The batch is approved and is pending execution.</description></item>
+                /// <item><description><para><b>0</b>: Preparing</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: In progress</para>
+                /// </description></item>
+                /// <item><description><para><b>2</b>: Succeeded</para>
+                /// </description></item>
+                /// <item><description><para><b>3</b>: Failed</para>
+                /// </description></item>
+                /// <item><description><para><b>6</b>: Terminated</para>
+                /// </description></item>
+                /// <item><description><para><b>8</b>: Awaiting manual confirmation</para>
+                /// </description></item>
+                /// <item><description><para><b>9</b>: Awaiting automatic confirmation</para>
+                /// </description></item>
+                /// <item><description><para><b>10</b>: Failed due to a system error</para>
+                /// </description></item>
+                /// <item><description><para><b>11</b>: Pending approval</para>
+                /// </description></item>
+                /// <item><description><para><b>12</b>: Approved and pending execution</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -287,7 +334,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? Status { get; set; }
 
                 /// <summary>
-                /// <para>The time when the batch information was last modified.</para>
+                /// <para>The time when the batch was last updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1562847178007</para>
@@ -301,16 +348,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>The status of the change order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: The change order is being prepared.</description></item>
-            /// <item><description><b>1</b>: The change order is being executed.</description></item>
-            /// <item><description><b>2</b>: The change order was executed.</description></item>
-            /// <item><description><b>3</b>: The change order failed to be executed.</description></item>
-            /// <item><description><b>6</b>: The change order was terminated.</description></item>
-            /// <item><description><b>8</b>: The execution process is pending. You must manually release the batches.</description></item>
-            /// <item><description><b>9</b>: The execution process is pending. SAE will automatically release the batches.</description></item>
-            /// <item><description><b>10</b>: The execution failed due to a system exception.</description></item>
-            /// <item><description><b>11</b>: The change order is pending approval.</description></item>
-            /// <item><description><b>12</b>: The change order is approved and is pending execution.</description></item>
+            /// <item><description><para><b>0</b>: Preparing</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: In progress</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: Succeeded</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: Failed</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: Terminated</para>
+            /// </description></item>
+            /// <item><description><para><b>8</b>: Awaiting manual confirmation</para>
+            /// </description></item>
+            /// <item><description><para><b>9</b>: Awaiting automatic confirmation</para>
+            /// </description></item>
+            /// <item><description><para><b>10</b>: Failed due to a system error</para>
+            /// </description></item>
+            /// <item><description><para><b>11</b>: Pending approval</para>
+            /// </description></item>
+            /// <item><description><para><b>12</b>: Approved and pending execution</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -321,10 +378,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The substatus of the change order. This parameter indicates whether an exception occurred while the change order was being executed. Valid values:</para>
+            /// <para>The substatus of the release order. This parameter indicates whether an exception occurred during the release. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: No exception occurred.</description></item>
-            /// <item><description><b>1</b>: An exception occurred. For example, if an error occurs during a phased release, you must manually roll back the application. In this case, the change order cannot be completed, so the Status parameter is still displayed as &quot;1&quot;, which indicates that the change order is being executed. You can check the value of this parameter to determine whether an exception occurs.</description></item>
+            /// <item><description><para><b>0</b>: Normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: Abnormal. For example, if a batch release fails, you must manually perform a rollback, leaving the release order in the In Progress state.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -335,10 +394,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public int? SubStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the application can be rolled back. Valid values:</para>
+            /// <para>Indicates whether rollback is supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The application can be rolled back.</description></item>
-            /// <item><description><b>false</b>: The application cannot be rolled back.</description></item>
+            /// <item><description><para><b>true</b>: Rollback is supported.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Rollback is not supported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -351,10 +412,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>If the request is successful, this parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, this parameter is returned. For more information, see the <b>error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -362,7 +425,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -382,10 +445,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the information of the change order was queried. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The information was queried.</description></item>
-        /// <item><description><b>false</b>: The information failed to be queried.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -396,7 +461,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID of the request. This ID is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

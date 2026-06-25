@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,18 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DisableArmsResponseBodyData Data { get; set; }
         public class DisableArmsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates if enabled. Valid values: </para>
-            /// <list type="bullet">
-            /// <item><description>true: enabled</description></item>
-            /// <item><description>false: disabled</description></item>
-            /// </list>
+            /// <para>Indicates whether ARMS monitoring is enabled. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -49,14 +49,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>If the request is successful, the <b>ErrorCode</b> parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -76,31 +75,27 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>C0616FF6-9536-47BF-8A03-FB70386DFC71</para>
+        /// <para>6DA47906-6070-5A16-896D-67DCF38A6B7B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID.</para>
+        /// <para>The trace ID that is used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ac1a0b2215623063975374318e6d53</para>
+        /// <para>0bc3b4ad17412276398692303e4cb1</para>
         /// </summary>
         [NameInMap("TraceId")]
         [Validation(Required=false)]

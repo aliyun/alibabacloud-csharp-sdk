@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class RouteConfig : TeaModel {
         /// <summary>
-        /// <para>pathConfig</para>
+        /// <para>The path configurations.</para>
         /// </summary>
         [NameInMap("routes")]
         [Validation(Required=false)]

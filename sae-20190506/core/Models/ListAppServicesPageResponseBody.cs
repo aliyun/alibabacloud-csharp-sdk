@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ListAppServicesPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The API status code or POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirect.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: client error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: server error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of services.</para>
+        /// <para>The service list.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListAppServicesPageResponseBodyData> Data { get; set; }
         public class ListAppServicesPageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned on each page. Valid values: 0 to 9999.</para>
+            /// <para>The number of entries per page. The value must be in the range of 0 to 9999.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9999</para>
@@ -63,14 +67,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string PageSize { get; set; }
 
             /// <summary>
-            /// <para>The result returned.</para>
+            /// <para>The returned results.</para>
             /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public List<ListAppServicesPageResponseBodyDataResult> Result { get; set; }
             public class ListAppServicesPageResponseBodyDataResult : TeaModel {
                 /// <summary>
-                /// <para>The ID of the application.</para>
+                /// <para>The application ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hc4fs1****@98314c8790b****</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string EdasAppId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the application.</para>
+                /// <para>The application name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-zhangjiakou-micro-service-******</para>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string EdasAppName { get; set; }
 
                 /// <summary>
-                /// <para>The group to which the service belongs. You can create a custom group.</para>
+                /// <para>The service group. This value is user-defined.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>springCloud</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ServiceName { get; set; }
 
                 /// <summary>
-                /// <para>The version of a service. You can create a custom version.</para>
+                /// <para>The service version. This value is user-defined.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1.0.0</para>
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The total number of returned pages.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -144,10 +148,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> section of this topic.</description></item>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -155,7 +161,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>A message that describes the outcome of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -165,7 +171,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2583E089-99C2-562E-8B7E-73512136****</para>
@@ -175,10 +181,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the microservice list was obtained. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The list was obtained.</description></item>
-        /// <item><description><b>false</b>: The list failed to be obtained.</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -189,7 +197,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The trace ID used to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0be3e0c816394483660457498e****</para>

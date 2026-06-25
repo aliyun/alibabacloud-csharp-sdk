@@ -50,6 +50,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
         /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>空</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

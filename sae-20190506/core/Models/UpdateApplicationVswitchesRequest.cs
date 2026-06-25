@@ -20,20 +20,38 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether to deploy the application immediately. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Deploys the application immediately. This is the default.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The application is not deployed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Deploy")]
         [Validation(Required=false)]
         public bool? Deploy { get; set; }
 
+        /// <summary>
+        /// <para>The minimum percentage of ready instances.</para>
+        /// </summary>
         [NameInMap("MinReadyInstanceRatio")]
         [Validation(Required=false)]
         public int? MinReadyInstanceRatio { get; set; }
 
+        /// <summary>
+        /// <para>The minimum number of ready instances.</para>
+        /// </summary>
         [NameInMap("MinReadyInstances")]
         [Validation(Required=false)]
         public int? MinReadyInstances { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch.</para>
+        /// <para>The vSwitch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

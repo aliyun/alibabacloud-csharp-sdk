@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A2RN</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

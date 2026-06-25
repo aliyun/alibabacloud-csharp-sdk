@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeAppServiceDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The status of the API call or a POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the call was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the call failed.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: client error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: server error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data that is returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string DubboApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The name of the application.</para>
+            /// <para>The application name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou-micro-service-******</para>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string EdasAppName { get; set; }
 
             /// <summary>
-            /// <para>The group to which the service belongs. You can create a custom group.</para>
+            /// <para>The service group. This is a custom parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>springCloud</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The metadata. Example: <c>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</c>.</para>
+            /// <para>The metadata. Example: <c>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>{side: &quot;provider&quot;, port: &quot;18081&quot;, preserved: {register: {source: &quot;SPRING_CLOUD&quot;}},…}</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>The methods.</para>
+            /// <para>The list of methods.</para>
             /// </summary>
             [NameInMap("Methods")]
             [Validation(Required=false)]
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string MethodController { get; set; }
 
                 /// <summary>
-                /// <para>The name of the method.</para>
+                /// <para>The method name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>echo</para>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string NameDetail { get; set; }
 
                 /// <summary>
-                /// <para>The definition of the parameter.</para>
+                /// <para>The parameter definitions.</para>
                 /// </summary>
                 [NameInMap("ParameterDefinitions")]
                 [Validation(Required=false)]
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the parameter.</para>
+                    /// <para>The parameter name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>arg0</para>
@@ -137,7 +141,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the parameter.</para>
+                    /// <para>The parameter type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>java.lang.String</para>
@@ -156,33 +160,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public List<string> ParameterDetails { get; set; }
 
                 /// <summary>
-                /// <para>The types of the parameters.</para>
+                /// <para>The parameter types.</para>
                 /// </summary>
                 [NameInMap("ParameterTypes")]
                 [Validation(Required=false)]
                 public List<string> ParameterTypes { get; set; }
 
                 /// <summary>
-                /// <para>The request paths. Format:</para>
-                /// <para><c>/path</c></para>
+                /// <para>The request paths.</para>
                 /// </summary>
                 [NameInMap("Paths")]
                 [Validation(Required=false)]
                 public List<string> Paths { get; set; }
 
                 /// <summary>
-                /// <para>The request methods. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>GET</b></description></item>
-                /// <item><description><b>ALL</b></description></item>
-                /// </list>
+                /// <para>The request methods.</para>
                 /// </summary>
                 [NameInMap("RequestMethods")]
                 [Validation(Required=false)]
                 public List<string> RequestMethods { get; set; }
 
                 /// <summary>
-                /// <para>The details of the response.</para>
+                /// <para>The details of the returned data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -192,7 +191,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string ReturnDetails { get; set; }
 
                 /// <summary>
-                /// <para>The data format of the response.</para>
+                /// <para>The return type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>java.lang.String</para>
@@ -204,7 +203,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service-provider</para>
@@ -214,7 +213,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The port used by the service.</para>
+            /// <para>The ports used by the service.</para>
             /// </summary>
             [NameInMap("ServicePorts")]
             [Validation(Required=false)]
@@ -231,17 +230,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ServiceProtocol { get; set; }
 
             /// <summary>
-            /// <para>The tag of the service.</para>
+            /// <para>The tags of the service.</para>
             /// </summary>
             [NameInMap("ServiceTags")]
             [Validation(Required=false)]
             public List<string> ServiceTags { get; set; }
 
             /// <summary>
-            /// <para>The type of the service. Valid values:</para>
+            /// <para>The service type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>dubbo</b></description></item>
-            /// <item><description><b>springCloud</b></description></item>
+            /// <item><description><para><b>dubbo</b></para>
+            /// </description></item>
+            /// <item><description><para><b>springCloud</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -262,7 +263,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string SpringApplicationName { get; set; }
 
             /// <summary>
-            /// <para>The version of the service. You can create a custom version.</para>
+            /// <para>The service version. This is a custom parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -274,10 +275,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The returned error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
+        /// <item><description><para>If the request is successful, the <b>ErrorCode</b> field is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, the <b>ErrorCode</b> field is returned. For more information, see the list of <b>error codes</b> in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -285,7 +288,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned information.</para>
+        /// <para>The additional information returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -295,7 +298,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2C7874F-F109-5B34-8618-2C10BBA2****</para>
@@ -305,10 +308,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the meta data was obtained. Valid values:</para>
+        /// <para>Indicates whether the metadata was obtained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The metadata was obtained.</description></item>
-        /// <item><description><b>false</b>: The metadata failed to be obtained.</description></item>
+        /// <item><description><para><b>true</b>: The metadata was obtained.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The metadata failed to be obtained.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -319,7 +324,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. The ID is used to query the details of a request.</para>
+        /// <para>The call chain ID. Use this ID for a term query of call details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0b16399316402420740034918e****</para>

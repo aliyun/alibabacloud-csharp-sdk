@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The HTTP status code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request failed.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: The request was invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +30,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeNamespaceResourcesResponseBodyData Data { get; set; }
         public class DescribeNamespaceResourcesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The version of the APM Java agent.</para>
+            /// </summary>
             [NameInMap("ApmJavaAgentVersion")]
             [Validation(Required=false)]
             public string ApmJavaAgentVersion { get; set; }
@@ -47,7 +54,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? AppCount { get; set; }
 
             /// <summary>
-            /// <para>The region to which the namespace belongs.</para>
+            /// <para>The region of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -87,7 +94,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string JumpServerIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the change order.</para>
+            /// <para>The release order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>afedb3c4-63f8-4a3d-aaa3-2c30363f****</para>
@@ -97,10 +104,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string LastChangeOrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a change order is being executed in the namespace. Valid values:</para>
+            /// <para>Indicates whether a release order is running in the namespace. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: indicates that a change order is being executed in the namespace.</description></item>
-            /// <item><description><b>false</b>: indicates that no change orders are being executed in the namespace.</description></item>
+            /// <item><description><para><b>true</b>: A release order is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: No release order is running.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,18 +120,28 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? LastChangeOrderRunning { get; set; }
 
             /// <summary>
-            /// <para>The status of the latest change order. Valid values:</para>
+            /// <para>The status of the last release order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>READY</b>: The change order is ready.</description></item>
-            /// <item><description><b>RUNNING</b>: The change order is being executed.</description></item>
-            /// <item><description><b>SUCCESS</b>: The change order was executed.</description></item>
-            /// <item><description><b>FAIL</b>: The change order could not be executed.</description></item>
-            /// <item><description><b>ABORT</b>: The change order was terminated.</description></item>
-            /// <item><description><b>WAIT_BATCH_CONFIRM</b>: The change order is pending execution. You must manually confirm the release batch.</description></item>
-            /// <item><description><b>AUTO_BATCH_WAIT</b>: The change order is pending execution. SAE will automatically confirm the release batch.</description></item>
-            /// <item><description><b>SYSTEM_FAIL</b>: A system exception occurred.</description></item>
-            /// <item><description><b>WAIT_APPROVAL</b>: The change order is pending approval.</description></item>
-            /// <item><description><b>APPROVED</b>: The change order is approved and is pending execution.</description></item>
+            /// <item><description><para><b>READY</b>: The release order is ready.</para>
+            /// </description></item>
+            /// <item><description><para><b>RUNNING</b>: The release order is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUCCESS</b>: The release order was successful.</para>
+            /// </description></item>
+            /// <item><description><para><b>FAIL</b>: The release order failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>ABORT</b>: The release order was aborted.</para>
+            /// </description></item>
+            /// <item><description><para><b>WAIT_BATCH_CONFIRM</b>: The release order is waiting for manual batch confirmation.</para>
+            /// </description></item>
+            /// <item><description><para><b>AUTO_BATCH_WAIT</b>: The release order is in an automatic batch-wait state.</para>
+            /// </description></item>
+            /// <item><description><para><b>SYSTEM_FAIL</b>: A system error occurred.</para>
+            /// </description></item>
+            /// <item><description><para><b>WAIT_APPROVAL</b>: The release order is pending approval.</para>
+            /// </description></item>
+            /// <item><description><para><b>APPROVED</b>: The release order is approved and pending execution.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,6 +152,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string LastChangeOrderStatus { get; set; }
 
             /// <summary>
+            /// <para>The short-format namespace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -141,7 +162,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NameSpaceShortId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the namespace.</para>
+            /// <para>The namespace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shangha:test</para>
@@ -151,7 +172,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the namespace.</para>
+            /// <para>The namespace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -161,10 +182,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the notification of a change order is expired. Valid values:</para>
+            /// <para>Indicates whether the notification for the release order has expired. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: indicates that the notification is expired.</description></item>
-            /// <item><description><b>false</b>: indicates that the notification is not expired.</description></item>
+            /// <item><description><para><b>true</b>: The notification has expired.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The notification has not expired.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -175,7 +198,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? NotificationExpired { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group.</para>
+            /// <para>The security group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-wz969ngg2e49q5i4****</para>
@@ -184,12 +207,35 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The configuration for collecting logs to Simple Log Service (SLS).</para>
+            /// <list type="bullet">
+            /// <item><description><para>To use SLS resources that are automatically created by SAE: <c>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</c>.</para>
+            /// </description></item>
+            /// <item><description><para>To use custom SLS resources: <c>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</c>.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>The configuration includes the following parameters:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>projectName</b>: The project name in SLS.</para>
+            /// </description></item>
+            /// <item><description><para><b>logDir</b>: The log path.</para>
+            /// </description></item>
+            /// <item><description><para><b>logType</b>: The log type. <b>stdout</b> indicates the standard output of the container. Only one stdout entry is allowed. If you omit this parameter, file logs are collected.</para>
+            /// </description></item>
+            /// <item><description><para><b>logstoreName</b>: The Logstore name in SLS.</para>
+            /// </description></item>
+            /// <item><description><para><b>logtailName</b>: The Logtail name in SLS. If you omit this parameter, SAE creates a Logtail.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>You do not need to set this parameter if the SLS log collection configuration is unchanged for subsequent deployments. To disable log collection, set this parameter to an empty string (&quot;&quot;).</para>
+            /// </summary>
             [NameInMap("SlsConfigs")]
             [Validation(Required=false)]
             public string SlsConfigs { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant in the SAE namespace.</para>
+            /// <para>The tenant ID of the SAE namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>838cad95-973f-48fe-830b-2a8546d7****</para>
@@ -199,7 +245,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@aliyun.com">test@aliyun.com</a></para>
@@ -209,7 +255,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-2ze559r1z1bpwqxwp****</para>
@@ -219,7 +265,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The name of the vSwitch.</para>
+            /// <para>The vSwitch name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -229,7 +275,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string VSwitchName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual private cloud (VPC).</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2ze0i263cnn311nvj****</para>
@@ -239,7 +285,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The name of the VPC.</para>
+            /// <para>The VPC name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -251,10 +297,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The error code. This parameter is returned only if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
         /// <list type="bullet">
-        /// <item><description>The <b>ErrorCode</b> parameter is not returned when the request succeeds.</description></item>
-        /// <item><description>The <b>ErrorCode</b> parameter is returned when the request fails. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>A successful request does not return the <b>ErrorCode</b> field.</para>
+        /// </description></item>
+        /// <item><description><para>A failed request returns the <b>ErrorCode</b> field. For more information, see the list of <b>error codes</b> in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -262,10 +310,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The returned message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b> is returned when the request succeeds.</description></item>
-        /// <item><description>An error code is returned when the request fails.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -276,7 +326,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -286,10 +336,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the information about resources in the namespace was queried successfully. Valid values:</para>
+        /// <para>Indicates whether the namespace resources were queried successfully.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: indicates that the query was successful.</description></item>
-        /// <item><description><b>false</b>: indicates that the query failed.</description></item>
+        /// <item><description><para><b>true</b>: The query was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The query failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -300,7 +352,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. It can be used to query the details of a request.</para>
+        /// <para>The trace ID. You can use this ID to query the details of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

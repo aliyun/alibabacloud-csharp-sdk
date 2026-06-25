@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DeleteInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code or the error code. Valid values:</para>
+        /// <para>The HTTP status code or a Platform as a Service (PaaS) error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Responses.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteInstancesResponseBodyData Data { get; set; }
         public class DeleteInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the release order.</para>
+            /// <para>The ID of the change order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>01db03d3-3ee9-48b3-b3d0-dfce2d88****</para>
@@ -45,10 +49,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>Error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see <b>Error codes</b> in this topic.</description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is not returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>The <b>ErrorCode</b> parameter is returned if the request fails. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -56,10 +62,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information about the call result. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>If the request is normal, success is returned.</description></item>
-        /// <item><description>If the request is abnormal, the specific exception error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <c>success</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,10 +88,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the instance is deleted successfully. Valid values:</para>
+        /// <para>Indicates whether the application instances were deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The namespace was deleted.</description></item>
-        /// <item><description><b>false</b>: The namespace failed to be deleted.</description></item>
+        /// <item><description><para><b>true</b>: The application instances were deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The application instances failed to be deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace. This parameter is used to query the exact call information.</para>
+        /// <para>The trace ID of the request. You can use this ID to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a981dd515966966104121683d****</para>

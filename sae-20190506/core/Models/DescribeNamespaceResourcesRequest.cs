@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeNamespaceResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the namespace. The region ID is not included. We recommend that you use this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NameSpaceShortId { get; set; }
 
         /// <summary>
-        /// <para>cn-shanghai:test</para>
+        /// <para>The ID of the namespace. The format is <c>Region ID:Namespace name</c>. This parameter is retained for backward compatibility. If you specify this parameter, <c>NameSpaceShortId</c> is ignored. We recommend that you use <c>NameSpaceShortId</c> to simplify the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai:test</para>

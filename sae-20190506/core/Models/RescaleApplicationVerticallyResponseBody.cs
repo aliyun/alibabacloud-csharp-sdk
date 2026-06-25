@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class RescaleApplicationVerticallyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RescaleApplicationVerticallyResponseBodyData Data { get; set; }
         public class RescaleApplicationVerticallyResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ticked ID of updates.</para>
+            /// <para>The ID of the change order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ffd8cd45-2b5f-415d-b4d0-1003e80b****</para>
@@ -45,21 +49,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code. Valid values:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, the <b>ErrorCode</b> parameter is not returned.</description></item>
-        /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</description></item>
+        /// <item><description><para>If the request is successful, this parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, this parameter is returned. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Null</para>
+        /// <para>空</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Messages returned for additional information.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AB521DBB-FA78-42E6-803F-A862EA4F****</para>
@@ -79,10 +85,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the update of instance specifications was successful. Valid values:</para>
+        /// <para>Indicates whether the instance type was successfully changed.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Updated.</description></item>
-        /// <item><description><b>false</b>: Failed to update.</description></item>
+        /// <item><description><para><b>true</b>: The change was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The change failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +101,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Trace ID for request information.</para>
+        /// <para>The trace ID of the request. You can use this ID to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0bc3b6f315637273629117900d****</para>

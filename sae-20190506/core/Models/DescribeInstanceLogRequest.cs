@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeInstanceLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the sidecar container. You can call the <a href="https://help.aliyun.com/document_detail/2834847.html">DescribeApplicationInstances</a> to obtain the ID.</para>
+        /// <para>The ID of the sidecar container. Call the <a href="https://help.aliyun.com/document_detail/2834847.html">ListApplicationInstances</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sidecar-test-01</para>
@@ -30,6 +30,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to view the log of the instance from before its last restart. Note: This parameter is active only if the instance was restarted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Previous")]
         [Validation(Required=false)]
         public string Previous { get; set; }

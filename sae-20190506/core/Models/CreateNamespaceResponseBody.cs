@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class CreateNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>bucketPath</para>
+        /// <para>The HTTP status code or a POP error code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +30,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information about a namespace.</para>
+        /// <para>The information about the namespace.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateNamespaceResponseBodyData Data { get; set; }
         public class CreateNamespaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the SAE built-in registry is enabled:</para>
+            /// <para>Indicates whether the built-in service registry of SAE is enabled.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,11 +53,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? EnableMicroRegistration { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the namespace was created. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: The instance was created.</description></item>
-            /// <item><description><b>false</b>: The call failed to be created.</description></item>
-            /// </list>
+            /// <para>The short-format namespace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -55,7 +63,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NameSpaceShortId { get; set; }
 
             /// <summary>
-            /// <para>The short ID of the namespace.</para>
+            /// <para>The description of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>desc</para>
@@ -65,11 +73,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NamespaceDescription { get; set; }
 
             /// <summary>
-            /// <para>The error code returned. Take note of the following rules:</para>
-            /// <list type="bullet">
-            /// <item><description>The <b>ErrorCode</b> parameter is not returned if the request succeeds.</description></item>
-            /// <item><description>If the call fails, the <b>ErrorCode</b> parameter is returned. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</description></item>
-            /// </list>
+            /// <para>The ID of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing:test</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NamespaceId { get; set; }
 
             /// <summary>
-            /// <para>Null</para>
+            /// <para>The name of the namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -89,13 +93,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string NamespaceName { get; set; }
 
             /// <summary>
-            /// <para>The HTTP status code. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>2xx</b>: The call was successful.</description></item>
-            /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-            /// <item><description><b>4xx</b>: The call failed.</description></item>
-            /// <item><description><b>5xx</b>: A server error occurred.</description></item>
-            /// </list>
+            /// <para>The region where the namespace resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -107,17 +105,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para><a href="http://sae_pop_pre/#vpc">http://sae_pop_pre/#vpc</a></para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>bucketName</para>
+        /// <para>The error code.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If the request is successful, this parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, this parameter is returned. For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The additional information returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -127,7 +128,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The description of the custom namespace.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -137,7 +138,13 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>mountDir</para>
+        /// <para>Indicates whether the namespace was successfully created. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The namespace was created.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The namespace failed to be created.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -147,7 +154,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The trace ID. You can use the trace ID to query the details of a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a981dd515966966104121683d****</para>

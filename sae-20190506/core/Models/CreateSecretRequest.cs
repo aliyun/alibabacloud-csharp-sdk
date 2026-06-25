@@ -61,9 +61,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// </list>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Opaque</description></item>
-        /// <item><description>kubernetes.io/dockerconfigjson</description></item>
-        /// <item><description>kubernetes.io/tls</description></item>
+        /// <item><description><para>Opaque</para>
+        /// </description></item>
+        /// <item><description><para>kubernetes.io/dockerconfigjson</para>
+        /// </description></item>
+        /// <item><description><para>kubernetes.io/tls</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

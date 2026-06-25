@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateIngressResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code or the error code. Valid values:</para>
+        /// <para>API status or POP error code. Details are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: Success.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: Request error.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: Server error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Responses.</para>
+        /// <para>Returned result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateIngressResponseBodyData Data { get; set; }
         public class UpdateIngressResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the routing rule.</para>
+            /// <para>Routing rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>87</para>
@@ -45,10 +49,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The status code. Value values:</para>
+        /// <para>Error code. Details are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the request failed, <b>ErrorCode</b> is returned. For more information, see the <b>Error codes</b> section of this topic.</description></item>
+        /// <item><description><para>If the request is successful, the <b>ErrorCode</b> field is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request failed, the <b>ErrorCode</b> field is returned. For more information, see the <b>Error Codes</b> list in this topic.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
@@ -56,10 +62,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Additional information. Valid values:</para>
+        /// <para>Additional information. Details are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>The error message returned because the request is normal and <b>success</b> is returned.</description></item>
-        /// <item><description>If the request is abnormal, the specific exception error code is returned.</description></item>
+        /// <item><description><para>If the request is normal, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request is abnormal, a specific abnormal error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +78,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -80,10 +88,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the configuration of the Ingress instance is updated. Valid values:</para>
+        /// <para>Indicates whether the Ingress instance configuration was successfully updated. Details are as follows:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The update was successful.</description></item>
-        /// <item><description><b>false</b>: Update failed.</description></item>
+        /// <item><description><para><b>true</b>: The update was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The update failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace.</para>
+        /// <para>Call chain ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

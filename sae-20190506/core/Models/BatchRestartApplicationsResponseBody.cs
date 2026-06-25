@@ -42,9 +42,6 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code. Value description:</para>
         /// <para>If the request succeeds, this field is not returned. It is returned only if the request fails. For more information, see the &quot;Error codes&quot; section in this topic.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>System.Upgrading</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]

@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class DescribeInstanceLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The interface state or POP error code. Valid values:</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: indicates that the request was successful.</description></item>
-        /// <item><description><b>3xx</b>: indicates that the request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: indicates that the request was invalid.</description></item>
-        /// <item><description><b>5xx</b>: indicates that a server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A request error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The information of instance logs.</para>
+        /// <para>The instance log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello\nsae\n</para>
@@ -36,25 +40,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Error code.</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description><para>No error code returned if the request succeeded.</para>
+        /// <item><description><para>This parameter is not returned if the request is successful.</para>
         /// </description></item>
-        /// <item><description><para>Error code returned if the request failed. Refer to error code list below for details.</para>
+        /// <item><description><para>This parameter is returned if the request fails. For more information, see the <b>Error codes</b> section in this topic.</para>
         /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
-        /// <para>success is returned when the request succeeds.
-        /// An error code is returned when the request fails.</para>
+        /// <para>The message returned.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>success</b> is returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>An error code is returned if the request fails.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -64,7 +69,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</para>
@@ -74,11 +79,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the logs of the instance is obtained.</para>
+        /// <para>Indicates whether the instance log was obtained. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: logs obtained.</para>
+        /// <item><description><para><b>true</b>: The instance log was obtained.</para>
         /// </description></item>
-        /// <item><description><para>false: failed to obtain logs.</para>
+        /// <item><description><para><b>false</b>: The instance log failed to be obtained.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -90,7 +95,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Trace ID.</para>
+        /// <para>The trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

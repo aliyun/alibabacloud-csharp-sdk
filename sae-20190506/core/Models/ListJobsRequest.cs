@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The parameter value is a positive integer that is greater than or equal to 1.</para>
+        /// <para>The page number. The value starts from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The dimension by which applications are filtered. Valid values:</para>
+        /// <para>The dimension by which to filter job templates. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>appName</b>: Applications are filtered by job template name.</description></item>
-        /// <item><description><b>appIds</b>: Applications are filtered by job template ID.</description></item>
+        /// <item><description><para><b>appName</b>: The name of the job template.</para>
+        /// </description></item>
+        /// <item><description><para><b>appIds</b>: The ID of the job template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string FieldType { get; set; }
 
         /// <summary>
-        /// <para>Enter the name and ID of the job template.</para>
+        /// <para>The name or ID of the target job template. This value corresponds to the dimension specified by <b>FieldType</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-app</para>
@@ -64,10 +66,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies how applications are sorted. Valid values:</para>
+        /// <para>The sorting method for the job templates. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>running</b>: The applications are sorted based on the number of running instances.</description></item>
-        /// <item><description><b>instances</b>: The applications are sorted based on the number of destination instances.</description></item>
+        /// <item><description><para><b>running</b>: Sorts by the number of running instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>instances</b>: Sorts by the number of destination instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid value: 0 to 200.</para>
+        /// <para>The number of entries per page. Valid values: 0 to 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -88,10 +92,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to sort the field names that are passed by <b>OrderBy</b> in ascending order. Valid values:</para>
+        /// <para>Specifies whether to sort the results in ascending or descending order based on the field specified by the <b>OrderBy</b> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: in ascending order</description></item>
-        /// <item><description><b>false</b>: in descending order</description></item>
+        /// <item><description><para><b>true</b>: ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,10 +108,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// <para>The tags that are displayed in a JSON string. Valid values:</para>
+        /// <para>A list of tags. This is a JSON string. The value consists of the following parts:</para>
         /// <list type="bullet">
-        /// <item><description><b>key</b>: the tag key</description></item>
-        /// <item><description><b>value</b>: the tag value</description></item>
+        /// <item><description><para><b>key</b>: The tag key.</para>
+        /// </description></item>
+        /// <item><description><para><b>value</b>: The tag value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,7 +124,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>Set the value to <c>job</c>.</para>
+        /// <para>The workload. Set the value to <c>job</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job</para>

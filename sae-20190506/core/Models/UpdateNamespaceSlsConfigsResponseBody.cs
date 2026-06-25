@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateNamespaceSlsConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code or error code. Valid values: 2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</para>
+        /// <para>The API status code or POP error code. Valid values: 2xx (success), 3xx (redirect), 4xx (client error), 5xx (server error).</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,20 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error code. Value description:</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, this field is not returned.</description></item>
-        /// <item><description>For more information, see the <b>Error codes</b> section of this topic.</description></item>
+        /// <item><description><para>If the request is successful, the response does not include the <c>ErrorCode</c> parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, the response includes the <c>ErrorCode</c> parameter. For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>InvalidNamespaceId.NotFound</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The additional information.</para>
+        /// <para>Additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -44,7 +43,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Simple Log Service configuration for the namespace was updated. Valid values: true and false.</para>
+        /// <para>Indicates whether the namespace\&quot;s SLS configuration was successfully updated. A value of <c>true</c> indicates success, while <c>false</c> indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,7 +53,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The ID of the trace, which is used to query the exact call information.</para>
+        /// <para>The trace ID for the request. You can use this ID to query the details of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

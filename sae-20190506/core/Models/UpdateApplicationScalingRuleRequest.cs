@@ -20,18 +20,23 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable or disable the idle mode.</para>
+        /// </summary>
         [NameInMap("EnableIdle")]
         [Validation(Required=false)]
         public bool? EnableIdle { get; set; }
 
         /// <summary>
-        /// <para>The percentage of the minimum number of available instances. Take note of the following rules:</para>
+        /// <para>The minimum percentage of instances that must remain available during a rolling deployment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the value to <b>-1</b>, the minimum number of available instances is not determined based on this parameter. This is the default value.</description></item>
-        /// <item><description>If you set the value to a number <b>from 0 to 100</b>, the minimum number of available instances is calculated by using the following formula: Current number of instances × (Value of MinReadyInstanceRatio × 100%). The value is the nearest integer rounded up from the calculated result. For example, if you set this parameter to <b>50</b>, and five instances are available, the minimum number of available instances is 3.</description></item>
+        /// <item><description><para><b>-1</b>: An initial value that indicates that a percentage is not used.</para>
+        /// </description></item>
+        /// <item><description><para><b>0 to 100</b>: A percentage that is rounded up. For example, if you have 5 instances and set this parameter to <b>50</b>, the minimum number of surviving instances is 3.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When <b>MinReadyInstance</b> and <b>MinReadyInstanceRatio</b> are specified and <b>MinReadyInstanceRatio</b> is set to a number from 0 to 100, the value of \<em>\<em>MinReadyInstanceRatio</em></em> takes precedence.**** For example, if <b>MinReadyInstances</b> is set to *<em>5\</em>\*, and <b>MinReadyInstanceRatio</b> is set to <b>50</b>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Current number of instances × <b>50%</b>.</para>
+        /// <para>If you specify both <b>MinReadyInstances</b> and <b>MinReadyInstanceRatio</b>, and <b>MinReadyInstanceRatio</b> is not <b>-1</b>, <b>MinReadyInstanceRatio</b> takes precedence. For example, if <b>MinReadyInstances</b> is set to <b>5</b> and <b>MinReadyInstanceRatio</b> is set to <b>50</b>, the system uses <b>50%</b> to calculate the minimum number of surviving instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -42,13 +47,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? MinReadyInstanceRatio { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of available instances. Take note of the following rules:</para>
+        /// <para>The minimum number of instances that must remain available during a rolling deployment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the value to <b>0</b>, business interruptions occur when the auto-scaling policy is updated.</description></item>
-        /// <item><description>If you set the value to \<em>\</em>-1\<em>\</em>, the minimum number of available instances is automatically set to a system-recommended value. The value is the nearest integer to which the calculated result of the following formula is rounded up: Current number of instances × 25%. For example, if five instances are available, the minimum number of available instances is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</description></item>
+        /// <item><description><para>If you set this parameter to <b>0</b>, your application experiences service interruptions during a rolling deployment.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to <b>-1</b>, the system uses a recommended value, which is 25% of the current number of instances. For example, if you have 5 instances, the minimum number of surviving instances is 2 (5 × 25% = 1.25, rounded up).</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Make sure that at least one instance is available during application deployment and rollback to prevent business interruptions.</para>
+        /// <para>To ensure business continuity, we recommend that you set the minimum number of surviving instances for each rolling deployment to 1 or higher.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,67 +66,97 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public int? MinReadyInstances { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the metric-based auto scaling policy. This parameter is required if you set the ScalingRuleType parameter to metric.</para>
-        /// <para>Parameter description:</para>
+        /// <para>The configuration for the metric-based scaling policy. This parameter is required for metric-based scaling policies.</para>
+        /// <para>The parameter includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>maxReplicas</b>: the maximum number of instances in the application.</para>
+        /// <item><description><para><b>maxReplicas</b>: The maximum number of application instances.</para>
         /// </description></item>
-        /// <item><description><para><b>minReplicas</b>: the minimum number of instances in the application.</para>
+        /// <item><description><para><b>minReplicas</b>: The minimum number of application instances.</para>
         /// </description></item>
-        /// <item><description><para><b>metricType</b>: the metric that is used to trigger the auto scaling policy.</para>
+        /// <item><description><para><b>metricType</b>: The metric that triggers the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CPU</b>: the CPU utilization.</description></item>
-        /// <item><description><b>MEMORY</b>: the memory usage.</description></item>
-        /// <item><description><b>tcpActiveConn</b>: the average number of active TCP connections in an application instance within 30 seconds.</description></item>
-        /// <item><description><b>SLB_QPS</b>: the average queries per second (QPS) of the Internet-facing Server Load Balancer (SLB) instance associated with an application instance within 15 seconds.</description></item>
-        /// <item><description><b>SLB_RT</b>: the average response time of the Internet-facing SLB instance within 15 seconds.</description></item>
+        /// <item><description><para><b>CPU</b>: The CPU usage.</para>
+        /// </description></item>
+        /// <item><description><para><b>MEMORY</b>: The memory usage.</para>
+        /// </description></item>
+        /// <item><description><para><b>QPS</b>: The average QPS of a single instance of a Java application over a 1-minute period.</para>
+        /// </description></item>
+        /// <item><description><para><b>RT</b>: The average RT of all service interfaces of a Java application over a 1-minute period.</para>
+        /// </description></item>
+        /// <item><description><para><b>tcpActiveConn</b>: The average number of active TCP connections per instance over a 30-second period.</para>
+        /// </description></item>
+        /// <item><description><para><b>SLB_QPS</b>: The average QPS of an internet-facing SLB, measured per instance over a 15-second period.</para>
+        /// </description></item>
+        /// <item><description><para><b>SLB_RT</b>: The average RT of an internet-facing SLB over a 15-second period.</para>
+        /// </description></item>
+        /// <item><description><para><b>INTRANET_SLB_QPS</b>: The average QPS of an internal-facing SLB, measured per instance over a 15-second period.</para>
+        /// </description></item>
+        /// <item><description><para><b>INTRANET_SLB_RT</b>: The average RT of an internal-facing SLB over a 15-second period.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>metricTargetAverageUtilization</b>: the limit on the metric specified by the <b>metricType</b> parameter.</para>
+        /// <item><description><para><b>metricTargetAverageUtilization</b>: The target value for the specified <b>metricType</b>.</para>
         /// <list type="bullet">
-        /// <item><description>The limit on the CPU utilization. Unit: percentage.</description></item>
-        /// <item><description>The limit on the memory usage. Unit: percentage.</description></item>
-        /// <item><description>The limit on the average number of active TCP connections per second.</description></item>
-        /// <item><description>The limit on the QPS of the Internet-facing SLB instance.</description></item>
-        /// <item><description>The limit on the response time of the Internet-facing SLB instance. Unit: milliseconds.</description></item>
+        /// <item><description><para>Target CPU usage, in percent.</para>
+        /// </description></item>
+        /// <item><description><para>Target memory usage, in percent.</para>
+        /// </description></item>
+        /// <item><description><para>Target QPS.</para>
+        /// </description></item>
+        /// <item><description><para>Target RT, in milliseconds.</para>
+        /// </description></item>
+        /// <item><description><para>Average number of active TCP connections, in connections/second.</para>
+        /// </description></item>
+        /// <item><description><para>Target internet-facing SLB QPS.</para>
+        /// </description></item>
+        /// <item><description><para>Target internet-facing SLB RT, in milliseconds.</para>
+        /// </description></item>
+        /// <item><description><para>Target internal-facing SLB QPS.</para>
+        /// </description></item>
+        /// <item><description><para>Target internal-facing SLB RT, in milliseconds.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>SlbProject</b>: the Log Service project.</para>
+        /// <item><description><para><b>slbId</b>: The SLB ID.</para>
         /// </description></item>
-        /// <item><description><para><b>SlbLogstore</b>: the Log Service Logstore.</para>
+        /// <item><description><para><b>slbProject</b>: The Simple Log Service project.</para>
         /// </description></item>
-        /// <item><description><para><b>Vport</b>: the listener port for the SLB instance. HTTP and HTTPS are supported.</para>
+        /// <item><description><para><b>slbLogstore</b>: The Simple Log Service Logstore.</para>
         /// </description></item>
-        /// <item><description><para><b>scaleUpRules</b>: the scale-out rule.</para>
+        /// <item><description><para><b>vport</b>: The listening port of the SLB. Both HTTP and HTTPS are supported.</para>
         /// </description></item>
-        /// <item><description><para><b>scaleDownRules</b>: the scale-in rule.</para>
+        /// <item><description><para><b>scaleUpRules</b>: The scale-out rules.</para>
         /// </description></item>
-        /// <item><description><para><b>step</b>: the scale-out or scale-in step size. The maximum number of instances that can be added or removed per unit time.</para>
+        /// <item><description><para><b>scaleDownRules</b>: The scale-in rules.</para>
         /// </description></item>
-        /// <item><description><para><b>disabled</b>: specifies whether to disable the application scale-in. If you set this parameter to true, the application instances are never scaled in. This prevents business risks during peak hours.</para>
+        /// <item><description><para><b>step</b>: The step size for a scale-out or scale-in action. It defines the maximum number of instances that can be added or removed at a time.</para>
+        /// </description></item>
+        /// <item><description><para><b>disabled</b>: Specifies whether to disable scale-in. Disabling scale-in prevents the application from scaling in, which can mitigate risks during peak traffic.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: disables the application scale-in.</description></item>
-        /// <item><description><b>false</b>: enables the application scale-in. Default value: false.</description></item>
+        /// <item><description><para><b>true</b>: Disables scale-in.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Enables scale-in. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>stabilizationWindowSeconds</b>: the cooldown period during which the system is stable and does not perform scale-out or scale-in operations. Valid values: 0 to 3600. Unit: seconds. Default value: 0.</para>
+        /// <item><description><para><b>stabilizationWindowSeconds</b>: The cooldown time, in seconds, for a scaling action. The value must be an integer from 0 to 3,600. The default is 0.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can specify one or more metrics as the trigger conditions of the auto scaling policy. If you specify multiple metrics, the application is scaled out when the value of a metric is greater than or equal to the limit. The number of application instances after the scale-out cannot exceed the configured maximum number of application instances. If the values of all the metrics are less than the limits, the application is scaled in. The number of instances after the scale-in cannot be less than the configured minimum number of application instances.</para>
+        /// <para>If you specify multiple metrics, a scale-out is triggered when any metric meets its target. The number of instances will not exceed maxReplicas. A scale-in is triggered only when all metrics are below their targets. The number of instances will not drop below minReplicas.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;maxReplicas&quot;:3,&quot;minReplicas&quot;:1,&quot;metrics&quot;:[{&quot;metricType&quot;:&quot;CPU&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;MEMORY&quot;,&quot;metricTargetAverageUtilization&quot;:30},{&quot;metricType&quot;:&quot;tcpActiveConn&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;SLB_QPS&quot;,&quot;MetricTargetAverageUtilization&quot;:25,&quot;SlbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-<b><b><b><b><b><b>&quot;,&quot;SlbLogstore&quot;:&quot;function-log&quot;,&quot;Vport&quot;:&quot;80&quot;},{&quot;metricType&quot;:&quot;SLB_RT&quot;,&quot;MetricTargetAverageUtilization&quot;:35,&quot;SlbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-</b></b></b></b></b></b>&quot;,&quot;SlbLogstore&quot;:&quot;function-log&quot;,&quot;Vport&quot;:&quot;80&quot;}],&quot;scaleUpRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:0},&quot;scaleDownRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:300}}</para>
+        /// <para>{&quot;maxReplicas&quot;:3,&quot;minReplicas&quot;:1,&quot;metrics&quot;:[{&quot;metricType&quot;:&quot;CPU&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;MEMORY&quot;,&quot;metricTargetAverageUtilization&quot;:30},{&quot;metricType&quot;:&quot;tcpActiveConn&quot;,&quot;metricTargetAverageUtilization&quot;:20},{&quot;metricType&quot;:&quot;SLB_QPS&quot;,&quot;MetricTargetAverageUtilization&quot;:25,&quot;slbId&quot;:&quot;lb-xxx&quot;,&quot;slbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-<b><b><b><b><b><b>&quot;,&quot;slbLogstore&quot;:&quot;function-log&quot;,&quot;vport&quot;:&quot;80&quot;},{&quot;metricType&quot;:&quot;SLB_RT&quot;,&quot;MetricTargetAverageUtilization&quot;:35,&quot;slbId&quot;:&quot;lb-xxx&quot;,&quot;slbProject&quot;:&quot;aliyun-fc-cn-hangzhou-d95881d9-5d3c-5f26-a6b8-</b></b></b></b></b></b>&quot;,&quot;slbLogstore&quot;:&quot;function-log&quot;,&quot;vport&quot;:&quot;80&quot;}],&quot;scaleUpRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:0},&quot;scaleDownRules&quot;:{&quot;step&quot;:&quot;100&quot;,&quot;disabled&quot;:false,&quot;stabilizationWindowSeconds&quot;:300}}</para>
         /// </summary>
         [NameInMap("ScalingRuleMetric")]
         [Validation(Required=false)]
         public string ScalingRuleMetric { get; set; }
 
         /// <summary>
-        /// <para>The name of the auto scaling policy. The name must start with a lowercase letter and can contain only lowercase letters, digits, and hyphens (-). The name cannot exceed 32 characters in length.</para>
+        /// <para>The name of the auto scaling policy. The name must start with a lowercase letter, contain only lowercase letters, digits, and hyphens (-), and be no more than 32 characters long.</para>
         /// <remarks>
-        /// <para>You cannot change the names of created policies.</para>
+        /// <para>You cannot change the name of an auto scaling policy after it is created.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -131,41 +168,51 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ScalingRuleName { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the scheduled auto scaling policy. This parameter is required when you set the ScalingRuleType parameter to timing or when you want to create a scheduled auto scaling policy by using an SDK.</para>
-        /// <para>Parameter description:</para>
+        /// <para>The configuration of the scheduled scaling policy. This parameter is required for scheduled scaling policies.</para>
+        /// <para>The parameter includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>beginDate</b> and <b>endDate</b>: specify the validity period of the scheduled auto scaling policy. <b>beginDate</b> specifies the start date and <b>endDate</b> specifies the end date. Take note of the following rules:</para>
+        /// <item><description><para><b>beginDate</b> and <b>endDate</b>: The start and end dates for the policy\&quot;s effective period.</para>
         /// <list type="bullet">
-        /// <item><description>If you set the two parameters to <b>null</b>, the scheduled auto scaling policy is a long-term policy. Default values of the beginDate and endDate parameters: null.</description></item>
-        /// <item><description>If you set the two parameters to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if you set <b>beginDate</b> to <b>2021-03-25</b> and <b>endDate</b> to <b>2021-04-25</b>, the auto scaling policy is valid for one month.</description></item>
-        /// </list>
+        /// <item><description><para>If both parameters are set to <b>null</b>, the policy is always active. This is the default.</para>
         /// </description></item>
-        /// <item><description><para><b>period</b>: specifies the frequency at which the scheduled auto scaling policy is executed. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><em><em>\</em> \</em> \***: The scheduled auto scaling policy is executed at a specified point in time every day.</para>
-        /// </description></item>
-        /// <item><description><para><em><em>\</em> \</em> Fri,Mon**: The scheduled auto scaling policy is executed at a specified point in time on one or more specified days of each week. GMT+8 is used. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Sun</b></description></item>
-        /// <item><description><b>Mon</b></description></item>
-        /// <item><description><b>Tue</b></description></item>
-        /// <item><description><b>Wed</b></description></item>
-        /// <item><description><b>Thu</b></description></item>
-        /// <item><description><b>Fri</b></description></item>
-        /// <item><description><b>Sat</b></description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para><em><em>1,2,3,28,31 \</em> \</em>**: The scheduled auto scaling policy is executed at a specified point in time on one or more days of each month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy is executed on the specified days other than the 31st day.</para>
+        /// <item><description><para>If you set <b>beginDate</b> to <b>2021-03-25</b> and <b>endDate</b> to <b>2021-04-25</b>, the policy is effective for one month.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>schedules</b>: specifies the points in time at which the auto scaling policy is triggered and the number of application instances that are retained during the corresponding period of time. You can specify up to 20 points in time. Parameter description:</para>
+        /// <item><description><para><b>period</b>: The execution schedule for the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>atTime</b>: the point in time at which the policy is triggered. Format: <b>Hour:Minute</b>. Example: <b>08:00</b>.</para>
+        /// <item><description><para><em><em>\</em> \</em> \***: Executes the policy at a specified time every day.</para>
         /// </description></item>
-        /// <item><description><para><b>targetReplicas</b>: specifies the number of application instances that you want to maintain by using this policy. You can also set the value to the minimum number of available instances required for each application release. Valid values: 1 to 50.</para>
-        /// <para>**</para>
-        /// <para><b>Note</b>Make sure that at least <b>one</b> instance is available during the application deployment and rollback to prevent your business from being interrupted. If you set the value to <b>0</b>, business interruptions occur when the application is updated.</para>
+        /// <item><description><para><em><em>\</em> \</em> Fri,Mon**: Executes the policy at a specified time on specified days of the week. You can select multiple days. The time is in the UTC+8 time zone. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Sun</b>: Sunday</para>
+        /// </description></item>
+        /// <item><description><para><b>Mon</b>: Monday</para>
+        /// </description></item>
+        /// <item><description><para><b>Tue</b>: Tuesday</para>
+        /// </description></item>
+        /// <item><description><para><b>Wed</b>: Wednesday</para>
+        /// </description></item>
+        /// <item><description><para><b>Thu</b>: Thursday</para>
+        /// </description></item>
+        /// <item><description><para><b>Fri</b>: Friday</para>
+        /// </description></item>
+        /// <item><description><para><b>Sat</b>: Saturday</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><em><em>1,2,3,28,31 \</em> \</em>**: Executes the policy at a specified time on specified days of a month. The value ranges from 1 to 31. If a specified day does not exist in a given month (for example, the 31st), the policy skips it.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para><b>schedules</b>: The trigger times and the corresponding target number of instances. You can specify up to 20 time points. This field includes the following parameters:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>atTime</b>: The trigger time. The format is <b>HH:mm</b>, for example, <b>08:00</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>targetReplicas</b>: The target number of application instances. The value ranges from 1 to 50.</para>
+        /// <remarks>
+        /// <para>To ensure business continuity, we recommend that you set the minimum number of surviving instances for each rolling deployment to <b>1</b> or higher. If you set this parameter to <b>0</b>, your application is interrupted during an upgrade.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
         /// </description></item>
@@ -178,6 +225,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ScalingRuleTimer { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>timing</para>
+        /// </summary>
         [NameInMap("ScalingRuleType")]
         [Validation(Required=false)]
         public string ScalingRuleType { get; set; }

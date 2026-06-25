@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class BindNlbRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the IP addresses. Valid values:</para>
+        /// <para>The address type of the NLB instance.</para>
         /// <list type="bullet">
-        /// <item><description>Internet: public endpoint.</description></item>
-        /// <item><description>Intranet: private endpoint.</description></item>
+        /// <item><description><para><c>Internet</c>: a public IP address.</para>
+        /// </description></item>
+        /// <item><description><para><c>Intranet</c>: a private IP address.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application to which the NLB instance is bound.</para>
+        /// <para>The ID of the target application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7171a6ca-d1cd-4928-8642-7d5cfe69****</para>
@@ -34,12 +36,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The listener that you want to manage. The value is a string that consists of JSON arrays. Each listener contains the following fields:</para>
+        /// <para>The listeners, specified as a JSON-formatted string. Each listener object contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><b>port</b>: the port number of the NLB listener. This field is required. Data type: integer. Valid values: 0 to 65535.</description></item>
-        /// <item><description><b>TargetPort</b>: the port number of the container listener. This field is required. Data type: integer. Valid values: 0 to 65535.</description></item>
-        /// <item><description><b>Protocol</b>: the listener protocol. This field is required. Data type: string. Valid values: TCP, UDP, and TCPSSL.</description></item>
-        /// <item><description><b>CertIds</b>: the IDs of the server certificates. This field is optional. Data type: string. This field is supported only by TCPSSL listeners.</description></item>
+        /// <item><description><para><b>Port</b>: Integer. Required. The listener port. Valid values: 0 to 65535.</para>
+        /// </description></item>
+        /// <item><description><para><b>TargetPort</b>: Integer. Required. The port on the application instance that receives traffic. Valid values: 0 to 65535.</para>
+        /// </description></item>
+        /// <item><description><para><b>Protocol</b>: String. Required. The listener protocol. Valid values: <c>TCP</c>, <c>UDP</c>, and <c>TCPSSL</c>.</para>
+        /// </description></item>
+        /// <item><description><para><b>CertIds</b>: String. Optional. The server certificate IDs. This parameter is required only for <c>TCPSSL</c> listeners.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("Listeners")]
@@ -57,10 +63,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string NlbId { get; set; }
 
         /// <summary>
-        /// <para>The mappings between zones and vSwitches. The value is a JSON string. You can specify at most 10 zones. If the region supports two or more zones, specify at least two zones. A ZoneMapping contains the following fields:</para>
+        /// <para>The mappings between zones and vSwitches, specified as a JSON-formatted string. You can add up to 10 zones. If the current region supports two or more zones, you must specify at least two zones. Each <c>ZoneMapping</c> object contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>The ID of the vSwitch in the zone. Each zone can contain only one vSwitch and one subnet. Data type: string.</description></item>
-        /// <item><description>The zone ID of the NLB instance. Data type: string.</description></item>
+        /// <item><description><para><b>VSwitchId</b>: String. The ID of the vSwitch in the specified zone. Each zone can have only one vSwitch and one subnet.</para>
+        /// </description></item>
+        /// <item><description><para>ZoneId, String, the zone ID of the Network Load Balancer instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

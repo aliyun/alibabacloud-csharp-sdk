@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class GetChangeOrderMetricResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. The following limits are imposed on the ID:</para>
+        /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of applications.</para>
+        /// <para>The list of application information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -42,12 +46,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string AppId { get; set; }
 
+            /// <summary>
+            /// <para>The average duration of a change order, in milliseconds.</para>
+            /// </summary>
             [NameInMap("AvgTimeCostMs")]
             [Validation(Required=false)]
             public float? AvgTimeCostMs { get; set; }
 
             /// <summary>
-            /// <para>The number of abnormal change orders.</para>
+            /// <para>The number of failed change orders.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +64,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? Error { get; set; }
 
             /// <summary>
-            /// <para>The percentage of change failures.</para>
+            /// <para>The percentage of failed change orders.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.25</para>
@@ -66,6 +73,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public float? ErrorPercent { get; set; }
 
+            /// <summary>
+            /// <para>The maximum duration, in milliseconds.</para>
+            /// </summary>
             [NameInMap("MaxTimeCostMs")]
             [Validation(Required=false)]
             public float? MaxTimeCostMs { get; set; }
@@ -80,6 +90,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The optimization suggestions.</para>
+            /// </summary>
             [NameInMap("OptimizeSuggestions")]
             [Validation(Required=false)]
             public string OptimizeSuggestions { get; set; }
@@ -94,6 +107,9 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The average task duration, in milliseconds.</para>
+            /// </summary>
             [NameInMap("TaskTimeCostMsAvg")]
             [Validation(Required=false)]
             public string TaskTimeCostMsAvg { get; set; }
@@ -111,10 +127,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The additional information that is returned. The following limits are imposed on the ID:</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description>success: If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>An error code: If the call fails, an error code is returned.</description></item>
+        /// <item><description><para>Returns <b>success</b> if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>Returns an error code if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,17 +146,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3B763F98-0BA2-5C23-B6B8-558568D2C1C2</para>
+        /// <para>3B763F98-0BA2-5C23-B6B8-558568D2****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the microservice list was obtained. The following limits are imposed on the ID:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The namespaces were obtained.</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

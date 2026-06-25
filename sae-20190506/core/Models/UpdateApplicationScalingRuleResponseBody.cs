@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UpdateApplicationScalingRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The HTTP status code or a POP error code.</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The call was successful.</description></item>
-        /// <item><description><b>3xx</b>: The call was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The call failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: The request was redirected.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>The time when the auto scaling policy was created. Unit: milliseconds.</para>
+            /// <para>The time when the scaling policy was created, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1616642248938</para>
@@ -52,12 +56,15 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable idle mode.</para>
+            /// </summary>
             [NameInMap("EnableIdle")]
             [Validation(Required=false)]
             public bool? EnableIdle { get; set; }
 
             /// <summary>
-            /// <para>The time when the auto scaling policy was last disabled.</para>
+            /// <para>The time when the scaling policy was last disabled, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1641882854484</para>
@@ -67,7 +74,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public long? LastDisableTime { get; set; }
 
             /// <summary>
-            /// <para>The details of the metric-based auto scaling policy.</para>
+            /// <para>The configuration for metric-based scaling.</para>
             /// </summary>
             [NameInMap("Metric")]
             [Validation(Required=false)]
@@ -84,20 +91,33 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public int? MaxReplicas { get; set; }
 
                 /// <summary>
-                /// <para>The metrics that are used to trigger the auto scaling policy.</para>
+                /// <para>The metrics that trigger scaling actions.</para>
                 /// </summary>
                 [NameInMap("Metrics")]
                 [Validation(Required=false)]
                 public List<UpdateApplicationScalingRuleResponseBodyDataMetricMetrics> Metrics { get; set; }
                 public class UpdateApplicationScalingRuleResponseBodyDataMetricMetrics : TeaModel {
                     /// <summary>
-                    /// <para>The limit on the metric.</para>
+                    /// <para>The target value for the specified metric. The unit varies based on the metric type.</para>
                     /// <list type="bullet">
-                    /// <item><description>The limit on the CPU utilization. Unit: percentage.</description></item>
-                    /// <item><description>The limit on the memory usage. Unit: percentage.</description></item>
-                    /// <item><description>The limit on the average number of active TCP connections per second.</description></item>
-                    /// <item><description>The limit on the QPS of the Internet-facing SLB instance.</description></item>
-                    /// <item><description>The limit on the response time of the Internet-facing SLB instance. Unit: milliseconds.</description></item>
+                    /// <item><description><para>Target CPU utilization, in percentage.</para>
+                    /// </description></item>
+                    /// <item><description><para>Target memory usage, in percentage.</para>
+                    /// </description></item>
+                    /// <item><description><para>Target queries per second (QPS).</para>
+                    /// </description></item>
+                    /// <item><description><para>Target response time, in milliseconds.</para>
+                    /// </description></item>
+                    /// <item><description><para>The target number of active TCP connections.</para>
+                    /// </description></item>
+                    /// <item><description><para>Target QPS for the public-facing SLB instance.</para>
+                    /// </description></item>
+                    /// <item><description><para>Target response time of the public-facing SLB instance, in milliseconds.</para>
+                    /// </description></item>
+                    /// <item><description><para>Target QPS for the internal SLB instance.</para>
+                    /// </description></item>
+                    /// <item><description><para>Target response time of the internal SLB instance, in milliseconds.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -108,13 +128,26 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? MetricTargetAverageUtilization { get; set; }
 
                     /// <summary>
-                    /// <para>The metric that is used to trigger the auto scaling policy. Valid values:</para>
+                    /// <para>The metric that triggers the scaling policy. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>CPU</b>: the CPU utilization.</description></item>
-                    /// <item><description><b>MEMORY</b>: the memory usage.</description></item>
-                    /// <item><description><b>tcpActiveConn</b>: the average number of active TCP connections of an application instance within 30 seconds.</description></item>
-                    /// <item><description><b>SLB_QPS</b>: the average QPS of the Internet-facing SLB instance associated with an application instance within 15 seconds.</description></item>
-                    /// <item><description><b>SLB_RT</b>: the average response time of the Internet-facing SLB instance within 15 seconds.</description></item>
+                    /// <item><description><para><b>CPU</b>: CPU utilization.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>MEMORY</b>: memory usage.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>QPS</b>: The average queries per second (QPS) per instance over the last minute. This applies only to Java applications.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>RT</b>: The average response time (RT) of all service interfaces in the application over the last minute. This applies only to Java applications.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>tcpActiveConn</b>: The average number of active TCP connections per instance over the last 30 seconds.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>SLB_QPS</b>: The average QPS from the public-facing SLB, per instance, over the last 15 seconds.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>SLB_RT</b>: The average response time of a public-facing SLB instance over the last 15 seconds.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>INTRANET_SLB_QPS</b>: The average QPS from the internal SLB, per instance, over the last 15 seconds.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>INTRANET_SLB_RT</b>: The average response time of an internal SLB instance over the last 15 seconds.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -125,6 +158,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string MetricType { get; set; }
 
                     /// <summary>
+                    /// <para>The SLB instance ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>lb-xxx</para>
                     /// </summary>
@@ -133,6 +168,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string SlbId { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the Logstore for SLB access logs.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -141,6 +178,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string SlbLogstore { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the Log Service Project for SLB access logs.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
                     /// </summary>
@@ -149,6 +188,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string SlbProject { get; set; }
 
                     /// <summary>
+                    /// <para>The SLB port.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>80</para>
                     /// </summary>
@@ -171,10 +212,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable the auto scaling policy. Valid values:</para>
+            /// <para>Specifies whether the scaling policy is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The auto scaling policy is enabled.</description></item>
-            /// <item><description><b>false</b>: The auto scaling policy is disabled.</description></item>
+            /// <item><description><para><b>true</b>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,7 +228,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public bool? ScaleRuleEnabled { get; set; }
 
             /// <summary>
-            /// <para>The name of the auto scaling policy.</para>
+            /// <para>The name of the scaling policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -195,11 +238,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ScaleRuleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the auto scaling policy. Valid values:</para>
+            /// <para>The type of the scaling policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>timing</b>: a scheduled auto scaling policy</description></item>
-            /// <item><description><b>metric</b>: a metric-based auto scaling policy</description></item>
-            /// <item><description><b>mix</b>: a hybrid auto scaling policy</description></item>
+            /// <item><description><para><b>timing</b>: scheduled scaling</para>
+            /// </description></item>
+            /// <item><description><para><b>metric</b>: metric-based scaling</para>
+            /// </description></item>
+            /// <item><description><para><b>mix</b>: hybrid scaling</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -210,17 +256,19 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string ScaleRuleType { get; set; }
 
             /// <summary>
-            /// <para>The details of the scheduled auto scaling policy.</para>
+            /// <para>The configuration for scheduled scaling.</para>
             /// </summary>
             [NameInMap("Timer")]
             [Validation(Required=false)]
             public UpdateApplicationScalingRuleResponseBodyDataTimer Timer { get; set; }
             public class UpdateApplicationScalingRuleResponseBodyDataTimer : TeaModel {
                 /// <summary>
-                /// <para>The start date of the validity period of the scheduled auto scaling policy. Parameter description:</para>
+                /// <para>The start date of the short-term scheduled scaling policy.</para>
                 /// <list type="bullet">
-                /// <item><description>If <b>BeginDate</b> and <b>EndDate</b> are set to <b>null</b>, the auto scaling policy is a long-term policy. Default values of the beginDate and endDate parameters: null.</description></item>
-                /// <item><description>If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if <b>BeginDate</b> is set to 2021-03-25 and <b>EndDate</b> is set to 2021-04-25, the auto scaling policy is valid for one month.</description></item>
+                /// <item><description><para>If <b>BeginDate</b> and <b>EndDate</b> are both set to <b>null</b>, the policy is long-term by default.</para>
+                /// </description></item>
+                /// <item><description><para>If you specify a date range, for example, <b>BeginDate</b> is set to 2021-03-25 and <b>EndDate</b> is set to 2021-04-25, the policy is effective for one month.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -231,10 +279,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string BeginDate { get; set; }
 
                 /// <summary>
-                /// <para>The end date of the validity period of the scheduled auto scaling policy. Take note of the following rules:</para>
+                /// <para>The end date of the short-term scheduled scaling policy.</para>
                 /// <list type="bullet">
-                /// <item><description>If <b>BeginDate</b> and <b>EndDate</b> are set to <b>null</b>, the auto scaling policy is a long-term policy. Default values of the beginDate and endDate parameters: null.</description></item>
-                /// <item><description>If the two parameters are set to specific dates, the scheduled auto scaling policy can be triggered during the period between the two dates. For example, if <b>BeginDate</b> is set to 2021-03-25 and <b>EndDate</b> is set to 2021-04-25, the auto scaling policy is valid for one month.</description></item>
+                /// <item><description><para>If <b>BeginDate</b> and <b>EndDate</b> are both set to <b>null</b>, the policy is long-term by default.</para>
+                /// </description></item>
+                /// <item><description><para>If you specify a date range, for example, <b>BeginDate</b> is set to 2021-03-25 and <b>EndDate</b> is set to 2021-04-25, the policy is effective for one month.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -245,22 +295,29 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The frequency at which the scheduled auto scaling policy is executed. Valid values:</para>
+                /// <para>The recurrence schedule for the scaling policy.</para>
                 /// <list type="bullet">
-                /// <item><description><para><em><em>\</em> \</em> \***: The scheduled auto scaling policy is executed at a specified point in time every day.</para>
+                /// <item><description><para><em><em>\</em> \</em> \***: The policy runs at a specified time every day.</para>
                 /// </description></item>
-                /// <item><description><para><em><em>\</em> \</em> Fri,Mon**: The scheduled auto scaling policy is executed at a specified point in time on one or more days of each week. GMT+8 is used. Valid values:</para>
+                /// <item><description><para><em><em>\</em> \</em> Fri,Mon**: The policy runs at a specified time on specific days of a week. You can select multiple days. The time is in the GMT+8 time zone. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Sun</b></description></item>
-                /// <item><description><b>Mon</b></description></item>
-                /// <item><description><b>Tue</b></description></item>
-                /// <item><description><b>Wed</b></description></item>
-                /// <item><description><b>Thu</b></description></item>
-                /// <item><description><b>Fri</b></description></item>
-                /// <item><description><b>Sat</b></description></item>
+                /// <item><description><para><b>Sun</b>: Sunday</para>
+                /// </description></item>
+                /// <item><description><para><b>Mon</b>: Monday</para>
+                /// </description></item>
+                /// <item><description><para><b>Tue</b>: Tuesday</para>
+                /// </description></item>
+                /// <item><description><para><b>Wed</b>: Wednesday</para>
+                /// </description></item>
+                /// <item><description><para><b>Thu</b>: Thursday</para>
+                /// </description></item>
+                /// <item><description><para><b>Fri</b>: Friday</para>
+                /// </description></item>
+                /// <item><description><para><b>Sat</b>: Saturday</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para><em><em>1,2,3,28,31 \</em> \</em>**: The scheduled auto scaling policy is executed at a specified point in time on one or more days of each month. Valid values: 1 to 31. If the month does not have a 31st day, the auto scaling policy is executed on the specified days other than the 31st day.</para>
+                /// <item><description><para><em><em>1,2,3,28,31 \</em> \</em>**: The policy runs at a specified time on specific days of a month. You can select multiple days. If a month does not have a specific day, such as the 31st, the policy skips that day.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -272,14 +329,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                 public string Period { get; set; }
 
                 /// <summary>
-                /// <para>The points in time at which the auto scaling policy is triggered within one day.</para>
+                /// <para>The schedules for the scaling policy.</para>
                 /// </summary>
                 [NameInMap("Schedules")]
                 [Validation(Required=false)]
                 public List<UpdateApplicationScalingRuleResponseBodyDataTimerSchedules> Schedules { get; set; }
                 public class UpdateApplicationScalingRuleResponseBodyDataTimerSchedules : TeaModel {
                     /// <summary>
-                    /// <para>The point in time. Format: <b>Hour:Minute</b>.</para>
+                    /// <para>The time at which the scaling action is triggered. Format: <b>HH:mm</b>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>08:00</para>
@@ -289,6 +346,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public string AtTime { get; set; }
 
                     /// <summary>
+                    /// <para>The maximum number of instances.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
                     /// </summary>
@@ -297,6 +356,8 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? MaxReplicas { get; set; }
 
                     /// <summary>
+                    /// <para>The minimum number of instances.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -305,7 +366,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
                     public int? MinReplicas { get; set; }
 
                     /// <summary>
-                    /// <para>The expected number of instances.</para>
+                    /// <para>The target number of instances.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -319,7 +380,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             }
 
             /// <summary>
-            /// <para>The time when the auto scaling policy was updated. Unit: milliseconds.</para>
+            /// <para>The time when the scaling policy was updated, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1616642248938</para>
@@ -331,24 +392,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code returned. Take note of the following rules:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, <b>ErrorCode</b> is not returned.</description></item>
-        /// <item><description>If the call fails, <b>ErrorCode</b> is returned. For more information, see the &quot;<b>Error codes</b>&quot; section in this topic.</description></item>
+        /// <item><description><para>This parameter is returned only if the request fails.</para>
+        /// </description></item>
+        /// <item><description><para>For more information, see the <b>Error codes</b> section in this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Null</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message. Take note of the following rules:</para>
+        /// <para>The response message.</para>
         /// <list type="bullet">
-        /// <item><description>If the call is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the call fails, an error code is returned.</description></item>
+        /// <item><description><para><b>success</b> is returned if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>An error message is returned if the request fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -369,10 +431,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instances are successfully restarted. Valid values:</para>
+        /// <para>Specifies whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -383,7 +447,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID that is used to query the details of the request.</para>
+        /// <para>The trace ID used to query call details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a98a02315955564772843261e****</para>

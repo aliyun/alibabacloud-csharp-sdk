@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class ResumeTrafficResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code. Valid values:</para>
+        /// <para>The API status code or POP error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2xx</b>: The request was successful.</description></item>
-        /// <item><description><b>3xx</b>: The request was redirected.</description></item>
-        /// <item><description><b>4xx</b>: The request failed.</description></item>
-        /// <item><description><b>5xx</b>: A server error occurred.</description></item>
+        /// <item><description><para><b>2xx</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>3xx</b>: Redirection.</para>
+        /// </description></item>
+        /// <item><description><para><b>4xx</b>: A client-side error occurred.</para>
+        /// </description></item>
+        /// <item><description><para><b>5xx</b>: A server-side error occurred.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public ResumeTrafficResponseBodyData Data { get; set; }
         public class ResumeTrafficResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The description of the returned code.</para>
+            /// <para>Details about the operation\&quot;s result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>succeed in handling request</para>
@@ -43,14 +47,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the traffic was removed. Valid values:</para>
+            /// <para>Indicates whether the traffic was resumed.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The traffic was removed.</description></item>
-            /// <item><description><b>false</b>: The traffic failed to be removed.</description></item>
+            /// <item><description><para><b>True</b>: The traffic was resumed.</para>
+            /// </description></item>
+            /// <item><description><para><b>False</b>: The traffic was not resumed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>True</para>
             /// </summary>
             [NameInMap("success")]
             [Validation(Required=false)]
@@ -59,17 +65,25 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the request failed.</para>
+        /// <para>The error code.</para>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is empty if the request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, this parameter contains an error code. For more information, see the &quot;<b>Error codes</b>&quot; section of this topic.</para>
+        /// </description></item>
+        /// </list>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned for the operation. Valid values:</para>
+        /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>If the request is successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request fails, a specific error code is returned.</description></item>
+        /// <item><description><para>If the request is successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,11 +104,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>True</b>: The traffic was resumed.</description></item>
-        /// <item><description><b>False</b>: The traffic failed to be resumed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the traffic was resumed. <b>True</b> indicates that the traffic was resumed, and <b>False</b> indicates that the traffic was not resumed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -104,7 +114,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The trace ID.</para>
+        /// <para>The trace ID of the request. You can use this ID to troubleshoot the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac1a0b2215622920113732501e****</para>

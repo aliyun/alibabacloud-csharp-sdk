@@ -59,11 +59,16 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
             /// <summary>
             /// <para>The application status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>EXPIRED</description></item>
-            /// <item><description>REBOOTING</description></item>
-            /// <item><description>WAITING</description></item>
-            /// <item><description>FAIL</description></item>
-            /// <item><description>NULL/SUCCESS</description></item>
+            /// <item><description><para>EXPIRED</para>
+            /// </description></item>
+            /// <item><description><para>REBOOTING</para>
+            /// </description></item>
+            /// <item><description><para>WAITING</para>
+            /// </description></item>
+            /// <item><description><para>FAIL</para>
+            /// </description></item>
+            /// <item><description><para>NULL/SUCCESS</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,12 +83,11 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The error code. Value description:</para>
         /// <list type="bullet">
-        /// <item><description>If the request succeeds, this field is not returned.</description></item>
-        /// <item><description>For more information, see the <b>Error codes</b> section of this topic.</description></item>
+        /// <item><description><para>If the request succeeds, this field is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>For more information, see the <b>Error codes</b> section of this topic.</para>
+        /// </description></item>
         /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>System.Upgrading</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -92,8 +96,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>The additional information. Value description:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <b>success</b> is returned.</description></item>
-        /// <item><description>If the request failed, an error code is returned.</description></item>
+        /// <item><description><para>If the request was successful, <b>success</b> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request failed, an error code is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,8 +122,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <summary>
         /// <para>Indicates whether the application instance groups were obtained successfully. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

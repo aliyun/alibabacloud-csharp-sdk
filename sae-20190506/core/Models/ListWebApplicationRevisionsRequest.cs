@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A2RN</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

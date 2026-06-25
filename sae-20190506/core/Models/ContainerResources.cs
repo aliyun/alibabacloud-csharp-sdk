@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1000</para>
         /// </summary>
         [NameInMap("Cpu")]
         [Validation(Required=false)]

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all the specified tags. This parameter takes effect only if the TagKeys parameter is specified. Valid values:</para>
+        /// <para>Specifies whether to remove all tags. This parameter applies only when TagKeys is not specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: All tags are removed.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Only the tags specified in the TagKeys parameter are removed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of resources. Separate multiple resource IDs with comma (,).</para>
+        /// <para>The resource IDs. To specify multiple resource IDs, separate them with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <c>application</c>.</para>
+        /// <para>The resource type. Only <c>application</c> is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. Separate multiple tag keys with commas (,).</para>
+        /// <para>The tag keys. To specify multiple tag keys, separate them with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;k1&quot;,&quot;k2&quot;]</para>
