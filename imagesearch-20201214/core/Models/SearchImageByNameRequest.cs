@@ -10,10 +10,15 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class SearchImageByNameRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the product. For more information, see <a href="https://help.aliyun.com/document_detail/179184.html">Category references</a>.</para>
+        /// <para>The product category. For more information, see <a href="https://help.aliyun.com/document_detail/179184.html">Category reference</a>.</para>
         /// <list type="bullet">
-        /// <item><description>For product search: If a category is specified, the specified category prevails. If no category is specified, the system estimates and selects a category. The category selected by the system is included in the response.</description></item>
-        /// <item><description>For generic search: The parameter value is set to 88888888 regardless of whether a category is specified.</description></item>
+        /// <item><description>For product image search, if you specify a category, the specified category is used. If you do not specify a category, the system predicts the category. You can obtain the predicted category from the response.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
+        /// <item><description>For fabric, trademark, generic, home furnishing, and industrial hardware searches, the system sets the category to 88888888 regardless of whether you specify a category.</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>For generic image search, the system sets the category to 88888888 regardless of whether you specify a category..</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -23,18 +28,30 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public int? CategoryId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to deduplicate results based on ProductId.</para>
+        /// <remarks>
+        /// <para>Set this parameter to true to enable deduplication.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("DistinctProductId")]
         [Validation(Required=false)]
         public bool? DistinctProductId { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions. int_attr supports the following operators: &gt;, &gt;=, &lt;, &lt;=, and =. str_attr supports the following operators: = and !=. You can set the logical operator between conditions to AND or OR.</para>
-        /// <para>Examples:</para>
+        /// <para>The filter condition. The int_attr field supports the following operators: in, not in, greater than (&gt;), greater than or equal to (&gt;=), less than (&lt;), less than or equal to (&lt;=), and equal to (=). The str_attr field supports the following operators: in, not in, equal to (=), and not equal to (!=). Multiple conditions can be connected by using AND and OR.
+        /// Examples:</para>
         /// <list type="bullet">
-        /// <item><description>int_attr&gt;=100</description></item>
-        /// <item><description>str_attr!=&quot;value1&quot;</description></item>
-        /// <item><description>int_attr=1000 AND str_attr=&quot;value1&quot;</description></item>
+        /// <item><description>int_attr&gt;=100.</description></item>
+        /// <item><description>str_attr!=&quot;value1&quot;.</description></item>
+        /// <item><description>int_attr=1000 AND str_attr=&quot;value1&quot;.</description></item>
         /// </list>
+        /// <remarks>
+        /// <para>The maximum length is 4,096 characters.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>int_attr&gt;=100</para>
@@ -44,7 +61,12 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The name of the Image Search instance. The name can be up to 20 characters in length.</para>
+        /// <para>The name of the Image Search instance. The name can be up to 20 characters in length.
+        /// If you have purchased an Image Search instance, log on to the <a href="https://imagesearch.console.aliyun.com/">Image Search console</a> to view the instance name.
+        /// If you have not purchased an Image Search instance, refer to <a href="https://help.aliyun.com/document_detail/179178.html">Activate the service</a> and <a href="https://help.aliyun.com/document_detail/66569.html">Create an instance</a>.</para>
+        /// <remarks>
+        /// <para>The instance name is not the instance ID. Make sure you distinguish between them.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +77,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The number of images to return on each page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of results to return. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +87,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public int? Num { get; set; }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The image name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +98,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string PicName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the product.</para>
+        /// <para>The product ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,12 +108,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         [Validation(Required=false)]
         public string ProductId { get; set; }
 
+        /// <summary>
+        /// <para>The similarity score threshold. If you specify this parameter, only images with a similarity score greater than or equal to the threshold are returned. Valid values: 0.00 to 1.00. Up to two decimal places are supported. Default value: 0.00.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0.50</para>
+        /// </summary>
         [NameInMap("ScoreThreshold")]
         [Validation(Required=false)]
         public string ScoreThreshold { get; set; }
 
         /// <summary>
-        /// <para>The number of the image to return. Valid values: 0 to 499. Default value: 0.</para>
+        /// <para>The start position of the results to return. Valid values: 0 to 499. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

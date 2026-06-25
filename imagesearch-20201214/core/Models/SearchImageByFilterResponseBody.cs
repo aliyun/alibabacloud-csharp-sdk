@@ -8,26 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
-    public class CheckImageExistsResponseBody : TeaModel {
+    public class SearchImageByFilterResponseBody : TeaModel {
         /// <summary>
-        /// <para>Description information of all returned products.</para>
+        /// <para>The product description information returned.</para>
         /// </summary>
         [NameInMap("Auctions")]
         [Validation(Required=false)]
-        public CheckImageExistsResponseBodyAuctions Auctions { get; set; }
-        public class CheckImageExistsResponseBodyAuctions : TeaModel {
+        public List<SearchImageByFilterResponseBodyAuctions> Auctions { get; set; }
+        public class SearchImageByFilterResponseBodyAuctions : TeaModel {
             /// <summary>
-            /// <para>Image category.</para>
+            /// <para>The image category.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>88888888</para>
+            /// <para>8888888</para>
             /// </summary>
             [NameInMap("CategoryId")]
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
 
             /// <summary>
-            /// <para>User-defined content.</para>
+            /// <para>The user-defined content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zidingyi</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string CustomContent { get; set; }
 
             /// <summary>
-            /// <para>Integer-type property.</para>
+            /// <para>The integer type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? IntAttr { get; set; }
 
             /// <summary>
-            /// <para>Integer-type property.</para>
+            /// <para>The integer type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? IntAttr2 { get; set; }
 
             /// <summary>
-            /// <para>Integer-type property.</para>
+            /// <para>The integer type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? IntAttr3 { get; set; }
 
             /// <summary>
-            /// <para>Integer-type property.</para>
+            /// <para>The integer type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? IntAttr4 { get; set; }
 
             /// <summary>
-            /// <para>Image name.</para>
+            /// <para>The image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2092061_1.jpg</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string PicName { get; set; }
 
             /// <summary>
-            /// <para>Product ID.</para>
+            /// <para>The product ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2092061_1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string ProductId { get; set; }
 
             /// <summary>
-            /// <para>String-type property.</para>
+            /// <para>The string type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string StrAttr { get; set; }
 
             /// <summary>
-            /// <para>String-type property.</para>
+            /// <para>The string type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string StrAttr2 { get; set; }
 
             /// <summary>
-            /// <para>String-type property.</para>
+            /// <para>The string type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string StrAttr3 { get; set; }
 
             /// <summary>
-            /// <para>String-type property.</para>
+            /// <para>The string type attribute.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         }
 
         /// <summary>
-        /// <para>Error code.  </para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>0: Succeeded.  </description></item>
-        /// <item><description>Non-zero: Failed.</description></item>
+        /// <item><description>0: success.</description></item>
+        /// <item><description>Non-zero: failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,17 +153,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the image exists.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
-        [NameInMap("Exists")]
-        [Validation(Required=false)]
-        public bool? Exists { get; set; }
-
-        /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -173,7 +163,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B3137727-7D6E-488C-BA21-0E034C38A879</para>
@@ -183,7 +173,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

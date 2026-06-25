@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class IncreaseListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the batch task.</para>
+        /// <para>The batch task information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             }
 
             /// <summary>
-            /// <para>The number of the page to return.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries to return on each page.</para>
+            /// <para>The number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B3137727-7D6E-488C-BA21-0E034C38A879</para>

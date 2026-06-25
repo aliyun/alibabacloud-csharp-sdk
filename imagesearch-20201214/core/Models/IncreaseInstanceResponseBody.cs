@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class IncreaseInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the task.</para>
+        /// <para>The returned result of the task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public IncreaseInstanceResponseBodyData Data { get; set; }
         public class IncreaseInstanceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The status of the batch task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PROCESSING: in progress</description></item>
-            /// <item><description>FAIL: failed</description></item>
-            /// <item><description>SUCCESS: successful</description></item>
+            /// <item><description>PROCESSING: The task is being processed.</description></item>
+            /// <item><description>FAIL: The task failed.</description></item>
+            /// <item><description>SUCCESS: The task is complete.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

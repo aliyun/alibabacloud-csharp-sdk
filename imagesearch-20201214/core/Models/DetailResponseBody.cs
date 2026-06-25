@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class DetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the instance.</para>
+        /// <para>The instance information.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public DetailResponseBodyInstance Instance { get; set; }
         public class DetailResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The capacity of the plan. Unit: × 10,000 images.</para>
+            /// <para>The maximum image capacity of the plan. Unit: 10,000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>imagesearchName</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of queries per second supported by the plan.</para>
+            /// <para>The QPS of the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public int? Qps { get; set; }
 
             /// <summary>
-            /// <para>The information about the region.</para>
+            /// <para>The region information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -58,7 +58,8 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 
             /// <summary>
             /// <para>The Image Search model.</para>
-            /// <para>0: commodity search. 1: generic image search.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;Valid values: 0: product image search. 1: generic image search.
+            /// &lt;props=&quot;china&quot;&gt;Valid values: 0: product image search. 1: generic image search. 2: fabric search. 3 and 7: trademark search. 4: copyright search. 5: furniture search. 6: hardware search..</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -78,7 +79,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public long? TotalCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. Unit: milliseconds.</para>
+            /// <para>The creation time of the instance. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620382716000</para>
@@ -100,7 +101,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</para>
@@ -110,7 +111,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

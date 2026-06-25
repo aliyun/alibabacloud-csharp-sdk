@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class DumpMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the export task.</para>
+        /// <para>The returned result of the task execution.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DumpMetaResponseBodyData Data { get; set; }
         public class DumpMetaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The status of the export task.</para>
+            /// <para>The status of the metadata export task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PROCESSING: in progress</description></item>
-            /// <item><description>FAIL: failed</description></item>
-            /// <item><description>SUCCESS: successful</description></item>
+            /// <item><description>PROCESSING: The task is being processed.</description></item>
+            /// <item><description>FAIL: The task failed.</description></item>
+            /// <item><description>SUCCESS: The task is completed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             public string DumpMetaStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the export task.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36C43E96-8F68-44AA-B1AF-B1F7AB94A6C1</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class AddImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code returned.</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>A value of 0 indicates that the request was successful.</description></item>
-        /// <item><description>Values other than 0 indicate that the request failed.</description></item>
+        /// <item><description>0: success.</description></item>
+        /// <item><description>Non-zero: failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message.</para>
         /// <remarks>
-        /// <para>No value is returned if the request was successful, and an error message is returned if the request failed.</para>
+        /// <para>No data is returned for successful requests. Error messages are returned for failed requests.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,20 +37,35 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The results of category prediction and subject identification.</para>
+        /// <para>The category prediction and subject identification results.</para>
         /// </summary>
         [NameInMap("PicInfo")]
         [Validation(Required=false)]
         public AddImageResponseBodyPicInfo PicInfo { get; set; }
         public class AddImageResponseBodyPicInfo : TeaModel {
+            /// <summary>
+            /// <para>The information about all categories supported by the system.</para>
+            /// </summary>
             [NameInMap("AllCategories")]
             [Validation(Required=false)]
             public List<AddImageResponseBodyPicInfoAllCategories> AllCategories { get; set; }
             public class AddImageResponseBodyPicInfoAllCategories : TeaModel {
+                /// <summary>
+                /// <para>The category ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>88888888</para>
+                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
+                /// <summary>
+                /// <para>The category name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Other</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -58,7 +73,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             }
 
             /// <summary>
-            /// <para>The result of category prediction. If a category is specified in the request, the specified category prevails.</para>
+            /// <para>The category prediction result. If the user specifies a category in the request, the specified category is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>88888888</para>
@@ -67,10 +82,22 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             [Validation(Required=false)]
             public int? CategoryId { get; set; }
 
+            /// <summary>
+            /// <para>The collection of subject identification results.</para>
+            /// <remarks>
+            /// <para>Upgrade to V3.1.1 or later to use this feature.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("MultiRegion")]
             [Validation(Required=false)]
             public List<AddImageResponseBodyPicInfoMultiRegion> MultiRegion { get; set; }
             public class AddImageResponseBodyPicInfoMultiRegion : TeaModel {
+                /// <summary>
+                /// <para>The subject identification result. The subject region of the image, in the format of x1,x2,y1,y2, where x1,y1 is the upper-left point and x2,y2 is the lower-right point. If the user specifies a subject region in the request, the specified region is used.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>94,691,206,650</para>
+                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
@@ -78,7 +105,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
             }
 
             /// <summary>
-            /// <para>The result of subject identification. The subject area of the image is in the format of <c>x1,x2,y1,y2</c>. <c>x1 and y1</c> represent the position in the upper-left corner, in pixels. <c>x2 and y2</c> represent the position in the lower-right corner, in pixels. If a subject area is specified in the request, the specified subject area prevails.</para>
+            /// <para>The subject identification result. The subject region of the image, in the format of <c>x1,x2,y1,y2</c>, where <c>x1,y1</c> is the upper-left point and <c>x2,y2</c> is the lower-right point. If the user specifies a subject region in the request, the specified region is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>94,691,206,650</para>
@@ -100,7 +127,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

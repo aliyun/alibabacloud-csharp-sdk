@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
 {
     public class DeleteImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned.</para>
+        /// <para>The error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>A value of 0 indicates that the operation is successful.</description></item>
-        /// <item><description>Values other than 0 indicate errors.</description></item>
+        /// <item><description>0: success.</description></item>
+        /// <item><description>Non-zero value: failure.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The information about the deleted images.</para>
+        /// <para>The deletion result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteImageResponseBodyData Data { get; set; }
         public class DeleteImageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The name (PicName) of the deleted image.</para>
+            /// <para>The deleted PicName.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5555.jpg</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0703956F-9BCC-48FA-99F7-96C0BF449C69</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -18,7 +18,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"eu-central-1", "imagesearch.eu-central-1.aliyuncs.com"},
+                {"cn-shenzhen", "imagesearch.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "imagesearch.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "imagesearch.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "imagesearch.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "imagesearch.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-2", "imagesearch.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "imagesearch.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "imagesearch.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-1", "imagesearch.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("imagesearch", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -73,7 +86,8 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -176,7 +190,8 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -244,17 +259,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an image to an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the AddImage operation, which adds image information to an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add an image to an Image Search instance.</para>
-        /// <remarks>
-        /// <para>If you want to obtain more information about the service and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consulting</a> or join the DingTalk group (ID 35035130).</para>
-        /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation adds image information to an Image Search instance.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>An instance with a maximum image capacity of 100,000 has a default concurrency of 1, which means that a maximum of 1 image addition request can be processed per second.
+        /// Instances with other image capacities have a default concurrency of 5, which means that a maximum of 5 image addition requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -356,17 +370,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an image to an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the AddImage operation, which adds image information to an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add an image to an Image Search instance.</para>
-        /// <remarks>
-        /// <para>If you want to obtain more information about the service and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consulting</a> or join the DingTalk group (ID 35035130).</para>
-        /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation adds image information to an Image Search instance.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>An instance with a maximum image capacity of 100,000 has a default concurrency of 1, which means that a maximum of 1 image addition request can be processed per second.
+        /// Instances with other image capacities have a default concurrency of 5, which means that a maximum of 5 image addition requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -468,17 +481,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an image to an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the AddImage operation, which adds image information to an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add an image to an Image Search instance.</para>
-        /// <remarks>
-        /// <para>If you want to obtain more information about the service and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consulting</a> or join the DingTalk group (ID 35035130).</para>
-        /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation adds image information to an Image Search instance.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>An instance with a maximum image capacity of 100,000 has a default concurrency of 1, which means that a maximum of 1 image addition request can be processed per second.
+        /// Instances with other image capacities have a default concurrency of 5, which means that a maximum of 5 image addition requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -496,17 +508,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an image to an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the AddImage operation, which adds image information to an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to add an image to an Image Search instance.</para>
-        /// <remarks>
-        /// <para>If you want to obtain more information about the service and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consulting</a> or join the DingTalk group (ID 35035130).</para>
-        /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the concurrency limit for adding an image to instances whose image capacity specifications are 0.1 million images is 1. This means that the system can process up to one request of adding an image every second. By default, the concurrency limit for adding an image to instances of other image capacity specifications is 5. This means that the system can process up to five requests of adding an image every second.</para>
+        /// <h2>Description</h2>
+        /// <para>This operation adds image information to an Image Search instance.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>An instance with a maximum image capacity of 100,000 has a default concurrency of 1, which means that a maximum of 1 image addition request can be processed per second.
+        /// Instances with other image capacities have a default concurrency of 5, which means that a maximum of 5 image addition requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -603,7 +614,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -699,7 +710,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -718,6 +729,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         /// <summary>
         /// <para>CheckImageExists</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>How-To</h2>
+        /// <para>This API is used to query image information in an Image Search instance based on an image.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The default maximum queries per second (QPS) for query operations can be viewed in the console. It corresponds to the Visit Frequency (QPS) you selected when purchasing the instance. Supported QPS values are 1, 5, and 10.</para>
+        /// <h3>SDK Version Guide</h3>
+        /// <para>Upgrade the Image SDK to version V3.1.1 to use the &quot;subject identification&quot; and &quot;similarity score&quot; features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CheckImageExistsRequest
@@ -769,6 +790,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         /// <para>CheckImageExists</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>How-To</h2>
+        /// <para>This API is used to query image information in an Image Search instance based on an image.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The default maximum queries per second (QPS) for query operations can be viewed in the console. It corresponds to the Visit Frequency (QPS) you selected when purchasing the instance. Supported QPS values are 1, 5, and 10.</para>
+        /// <h3>SDK Version Guide</h3>
+        /// <para>Upgrade the Image SDK to version V3.1.1 to use the &quot;subject identification&quot; and &quot;similarity score&quot; features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckImageExistsRequest
         /// </param>
@@ -819,6 +850,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         /// <para>CheckImageExists</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>How-To</h2>
+        /// <para>This API is used to query image information in an Image Search instance based on an image.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The default maximum queries per second (QPS) for query operations can be viewed in the console. It corresponds to the Visit Frequency (QPS) you selected when purchasing the instance. Supported QPS values are 1, 5, and 10.</para>
+        /// <h3>SDK Version Guide</h3>
+        /// <para>Upgrade the Image SDK to version V3.1.1 to use the &quot;subject identification&quot; and &quot;similarity score&quot; features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckImageExistsRequest
         /// </param>
@@ -837,6 +878,16 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
         /// <para>CheckImageExists</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>How-To</h2>
+        /// <para>This API is used to query image information in an Image Search instance based on an image.</para>
+        /// <h2>QPS Limit</h2>
+        /// <para>The default maximum queries per second (QPS) for query operations can be viewed in the console. It corresponds to the Visit Frequency (QPS) you selected when purchasing the instance. Supported QPS values are 1, 5, and 10.</para>
+        /// <h3>SDK Version Guide</h3>
+        /// <para>Upgrade the Image SDK to version V3.1.1 to use the &quot;subject identification&quot; and &quot;similarity score&quot; features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckImageExistsRequest
         /// </param>
@@ -852,7 +903,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对比图片相似值</para>
+        /// <para>Compares two images and returns a similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -902,7 +953,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对比图片相似值</para>
+        /// <para>Compares two images and returns a similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -952,7 +1003,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对比图片相似值</para>
+        /// <para>Compares two images and returns a similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -970,7 +1021,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对比图片相似值</para>
+        /// <para>Compares two images and returns a similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1067,7 +1118,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -1093,7 +1144,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -1189,7 +1240,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -1215,7 +1266,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -1232,17 +1283,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DeleteImage operation and provides examples of this operation. You can call this operation to delete images from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DeleteImage operation, which is used to delete image information from an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes images from an Image Search instance.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to delete image information from an Image Search instance.</para>
         /// <remarks>
-        /// <para> A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.</para>
+        /// <list type="bullet">
+        /// <item><description>If the specified image does not exist in the Image Search instance, this operation still returns a success response. Do not use the response to determine whether the image exists.</description></item>
+        /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for delete operations is 20, which means a maximum of 20 delete requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1300,17 +1354,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DeleteImage operation and provides examples of this operation. You can call this operation to delete images from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DeleteImage operation, which is used to delete image information from an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes images from an Image Search instance.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to delete image information from an Image Search instance.</para>
         /// <remarks>
-        /// <para> A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.</para>
+        /// <list type="bullet">
+        /// <item><description>If the specified image does not exist in the Image Search instance, this operation still returns a success response. Do not use the response to determine whether the image exists.</description></item>
+        /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for delete operations is 20, which means a maximum of 20 delete requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1368,17 +1425,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DeleteImage operation and provides examples of this operation. You can call this operation to delete images from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DeleteImage operation, which is used to delete image information from an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes images from an Image Search instance.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to delete image information from an Image Search instance.</para>
         /// <remarks>
-        /// <para> A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.</para>
+        /// <list type="bullet">
+        /// <item><description>If the specified image does not exist in the Image Search instance, this operation still returns a success response. Do not use the response to determine whether the image exists.</description></item>
+        /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for delete operations is 20, which means a maximum of 20 delete requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1396,17 +1456,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DeleteImage operation and provides examples of this operation. You can call this operation to delete images from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DeleteImage operation, which is used to delete image information from an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation deletes images from an Image Search instance.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to delete image information from an Image Search instance.</para>
         /// <remarks>
-        /// <para> A success response is returned even if the specified image does not exist on the instance. Therefore, you cannot determine whether the image exists on the instance based on the response.</para>
+        /// <list type="bullet">
+        /// <item><description>If the specified image does not exist in the Image Search instance, this operation still returns a success response. Do not use the response to determine whether the image exists.</description></item>
+        /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for delete operations is 20, which means a maximum of 20 delete requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1424,14 +1487,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the Detail operation and provides examples of this operation. You can call this operation to query instance details.</para>
+        /// <para>This topic describes the syntax and examples of the Detail operation, which queries information about an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries instance details.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries instance information from an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1473,14 +1540,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the Detail operation and provides examples of this operation. You can call this operation to query instance details.</para>
+        /// <para>This topic describes the syntax and examples of the Detail operation, which queries information about an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries instance details.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries instance information from an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1522,14 +1593,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the Detail operation and provides examples of this operation. You can call this operation to query instance details.</para>
+        /// <para>This topic describes the syntax and examples of the Detail operation, which queries information about an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries instance details.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries instance information from an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1547,14 +1622,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the Detail operation and provides examples of this operation. You can call this operation to query instance details.</para>
+        /// <para>This topic describes the syntax and examples of the Detail operation, which queries information about an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries instance details.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process only 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries instance information from an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1572,14 +1651,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMeta operation and provides examples of this operation. You can call this operation to create a task for exporting metadata from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DumpMeta operation, which creates a metadata export task for Image Search by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a task for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation submits a metadata export task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for submit operations is 1, which means a maximum of 1 request is processed per second.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new metadata export task while the previous metadata export task is still in progress.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1621,14 +1707,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMeta operation and provides examples of this operation. You can call this operation to create a task for exporting metadata from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DumpMeta operation, which creates a metadata export task for Image Search by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a task for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation submits a metadata export task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for submit operations is 1, which means a maximum of 1 request is processed per second.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new metadata export task while the previous metadata export task is still in progress.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1670,14 +1763,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMeta operation and provides examples of this operation. You can call this operation to create a task for exporting metadata from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DumpMeta operation, which creates a metadata export task for Image Search by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a task for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation submits a metadata export task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for submit operations is 1, which means a maximum of 1 request is processed per second.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new metadata export task while the previous metadata export task is still in progress.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1695,14 +1795,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMeta operation and provides examples of this operation. You can call this operation to create a task for exporting metadata from an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the DumpMeta operation, which creates a metadata export task for Image Search by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a task for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation submits a metadata export task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for submit operations is 1, which means a maximum of 1 request is processed per second.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new metadata export task while the previous metadata export task is still in progress.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1720,14 +1827,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMetaList operation and provides examples of this operation. You can call this operation to query tasks that are used for exporting metadata from an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the DumpMetaList operation, which queries the list of metadata export tasks in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries tasks that are used for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries metadata export tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1781,14 +1892,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMetaList operation and provides examples of this operation. You can call this operation to query tasks that are used for exporting metadata from an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the DumpMetaList operation, which queries the list of metadata export tasks in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries tasks that are used for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries metadata export tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1842,14 +1957,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMetaList operation and provides examples of this operation. You can call this operation to query tasks that are used for exporting metadata from an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the DumpMetaList operation, which queries the list of metadata export tasks in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries tasks that are used for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries metadata export tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1867,14 +1986,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the DumpMetaList operation and provides examples of this operation. You can call this operation to query tasks that are used for exporting metadata from an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the DumpMetaList operation, which queries the list of metadata export tasks in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries tasks that are used for exporting metadata from an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation queries metadata export tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1892,14 +2015,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseInstance operation and provides examples of this operation. You can call this operation to create a batch task on an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the IncreaseInstance operation, which is used to create a batch task for an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a batch task on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to submit a batch task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about the product or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us by using DingTalk group 35035130.</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>Only one batch task can run at a time.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new batch task until the previous batch task is complete.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1953,14 +2083,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseInstance operation and provides examples of this operation. You can call this operation to create a batch task on an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the IncreaseInstance operation, which is used to create a batch task for an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a batch task on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to submit a batch task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about the product or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us by using DingTalk group 35035130.</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>Only one batch task can run at a time.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new batch task until the previous batch task is complete.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2014,14 +2151,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseInstance operation and provides examples of this operation. You can call this operation to create a batch task on an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the IncreaseInstance operation, which is used to create a batch task for an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a batch task on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to submit a batch task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about the product or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us by using DingTalk group 35035130.</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>Only one batch task can run at a time.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new batch task until the previous batch task is complete.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2039,14 +2183,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseInstance operation and provides examples of this operation. You can call this operation to create a batch task on an Image Search instance.</para>
+        /// <para>Describes the syntax and provides examples of the IncreaseInstance operation, which is used to create a batch task for an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation creates a batch task on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to submit a batch task to an Image Search instance.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about the product or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us by using DingTalk group 35035130.</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>Only one batch task can run at a time.</para>
+        /// <remarks>
+        /// <para>You cannot submit a new batch task until the previous batch task is complete.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -2064,14 +2215,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseList operation and provides examples of this operation. You can call this operation to query batch tasks on an Image Search instance.</para>
+        /// <para>Queries the list of batch tasks in an Image Search instance by calling the IncreaseList operation. This topic describes the syntax and provides examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries batch tasks on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query batch tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2133,14 +2288,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseList operation and provides examples of this operation. You can call this operation to query batch tasks on an Image Search instance.</para>
+        /// <para>Queries the list of batch tasks in an Image Search instance by calling the IncreaseList operation. This topic describes the syntax and provides examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries batch tasks on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query batch tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2202,14 +2361,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseList operation and provides examples of this operation. You can call this operation to query batch tasks on an Image Search instance.</para>
+        /// <para>Queries the list of batch tasks in an Image Search instance by calling the IncreaseList operation. This topic describes the syntax and provides examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries batch tasks on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query batch tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2227,14 +2390,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the IncreaseList operation and provides examples of this operation. You can call this operation to query batch tasks on an Image Search instance.</para>
+        /// <para>Queries the list of batch tasks in an Image Search instance by calling the IncreaseList operation. This topic describes the syntax and provides examples.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries batch tasks on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 1. In this case, the system can process at most 1 request every second.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query batch tasks in an Image Search instance.</para>
+        /// <remarks>
+        /// <para>For more product details or technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for query operations is 1, which means a maximum of 1 request is processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2252,14 +2419,162 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByName operation and provides examples of this operation. You can call this operation to search for images by image name on an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of SearchImageByFilter, which is used to query image information in an Image Search instance based on filter conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchImageByFilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageByFilterResponse
+        /// </returns>
+        public SearchImageByFilterResponse SearchImageByFilterWithOptions(SearchImageByFilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                body["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Num))
+            {
+                body["Num"] = request.Num;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                body["Start"] = request.Start;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchImageByFilter",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchImageByFilterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This topic describes the syntax and examples of SearchImageByFilter, which is used to query image information in an Image Search instance based on filter conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchImageByFilterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageByFilterResponse
+        /// </returns>
+        public async Task<SearchImageByFilterResponse> SearchImageByFilterWithOptionsAsync(SearchImageByFilterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                body["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                body["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Num))
+            {
+                body["Num"] = request.Num;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
+            {
+                body["Start"] = request.Start;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchImageByFilter",
+                Version = "2020-12-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchImageByFilterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This topic describes the syntax and examples of SearchImageByFilter, which is used to query image information in an Image Search instance based on filter conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchImageByFilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageByFilterResponse
+        /// </returns>
+        public SearchImageByFilterResponse SearchImageByFilter(SearchImageByFilterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchImageByFilterWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This topic describes the syntax and examples of SearchImageByFilter, which is used to query image information in an Image Search instance based on filter conditions.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchImageByFilterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchImageByFilterResponse
+        /// </returns>
+        public async Task<SearchImageByFilterResponse> SearchImageByFilterAsync(SearchImageByFilterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchImageByFilterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This topic describes the syntax and examples of the SearchByName operation, which is used to query image information in an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation queries image information in an Image Search instance by name (ProductId and PicName).</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The default maximum query rate can be viewed in the console. It is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2335,14 +2650,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByName operation and provides examples of this operation. You can call this operation to search for images by image name on an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the SearchByName operation, which is used to query image information in an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation queries image information in an Image Search instance by name (ProductId and PicName).</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The default maximum query rate can be viewed in the console. It is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2418,14 +2737,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByName operation and provides examples of this operation. You can call this operation to search for images by image name on an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the SearchByName operation, which is used to query image information in an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation queries image information in an Image Search instance by name (ProductId and PicName).</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The default maximum query rate can be viewed in the console. It is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2443,14 +2766,18 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByName operation and provides examples of this operation. You can call this operation to search for images by image name on an Image Search instance.</para>
+        /// <para>This topic describes the syntax and examples of the SearchByName operation, which is used to query image information in an Image Search instance by name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.</para>
+        /// <h3>Operation description</h3>
+        /// <para>This operation queries image information in an Image Search instance by name (ProductId and PicName).</para>
+        /// <remarks>
+        /// <para>For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h3>QPS limit</h3>
+        /// <para>The default maximum query rate can be viewed in the console. It is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2468,16 +2795,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByPic operation and provides examples of this operation. You can call this operation to search for images by image on an Image Search Instance.</para>
+        /// <para>This topic describes the syntax and examples of SearchByPic, which is used to search for image information in an Image Search instance by image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  </para>
-        /// <h2>SDK release notes</h2>
-        /// <para>The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see <a href="/help/en/image-search/latest/version-v3-java-sdk">Image Search SDK for Java</a>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance by image.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value that you selected when you made the purchase. The supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2557,16 +2888,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByPic operation and provides examples of this operation. You can call this operation to search for images by image on an Image Search Instance.</para>
+        /// <para>This topic describes the syntax and examples of SearchByPic, which is used to search for image information in an Image Search instance by image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  </para>
-        /// <h2>SDK release notes</h2>
-        /// <para>The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see <a href="/help/en/image-search/latest/version-v3-java-sdk">Image Search SDK for Java</a>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance by image.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value that you selected when you made the purchase. The supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2646,16 +2981,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByPic operation and provides examples of this operation. You can call this operation to search for images by image on an Image Search Instance.</para>
+        /// <para>This topic describes the syntax and examples of SearchByPic, which is used to search for image information in an Image Search instance by image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  </para>
-        /// <h2>SDK release notes</h2>
-        /// <para>The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see <a href="/help/en/image-search/latest/version-v3-java-sdk">Image Search SDK for Java</a>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance by image.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value that you selected when you made the purchase. The supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2673,16 +3012,20 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the SearchByPic operation and provides examples of this operation. You can call this operation to search for images by image on an Image Search Instance.</para>
+        /// <para>This topic describes the syntax and examples of SearchByPic, which is used to search for image information in an Image Search instance by image.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation searches for images by image name on an Image Search instance.</para>
-        /// <h2>QPS limits</h2>
-        /// <para>The maximum number of queries per second is displayed in the Image Search console. The upper limit is specified when you purchase the instance. You can set the upper limit to 5 QPS or 10 QPS.  </para>
-        /// <h2>SDK release notes</h2>
-        /// <para>The Image Search SDK has been upgraded to version 3.1.1, which supports multi-subject recognition and similarity scores. For more information, see <a href="/help/en/image-search/latest/version-v3-java-sdk">Image Search SDK for Java</a>.</para>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance by image.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value that you selected when you made the purchase. The supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2779,7 +3122,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -2875,7 +3218,7 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -2892,8 +3235,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchImageByText</para>
+        /// <para>This topic describes the syntax and examples of SearchImageByText, which is used to search for image information in an Image Search instance based on text.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance based on text. This operation is available only for instances whose service type is product multimodal search.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchImageByTextRequest
@@ -2960,8 +3316,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchImageByText</para>
+        /// <para>This topic describes the syntax and examples of SearchImageByText, which is used to search for image information in an Image Search instance based on text.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance based on text. This operation is available only for instances whose service type is product multimodal search.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchImageByTextRequest
@@ -3028,8 +3397,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchImageByText</para>
+        /// <para>This topic describes the syntax and examples of SearchImageByText, which is used to search for image information in an Image Search instance based on text.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance based on text. This operation is available only for instances whose service type is product multimodal search.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchImageByTextRequest
@@ -3046,8 +3428,21 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SearchImageByText</para>
+        /// <para>This topic describes the syntax and examples of SearchImageByText, which is used to search for image information in an Image Search instance based on text.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to search for image information in an Image Search instance based on text. This operation is available only for instances whose service type is product multimodal search.</para>
+        /// <remarks>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more product details and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</para>
+        /// </remarks>
+        /// <h2>QPS limit</h2>
+        /// <para>You can view the default maximum access frequency for query operations in the console. The frequency is the QPS value you selected at the time of purchase. Currently supported values are 1 QPS, 5 QPS, and 10 QPS.</para>
+        /// <h3>SDK version description</h3>
+        /// <para>Upgrade the Image Search SDK to V3.1.1 to use the multi-subject identification and similarity score features. For more information, see <a href="https://help.aliyun.com/document_detail/179188.html">Java SDK</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SearchImageByTextRequest
@@ -3064,20 +3459,27 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the UpdateImage operation and provides examples of this operation. You can call this operation to update image information on an Image Search instance.</para>
+        /// <para>Updates the image information in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates image information on an Image Search instance.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation updates the image information in an Image Search instance based on the product ID and image name.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Limits are imposed on the instance creation time.</description></item>
-        /// <item><description>This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.</description></item>
+        /// <item><description>The instance must meet the creation date requirements.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <list type="bullet">
+        /// <item><description>Instances created after June 2021 in the Shanghai and Hangzhou regions are supported. Instances in other regions can be used normally.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Instances created after December 2021 in the Singapore region are supported. Instances in other regions are currently unavailable.</description></item>
+        /// <item><description>For more information about the product and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</description></item>
+        /// </list>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for update operations is 20, which means that a maximum of 20 requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3165,20 +3567,27 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the UpdateImage operation and provides examples of this operation. You can call this operation to update image information on an Image Search instance.</para>
+        /// <para>Updates the image information in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates image information on an Image Search instance.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation updates the image information in an Image Search instance based on the product ID and image name.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Limits are imposed on the instance creation time.</description></item>
-        /// <item><description>This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.</description></item>
+        /// <item><description>The instance must meet the creation date requirements.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <list type="bullet">
+        /// <item><description>Instances created after June 2021 in the Shanghai and Hangzhou regions are supported. Instances in other regions can be used normally.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Instances created after December 2021 in the Singapore region are supported. Instances in other regions are currently unavailable.</description></item>
+        /// <item><description>For more information about the product and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</description></item>
+        /// </list>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for update operations is 20, which means that a maximum of 20 requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3266,20 +3675,27 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the UpdateImage operation and provides examples of this operation. You can call this operation to update image information on an Image Search instance.</para>
+        /// <para>Updates the image information in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates image information on an Image Search instance.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation updates the image information in an Image Search instance based on the product ID and image name.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Limits are imposed on the instance creation time.</description></item>
-        /// <item><description>This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.</description></item>
+        /// <item><description>The instance must meet the creation date requirements.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <list type="bullet">
+        /// <item><description>Instances created after June 2021 in the Shanghai and Hangzhou regions are supported. Instances in other regions can be used normally.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Instances created after December 2021 in the Singapore region are supported. Instances in other regions are currently unavailable.</description></item>
+        /// <item><description>For more information about the product and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</description></item>
+        /// </list>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for update operations is 20, which means that a maximum of 20 requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3297,20 +3713,27 @@ namespace AlibabaCloud.SDK.ImageSearch20201214
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes the syntax of the UpdateImage operation and provides examples of this operation. You can call this operation to update image information on an Image Search instance.</para>
+        /// <para>Updates the image information in an Image Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation updates image information on an Image Search instance.</para>
+        /// <h2>Usage notes</h2>
+        /// <para>This operation updates the image information in an Image Search instance based on the product ID and image name.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Limits are imposed on the instance creation time.</description></item>
-        /// <item><description>This operation is supported by instances that are created in the Singapore (Singapore) region after December 2021. This operation is not supported in other regions.</description></item>
+        /// <item><description>The instance must meet the creation date requirements.
+        /// &lt;props=&quot;china&quot;&gt;</description></item>
         /// </list>
         /// </remarks>
-        /// <h2>QPS limits</h2>
-        /// <para>By default, the maximum number of queries supported by this operation is 20. In this case, the system can process at most 20 requests every second.</para>
+        /// <list type="bullet">
+        /// <item><description>Instances created after June 2021 in the Shanghai and Hangzhou regions are supported. Instances in other regions can be used normally.
+        /// &lt;props=&quot;intl&quot;&gt;</description></item>
+        /// <item><description>Instances created after December 2021 in the Singapore region are supported. Instances in other regions are currently unavailable.</description></item>
+        /// <item><description>For more information about the product and technical support, click <a href="https://www.aliyun.com/core/online-consult?from=aZgW6LJHr2">Online Consultation</a> or contact us through the DingTalk group (35035130).</description></item>
+        /// </list>
+        /// <h2>QPS limit</h2>
+        /// <para>The default concurrency for update operations is 20, which means that a maximum of 20 requests can be processed per second.</para>
         /// </description>
         /// 
         /// <param name="request">
