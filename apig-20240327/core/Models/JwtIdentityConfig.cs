@@ -10,6 +10,36 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class JwtIdentityConfig : TeaModel {
         /// <summary>
+        /// <para>The claims-to-headers configurations.</para>
+        /// </summary>
+        [NameInMap("claimsToHeadersConfigs")]
+        [Validation(Required=false)]
+        public List<JwtIdentityConfigClaimsToHeadersConfigs> ClaimsToHeadersConfigs { get; set; }
+        public class JwtIdentityConfigClaimsToHeadersConfigs : TeaModel {
+            /// <summary>
+            /// <para>The claim.</para>
+            /// </summary>
+            [NameInMap("claim")]
+            [Validation(Required=false)]
+            public string Claim { get; set; }
+
+            /// <summary>
+            /// <para>The header.</para>
+            /// </summary>
+            [NameInMap("header")]
+            [Validation(Required=false)]
+            public string Header { get; set; }
+
+            /// <summary>
+            /// <para>The override.</para>
+            /// </summary>
+            [NameInMap("override")]
+            [Validation(Required=false)]
+            public bool? Override { get; set; }
+
+        }
+
+        /// <summary>
         /// <para>The JWKS configuration.</para>
         /// 
         /// <b>Example:</b>
@@ -27,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public JwtIdentityConfigJwtPayloadConfig JwtPayloadConfig { get; set; }
         public class JwtIdentityConfigJwtPayloadConfig : TeaModel {
             /// <summary>
-            /// <para>The key in the JWT payload.</para>
+            /// <para>The JWT payload key configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>uid</para>
@@ -37,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string PayloadKeyName { get; set; }
 
             /// <summary>
-            /// <para>The value for the JWT payload key.</para>
+            /// <para>The JWT payload value configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2222</para>
@@ -56,7 +86,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public JwtIdentityConfigJwtTokenConfig JwtTokenConfig { get; set; }
         public class JwtIdentityConfigJwtTokenConfig : TeaModel {
             /// <summary>
-            /// <para>The key used for the JWT.</para>
+            /// <para>The JWT key configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Authorization</para>
@@ -66,7 +96,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether acceptance is granted.</para>
+            /// <para>Specifies whether to pass through.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -76,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Pass { get; set; }
 
             /// <summary>
-            /// <para>The location where the JWT is stored.</para>
+            /// <para>The storage location of the JWT.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HEADER</para>
@@ -86,7 +116,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Position { get; set; }
 
             /// <summary>
-            /// <para>The token prefix configuration.</para>
+            /// <para>The prefix configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -98,12 +128,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The type of the secret used.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Asymmetry: asymmetric encryption.</description></item>
-        /// <item><description>Symmetry: symmetric encryption.</description></item>
-        /// </list>
+        /// <para>The remote JWKS.</para>
+        /// </summary>
+        [NameInMap("remoteJwks")]
+        [Validation(Required=false)]
+        public string RemoteJwks { get; set; }
+
+        /// <summary>
+        /// <para>The secret type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Symmetry</para>
@@ -113,7 +145,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SecretType { get; set; }
 
         /// <summary>
-        /// <para>The authentication configuration type.</para>
+        /// <para>The type of authentication configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Jwt</para>

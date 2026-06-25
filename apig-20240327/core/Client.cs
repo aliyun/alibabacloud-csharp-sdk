@@ -6563,7 +6563,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a consumer.</para>
+        /// <para>Retrieves an API consumer.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6599,7 +6599,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a consumer.</para>
+        /// <para>Retrieves an API consumer.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6635,7 +6635,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a consumer.</para>
+        /// <para>Retrieves an API consumer.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6650,7 +6650,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the information of a consumer.</para>
+        /// <para>Retrieves an API consumer.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7997,12 +7997,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the MCP server.</para>
+        /// <para>Get MCP Server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -8038,12 +8038,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the MCP server.</para>
+        /// <para>Get MCP Server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -8079,12 +8079,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the MCP server.</para>
+        /// <para>Get MCP Server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -8099,12 +8099,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the MCP server.</para>
+        /// <para>Get MCP Server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API supports creating multiple services.</para>
+        /// <para>The API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -9647,6 +9647,160 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListConsumerAuthorizationRulesWithOptionsAsync(consumerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumerQuotaRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerQuotaRulesResponse
+        /// </returns>
+        public ListConsumerQuotaRulesResponse ListConsumerQuotaRulesWithOptions(string consumerId, ListConsumerQuotaRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConsumerQuotaRules",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/consumers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerId) + "/quota-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConsumerQuotaRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumerQuotaRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerQuotaRulesResponse
+        /// </returns>
+        public async Task<ListConsumerQuotaRulesResponse> ListConsumerQuotaRulesWithOptionsAsync(string consumerId, ListConsumerQuotaRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConsumerQuotaRules",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/consumers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerId) + "/quota-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConsumerQuotaRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumerQuotaRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerQuotaRulesResponse
+        /// </returns>
+        public ListConsumerQuotaRulesResponse ListConsumerQuotaRules(string consumerId, ListConsumerQuotaRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListConsumerQuotaRulesWithOptions(consumerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListConsumerQuotaRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerQuotaRulesResponse
+        /// </returns>
+        public async Task<ListConsumerQuotaRulesResponse> ListConsumerQuotaRulesAsync(string consumerId, ListConsumerQuotaRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListConsumerQuotaRulesWithOptionsAsync(consumerId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
