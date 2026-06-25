@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The API message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The script variables.</para>
+        /// <para>The list of variables.</para>
         /// </summary>
         [NameInMap("Variables")]
         [Validation(Required=false)]
         public List<ListScriptVariablesResponseBodyVariables> Variables { get; set; }
         public class ListScriptVariablesResponseBodyVariables : TeaModel {
             /// <summary>
-            /// <para>The variable description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>表示客户的真实姓名</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The variable display name.</para>
+            /// <para>The display name of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>姓名</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The variable name.</para>
+            /// <para>The name of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>

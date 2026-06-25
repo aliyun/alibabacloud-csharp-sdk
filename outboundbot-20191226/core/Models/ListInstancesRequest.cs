@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Outbound Calling Bot instance.</para>
+        /// <para>The name of the Outbound Bot instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// <remarks>
-        /// <para>For more information, see ListResourceGroups.</para>
+        /// <para>You can obtain the source API from the Resource Management documentation. For more information, see: <a href="https://api.aliyun.com/document/ResourceManager/2020-03-31/ListResourceGroups">https://api.aliyun.com/document/ResourceManager/2020-03-31/ListResourceGroups</a></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the service instance.</para>
+        /// <para>The list of tags for the service instances.</para>
         /// <remarks>
-        /// <para>You can call the ListResourceTags operation to obtain the tags.</para>
+        /// <para>You can call the ListResourceTags operation to obtain tags.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Tag")]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<ListInstancesRequestTag> Tag { get; set; }
         public class ListInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the instance tag.</para>
+            /// <para>The tag key of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the instance tag.</para>
+            /// <para>The tag value of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>

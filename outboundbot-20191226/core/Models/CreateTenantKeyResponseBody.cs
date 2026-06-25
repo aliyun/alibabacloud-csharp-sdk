@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateTenantKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code of the request.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

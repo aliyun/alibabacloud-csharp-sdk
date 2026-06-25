@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shanghai", "outboundbot.cn-shanghai.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("outboundbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -8291,7 +8295,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// <para>TTS preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8323,6 +8327,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -8381,7 +8389,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// <para>TTS preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8413,6 +8421,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtParams))
+            {
+                query["ExtParams"] = request.ExtParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -8471,7 +8483,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// <para>TTS preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8489,7 +8501,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// <para>TTS preview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11623,7 +11635,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
+        /// <para>Obtains the public key of the asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11657,7 +11669,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
+        /// <para>Obtains the public key of the asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11691,7 +11703,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
+        /// <para>Obtains the public key of the asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11709,7 +11721,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
+        /// <para>Obtains the public key of the asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14247,7 +14259,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// <para>Queries the list of Outbound Bot service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14305,7 +14317,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// <para>Queries the list of Outbound Bot service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14363,7 +14375,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// <para>Queries the list of Outbound Bot service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14381,7 +14393,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// <para>Queries the list of Outbound Bot service instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15911,7 +15923,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the variables used in a script.</para>
+        /// <para>Queries the variables that are currently used in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15961,7 +15973,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the variables used in a script.</para>
+        /// <para>Queries the variables that are currently used in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16011,7 +16023,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the variables used in a script.</para>
+        /// <para>Queries the variables that are currently used in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16029,7 +16041,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the variables used in a script.</para>
+        /// <para>Queries the variables that are currently used in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetPublicKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code of the API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The public key in PEM format.</para>
+        /// <para>The public key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwkftR4j5P9ng+Si/2ydc\\/K03NlhpzI4nW3JoNZIZR83P\nMeyoULt+ivvFI7R++BU413QfX7l5FZnuUrII\nNNBfFX84m1tmsdythDQmS2soG2sBiGKMv6O5mlBvXi+GA0/GqQ2juEv5DAb0GfOk\nw8syQDkpNZflUSTnh10qbnDQxIGeisv1S4/Eo00djX48y5N8qXEcz9CUgwQpKQ0s\nWQIDAQAB\n-----END PUBLIC KEY-----\n</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListScriptVariablesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID, also known as the business ID.</para>
+        /// <para>The instance ID (also referred to as the business ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retrieve variables from the sandbox.</para>
+        /// <para>Specifies whether the environment is a test environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true：测试环境
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Sandbox { get; set; }
 
         /// <summary>
-        /// <para>The script ID.</para>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
