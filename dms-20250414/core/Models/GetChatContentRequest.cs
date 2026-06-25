@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The service returns output starting from this checkpoint.</para>
+        /// <para>The backend will return output starting from this checkpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Checkpoint { get; set; }
 
         /// <summary>
-        /// <para>The DMS unit. For users on the Alibaba Cloud China site, the default value is cn-hangzhou.</para>
+        /// <para>The current DMS unit. Chinese mainland users of Alibaba Cloud should use cn-hangzhou by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

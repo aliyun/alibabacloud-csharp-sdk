@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public SendChatMessageResponseBodyData Data { get; set; }
         public class SendChatMessageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>AgentId</para>
+            /// <para>The agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3jqqdiuxun******</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>Message</para>
+            /// <para>The message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string MessageId { get; set; }
 
             /// <summary>
-            /// <para>SessionId</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6zbqbho********</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Success</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

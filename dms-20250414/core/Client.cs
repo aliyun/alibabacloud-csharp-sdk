@@ -5530,15 +5530,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying the session ID and AgentId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
-        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// <item><description>The response is returned as an SSE stream, where each event follows the <c>SSEEvent</c> schema and contains meta-information such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field in each SSE event may carry actual message text or a JSON object, depending on the value of <c>content_type</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5593,15 +5593,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying the session ID and AgentId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
-        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// <item><description>The response is returned as an SSE stream, where each event follows the <c>SSEEvent</c> schema and contains meta-information such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field in each SSE event may carry actual message text or a JSON object, depending on the value of <c>content_type</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5656,15 +5656,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying the session ID and AgentId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
-        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// <item><description>The response is returned as an SSE stream, where each event follows the <c>SSEEvent</c> schema and contains meta-information such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field in each SSE event may carry actual message text or a JSON object, depending on the value of <c>content_type</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5683,15 +5683,15 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying the session ID and AgentId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
-        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// <item><description>The response is returned as an SSE stream, where each event follows the <c>SSEEvent</c> schema and contains meta-information such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field in each SSE event may carry actual message text or a JSON object, depending on the value of <c>content_type</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12614,7 +12614,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or cancels a session.</para>
+        /// <para>Send a user message to a specified session or cancel the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12622,11 +12622,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12714,6 +12714,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["TaskConfig"] = request.TaskConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12735,7 +12739,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or cancels a session.</para>
+        /// <para>Send a user message to a specified session or cancel the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12743,11 +12747,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12835,6 +12839,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["TaskConfig"] = request.TaskConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12856,7 +12864,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or cancels a session.</para>
+        /// <para>Send a user message to a specified session or cancel the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12864,11 +12872,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12887,7 +12895,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or cancels a session.</para>
+        /// <para>Send a user message to a specified session or cancel the session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12895,11 +12903,11 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
-        /// <item><description><c>message_type</c> defaults to <c>primary</c>. To append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
-        /// <item><description><c>reply_to</c> indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. When you need to append information or cancel a session, set it to <c>additional</c> or <c>cancel</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
-        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of the user\&quot;s previous message.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are all optional, but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 

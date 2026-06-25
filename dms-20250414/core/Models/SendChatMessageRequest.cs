@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class SendChatMessageRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID. This is a required field. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</para>
+        /// <para>The agent ID. This is a required field. You can obtain the current AgentId from the return value of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to pass in each request may change.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The Data Management unit you are currently in. If you choose to analyze a database, this information is used to correctly connect to your Data Management instance. You can check your current Data Management unit in the Data Management console. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to ap-southeast-1.</para>
+        /// <para>The DMS unit you are currently in. If you choose to analyze a database, this information will be used to correctly connect to your DMS instance through DMS. You can go to the DMS console to check your current DMS unit. If you are a China site user of Alibaba Cloud, you can directly enter cn-hangzhou.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The data source information. This parameter can be left empty. This parameter supports only a single data source. Use the DataSources parameter instead.</para>
+        /// <para>The data source information. This parameter can be left empty. Only one data source can be passed in through this parameter. We recommend that you use the DataSources parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -51,11 +51,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>remote_data_center: file</description></item>
-            /// <item><description>database: database.</description></item>
-            /// </list>
+            /// <para>The data source type. Valid values: <c>[remote_data_center, database]</c>, which indicate whether the current analysis is for a file or a database respectively.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remote_data_center</para>
@@ -85,7 +81,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DbName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database in Data Management.</para>
+            /// <para>The ID of the database in DMS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23******</para>
@@ -95,7 +91,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DmsDatabaseId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance in Data Management.</para>
+            /// <para>The ID of the instance in DMS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12******</para>
@@ -171,11 +167,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The data source type. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>remote_data_center: file</description></item>
-            /// <item><description>database: database.</description></item>
-            /// </list>
+            /// <para>The data source type. Valid values: [remote_data_center, database], which indicate whether the current analysis is for a file or a database respectively.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remote_data_center</para>
@@ -205,7 +197,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DbName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database in Data Management.</para>
+            /// <para>The ID of the database in DMS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123****</para>
@@ -215,7 +207,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string DmsDatabaseId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance in Data Management.</para>
+            /// <para>The ID of the instance in DMS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>248*****</para>
@@ -274,7 +266,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The message content to send to the Agent in this request.</para>
+        /// <para>The content of the message to be sent to the Agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -285,15 +277,15 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The message type. Default value: <c>[primary]</c>.  </para>
+        /// <para>The message type. Default value: <c>[primary]</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para>For regular interactions with the Agent, set the message type to <c>[primary]</c>.</para>
+        /// <item><description><para>In normal cases, when interacting with the Agent, the message type is <c>[primary]</c>.</para>
         /// </description></item>
-        /// <item><description><para>When the message is a response to the Agent\&quot;s Human-in-Loop question, set the type to <c>[additional]</c>.</para>
+        /// <item><description><para>When the message is a response to the Agent\&quot;s Human-in-Loop question, the type should be <c>[additional]</c>.</para>
         /// </description></item>
-        /// <item><description><para>When the message is intended to trigger report generation, set the type to <c>[report]</c>.</para>
+        /// <item><description><para>When the message is intended to trigger a report generation, the type should be <c>[report]</c>.</para>
         /// </description></item>
-        /// <item><description><para>When the message is intended to cancel the current session, set the type to <c>[cancel]</c>.</para>
+        /// <item><description><para>When the message is intended to cancel the current session, the type should be <c>[cancel]</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -315,7 +307,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ParentSessionId { get; set; }
 
         /// <summary>
-        /// <para>This field is required when the message type is <c>additional</c>. Specify the specific question that the Agent asks the user through Human-in-Loop.</para>
+        /// <para>This field is required when the message type is <c>additional</c>. Pass in the specific question that the Agent asked the user through Human-in-Loop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>请提供计算GMV的口径。</para>
@@ -325,7 +317,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Question { get; set; }
 
         /// <summary>
-        /// <para>The quoted content to pass in. This is typically used during interactions with the Agent.</para>
+        /// <para>Pass in the current quoted content, typically used when interacting with the Agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;version&quot;:&quot;v0&quot;}</para>
@@ -336,7 +328,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para><b>Important</b></para>
-        /// <para>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint sequence number carried by that Agent message. If this message is not a targeted reply, such as requesting further in-depth analysis after analysis is complete, leave reply_to empty or set it to &quot;0&quot;.  </para>
+        /// <para>When this message is a reply to an Agent message (for example, when the Agent asks for clarification through ASK_HUMAN), reply_to must be set to the exact Checkpoint number carried in that Agent message. If this message is not a specific reply, such as requesting the Agent for further in-depth analysis after analysis is completed, reply_to can be left empty or set to &quot;0&quot;.</para>
         /// <para>This field affects how the Agent decides to process the message. Passing an incorrect value may lead to analysis results that do not meet expectations.</para>
         /// 
         /// <b>Example:</b>
@@ -347,7 +339,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ReplyTo { get; set; }
 
         /// <summary>
-        /// <para>The special configuration for this session. For the same session, only the configuration passed with the first SendMessage call takes effect.</para>
+        /// <para>The special configuration for this session. For the same session, only the configuration passed in the first SendMessage call takes effect.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -357,7 +349,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public SendChatMessageRequestSessionConfig SessionConfig { get; set; }
         public class SendChatMessageRequestSessionConfig : TeaModel {
             /// <summary>
-            /// <para>Deprecated. Use the input parameter of CreateAgentSession instead.</para>
+            /// <para>Deprecated. The value specified in CreateAgentSession takes precedence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -367,7 +359,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentId { get; set; }
 
             /// <summary>
-            /// <para>Deprecated. Use the input parameter of CreateAgentSession instead.</para>
+            /// <para>Deprecated. The value specified in CreateAgentSession takes precedence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -377,7 +369,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentStage { get; set; }
 
             /// <summary>
-            /// <para>Currently only Chinese and English are supported. The default value is Chinese. Only uppercase values are supported.</para>
+            /// <para>Currently only Chinese and English are supported. The default is Chinese. Only uppercase values are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENGLISH</para>
@@ -387,11 +379,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The mode. Valid values:</para>
+            /// <para>The mode:</para>
             /// <list type="bullet">
-            /// <item><description><b>ASK_DATA</b>: data query mode.</description></item>
-            /// <item><description><b>ANALYSIS</b>: analysis mode.</description></item>
-            /// <item><description><b>INSIGHT</b>: insight mode.</description></item>
+            /// <item><description><b>ASK_DATA</b>: Ask Data mode</description></item>
+            /// <item><description><b>ANALYSIS</b>: Analysis mode</description></item>
+            /// <item><description><b>INSIGHT</b>: Insight mode</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -402,7 +394,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The text of up to 64 characters that is used as a watermark in the generated PDF report.</para>
+            /// <para>You can enter text of up to 64 characters, which will be used as a watermark in the generated PDF report.</para>
             /// 
             /// <b>Example:</b>
             /// <para>示例水印</para>
@@ -454,7 +446,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The session ID. This is a required field. You can obtain the SessionId by calling the CreateAgentSession operation.</para>
+        /// <para>The session ID. This is a required field. You can obtain the SessionId by calling CreateAgentSession.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -465,21 +457,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The configuration items that affect only the current task.</para>
+        /// <para>The configuration items that only affect the current task.</para>
         /// </summary>
         [NameInMap("TaskConfig")]
         [Validation(Required=false)]
         public SendChatMessageRequestTaskConfig TaskConfig { get; set; }
         public class SendChatMessageRequestTaskConfig : TeaModel {
             /// <summary>
-            /// <para>The report rule configuration. Only when MessageType is REPORT, a report task is executed based on this configuration.</para>
+            /// <para>The report rule configuration. Only when MessageType is REPORT, a report task will be executed based on this configuration.</para>
             /// </summary>
             [NameInMap("ReportConfig")]
             [Validation(Required=false)]
             public SendChatMessageRequestTaskConfigReportConfig ReportConfig { get; set; }
             public class SendChatMessageRequestTaskConfigReportConfig : TeaModel {
                 /// <summary>
-                /// <para>The prompt that the report must follow.</para>
+                /// <para>The prompt that this report should follow.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>generate a report</para>
@@ -489,7 +481,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportPrompt { get; set; }
 
                 /// <summary>
-                /// <para>The report theme. Valid values: default, journal, legacy, and neobrutalism.</para>
+                /// <para>The report theme. Currently supported values: [default, journal, legacy, neobrutalism].</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
@@ -499,12 +491,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string ReportTheme { get; set; }
 
                 /// <summary>
-                /// <para>The service type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>TextReport: generates a text report.</description></item>
-                /// <item><description>WebReport: generates a web report.
-                /// Currently only WebReport is supported.</description></item>
-                /// </list>
+                /// <para>The service type. Valid values: TextReport and WebReport, which indicate whether this task generates a text report or a web report. Currently, only the WebReport type is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>WebReport</para>
@@ -516,6 +503,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
         }
+
+        [NameInMap("WorkspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 
