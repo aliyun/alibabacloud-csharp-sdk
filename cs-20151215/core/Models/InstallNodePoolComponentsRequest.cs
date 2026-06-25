@@ -25,10 +25,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public class InstallNodePoolComponentsRequestComponentsConfig : TeaModel {
                 /// <summary>
                 /// <para>The custom configuration of the component.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</para>
                 /// </summary>
                 [NameInMap("customConfig")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> CustomConfig { get; set; }
+                public Dictionary<string, object> CustomConfig { get; set; }
 
             }
 

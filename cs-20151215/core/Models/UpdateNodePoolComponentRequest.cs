@@ -18,10 +18,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public class UpdateNodePoolComponentRequestConfig : TeaModel {
             /// <summary>
             /// <para>The custom configuration of the component.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</para>
             /// </summary>
             [NameInMap("customConfig")]
             [Validation(Required=false)]
-            public Dictionary<string, string> CustomConfig { get; set; }
+            public Dictionary<string, object> CustomConfig { get; set; }
 
         }
 
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public UpdateNodePoolComponentRequestRollingPolicy RollingPolicy { get; set; }
         public class UpdateNodePoolComponentRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The interval between batches during the upgrade. Unit: seconds.</para>
+            /// <para>The interval between batches during the upgrade, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The automatic pause policy during node upgrades.</para>
+            /// <para>The automatic pause policy during the node upgrade process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>

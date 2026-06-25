@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[This field is deprecated. Use desired_size instead.]</para>
+        /// <para>This parameter is deprecated. Use desired_size instead.</para>
         /// <para>The number of nodes in the node pool.</para>
         /// 
         /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[This field is deprecated.]</para>
+        /// <para>This parameter is deprecated.</para>
         /// <para>The edge node pool configuration.</para>
         /// </summary>
         [NameInMap("interconnect_config")]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The network type of the edge node pool. This value is valid only for node pools whose <c>type</c> is <c>edge</c>. Valid values:</para>
+        /// <para>The network type of the edge node pool. This parameter is valid only for node pools whose <c>type</c> is <c>edge</c>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><c>basic</c>: basic.</description></item>
         /// <item><description><c>private</c>: dedicated. Supported in version 1.22 and later.</description></item>
@@ -553,10 +553,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public class NodepoolNodeComponentsConfig : TeaModel {
                 /// <summary>
                 /// <para>节点组件自定义配置。</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;cpuManagerPolicy&quot;:&quot;static&quot;}</para>
                 /// </summary>
                 [NameInMap("custom_config")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> CustomConfig { get; set; }
+                public Dictionary<string, object> CustomConfig { get; set; }
 
             }
 
@@ -1266,7 +1269,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The confidential computing node pool configuration.</para>
+        /// <para>The confidential computing configuration of the node pool.</para>
         /// </summary>
         [NameInMap("tee_config")]
         [Validation(Required=false)]
