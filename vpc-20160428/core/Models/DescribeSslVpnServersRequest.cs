@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnServersRequest : TeaModel {
         /// <summary>
-        /// <para>The SSL server name.</para>
+        /// <para>The name of the SSL server.</para>
         /// <para>The name must be 1 to 100 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in paging query. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -49,8 +49,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the SSL server.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the SSL server. </para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,8 +61,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID of the SSL server.</para>
-        /// <para>The SSL server and its associated VPN gateway belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the ID of the resource group to which the VPN gateway belongs.</para>
+        /// <para>The ID of the resource group to which the SSL server belongs.</para>
+        /// <para>The SSL server belongs to the same resource group as the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/2794055.html">DescribeVpnGateway</a> operation to query the resource group ID of the VPN gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>

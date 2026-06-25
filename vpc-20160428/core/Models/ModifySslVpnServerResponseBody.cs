@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ModifySslVpnServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The encryption algorithm.</para>
+        /// <para>The encryption algorithm used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AES-128-CBC</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientIpPool { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether data compression is enabled.</para>
+        /// <para>Indicates whether communication is compressed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? Compress { get; set; }
 
         /// <summary>
-        /// <para>The total number of current connections.</para>
+        /// <para>The current number of connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Connections { get; set; }
 
         /// <summary>
-        /// <para>The time when the SSL server was created.</para>
+        /// <para>The creation time of the SSL-VPN server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1492753580000</para>
@@ -62,8 +62,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Indicates whether two-factor authentication is enabled.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Not enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,8 +98,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The version of the IDaaS EIAM instance.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is returned only if the SSL server is associated with an IDaaS EIAM 2.0 instance. Only <b>EIAM 2.0</b> is returned.</description></item>
-        /// <item><description>If the SSL server is associated with an IDaaS EIAM 1.0 instance, no value is returned.</description></item>
+        /// <item><description>This parameter is returned only when the SSL server is bound to an IDaaS EIAM 2.0 instance. The only valid value is <b>EIAM 2.0</b>.</description></item>
+        /// <item><description>If the SSL server is bound to an IDaaS EIAM 1.0 instance, this parameter is not returned.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The local CIDR block.</para>
+        /// <para>The local subnet.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.20.20.0/24</para>
@@ -138,7 +140,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxConnections { get; set; }
 
         /// <summary>
-        /// <para>The name of the SSL server.</para>
+        /// <para>The name of the SSL-VPN server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port that is used by the SSL server.</para>
+        /// <para>The port of the SSL-VPN server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1194</para>
@@ -158,7 +160,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The protocol that is used by the SSL server.</para>
+        /// <para>The protocol used by the SSL-VPN server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UDP</para>
@@ -168,7 +170,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Proto { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the SSL server is created.</para>
+        /// <para>The region ID of the SSL-VPN server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -188,8 +190,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the SSL server belongs.</para>
-        /// <para>The SSL server and the VPN gateway associated with the SSL server belong to the same resource group. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource groups.</para>
+        /// <para>The ID of the resource group to which the SSL-VPN server belongs.</para>
+        /// <para>The resource group of the SSL-VPN server is the same as that of the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzs372yg****</para>
@@ -199,7 +201,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SSL server.</para>
+        /// <para>The ID of the SSL-VPN server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vss-bp18q7hzj6largv4v****</para>
@@ -209,7 +211,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string SslVpnServerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPN gateway.</para>
+        /// <para>The ID of the VPN gateway instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpn-bp1q8bgx4xnkm2ogj****</para>

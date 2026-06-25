@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeSslVpnServersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
+
+                [NameInMap("DnsServers")]
+                [Validation(Required=false)]
+                public string DnsServers { get; set; }
 
                 [NameInMap("EnableMultiFactorAuth")]
                 [Validation(Required=false)]
@@ -132,7 +136,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

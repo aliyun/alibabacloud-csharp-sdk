@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateSslVpnServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The SSL server name.</para>
+        /// <para>The name of the SSL server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
