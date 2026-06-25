@@ -10,7 +10,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Update service group foo successfully</para>
+        /// </summary>
+        [NameInMap("Message")]
+        [Validation(Required=false)]
+        public string Message { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>

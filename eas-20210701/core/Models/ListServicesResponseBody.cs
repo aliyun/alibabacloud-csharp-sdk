@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of services per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The services.</para>
+        /// <para>The list of services.</para>
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<Service> Services { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

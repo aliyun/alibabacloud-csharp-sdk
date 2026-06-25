@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>配置项列表</para>
+        /// <para>The list of dynamic parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;Key&quot;: &quot;rate_limit&quot;, &quot;Value&quot;: &quot;{\&quot;limit\&quot;: 100}&quot;, &quot;CreatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;, &quot;UpdatedAt&quot;: &quot;2024-01-15T10:30:00Z&quot;}]</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<ListConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the dynamic parameter was created, in UTC and ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T10:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>配置项键名</para>
+            /// <para>The name of the dynamic parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rate_limit</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>更新时间</para>
+            /// <para>The time when the dynamic parameter was last updated, in UTC and ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T10:00:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string UpdatedAt { get; set; }
 
             /// <summary>
-            /// <para>配置值</para>
+            /// <para>The value of the dynamic parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>是否有更多数据</para>
+        /// <para>Indicates if more entries are available. <c>true</c> if more entries exist; otherwise, <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>服务名称</para>
+        /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-service</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>总数量</para>
+        /// <para>The total number of entries found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>150</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? Total { get; set; }
 
         /// <summary>
-        /// <para>配置类型</para>
+        /// <para>The configuration type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Service</para>

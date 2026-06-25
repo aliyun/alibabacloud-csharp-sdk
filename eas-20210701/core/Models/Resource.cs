@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class Resource : TeaModel {
         /// <summary>
-        /// <para>The information about the clusters.</para>
+        /// <para>The ID of the cluster where the resource group is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The total number of CPU cores.</para>
+        /// <para>The total number of CPU cores in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -29,12 +29,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? CpuCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of used CPU cores in the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
+        /// </summary>
         [NameInMap("CpuUsed")]
         [Validation(Required=false)]
         public int? CpuUsed { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was created.</para>
+        /// <para>The time the resource group was created, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-02-26T17:52:49Z</para>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The additional information.</para>
+        /// <para>Additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -53,12 +59,15 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public Dictionary<string, object> ExtraData { get; set; }
 
+        /// <summary>
+        /// <para>The features supported by the resource group.</para>
+        /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
         public List<string> Features { get; set; }
 
         /// <summary>
-        /// <para>The total number of GPUs.</para>
+        /// <para>The total number of GPUs in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -67,12 +76,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? GpuCount { get; set; }
 
+        /// <summary>
+        /// <para>The number of used GPUs in the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("GpuUsed")]
         [Validation(Required=false)]
         public float? GpuUsed { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances. It is equal to the number of subscription instances plus the number of pay-as-you-go instances.</para>
+        /// <para>The total number of instances (prepaid and postpaid) in the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -81,28 +96,58 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? InstanceCount { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of allocatable CPU cores per node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("InstanceMaxAllocatableCPU")]
         [Validation(Required=false)]
         public int? InstanceMaxAllocatableCPU { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of allocatable GPUs per node.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("InstanceMaxAllocatableGPU")]
         [Validation(Required=false)]
         public float? InstanceMaxAllocatableGPU { get; set; }
 
+        /// <summary>
+        /// <para>The maximum allocatable memory per node in the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("InstanceMaxAllocatableMemory")]
         [Validation(Required=false)]
         public int? InstanceMaxAllocatableMemory { get; set; }
 
+        /// <summary>
+        /// <para>The total memory of the resource group, in MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8192</para>
+        /// </summary>
         [NameInMap("Memory")]
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <para>The amount of used memory in the resource group, in MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("MemoryUsed")]
         [Validation(Required=false)]
         public int? MemoryUsed { get; set; }
 
         /// <summary>
-        /// <para>The latest message about the resource group.</para>
+        /// <para>The latest status message for the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource is ready</para>
@@ -112,7 +157,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The number of pay-as-you-go instances.</para>
+        /// <para>The number of postpaid instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -122,7 +167,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PostPaidInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The number of subscription instances.</para>
+        /// <para>The number of prepaid instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -132,7 +177,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PrePaidInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The unique identifier of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-asdasdasd</para>
@@ -154,8 +199,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The type of the resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dedicated: the dedicated resource group.</description></item>
-        /// <item><description>SelfManaged: the self-managed resource group.</description></item>
+        /// <item><description><para><c>Dedicated</c>: A dedicated resource group.</para>
+        /// </description></item>
+        /// <item><description><para><c>SelfManaged</c>: A self-managed resource group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,6 +212,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The number of services deployed in the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ServiceCount")]
         [Validation(Required=false)]
         public int? ServiceCount { get; set; }
@@ -173,14 +226,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The status of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ResouceReady</para>
+        /// <para>ResourceReady</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was last updated.</para>
+        /// <para>The time the resource group was last updated, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-02-26T19:52:49Z</para>
@@ -189,17 +242,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
+        /// <summary>
+        /// <para>The usage mode of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inference</para>
+        /// </summary>
         [NameInMap("UsageMode")]
         [Validation(Required=false)]
         public string UsageMode { get; set; }
 
         /// <summary>
-        /// <para>The vendor of the resource group instances.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ECS</description></item>
-        /// <item><description>BareMetal</description></item>
-        /// </list>
+        /// <para>The provider of the compute instances in the resource group, such as ECS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>

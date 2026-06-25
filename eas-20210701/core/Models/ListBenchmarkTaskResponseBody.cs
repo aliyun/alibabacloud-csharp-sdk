@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListBenchmarkTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned list of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of tasks to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The stress testing tasks.</para>
+        /// <para>The list of tasks.</para>
         /// </summary>
         [NameInMap("Tasks")]
         [Validation(Required=false)]
         public List<ListBenchmarkTaskResponseBodyTasks> Tasks { get; set; }
         public class ListBenchmarkTaskResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>The number of instances that are available for stress testing.</para>
+            /// <para>The number of available stress testing instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <para>The time when the stress testing task was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-12-04T02:43:15Z</para>
+            /// <para>2020-02-04T02:43:15Z</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The returned message.</para>
+            /// <para>A summary of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Benchmark task [benchmark-larec-test-1076] is Running</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the stress testing task.</para>
+            /// <para>The region where the stress testing task is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The name of the service on which you want to perform a stress testing.</para>
+            /// <para>The name of the service to be stress tested.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_quota</para>
@@ -97,72 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The state of the stress testing task.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Creating</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Starting</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>DeleteFailed</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Running</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Stopping</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Error</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Updating</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Deleting</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>CreateFailed</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The status of the stress testing task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -192,7 +127,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The time when the stress testing task was updated.</para>
+            /// <para>The time when the stress testing task was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-06-24T03:11:30Z</para>
@@ -204,10 +139,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

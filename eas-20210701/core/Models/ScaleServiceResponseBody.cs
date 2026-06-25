@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ScaleServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>A message indicating the result of the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Service [foo] in region [cn-shanghai] is scaling</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>
         /// </summary>

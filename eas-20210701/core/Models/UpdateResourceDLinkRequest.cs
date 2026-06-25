@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>72.16.0.0/16</para>
+        /// <para>172.16.0.0/16</para>
         /// </summary>
         [NameInMap("DestinationCIDRs")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sg-bp149cedsfx2rfspd2d</para>
+        /// <para>sg-bp149cedsfx2rfs****</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

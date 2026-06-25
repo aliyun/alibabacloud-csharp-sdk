@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The service groups.</para>
+        /// <para>The list of service groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<Group> Groups { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number of the returned group list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of groups displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of service groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

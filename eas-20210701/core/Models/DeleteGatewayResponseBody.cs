@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Gateway is deleted.</para>
+        /// <para>Gateway gw-1uhcqmsc7x22****** is deleted</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

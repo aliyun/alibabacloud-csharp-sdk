@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Instances eas-i-011227132046,eas-i-011227132046 are deleting</para>
+        /// <para>Instances eas-i-01122713****,eas-i-01122713**** are deleting</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServiceInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instances.</para>
+        /// <para>The list of service instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<Instance> Instances { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

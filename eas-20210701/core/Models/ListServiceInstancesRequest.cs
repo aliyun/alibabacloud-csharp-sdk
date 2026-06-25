@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListServiceInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword used to query instances. Instances can be queried based on instance name, instance IP address, IP address of the server where the instance resides, and instance type.</para>
+        /// <para>A keyword for the search. You can search by instance name, instance IP address, host IP address, or instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.118.xx.xx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the server where the instance resides.</para>
+        /// <para>The IP address of the host where the service instance is deployed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.224.xx.xx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string HostIP { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the instance.</para>
+        /// <para>The IP address of the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.224.xx.xx</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceIP { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo-bdc5xxxx-8l7rk</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance state.</para>
+        /// <para>The status of the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance is a preemptible instance.</para>
+        /// <para>Specifies whether the instance is a spot instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -79,39 +79,28 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? IsSpot { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to query the list of instance replicas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ListReplica")]
         [Validation(Required=false)]
         public bool? ListReplica { get; set; }
 
+        /// <summary>
+        /// <para>The type of the sub-service. This parameter is valid only for aggregation services.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LLMDecode</para>
+        /// </summary>
         [NameInMap("MemberType")]
         [Validation(Required=false)]
         public string MemberType { get; set; }
 
         /// <summary>
-        /// <para>The sorting order.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>asc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>The instances are sorted in ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>desc</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>The instances are sorted in descending order.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>desc</para>
@@ -121,7 +110,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -131,7 +120,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100.</para>
+        /// <para>The number of entries to return on each page. The default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -140,36 +129,38 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The quota ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>quota1****</para>
+        /// </summary>
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the instance replica.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cbh-qwen3-a1bc-prefill-ep1tp4dp</para>
+        /// </summary>
         [NameInMap("ReplicaName")]
         [Validation(Required=false)]
         public string ReplicaName { get; set; }
 
+        /// <summary>
+        /// <para>The resource group to which the instance belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-r-xxxxxxx</para>
+        /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource group to which the instance belongs.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>PublicResource</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>DedicatedResource</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The type of the resource group to which the service instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PublicResource</para>
@@ -179,54 +170,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The service role.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>DataSet</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>dataset service</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>SDProxy</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>Stable-Diffusion proxy service</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>Standard</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>standard service</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>Queue</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>queue service</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The role of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Queue</para>
@@ -236,19 +180,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The field that you use to sort the query results.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Set the value to StartTime.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>The value specifies that the query results are sorted based on the time when the instances were created</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The field to use for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StartTime</para>

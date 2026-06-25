@@ -9,12 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListVirtualResourceRequest : TeaModel {
+        /// <summary>
+        /// <para>The sorting order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Desc: Descending order.</para>
+        /// </description></item>
+        /// <item><description><para>Asc: Ascending order.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Desc</para>
+        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number for the list of virtual resource groups. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,7 +36,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100.</para>
+        /// <para>The number of virtual resource groups to display on each page. The default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -33,6 +45,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The field that is used to sort the results. By default, the results are sorted by timestamp in descending order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CreateTime</para>
+        /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }

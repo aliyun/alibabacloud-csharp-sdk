@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGatewayShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The billing method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
+        /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The private gateway ID. To obtain the private gateway ID, see the private_gateway_id parameter in the response parameters of the ListResources operation.</para>
+        /// <para>The ID of the private gateway. You can obtain the ID from the private_gateway_id field in the response of the ListResources operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The private gateway alias.</para>
+        /// <para>The alias of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mygateway1</para>
@@ -33,24 +39,45 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string GatewayName { get; set; }
 
+        /// <summary>
+        /// <para>The type of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Application</para>
+        /// </summary>
         [NameInMap("GatewayType")]
         [Validation(Required=false)]
         public string GatewayType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable access over the public network.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("InternetEnabled")]
         [Validation(Required=false)]
         public bool? InternetEnabled { get; set; }
 
+        /// <summary>
+        /// <para>Filter by tag.</para>
+        /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public string LabelShrink { get; set; }
 
+        /// <summary>
+        /// <para>The sort order.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asc</para>
+        /// </summary>
         [NameInMap("Order")]
         [Validation(Required=false)]
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the gateway list to return. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +87,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100.</para>
+        /// <para>The number of gateways to return on each page. The default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -70,7 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. To obtain a resource group ID, see the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
+        /// <para>The ID of the resource group. You can obtain the ID from the ResourceId field in the response of the <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-4gt8twzwllfo******</para>
@@ -79,10 +106,22 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
+        /// <summary>
+        /// <para>The field to sort by.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CreateTime</para>
+        /// </summary>
         [NameInMap("Sort")]
         [Validation(Required=false)]
         public string Sort { get; set; }
 
+        /// <summary>
+        /// <para>The status of the gateway.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Running</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

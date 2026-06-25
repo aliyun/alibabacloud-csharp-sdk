@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateGatewayLabelRequest : TeaModel {
         /// <summary>
+        /// <para>The custom gateway labels.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Labels")]

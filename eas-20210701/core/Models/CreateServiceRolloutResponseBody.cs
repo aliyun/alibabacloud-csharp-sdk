@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateServiceRolloutResponseBody : TeaModel {
         /// <summary>
+        /// <para>A message that indicates the result of the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Rollout created successfully</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID. Use this ID for troubleshooting and traceability.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>
         /// </summary>

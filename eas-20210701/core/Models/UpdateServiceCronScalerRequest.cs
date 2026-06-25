@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateServiceCronScalerRequest : TeaModel {
         /// <summary>
-        /// <para>The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.</para>
+        /// <para>The cron expressions for the dates to exclude from the schedule.</para>
         /// </summary>
         [NameInMap("ExcludeDates")]
         [Validation(Required=false)]
         public List<string> ExcludeDates { get; set; }
 
         /// <summary>
-        /// <para>The description of the CronHPA job.</para>
+        /// <para>The scheduled scaling tasks.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ScaleJobs")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public List<UpdateServiceCronScalerRequestScaleJobs> ScaleJobs { get; set; }
         public class UpdateServiceCronScalerRequestScaleJobs : TeaModel {
             /// <summary>
-            /// <para>The name of the CronHPA job.</para>
+            /// <para>The name of the scheduled auto scaling task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>scale-job-1</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The cron expression that is used to configure the execution time of the CronHPA job. For more information about how to configure cron expressions, see <b>Description of special characters</b> in this topic.</para>
+            /// <para>The cron expression that specifies when to run the scaling task. For more information about cron expressions, see the <b>Cron expressions</b> section in this topic.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Schedule { get; set; }
 
             /// <summary>
-            /// <para>The number of instances that you want to configure for the CronHPA job.</para>
+            /// <para>The target number of instances for the scaling task.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,6 +56,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [Validation(Required=false)]
             public int? TargetSize { get; set; }
 
+            /// <summary>
+            /// <para>The time zone for the cron expression.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Asia/Shanghai</para>
+            /// </summary>
             [NameInMap("TimeZone")]
             [Validation(Required=false)]
             public string TimeZone { get; set; }

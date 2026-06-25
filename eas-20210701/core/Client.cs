@@ -36,6 +36,19 @@ namespace AlibabaCloud.SDK.Eas20210701
                 {"cn-shanghai-finance-1", "pai-eas.cn-shanghai-finance-1.aliyuncs.com"},
                 {"cn-north-2-gov-1", "pai-eas.cn-north-2-gov-1.aliyuncs.com"},
                 {"cn-chengdu", "pai-eas.cn-chengdu.aliyuncs.com"},
+                {"us-southeast-1", "pai-eas.us-southeast-1.aliyuncs.com"},
+                {"na-south-1", "pai-eas.na-south-1.aliyuncs.com"},
+                {"me-east-1", "pai-eas.me-east-1.aliyuncs.com"},
+                {"me-central-1", "pai-eas.me-central-1.aliyuncs.com"},
+                {"cn-zhongwei", "pai-eas.cn-zhongwei.aliyuncs.com"},
+                {"cn-wulanchabu", "pai-eas.cn-wulanchabu.aliyuncs.com"},
+                {"cn-heyuan", "pai-eas.cn-heyuan.aliyuncs.com"},
+                {"cn-guangzhou", "pai-eas.cn-guangzhou.aliyuncs.com"},
+                {"ap-southeast-8", "pai-eas.ap-southeast-8.aliyuncs.com"},
+                {"ap-southeast-7", "pai-eas.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-3", "pai-eas.ap-southeast-3.aliyuncs.com"},
+                {"ap-northeast-2", "pai-eas.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "pai-eas.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -921,8 +934,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建单个配置</para>
+        /// <para>Creates a single dynamic parameter in a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API creates a new dynamic parameter by sending a POST request to a specified path.</description></item>
+        /// <item><description>The dynamic parameter name (<c>ConfigKey</c>) can contain letters, digits, periods (.), underscores (_), hyphens (-), and forward slashes (/). The maximum length is 100 characters.</description></item>
+        /// <item><description>The request body must include the dynamic parameter value (<c>Value</c>).</description></item>
+        /// <item><description>If successful, the API returns the new dynamic parameter\&quot;s name (<c>Key</c>), value (<c>Value</c>), creation time, and update time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateConfigRequest
@@ -967,8 +991,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建单个配置</para>
+        /// <para>Creates a single dynamic parameter in a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API creates a new dynamic parameter by sending a POST request to a specified path.</description></item>
+        /// <item><description>The dynamic parameter name (<c>ConfigKey</c>) can contain letters, digits, periods (.), underscores (_), hyphens (-), and forward slashes (/). The maximum length is 100 characters.</description></item>
+        /// <item><description>The request body must include the dynamic parameter value (<c>Value</c>).</description></item>
+        /// <item><description>If successful, the API returns the new dynamic parameter\&quot;s name (<c>Key</c>), value (<c>Value</c>), creation time, and update time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateConfigRequest
@@ -1013,8 +1048,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建单个配置</para>
+        /// <para>Creates a single dynamic parameter in a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API creates a new dynamic parameter by sending a POST request to a specified path.</description></item>
+        /// <item><description>The dynamic parameter name (<c>ConfigKey</c>) can contain letters, digits, periods (.), underscores (_), hyphens (-), and forward slashes (/). The maximum length is 100 characters.</description></item>
+        /// <item><description>The request body must include the dynamic parameter value (<c>Value</c>).</description></item>
+        /// <item><description>If successful, the API returns the new dynamic parameter\&quot;s name (<c>Key</c>), value (<c>Value</c>), creation time, and update time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateConfigRequest
@@ -1032,8 +1078,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建单个配置</para>
+        /// <para>Creates a single dynamic parameter in a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API creates a new dynamic parameter by sending a POST request to a specified path.</description></item>
+        /// <item><description>The dynamic parameter name (<c>ConfigKey</c>) can contain letters, digits, periods (.), underscores (_), hyphens (-), and forward slashes (/). The maximum length is 100 characters.</description></item>
+        /// <item><description>The request body must include the dynamic parameter value (<c>Value</c>).</description></item>
+        /// <item><description>If successful, the API returns the new dynamic parameter\&quot;s name (<c>Key</c>), value (<c>Value</c>), creation time, and update time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateConfigRequest
@@ -1051,8 +1108,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建故障注入任务</para>
+        /// <para>Creates a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFaultInjectionRequest
@@ -1101,8 +1163,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建故障注入任务</para>
+        /// <para>Creates a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFaultInjectionRequest
@@ -1151,8 +1218,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建故障注入任务</para>
+        /// <para>Creates a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFaultInjectionRequest
@@ -1170,8 +1242,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建故障注入任务</para>
+        /// <para>Creates a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateFaultInjectionRequest
@@ -1387,8 +1464,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an internal endpoint of a private gateway.</para>
+        /// <para>Creates an internal endpoint for a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you use this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateGatewayIntranetLinkedVpcRequest
@@ -1445,8 +1527,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an internal endpoint of a private gateway.</para>
+        /// <para>Creates an internal endpoint for a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you use this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateGatewayIntranetLinkedVpcRequest
@@ -1503,8 +1590,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an internal endpoint of a private gateway.</para>
+        /// <para>Creates an internal endpoint for a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you use this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateGatewayIntranetLinkedVpcRequest
@@ -1522,8 +1614,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an internal endpoint of a private gateway.</para>
+        /// <para>Creates an internal endpoint for a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you use this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateGatewayIntranetLinkedVpcRequest
@@ -1691,12 +1788,186 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group.</para>
+        /// <para>Creates a service group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</para>
+        /// <para>*Before you use this operation, make sure that you fully understand the billing of Elastic Algorithm Service (EAS) and its <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a>.**.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupResponse
+        /// </returns>
+        public CreateGroupResponse CreateGroupWithOptions(CreateGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkSpaceId))
+            {
+                body["WorkSpaceId"] = request.WorkSpaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroup",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*Before you use this operation, make sure that you fully understand the billing of Elastic Algorithm Service (EAS) and its <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a>.**.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupResponse
+        /// </returns>
+        public async Task<CreateGroupResponse> CreateGroupWithOptionsAsync(CreateGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkSpaceId))
+            {
+                body["WorkSpaceId"] = request.WorkSpaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroup",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*Before you use this operation, make sure that you fully understand the billing of Elastic Algorithm Service (EAS) and its <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a>.**.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupResponse
+        /// </returns>
+        public CreateGroupResponse CreateGroup(CreateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*Before you use this operation, make sure that you fully understand the billing of Elastic Algorithm Service (EAS) and its <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a>.**.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupResponse
+        /// </returns>
+        public async Task<CreateGroupResponse> CreateGroupAsync(CreateGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a new resource group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before calling this API, make sure you understand the billing method and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1782,12 +2053,12 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group.</para>
+        /// <para>Create a new resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</para>
+        /// <para><em>Before calling this API, make sure you understand the billing method and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1873,12 +2144,12 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group.</para>
+        /// <para>Create a new resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</para>
+        /// <para><em>Before calling this API, make sure you understand the billing method and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1897,12 +2168,12 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group.</para>
+        /// <para>Create a new resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>*Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/144261.html">billing</a> of Elastic Algorithm Service (EAS).</para>
+        /// <para><em>Before calling this API, make sure you understand the billing method and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1921,8 +2192,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates instances in a dedicated resource group.</para>
+        /// <para>Creates machine instances in a dedicated resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceInstancesRequest
@@ -1995,8 +2271,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates instances in a dedicated resource group.</para>
+        /// <para>Creates machine instances in a dedicated resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceInstancesRequest
@@ -2069,8 +2350,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates instances in a dedicated resource group.</para>
+        /// <para>Creates machine instances in a dedicated resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceInstancesRequest
@@ -2088,8 +2374,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates instances in a dedicated resource group.</para>
+        /// <para>Creates machine instances in a dedicated resource group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateResourceInstancesRequest
@@ -2579,7 +2870,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Cron Horizontal Pod Autoscaler (CronHPA) feature for a service.</para>
+        /// <para>Creates a scheduled auto scaling rule for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2629,7 +2920,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Cron Horizontal Pod Autoscaler (CronHPA) feature for a service.</para>
+        /// <para>Creates a scheduled auto scaling rule for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2679,7 +2970,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Cron Horizontal Pod Autoscaler (CronHPA) feature for a service.</para>
+        /// <para>Creates a scheduled auto scaling rule for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2698,7 +2989,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the Cron Horizontal Pod Autoscaler (CronHPA) feature for a service.</para>
+        /// <para>Creates a scheduled auto scaling rule for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2717,7 +3008,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接服务的token</para>
+        /// <para>Call this operation to obtain a token and a WebSocket URL for logging on to a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2767,7 +3058,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接服务的token</para>
+        /// <para>Call this operation to obtain a token and a WebSocket URL for logging on to a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2817,7 +3108,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接服务的token</para>
+        /// <para>Call this operation to obtain a token and a WebSocket URL for logging on to a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2836,7 +3127,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建连接服务的token</para>
+        /// <para>Call this operation to obtain a token and a WebSocket URL for logging on to a container.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2993,19 +3284,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务更新计划</para>
+        /// <para>Creates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
-        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
-        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
-        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
-        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
-        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You can use either the <c>Partition</c> or the <c>Batch</c> strategy, but not both.</description></item>
+        /// <item><description><b>Request rate limit</b>: Up to 100 requests per second.</description></item>
+        /// <item><description><b>Authorization</b>: This operation requires the <c>eas:CreateServiceRollout</c> permission.</description></item>
+        /// <item><description><b>ARN</b>: <c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>.</description></item>
+        /// <item><description><b>Pause a rollout</b>: To pause the service rollout, set the <c>Paused</c> parameter to <c>true</c>. You can then resume or cancel the rollout by calling the <c>UpdateServiceRollout</c> operation.</description></item>
+        /// <item><description><b>Monitoring and rollback</b>: Monitor service metrics during the service rollout to promptly identify and resolve issues. To perform a rollback, you can adjust the <c>Partition</c> value or delete the rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3060,19 +3351,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务更新计划</para>
+        /// <para>Creates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
-        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
-        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
-        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
-        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
-        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You can use either the <c>Partition</c> or the <c>Batch</c> strategy, but not both.</description></item>
+        /// <item><description><b>Request rate limit</b>: Up to 100 requests per second.</description></item>
+        /// <item><description><b>Authorization</b>: This operation requires the <c>eas:CreateServiceRollout</c> permission.</description></item>
+        /// <item><description><b>ARN</b>: <c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>.</description></item>
+        /// <item><description><b>Pause a rollout</b>: To pause the service rollout, set the <c>Paused</c> parameter to <c>true</c>. You can then resume or cancel the rollout by calling the <c>UpdateServiceRollout</c> operation.</description></item>
+        /// <item><description><b>Monitoring and rollback</b>: Monitor service metrics during the service rollout to promptly identify and resolve issues. To perform a rollback, you can adjust the <c>Partition</c> value or delete the rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3127,19 +3418,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务更新计划</para>
+        /// <para>Creates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
-        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
-        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
-        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
-        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
-        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You can use either the <c>Partition</c> or the <c>Batch</c> strategy, but not both.</description></item>
+        /// <item><description><b>Request rate limit</b>: Up to 100 requests per second.</description></item>
+        /// <item><description><b>Authorization</b>: This operation requires the <c>eas:CreateServiceRollout</c> permission.</description></item>
+        /// <item><description><b>ARN</b>: <c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>.</description></item>
+        /// <item><description><b>Pause a rollout</b>: To pause the service rollout, set the <c>Paused</c> parameter to <c>true</c>. You can then resume or cancel the rollout by calling the <c>UpdateServiceRollout</c> operation.</description></item>
+        /// <item><description><b>Monitoring and rollback</b>: Monitor service metrics during the service rollout to promptly identify and resolve issues. To perform a rollback, you can adjust the <c>Partition</c> value or delete the rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3159,19 +3450,19 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建服务更新计划</para>
+        /// <para>Creates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
-        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
-        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
-        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
-        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
-        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You can use either the <c>Partition</c> or the <c>Batch</c> strategy, but not both.</description></item>
+        /// <item><description><b>Request rate limit</b>: Up to 100 requests per second.</description></item>
+        /// <item><description><b>Authorization</b>: This operation requires the <c>eas:CreateServiceRollout</c> permission.</description></item>
+        /// <item><description><b>ARN</b>: <c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>.</description></item>
+        /// <item><description><b>Pause a rollout</b>: To pause the service rollout, set the <c>Paused</c> parameter to <c>true</c>. You can then resume or cancel the rollout by calling the <c>UpdateServiceRollout</c> operation.</description></item>
+        /// <item><description><b>Monitoring and rollback</b>: Monitor service metrics during the service rollout to promptly identify and resolve issues. To perform a rollback, you can adjust the <c>Partition</c> value or delete the rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3605,8 +3896,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个配置项</para>
+        /// <para>Deletes a single dynamic parameter for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>This API deletes a specific configuration by its region ID, configuration type, service name, and configuration key. Ensure all parameter values are accurate to avoid accidentally deleting critical configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRequest
@@ -3645,8 +3942,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个配置项</para>
+        /// <para>Deletes a single dynamic parameter for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>This API deletes a specific configuration by its region ID, configuration type, service name, and configuration key. Ensure all parameter values are accurate to avoid accidentally deleting critical configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRequest
@@ -3685,8 +3988,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个配置项</para>
+        /// <para>Deletes a single dynamic parameter for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>This API deletes a specific configuration by its region ID, configuration type, service name, and configuration key. Ensure all parameter values are accurate to avoid accidentally deleting critical configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRequest
@@ -3704,8 +4013,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除单个配置项</para>
+        /// <para>Deletes a single dynamic parameter for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>This API deletes a specific configuration by its region ID, configuration type, service name, and configuration key. Ensure all parameter values are accurate to avoid accidentally deleting critical configurations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRequest
@@ -3723,8 +4038,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除故障注入任务</para>
+        /// <para>Deletes a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaultInjectionRequest
@@ -3763,8 +4083,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除故障注入任务</para>
+        /// <para>Deletes a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaultInjectionRequest
@@ -3803,8 +4128,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除故障注入任务</para>
+        /// <para>Deletes a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaultInjectionRequest
@@ -3822,8 +4152,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除故障注入任务</para>
+        /// <para>Deletes a fault injection task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteFaultInjectionRequest
@@ -4247,8 +4582,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关标签</para>
+        /// <para>Deletes gateway labels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> for Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteGatewayLabelRequest
@@ -4299,8 +4639,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关标签</para>
+        /// <para>Deletes gateway labels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> for Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DeleteGatewayLabelRequest
@@ -4351,8 +4696,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关标签</para>
+        /// <para>Deletes gateway labels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> for Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteGatewayLabelRequest
@@ -4370,8 +4720,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除网关标签</para>
+        /// <para>Deletes gateway labels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> for Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteGatewayLabelRequest
@@ -4385,6 +4740,136 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteGatewayLabelWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGroupResponse
+        /// </returns>
+        public DeleteGroupResponse DeleteGroupWithOptions(string ClusterId, string GroupName, DeleteGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CascadeDelete))
+            {
+                query["CascadeDelete"] = request.CascadeDelete;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGroup",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GroupName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGroupResponse
+        /// </returns>
+        public async Task<DeleteGroupResponse> DeleteGroupWithOptionsAsync(string ClusterId, string GroupName, DeleteGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CascadeDelete))
+            {
+                query["CascadeDelete"] = request.CascadeDelete;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGroup",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(GroupName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGroupResponse
+        /// </returns>
+        public DeleteGroupResponse DeleteGroup(string ClusterId, string GroupName, DeleteGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteGroupWithOptions(ClusterId, GroupName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a service group.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGroupResponse
+        /// </returns>
+        public async Task<DeleteGroupResponse> DeleteGroupAsync(string ClusterId, string GroupName, DeleteGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteGroupWithOptionsAsync(ClusterId, GroupName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4625,7 +5110,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of an instance in a resource group.</para>
+        /// <para>Deletes instance tags from a resource group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4697,7 +5182,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of an instance in a resource group.</para>
+        /// <para>Deletes instance tags from a resource group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4769,7 +5254,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of an instance in a resource group.</para>
+        /// <para>Deletes instance tags from a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4788,7 +5273,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the tags of an instance in a resource group.</para>
+        /// <para>Deletes instance tags from a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5417,8 +5902,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the instances of a service.</para>
+        /// <para>Restarts specified instances of a service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceInstancesRequest
@@ -5475,8 +5965,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the instances of a service.</para>
+        /// <para>Restarts specified instances of a service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceInstancesRequest
@@ -5533,8 +6028,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the instances of a service.</para>
+        /// <para>Restarts specified instances of a service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceInstancesRequest
@@ -5552,8 +6052,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Restarts the instances of a service.</para>
+        /// <para>Restarts specified instances of a service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and&#x20;<b><a href="https://help.aliyun.com/document_detail/144261.html"><b>pricing</b></a></b>&#x20;of Elastic Algorithm Service (EAS).*</em></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteServiceInstancesRequest
@@ -5571,7 +6076,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes existing service tags.</para>
+        /// <para>Deletes a service label.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5631,7 +6136,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes existing service tags.</para>
+        /// <para>Deletes a service label.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5691,7 +6196,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes existing service tags.</para>
+        /// <para>Deletes a service label.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5710,7 +6215,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes existing service tags.</para>
+        /// <para>Deletes a service label.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5847,7 +6352,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务更新计划</para>
+        /// <para>Deletes a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5901,7 +6406,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务更新计划</para>
+        /// <para>Deletes a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5955,7 +6460,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务更新计划</para>
+        /// <para>Deletes a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5988,7 +6493,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除服务更新计划</para>
+        /// <para>Deletes a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6741,7 +7246,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types for an available instance in a shared resource group.</para>
+        /// <para>Returns a list of available machine specifications.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6801,7 +7306,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types for an available instance in a shared resource group.</para>
+        /// <para>Returns a list of available machine specifications.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6861,7 +7366,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types for an available instance in a shared resource group.</para>
+        /// <para>Returns a list of available machine specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6880,7 +7385,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types for an available instance in a shared resource group.</para>
+        /// <para>Returns a list of available machine specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7001,7 +7506,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7041,7 +7546,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7081,7 +7586,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7100,7 +7605,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a resource group.</para>
+        /// <para>Retrieves the details of a resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7827,7 +8332,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of service endpoints.</para>
+        /// <para>Retrieves a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7867,7 +8372,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of service endpoints.</para>
+        /// <para>Retrieves a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7907,7 +8412,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of service endpoints.</para>
+        /// <para>Retrieves a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7926,7 +8431,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of service endpoints.</para>
+        /// <para>Retrieves a list of service endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7945,7 +8450,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about recent service deployment events.</para>
+        /// <para>Queries recent deployment events for a specified service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8011,7 +8516,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about recent service deployment events.</para>
+        /// <para>Queries recent deployment events for a specified service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8077,7 +8582,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about recent service deployment events.</para>
+        /// <para>Queries recent deployment events for a specified service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8096,7 +8601,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about recent service deployment events.</para>
+        /// <para>Queries recent deployment events for a specified service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8545,7 +9050,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务更新计划</para>
+        /// <para>Retrieves the details of a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8598,7 +9103,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务更新计划</para>
+        /// <para>Retrieves the details of a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8651,7 +9156,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务更新计划</para>
+        /// <para>Retrieves the details of a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8683,7 +9188,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看服务更新计划</para>
+        /// <para>Retrieves the details of a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8999,7 +9504,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the details of a virtual resource group.</para>
+        /// <para>Queries the details of a virtual resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9039,7 +9544,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the details of a virtual resource group.</para>
+        /// <para>Queries the details of a virtual resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9079,7 +9584,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the details of a virtual resource group.</para>
+        /// <para>Queries the details of a virtual resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9098,7 +9603,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the details of a virtual resource group.</para>
+        /// <para>Queries the details of a virtual resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9519,7 +10024,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of stress testing tasks that are created by the current user.</para>
+        /// <para>Lists all deployed stress testing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9597,7 +10102,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of stress testing tasks that are created by the current user.</para>
+        /// <para>Lists all deployed stress testing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9675,7 +10180,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of stress testing tasks that are created by the current user.</para>
+        /// <para>Lists all deployed stress testing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9694,7 +10199,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of stress testing tasks that are created by the current user.</para>
+        /// <para>Lists all deployed stress testing tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9713,8 +10218,20 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务的所有配置项（支持分页）</para>
+        /// <para>Retrieves a list of dynamic parameters for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ClusterId</c> specifies the service\&quot;s region.</description></item>
+        /// <item><description><c>ConfigType</c> specifies the configuration type. Only <c>service</c> is supported.</description></item>
+        /// <item><description><c>Name</c> specifies the service name.</description></item>
+        /// <item><description>Use the <c>Page</c> and <c>PageSize</c> parameters to paginate the results.</description></item>
+        /// <item><description>The response contains the details of the dynamic parameters and pagination information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigsRequest
@@ -9763,8 +10280,20 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务的所有配置项（支持分页）</para>
+        /// <para>Retrieves a list of dynamic parameters for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ClusterId</c> specifies the service\&quot;s region.</description></item>
+        /// <item><description><c>ConfigType</c> specifies the configuration type. Only <c>service</c> is supported.</description></item>
+        /// <item><description><c>Name</c> specifies the service name.</description></item>
+        /// <item><description>Use the <c>Page</c> and <c>PageSize</c> parameters to paginate the results.</description></item>
+        /// <item><description>The response contains the details of the dynamic parameters and pagination information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigsRequest
@@ -9813,8 +10342,20 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务的所有配置项（支持分页）</para>
+        /// <para>Retrieves a list of dynamic parameters for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ClusterId</c> specifies the service\&quot;s region.</description></item>
+        /// <item><description><c>ConfigType</c> specifies the configuration type. Only <c>service</c> is supported.</description></item>
+        /// <item><description><c>Name</c> specifies the service name.</description></item>
+        /// <item><description>Use the <c>Page</c> and <c>PageSize</c> parameters to paginate the results.</description></item>
+        /// <item><description>The response contains the details of the dynamic parameters and pagination information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigsRequest
@@ -9832,8 +10373,20 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询服务的所有配置项（支持分页）</para>
+        /// <para>Retrieves a list of dynamic parameters for a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ClusterId</c> specifies the service\&quot;s region.</description></item>
+        /// <item><description><c>ConfigType</c> specifies the configuration type. Only <c>service</c> is supported.</description></item>
+        /// <item><description><c>Name</c> specifies the service name.</description></item>
+        /// <item><description>Use the <c>Page</c> and <c>PageSize</c> parameters to paginate the results.</description></item>
+        /// <item><description>The response contains the details of the dynamic parameters and pagination information.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigsRequest
@@ -9851,7 +10404,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private gateways.</para>
+        /// <para>Lists private gateways.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9947,7 +10500,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private gateways.</para>
+        /// <para>Lists private gateways.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10043,7 +10596,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private gateways.</para>
+        /// <para>Lists private gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10062,7 +10615,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of private gateways.</para>
+        /// <para>Lists private gateways.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10081,7 +10634,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// <para>Lists the custom domain names for a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10121,7 +10674,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// <para>Lists the custom domain names for a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10161,7 +10714,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// <para>Lists the custom domain names for a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10180,7 +10733,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom domain names of a private gateway.</para>
+        /// <para>Lists the custom domain names for a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10199,8 +10752,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the internal endpoints of a private gateway.</para>
+        /// <para>Lists the internal access endpoints of a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGatewayIntranetLinkedVpcRequest
@@ -10239,8 +10797,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the internal endpoints of a private gateway.</para>
+        /// <para>Lists the internal access endpoints of a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGatewayIntranetLinkedVpcRequest
@@ -10279,8 +10842,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the internal endpoints of a private gateway.</para>
+        /// <para>Lists the internal access endpoints of a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGatewayIntranetLinkedVpcRequest
@@ -10298,8 +10866,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of the internal endpoints of a private gateway.</para>
+        /// <para>Lists the internal access endpoints of a private gateway.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGatewayIntranetLinkedVpcRequest
@@ -10317,7 +10890,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
+        /// <para>Lists the VPC peering connections for a gateway\&quot;s private network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10363,7 +10936,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
+        /// <para>Lists the VPC peering connections for a gateway\&quot;s private network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10409,7 +10982,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
+        /// <para>Lists the VPC peering connections for a gateway\&quot;s private network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10428,7 +11001,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of all VPC peering connections on internal endpoint of a gateway.</para>
+        /// <para>Lists the VPC peering connections for a gateway\&quot;s private network endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10565,10 +11138,10 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created service groups.</para>
+        /// <para>Lists created service groups.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListGroupsRequest
         /// </param>
         /// <param name="headers">
@@ -10581,13 +11154,23 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGroupsResponse
         /// </returns>
-        public ListGroupsResponse ListGroupsWithOptions(ListGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListGroupsResponse ListGroupsWithOptions(ListGroupsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListGroupsShrinkRequest request = new ListGroupsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -10635,10 +11218,10 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created service groups.</para>
+        /// <para>Lists created service groups.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListGroupsRequest
         /// </param>
         /// <param name="headers">
@@ -10651,13 +11234,23 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGroupsResponse
         /// </returns>
-        public async Task<ListGroupsResponse> ListGroupsWithOptionsAsync(ListGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListGroupsResponse> ListGroupsWithOptionsAsync(ListGroupsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListGroupsShrinkRequest request = new ListGroupsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "Labels", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["Filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["Labels"] = request.LabelsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
             {
@@ -10705,7 +11298,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created service groups.</para>
+        /// <para>Lists created service groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10724,7 +11317,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries created service groups.</para>
+        /// <para>Lists created service groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10743,7 +11336,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workers in a resource group.</para>
+        /// <para>Lists the service workers of a resource instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10817,7 +11410,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workers in a resource group.</para>
+        /// <para>Lists the service workers of a resource instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10891,7 +11484,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workers in a resource group.</para>
+        /// <para>Lists the service workers of a resource instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10910,7 +11503,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of workers in a resource group.</para>
+        /// <para>Lists the service workers of a resource instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10929,7 +11522,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances in a dedicated resource group.</para>
+        /// <para>Lists the instances in a specified dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11025,7 +11618,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances in a dedicated resource group.</para>
+        /// <para>Lists the instances in a specified dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11121,7 +11714,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances in a dedicated resource group.</para>
+        /// <para>Lists the instances in a specified dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11140,7 +11733,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instances in a dedicated resource group.</para>
+        /// <para>Lists the instances in a specified dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11321,7 +11914,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of dedicated resource groups for the current user.</para>
+        /// <para>Lists the resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11399,7 +11992,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of dedicated resource groups for the current user.</para>
+        /// <para>Lists the resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11477,7 +12070,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of dedicated resource groups for the current user.</para>
+        /// <para>Lists the resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11496,7 +12089,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of dedicated resource groups for the current user.</para>
+        /// <para>Lists the resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11633,8 +12226,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取故障注入信息</para>
+        /// <para>Retrieves fault injection information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstanceFaultInjectionInfoRequest
@@ -11673,8 +12271,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取故障注入信息</para>
+        /// <para>Retrieves fault injection information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstanceFaultInjectionInfoRequest
@@ -11713,8 +12316,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取故障注入信息</para>
+        /// <para>Retrieves fault injection information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstanceFaultInjectionInfoRequest
@@ -11732,8 +12340,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取故障注入信息</para>
+        /// <para>Retrieves fault injection information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstanceFaultInjectionInfoRequest
@@ -11751,8 +12364,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instances of a service.</para>
+        /// <para>Lists the instances of a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Ensure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstancesRequest
@@ -11865,8 +12483,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instances of a service.</para>
+        /// <para>Lists the instances of a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Ensure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstancesRequest
@@ -11979,8 +12602,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instances of a service.</para>
+        /// <para>Lists the instances of a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Ensure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstancesRequest
@@ -11998,8 +12626,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instances of a service.</para>
+        /// <para>Lists the instances of a specified service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Ensure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS) before you call this operation.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListServiceInstancesRequest
@@ -12607,7 +13240,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// <para>Queries the virtual resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12673,7 +13306,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// <para>Queries the virtual resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12739,7 +13372,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// <para>Queries the virtual resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12758,7 +13391,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual resource groups for the current user.</para>
+        /// <para>Queries the virtual resource groups for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12777,7 +13410,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates resource group instances.</para>
+        /// <para>Migrates instances to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12831,7 +13464,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates resource group instances.</para>
+        /// <para>Migrates instances to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12885,7 +13518,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates resource group instances.</para>
+        /// <para>Migrates instances to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12904,7 +13537,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates resource group instances.</para>
+        /// <para>Migrates instances to a specified resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13297,7 +13930,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>伸缩服务</para>
+        /// <para>Scales a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13347,7 +13980,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>伸缩服务</para>
+        /// <para>Scales a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13397,7 +14030,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>伸缩服务</para>
+        /// <para>Scales a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13416,7 +14049,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>伸缩服务</para>
+        /// <para>Scales a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14209,8 +14842,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个配置项</para>
+        /// <para>Updates a dynamic parameter for a specific cluster and service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>Use this API to update a dynamic parameter by providing its <c>ClusterId</c>, <c>ConfigType</c>, <c>Name</c>, and <c>ConfigKey</c>. The request body must contain the new parameter value in the <c>Value</c> field. Ensure you provide the correct path parameters to avoid errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigRequest
@@ -14255,8 +14894,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个配置项</para>
+        /// <para>Updates a dynamic parameter for a specific cluster and service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>Use this API to update a dynamic parameter by providing its <c>ClusterId</c>, <c>ConfigType</c>, <c>Name</c>, and <c>ConfigKey</c>. The request body must contain the new parameter value in the <c>Value</c> field. Ensure you provide the correct path parameters to avoid errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigRequest
@@ -14301,8 +14946,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个配置项</para>
+        /// <para>Updates a dynamic parameter for a specific cluster and service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>Use this API to update a dynamic parameter by providing its <c>ClusterId</c>, <c>ConfigType</c>, <c>Name</c>, and <c>ConfigKey</c>. The request body must contain the new parameter value in the <c>Value</c> field. Ensure you provide the correct path parameters to avoid errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigRequest
@@ -14320,8 +14971,14 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新单个配置项</para>
+        /// <para>Updates a dynamic parameter for a specific cluster and service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <para>Use this API to update a dynamic parameter by providing its <c>ClusterId</c>, <c>ConfigType</c>, <c>Name</c>, and <c>ConfigKey</c>. The request body must contain the new parameter value in the <c>Value</c> field. Ensure you provide the correct path parameters to avoid errors.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigRequest
@@ -14339,7 +14996,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a private gateway.</para>
+        /// <para>Updates a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14417,7 +15074,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a private gateway.</para>
+        /// <para>Updates a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14495,7 +15152,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a private gateway.</para>
+        /// <para>Updates a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14514,7 +15171,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a private gateway.</para>
+        /// <para>Updates a private gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14533,8 +15190,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关标签</para>
+        /// <para>Adds a gateway label or updates an existing one.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayLabelRequest
@@ -14579,8 +15241,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关标签</para>
+        /// <para>Adds a gateway label or updates an existing one.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayLabelRequest
@@ -14625,8 +15292,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关标签</para>
+        /// <para>Adds a gateway label or updates an existing one.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayLabelRequest
@@ -14644,8 +15316,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改网关标签</para>
+        /// <para>Adds a gateway label or updates an existing one.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateGatewayLabelRequest
@@ -14663,7 +15340,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specific fields of a service group.</para>
+        /// <para>Updates specific fields of a service group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14683,6 +15360,14 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
             {
                 body["TrafficMode"] = request.TrafficMode;
@@ -14709,7 +15394,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specific fields of a service group.</para>
+        /// <para>Updates specific fields of a service group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14729,6 +15414,14 @@ namespace AlibabaCloud.SDK.Eas20210701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Labels))
+            {
+                body["Labels"] = request.Labels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrafficMode))
             {
                 body["TrafficMode"] = request.TrafficMode;
@@ -14755,7 +15448,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specific fields of a service group.</para>
+        /// <para>Updates specific fields of a service group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14774,7 +15467,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specific fields of a service group.</para>
+        /// <para>Updates specific fields of a service group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15085,7 +15778,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service scheduling status of an instance in a dedicated resource group.</para>
+        /// <para>Updates the scheduling status of an instance in a dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15139,7 +15832,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service scheduling status of an instance in a dedicated resource group.</para>
+        /// <para>Updates the scheduling status of an instance in a dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15193,7 +15886,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service scheduling status of an instance in a dedicated resource group.</para>
+        /// <para>Updates the scheduling status of an instance in a dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15212,7 +15905,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the service scheduling status of an instance in a dedicated resource group.</para>
+        /// <para>Updates the scheduling status of an instance in a dedicated resource group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15687,7 +16380,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Cron Horizontal Pod Autoscaler (CronHPA) settings of a service.</para>
+        /// <para>Updates the scheduled auto scaling configuration for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15737,7 +16430,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Cron Horizontal Pod Autoscaler (CronHPA) settings of a service.</para>
+        /// <para>Updates the scheduled auto scaling configuration for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15787,7 +16480,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Cron Horizontal Pod Autoscaler (CronHPA) settings of a service.</para>
+        /// <para>Updates the scheduled auto scaling configuration for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15806,7 +16499,7 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Cron Horizontal Pod Autoscaler (CronHPA) settings of a service.</para>
+        /// <para>Updates the scheduled auto scaling configuration for a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15825,8 +16518,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates attributes of service instances. Only isolation can be performed for service instances.</para>
+        /// <para>Updates the properties of a service instance. This operation applies only to fencing service instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServiceInstanceRequest
@@ -15885,8 +16583,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates attributes of service instances. Only isolation can be performed for service instances.</para>
+        /// <para>Updates the properties of a service instance. This operation applies only to fencing service instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServiceInstanceRequest
@@ -15945,8 +16648,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates attributes of service instances. Only isolation can be performed for service instances.</para>
+        /// <para>Updates the properties of a service instance. This operation applies only to fencing service instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServiceInstanceRequest
@@ -15964,8 +16672,13 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates attributes of service instances. Only isolation can be performed for service instances.</para>
+        /// <para>Updates the properties of a service instance. This operation applies only to fencing service instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you call this operation, make sure that you understand the billing methods and <a href="https://help.aliyun.com/document_detail/144261.html">pricing</a> of Elastic Algorithm Service (EAS).</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateServiceInstanceRequest
@@ -16251,18 +16964,18 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务发布计划</para>
+        /// <para>Updates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
-        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
-        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
-        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
-        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// <item><description><b>Provide at least one parameter</b>: Specify at least one of the <c>Partition</c>, <c>Batch</c>, or <c>Paused</c> parameters.</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You cannot specify both the <c>Partition</c> and <c>Batch</c> parameters in the same request.</description></item>
+        /// <item><description><b>Immediate effect</b>: Updates take effect immediately and affect ongoing service rollouts.</description></item>
+        /// <item><description><b>Rollback</b>: You can perform a rollback by increasing the <c>Partition</c> value. However, this is not an automatic process, and you must manually update the service image.</description></item>
+        /// <item><description><b>Pause does not affect parameters</b>: Pausing a rollout does not change the configured <c>Partition</c> or <c>Batch</c> parameters. It only suspends the current rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16317,18 +17030,18 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务发布计划</para>
+        /// <para>Updates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
-        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
-        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
-        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
-        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// <item><description><b>Provide at least one parameter</b>: Specify at least one of the <c>Partition</c>, <c>Batch</c>, or <c>Paused</c> parameters.</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You cannot specify both the <c>Partition</c> and <c>Batch</c> parameters in the same request.</description></item>
+        /// <item><description><b>Immediate effect</b>: Updates take effect immediately and affect ongoing service rollouts.</description></item>
+        /// <item><description><b>Rollback</b>: You can perform a rollback by increasing the <c>Partition</c> value. However, this is not an automatic process, and you must manually update the service image.</description></item>
+        /// <item><description><b>Pause does not affect parameters</b>: Pausing a rollout does not change the configured <c>Partition</c> or <c>Batch</c> parameters. It only suspends the current rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16383,18 +17096,18 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务发布计划</para>
+        /// <para>Updates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
-        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
-        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
-        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
-        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// <item><description><b>Provide at least one parameter</b>: Specify at least one of the <c>Partition</c>, <c>Batch</c>, or <c>Paused</c> parameters.</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You cannot specify both the <c>Partition</c> and <c>Batch</c> parameters in the same request.</description></item>
+        /// <item><description><b>Immediate effect</b>: Updates take effect immediately and affect ongoing service rollouts.</description></item>
+        /// <item><description><b>Rollback</b>: You can perform a rollback by increasing the <c>Partition</c> value. However, this is not an automatic process, and you must manually update the service image.</description></item>
+        /// <item><description><b>Pause does not affect parameters</b>: Pausing a rollout does not change the configured <c>Partition</c> or <c>Batch</c> parameters. It only suspends the current rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16414,18 +17127,18 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新服务发布计划</para>
+        /// <para>Updates a service rollout.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Usage notes</h2>
         /// <list type="bullet">
-        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
-        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
-        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
-        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
-        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// <item><description><b>Provide at least one parameter</b>: Specify at least one of the <c>Partition</c>, <c>Batch</c>, or <c>Paused</c> parameters.</description></item>
+        /// <item><description><b>Mutually exclusive strategies</b>: You cannot specify both the <c>Partition</c> and <c>Batch</c> parameters in the same request.</description></item>
+        /// <item><description><b>Immediate effect</b>: Updates take effect immediately and affect ongoing service rollouts.</description></item>
+        /// <item><description><b>Rollback</b>: You can perform a rollback by increasing the <c>Partition</c> value. However, this is not an automatic process, and you must manually update the service image.</description></item>
+        /// <item><description><b>Pause does not affect parameters</b>: Pausing a rollout does not change the configured <c>Partition</c> or <c>Batch</c> parameters. It only suspends the current rollout strategy.</description></item>
         /// </list>
         /// </description>
         /// 

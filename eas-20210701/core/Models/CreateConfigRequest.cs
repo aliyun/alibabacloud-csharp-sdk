@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateConfigRequest : TeaModel {
         /// <summary>
-        /// <para>配置值</para>
+        /// <para>The dynamic parameter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;model&quot;: &quot;gpt-4&quot;}</para>

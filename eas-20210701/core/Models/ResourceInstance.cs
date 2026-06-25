@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? AutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance.</para>
+        /// <para>The billing method for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores for the instance.</para>
+        /// <para>The number of CPUs for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? InstanceGpuCount { get; set; }
 
         /// <summary>
-        /// <para>The GPU memory size of the instance.</para>
+        /// <para>The VRAM size of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0G</para>
@@ -129,18 +129,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
+        /// <summary>
+        /// <para>The lifecycle phase of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>succeeded</para>
+        /// </summary>
         [NameInMap("InstancePhase")]
         [Validation(Required=false)]
         public string InstancePhase { get; set; }
 
         /// <summary>
-        /// <para>The instance status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Ready-SchedulingDisabled</description></item>
-        /// <item><description>Ready</description></item>
-        /// <item><description>NotReady</description></item>
-        /// </list>
+        /// <para>The status of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ready</para>
@@ -160,10 +160,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? InstanceSystemDiskSize { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the instance in the VPC.</para>
+        /// <para>The IP address of the instance in a dedicated network.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.xx.xx</para>
+        /// <para>192.168.XX.XX</para>
         /// </summary>
         [NameInMap("InstanceTenantIp")]
         [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores used by the instance.</para>
+        /// <para>The number of CPUs in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.4</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public float? InstanceUsedCpu { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs used by the instance.</para>
+        /// <para>The number of GPUs in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public float? InstanceUsedGpu { get; set; }
 
         /// <summary>
-        /// <para>The size of the GPU memory used by the instance.</para>
+        /// <para>The amount of VRAM in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>470M</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceUsedGpuMemory { get; set; }
 
         /// <summary>
-        /// <para>The size of the memory used by the instance.</para>
+        /// <para>The amount of memory in use.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000M</para>
@@ -220,14 +220,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceUsedMemory { get; set; }
 
         /// <summary>
-        /// <para>The instance tags.</para>
+        /// <para>The labels of the instance.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<ResourceInstanceLabels> Labels { get; set; }
         public class ResourceInstanceLabels : TeaModel {
             /// <summary>
-            /// <para>The tag key of the instance.</para>
+            /// <para>The label key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string LabelKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the instance.</para>
+            /// <para>The label value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>
@@ -248,16 +248,28 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         }
 
+        /// <summary>
+        /// <para>The operator who performed the last cordon.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>24340xxxxxxxx</para>
+        /// </summary>
         [NameInMap("LastCordonOperator")]
         [Validation(Required=false)]
         public string LastCordonOperator { get; set; }
 
+        /// <summary>
+        /// <para>The reason for the last cordon.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>operating</para>
+        /// </summary>
         [NameInMap("LastCordonReason")]
         [Validation(Required=false)]
         public string LastCordonReason { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -277,7 +289,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone to which the instance belongs.</para>
+        /// <para>The zone of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-b</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ContainerInfo : TeaModel {
         /// <summary>
-        /// <para>The reason why the container is in the current state.</para>
+        /// <para>The reason for the current status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PodInitializing</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CurrentReaon { get; set; }
 
         /// <summary>
-        /// <para>The current state of the container. Valid values:</para>
+        /// <para>The current status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Waiting</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Terminated</description></item>
+        /// <item><description>Waiting: waiting</description></item>
+        /// <item><description>Running: running</description></item>
+        /// <item><description>Terminated: terminated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CurrentStatus { get; set; }
 
         /// <summary>
-        /// <para>The time when the container entered the current state.</para>
+        /// <para>The time when the current status occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-21T06:17:57Z</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>The reason why the container is in the last state.</para>
+        /// <para>The reason for the previous status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Error</para>
@@ -65,11 +65,11 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string LastReason { get; set; }
 
         /// <summary>
-        /// <para>The last state of the container. Valid values:</para>
+        /// <para>The previous status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Waiting</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Terminated</description></item>
+        /// <item><description>Waiting: waiting</description></item>
+        /// <item><description>Running: running</description></item>
+        /// <item><description>Terminated: terminated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string LastStatus { get; set; }
 
         /// <summary>
-        /// <para>The time when the container entered the last state.</para>
+        /// <para>The time when the previous status occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-03-21T05:17:57Z</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The port number.</para>
+        /// <para>The port.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -110,23 +110,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the container passed the health check.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Indicates whether the health check is passed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -136,7 +120,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? Ready { get; set; }
 
         /// <summary>
-        /// <para>The number of times the container restarted.</para>
+        /// <para>The number of restarts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

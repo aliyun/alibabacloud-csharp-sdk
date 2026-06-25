@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Traffic mirroring is ON for service [foo] in region [cn-shanghia], ratio [70%]</para>
+        /// <para>Traffic mirroring is ON for service [foo] in region [cn-shanghai], ratio [70%]</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

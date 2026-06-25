@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
             /// <summary>
             /// <para>The region name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>华东 2（上海）</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]

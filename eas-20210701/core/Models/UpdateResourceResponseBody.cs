@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>eas-r-asdasdasd</para>
+        /// <para>eas-r-asdasdasd****</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]

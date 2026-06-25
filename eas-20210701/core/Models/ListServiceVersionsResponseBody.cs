@@ -69,9 +69,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>Indicates whether the image is available. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The image is available.</description></item>
-            /// <item><description>false: The image is unavailable.</description></item>
-            /// <item><description>unknown: The availability of the image is unknown.</description></item>
+            /// <item><description><para>true: The image is available.</para>
+            /// </description></item>
+            /// <item><description><para>false: The image is unavailable.</para>
+            /// </description></item>
+            /// <item><description><para>unknown: The availability of the image is unknown.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -121,9 +124,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: EAS is activated.</description></item>
-            /// <item><description>false: EAS is not activated.</description></item>
-            /// <item><description>unknown: The activation of EAS is unknown.</description></item>
+            /// <item><description><para>true: EAS is activated.</para>
+            /// </description></item>
+            /// <item><description><para>false: EAS is not activated.</para>
+            /// </description></item>
+            /// <item><description><para>unknown: The activation of EAS is unknown.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class CreateResourceLogResponseBody : TeaModel {
+    public class DeleteGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Resource [eas-r-asdasdasd****] is deleted.</para>
+        /// <para>Delete service group foo successfully</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>40325405-579C-4D82****</para>
+        /// <para>40325405-579C-4D82********</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

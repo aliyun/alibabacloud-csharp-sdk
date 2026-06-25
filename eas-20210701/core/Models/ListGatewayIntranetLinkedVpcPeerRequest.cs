@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGatewayIntranetLinkedVpcPeerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated VPC. To obtain the VPC ID, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</para>
+        /// <para>The ID of the attached virtual private cloud (VPC). For more information, see <a href="https://help.aliyun.com/document_detail/2621223.html">ListGatewayIntranetLinkedVpc</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify a VPC ID, only VPC peers corresponding to the ID are queried.</description></item>
-        /// <item><description>Otherwise, all VPC peers are queried.</description></item>
+        /// <item><description><para>Specify a VPC ID to query only the VPC peers for that VPC.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify a VPC ID, all VPC peers are returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

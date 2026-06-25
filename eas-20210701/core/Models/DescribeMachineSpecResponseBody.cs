@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeMachineSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance types when the resources are specified.</para>
+        /// <para>A list of available instance types for deployment.</para>
         /// </summary>
         [NameInMap("InstanceMetas")]
         [Validation(Required=false)]
         public List<DescribeMachineSpecResponseBodyInstanceMetas> InstanceMetas { get; set; }
         public class DescribeMachineSpecResponseBodyInstanceMetas : TeaModel {
             /// <summary>
-            /// <para>The number of CPU cores in the instance type.</para>
+            /// <para>The number of CPU cores of the instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? CPU { get; set; }
 
             /// <summary>
-            /// <para>The GPU type in the instance type. If the instance type is not a GPU-based instance type, this parameter does not exist.</para>
+            /// <para>The GPU model of the instance type. This field is not returned for non-GPU instance types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GU30</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? GPUAmount { get; set; }
 
             /// <summary>
-            /// <para>The GPU memory in the instance type. Unit: GB.</para>
+            /// <para>The GPU memory size of the instance type, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>24</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public float? GPUMemory { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance type.</para>
+            /// <para>The instance type name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ml.gu7i.c32m188.1-gu30</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the instance type is available.</para>
+            /// <para>Indicates whether the instance type is currently available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public bool? IsAvailable { get; set; }
 
             /// <summary>
-            /// <para>The memory size in the instance type. Unit: GB.</para>
+            /// <para>The memory size of the instance type, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>188</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public float? Memory { get; set; }
 
             /// <summary>
-            /// <para>The minimum discount that can be accepted when the preemptible instance type does not include a usage duration. 0.1 indicates one fold. If this parameter is not returned, the bidding feature is not supported.</para>
+            /// <para>The minimum discount currently offered for a spot instance in no-protection mode. A value of 0.1 indicates a 90% discount. If this field is not returned, the instance type does not support spot instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public float? NonProtectSpotDiscount { get; set; }
 
             /// <summary>
-            /// <para>The minimum discount that can be accepted when the preemptible instance type has the 1-hour protection duration. 0.1 indicates one fold. If this parameter is not returned, the bidding feature is not supported.</para>
+            /// <para>The current lowest discount for a spot instance with a 1-hour protection period. A value of 0.1 indicates a 90% discount. If this field is not returned, the instance type does not support spot instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.12</para>
@@ -108,12 +108,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
             /// <summary>
             /// <para>The inventory status of the instance type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>WithStock</description></item>
-            /// <item><description>ClosedWithStock</description></item>
-            /// <item><description>NoStock</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>WithStock</para>
@@ -124,12 +118,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
             /// <summary>
             /// <para>The source of the instance type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ECS</description></item>
-            /// <item><description>BareMetal</description></item>
-            /// <item><description>Lingjun</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ECS</para>
@@ -151,14 +139,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The values that can be supported when the number of CPUs and memory size are specified for deployment.</para>
+        /// <para>The supported combinations of CPU and memory values for deployment.</para>
         /// </summary>
         [NameInMap("Types")]
         [Validation(Required=false)]
         public List<DescribeMachineSpecResponseBodyTypes> Types { get; set; }
         public class DescribeMachineSpecResponseBodyTypes : TeaModel {
             /// <summary>
-            /// <para>Valid values:</para>
+            /// <para>The valid values for the number of CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -168,7 +156,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? CPU { get; set; }
 
             /// <summary>
-            /// <para>The optional values for memory when CPU is set to a specific value as above.</para>
+            /// <para>The valid memory values for the specified number of CPU cores.</para>
             /// </summary>
             [NameInMap("Memory")]
             [Validation(Required=false)]

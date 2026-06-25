@@ -29,10 +29,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The backend access ID, which varies based on the value of the EndpointType parameter.</para>
             /// <list type="bullet">
-            /// <item><description>If you set EndpointType to DefaultGateway, the value of this parameter is default.</description></item>
-            /// <item><description>If you set EndpointType to PrivateGateway, the value of this parameter is the ID of the dedicated gateway.</description></item>
-            /// <item><description>If you set EndpointType to Nlb, the value of this parameter is the ID of the NLB instance.</description></item>
-            /// <item><description>If you set EndpointType to Nacos, the value of this parameter is the ID of the Nacos instance.</description></item>
+            /// <item><description><para>If you set EndpointType to DefaultGateway, the value of this parameter is default.</para>
+            /// </description></item>
+            /// <item><description><para>If you set EndpointType to PrivateGateway, the value of this parameter is the ID of the dedicated gateway.</para>
+            /// </description></item>
+            /// <item><description><para>If you set EndpointType to Nlb, the value of this parameter is the ID of the NLB instance.</para>
+            /// </description></item>
+            /// <item><description><para>If you set EndpointType to Nacos, the value of this parameter is the ID of the Nacos instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,10 +49,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The service endpoint type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DefaultGateway: the shared gateway.</description></item>
-            /// <item><description>PrivateGateway: the dedicated gateway.</description></item>
-            /// <item><description>Nlb: Associate the service with the Network Load Balancer (NLB) instance.</description></item>
-            /// <item><description>Nacos: Associate the service with the Nacos instance.</description></item>
+            /// <item><description><para>DefaultGateway: the shared gateway.</para>
+            /// </description></item>
+            /// <item><description><para>PrivateGateway: the dedicated gateway.</para>
+            /// </description></item>
+            /// <item><description><para>Nlb: Associate the service with the Network Load Balancer (NLB) instance.</para>
+            /// </description></item>
+            /// <item><description><para>Nacos: Associate the service with the Nacos instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +109,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Execution successful.</para>
+        /// <para>Execution succeeded.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

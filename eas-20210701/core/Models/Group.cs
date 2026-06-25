@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class Group : TeaModel {
         /// <summary>
-        /// <para>The token that is used to access the service group.</para>
+        /// <para>The access token for the traffic entry of the service group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MzJiMDI5MDliODc0MTlkYmI0ZDhlYmExYjczYTIyZTE3Zm********</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string AccessToken { get; set; }
 
+        [NameInMap("CallerUid")]
+        [Validation(Required=false)]
+        public string CallerUid { get; set; }
+
         /// <summary>
-        /// <para>The region where the service group resides.</para>
+        /// <para>The region in which the service group resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time when the service group was created. The time is displayed in UTC.</para>
+        /// <para>The time when the service group was created. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-05-19T14:19:42Z</para>
@@ -59,6 +63,20 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string IntranetEndpoint { get; set; }
 
+        [NameInMap("Labels")]
+        [Validation(Required=false)]
+        public List<GroupLabels> Labels { get; set; }
+        public class GroupLabels : TeaModel {
+            [NameInMap("LabelKey")]
+            [Validation(Required=false)]
+            public string LabelKey { get; set; }
+
+            [NameInMap("LabelValue")]
+            [Validation(Required=false)]
+            public string LabelValue { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The name of the service group.</para>
         /// 
@@ -69,8 +87,34 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("Network")]
+        [Validation(Required=false)]
+        public GroupNetwork Network { get; set; }
+        public class GroupNetwork : TeaModel {
+            [NameInMap("GatewayId")]
+            [Validation(Required=false)]
+            public string GatewayId { get; set; }
+
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            [NameInMap("VSwitchId")]
+            [Validation(Required=false)]
+            public string VSwitchId { get; set; }
+
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+        }
+
+        [NameInMap("ParentUid")]
+        [Validation(Required=false)]
+        public string ParentUid { get; set; }
+
         /// <summary>
-        /// <para>The queue service that is included in the service group.</para>
+        /// <para>The queue services contained in the service group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qservice</para>
@@ -81,11 +125,6 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 
         /// <summary>
         /// <para>The traffic mode.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>auto: The traffic is automatically allocated based on the number of instances.</description></item>
-        /// <item><description>customized: The traffic is allocated based on the custom weight.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>
@@ -95,7 +134,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string TrafficMode { get; set; }
 
         /// <summary>
-        /// <para>The time when the service group was updated. The time is displayed in UTC.</para>
+        /// <para>The time when the service group was last updated. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-29T11:13:20Z</para>

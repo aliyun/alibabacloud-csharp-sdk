@@ -118,9 +118,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The name of the metric for triggering auto scaling. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>qps: the queries per second (qps) for an individual instance.</description></item>
-            /// <item><description>cpu: the cpu utilization.</description></item>
-            /// <item><description>gpu[util]: gpu utilization.</description></item>
+            /// <item><description><para>qps: the queries per second (qps) for an individual instance.</para>
+            /// </description></item>
+            /// <item><description><para>cpu: the cpu utilization.</para>
+            /// </description></item>
+            /// <item><description><para>gpu[util]: gpu utilization.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -144,9 +147,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The threshold of the metric that triggers auto scaling.</para>
             /// <list type="bullet">
-            /// <item><description>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</description></item>
-            /// <item><description>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</description></item>
-            /// <item><description>If you set metricName to gpu, scale-out is triggered when the average gpu utilization for a single instance is greater than this threshold.</description></item>
+            /// <item><description><para>If you set metricName to qps, scale-out is triggered when the average qps for a single instance is greater than this threshold.</para>
+            /// </description></item>
+            /// <item><description><para>If you set metricName to cpu, scale-out is triggered when the average cpu utilization for a single instance is greater than this threshold.</para>
+            /// </description></item>
+            /// <item><description><para>If you set metricName to gpu, scale-out is triggered when the average gpu utilization for a single instance is greater than this threshold.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeServiceEventResponseBody : TeaModel {
         /// <summary>
-        /// <para>The events.</para>
+        /// <para>The list of events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<DescribeServiceEventResponseBodyEvents> Events { get; set; }
         public class DescribeServiceEventResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The returned message. The message is formatted and returned in the JSON format.</para>
+            /// <para>The event message, which is a JSON-formatted string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;versionId\&quot;:1,\&quot;message\&quot;:\&quot;Stage scale complete\&quot;,\&quot;availableInstance\&quot;:1,\&quot;unavailableInstance\&quot;:0}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The cause of the event. The information about the change in the service status is returned.</para>
+            /// <para>The reason for the event, which indicates a change in the service status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Updating</para>
@@ -36,12 +36,24 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [Validation(Required=false)]
             public string Reason { get; set; }
 
+            /// <summary>
+            /// <para>The resource type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Service: a service.</para>
+            /// </description></item>
+            /// <item><description><para>Pod: a service instance.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Service</para>
+            /// </summary>
             [NameInMap("Resource")]
             [Validation(Required=false)]
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred. The time must be in UTC.</para>
+            /// <para>The time when the event occurred, in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-09 06:30:00</para>
@@ -53,8 +65,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Normal</description></item>
-            /// <item><description>Warning</description></item>
+            /// <item><description><para>Normal: a normal event.</para>
+            /// </description></item>
+            /// <item><description><para>Warning: a warning event.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +81,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -87,7 +101,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count of events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29</para>
@@ -97,7 +111,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The returned page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource groups.</para>
+        /// <para>A list of resource groups.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<Resource> Resources { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of resource groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

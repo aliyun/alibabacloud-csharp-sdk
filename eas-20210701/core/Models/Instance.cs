@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class Instance : TeaModel {
+        /// <summary>
+        /// <para>The creation time of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-05-27T09:46:05Z</para>
+        /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
@@ -23,12 +29,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public float? CurrentAmount { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the instance is removed from active service rotation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("Detached")]
         [Validation(Required=false)]
         public bool? Detached { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the instance in the user-created VPC.</para>
+        /// <para>The IP address of the instance in your VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.1.100</para>
@@ -38,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ExternalIP { get; set; }
 
         /// <summary>
-        /// <para>The port number of the instance in the user-created VPC.</para>
+        /// <para>The port number of the instance in your VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8080</para>
@@ -48,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? ExternalInstancePort { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the host where the instance resides.</para>
+        /// <para>The IP address of the instance\&quot;s host.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11.0.XX.XX</para>
@@ -58,7 +70,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string HostIP { get; set; }
 
         /// <summary>
-        /// <para>The name of the host where the instance resides.</para>
+        /// <para>The name of the instance\&quot;s host.</para>
         /// 
         /// <b>Example:</b>
         /// <para>smart-scene-cls-854dbdc99d-****</para>
@@ -78,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InnerIP { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The name of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo-5fc8946767-v****</para>
@@ -98,7 +110,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? InstancePort { get; set; }
 
         /// <summary>
-        /// <para>The instance specification.</para>
+        /// <para>The instance type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.c7.large</para>
@@ -107,10 +119,22 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the instance is running the latest version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IsLatest")]
         [Validation(Required=false)]
         public bool? IsLatest { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the instance is a replica.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("IsReplica")]
         [Validation(Required=false)]
         public bool? IsReplica { get; set; }
@@ -126,7 +150,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? IsSpot { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance is isolated.</para>
+        /// <para>Indicates whether the instance accepts traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -136,7 +160,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? Isolated { get; set; }
 
         /// <summary>
-        /// <para>The last state of the instance.</para>
+        /// <para>The status of the instance when it last exited.</para>
         /// </summary>
         [NameInMap("LastState")]
         [Validation(Required=false)]
@@ -153,7 +177,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The original hourly price of the spot instance before a discount is used.</para>
+        /// <para>The original price of the spot instance before discounts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.2</para>
@@ -163,7 +187,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public float? OriginalAmount { get; set; }
 
         /// <summary>
-        /// <para>The number of processes that have started for the instance.</para>
+        /// <para>The number of processes that have started in the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -173,7 +197,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? ReadyProcesses { get; set; }
 
         /// <summary>
-        /// <para>The reason for which the instance is in the current state.</para>
+        /// <para>The identifier for the current status of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -182,12 +206,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        /// <summary>
+        /// <para>The name of the replica.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xwq-sglang-dist-7dff0</para>
+        /// </summary>
         [NameInMap("ReplicaName")]
         [Validation(Required=false)]
         public string ReplicaName { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource group to which the instance belongs. Valid values: PublicResource and PrivateResource.</para>
+        /// <para>The type of the resource group to which the instance belongs. Valid values include PublicResource and PrivateResource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PublicResource</para>
@@ -197,7 +227,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The number of times for which the instance is restarted.</para>
+        /// <para>The number of times the instance has been restarted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -207,7 +237,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? RestartCount { get; set; }
 
         /// <summary>
-        /// <para>The service role of the instance. Valid values: Queue, DataLoader, and Standard.</para>
+        /// <para>The server role of the instance. Valid values include Queue, DataLoader, and Standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -219,7 +249,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The time when the instance was started. This parameter is deprecated. StartTime is used instead.</para>
+        /// <para>The start time of the instance. (Deprecated. Use StartTime instead.)</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-27T09:46:05Z</para>
@@ -230,7 +260,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string StartAt { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance was started.</para>
+        /// <para>The start time of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-27T09:46:05Z</para>
@@ -240,16 +270,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The current state of the instance.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Terminating</description></item>
-        /// <item><description>Succeeded</description></item>
-        /// <item><description>Unknown</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Pending</description></item>
-        /// </list>
+        /// <para>The status of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -259,7 +280,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the host in the VPC.</para>
+        /// <para>The IP address of the host in the dedicated network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.xx.xx</para>
@@ -269,7 +290,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string TenantHostIP { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the instance in the VPC.</para>
+        /// <para>The IP address of the instance in the dedicated network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.xx.xx</para>
@@ -279,7 +300,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string TenantInstanceIP { get; set; }
 
         /// <summary>
-        /// <para>The total number of processes that the instance contains.</para>
+        /// <para>The total number of processes for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -289,7 +310,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? TotalProcesses { get; set; }
 
         /// <summary>
-        /// <para>The zone to which the instance belongs.</para>
+        /// <para>The zone where the instance is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-a</para>

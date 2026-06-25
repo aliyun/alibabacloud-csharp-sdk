@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayIntranetLinkedVpcResponseBody : TeaModel {
         /// <summary>
-        /// <para>The private gateway ID.</para>
+        /// <para>The ID of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successfully add intranet linked vpc for gateway</para>

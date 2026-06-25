@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Log service for resource [eas-r-asdasdasd] is deleting</para>
+        /// <para>Log service for resource [eas-r-asdas****] is deleting</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

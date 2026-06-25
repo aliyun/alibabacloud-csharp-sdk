@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListBenchmarkTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword used to query required stress testing tasks. If this parameter is specified, the system returns stress testing tasks based on the names of the stress testing tasks in the matched Elastic Algorithm Service (EAS).</para>
+        /// <para>The filter used to query tasks. If you specify this parameter, the system returns tasks whose names or associated service names match the filter value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_bench</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100.</para>
+        /// <para>The name of the Elastic Algorithm Service (EAS) service that corresponds to the stress testing task. For more information about how to query the service name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DescribeServiceEventRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. By default, the current point in time is the end of the time range to query.</para>
+        /// <para>The end time of the query range, in UTC. The default value is the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2006-01-02 15:04:05</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The event type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal</description></item>
-        /// <item><description>Warning</description></item>
+        /// <item><description><para>Normal: a normal event.</para>
+        /// </description></item>
+        /// <item><description><para>Warning: a warning event.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The instance name. For more information about how to obtain the instance name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</para>
+        /// <para>The name of the service instance. To obtain this name, see <a href="https://help.aliyun.com/document_detail/412108.html">ListServiceInstances</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>echo-test-784xxxx85d-hhnd8</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100.</para>
+        /// <para>The number of events to return per page. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The time must be in UTC. The default value is seven days ago.</para>
+        /// <para>The start time of the query range, in UTC. The default value is 7 days ago.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2006-01-02 15:04:05</para>

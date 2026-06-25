@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Benchmark task [benchmark-larec-test-1076] is Stopping</para>
+        /// <para>Benchmark task [benchmark-larec-test-dbe5] is Stopping</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

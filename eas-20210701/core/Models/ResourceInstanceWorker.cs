@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ResourceInstanceWorker : TeaModel {
         /// <summary>
-        /// <para>The maximum number of CPU cores.</para>
+        /// <para>The CPU core limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? CpuLimit { get; set; }
 
         /// <summary>
-        /// <para>The number of CPU cores that you applied for.</para>
+        /// <para>The number of CPU cores requested.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? CpuRequest { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of GPUs.</para>
+        /// <para>The GPU limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? GpuLimit { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs that you applied for.</para>
+        /// <para>The number of GPUs requested.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? GpuRequest { get; set; }
 
         /// <summary>
-        /// <para>The maximum memory size.</para>
+        /// <para>The memory limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? MemoryLimit { get; set; }
 
         /// <summary>
-        /// <para>The memory size that you applied for.</para>
+        /// <para>The requested memory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the instance worker is ready.</para>
+        /// <para>Indicates whether the instance is ready.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? Ready { get; set; }
 
         /// <summary>
-        /// <para>The number of times the instance worker restarted.</para>
+        /// <para>The number of times the instance has been restarted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? RestartCount { get; set; }
 
         /// <summary>
-        /// <para>The service name.</para>
+        /// <para>The name of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-in****</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The time when the instance worker started.</para>
+        /// <para>The start time of the instance, in UTC (ISO 8601 format).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-09T09:56:19Z</para>
@@ -120,51 +120,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The instance state.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Terminating</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Succeeded</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Unknown</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Failed</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Running</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Pending</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The status of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>

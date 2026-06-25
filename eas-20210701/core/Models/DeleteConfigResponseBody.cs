@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>删除的配置数量</para>
+        /// <para>The number of configurations deleted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? Deleted { get; set; }
 
         /// <summary>
-        /// <para>操作结果消息</para>
+        /// <para>A message indicating the operation result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successfully deleted 1 configs</para>

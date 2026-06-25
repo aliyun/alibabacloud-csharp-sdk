@@ -31,7 +31,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The request body. The body includes the request parameters that you want to update. For more information about the request parameters, see <a href="https://help.aliyun.com/document_detail/412086.html">CreateService</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{   &quot;name&quot;: &quot;foo&quot;,   &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,   &quot;processor&quot;: &quot;tensorflow_cpu&quot;,   &quot;metadata&quot;: {     &quot;instance&quot;: 2,     &quot;memory&quot;: 7000,     &quot;cpu&quot;: 4   } }</para>
+        /// <para>{
+        ///       &quot;name&quot;: &quot;foo&quot;,
+        ///       &quot;model_path&quot;: &quot;<a href="http://path/to/model.tar.gz">http://path/to/model.tar.gz</a>&quot;,
+        ///       &quot;processor&quot;: &quot;tensorflow_cpu&quot;,
+        ///       &quot;metadata&quot;: {
+        ///             &quot;instance&quot;: 2,
+        ///             &quot;memory&quot;: 7000,
+        ///             &quot;cpu&quot;: 4
+        ///       }
+        /// }</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

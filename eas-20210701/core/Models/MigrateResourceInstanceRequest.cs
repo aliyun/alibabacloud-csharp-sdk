@@ -21,13 +21,19 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string DestResourceId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The IDs of the instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to migrate the instances to a general computing resource group. If set to true, specify the ID of the general computing resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("MigrateToHybrid")]
         [Validation(Required=false)]
         public bool? MigrateToHybrid { get; set; }

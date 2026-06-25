@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteResourceInstanceLabelResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ScaleServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The target number of instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public long? Instance { get; set; }
 
         /// <summary>
+        /// <para>A list of instance names to prioritize for removal during a scale-in operation.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

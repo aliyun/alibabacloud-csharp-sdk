@@ -17,11 +17,19 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable Auto Scaling for the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoscalerEnabled")]
         [Validation(Required=false)]
         public bool? AutoscalerEnabled { get; set; }
 
         /// <summary>
+        /// <para>The UID of the account that created the service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19989224166xxxxxxx</para>
         /// </summary>
@@ -29,12 +37,18 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string CallerUid { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable scheduled auto scaling for the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("CronscalerEnabled")]
         [Validation(Required=false)]
         public bool? CronscalerEnabled { get; set; }
 
         /// <summary>
-        /// <para>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</para>
+        /// <para>The keyword for a fuzzy search. This parameter supports fuzzy searches by service name only.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -54,7 +68,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Gateway { get; set; }
 
         /// <summary>
-        /// <para>The name of the service group. For more information about how to query the name of a service group, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</para>
+        /// <para>The name of the service group. To learn how to obtain this name, see <a href="https://help.aliyun.com/document_detail/412109.html">ListServices</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>
@@ -63,22 +77,30 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to include services that do not belong to any workspace. The default value is true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IncludeNoWorkspace")]
         [Validation(Required=false)]
         public bool? IncludeNoWorkspace { get; set; }
 
         /// <summary>
-        /// <para>The tag that is used to filter services.</para>
+        /// <para>Filters services by label.</para>
         /// </summary>
         [NameInMap("Label")]
         [Validation(Required=false)]
         public Dictionary<string, string> Label { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>desc (default): The query results are sorted in descending order.</description></item>
-        /// <item><description>asc: The query results are sorted in ascending order.</description></item>
+        /// <item><description><para><c>desc</c> (default): descending.</para>
+        /// </description></item>
+        /// <item><description><para><c>asc</c>: ascending.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +111,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number of the results to return. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +121,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100.</para>
+        /// <para>The number of services to return per page. The default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -109,7 +131,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the primary service that corresponds to the Band member service.</para>
+        /// <para>The UID of the primary service. This parameter applies to member services in a service group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-m-ijafy3c8cxxxx</para>
@@ -122,20 +144,38 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The quota ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>quota12345</para>
+        /// <para>quota1****</para>
         /// </summary>
         [NameInMap("QuotaId")]
         [Validation(Required=false)]
         public string QuotaId { get; set; }
 
+        /// <summary>
+        /// <para>The custom name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example</para>
+        /// </summary>
         [NameInMap("ResourceAliasName")]
         [Validation(Required=false)]
         public string ResourceAliasName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable a burstable resource pool for the service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ResourceBurstable")]
         [Validation(Required=false)]
         public bool? ResourceBurstable { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group. To learn how to query for this ID, see <a href="https://help.aliyun.com/document_detail/412133.html">ListResources</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eas-r-asdas****</para>
+        /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
@@ -143,7 +183,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The name or ID of the resource group to which the service belongs.</para>
+        /// <para>The name or ID of the service\&quot;s resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-hd0qwy8cxxxx</para>
@@ -153,24 +193,28 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Obsolete]
         public string ResourceName { get; set; }
 
+        /// <summary>
+        /// <para>The type of resource the service uses. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>PublicResource</para>
+        /// </description></item>
+        /// <item><description><para>DedicatedResource</para>
+        /// </description></item>
+        /// <item><description><para>Lingjun</para>
+        /// </description></item>
+        /// <item><description><para>SelfManagedLingjun</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PublicResource</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The server role.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DataLoader</description></item>
-        /// <item><description>FrontEnd</description></item>
-        /// <item><description>DataSet</description></item>
-        /// <item><description>SDProxy</description></item>
-        /// <item><description>LLMSscheduler</description></item>
-        /// <item><description>ScalableJob</description></item>
-        /// <item><description>LLMGateway</description></item>
-        /// <item><description>Job</description></item>
-        /// <item><description>Queue</description></item>
-        /// </list>
+        /// <para>The service role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LLMGateway</para>
@@ -190,135 +234,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The service state.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Creating</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Stopped</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Failed</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Complete</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Cloning</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Stopping</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Updating</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Waiting</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>HotUpdate</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Committing</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Starting</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>DeleteFailed</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Running</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Developing</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Scaling</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Deleted</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Pending</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Deleting</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The status of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -330,40 +246,30 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>The service type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Async</description></item>
-        /// <item><description>Standard</description></item>
-        /// <item><description>Offline Task</description></item>
-        /// <item><description>Proxima</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
         /// <item><description><para>Async</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
         /// </description></item>
         /// <item><description><para>Standard</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
+        /// </description></item>
+        /// <item><description><para>Queue</para>
+        /// </description></item>
+        /// <item><description><para>LLM</para>
+        /// </description></item>
+        /// <item><description><para>RAG</para>
+        /// </description></item>
+        /// <item><description><para>Serverless</para>
+        /// </description></item>
+        /// <item><description><para>LLMGatewayService</para>
         /// </description></item>
         /// <item><description><para>OfflineTask</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
         /// </description></item>
-        /// <item><description><para>Proxima</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description><para>SDCluster</para>
+        /// </description></item>
+        /// <item><description><para>ScalableJob</para>
+        /// </description></item>
+        /// <item><description><para>ScalableJobService</para>
+        /// </description></item>
+        /// <item><description><para>AssistantJob</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -374,7 +280,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The user ID (UID) of the service.</para>
+        /// <para>The service UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-m-c9iw3yitxxxx</para>
@@ -384,7 +290,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ServiceUid { get; set; }
 
         /// <summary>
-        /// <para>The sort field. By default, the query results are sorted by the timestamp type in descending order.</para>
+        /// <para>The sort field. By default, results are sorted by timestamp in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -393,6 +299,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Sort { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the service accepts group traffic. This parameter applies only to services within a service group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>grouping</para>
+        /// </summary>
         [NameInMap("TrafficState")]
         [Validation(Required=false)]
         public string TrafficState { get; set; }
@@ -401,7 +313,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>1234**</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

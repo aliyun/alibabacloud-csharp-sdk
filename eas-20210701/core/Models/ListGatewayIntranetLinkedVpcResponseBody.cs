@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListGatewayIntranetLinkedVpcResponseBody : TeaModel {
         /// <summary>
-        /// <para>The private gateway ID.</para>
+        /// <para>The ID of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -20,16 +20,28 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The internal endpoints.</para>
+        /// <para>The list of internal access endpoints.</para>
         /// </summary>
         [NameInMap("IntranetLinkedVpcList")]
         [Validation(Required=false)]
         public List<ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList> IntranetLinkedVpcList { get; set; }
         public class ListGatewayIntranetLinkedVpcResponseBodyIntranetLinkedVpcList : TeaModel {
+            /// <summary>
+            /// <para>The ID of the Alibaba Cloud account that owns the VPC.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>161*******66</para>
+            /// </summary>
             [NameInMap("AccountId")]
             [Validation(Required=false)]
             public string AccountId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether authoritative DNS resolution is enabled. Default value: false.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AuthoritativeDnsEnabled")]
             [Validation(Required=false)]
             public bool? AuthoritativeDnsEnabled { get; set; }
@@ -45,7 +57,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The security group ID.</para>
+            /// <para>The ID of the security group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-2ze4pgstgszvgq******</para>
@@ -55,26 +67,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The state of the private gateway.</para>
-            /// <para>Valid values:</para>
+            /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Creating</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>The private gateway is being created.</para>
-            /// <!-- -->
+            /// <item><description><para>Creating: The endpoint is being created.</para>
             /// </description></item>
-            /// <item><description><para>Running</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>The private gateway is running.</para>
-            /// <!-- --></description></item>
+            /// <item><description><para>Running: The endpoint is running.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +83,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the virtual switch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-8vb2qjoiio6m9pg******</para>
@@ -95,7 +93,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The virtual private cloud (VPC) ID.</para>
+            /// <para>The ID of the virtual private cloud (VPC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-2zetuli9ws0qgjd******</para>

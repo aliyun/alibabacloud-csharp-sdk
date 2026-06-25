@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default)</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false (default): Auto-renewal is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>true: Auto-renewal is enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public bool? AutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description><para>PrePaid: subscription.</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The number of instances that you want to create. Valid values: 1 to 100.</para>
+        /// <para>The number of new instances to create. The value must be between 1 and 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? EcsInstanceCount { get; set; }
 
         /// <summary>
-        /// <para>The type of the Elastic Compute Service (ECS) instance.</para>
+        /// <para>The instance type. This corresponds to an ECS instance type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,14 +65,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string EcsInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The custom service tag.</para>
+        /// <para>The user-defined tags.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
-        /// <para>The size of the system disk. Unit: GiB. Valid values: 200 to 2000. Default value: 200.</para>
+        /// <para>The size of the system disk, in GiB. The value must be between 200 and 2,000. If you do not configure this parameter, the default value is 200 GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The user-defined information. This parameter is not in use.</para>
+        /// <para>The custom user data. This parameter is not currently used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>x112223333</para>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>The zone to which the instance belongs.</para>
+        /// <para>The zone where the instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai-f</para>

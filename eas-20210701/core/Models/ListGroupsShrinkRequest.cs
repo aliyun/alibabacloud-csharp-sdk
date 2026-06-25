@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
-    public class ListGroupsRequest : TeaModel {
+    public class ListGroupsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The filter name. Fuzzy match is supported.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Labels { get; set; }
+        public string LabelsShrink { get; set; }
 
         /// <summary>
         /// <para>The sort order of the results.</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class DeleteResourceInstanceLabelRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the delete operation takes effect on all instances in the resource group. If you set this parameter to true, the InstanceIds parameter does not take effect.</para>
+        /// <para>Specifies whether the operation takes effect on all instances in the resource group. If this parameter is set to true, the InstanceIds parameter does not take effect.</para>
         /// </summary>
         [NameInMap("AllInstances")]
         [Validation(Required=false)]
         public bool? AllInstances { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>The machine instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -26,13 +26,16 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The keys of the tags that you want to delete.</para>
+        /// <para>The tags to delete. (Deprecated. Use LabelKeys instead.).</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         [Obsolete]
         public List<string> Keys { get; set; }
 
+        /// <summary>
+        /// <para>The tags to delete.</para>
+        /// </summary>
         [NameInMap("LabelKeys")]
         [Validation(Required=false)]
         public List<string> LabelKeys { get; set; }

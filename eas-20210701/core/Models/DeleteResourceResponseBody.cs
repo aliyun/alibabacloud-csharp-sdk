@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Resource [eas-r-asdasdasd] is deleted.</para>
+        /// <para>Resource [eas-r-asdasdasd****] is deleted.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>40325405-579C-4D82-9624-EC2B1779848E</para>
+        /// <para>40325405-579C-4D82-9624-EC2B1779****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

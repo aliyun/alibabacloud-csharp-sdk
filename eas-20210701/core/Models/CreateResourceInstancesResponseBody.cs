@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateResourceInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance IDs.</para>
+        /// <para>A list of machine instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for a successful operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Create 5 new ecs instance(s) in resource [eas-r-asdasdasd] successfully</para>

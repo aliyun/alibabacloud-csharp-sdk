@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class UpdateResourceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The operation that updates the scheduling state of the instance in a dedicated resource group. Valid values:</para>
+        /// <para>The scheduling behavior to update for the instance in the dedicated resource group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Uncordon: allows scheduling the service to this instance.</description></item>
-        /// <item><description>Cordon: prohibits scheduling the service to this instance.</description></item>
-        /// <item><description>Drain: evicts the service that has been scheduled to this instance.</description></item>
+        /// <item><description><para>Uncordon: Allows services to be scheduled to the instance.</para>
+        /// </description></item>
+        /// <item><description><para>Cordon: Prevents services from being scheduled to the instance.</para>
+        /// </description></item>
+        /// <item><description><para>Drain: Evicts the service instances that are running on the instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

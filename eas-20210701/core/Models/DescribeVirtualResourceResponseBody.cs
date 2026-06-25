@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the retention period of preemptible instances was disabled.</para>
+        /// <para>Indicates whether the protection period for spot instances is disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -29,12 +29,15 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public bool? DisableSpotProtectionPeriod { get; set; }
 
+        /// <summary>
+        /// <para>The collection of features for the virtual resource group. This identifies the attributes that the resource group supports.</para>
+        /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
         public List<string> Features { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40325405-579C-4D82****</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The priority of resource scheduling. A greater number specifies a higher priority.</para>
+            /// <para>The scheduling priority of the resource. A larger value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public int? Priority { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the public resource group.</para>
+            /// <para>The ID of the Lingjun resource quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>quota185lqxxxxxx</para>
@@ -81,7 +84,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string QuotaId { get; set; }
 
             /// <summary>
-            /// <para>The region where the resource resides.</para>
+            /// <para>The region where the resource is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The maximum price of preemptible instances in a public resource group.</para>
+            /// <para>The maximum price for a spot instance in the public resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.05</para>

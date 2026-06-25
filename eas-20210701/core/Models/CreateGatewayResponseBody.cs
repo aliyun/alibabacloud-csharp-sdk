@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class CreateGatewayResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region ID of the private gateway.</para>
+        /// <para>The region where the private gateway resides.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-wulanchabu</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The private gateway ID.</para>
+        /// <para>The ID of the private gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-1uhcqmsc7x22******</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Successfully create gateway.</para>
+        /// <para>Successfully create gateway for user-managed resource</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

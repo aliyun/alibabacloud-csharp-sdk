@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class ListResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Desc</description></item>
-        /// <item><description>Asc</description></item>
+        /// <item><description><para><c>Desc</c>: descending order</para>
+        /// </description></item>
+        /// <item><description><para><c>Asc</c>: ascending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation to query the ID of the resource group.</para>
+        /// <para>The resource group ID. The <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation returns this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eas-r-h7lcw24dyqztwxxxxxx</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource group. You can call the <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation to query the name of the resource group.</para>
+        /// <para>The resource group name. The <a href="https://help.aliyun.com/document_detail/412111.html">CreateResource</a> operation returns this name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyResource</para>
@@ -74,10 +76,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource group. Valid values:</para>
+        /// <para>The resource group type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Dedicated: the dedicated resource group.</description></item>
-        /// <item><description>SelfManaged: the self-managed resource group.</description></item>
+        /// <item><description><para><c>Dedicated</c>: dedicated resource group</para>
+        /// </description></item>
+        /// <item><description><para><c>SelfManaged</c>: self-managed resource group</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,20 +92,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The condition by which the results are sorted. By default, the query results are sorted by the timestamp type in descending order.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PrePaidInstanceCount</description></item>
-        /// <item><description>CpuCount</description></item>
-        /// <item><description>Memory</description></item>
-        /// <item><description>CreateTime</description></item>
-        /// <item><description>PostPaidInstanceCount</description></item>
-        /// <item><description>MemoryUsed</description></item>
-        /// <item><description>GpuCount</description></item>
-        /// <item><description>GpuUsed</description></item>
-        /// <item><description>CpuUsed</description></item>
-        /// <item><description>ServiceCount</description></item>
-        /// </list>
+        /// <para>The sort field. Timestamp fields are sorted in descending order by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -110,6 +101,12 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string Sort { get; set; }
 
+        /// <summary>
+        /// <para>The usage mode of the resource group. The default value is <c>inference</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>inference</para>
+        /// </summary>
         [NameInMap("UsageMode")]
         [Validation(Required=false)]
         public string UsageMode { get; set; }
