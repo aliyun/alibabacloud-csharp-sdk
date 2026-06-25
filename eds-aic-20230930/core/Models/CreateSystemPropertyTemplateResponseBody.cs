@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateSystemPropertyTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the property template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ap-g6gyv4a4xlf****</para>
         /// </summary>

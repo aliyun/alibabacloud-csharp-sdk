@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateScreenshotRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud phone instances. You can create multiple snapshots simultaneously.</para>
+        /// <para>The list of instance IDs. Batch screenshots are supported.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>The name of the OSS bucket. The name must start with &quot;cloudphone-saved-bucket-&quot;. The OSS bucket and the cloud phone instance must be in the same region. If you leave this parameter empty, the system will create a default OSS bucket named “cloudphone-saved-bucket-{Region of the cloud phone instance}-{AliUid}.”</para>
+        /// <para>The custom OSS bucket. The bucket name must start with the cloudphone-saved-bucket- prefix. The cloud phone instance and the OSS bucket must be in the same region. If you leave this parameter empty, a default bucket named cloudphone-saved-bucket-{RegionOfCloudPhone}-{AliUid} is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudphone-saved-bucket-cn-shanghai-default</para>
@@ -27,12 +27,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string OssBucketName { get; set; }
 
+        /// <summary>
+        /// <para>The screenshot ID. The generated screenshot is named &quot;ScreenshotId_AndroidInstanceId.png.&quot;</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>The ScreenshotId must be 2 to 128 characters long, beginning with a letter, but cannot start with http\:// or https\://. Allowed characters include letters, digits, underscores (_), and hyphens (-).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>image</para>
+        /// </summary>
         [NameInMap("ScreenshotId")]
         [Validation(Required=false)]
         public string ScreenshotId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to bypass the snapshot policy control. Default value: false.</para>
+        /// <para>Specifies whether to skip the screenshot policy check. The default value is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class InstanceHealerRequest : TeaModel {
         /// <summary>
+        /// <para>The list of instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIdList")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIdList { get; set; }
 
         /// <summary>
+        /// <para>The policy type. The only supported value is Clean.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Clean</para>
         /// </summary>
@@ -25,6 +28,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Strategy { get; set; }
 
         /// <summary>
+        /// <para>The timeout period in seconds. If you do not specify this parameter, the default value is 30.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

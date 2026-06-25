@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class FetchFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The objects that are returned.</para>
+        /// <para>An array of results, with one entry for each instance specified in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The ID of the task created for this specific instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-bp67acfmxazb4p****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</para>
+        /// <para>The request ID. Provide this ID when contacting support for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch task.</para>
+        /// <para>The batch task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-ehs0yoedj0xe9****</para>

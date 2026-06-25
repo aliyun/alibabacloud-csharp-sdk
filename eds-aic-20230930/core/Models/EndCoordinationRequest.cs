@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class EndCoordinationRequest : TeaModel {
         /// <summary>
+        /// <para>The user ID of the coordination participant.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lina</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CoordinatorUserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance that is in a coordination session.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acp-2zecay9ponatdc4m****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The user ID of the coordination initiator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xiaoming</para>
         /// </summary>

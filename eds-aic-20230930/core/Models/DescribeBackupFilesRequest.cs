@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeBackupFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acp-34pqe4r0kd9kn****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance. Fuzzy match is supported.</para>
+        /// <para>The instance name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acp-34pqe4r0kd9kn****</para>
@@ -30,22 +30,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AndroidInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the whole instance is backed up.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>Specifies whether to perform a full device backup.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BackupAll")]
         [Validation(Required=false)]
         public bool? BackupAll { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup file.</para>
+        /// <para>The backup file ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bf-dxrh5jrv0zpb8****</para>
@@ -55,27 +50,27 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileId { get; set; }
 
         /// <summary>
-        /// <para>The name of the backup file. Fuzzy match is supported.</para>
+        /// <para>The backup file name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaulBackupFile</para>
+        /// <para>abc</para>
         /// </summary>
         [NameInMap("BackupFileName")]
         [Validation(Required=false)]
         public string BackupFileName { get; set; }
 
         /// <summary>
-        /// <para>The description of the backup file. Fuzzy match is supported.</para>
+        /// <para>The description. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>default description.</para>
+        /// <para>desc</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The end of the period for querying generated backup files.</para>
+        /// <para>Queries backup files created before the specified time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-20 10:00:00</para>
@@ -95,7 +90,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance group.</para>
+        /// <para>The instance group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag-fxdx91jsfyiy3****</para>
@@ -105,7 +100,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -115,7 +110,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>
@@ -129,7 +124,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SaleMode { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the period for querying generated backup files.</para>
+        /// <para>Queries backup files created after the specified time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-05-23 10:00:00</para>
@@ -139,7 +134,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the backup files.</para>
+        /// <para>The list of backup file statuses.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]

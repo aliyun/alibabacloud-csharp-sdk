@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyDisplayConfigRequest : TeaModel {
+        /// <summary>
+        /// <para>A list of instance IDs.</para>
+        /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>The display settings.</para>
+        /// </summary>
         [NameInMap("DisplayConfig")]
         [Validation(Required=false)]
         public ModifyDisplayConfigRequestDisplayConfig DisplayConfig { get; set; }
         public class ModifyDisplayConfigRequestDisplayConfig : TeaModel {
             /// <summary>
+            /// <para>The dots per inch (DPI). Valid values: 72 to 600.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>240</para>
             /// </summary>
@@ -26,6 +34,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? Dpi { get; set; }
 
             /// <summary>
+            /// <remarks>
+            /// <para>This parameter is not publicly available.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -34,6 +46,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? Fps { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to lock the resolution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>off</para>
             /// </summary>
@@ -42,6 +56,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string LockResolution { get; set; }
 
             /// <summary>
+            /// <para>The resolution height, in pixels.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1920</para>
             /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? ResolutionHeight { get; set; }
 
             /// <summary>
+            /// <para>The resolution width, in pixels.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>720</para>
             /// </summary>

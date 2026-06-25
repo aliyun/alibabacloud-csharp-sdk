@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class SetNetworkBlacklistResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2B9E6946-0E2A-5D2B-B275-361DF81F****</para>
         /// </summary>

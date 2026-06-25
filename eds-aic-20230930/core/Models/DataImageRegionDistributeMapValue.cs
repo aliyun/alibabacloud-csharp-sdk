@@ -10,15 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DataImageRegionDistributeMapValue : TeaModel {
         /// <summary>
-        /// <para>The status of the image distribution task.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AVAILABLE: The task is ready.</description></item>
-        /// <item><description>DELETE: The task is deleted.</description></item>
-        /// <item><description>INIT: The task is being initialized.</description></item>
-        /// <item><description>CREATE_FAILED: The task failed to be created.</description></item>
-        /// <item><description>CREATING: The task is being created.</description></item>
-        /// </list>
+        /// <para>The distribution status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>
@@ -28,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string DistributeStatus { get; set; }
 
         /// <summary>
-        /// <para>The distribution progress of the image.</para>
+        /// <para>The distribution progress.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100%</para>

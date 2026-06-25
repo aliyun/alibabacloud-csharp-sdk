@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeMobileAgentPackageRequest : TeaModel {
+        /// <summary>
+        /// <para>An array of node instance IDs.</para>
+        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>An array of package IDs.</para>
+        /// </summary>
         [NameInMap("PackageIds")]
         [Validation(Required=false)]
         public List<string> PackageIds { get; set; }
 
         /// <summary>
+        /// <para>The package specification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
         /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PackageSpec { get; set; }
 
         /// <summary>
+        /// <para>The package status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
         /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PackageStatus { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

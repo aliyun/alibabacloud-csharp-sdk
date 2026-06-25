@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DetachKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The object that is returned.</para>
+        /// <para>The result object.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DetachKeyPairResponseBodyData Data { get; set; }
         public class DetachKeyPairResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The IDs of the cloud phone instances from which the ADB key pair is successfully detached.</para>
+            /// <para>A list of IDs of the instances from which the key pair was successfully detached.</para>
             /// </summary>
             [NameInMap("DetachedInstanceIds")]
             [Validation(Required=false)]
             public List<string> DetachedInstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The number of the cloud phone instances from which the ADB key pair failed to be detached.</para>
+            /// <para>The number of instances from which the key pair failed to detach.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string KeyPairId { get; set; }
 
             /// <summary>
-            /// <para>The total number of the cloud phone instances.</para>
+            /// <para>The total number of instances for which the detach operation was attempted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69BCBBE4-FCF2-59B8-AD9D-531EB422****</para>

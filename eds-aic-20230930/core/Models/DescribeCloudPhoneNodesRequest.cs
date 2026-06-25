@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeCloudPhoneNodesRequest : TeaModel {
+        /// <summary>
+        /// <para>The ID of the bandwidth plan instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cbwp-bp17psa7fhxqmm*****</para>
+        /// </summary>
         [NameInMap("BandwidthPackageId")]
         [Validation(Required=false)]
         public string BandwidthPackageId { get; set; }
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If a query doesn\&quot;t return all results, the response includes a NextToken value for pagination. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token for the next query. If a query does not return all results, NextToken is not empty. Use the returned NextToken in your next query to continue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -54,14 +60,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The matrix IDs.</para>
+        /// <para>A list of Cloud Phone matrix IDs.</para>
         /// </summary>
         [NameInMap("NodeIds")]
         [Validation(Required=false)]
         public List<string> NodeIds { get; set; }
 
         /// <summary>
-        /// <para>The matrix name.</para>
+        /// <para>The name of the Cloud Phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_name</para>
@@ -75,30 +81,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> NodeNameList { get; set; }
 
         /// <summary>
-        /// <para>The matrix specification.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cpm.gn6.gx1</description></item>
-        /// </list>
+        /// <para>The instance type of the Cloud Phone matrix.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpm.gn6.gx1</para>
+        /// <para>cpm.gx7.10xlarge</para>
         /// </summary>
         [NameInMap("ServerType")]
         [Validation(Required=false)]
         public string ServerType { get; set; }
 
         /// <summary>
-        /// <para>The matrix status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>FAILED: The matrix failed to be created.</description></item>
-        /// <item><description>RUNNING: The matrix is available.</description></item>
-        /// <item><description>DELETING: The matrix is being deleted.</description></item>
-        /// <item><description>NODE_READY: The matrix is ready, and cloud phone instances are being created.</description></item>
-        /// <item><description>DELETED: The matrix is deleted.</description></item>
-        /// <item><description>CREATING: The matrix is being created.</description></item>
-        /// </list>
+        /// <para>The status of the Cloud Phone matrix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>

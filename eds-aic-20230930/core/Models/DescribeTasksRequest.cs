@@ -105,15 +105,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The state of the task.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PartFinished: The task is partially successful.</description></item>
-        /// <item><description>Finished: The task is completed.</description></item>
-        /// <item><description>Failed: The task failed.</description></item>
-        /// <item><description>Skipped: The task is skipped.</description></item>
-        /// <item><description>Processing: The task is running.</description></item>
-        /// <item><description>Waiting: The task is in queue.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Processing</para>
@@ -131,25 +122,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The type of the task.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>BackupFile: backs up files.</description></item>
-        /// <item><description>StopInstance: stops cloud phone instances.</description></item>
-        /// <item><description>RebootInstance: restarts cloud phone instances.</description></item>
-        /// <item><description>StartApp: starts apps.</description></item>
-        /// <item><description>SendFile: uploads files.</description></item>
-        /// <item><description>RunCommand: sends remote command.</description></item>
-        /// <item><description>RestartApp: restarts apps.</description></item>
-        /// <item><description>ResetInstance: resets cloud phone instances.</description></item>
-        /// <item><description>RecoverFile: recovers files.</description></item>
-        /// <item><description>UninstallApp: uninstalls apps.</description></item>
-        /// <item><description>StopApp: stops apps.</description></item>
-        /// <item><description>Screenshot: takes screenshots.</description></item>
-        /// <item><description>InstallApp: installs apps.</description></item>
-        /// <item><description>FetchFile: downloads files.</description></item>
-        /// <item><description>UpdateGroupImage: replaces images.</description></item>
-        /// <item><description>StartInstance: starts instances.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>StartInstance</para>

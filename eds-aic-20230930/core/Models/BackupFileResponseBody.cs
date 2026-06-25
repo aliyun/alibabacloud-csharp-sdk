@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The number of instances that are backed up.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The object that is returned.</para>
+        /// <para>The result object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The name of the backup file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>a-58ftsoo90p0qa****.ab</para>
+            /// <para>MyBackup</para>
             /// </summary>
             [NameInMap("BackupFileName")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>t-22ex666a5mco5****</para>
+            /// <para>t-22ex666a653gq****</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</para>
@@ -82,10 +82,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch task.</para>
+        /// <para>The batch task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>t-22ex666a5mco5****</para>
+        /// <para>t-14xwibw7pyrjd****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

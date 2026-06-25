@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeInvocationsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</para>
+        /// <para>The IDs of the cloud phone instances. A single request can query the execution results for up to 50 instances.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the execution. You can retrieve the output of a command once by using either the execution ID or the cloud phone instance ID.</para>
+        /// <para>The ID of the command execution. Use this ID and the cloud phone instance ID to query the result of a command execution.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

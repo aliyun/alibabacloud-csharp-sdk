@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CheckResourceStockResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>805D8FB6-512A-531C-9E4D-2A807D3C****</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of resource inventory.</para>
+        /// <para>The resource inventory details.</para>
         /// </summary>
         [NameInMap("ResourceStockModels")]
         [Validation(Required=false)]
         public List<CheckResourceStockResponseBodyResourceStockModels> ResourceStockModels { get; set; }
         public class CheckResourceStockResponseBodyResourceStockModels : TeaModel {
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Inventory status of the instance group.</para>
+            /// <para>The inventory status of the instance group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string StockStatus { get; set; }
 
             /// <summary>
-            /// <para>Zone ID.</para>
+            /// <para>The ID of the zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-b</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeSystemPropertyTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The token used to start the next query. An empty value indicates that all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kU****</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</para>
@@ -27,11 +29,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of property template objects.</para>
+        /// </summary>
         [NameInMap("SystemPropertyTemplateModel")]
         [Validation(Required=false)]
         public List<DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModel> SystemPropertyTemplateModel { get; set; }
         public class DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModel : TeaModel {
             /// <summary>
+            /// <para>Indicates whether preset system properties can be automatically generated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public bool? EnableAuto { get; set; }
 
             /// <summary>
+            /// <para>The URL path of the property template file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://filepath****.com">https://filepath****.com</a></para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string FilePath { get; set; }
 
             /// <summary>
+            /// <para>The template status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>init</para>
             /// </summary>
@@ -55,15 +66,23 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The system property template information.</para>
+            /// </summary>
             [NameInMap("SystemPropertyInfo")]
             [Validation(Required=false)]
             public DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfo SystemPropertyInfo { get; set; }
             public class DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfo : TeaModel {
+                /// <summary>
+                /// <para>The custom property information.</para>
+                /// </summary>
                 [NameInMap("CustomPropertyInfos")]
                 [Validation(Required=false)]
                 public List<DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfoCustomPropertyInfos> CustomPropertyInfos { get; set; }
                 public class DescribeSystemPropertyTemplatesResponseBodySystemPropertyTemplateModelSystemPropertyInfoCustomPropertyInfos : TeaModel {
                     /// <summary>
+                    /// <para>The property name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>propKey</para>
                     /// </summary>
@@ -72,6 +91,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                     public string PropertyName { get; set; }
 
                     /// <summary>
+                    /// <para>The property value.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>propValue</para>
                     /// </summary>
@@ -82,6 +103,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
                 }
 
                 /// <summary>
+                /// <remarks>
+                /// <para>This parameter is not yet available for use.</para>
+                /// </remarks>
+                /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
                 /// </summary>
@@ -92,6 +117,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             }
 
             /// <summary>
+            /// <para>The property template ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ap-0caoenwutkkx****</para>
             /// </summary>
@@ -99,6 +126,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
+            /// <summary>
+            /// <para>The template name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Template 1</para>
+            /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
@@ -106,6 +139,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

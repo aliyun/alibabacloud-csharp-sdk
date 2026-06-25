@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateKeyPairResponseBody : TeaModel {
         /// <summary>
-        /// <para>The objects that are returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string KeyPairName { get; set; }
 
             /// <summary>
-            /// <para>The private key of the key pair. The PEM-encoded private key that is in PKCS#8 format and adheres to the ADB connection specification.</para>
+            /// <para>The private key of the key pair. The private key is PEM-encoded in PKCS#8 format and is compatible with ADB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MIIEpAIBAAKCAQEAtReyMzLIcBH78EV2zj****</para>

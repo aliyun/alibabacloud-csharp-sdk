@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
+        /// <summary>
+        /// <para>The billing mode. This parameter is deprecated.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance</para>
+        /// </summary>
         [NameInMap("SaleMode")]
         [Validation(Required=false)]
         public string SaleMode { get; set; }

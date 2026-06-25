@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BatchGetAcpConnectionTicketRequest : TeaModel {
+        /// <summary>
+        /// <para>The connection mode.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>custom</para>
+        /// </summary>
         [NameInMap("ConnectionMode")]
         [Validation(Required=false)]
         public string ConnectionMode { get; set; }
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The instance connection tasks.</para>
+        /// <para>The instance connection task, which is used to query whether the ticket retrieval task is completed.</para>
         /// </summary>
         [NameInMap("InstanceTasks")]
         [Validation(Required=false)]

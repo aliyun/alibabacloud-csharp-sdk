@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CancelAgentTaskRequest : TeaModel {
         /// <summary>
+        /// <para>A list of task IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskIds")]

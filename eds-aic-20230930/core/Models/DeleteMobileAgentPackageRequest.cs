@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class DeleteAndroidInstanceGroupRequest : TeaModel {
+    public class DeleteMobileAgentPackageRequest : TeaModel {
         /// <summary>
-        /// <para>A list of instance group IDs.</para>
+        /// <para>The list of packages.</para>
         /// </summary>
-        [NameInMap("InstanceGroupIds")]
+        [NameInMap("PackageIds")]
         [Validation(Required=false)]
-        public List<string> InstanceGroupIds { get; set; }
+        public List<string> PackageIds { get; set; }
 
     }
 

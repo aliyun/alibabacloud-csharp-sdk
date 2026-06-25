@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class BackupFileRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>A list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -18,10 +18,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to back up the whole instance.</para>
+        /// <para>Specifies whether to back up the entire instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BackupAll")]
         [Validation(Required=false)]
@@ -31,16 +31,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The name of the backup file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultBackupFile</para>
+        /// <para>MyBackup</para>
         /// </summary>
         [NameInMap("BackupFileName")]
         [Validation(Required=false)]
         public string BackupFileName { get; set; }
 
         /// <summary>
-        /// <para>The OSS path of the backup file.</para>
+        /// <para>The upload URL for the backup file.</para>
         /// <remarks>
-        /// <para> To upload a backup file to an OSS bucket, you must obtain the name of the bucket. When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss://${bucketName}/${key}.</para>
+        /// <para>If you upload the file to an OSS bucket, call the DescribeBuckets operation to get the bucketName. Then, select a key from ossObjectList. The key represents the folder path in the OSS bucket. Combine these values into the format <c>oss://${bucketName}/${key}</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The description of the backup file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is a backup file description.</para>
+        /// <para>This is a backup/data request.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -63,23 +63,23 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> ExcludeSourceFilePathList { get; set; }
 
         /// <summary>
-        /// <para>The names of the application packages that you want to back up.</para>
+        /// <para>A list of application package names to back up.</para>
         /// </summary>
         [NameInMap("SourceAppList")]
         [Validation(Required=false)]
         public List<string> SourceAppList { get; set; }
 
         /// <summary>
-        /// <para>The paths to the source files.</para>
+        /// <para>A list of file paths to back up.</para>
         /// </summary>
         [NameInMap("SourceFilePathList")]
         [Validation(Required=false)]
         public List<string> SourceFilePathList { get; set; }
 
         /// <summary>
-        /// <para>The endpoint of the OSS bucket to which you want to upload the backup file.</para>
+        /// <para>The domain name of the upload URL.</para>
         /// <remarks>
-        /// <para>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</para>
+        /// <para>If you upload the file to an OSS bucket, call the DescribeBuckets operation to obtain the bucket information. If the cloud phone and the bucket are in the same region, use the value of the intranetEndpoint field. If they are in different regions, use the value of the extranetEndpoint field.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,11 +90,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string UploadEndpoint { get; set; }
 
         /// <summary>
-        /// <para>The type of the backup.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>OSS: uploads the backup file to an OSS bucket.</description></item>
-        /// </list>
+        /// <para>The backup type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>

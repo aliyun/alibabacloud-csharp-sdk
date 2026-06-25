@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyPolicyGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the webcam redirection feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>off</description></item>
-        /// <item><description>on</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable local camera redirection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -25,13 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CameraRedirect { get; set; }
 
         /// <summary>
-        /// <para>The read/write permissions on the clipboard.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>read: read-only.</description></item>
-        /// <item><description>readwrite: ready and write.</description></item>
-        /// <item><description>off: read/write disabled.</description></item>
-        /// </list>
+        /// <para>The clipboard permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>readwrite</para>
@@ -41,14 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Clipboard { get; set; }
 
         /// <summary>
-        /// <para>The file transfer policy of the Alibaba Cloud Workspace web client.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>all: File upload and download are supported.</description></item>
-        /// <item><description>download: Only file download is supported.</description></item>
-        /// <item><description>upload: Only file upload is supported.</description></item>
-        /// <item><description>off: File upload or download is forbidden.</description></item>
-        /// </list>
+        /// <para>The file transfer policy for the Wuying web client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -58,13 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Html5FileTransfer { get; set; }
 
         /// <summary>
-        /// <para>The read/write permissions on the on-premises drive.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>read: read-only.</description></item>
-        /// <item><description>readwrite: ready and write.</description></item>
-        /// <item><description>off: read/write disabled.</description></item>
-        /// </list>
+        /// <para>The local disk mapping permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -75,11 +51,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>Specifies whether to lock the resolution.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>off</description></item>
-        /// <item><description>on</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -89,14 +60,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string LockResolution { get; set; }
 
         /// <summary>
-        /// <para>The network redirection policy.</para>
+        /// <para>Network redirection.</para>
         /// </summary>
         [NameInMap("NetRedirectPolicy")]
         [Validation(Required=false)]
         public string NetRedirectPolicyShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-4bi18ebi9tfjh****</para>
@@ -106,10 +77,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultPolicyGroup</para>
+        /// <para>Default policy</para>
         /// </summary>
         [NameInMap("PolicyGroupName")]
         [Validation(Required=false)]
@@ -135,6 +106,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? ResolutionWidth { get; set; }
 
+        /// <summary>
+        /// <para>The screen watermark.</para>
+        /// </summary>
         [NameInMap("Watermark")]
         [Validation(Required=false)]
         public string WatermarkShrink { get; set; }

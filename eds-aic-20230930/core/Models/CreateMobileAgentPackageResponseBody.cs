@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateMobileAgentPackageResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of package IDs.</para>
+        /// </summary>
         [NameInMap("MobileAgentPackageIds")]
         [Validation(Required=false)]
         public List<string> MobileAgentPackageIds { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22326560487****</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string OrderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>69BCBBE4-FCF2-59B8-AD9D-531EB422****</para>
         /// </summary>

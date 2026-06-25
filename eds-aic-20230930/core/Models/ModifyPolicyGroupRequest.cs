@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class ModifyPolicyGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the webcam redirection feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>off</description></item>
-        /// <item><description>on</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable local camera redirection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -25,13 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CameraRedirect { get; set; }
 
         /// <summary>
-        /// <para>The read/write permissions on the clipboard.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>read: read-only.</description></item>
-        /// <item><description>readwrite: ready and write.</description></item>
-        /// <item><description>off: read/write disabled.</description></item>
-        /// </list>
+        /// <para>The clipboard permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>readwrite</para>
@@ -41,14 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Clipboard { get; set; }
 
         /// <summary>
-        /// <para>The file transfer policy of the Alibaba Cloud Workspace web client.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>all: File upload and download are supported.</description></item>
-        /// <item><description>download: Only file download is supported.</description></item>
-        /// <item><description>upload: Only file upload is supported.</description></item>
-        /// <item><description>off: File upload or download is forbidden.</description></item>
-        /// </list>
+        /// <para>The file transfer policy for the Wuying web client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -58,13 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Html5FileTransfer { get; set; }
 
         /// <summary>
-        /// <para>The read/write permissions on the on-premises drive.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>read: read-only.</description></item>
-        /// <item><description>readwrite: ready and write.</description></item>
-        /// <item><description>off: read/write disabled.</description></item>
-        /// </list>
+        /// <para>The local disk mapping permission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -75,11 +51,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>Specifies whether to lock the resolution.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>off</description></item>
-        /// <item><description>on</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -89,19 +60,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string LockResolution { get; set; }
 
         /// <summary>
-        /// <para>The network redirection policy.</para>
+        /// <para>Network redirection.</para>
         /// </summary>
         [NameInMap("NetRedirectPolicy")]
         [Validation(Required=false)]
         public ModifyPolicyGroupRequestNetRedirectPolicy NetRedirectPolicy { get; set; }
         public class ModifyPolicyGroupRequestNetRedirectPolicy : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to manually configure a custom proxy.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>off</description></item>
-            /// <item><description>on</description></item>
-            /// </list>
+            /// <para>Specifies whether to manually configure a transparent proxy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -111,7 +77,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string CustomProxy { get; set; }
 
             /// <summary>
-            /// <para>The IPv4 address of the custom proxy.</para>
+            /// <para>The IP address of the transparent proxy. The value must be an IPv4 address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.100.XX.XX</para>
@@ -122,11 +88,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
             /// <summary>
             /// <para>Specifies whether to enable network redirection.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>off</description></item>
-            /// <item><description>on</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -136,7 +97,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string NetRedirect { get; set; }
 
             /// <summary>
-            /// <para>The port of the custom proxy. Valid values: 1 to 65535.</para>
+            /// <para>The port for the transparent proxy. The port number must be an integer from 1 to 65535.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1145</para>
@@ -146,7 +107,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The password of the proxy. The password must be 1 to 256 in length and cannot contain Chinese character or space characters.</para>
+            /// <para>The password for the proxy. The password must be 1 to 256 characters in length and cannot contain Chinese characters or spaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>password</para>
@@ -156,11 +117,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ProxyPassword { get; set; }
 
             /// <summary>
-            /// <para>The type of the proxy protocol.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>socks5.</description></item>
-            /// </list>
+            /// <para>The proxy protocol type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>socks5</para>
@@ -170,7 +127,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ProxyType { get; set; }
 
             /// <summary>
-            /// <para>The username of the proxy. The name must be 1 to 256 in length and cannot contain Chinese character or space characters.</para>
+            /// <para>The username for the proxy. The username must be 1 to 256 characters in length and cannot contain Chinese characters or spaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>username</para>
@@ -179,14 +136,29 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string ProxyUserName { get; set; }
 
+            /// <summary>
+            /// <para>The proxy rules.</para>
+            /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<ModifyPolicyGroupRequestNetRedirectPolicyRules> Rules { get; set; }
             public class ModifyPolicyGroupRequestNetRedirectPolicyRules : TeaModel {
+                /// <summary>
+                /// <para>The rule type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>domain</para>
+                /// </summary>
                 [NameInMap("RuleType")]
                 [Validation(Required=false)]
                 public string RuleType { get; set; }
 
+                /// <summary>
+                /// <para>The application package name or domain name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>example.com</para>
+                /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public string Target { get; set; }
@@ -196,7 +168,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-4bi18ebi9tfjh****</para>
@@ -206,10 +178,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultPolicyGroup</para>
+        /// <para>Default policy</para>
         /// </summary>
         [NameInMap("PolicyGroupName")]
         [Validation(Required=false)]
@@ -235,30 +207,66 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public int? ResolutionWidth { get; set; }
 
+        /// <summary>
+        /// <para>The screen watermark.</para>
+        /// </summary>
         [NameInMap("Watermark")]
         [Validation(Required=false)]
         public ModifyPolicyGroupRequestWatermark Watermark { get; set; }
         public class ModifyPolicyGroupRequestWatermark : TeaModel {
+            /// <summary>
+            /// <para>The font color of the watermark. Valid values: 0 to 16777215.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
+            /// </summary>
             [NameInMap("WatermarkColor")]
             [Validation(Required=false)]
             public int? WatermarkColor { get; set; }
 
+            /// <summary>
+            /// <para>The custom text for the watermark. The text can be up to 10 characters in length and cannot contain emoji characters.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>custom text</para>
+            /// </summary>
             [NameInMap("WatermarkCustomText")]
             [Validation(Required=false)]
             public string WatermarkCustomText { get; set; }
 
+            /// <summary>
+            /// <para>The font size of the watermark. Valid values: 10 to 20.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12</para>
+            /// </summary>
             [NameInMap("WatermarkFontSize")]
             [Validation(Required=false)]
             public int? WatermarkFontSize { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable the screen watermark.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
             [NameInMap("WatermarkSwitch")]
             [Validation(Required=false)]
             public string WatermarkSwitch { get; set; }
 
+            /// <summary>
+            /// <para>The opacity of the watermark. A larger value makes the watermark more opaque. Valid values: 10 to 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>25</para>
+            /// </summary>
             [NameInMap("WatermarkTransparencyValue")]
             [Validation(Required=false)]
             public int? WatermarkTransparencyValue { get; set; }
 
+            /// <summary>
+            /// <para>The content of the screen watermark.</para>
+            /// </summary>
             [NameInMap("WatermarkTypes")]
             [Validation(Required=false)]
             public List<string> WatermarkTypes { get; set; }

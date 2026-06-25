@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class SendFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The objects that are returned.</para>
+        /// <para>The details of the created tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<SendFileResponseBodyData> Data { get; set; }
         public class SendFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud phone instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-34pqe4r0kd9kn****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the task.</para>
+            /// <para>The ID of the individual task for a specific cloud phone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-4ks224ujixw****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. If the request fails, share this ID with technical support to help diagnose the issue.</para>
+        /// <para>A unique identifier for the request. If you encounter an issue, provide this request ID to technical support for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the batch task.</para>
+        /// <para>The batch task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-ehs0yoedj0xe9****</para>

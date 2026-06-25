@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class GetInstancePropertiesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The instance properties.</para>
+        /// </summary>
         [NameInMap("PropertyTemplateModel")]
         [Validation(Required=false)]
         public GetInstancePropertiesResponseBodyPropertyTemplateModel PropertyTemplateModel { get; set; }
         public class GetInstancePropertiesResponseBodyPropertyTemplateModel : TeaModel {
             /// <summary>
+            /// <para>The instance properties.</para>
+            /// <remarks>
+            /// <para>Format: <c>{ &quot;propties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</c>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>{ &quot;propties&quot;:{&quot;key1&quot;:&quot;value1&quot;}}</para>
             /// </summary>
@@ -24,7 +32,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC******</para>

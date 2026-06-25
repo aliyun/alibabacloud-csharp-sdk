@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateCloudPhoneNodeResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details of the bandwidth package order.</para>
+        /// </summary>
         [NameInMap("NetworkPackageOrderModel")]
         [Validation(Required=false)]
         public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel NetworkPackageOrderModel { get; set; }
         public class CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel : TeaModel {
+            /// <summary>
+            /// <para>The ID of the Internet Shared Bandwidth instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cbwp-uf63gsv8j0ir53*****</para>
+            /// </summary>
             [NameInMap("BandwidthPackageId")]
             [Validation(Required=false)]
             public string BandwidthPackageId { get; set; }
 
+            /// <summary>
+            /// <para>The order ID of the bandwidth package.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>25954415983*****</para>
+            /// </summary>
             [NameInMap("BandwidthPackageOrderId")]
             [Validation(Required=false)]
             public string BandwidthPackageOrderId { get; set; }
@@ -24,21 +39,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The cloud phone matrixes.</para>
+        /// <para>A list of Cloud Phone matrices.</para>
         /// </summary>
         [NameInMap("NodeInfos")]
         [Validation(Required=false)]
         public List<CreateCloudPhoneNodeResponseBodyNodeInfos> NodeInfos { get; set; }
         public class CreateCloudPhoneNodeResponseBodyNodeInfos : TeaModel {
             /// <summary>
-            /// <para>The IDs of the cloud phone instances.</para>
+            /// <para>A list of Cloud Phone instance IDs.</para>
             /// </summary>
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud phone matrix.</para>
+            /// <para>The ID of the Cloud Phone matrix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpn-e5kxgjyt8s1mb****</para>

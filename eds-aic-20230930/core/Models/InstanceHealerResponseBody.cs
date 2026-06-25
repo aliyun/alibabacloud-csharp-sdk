@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class InstanceHealerResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The diagnosis result object.</para>
+        /// </summary>
         [NameInMap("InstanceHealerModel")]
         [Validation(Required=false)]
         public InstanceHealerResponseBodyInstanceHealerModel InstanceHealerModel { get; set; }
         public class InstanceHealerResponseBodyInstanceHealerModel : TeaModel {
             /// <summary>
+            /// <para>The result of the task execution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>True</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7B9EFA4F-4305-5968-BAEE-BD8B8DE5****</para>
         /// </summary>

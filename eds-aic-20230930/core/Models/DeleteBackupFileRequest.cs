@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DeleteBackupFileRequest : TeaModel {
         /// <summary>
+        /// <para>A list of backup file IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackupFileIdList")]

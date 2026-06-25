@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeSpecResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates the current read position returned by this call. An empty value means that all data has been read.</para>
+        /// <para>The token to use for the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9888DAD-331E-5FBC-B5A0-F2445115****</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The specifications.</para>
+        /// <para>The specification information.</para>
         /// </summary>
         [NameInMap("SpecInfoModel")]
         [Validation(Required=false)]
         public List<DescribeSpecResponseBodySpecInfoModel> SpecInfoModel { get; set; }
         public class DescribeSpecResponseBodySpecInfoModel : TeaModel {
             /// <summary>
-            /// <para>Number of CPU cores.</para>
+            /// <para>The number of CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? Core { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud phone instances.</para>
+            /// <para>The maximum number of instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string MaxPhoneCount { get; set; }
 
             /// <summary>
-            /// <para>Memory size.</para>
+            /// <para>The memory size in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public int? Memory { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of cloud phone instances.</para>
+            /// <para>The minimum number of instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -77,6 +77,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string MinPhoneCount { get; set; }
 
             /// <summary>
+            /// <para>The number of instances.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -85,6 +87,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PhoneCount { get; set; }
 
             /// <summary>
+            /// <para>The resolution of the cloud phone instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1920*1080</para>
             /// </summary>
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Resolution { get; set; }
 
             /// <summary>
-            /// <para>Specification ID.</para>
+            /// <para>The specification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp.basic.small</para>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SpecId { get; set; }
 
             /// <summary>
-            /// <para>Specification status.</para>
+            /// <para>The specification status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SpecStatus { get; set; }
 
             /// <summary>
-            /// <para>Specification type.</para>
+            /// <para>The specification type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ARM</para>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string SpecType { get; set; }
 
             /// <summary>
-            /// <para>System disk size, in GB.</para>
+            /// <para>The size of the system disk, in GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeBackupFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The backup files that are returned.</para>
+        /// <para>The list of returned result objects.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeBackupFilesResponseBodyData> Data { get; set; }
         public class DescribeBackupFilesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acp-34pqe4r0kd9kn****</para>
@@ -27,27 +27,27 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string AndroidInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>defaultInstanceName</para>
+            /// <para>Test cloud phone</para>
             /// </summary>
             [NameInMap("AndroidInstanceName")]
             [Validation(Required=false)]
             public string AndroidInstanceName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the whole instance is backed up.</para>
+            /// <para>Specifies whether to perform a full device backup.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("BackupAll")]
             [Validation(Required=false)]
             public bool? BackupAll { get; set; }
 
             /// <summary>
-            /// <para>The ID of the backup file.</para>
+            /// <para>The backup file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bf-b0qbg3pbpjkn7****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFileId { get; set; }
 
             /// <summary>
-            /// <para>The name of the backup file.</para>
+            /// <para>The backup file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a-58ftsoo90p0qa****.ab</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string BackupFileName { get; set; }
 
             /// <summary>
-            /// <para>The directory in which the backup file is stored.</para>
+            /// <para>The directory where the backup file is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss://cloudphone-saved-bucket-cn-shanghai/backup/aic-58ftsoo90p0qa****.ab</para>
@@ -76,11 +76,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string BackupFilePath { get; set; }
 
+            [NameInMap("Channel")]
+            [Validation(Required=false)]
+            public string Channel { get; set; }
+
             /// <summary>
             /// <para>The description of the backup file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is default description.</para>
+            /// <para>Backup file for /data/media directory.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -97,7 +101,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The total size of the source files.</para>
+            /// <para>The total size of the source backup files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10227168</para>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup file was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-15 17:33:59</para>
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the backup file was last updated.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-15 17:33:59</para>
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance group.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ag-58ftsoo90p0qi****</para>
@@ -147,26 +151,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The names of the application packages that are backed up.</para>
+            /// <para>The list of backed-up application package names.</para>
             /// </summary>
             [NameInMap("SourceAppInfoList")]
             [Validation(Required=false)]
             public List<string> SourceAppInfoList { get; set; }
 
             /// <summary>
-            /// <para>The directories of the source files.</para>
+            /// <para>The list of source backup file directories.</para>
             /// </summary>
             [NameInMap("SourceFilePathList")]
             [Validation(Required=false)]
             public List<string> SourceFilePathList { get; set; }
 
             /// <summary>
-            /// <para>The status of the backup file.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AVAILABLE</description></item>
-            /// <item><description>RECOVERING</description></item>
-            /// </list>
+            /// <para>The backup file status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AVAILABLE</para>
@@ -190,7 +189,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The endpoint of the OSS bucket that stores the backup file.</para>
+            /// <para>The domain name of the upload endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss-cn-hangzhou.aliyuncs.com</para>
@@ -200,11 +199,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string UploadEndpoint { get; set; }
 
             /// <summary>
-            /// <para>The type of the backup.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>OSS: backup files are stored in OSS buckets. .</description></item>
-            /// </list>
+            /// <para>The backup type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
@@ -216,7 +211,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The maximum number of entries returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -226,7 +221,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token that indicates the position up to which data has been read in the current call. An empty value indicates that all data has been read.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uON****</para>
@@ -236,7 +231,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request. If the request fails, provide this ID to technical support to assist in diagnosing the issue.</para>
+        /// <para>The request ID. If you encounter an issue, provide this request ID for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>425F351C-3F8E-5218-A520-B6311D0D****</para>
@@ -246,7 +241,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>91</para>

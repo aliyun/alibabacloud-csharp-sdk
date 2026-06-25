@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class RecoverAppRequest : TeaModel {
         /// <summary>
+        /// <para>The list of instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIdList")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> AndroidInstanceIdList { get; set; }
 
         /// <summary>
+        /// <para>The ID of the backup file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFileId { get; set; }
 
         /// <summary>
+        /// <para>The OSS URL where the backup file is uploaded.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BackupFilePath")]
@@ -34,6 +37,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BackupFilePath { get; set; }
 
         /// <summary>
+        /// <para>The backup region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss-cn-shanghai-internal.aliyuncs.com</para>
         /// </summary>
@@ -42,6 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string UploadEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The backup type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

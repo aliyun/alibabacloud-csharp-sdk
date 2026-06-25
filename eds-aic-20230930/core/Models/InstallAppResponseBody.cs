@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class InstallAppResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The child task objects.</para>
+        /// </summary>
         [NameInMap("ChildTaskInfo")]
         [Validation(Required=false)]
         public List<InstallAppResponseBodyChildTaskInfo> ChildTaskInfo { get; set; }
         public class InstallAppResponseBodyChildTaskInfo : TeaModel {
+            /// <summary>
+            /// <para>The application ID.</para>
+            /// </summary>
             [NameInMap("AppId")]
             [Validation(Required=false)]
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>The child task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>t-ybde48cevxxxx</para>
             /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ChildTaskId { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acp-ty3bnd7b9xxxx</para>
             /// </summary>
@@ -36,7 +46,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E5138F7E-46B5-526A-8C99-82DEAE6B****</para>
@@ -46,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-14xwibw7yp73q****</para>

@@ -20,12 +20,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultAppName</para>
+        /// <para>Application name</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para>This parameter is for internal use now.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AppType")]
         [Validation(Required=false)]
         public string AppType { get; set; }
@@ -44,12 +54,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The installation/uninstallation status of the application.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INSTALLFAILED: The application failed to be installed.</description></item>
-        /// <item><description>UNINSTALLING: The application is being uninstalled.</description></item>
-        /// <item><description>INSTALLING: The application is being installed.</description></item>
-        /// <item><description>UNINSTALLED: The application is uninstalled.</description></item>
-        /// <item><description>INSTALLED: The application is installed.</description></item>
-        /// <item><description>UNINSTALLFAILED: The application failed to be uninstalled.</description></item>
+        /// <item><description><para>INSTALLFAILED: The application failed to be installed.</para>
+        /// </description></item>
+        /// <item><description><para>UNINSTALLING: The application is being uninstalled.</para>
+        /// </description></item>
+        /// <item><description><para>INSTALLING: The application is being installed.</para>
+        /// </description></item>
+        /// <item><description><para>UNINSTALLED: The application is uninstalled.</para>
+        /// </description></item>
+        /// <item><description><para>INSTALLED: The application is installed.</para>
+        /// </description></item>
+        /// <item><description><para>UNINSTALLFAILED: The application failed to be uninstalled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +79,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The value of MD5.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>THCIEH73KEK3334</para>
+        /// <para>009ee07fe13a29fa0c180ed0b6bc****</para>
         /// </summary>
         [NameInMap("MD5")]
         [Validation(Required=false)]
@@ -91,12 +107,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The status of the application.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>FAILED: The application failed to be created.</description></item>
-        /// <item><description>NORMAL: The application is available.</description></item>
-        /// <item><description>CREATING: The application is being created.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>

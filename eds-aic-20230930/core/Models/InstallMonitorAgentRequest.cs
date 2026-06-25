@@ -9,11 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class InstallMonitorAgentRequest : TeaModel {
+        /// <summary>
+        /// <para>A list of instance IDs.</para>
+        /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The monitoring type.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Instance mode: Instance</para>
+        /// </description></item>
+        /// <item><description><para>Node mode: Node</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>NODE</para>
         /// </summary>

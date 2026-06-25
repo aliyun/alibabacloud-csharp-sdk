@@ -8,12 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
-    public class DeleteSystemPropertyTemplatesResponseBody : TeaModel {
+    public class DeleteMobileAgentPackageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
-        /// <remarks>
-        /// <para>This parameter is returned only when the API call fails.</para>
-        /// </remarks>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -23,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -36,7 +33,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5C5CEF0A-D6E1-58D3-8750-67DB4F82****</para>
+        /// <para>F07A1DA1-E1EB-5CCA-8EED-12F85D32****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

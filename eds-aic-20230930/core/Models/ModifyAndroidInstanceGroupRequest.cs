@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The new name of the instance group.</para>
         /// <remarks>
+        /// <para>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http\:// or https\://.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with http:// or https://.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>newName</para>
@@ -44,6 +42,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies the streaming mode for instances within the instance group. If this parameter is omitted, the mode defaults to 1 (Preemptive).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("StreamMode")]
         [Validation(Required=false)]
         public int? StreamMode { get; set; }

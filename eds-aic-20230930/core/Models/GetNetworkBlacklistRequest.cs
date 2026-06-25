@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class GetNetworkBlacklistRequest : TeaModel {
         /// <summary>
+        /// <para>The query type. Valid values: IP and Domain. If you do not specify this parameter, information for both types is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IP</para>
         /// 

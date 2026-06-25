@@ -29,6 +29,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NodeId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies the streaming mode for instances in the cloud phone matrix. If this parameter is left empty, the exclusive mode is used.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("StreamMode")]
         [Validation(Required=false)]
         public int? StreamMode { get; set; }

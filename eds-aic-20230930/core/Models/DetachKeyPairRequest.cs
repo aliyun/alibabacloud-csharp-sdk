@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DetachKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</para>
+        /// <para>The IDs of the cloud phone instances. You can specify up to 50 instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

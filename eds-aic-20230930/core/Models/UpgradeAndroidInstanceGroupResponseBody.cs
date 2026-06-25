@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UpgradeAndroidInstanceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The IDs of instances created during the scale-out.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[\&quot;acp-3vzqq4y3f31f3z3df\&quot;]</para>
+        /// <para>[\&quot;acp-2iowaqjyw9nrd****\&quot;, \&quot;acp-2iowaqjyw9nrd****\&quot;]</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>223684716098****</para>

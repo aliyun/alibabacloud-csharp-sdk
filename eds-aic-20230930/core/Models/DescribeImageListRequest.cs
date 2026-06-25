@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeImageListRequest : TeaModel {
+        /// <summary>
+        /// <para>An array of tag objects.</para>
+        /// </summary>
         [NameInMap("ImageBizTags")]
         [Validation(Required=false)]
         public List<DescribeImageListRequestImageBizTags> ImageBizTags { get; set; }
         public class DescribeImageListRequestImageBizTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>key1</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>value1</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -24,7 +39,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imgc-075cllfeuazh0****</para>
@@ -34,32 +49,29 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image.</para>
+        /// <para>The image name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Android 12 image</para>
+        /// <para>Android 12 system image</para>
         /// </summary>
         [NameInMap("ImageName")]
         [Validation(Required=false)]
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>Image package type.</para>
+        /// <remarks>
+        /// <para>This parameter is not yet available.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>VM</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ImagePackageType")]
         [Validation(Required=false)]
         public string ImagePackageType { get; set; }
 
         /// <summary>
-        /// <para>The type of the image.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>User: custom images.</description></item>
-        /// <item><description>System: system images.</description></item>
-        /// </list>
+        /// <para>The image type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,12 +81,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string ImageType { get; set; }
 
+        /// <summary>
+        /// <para>The instance type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cpm.gx7.10xlarge</para>
+        /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page for a paged query. Valid values: 1 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -87,7 +105,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</para>
+        /// <para>The token that specifies the position from which to start the query. If you leave this parameter empty, the query starts from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -97,15 +115,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The state of the image.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>AVAILABLE: The image is available.</description></item>
-        /// <item><description>DELETE: The image is deleted.</description></item>
-        /// <item><description>INIT: The image is being initialized.</description></item>
-        /// <item><description>CREATE_FAILED: The image failed to be created.</description></item>
-        /// <item><description>CREATING: The image is being created.</description></item>
-        /// </list>
+        /// <para>The status of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AVAILABLE</para>

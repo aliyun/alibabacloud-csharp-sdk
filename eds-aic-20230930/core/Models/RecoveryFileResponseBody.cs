@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The number of restored instances.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>97</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>t-5prhfo7wv1gjx****</para>
+            /// <para>t-ehs0yoedsskom****</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The ID of the batch task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>t-5prhfo7wv1gjx****</para>
+        /// <para>t-3eourrxaoliqq****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

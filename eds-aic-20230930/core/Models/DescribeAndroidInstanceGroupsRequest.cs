@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeAndroidInstanceGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,12 +20,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PrePaid: subscription</description></item>
-        /// <item><description>PostPaid: pay-as-you-go</description></item>
-        /// </list>
+        /// <para>The billing type.
+        /// [_single.params.ChargeType.enum. PrePaid]Subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -35,17 +31,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instance groups.</para>
+        /// <para>The list of instance group IDs.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]
         [Validation(Required=false)]
         public List<string> InstanceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance group. Instance groups support fuzzy search by name.</para>
+        /// <para>The instance group name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultInstanceGroup</para>
+        /// <para>Cloud phone</para>
         /// </summary>
         [NameInMap("InstanceGroupName")]
         [Validation(Required=false)]
@@ -66,7 +62,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Value range: 0 to 100. Default value: 100.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token that indicates the position from which the current read operation starts. Leave this parameter empty to read from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -86,7 +82,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-1b77w6xrqfubi****</para>
@@ -96,12 +92,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The purchase mode of cloud phone instances.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Instance (default): the instance group mode.</description></item>
-        /// <item><description>Node: the matrix mode [whitelisted].</description></item>
-        /// </list>
+        /// <para>The purchase mode of the cloud phone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>standard</para>
@@ -111,18 +102,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SaleMode { get; set; }
 
         /// <summary>
-        /// <para>The status of the instance group.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>UPDATING_FAILED: The image update for the instance group failed.</description></item>
-        /// <item><description>FAILED: The instance group failed to be created.</description></item>
-        /// <item><description>RUNNING: The instance group is available.</description></item>
-        /// <item><description>EXPIRED: The instance group expired.</description></item>
-        /// <item><description>DELETING: The instance group is being deleted.</description></item>
-        /// <item><description>DELETED: The instance group is deleted.</description></item>
-        /// <item><description>UPDATING: The instance group is undergoing an image update.</description></item>
-        /// <item><description>CREATING: The instance group is being created.</description></item>
-        /// </list>
+        /// <para>The instance group status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>
@@ -131,14 +111,35 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the instance group. You can bind up to 20 tags to each instance.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeAndroidInstanceGroupsRequestTags> Tags { get; set; }
         public class DescribeAndroidInstanceGroupsRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key. You can specify 1 to 20 tag keys.</para>
+            /// <remarks>
+            /// <para>Notice: The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://..</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>phone</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// <remarks>
+            /// <para>Notice: The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>..</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

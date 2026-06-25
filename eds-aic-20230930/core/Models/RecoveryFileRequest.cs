@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>Specifies whether to back up the whole instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BackupAll")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The OSS path to which the backup file is uploaded.</para>
         /// <remarks>
-        /// <para> When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss://${bucketName}/${key}.</para>
+        /// <para>When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss\://${bucketName}/${key}.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("BackupFilePath")]
@@ -62,10 +62,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The type of the backup.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>OSS: backup files are stored in OSS buckets.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>

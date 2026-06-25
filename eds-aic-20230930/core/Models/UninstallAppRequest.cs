@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UninstallAppRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the apps.</para>
+        /// <para>A list of application IDs.</para>
         /// </summary>
         [NameInMap("AppIdList")]
         [Validation(Required=false)]
         public List<string> AppIdList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance groups. If you specify this parameter, you cannot specify InstanceIdList.</para>
+        /// <para>A list of instance group IDs. You must specify either this parameter or <c>InstanceIdList</c>. If you specify both, only <c>InstanceGroupIdList</c> takes precedence.</para>
         /// </summary>
         [NameInMap("InstanceGroupIdList")]
         [Validation(Required=false)]
         public List<string> InstanceGroupIdList { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud phone instances. If you specify this parameter, you cannot specify InstanceGroupIdList.</para>
+        /// <para>A list of instance IDs. You must specify either this parameter or <c>InstanceGroupIdList</c>. If you specify both, only <c>InstanceGroupIdList</c> takes precedence.</para>
         /// </summary>
         [NameInMap("InstanceIdList")]
         [Validation(Required=false)]

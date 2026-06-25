@@ -40,12 +40,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The name of the policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultPolicyGroup</para>
+        /// <para>Default policy</para>
         /// </summary>
         [NameInMap("PolicyGroupName")]
         [Validation(Required=false)]
         public string PolicyGroupName { get; set; }
 
+        /// <summary>
+        /// <para>The policy type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance</para>
+        /// </summary>
         [NameInMap("PolicyType")]
         [Validation(Required=false)]
         public string PolicyType { get; set; }

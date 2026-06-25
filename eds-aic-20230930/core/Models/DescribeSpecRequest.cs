@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeSpecRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -22,21 +24,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The matrix specification.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cpm.gn6.gx1</description></item>
-        /// </list>
+        /// <para>The cloud phone matrix specification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpm.gn6.gx1</para>
+        /// <para>cpm.gx7.10xlarge</para>
         /// </summary>
         [NameInMap("MatrixSpec")]
         [Validation(Required=false)]
         public string MatrixSpec { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of items to return per page in a paginated query. The value range is 1 to 100, with a default value of 100.</para>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Indicates the starting position for reading. If left empty, it starts from the beginning.</para>
+        /// <para>The position from which to start the query. Leave this parameter empty to query from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6l5V9uONHqPtDLM2U8s****</para>
@@ -56,12 +54,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The purchase mode of cloud mobile phones.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Instance (default): the instance group mode.</description></item>
-        /// <item><description>Node: the matrix mode [whitelisted].</description></item>
-        /// </list>
+        /// <para>The purchase mode of the cloud phone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -71,14 +64,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SaleMode { get; set; }
 
         /// <summary>
-        /// <para>List of specification IDs.</para>
+        /// <para>A list of specification IDs.</para>
         /// </summary>
         [NameInMap("SpecIds")]
         [Validation(Required=false)]
         public List<string> SpecIds { get; set; }
 
         /// <summary>
-        /// <para>Specification status.</para>
+        /// <para>The specification status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -88,10 +81,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SpecStatus { get; set; }
 
         /// <summary>
-        /// <para>Specification type.</para>
+        /// <para>The specification type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ARM</para>
+        /// <para>CPU</para>
         /// </summary>
         [NameInMap("SpecType")]
         [Validation(Required=false)]

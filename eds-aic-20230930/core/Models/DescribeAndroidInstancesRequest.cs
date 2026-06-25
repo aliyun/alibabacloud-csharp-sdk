@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeAndroidInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances.</para>
+        /// <para>The list of instance IDs.</para>
         /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -26,16 +26,29 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string AndroidInstanceName { get; set; }
 
+        /// <summary>
+        /// <para>The application management policy ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>amp-shigvudbyeuib****</para>
+        /// </summary>
         [NameInMap("AppManagePolicyId")]
         [Validation(Required=false)]
         public string AppManagePolicyId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID assigned to the instance, which is the China Wuying convenience account ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user</para>
+        /// </summary>
         [NameInMap("AuthorizedUserId")]
         [Validation(Required=false)]
         public string AuthorizedUserId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> operation to query the regions where Cloud Phone is supported.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones of different editions (Instance Edition/Matrix Edition).</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;The region ID. You can call <a href="https://help.aliyun.com/document_detail/2807298.html">DescribeRegions</a> to query the list of regions that support purchasing cloud phones..</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -45,12 +58,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// </list>
+        /// <para>The billing type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -60,7 +68,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance group.</para>
+        /// <para>The instance group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag-25nt4kk9whjh****</para>
@@ -70,14 +78,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instance groups.</para>
+        /// <para>The list of instance group IDs.</para>
         /// </summary>
         [NameInMap("InstanceGroupIds")]
         [Validation(Required=false)]
         public List<string> InstanceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance group.</para>
+        /// <para>The instance group name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -101,7 +109,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string KeyPairId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 100. Default value: 100.</para>
+        /// <para>The maximum number of entries per page for a paged query. Valid values: 1 to 100. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -111,7 +119,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the parameter is left empty, the data is queried from the first entry.</para>
+        /// <para>The pagination token that indicates the position from which to start reading. Leave this parameter empty to start reading from the beginning.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6kw9dGL5jves2FS9RLq****</para>
@@ -121,7 +129,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The matrix ID.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_id</para>
@@ -131,7 +140,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The name of the node.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The name of the matrix.
+        /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available..</para>
         /// 
         /// <b>Example:</b>
         /// <para>node_name</para>
@@ -140,25 +150,32 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
+        /// <summary>
+        /// <para>The cloud phone network ID.</para>
+        /// </summary>
         [NameInMap("OfficeSiteIds")]
         [Validation(Required=false)]
         public List<string> OfficeSiteIds { get; set; }
 
+        /// <summary>
+        /// <para>The private IP address of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.0.162.136</para>
+        /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
         public string PrivateIpAddress { get; set; }
 
+        /// <summary>
+        /// <para>The public network rate limiting rule group ID. The rate limiting rule for instances in the basic shared network.</para>
+        /// </summary>
         [NameInMap("QosRuleIds")]
         [Validation(Required=false)]
         public List<string> QosRuleIds { get; set; }
 
         /// <summary>
         /// <para>The sales mode.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Instance: the standard mode.</description></item>
-        /// <item><description>Node: the node mode.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Instance</para>
@@ -176,25 +193,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string SortType { get; set; }
 
         /// <summary>
-        /// <para>The state of the instance.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>BACKUPING: The instance is being backed up.</description></item>
-        /// <item><description>STARTING: The instance is being started.</description></item>
-        /// <item><description>RUNNING: The instance group is available.</description></item>
-        /// <item><description>DELETING: The instance is being deleted.</description></item>
-        /// <item><description>BACKUP_FAILED: The backup operation failed.</description></item>
-        /// <item><description>DELETED: The instance is deleted.</description></item>
-        /// <item><description>FAILED: The instance failed to be created.</description></item>
-        /// <item><description>STOPPED: The instance is stopped.</description></item>
-        /// <item><description>RECOVERING: The instance has an ongoing file recovery task.</description></item>
-        /// <item><description>UNAVAILABLE: The instance has an exception.</description></item>
-        /// <item><description>REBOOTING: The instance is being restarted.</description></item>
-        /// <item><description>RESETTING: The instance is being reset.</description></item>
-        /// <item><description>STOPPING: The instance is being stopped.</description></item>
-        /// <item><description>RECOVER_FAILED: The file recovery task failed.</description></item>
-        /// <item><description>CREATING: The instance is being created.</description></item>
-        /// </list>
+        /// <para>The instance status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -204,14 +203,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resources.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeAndroidInstancesRequestTag> Tag { get; set; }
         public class DescribeAndroidInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -221,7 +220,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>

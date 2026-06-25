@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateMobileAgentPackageRequest : TeaModel {
         /// <summary>
+        /// <para>The number of packages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string Amount { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable auto-payment. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enables auto-payment. You must ensure that your account balance is sufficient.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): An unpaid order is generated. Your account is not charged.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If your account balance is insufficient, you can set this parameter to <c>false</c> to generate an unpaid order. Then, you can log in to the Wuying Cloud Phone management console to pay for the order.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,6 +39,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable auto-renewal for the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enables auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Disables auto-renewal.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -34,6 +55,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
+        /// <para>The region where the instance is located. Currently, only <c>cn-hangzhou</c> is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -42,6 +65,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
+        /// <para>The credit amount.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10000.0</para>
         /// </summary>
@@ -50,6 +75,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string CreditAmount { get; set; }
 
         /// <summary>
+        /// <para>The credit limit configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -62,6 +89,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ImageId { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CloudPhone</para>
         /// </summary>
@@ -70,6 +99,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The package specification.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>advanced</para>
         /// </summary>
@@ -82,6 +113,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public long? PackageSpecId { get; set; }
 
         /// <summary>
+        /// <para>The callback URL to which the user is redirected after a successful payment.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://aim.wuying.aliyun.com/nodes">https://aim.wuying.aliyun.com/nodes</a></para>
         /// </summary>
@@ -90,6 +123,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PaidCallbackUrl { get; set; }
 
         /// <summary>
+        /// <para>The subscription period. The unit of the period is specified by the <c>PeriodUnit</c> parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -98,6 +133,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Period { get; set; }
 
         /// <summary>
+        /// <para>The unit of the subscription period.
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Month</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Year</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Month</para>
         /// </summary>
@@ -106,6 +150,8 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
+        /// <para>The promotion ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50003308011****</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateAndroidInstanceGroupShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The number of instance groups. Default value: 1. Maximum value: 1.</para>
+        /// <para>The number of instance groups to create. Valid values: 1 to 100. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -21,11 +21,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Default value: false.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: enables automatic payment. Make sure that your Alibaba Cloud account has sufficient balance.</description></item>
-        /// <item><description>false: disables automatic payment. You must manually complete the payment.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -35,12 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. Default value: false.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: automatically renew resource upon expiration.</description></item>
-        /// <item><description>false: manually renew resources upon expiration.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable auto-renewal for subscription resources. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -58,16 +48,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BandwidthPackageType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the DescribeRegions operation to query the regions where Cloud Phone is supported.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-shenzhen: China (Shenzhen).</description></item>
-        /// <item><description>cn-beijing: China (Beijing).</description></item>
-        /// <item><description>cn-shanghai: China (Shanghai).</description></item>
-        /// <item><description>cn-hongkong: China (Hong Kong).</description></item>
-        /// <item><description>ap-southeast-1: Singapore.</description></item>
-        /// <item><description>cn-hangzhou: China (Hangzhou).</description></item>
-        /// </list>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions where Cloud Phone instances are available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,11 +60,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The billing method.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -93,10 +69,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. The value cannot exceed 100 characters in length.</para>
+        /// <para>A client-generated token to ensure request idempotence. This parameter prevents duplicate requests. The token can be up to 100 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>asadbuvwiabdbvchjsbj</para>
+        /// <para>asadbuvwiabdbvchj****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -104,7 +80,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,11 +92,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>Specifies whether to enable GPU acceleration.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: enables GPU acceleration.</description></item>
-        /// <item><description>false (default): disables GPU acceleration.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -130,7 +101,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? GpuAcceleration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image. You can call the <a href="https://help.aliyun.com/document_detail/2807324.html">DescribeImageList</a> operation to query images.</para>
+        /// <para>The image ID. You can call the <a href="~~DescribeImageList~~">DescribeImageList</a> operation to query available images for Cloud Phone instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -143,24 +114,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <summary>
         /// <para>The name of the instance group.</para>
         /// <remarks>
-        /// <para> The name can be up to 30 characters in length. It can contain letters, digits, colons (:), underscores (_), periods (.), or hyphens (-). It must start with letters but cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name can be up to 30 characters in length. It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>. The name can contain only Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultInstanceGroup</para>
+        /// <para>Cloud phoneA</para>
         /// </summary>
         [NameInMap("InstanceGroupName")]
         [Validation(Required=false)]
         public string InstanceGroupName { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the instance group. You can call the <a href="https://help.aliyun.com/document_detail/2807299.html">DescribeSpec</a> operation to query the available specifications.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>acp.perf.large: Performance (8 vCPUs, 16 GiB of memory, and 32 GiB of storage.</description></item>
-        /// <item><description>acp.basic.small: Lightweight (2 vCPUs, 4 GiB of memory, and 32 GiB of storage).</description></item>
-        /// <item><description>acp.std.large: Standard (4 vCPUs, 8 GiB of memory, and 32 GiB of storage).</description></item>
-        /// </list>
+        /// <para>The instance group specification. You can call the <a href="~~DescribeSpec~~">DescribeSpec</a> operation to query the specifications that are available for Cloud Phone instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -176,7 +141,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -187,9 +152,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Ipv6Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the key pair. When you create an instance group and specify a valid key pair ID, all cloud phone instances within the group will automatically be bound to that key pair upon creation. This eliminates the need to manually bind key pairs to individual cloud phone instances.</para>
+        /// <para>The key pair ID. If you specify a valid key pair ID when you create the instance group, the system attaches the key pair to all successfully created instances. No separate API call is required to attach the key pair.</para>
         /// <remarks>
-        /// <para> Binding key pairs to cloud phone instances is currently not supported during instance group resizing.</para>
+        /// <para>Attaching a key pair during a scale-out operation is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -208,7 +173,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string NetworkType { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud phones in the instance group. Maximum value: 100.</para>
+        /// <para>The number of instances in the instance group. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -218,10 +183,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? NumberOfInstances { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network.</para>
+        /// <para>The network ID.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is required if you assign a shared network to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <b>shared network</b>. If no shared network is available in the Cloud Phone console, you can leave this parameter empty. The system automatically creates one when you create an instance group.</description></item>
-        /// <item><description>This parameter is required if you assign a virtual private cloud (VPC) to cloud phones. You can go to the <a href="https://wya.wuying.aliyun.com/network">Network</a> page of the Cloud Phone console to retrieve the ID of a <b>VPC</b>. If no VPC is available in the Cloud Phone console, you must first create one.</description></item>
+        /// <item><description><para>To create instances in a Shared Network: This parameter is optional. Specify the ID of a <b>Shared Network</b>. You can find the ID on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no Shared Network is available in the console, you can omit this parameter. The system automatically creates a Shared Network when you create the instance group.</para>
+        /// </description></item>
+        /// <item><description><para>To create instances in a VPC: This parameter is required. Specify the ID of a <b>VPC</b>. You can find the ID on the <a href="https://wya.wuying.aliyun.com/network">Cloud Phone console &gt; Network</a> page. If no VPC is available in the console, you must create one first.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -240,7 +207,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PaidCallBackUrl { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. The unit is specified by PeriodUnit.</para>
+        /// <para>The subscription duration. The PeriodUnit parameter specifies the unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -251,12 +218,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The unit of the subscription duration.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
-        /// <item><description>Hour (Note that this unit is supported only by pay-as-you-go.)</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -266,7 +227,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/2807352.html">ListPolicyGroups</a> operation to query policies.</para>
+        /// <para>The policy ID. You can call the <a href="~~ListPolicyGroups~~">ListPolicyGroups</a> operation to query available policies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pg-b7bxrrwxkijjh****</para>
@@ -288,7 +249,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? StreamMode { get; set; }
 
         /// <summary>
-        /// <para>The tags</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -317,10 +278,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query vSwitches.</para>
+        /// <para>The vSwitch ID. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query available vSwitches.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is not required if you assign a shared network to cloud phones.</description></item>
-        /// <item><description>This parameter is required if you assign a VPC to cloud phones. The vSwitch specified by this parameter is used to create cloud phones.</description></item>
+        /// <item><description><para>If you create instances in a Shared Network, omit this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If you create instances in a VPC, this parameter is required. The system creates the instances in the specified vSwitch.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

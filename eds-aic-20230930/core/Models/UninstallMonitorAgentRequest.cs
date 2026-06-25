@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UninstallMonitorAgentRequest : TeaModel {
+        /// <summary>
+        /// <para>A list of instance IDs.</para>
+        /// </summary>
         [NameInMap("AndroidInstanceIds")]
         [Validation(Required=false)]
         public List<string> AndroidInstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The monitoring type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Node</para>
         /// </summary>

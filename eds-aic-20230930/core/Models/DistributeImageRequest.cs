@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DistributeImageRequest : TeaModel {
         /// <summary>
-        /// <para>The regions to which you want to distribute an image.</para>
+        /// <para>The list of destination regions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DistributeRegionList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<string> DistributeRegionList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image that you want to distribute.</para>
+        /// <para>The ID of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

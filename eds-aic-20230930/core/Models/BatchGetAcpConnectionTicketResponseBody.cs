@@ -26,10 +26,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string AppInstanceGroupId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ai-0caoetkqi8kj****</para>
+            /// </summary>
             [NameInMap("AppInstanceId")]
             [Validation(Required=false)]
             public string AppInstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>InvalidResourceId.NotFound</para>
+            /// </summary>
             [NameInMap("ErrorCode")]
             [Validation(Required=false)]
             public string ErrorCode { get; set; }
@@ -44,10 +52,20 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>p-abdywvcksdb****</para>
+            /// </summary>
             [NameInMap("PersistentAppInstanceId")]
             [Validation(Required=false)]
             public string PersistentAppInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The port used for establishing a connection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
             public int? Port { get; set; }
@@ -63,7 +81,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The state of the task.</para>
+            /// <para>The state of the task. If FINISHED is returned, it indicates that a value can be retrieved from the Ticket field. If the returned value is not FINISHED, you still need to use this operation to query the Ticket generation result by using TaskId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FINISHED</para>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The name of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>defaultAppName</para>
+        /// <para>Application name</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         /// <para>The description of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>default description.</para>
+        /// <para>Application description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

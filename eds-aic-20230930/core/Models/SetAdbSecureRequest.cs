@@ -18,11 +18,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 
         /// <summary>
         /// <para>The status of the ADB authentication feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: The ADB authentication feature is disabled.</description></item>
-        /// <item><description>1: The ADB authentication feature is enabled.</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

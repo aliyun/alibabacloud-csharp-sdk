@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CreateAppRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Application Name 1</para>
+        /// <para>Application name 1</para>
         /// </summary>
         [NameInMap("AppName")]
         [Validation(Required=false)]
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,15 +30,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string BizRegionId { get; set; }
 
         /// <summary>
-        /// <para>The information about the custom app.</para>
+        /// <para>The custom application information.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you want to pass in a custom app, configure the <c>CustomAppInfo</c> parameter. Take note that the six fields within it are mandatory.</para>
+        /// <item><description><para>If you pass a custom application, pass the <c>CustomAppInfo</c> parameter. All six fields in this object parameter are required.</para>
         /// </description></item>
-        /// <item><description><para>A custom app has a higher priority than an app from the Alibaba Cloud Workspace Application Center. If you configure the <c>CustomAppInfo</c> parameter, the <c>FileName</c> and <c>FilePath</c> pair or the <c>OssAppUrl</c> will not take effect.</para>
+        /// <item><description><para>Custom applications have a higher priority than applications from the WUYING Workspace app center. If you pass the <c>CustomAppInfo</c> parameter, <c>FileName</c> and <c>FilePath</c>, or <c>OssAppUrl</c> will be invalid.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("CustomAppInfo")]
         [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string ApkSize { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the app.</para>
+            /// <para>The download URL of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://testApp.apk">http://testApp.apk</a></para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The MD5 value of the .apk file.</para>
+            /// <para>The MD5 value of the .apk package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>df3f46ce5844ddb278f14c5a9cd2****</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The name of the app package.</para>
+            /// <para>The application package name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.example.demo</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string PackageName { get; set; }
 
             /// <summary>
-            /// <para>The version of the app.</para>
+            /// <para>The application version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0.0</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The code of the app version.</para>
+            /// <para>The application version code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -107,25 +107,25 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The application description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Application description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name used by the app file in Object Storage Service (OSS). This parameter, combined with <c>FilePath</c>, uniquely identifies the OSS path of the app file.</para>
+        /// <para>The name of the application file stored in Object Storage Service (OSS). This parameter and <c>FilePath</c> together determine the unique OSS address.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <c>FileName</c> and <c>FilePath</c> parameters. Alternatively, configure the <c>OssAppUrl</c> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</para>
+        /// <item><description><para>If you pass an application from the WUYING Workspace app center, you must pass <c>FileName</c> and <c>FilePath</c>, or <c>OssAppUrl</c>. The former takes precedence.</para>
         /// </description></item>
-        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">Elastic Desktop Service (EDS) Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</para>
+        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">WUYING Workspace console</a>. Follow the on-screen instructions to upload your application file to the WUYING Workspace app center to obtain this parameter.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>testApp.apk</para>
@@ -135,22 +135,22 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket path to the app file. This parameter, combined with <c>FileName</c>, uniquely identifies the OSS path of the app file.</para>
+        /// <para>The storage address of the application file in an OSS bucket. This parameter and <c>FileName</c> together determine the unique OSS address.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <c>FileName</c> and <c>FilePath</c> parameters. Alternatively, configure the <c>OssAppUrl</c> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</para>
+        /// <item><description><para>If you pass an application from the WUYING Workspace app center, you must pass <c>FileName</c> and <c>FilePath</c>, or <c>OssAppUrl</c>. The former takes precedence.</para>
         /// </description></item>
-        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">EDS Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</para>
+        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">WUYING Workspace console</a>. Follow the on-screen instructions to upload your application file to the WUYING Workspace app center to obtain this parameter.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("FilePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>The icon URL of the application.</para>
+        /// <para>The URL of the application icon.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.example.com/icon.png">https://www.example.com/icon.png</a></para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string IconUrl { get; set; }
 
         /// <summary>
-        /// <para>The parameters used for installing the application. By default, the <c>-r</c> parameter is included when you install an application.</para>
+        /// <para>The installation parameters. The <c>-r</c> installation parameter is included by default when you install the application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-d</para>
@@ -170,15 +170,15 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string InstallParam { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket endpoint of the app file.</para>
+        /// <para>The OSS address of the application.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you want to pass in an app from the Alibaba Cloud Workspace Application Center, configure the <c>FileName</c> and <c>FilePath</c> parameters. Alternatively, configure the <c>OssAppUrl</c> parameter. The FileName and FilePath parameters takes precedence over the OssAppUrl parameter.</para>
+        /// <item><description><para>If you pass an application from the WUYING Workspace app center, you must pass <c>FileName</c> and <c>FilePath</c>, or <c>OssAppUrl</c>. The former takes precedence.</para>
         /// </description></item>
-        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">EDS Enterprise</a> console, upload the app file to the Application Center according to the on-screen instructions, and then retrieve the parameter value.</para>
+        /// <item><description><para>Log on to the <a href="https://eds.console.aliyun.com/osshelp">WUYING Workspace console</a>. Follow the on-screen instructions to upload your application file to the WUYING Workspace app center to obtain this parameter.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://testApp.apk">http://testApp.apk</a></para>
@@ -187,6 +187,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string OssAppUrl { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a system signature.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("SignApk")]
         [Validation(Required=false)]
         public string SignApk { get; set; }
