@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMyApplicationsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>Filters by resource type.</para>
+        /// <para>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
+        /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DefSchema { get; set; }
 
         /// <summary>
-        /// <para>The end time of the application, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The end time of the application period (millisecond timestamp).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>A token that you can use in a subsequent request to retrieve the next page of results.</para>
+        /// <para>The pagination cursor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJpZCI6MTIzfQ==</para>
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 200.</para>
+        /// <para>The number of entries per page. Default value: 10. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,14 +54,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The search criteria for the resource.</para>
+        /// <para>Filters by resource with exact or wildcard matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</para>
+        /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string ResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the leaf node that specifies the resource type. You can specify multiple resource types. Note that different leaf node names can map to the same business logic.</para>
+        /// <para>Filters by minimum permission resource type.</para>
+        /// <para>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</para>
+        /// <para>See also: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema documentation for International site</a></para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceType")]
@@ -67,7 +72,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceTypeShrink { get; set; }
 
         /// <summary>
-        /// <para>The start time of the application, specified as a Unix timestamp in milliseconds.</para>
+        /// <para>The start time of the application period (millisecond timestamp).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,23 +83,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The approval statuses for filtering. Valid values:</para>
+        /// <para>Filters by approval status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>WaitApproval</c>: Pending approval</para>
-        /// </description></item>
-        /// <item><description><para><c>Confirmed</c>: Pending authorization</para>
-        /// </description></item>
-        /// <item><description><para><c>RejectApproval</c>: Approval rejected</para>
-        /// </description></item>
-        /// <item><description><para><c>AuthorizeSucceed</c>: Authorization succeeded</para>
-        /// </description></item>
-        /// <item><description><para><c>AuthorizeFailed</c>: Authorization failed</para>
-        /// </description></item>
-        /// <item><description><para><c>Deleted</c>: The application was deleted.</para>
-        /// </description></item>
-        /// <item><description><para><c>Canceled</c>: The application was canceled.</para>
-        /// </description></item>
+        /// <item><description>WaitApproval: pending approval.</description></item>
+        /// <item><description>Confirmed: pending authorization.</description></item>
+        /// <item><description>RejectApproval: approval rejected.</description></item>
+        /// <item><description>AuthorizeSucceed: authorization succeeded.</description></item>
+        /// <item><description>AuthorizeFailed: authorization failed.</description></item>
+        /// <item><description>Deleted: deleted.</description></item>
+        /// <item><description>Canceled: withdrawn.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Deleted</para>
         /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]

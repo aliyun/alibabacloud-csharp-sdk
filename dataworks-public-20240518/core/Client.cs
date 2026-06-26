@@ -632,22 +632,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request for permissions on specific resources.</para>
+        /// <para>Submits an application for access permissions on a specific resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</description></item>
-        /// <item><description><b>Resource</b>: The resource for which permissions are requested. You must specify the <c>name</c> and <c>version</c> of the <c>ResourceSchema</c> required for parsing, along with the resource metadata (<c>MetaData</c>).</description></item>
-        /// <item><description><b>Grantee</b>: The principal to which permissions are granted. You must specify the principal type (<c>PrincipalType</c>) and principal ID (<c>PrincipalId</c>).</description></item>
-        /// <item><description><b>AccessTypes</b>: A list of permission types.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, specified as a Unix timestamp in milliseconds.</description></item>
-        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</description></item>
-        /// <item><description><b>ClientToken</b>: A client token to ensure request idempotency. This parameter is optional.
-        /// Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <c>DefVersion</c> and <c>MetaData</c> in the <c>Resource</c> object must match the selected <c>DefSchema</c>.</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</description></item>
+        /// <item><description><b>Grantee</b>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a milliseconds timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</description></item>
+        /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
+        /// Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <c>DefVersion</c> and <c>MetaData</c> in <c>Resource</c> should match the selected <c>DefSchema</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -704,22 +704,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request for permissions on specific resources.</para>
+        /// <para>Submits an application for access permissions on a specific resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</description></item>
-        /// <item><description><b>Resource</b>: The resource for which permissions are requested. You must specify the <c>name</c> and <c>version</c> of the <c>ResourceSchema</c> required for parsing, along with the resource metadata (<c>MetaData</c>).</description></item>
-        /// <item><description><b>Grantee</b>: The principal to which permissions are granted. You must specify the principal type (<c>PrincipalType</c>) and principal ID (<c>PrincipalId</c>).</description></item>
-        /// <item><description><b>AccessTypes</b>: A list of permission types.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, specified as a Unix timestamp in milliseconds.</description></item>
-        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</description></item>
-        /// <item><description><b>ClientToken</b>: A client token to ensure request idempotency. This parameter is optional.
-        /// Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <c>DefVersion</c> and <c>MetaData</c> in the <c>Resource</c> object must match the selected <c>DefSchema</c>.</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</description></item>
+        /// <item><description><b>Grantee</b>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a milliseconds timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</description></item>
+        /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
+        /// Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <c>DefVersion</c> and <c>MetaData</c> in <c>Resource</c> should match the selected <c>DefSchema</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -776,22 +776,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request for permissions on specific resources.</para>
+        /// <para>Submits an application for access permissions on a specific resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</description></item>
-        /// <item><description><b>Resource</b>: The resource for which permissions are requested. You must specify the <c>name</c> and <c>version</c> of the <c>ResourceSchema</c> required for parsing, along with the resource metadata (<c>MetaData</c>).</description></item>
-        /// <item><description><b>Grantee</b>: The principal to which permissions are granted. You must specify the principal type (<c>PrincipalType</c>) and principal ID (<c>PrincipalId</c>).</description></item>
-        /// <item><description><b>AccessTypes</b>: A list of permission types.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, specified as a Unix timestamp in milliseconds.</description></item>
-        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</description></item>
-        /// <item><description><b>ClientToken</b>: A client token to ensure request idempotency. This parameter is optional.
-        /// Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <c>DefVersion</c> and <c>MetaData</c> in the <c>Resource</c> object must match the selected <c>DefSchema</c>.</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</description></item>
+        /// <item><description><b>Grantee</b>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a milliseconds timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</description></item>
+        /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
+        /// Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <c>DefVersion</c> and <c>MetaData</c> in <c>Resource</c> should match the selected <c>DefSchema</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -810,22 +810,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a request for permissions on specific resources.</para>
+        /// <para>Submits an application for access permissions on a specific resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request details</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description><b>Reason</b>: The reason for the request. This parameter is required.</description></item>
-        /// <item><description><b>ApplyContents</b>: A list of permission requests. Each request includes a resource (Resource), a principal (Grantee), the requested permission types (AccessTypes), and the permission expiration time (ExpirationTime). A single request can contain a maximum of 400 items.</description></item>
-        /// <item><description><b>Resource</b>: The resource for which permissions are requested. You must specify the <c>name</c> and <c>version</c> of the <c>ResourceSchema</c> required for parsing, along with the resource metadata (<c>MetaData</c>).</description></item>
-        /// <item><description><b>Grantee</b>: The principal to which permissions are granted. You must specify the principal type (<c>PrincipalType</c>) and principal ID (<c>PrincipalId</c>).</description></item>
-        /// <item><description><b>AccessTypes</b>: A list of permission types.</description></item>
-        /// <item><description><b>ExpirationTime</b>: The permission expiration time, specified as a Unix timestamp in milliseconds.</description></item>
-        /// <item><description><b>AuthMethod</b>: The authorization method. This parameter is optional. If not specified, the system\&quot;s default authorization method is used.</description></item>
-        /// <item><description><b>ClientToken</b>: A client token to ensure request idempotency. This parameter is optional.
-        /// Ensure that all required fields are correctly filled out and meet their respective constraints. For example, the <c>DefVersion</c> and <c>MetaData</c> in the <c>Resource</c> object must match the selected <c>DefSchema</c>.</description></item>
+        /// <item><description><b>Reason</b>: The reason for the application. This parameter is required.</description></item>
+        /// <item><description><b>ApplyContents</b>: Contains multiple resource permission application contents, each including the resource description (Resource), grantee description (Grantee), permission types (AccessTypes), and permission expiration time (ExpirationTime). The maximum limit per request is 400 entries.</description></item>
+        /// <item><description><b>Resource</b>: The resource description. You need to specify the ResourceSchema.name and version that the resource parsing depends on, as well as the resource metadata MetaData.</description></item>
+        /// <item><description><b>Grantee</b>: The grantee description. You need to specify the grantee type (PrincipalType) and the principal ID (PrincipalId).</description></item>
+        /// <item><description><b>AccessTypes</b>: The list of permission types. Multiple permission combinations are supported.</description></item>
+        /// <item><description><b>ExpirationTime</b>: The permission expiration time, provided as a milliseconds timestamp.</description></item>
+        /// <item><description><b>AuthMethod</b>: An optional parameter that specifies the authorization method. The system uses the built-in default authorization method if not specified.</description></item>
+        /// <item><description><b>ClientToken</b>: The client token used to prevent duplicate requests. This parameter is optional.
+        /// Ensure all required fields are filled in correctly and comply with the corresponding constraints. For example, <c>DefVersion</c> and <c>MetaData</c> in <c>Resource</c> should match the selected <c>DefSchema</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20764,17 +20764,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a resource permission request by its process instance ID.</para>
+        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves details for a resource permission request using the specified <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> is required.</description></item>
-        /// <item><description>The response includes basic request information, status, and a list of requested items.</description></item>
-        /// <item><description>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</description></item>
+        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
+        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
+        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
+        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20817,17 +20817,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a resource permission request by its process instance ID.</para>
+        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves details for a resource permission request using the specified <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> is required.</description></item>
-        /// <item><description>The response includes basic request information, status, and a list of requested items.</description></item>
-        /// <item><description>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</description></item>
+        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
+        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
+        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
+        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20870,17 +20870,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a resource permission request by its process instance ID.</para>
+        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves details for a resource permission request using the specified <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> is required.</description></item>
-        /// <item><description>The response includes basic request information, status, and a list of requested items.</description></item>
-        /// <item><description>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</description></item>
+        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
+        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
+        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
+        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20899,17 +20899,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a resource permission request by its process instance ID.</para>
+        /// <para>Queries the content of resource permission applications under the specified process instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves details for a resource permission request using the specified <c>ProcessInstanceId</c>.</description></item>
-        /// <item><description>A valid <c>ProcessInstanceId</c> is required.</description></item>
-        /// <item><description>The response includes basic request information, status, and a list of requested items.</description></item>
-        /// <item><description>Each requested item includes detailed resource information, the principal, and the requested operation permissions.</description></item>
+        /// <item><description>This API is used to query the details of resource permission applications based on the provided <c>ProcessInstanceId</c>.</description></item>
+        /// <item><description>A valid <c>ProcessInstanceId</c> parameter must be provided in the request.</description></item>
+        /// <item><description>The response includes the basic information, status, and the list of specific application contents.</description></item>
+        /// <item><description>Each application content includes detailed resource information, the grantee, the requested operation permissions, and more.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38524,19 +38524,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all resource access requests submitted by the current user.</para>
+        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports pagination using the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description>The required <c>DefSchema</c> parameter specifies the resource type.</description></item>
-        /// <item><description>Specify multiple resource types in the <c>ResourceType</c> parameter to filter applications more precisely.</description></item>
-        /// <item><description>Use the <c>StartTime</c> and <c>EndTime</c> parameters to limit the query to a specific time range.</description></item>
-        /// <item><description>Use the <c>Statuses</c> parameter to filter applications by status, such as pending approval or approved.</description></item>
-        /// <item><description>To filter by a specific resource or grantee, use the <c>Resource</c> and <c>Grantee</c> parameters.</description></item>
+        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
+        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
+        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
+        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
+        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38621,19 +38621,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all resource access requests submitted by the current user.</para>
+        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports pagination using the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description>The required <c>DefSchema</c> parameter specifies the resource type.</description></item>
-        /// <item><description>Specify multiple resource types in the <c>ResourceType</c> parameter to filter applications more precisely.</description></item>
-        /// <item><description>Use the <c>StartTime</c> and <c>EndTime</c> parameters to limit the query to a specific time range.</description></item>
-        /// <item><description>Use the <c>Statuses</c> parameter to filter applications by status, such as pending approval or approved.</description></item>
-        /// <item><description>To filter by a specific resource or grantee, use the <c>Resource</c> and <c>Grantee</c> parameters.</description></item>
+        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
+        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
+        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
+        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
+        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38718,19 +38718,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all resource access requests submitted by the current user.</para>
+        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports pagination using the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description>The required <c>DefSchema</c> parameter specifies the resource type.</description></item>
-        /// <item><description>Specify multiple resource types in the <c>ResourceType</c> parameter to filter applications more precisely.</description></item>
-        /// <item><description>Use the <c>StartTime</c> and <c>EndTime</c> parameters to limit the query to a specific time range.</description></item>
-        /// <item><description>Use the <c>Statuses</c> parameter to filter applications by status, such as pending approval or approved.</description></item>
-        /// <item><description>To filter by a specific resource or grantee, use the <c>Resource</c> and <c>Grantee</c> parameters.</description></item>
+        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
+        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
+        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
+        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
+        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38749,19 +38749,19 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all resource access requests submitted by the current user.</para>
+        /// <para>Queries all resource access permission application orders initiated by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports pagination using the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
-        /// <item><description>The required <c>DefSchema</c> parameter specifies the resource type.</description></item>
-        /// <item><description>Specify multiple resource types in the <c>ResourceType</c> parameter to filter applications more precisely.</description></item>
-        /// <item><description>Use the <c>StartTime</c> and <c>EndTime</c> parameters to limit the query to a specific time range.</description></item>
-        /// <item><description>Use the <c>Statuses</c> parameter to filter applications by status, such as pending approval or approved.</description></item>
-        /// <item><description>To filter by a specific resource or grantee, use the <c>Resource</c> and <c>Grantee</c> parameters.</description></item>
+        /// <item><description>This API supports paginated queries, controlled by the <c>NextToken</c> and <c>PageSize</c> parameters.</description></item>
+        /// <item><description><c>DefSchema</c> is a required parameter that specifies the resource type.</description></item>
+        /// <item><description>The <c>ResourceType</c> list can contain multiple resource types for more precise filtering of application orders.</description></item>
+        /// <item><description>You can set <c>StartTime</c> and <c>EndTime</c> to limit the time range of the query.</description></item>
+        /// <item><description><c>Statuses</c> allows you to filter application orders by specific statuses, such as pending approval and authorized.</description></item>
+        /// <item><description>If you need to filter by specific resources or authorization targets, you can provide detailed information through the <c>Resource</c> and <c>Grantee</c> fields.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38780,18 +38780,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists permission requests where the current user is an approver or stakeholder.</para>
+        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves all pending and approved permission requests where the current user is an approver.</description></item>
-        /// <item><description>The <c>Statuses</c> parameter filters requests by status.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter enables pagination. For the first request, omit this parameter or set it to <c>null</c>. For subsequent requests, pass the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The <c>PageSize</c> parameter defaults to 10, with a maximum value of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
+        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
+        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -38892,18 +38892,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists permission requests where the current user is an approver or stakeholder.</para>
+        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves all pending and approved permission requests where the current user is an approver.</description></item>
-        /// <item><description>The <c>Statuses</c> parameter filters requests by status.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter enables pagination. For the first request, omit this parameter or set it to <c>null</c>. For subsequent requests, pass the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The <c>PageSize</c> parameter defaults to 10, with a maximum value of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
+        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
+        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39004,18 +39004,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists permission requests where the current user is an approver or stakeholder.</para>
+        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves all pending and approved permission requests where the current user is an approver.</description></item>
-        /// <item><description>The <c>Statuses</c> parameter filters requests by status.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter enables pagination. For the first request, omit this parameter or set it to <c>null</c>. For subsequent requests, pass the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The <c>PageSize</c> parameter defaults to 10, with a maximum value of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
+        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
+        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39034,18 +39034,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists permission requests where the current user is an approver or stakeholder.</para>
+        /// <para>Query all permission application orders where the current user is an approver or stakeholder.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request Description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves all pending and approved permission requests where the current user is an approver.</description></item>
-        /// <item><description>The <c>Statuses</c> parameter filters requests by status.</description></item>
-        /// <item><description>The <c>NextToken</c> parameter enables pagination. For the first request, omit this parameter or set it to <c>null</c>. For subsequent requests, pass the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The <c>PageSize</c> parameter defaults to 10, with a maximum value of 200.</description></item>
-        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required parameters. Other parameters are optional.</description></item>
+        /// <item><description>This API is used to retrieve all permission application orders where the current user is an approver, including pending and processed application orders.</description></item>
+        /// <item><description>You can use the <c>Statuses</c> parameter to filter application orders by specific status.</description></item>
+        /// <item><description><c>NextToken</c> is used for paginated requests. It can be omitted or set to <c>null</c> for the first request. For subsequent requests, pass the <c>NextToken</c> value from the previous response.</description></item>
+        /// <item><description><c>PageSize</c> defaults to 10, with a maximum of 200.</description></item>
+        /// <item><description><c>DefSchema</c> and <c>ResourceType</c> are required fields. Other parameters can be filled in as needed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -39952,32 +39952,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending permission requests awaiting approval by the current user.</para>
+        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: The resource type, such as a table. You can specify one or more values.</description></item>
-        /// <item><description><b>Resource</b>: Search criteria for a resource, such as its project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: The time range when the permission requests were submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</description></item>
-        /// <item><description><b>Grantee</b>: Filters the results by the grantee.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters the results by the access type, such as <c>Read</c> or <c>Update</c>.</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Enables pagination. <c>PageSize</c> specifies the number of results to return for each request, and <c>NextToken</c> is the cursor used to retrieve the next page of results.
+        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
+        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
+        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
+        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
+        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
         /// Notes:</description></item>
-        /// <item><description>If no filters are specified, the API returns all matching records.</description></item>
-        /// <item><description>For the first request, you can leave the <c>NextToken</c> parameter empty or omit it. To retrieve subsequent pages, you must use the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</description></item>
-        /// <item><description>If no more data is available, the <c>HasMore</c> field is <c>false</c>, and <c>NextToken</c> is omitted.</description></item>
+        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
+        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
         /// </list>
-        /// <h2>Response</h2>
-        /// <para>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</para>
+        /// <h2>Response Description</h2>
+        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, containing the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and a flag indicating if more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</description></item>
+        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40070,32 +40070,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending permission requests awaiting approval by the current user.</para>
+        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: The resource type, such as a table. You can specify one or more values.</description></item>
-        /// <item><description><b>Resource</b>: Search criteria for a resource, such as its project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: The time range when the permission requests were submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</description></item>
-        /// <item><description><b>Grantee</b>: Filters the results by the grantee.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters the results by the access type, such as <c>Read</c> or <c>Update</c>.</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Enables pagination. <c>PageSize</c> specifies the number of results to return for each request, and <c>NextToken</c> is the cursor used to retrieve the next page of results.
+        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
+        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
+        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
+        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
+        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
         /// Notes:</description></item>
-        /// <item><description>If no filters are specified, the API returns all matching records.</description></item>
-        /// <item><description>For the first request, you can leave the <c>NextToken</c> parameter empty or omit it. To retrieve subsequent pages, you must use the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</description></item>
-        /// <item><description>If no more data is available, the <c>HasMore</c> field is <c>false</c>, and <c>NextToken</c> is omitted.</description></item>
+        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
+        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
         /// </list>
-        /// <h2>Response</h2>
-        /// <para>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</para>
+        /// <h2>Response Description</h2>
+        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, containing the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and a flag indicating if more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</description></item>
+        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40188,32 +40188,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending permission requests awaiting approval by the current user.</para>
+        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: The resource type, such as a table. You can specify one or more values.</description></item>
-        /// <item><description><b>Resource</b>: Search criteria for a resource, such as its project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: The time range when the permission requests were submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</description></item>
-        /// <item><description><b>Grantee</b>: Filters the results by the grantee.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters the results by the access type, such as <c>Read</c> or <c>Update</c>.</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Enables pagination. <c>PageSize</c> specifies the number of results to return for each request, and <c>NextToken</c> is the cursor used to retrieve the next page of results.
+        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
+        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
+        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
+        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
+        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
         /// Notes:</description></item>
-        /// <item><description>If no filters are specified, the API returns all matching records.</description></item>
-        /// <item><description>For the first request, you can leave the <c>NextToken</c> parameter empty or omit it. To retrieve subsequent pages, you must use the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</description></item>
-        /// <item><description>If no more data is available, the <c>HasMore</c> field is <c>false</c>, and <c>NextToken</c> is omitted.</description></item>
+        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
+        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
         /// </list>
-        /// <h2>Response</h2>
-        /// <para>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</para>
+        /// <h2>Response Description</h2>
+        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, containing the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and a flag indicating if more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</description></item>
+        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40232,32 +40232,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves pending permission requests awaiting approval by the current user.</para>
+        /// <para>Retrieves the list of pending permission request orders for which the current user is the approver.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
-        /// <para>This API queries all pending permission requests that the current user can approve. You can filter the results by criteria such as resource type, time range, and approval status.</para>
+        /// <h2>Request Description</h2>
+        /// <para>This API is used to query all pending permission request orders for which the current logged-in user is the approver. It supports filtering by multiple conditions, including resource type, time range, and approval status, to more precisely locate specific request orders.</para>
         /// <list type="bullet">
-        /// <item><description><b>ResourceType</b>: The resource type, such as a table. You can specify one or more values.</description></item>
-        /// <item><description><b>Resource</b>: Search criteria for a resource, such as its project, database, or table name.</description></item>
-        /// <item><description><b>StartTime and EndTime</b>: The time range when the permission requests were submitted.</description></item>
-        /// <item><description><b>Statuses</b>: Filters the results by approval status, for example, to retrieve only requests that are pending approval.</description></item>
-        /// <item><description><b>Grantee</b>: Filters the results by the grantee.</description></item>
-        /// <item><description><b>AccessTypes</b>: Filters the results by the access type, such as <c>Read</c> or <c>Update</c>.</description></item>
-        /// <item><description><b>PageSize and NextToken</b>: Enables pagination. <c>PageSize</c> specifies the number of results to return for each request, and <c>NextToken</c> is the cursor used to retrieve the next page of results.
+        /// <item><description><b>ResourceType</b>: Specifies the resource type (such as table), which can have multiple values.</description></item>
+        /// <item><description><b>Resource</b>: Provides specific resource search conditions, such as the project, database, or table name.</description></item>
+        /// <item><description><b>StartTime and EndTime</b>: Define the time range during which the request was submitted.</description></item>
+        /// <item><description><b>Statuses</b>: Allows filtering results by approval status, for example, to view only pending approval requests.</description></item>
+        /// <item><description><b>Grantee</b>: Filters request orders based on the authorization principal information.</description></item>
+        /// <item><description><b>AccessTypes</b>: Filters based on the specific permission types requested (such as read or update).</description></item>
+        /// <item><description><b>PageSize and NextToken</b>: Used for pagination control, specifying the amount of data returned per request and the cursor needed to retrieve the next page of data.
         /// Notes:</description></item>
-        /// <item><description>If no filters are specified, the API returns all matching records.</description></item>
-        /// <item><description>For the first request, you can leave the <c>NextToken</c> parameter empty or omit it. To retrieve subsequent pages, you must use the <c>NextToken</c> value returned in the previous response.</description></item>
-        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If you specify a value greater than the maximum, the maximum value is used.</description></item>
-        /// <item><description>If no more data is available, the <c>HasMore</c> field is <c>false</c>, and <c>NextToken</c> is omitted.</description></item>
+        /// <item><description>If no filtering conditions are provided, all matching records are returned by default.</description></item>
+        /// <item><description>The <c>NextToken</c> parameter can be empty or omitted for the first call. Subsequent page requests must use the <c>NextToken</c> value provided in the previous response.</description></item>
+        /// <item><description>The default value of <c>PageSize</c> is 10, and the maximum value is 200. If the specified value exceeds the maximum limit, the maximum value is used.</description></item>
+        /// <item><description>When there is no more data to return, the <c>HasMore</c> field is set to <c>false</c>, and <c>NextToken</c> will be empty or absent.</description></item>
         /// </list>
-        /// <h2>Response</h2>
-        /// <para>A successful call returns paginated results. Each permission request includes details such as the submission time, resource description, grantee, and requested permissions. The response also contains the approval process status and other relevant metadata.</para>
+        /// <h2>Response Description</h2>
+        /// <para>After a successful call to this API, the response body contains paginated results and detailed information for each request order, such as the application time, resource description, authorization principal, requested permissions, and more. Additionally, the approval process status and other related metadata are provided.</para>
         /// <list type="bullet">
-        /// <item><description><b>Data</b>: The paginated result set, containing the page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and a flag indicating if more data is available (<c>HasMore</c>).</description></item>
-        /// <item><description><b>ApplicationQueryResponse</b>: The details of each permission request, including the justification, submission time, status, and a detailed list of requested items.</description></item>
+        /// <item><description><b>Data</b>: The paginated result set, including page size (<c>PageSize</c>), cursor (<c>NextToken</c>), and whether more data is available (<c>HasMore</c>).</description></item>
+        /// <item><description><b>ApplicationQueryResponse</b>: The specific content of each request order, including the reason for the request, submission time, status, and a detailed list of request content.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -46432,12 +46432,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple instances at a time.</para>
+        /// <para>Reruns multiple node instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -46468,6 +46468,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["Ids"] = request.IdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseLatestConfig))
+            {
+                body["UseLatestConfig"] = request.UseLatestConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -46489,12 +46493,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple instances at a time.</para>
+        /// <para>Reruns multiple node instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -46525,6 +46529,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["Ids"] = request.IdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseLatestConfig))
+            {
+                body["UseLatestConfig"] = request.UseLatestConfig;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -46546,12 +46554,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple instances at a time.</para>
+        /// <para>Reruns multiple node instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -46569,12 +46577,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reruns multiple instances at a time.</para>
+        /// <para>Reruns multiple node instances in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API operation is available for all DataWorks editions.</para>
+        /// <para>You must purchase DataWorks Basic Edition or a more advanced edition to use this operation.</para>
         /// </description>
         /// 
         /// <param name="request">

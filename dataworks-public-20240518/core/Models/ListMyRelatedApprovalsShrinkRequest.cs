@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMyRelatedApprovalsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The permissions.</para>
+        /// <para>Filter by requested permissions.</para>
+        /// <para>Note: Different resource levels support different application permission types, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// </summary>
         [NameInMap("AccessTypes")]
         [Validation(Required=false)]
         public string AccessTypesShrink { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>Filter by resource type.</para>
+        /// <para>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DefSchema { get; set; }
 
         /// <summary>
-        /// <para>The end of the application time range, specified as a millisecond timestamp.</para>
+        /// <para>Application time end (millisecond timestamp)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1779724799999</para>
@@ -38,14 +42,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Filters approvals by the specified principal.</para>
+        /// <para>Filter by authorization principal.</para>
+        /// <para>Note: The authorization principal types supported by the system are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// </summary>
         [NameInMap("Grantee")]
         [Validation(Required=false)]
         public string GranteeShrink { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that acts as a cursor to retrieve the next page of results.</para>
+        /// <para>Pagination cursor</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJpZCI6MTIzfQ==</para>
@@ -55,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 200.</para>
+        /// <para>Page size (default 10, maximum 200)</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -65,14 +71,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource declaration.</para>
+        /// <para>Filter by resource with exact/generalized matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string ResourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The resource type, specified as a leaf node name. Multiple values are supported because a single business semantic can be mapped to multiple leaf node names.</para>
+        /// <para>Filter by minimum permission resource type.</para>
+        /// <para>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ResourceTypeShrink { get; set; }
 
         /// <summary>
-        /// <para>The start of the application time range, specified as a millisecond timestamp.</para>
+        /// <para>Application time start (millisecond timestamp)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1771948800000</para>
@@ -93,22 +102,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by approval status. Valid values:</para>
+        /// <para>Filter by approval status. Enum values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>WaitApproval</c>: Pending approval</para>
-        /// </description></item>
-        /// <item><description><para><c>Confirmed</c>: Pending authorization</para>
-        /// </description></item>
-        /// <item><description><para><c>RejectApproval</c>: Approval rejected</para>
-        /// </description></item>
-        /// <item><description><para><c>AuthorizeSucceed</c>: Authorization succeeded</para>
-        /// </description></item>
-        /// <item><description><para><c>AuthorizeFailed</c>: Authorization failed</para>
-        /// </description></item>
-        /// <item><description><para><c>Deleted</c>: Deleted</para>
-        /// </description></item>
-        /// <item><description><para><c>Canceled</c>: Withdrawn</para>
-        /// </description></item>
+        /// <item><description>WaitApproval: Pending approval</description></item>
+        /// <item><description>Confirmed: Pending authorization</description></item>
+        /// <item><description>RejectApproval: Approval rejected</description></item>
+        /// <item><description>AuthorizeSucceed: Authorization succeeded</description></item>
+        /// <item><description>AuthorizeFailed: Authorization failed</description></item>
+        /// <item><description>Deleted: Deleted</description></item>
+        /// <item><description>Canceled: Withdrawn</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class ListMyRelatedApprovalsRequest : TeaModel {
         /// <summary>
-        /// <para>The permissions.</para>
+        /// <para>Filter by requested permissions.</para>
+        /// <para>Note: Different resource levels support different application permission types, all constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.isValidLeaf, accessTypeRestrictions, and authMethodAccessTypes.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// </summary>
         [NameInMap("AccessTypes")]
         [Validation(Required=false)]
         public List<string> AccessTypes { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>Filter by resource type.</para>
+        /// <para>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string DefSchema { get; set; }
 
         /// <summary>
-        /// <para>The end of the application time range, specified as a millisecond timestamp.</para>
+        /// <para>Application time end (millisecond timestamp)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1779724799999</para>
@@ -38,29 +42,24 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Filters approvals by the specified principal.</para>
+        /// <para>Filter by authorization principal.</para>
+        /// <para>Note: The authorization principal types supported by the system are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.authPrincipal.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// </summary>
         [NameInMap("Grantee")]
         [Validation(Required=false)]
         public ListMyRelatedApprovalsRequestGrantee Grantee { get; set; }
         public class ListMyRelatedApprovalsRequestGrantee : TeaModel {
             /// <summary>
-            /// <para>The ID of the principal. The format varies based on the value of <c>PrincipalType</c>.</para>
+            /// <para>Authorization principal ID:</para>
             /// <list type="bullet">
-            /// <item><description><para>If <c>PrincipalType</c> is <c>RamUser</c>, this parameter is the Dataworks user ID.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>PrincipalType</c> is <c>RamRole</c>, this parameter is a Dataworks user ID that starts with <c>ROLE_</c>.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>PrincipalType</c> is <c>DataworksTenantMember</c>, this parameter is the Dataworks user ID.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>PrincipalType</c> is <c>DataworksTenantRole</c>, this parameter is the Dataworks tenant <c>roleCode</c>.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>PrincipalType</c> is <c>DataworksProjectRole</c>, this parameter is the Dataworks workspace <c>roleCode</c>.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>PrincipalType</c> is <c>DataworksProjectMember</c>, this parameter is the Dataworks user ID.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>PrincipalType</c> is <c>DlfRole</c>, this parameter is the DlfNext role name.</para>
-            /// </description></item>
+            /// <item><description><c>RamUser</c>: Dataworks UserId</description></item>
+            /// <item><description><c>RamRole</c>: Dataworks UserId prefixed with &quot;ROLE_&quot;</description></item>
+            /// <item><description><c>DataworksTenantMember</c>: Dataworks UserId</description></item>
+            /// <item><description><c>DataworksTenantRole</c>: Dataworks tenant roleCode</description></item>
+            /// <item><description><c>DataworksProjectRole</c>: Dataworks workspace roleCode</description></item>
+            /// <item><description><c>DataworksProjectMember</c>: Dataworks UserId</description></item>
+            /// <item><description><c>DlfRole</c>: DlfNext role name</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,22 +70,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string PrincipalId { get; set; }
 
             /// <summary>
-            /// <para>The type of the principal. Valid values:</para>
+            /// <para>Authorization principal type:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>RamRole</c></para>
-            /// </description></item>
-            /// <item><description><para><c>RamUser</c></para>
-            /// </description></item>
-            /// <item><description><para><c>DataworksTenantMember</c></para>
-            /// </description></item>
-            /// <item><description><para><c>DataworksTenantRole</c></para>
-            /// </description></item>
-            /// <item><description><para><c>DataworksProjectMember</c></para>
-            /// </description></item>
-            /// <item><description><para><c>DataworksProjectRole</c></para>
-            /// </description></item>
-            /// <item><description><para><c>DlfRole</c></para>
-            /// </description></item>
+            /// <item><description><c>RamRole</c></description></item>
+            /// <item><description><c>RamUser</c></description></item>
+            /// <item><description><c>DataworksTenantMember</c></description></item>
+            /// <item><description><c>DataworksTenantRole</c></description></item>
+            /// <item><description><c>DataworksProjectMember</c></description></item>
+            /// <item><description><c>DataworksProjectRole</c></description></item>
+            /// <item><description><c>DlfRole</c></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that acts as a cursor to retrieve the next page of results.</para>
+        /// <para>Pagination cursor</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJpZCI6MTIzfQ==</para>
@@ -109,7 +101,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 10. Maximum value: 200.</para>
+        /// <para>Page size (default 10, maximum 200)</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -119,14 +111,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource declaration.</para>
+        /// <para>Filter by resource with exact/generalized matching. The resource description is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public ListMyRelatedApprovalsRequestResource Resource { get; set; }
         public class ListMyRelatedApprovalsRequestResource : TeaModel {
             /// <summary>
-            /// <para>The <c>name</c> of the <c>ResourceSchema</c> used to parse the resource.</para>
+            /// <para>Resource type.</para>
+            /// <para>Note: The resource types supported by the system for applications are constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.name.</para>
+            /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>MaxCompute</para>
@@ -136,7 +131,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DefSchema { get; set; }
 
             /// <summary>
-            /// <para>The <c>version</c> of the <c>ResourceSchema</c> used to parse the resource.</para>
+            /// <para>The resource parsing version is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.version.</para>
+            /// <para><a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
             /// 
             /// <b>Example:</b>
             /// <para>v1.0.0</para>
@@ -146,7 +142,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string DefVersion { get; set; }
 
             /// <summary>
-            /// <para>The resource metadata. The <c>ResourceSchema</c> defines its content.</para>
+            /// <para>Resource metadata.</para>
+            /// <para>Note: The metadata is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources. A valid resource declaration must include the full-path metadata declaration from level 0 to validLeaf layer.</para>
+            /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
             /// </summary>
             [NameInMap("MetaData")]
             [Validation(Required=false)]
@@ -155,7 +153,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
-        /// <para>The resource type, specified as a leaf node name. Multiple values are supported because a single business semantic can be mapped to multiple leaf node names.</para>
+        /// <para>Filter by minimum permission resource type.</para>
+        /// <para>Note: The minimum permission resource type is constrained by <a href="https://help.aliyun.com/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema</a>.resources[*].isValidLeaf being true.</para>
+        /// <para>Reference: <a href="https://www.alibabacloud.com/help/zh/dataworks/developer-reference/resourceschema-template-instructions">ResourceSchema International Site Documentation</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public List<string> ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The start of the application time range, specified as a millisecond timestamp.</para>
+        /// <para>Application time start (millisecond timestamp)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1771948800000</para>
@@ -176,22 +176,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by approval status. Valid values:</para>
+        /// <para>Filter by approval status. Enum values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>WaitApproval</c>: Pending approval</para>
-        /// </description></item>
-        /// <item><description><para><c>Confirmed</c>: Pending authorization</para>
-        /// </description></item>
-        /// <item><description><para><c>RejectApproval</c>: Approval rejected</para>
-        /// </description></item>
-        /// <item><description><para><c>AuthorizeSucceed</c>: Authorization succeeded</para>
-        /// </description></item>
-        /// <item><description><para><c>AuthorizeFailed</c>: Authorization failed</para>
-        /// </description></item>
-        /// <item><description><para><c>Deleted</c>: Deleted</para>
-        /// </description></item>
-        /// <item><description><para><c>Canceled</c>: Withdrawn</para>
-        /// </description></item>
+        /// <item><description>WaitApproval: Pending approval</description></item>
+        /// <item><description>Confirmed: Pending authorization</description></item>
+        /// <item><description>RejectApproval: Approval rejected</description></item>
+        /// <item><description>AuthorizeSucceed: Authorization succeeded</description></item>
+        /// <item><description>AuthorizeFailed: Authorization failed</description></item>
+        /// <item><description>Deleted: Deleted</description></item>
+        /// <item><description>Canceled: Withdrawn</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

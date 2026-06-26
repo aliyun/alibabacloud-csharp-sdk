@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class GetApplicationContentsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the approval process instance.</para>
+        /// <para>The approval process instance ID of the submitted application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
