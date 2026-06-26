@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public List<GetAppRecommendedCommoditiesResponseBodyModuleCommodities> Commodities { get; set; }
             public class GetAppRecommendedCommoditiesResponseBodyModuleCommodities : TeaModel {
+                [NameInMap("ActionType")]
+                [Validation(Required=false)]
+                public string ActionType { get; set; }
+
                 /// <summary>
                 /// <para>The commodity code. This code applies to both resource plans and promotional commodities.</para>
                 /// 
@@ -100,6 +104,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [NameInMap("CommodityCode")]
                 [Validation(Required=false)]
                 public string CommodityCode { get; set; }
+
+                [NameInMap("Description")]
+                [Validation(Required=false)]
+                public string Description { get; set; }
 
                 /// <summary>
                 /// <para>The extension field, such as unsupportedReason.</para>
@@ -142,6 +150,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string PromotionCommodityId { get; set; }
 
+                [NameInMap("RecommendType")]
+                [Validation(Required=false)]
+                public string RecommendType { get; set; }
+
                 /// <summary>
                 /// <para>The redirect URL. This parameter is returned when a redirect is required, such as during an upgrade.</para>
                 /// 
@@ -161,6 +173,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("Title")]
+                [Validation(Required=false)]
+                public string Title { get; set; }
 
             }
 
