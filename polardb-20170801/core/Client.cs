@@ -7240,6 +7240,158 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates API keys in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBatchConsumerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchConsumerResponse
+        /// </returns>
+        public CreateBatchConsumerResponse CreateBatchConsumerWithOptions(CreateBatchConsumerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupId))
+            {
+                query["ConsumerGroupId"] = request.ConsumerGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["Count"] = request.Count;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
+            {
+                query["GwClusterId"] = request.GwClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBatchConsumer",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBatchConsumerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates API keys in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBatchConsumerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchConsumerResponse
+        /// </returns>
+        public async Task<CreateBatchConsumerResponse> CreateBatchConsumerWithOptionsAsync(CreateBatchConsumerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupId))
+            {
+                query["ConsumerGroupId"] = request.ConsumerGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
+            {
+                query["Count"] = request.Count;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
+            {
+                query["GwClusterId"] = request.GwClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBatchConsumer",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBatchConsumerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates API keys in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBatchConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchConsumerResponse
+        /// </returns>
+        public CreateBatchConsumerResponse CreateBatchConsumer(CreateBatchConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateBatchConsumerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates API keys in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBatchConsumerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBatchConsumerResponse
+        /// </returns>
+        public async Task<CreateBatchConsumerResponse> CreateBatchConsumerAsync(CreateBatchConsumerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateBatchConsumerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a batch task.</para>
         /// </summary>
         /// 
@@ -21064,7 +21216,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21122,7 +21274,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21180,7 +21332,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21198,7 +21350,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a custom instance.</para>
+        /// <para>Queries the details of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23780,6 +23932,150 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeActiveOperationTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询该apikey的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApikeyAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApikeyAttributeResponse
+        /// </returns>
+        public DescribeApikeyAttributeResponse DescribeApikeyAttributeWithOptions(DescribeApikeyAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApikeyAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApikeyAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询该apikey的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApikeyAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApikeyAttributeResponse
+        /// </returns>
+        public async Task<DescribeApikeyAttributeResponse> DescribeApikeyAttributeWithOptionsAsync(DescribeApikeyAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApikeyAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApikeyAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询该apikey的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApikeyAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApikeyAttributeResponse
+        /// </returns>
+        public DescribeApikeyAttributeResponse DescribeApikeyAttribute(DescribeApikeyAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApikeyAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询该apikey的详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApikeyAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApikeyAttributeResponse
+        /// </returns>
+        public async Task<DescribeApikeyAttributeResponse> DescribeApikeyAttributeAsync(DescribeApikeyAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApikeyAttributeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -35472,6 +35768,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries all API keys under the current UID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewayApikeyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewayApikeyListResponse
+        /// </returns>
+        public DescribeGatewayApikeyListResponse DescribeGatewayApikeyListWithOptions(DescribeGatewayApikeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGatewayApikeyList",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGatewayApikeyListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all API keys under the current UID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewayApikeyListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewayApikeyListResponse
+        /// </returns>
+        public async Task<DescribeGatewayApikeyListResponse> DescribeGatewayApikeyListWithOptionsAsync(DescribeGatewayApikeyListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeGatewayApikeyList",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeGatewayApikeyListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all API keys under the current UID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewayApikeyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewayApikeyListResponse
+        /// </returns>
+        public DescribeGatewayApikeyListResponse DescribeGatewayApikeyList(DescribeGatewayApikeyListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeGatewayApikeyListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries all API keys under the current UID.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeGatewayApikeyListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeGatewayApikeyListResponse
+        /// </returns>
+        public async Task<DescribeGatewayApikeyListResponse> DescribeGatewayApikeyListAsync(DescribeGatewayApikeyListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeGatewayApikeyListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Viewing gateway instance details</para>
         /// </summary>
         /// 
@@ -40596,7 +41028,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of agents installed in a specified application.</para>
+        /// <para>Queries all installed plug-ins and their status information under a specified application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40648,7 +41080,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of agents installed in a specified application.</para>
+        /// <para>Queries all installed plug-ins and their status information under a specified application.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -40700,7 +41132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of agents installed in a specified application.</para>
+        /// <para>Queries all installed plug-ins and their status information under a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40718,7 +41150,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of agents installed in a specified application.</para>
+        /// <para>Queries all installed plug-ins and their status information under a specified application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41496,7 +41928,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a PolarFS instance.</para>
+        /// <para>Retrieves the details of a PolarLakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41546,7 +41978,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a PolarFS instance.</para>
+        /// <para>Retrieves the details of a PolarLakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41596,7 +42028,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a PolarFS instance.</para>
+        /// <para>Retrieves the details of a PolarLakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41614,7 +42046,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a PolarFS instance.</para>
+        /// <para>Retrieves the details of a PolarLakebase instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41632,17 +42064,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files and subdirectories at a specified path.</para>
+        /// <para>Lists the files and subdirectories under a specified path.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>The <b>Path</b> parameter must be an absolute path.</description></item>
-        /// <item><description>The <b>Recursive</b> parameter defaults to <c>false</c>. If set to <c>true</c>, the operation recursively lists the contents of all subdirectories.</description></item>
-        /// <item><description>The <b>Depth</b> parameter limits the recursive depth. The default value is <c>1</c>.</description></item>
-        /// <item><description>The <b>Filter</b> parameter supports filtering with wildcards or regular expressions.</description></item>
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41689,17 +42121,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files and subdirectories at a specified path.</para>
+        /// <para>Lists the files and subdirectories under a specified path.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>The <b>Path</b> parameter must be an absolute path.</description></item>
-        /// <item><description>The <b>Recursive</b> parameter defaults to <c>false</c>. If set to <c>true</c>, the operation recursively lists the contents of all subdirectories.</description></item>
-        /// <item><description>The <b>Depth</b> parameter limits the recursive depth. The default value is <c>1</c>.</description></item>
-        /// <item><description>The <b>Filter</b> parameter supports filtering with wildcards or regular expressions.</description></item>
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41746,17 +42178,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files and subdirectories at a specified path.</para>
+        /// <para>Lists the files and subdirectories under a specified path.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>The <b>Path</b> parameter must be an absolute path.</description></item>
-        /// <item><description>The <b>Recursive</b> parameter defaults to <c>false</c>. If set to <c>true</c>, the operation recursively lists the contents of all subdirectories.</description></item>
-        /// <item><description>The <b>Depth</b> parameter limits the recursive depth. The default value is <c>1</c>.</description></item>
-        /// <item><description>The <b>Filter</b> parameter supports filtering with wildcards or regular expressions.</description></item>
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41775,17 +42207,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files and subdirectories at a specified path.</para>
+        /// <para>Lists the files and subdirectories under a specified path.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage notes</h2>
+        /// <h2>请求说明</h2>
         /// <list type="bullet">
-        /// <item><description>The <b>Path</b> parameter must be an absolute path.</description></item>
-        /// <item><description>The <b>Recursive</b> parameter defaults to <c>false</c>. If set to <c>true</c>, the operation recursively lists the contents of all subdirectories.</description></item>
-        /// <item><description>The <b>Depth</b> parameter limits the recursive depth. The default value is <c>1</c>.</description></item>
-        /// <item><description>The <b>Filter</b> parameter supports filtering with wildcards or regular expressions.</description></item>
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
         /// </list>
         /// </description>
         /// 
@@ -69339,6 +69771,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["Files"] = request.FilesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDefault))
+            {
+                query["IsDefault"] = request.IsDefault;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepWorkspaceFiles))
+            {
+                query["KeepWorkspaceFiles"] = request.KeepWorkspaceFiles;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 query["Model"] = request.Model;
@@ -69414,6 +69854,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilesShrink))
             {
                 query["Files"] = request.FilesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDefault))
+            {
+                query["IsDefault"] = request.IsDefault;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepWorkspaceFiles))
+            {
+                query["KeepWorkspaceFiles"] = request.KeepWorkspaceFiles;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can find cluster IDs by calling the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including cluster IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PolarFS instance.</para>
+        /// <para>The PolarLakebase instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,12 +34,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the FUSE mount information. Valid values:</para>
+        /// <para>Specifies whether to query Fuse mount information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Queries the FUSE mount information.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Does not query the FUSE mount information. This is the default value.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

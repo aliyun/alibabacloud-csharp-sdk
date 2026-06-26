@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarClawAgentsRequest : TeaModel {
         /// <summary>
-        /// <para>A list of agent IDs to query.</para>
+        /// <para>The list of agent IDs to describe.</para>
         /// 
         /// <b>Example:</b>
         /// <para>work,research</para>

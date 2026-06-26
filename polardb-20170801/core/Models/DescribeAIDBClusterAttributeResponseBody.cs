@@ -12,12 +12,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>vnode</b>: The node is managed by ACK.</para>
-        /// </description></item>
-        /// <item><description><para><b>container</b>: A container that you can log on to.</para>
-        /// </description></item>
-        /// <item><description><para><b>maas</b>: Model-as-a-Service (MaaS).</para>
-        /// </description></item>
+        /// <item><description>vnode: managed by ACK</description></item>
+        /// <item><description>container: logon-enabled container</description></item>
+        /// <item><description>maas: model service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was created.</para>
+        /// <para>The cluster creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-08-14T05:58:42Z</para>
@@ -48,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the cluster. Fuzzy search is supported.</para>
+        /// <para>The cluster description. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -68,22 +65,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The status of the cluster. Valid values:</para>
+        /// <para>The cluster status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Creating</b>: The cluster is being created.</para>
-        /// </description></item>
-        /// <item><description><para><b>Running</b>: The cluster is running.</para>
-        /// </description></item>
-        /// <item><description><para><b>Deleting</b>: The cluster is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>DBNodeCreating</b>: Nodes are being added.</para>
-        /// </description></item>
-        /// <item><description><para><b>DBNodeDeleting</b>: Nodes are being deleted.</para>
-        /// </description></item>
-        /// <item><description><para><b>ClassChanging</b>: The node specifications are being changed.</para>
-        /// </description></item>
-        /// <item><description><para><b>Deleted</b>: The cluster is deleted.</para>
-        /// </description></item>
+        /// <item><description><b>Creating</b>: being created</description></item>
+        /// <item><description><b>Running</b>: running</description></item>
+        /// <item><description><b>Deleting</b>: being released</description></item>
+        /// <item><description><b>DBNodeCreating</b>: adding a node</description></item>
+        /// <item><description><b>DBNodeDeleting</b>: deleting a node</description></item>
+        /// <item><description><b>ClassChanging</b>: changing node specifications </description></item>
+        /// <item><description><b>Deleted</b>: released.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,21 +84,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterStatus { get; set; }
 
         /// <summary>
-        /// <para>The details of the nodes.</para>
+        /// <para>The node details.</para>
         /// </summary>
         [NameInMap("DBNodes")]
         [Validation(Required=false)]
         public List<DescribeAIDBClusterAttributeResponseBodyDBNodes> DBNodes { get; set; }
         public class DescribeAIDBClusterAttributeResponseBodyDBNodes : TeaModel {
             /// <summary>
-            /// <para>A list of data disks.</para>
+            /// <para>The list of data cloud disks.</para>
             /// </summary>
             [NameInMap("ChildVolumes")]
             [Validation(Required=false)]
             public List<DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes> ChildVolumes { get; set; }
             public class DescribeAIDBClusterAttributeResponseBodyDBNodesChildVolumes : TeaModel {
                 /// <summary>
-                /// <para>The mount path.</para>
+                /// <para>The actual mount path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/tmp/CrowdStrike</para>
@@ -118,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string MountPath { get; set; }
 
                 /// <summary>
-                /// <para>The disk name.</para>
+                /// <para>The cloud disk name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>jueming</para>
@@ -128,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The size of the data disk in GB.</para>
+                /// <para>The storage size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8192</para>
@@ -138,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string SizeGB { get; set; }
 
                 /// <summary>
-                /// <para>The storage category.</para>
+                /// <para>The storage type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PolarFs</para>
@@ -148,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string StorageCategory { get; set; }
 
                 /// <summary>
-                /// <para>The storage type.</para>
+                /// <para>The storage class.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL1</para>
@@ -160,7 +150,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The number of CPU cores.</para>
+            /// <para>The number of CPU cores of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -170,7 +160,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CpuCores { get; set; }
 
             /// <summary>
-            /// <para>The time when the node was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-08-14T05:58:42Z</para>
@@ -180,7 +170,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The node specification.</para>
+            /// <para>The cluster specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polar.pg.g8.8xlarge.gu30</para>
@@ -210,28 +200,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeId { get; set; }
 
             /// <summary>
-            /// <para>The status of the node. Valid values:</para>
+            /// <para>The node status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Creating</b>: The node is being created.</para>
-            /// </description></item>
-            /// <item><description><para><b>Running</b>: The node is running.</para>
-            /// </description></item>
-            /// <item><description><para><b>Deleting</b>: The node is being deleted.</para>
-            /// </description></item>
-            /// <item><description><para><b>Rebooting</b>: The node is being rebooted.</para>
-            /// </description></item>
-            /// <item><description><para><b>DBNodeCreating</b>: A node is being added to the cluster.</para>
-            /// </description></item>
-            /// <item><description><para><b>DBNodeDeleting</b>: A node is being deleted from the cluster.</para>
-            /// </description></item>
-            /// <item><description><para><b>ClassChanging</b>: The node specifications are being changed.</para>
-            /// </description></item>
-            /// <item><description><para><b>MinorVersionUpgrading</b>: The minor version is being updated.</para>
-            /// </description></item>
-            /// <item><description><para><b>Maintaining</b>: The node is being maintained.</para>
-            /// </description></item>
-            /// <item><description><para><b>Switching</b>: A failover is in progress.</para>
-            /// </description></item>
+            /// <item><description><b>Creating</b>: being created </description></item>
+            /// <item><description><b>Running</b>: running </description></item>
+            /// <item><description><b>Deleting</b>: being deleted  </description></item>
+            /// <item><description><b>Rebooting</b>: restarting  </description></item>
+            /// <item><description><b>DBNodeCreating</b>: adding a node  </description></item>
+            /// <item><description><b>DBNodeDeleting</b>: deleting a node </description></item>
+            /// <item><description><b>ClassChanging</b>: changing node specifications  </description></item>
+            /// <item><description><b>MinorVersionUpgrading</b>: upgrading the minor engine version</description></item>
+            /// <item><description><b>Maintaining</b>: under maintenance  </description></item>
+            /// <item><description><b>Switching</b>: switching.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -242,7 +222,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeStatus { get; set; }
 
             /// <summary>
-            /// <para>The number of GPUs.</para>
+            /// <para>The number of GPU cards.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -262,7 +242,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LinkIP { get; set; }
 
             /// <summary>
-            /// <para>The memory size in MB.</para>
+            /// <para>The memory size of the node. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8192</para>
@@ -327,7 +307,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The cluster version. Valid values:</para>
         /// <para><b>1.0</b></para>
         /// <para><b>2.0</b></para>
-        /// <para><b>3.0</b></para>
+        /// <para><b>3.0</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
@@ -347,21 +327,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EcsSecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>A list of endpoints for the instance.</para>
+        /// <para>The list of network connection addresses of the instance.</para>
         /// </summary>
         [NameInMap("EndpointList")]
         [Validation(Required=false)]
         public List<DescribeAIDBClusterAttributeResponseBodyEndpointList> EndpointList { get; set; }
         public class DescribeAIDBClusterAttributeResponseBodyEndpointList : TeaModel {
             /// <summary>
-            /// <para>A list of network information for the instance.</para>
+            /// <para>The list of network information of the instance.</para>
             /// </summary>
             [NameInMap("NetInfoItems")]
             [Validation(Required=false)]
             public List<DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems> NetInfoItems { get; set; }
             public class DescribeAIDBClusterAttributeResponseBodyEndpointListNetInfoItems : TeaModel {
                 /// <summary>
-                /// <para>The database endpoint.</para>
+                /// <para>The database connection address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pc-**********.rwlb.rds.aliyuncs.com</para>
@@ -371,14 +351,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string ConnectionString { get; set; }
 
                 /// <summary>
-                /// <para>The network type of the endpoint. Valid values:</para>
+                /// <para>The network type of the connection string. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Public</b>: A public endpoint.</para>
-                /// </description></item>
-                /// <item><description><para><b>Private</b>: A private endpoint.</para>
-                /// </description></item>
-                /// <item><description><para><b>Inner</b>: A private endpoint in a classic network.</para>
-                /// </description></item>
+                /// <item><description><b>Public</b>: public endpoint</description></item>
+                /// <item><description><b>Private</b>: private endpoint</description></item>
+                /// <item><description><b>Inner</b>: private endpoint (classic network).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -403,9 +380,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The expiration time of the cluster.</para>
+        /// <para>The cluster expiration time.</para>
         /// <remarks>
-        /// <para>This parameter is returned only for <b>subscription</b> clusters. For <b>pay-as-you-go</b> clusters, an empty string is returned.</para>
+        /// <para>This parameter is returned only for <b>Prepaid</b> (subscription) clusters. An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -420,7 +397,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <list type="bullet">
         /// <item><description><para><b>true</b></para>
         /// </description></item>
-        /// <item><description><para><b>false</b></para>
+        /// <item><description><para><b>false</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -431,8 +408,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public bool? Expired { get; set; }
 
+        [NameInMap("GatewayId")]
+        [Validation(Required=false)]
+        public string GatewayId { get; set; }
+
         /// <summary>
-        /// <para>The private IP address.</para>
+        /// <para>The internal IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.<em>.</em>.72</para>
@@ -462,7 +443,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KubeClusterId { get; set; }
 
         /// <summary>
-        /// <para>The lock mode of the instance. A value of <b>lock</b> indicates that the instance is locked due to expiration or an overdue payment.</para>
+        /// <para>The instance lock mode. The value <b>lock</b> indicates that the instance is automatically locked due to expiration or overdue payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unlock</para>
@@ -472,7 +453,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LockMode { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of queries per minute.</para>
+        /// <para>The maximum number of requests per minute.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -504,10 +485,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
-        /// </description></item>
-        /// <item><description><para><b>Prepaid</b>: subscription.</para>
-        /// </description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -538,7 +517,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>EBEAA83D-1734-42E3-85E3-E25F6E******</para>
@@ -550,10 +529,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The architecture type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>container</b>: AI container.</para>
-        /// </description></item>
-        /// <item><description><para><b>ainode</b>: AI node.</para>
-        /// </description></item>
+        /// <item><description>container: AI container</description></item>
+        /// <item><description>ainode: AI node.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -564,25 +541,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunType { get; set; }
 
         /// <summary>
-        /// <para>The storage type for Enterprise Edition. Valid values:</para>
+        /// <para>Valid values for PolarDB Enterprise Edition:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PSL5</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PSL4</b></para>
-        /// </description></item>
+        /// <item><description><b>PSL5</b></description></item>
+        /// <item><description><b>PSL4</b></description></item>
         /// </list>
-        /// <para>The storage type for Standard Edition. Valid values:</para>
+        /// <para>Valid values for PolarDB for MySQL Standard Edition:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ESSDPL0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDPL1</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDPL2</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDPL3</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDAUTOPL</b></para>
-        /// </description></item>
+        /// <item><description><b>ESSDPL0</b></description></item>
+        /// <item><description><b>ESSDPL1</b></description></item>
+        /// <item><description><b>ESSDPL2</b></description></item>
+        /// <item><description><b>ESSDPL3</b></description></item>
+        /// <item><description><b>ESSDAUTOPL</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -593,7 +563,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The VPC ID specified for the zone switchover.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>
@@ -605,6 +575,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The vSwitch ID.</para>
         /// <remarks>
+        /// <para>If VPCId is specified, VSwitchId is required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -615,7 +586,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>A list of data disks.</para>
+        /// <para>The list of data cloud disks.</para>
         /// </summary>
         [NameInMap("Volumes")]
         [Validation(Required=false)]
@@ -632,7 +603,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MountPath { get; set; }
 
             /// <summary>
-            /// <para>The disk name.</para>
+            /// <para>The cloud disk name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jueming</para>
@@ -642,7 +613,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The storage size in GB.</para>
+            /// <para>The storage size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8192</para>
@@ -652,7 +623,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SizeGB { get; set; }
 
             /// <summary>
-            /// <para>The storage category.</para>
+            /// <para>The storage type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -662,7 +633,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string StorageCategory { get; set; }
 
             /// <summary>
-            /// <para>The storage type.</para>
+            /// <para>The storage class.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PolarFs</para>
@@ -674,7 +645,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the zone in which the PolarDB cluster nodes are deployed.</para>
+        /// <para>The zone ID of the PolarDB cluster node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-d</para>
@@ -684,7 +655,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The zone IDs.</para>
+        /// <para>The zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i,cn-hangzhou-g</para>

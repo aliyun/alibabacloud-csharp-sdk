@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarFsObjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The files and subdirectories in the specified path.</para>
+        /// <para>The list of directory entries.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribePolarFsObjectsResponseBodyItems> Items { get; set; }
         public class DescribePolarFsObjectsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The size of the item in bytes.</para>
+            /// <para>The capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Capacity { get; set; }
 
             /// <summary>
-            /// <para>The time when the item was created, as a UNIX timestamp in seconds.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-25T09:37:10Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The time the item was last modified, as a UNIX timestamp in seconds.</para>
+            /// <para>The last modified time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-03-25T09:37:10Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? LastModified { get; set; }
 
             /// <summary>
-            /// <para>The target path of the symbolic link.</para>
+            /// <para>The real path of the symbolic link.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LinkTarget { get; set; }
 
             /// <summary>
-            /// <para>The file system permissions in octal format.</para>
+            /// <para>The file system permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>755</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The number of hard links to the item.</para>
+            /// <para>The number of links.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? Nlink { get; set; }
 
             /// <summary>
-            /// <para>The owner of the file or directory.</para>
+            /// <para>Owner</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The absolute path of the file or subdirectory.</para>
+            /// <para>The absolute path of the directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The number of records returned on the current page.</para>
+        /// <para>The maximum number of records that can be displayed on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The number of records to return per page. Valid values: 30, 50, and 100. Default value: 30.</para>
+        /// <para>The number of records per page. Valid values: 30, 50, and 100. Default value: 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The path that was queried.</para>
+        /// <para>The absolute path of the directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/test</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records that match the query.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

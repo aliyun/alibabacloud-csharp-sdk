@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdatePolarClawAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the updated agent.</para>
+        /// <para>Updated Agent details</para>
         /// </summary>
         [NameInMap("Agent")]
         [Validation(Required=false)]
         public UpdatePolarClawAgentResponseBodyAgent Agent { get; set; }
         public class UpdatePolarClawAgentResponseBodyAgent : TeaModel {
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>Agent ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>main</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The identity information of the agent.</para>
+            /// <para>Identity information</para>
             /// </summary>
             [NameInMap("Identity")]
             [Validation(Required=false)]
             public UpdatePolarClawAgentResponseBodyAgentIdentity Identity { get; set; }
             public class UpdatePolarClawAgentResponseBodyAgentIdentity : TeaModel {
                 /// <summary>
-                /// <para>The path or content of the avatar.</para>
+                /// <para>Avatar path or content</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Avatar { get; set; }
 
                 /// <summary>
-                /// <para>The avatar URL.</para>
+                /// <para>Avatar URL</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string AvatarUrl { get; set; }
 
                 /// <summary>
-                /// <para>The identity\&quot;s Emoji identifier. This can be a Unicode code point, such as U+1F99E, or the Emoji character itself.</para>
+                /// <para>Emoji identifier (Unicode format such as U+1F99E, or direct emoji character)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>U+1F99E</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Emoji { get; set; }
 
                 /// <summary>
-                /// <para>The name of the identity.</para>
+                /// <para>Identity name</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PolarClaw</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The theme of the identity.</para>
+                /// <para>Theme</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>soul lobster</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The display name of the agent.</para>
+            /// <para>Agent display name</para>
             /// 
             /// <b>Example:</b>
             /// <para>PolarClaw</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The workspace path.</para>
+            /// <para>Workspace directory path</para>
             /// 
             /// <b>Example:</b>
             /// <para>/home/node/.openclaw/workspace-work-v2</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The agent ID.</para>
+        /// <para>Agent ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>main</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The application ID.</para>
+        /// <para>Application ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>Response status code</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>Response message</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDB3258F-B5DE-43C4-8935-CBA0CA******</para>
