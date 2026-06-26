@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class LifecycleHook : TeaModel {
+        /// <summary>
+        /// <para>函数生命周期初始化阶段回调指令，生命周期回调方法的执行入口 handler 和 command 不允许同时配置，只能有一个生效，同时配置会产生错误提示</para>
+        /// </summary>
         [NameInMap("command")]
         [Validation(Required=false)]
         public List<string> Command { get; set; }

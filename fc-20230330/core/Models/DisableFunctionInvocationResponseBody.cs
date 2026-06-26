@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class DisableFunctionInvocationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the function invocation was successfully disabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

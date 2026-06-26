@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListAsyncTasksRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return input parameters of the asynchronous tasks. Valid values:</para>
+        /// <para>Specifies whether to return the input parameters of the asynchronous task.</para>
         /// <list type="bullet">
-        /// <item><description>true: returns the <c>invocationPayload</c> parameter in the response.</description></item>
-        /// <item><description>false: does not return the <c>invocationPayload</c> parameter in the response.</description></item>
+        /// <item><description><para>true: If this parameter is set to true, the <c>invocationPayload</c> field is returned.</para>
+        /// </description></item>
+        /// <item><description><para>false: If this parameter is set to false, the <c>invocationPayload</c> field is not returned.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The <c>invocationPayload</c> parameter indicates the input parameters of an asynchronous task.</para>
+        /// <para>The <c>invocationPayload</c> field specifies the input parameters of the function for the asynchronous task.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? IncludePayload { get; set; }
 
         /// <summary>
-        /// <para>The number of asynchronous tasks to return. The default value is 20. Valid values: [1,100].</para>
+        /// <para>The number of asynchronous tasks to return. The default value is 20. The value must be in the range of [1, 100].</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token to return more results. You do not need to provide this parameter for the first query. Obtain the token for a subsequent query from the response to the previous query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID prefix of asynchronous tasks. If this parameter is specified, a list of asynchronous tasks whose IDs match the prefix is returned.</para>
+        /// <para>The prefix of the asynchronous task ID. The system returns a list of asynchronous tasks that match the prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>job-</para>
@@ -67,10 +69,12 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// <para>The order in which the returned asynchronous tasks are sorted.</para>
+        /// <para>The sorting order of the returned asynchronous tasks.</para>
         /// <list type="bullet">
-        /// <item><description>asc: in ascending order.</description></item>
-        /// <item><description>desc: in descending order.</description></item>
+        /// <item><description><para>asc: ascending order</para>
+        /// </description></item>
+        /// <item><description><para>desc: descending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SortOrderByTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the period during which the asynchronous tasks are initiated.</para>
+        /// <para>The start of the time range when the asynchronous task was started.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1640966400000</para>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? StartedTimeBegin { get; set; }
 
         /// <summary>
-        /// <para>The end time of the period during which the asynchronous tasks are initiated.</para>
+        /// <para>The end of the time range when the asynchronous task was started.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1640966400000</para>
@@ -101,18 +105,28 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? StartedTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The state of asynchronous tasks. The following items list the states of an asynchronous task:</para>
+        /// <para>The execution status of the asynchronous task.</para>
         /// <list type="bullet">
-        /// <item><description>Enqueued: The asynchronous invocation is enqueued and waiting to be executed.</description></item>
-        /// <item><description>Dequeued: The asynchronous invocation is dequeued and waiting to be triggered.</description></item>
-        /// <item><description>Running: The invocation is being executed.</description></item>
-        /// <item><description>Succeeded: The invocation is successful.</description></item>
-        /// <item><description>Failed: The invocation fails.</description></item>
-        /// <item><description>Stopped: The invocation is terminated.</description></item>
-        /// <item><description>Stopping: The invocation is being terminated.</description></item>
-        /// <item><description>Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period of messages expires.</description></item>
-        /// <item><description>Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.</description></item>
-        /// <item><description>Retrying: The asynchronous invocation is being retried due to an execution error.</description></item>
+        /// <item><description><para>Enqueued: The asynchronous message is enqueued and waits for processing.</para>
+        /// </description></item>
+        /// <item><description><para>Dequeued: The asynchronous message is dequeued and waits to be triggered.</para>
+        /// </description></item>
+        /// <item><description><para>Running: The invocation is in progress.</para>
+        /// </description></item>
+        /// <item><description><para>Succeeded: The invocation succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The invocation failed.</para>
+        /// </description></item>
+        /// <item><description><para>Stopped: The invocation was stopped.</para>
+        /// </description></item>
+        /// <item><description><para>Stopping: The invocation is being stopped.</para>
+        /// </description></item>
+        /// <item><description><para>Expired: The task was discarded because its configured maximum queuing duration was exceeded. The task was not executed.</para>
+        /// </description></item>
+        /// <item><description><para>Invalid: The execution is invalid because the function was deleted or for other reasons. The task was not executed.</para>
+        /// </description></item>
+        /// <item><description><para>Retrying: The asynchronous invocation is being retried because of an execution error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

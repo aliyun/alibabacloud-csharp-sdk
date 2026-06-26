@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class GetFunctionRequest : TeaModel {
         /// <summary>
-        /// <para>2023-03-10T10:10:10Z</para>
+        /// <para>The version or alias of the function.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>

@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AlwaysAllocateCPU { get; set; }
 
         /// <summary>
+        /// <para>是否始终分配GPU给函数实例。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -68,6 +70,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? DefaultTarget { get; set; }
 
         /// <summary>
+        /// <para>函数的资源描述</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:124:functions/myFunction/prod</para>
         /// </summary>
@@ -83,6 +87,16 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public List<ScheduledAction> ScheduledActions { get; set; }
 
         /// <summary>
+        /// <para>当前目标资源个数，如果存在指标追踪伸缩策略或定时策略，为策略计算的资源个数，否则为默认预留实例数。</para>
+        /// <remarks>
+        /// <para>与 defaultTarget 有什么区别？\
+        /// 假设配置预留实例数为1后，新增了定时伸缩策略，设置某个时间段内的预留实例数为5。</para>
+        /// <list type="bullet">
+        /// <item><description>在定时伸缩策略<b>生效期间</b>，target 与 defaultTarget 分别为 5 和 1。</description></item>
+        /// <item><description>在定时伸缩策略<b>失效期间</b>，target 与 defaultTarget 都为 1。</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -90,6 +104,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public long? Target { get; set; }
 
+        /// <summary>
+        /// <para>指标追踪伸缩策略配置。</para>
+        /// </summary>
         [NameInMap("targetTrackingPolicies")]
         [Validation(Required=false)]
         public List<TargetTrackingPolicy> TargetTrackingPolicies { get; set; }

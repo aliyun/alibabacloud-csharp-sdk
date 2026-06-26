@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class InstanceLifecycleConfig : TeaModel {
         /// <summary>
-        /// <para>The configurations of the Initializer hook.</para>
+        /// <para>Initializer method configuration</para>
         /// </summary>
         [NameInMap("initializer")]
         [Validation(Required=false)]
         public LifecycleHook Initializer { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the PreStop hook.</para>
+        /// <para>PreStop method configuration</para>
         /// </summary>
         [NameInMap("preStop")]
         [Validation(Required=false)]

@@ -38,6 +38,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 
         /// <summary>
         /// <para>The description of the trigger.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>缓存事件触发器</para>
         /// </summary>
         [NameInMap("notes")]
         [Validation(Required=false)]

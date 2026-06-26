@@ -10,42 +10,42 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class EventSourceParameters : TeaModel {
         /// <summary>
-        /// <para>The custom configurations when the event source is Data Transmission Service (DTS).</para>
+        /// <para>Custom parameter settings when the event source is Data Transmission Service DTS.</para>
         /// </summary>
         [NameInMap("sourceDTSParameters")]
         [Validation(Required=false)]
         public SourceDTSParameters SourceDTSParameters { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations when the event source is ApsaraMQ for Kafka.</para>
+        /// <para>Custom parameter settings when the event source is Kafka.</para>
         /// </summary>
         [NameInMap("sourceKafkaParameters")]
         [Validation(Required=false)]
         public SourceKafkaParameters SourceKafkaParameters { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations when the event source is Simple Message Queue (formerly MNS).</para>
+        /// <para>Custom parameter settings when the event source is Simple Message Queue (formerly MNS).</para>
         /// </summary>
         [NameInMap("sourceMNSParameters")]
         [Validation(Required=false)]
         public SourceMNSParameters SourceMNSParameters { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations when the event source is ApsaraMQ for MQTT.</para>
+        /// <para>Custom parameter settings when the event source is ApsaraMQ for MQTT.</para>
         /// </summary>
         [NameInMap("sourceMQTTParameters")]
         [Validation(Required=false)]
         public SourceMQTTParameters SourceMQTTParameters { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations when the event source is ApsaraMQ for RabbitMQ.</para>
+        /// <para>Custom parameter settings when the event source is Message Queue for RabbitMQ.</para>
         /// </summary>
         [NameInMap("sourceRabbitMQParameters")]
         [Validation(Required=false)]
         public SourceRabbitMQParameters SourceRabbitMQParameters { get; set; }
 
         /// <summary>
-        /// <para>The custom configurations when the event source is ApsaraMQ for RocketMQ.</para>
+        /// <para>Custom parameter settings when the event source is Message Queue for RocketMQ.</para>
         /// </summary>
         [NameInMap("sourceRocketMQParameters")]
         [Validation(Required=false)]

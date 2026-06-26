@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class DestinationConfig : TeaModel {
         /// <summary>
-        /// <para>The destination struct of a failed callback.</para>
+        /// <para>Structure that defines the destination for failed invocations.</para>
         /// </summary>
         [NameInMap("onFailure")]
         [Validation(Required=false)]
         public Destination OnFailure { get; set; }
 
         /// <summary>
-        /// <para>The destination struct of a successful callback.</para>
+        /// <para>Structure that defines the destination for successful invocations.</para>
         /// </summary>
         [NameInMap("onSuccess")]
         [Validation(Required=false)]

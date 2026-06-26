@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutProvisionConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The provisioned configuration information.</para>
+        /// <para>The provisioned configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <para>The function alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LATEST</para>
+        /// <para>prod</para>
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

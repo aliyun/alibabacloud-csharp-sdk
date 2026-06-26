@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutAsyncInvokeConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The configurations of asynchronous function invocations.</para>
+        /// <para>The asynchronous invocation configuration of the function.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public PutAsyncInvokeConfigInput Body { get; set; }
 
         /// <summary>
-        /// <para>The version or alias of the function.</para>
+        /// <para>The function version or alias.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>

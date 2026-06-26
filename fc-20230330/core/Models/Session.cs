@@ -29,12 +29,18 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string CreatedTime { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether an expired session ID can be reused. If <c>true</c>, an expired session ID cannot be reused. If <c>false</c> (the default), sending a request with an expired session ID creates a new session bound to a new instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("disableSessionIdReuse")]
         [Validation(Required=false)]
         public bool? DisableSessionIdReuse { get; set; }
 
         /// <summary>
-        /// <para>The name of the function to which the session belongs.</para>
+        /// <para>The name of the function associated with the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>functionName1</para>
@@ -43,6 +49,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
+        /// <summary>
+        /// <para>The JuiceFS mount configuration, enabling the associated function instance to access specified JuiceFS resources.</para>
+        /// </summary>
         [NameInMap("juiceFsConfig")]
         [Validation(Required=false)]
         public JuiceFsConfig JuiceFsConfig { get; set; }
@@ -58,22 +67,28 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LastModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The File Storage NAS (NAS) configuration. Once configured, the instance associated with the session can access designated NAS resources.</para>
+        /// <para>The NAS configuration, enabling the associated function instance to access specified NAS resources.</para>
         /// </summary>
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
 
+        /// <summary>
+        /// <para>The OSS mount configuration, enabling the associated function instance to access specified OSS resources.</para>
+        /// </summary>
         [NameInMap("ossMountConfig")]
         [Validation(Required=false)]
         public OSSMountConfig OssMountConfig { get; set; }
 
+        /// <summary>
+        /// <para>The PolarFS mount configuration, enabling the associated function instance to access specified PolarFS resources.</para>
+        /// </summary>
         [NameInMap("polarFsConfig")]
         [Validation(Required=false)]
         public PolarFsConfig PolarFsConfig { get; set; }
 
         /// <summary>
-        /// <para>The qualifier specified when creating a session. If not provided, the default value is LATEST.</para>
+        /// <para>The qualifier, which specifies a function version or alias. Defaults to <c>LATEST</c> if unspecified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliasName1</para>
@@ -83,7 +98,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// <para>The session affinity type.</para>
+        /// <para>The type of session affinity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HEADER_FIELD</para>
@@ -93,7 +108,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionAffinityType { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the function session.</para>
+        /// <para>The unique identifier for the function session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81f70ae156904eb9b7d43e12f511fe58</para>
@@ -103,7 +118,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for idle sessions.</para>
+        /// <para>The maximum duration, in seconds, that the session can be idle before it expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -113,7 +128,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? SessionIdleTimeoutInSeconds { get; set; }
 
         /// <summary>
-        /// <para>The session status, which can be either Active (session is valid) or Expired (session has expired).</para>
+        /// <para>The status of the session. <c>Active</c> indicates the session is valid, and <c>Expired</c> indicates it is no longer valid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Active</para>
@@ -123,7 +138,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string SessionStatus { get; set; }
 
         /// <summary>
-        /// <para>The maximum session lifecycle.</para>
+        /// <para>The maximum lifespan of the session, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21600</para>

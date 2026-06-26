@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,26 +30,26 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
+        /// <para>The list of resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ALIYUN::FC:FUNCTION</para>
+        /// <para>ALIYUN::FC::FUNCTION</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
-        /// <para>You can query up to 20 tags at a time.</para>
+        /// <para>The list of tags.</para>
+        /// <para>You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

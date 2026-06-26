@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class DisableFunctionInvocationRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to immediately terminate all ongoing requests.</para>
+        /// <para>Specifies whether to immediately stop all ongoing requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AbortOngoingRequest { get; set; }
 
         /// <summary>
-        /// <para>The reason for disabling the function\&quot;s invocation.</para>
+        /// <para>The reason for disabling the function invocation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Service decommission</para>
         /// </summary>
         [NameInMap("reason")]
         [Validation(Required=false)]

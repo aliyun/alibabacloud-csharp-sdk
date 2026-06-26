@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public Dictionary<string, float?> AdditionalVersionWeight { get; set; }
 
         /// <summary>
-        /// <para>The alias.</para>
+        /// <para>The name of the alias.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

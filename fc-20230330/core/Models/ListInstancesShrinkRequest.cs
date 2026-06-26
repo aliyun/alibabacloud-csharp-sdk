@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListInstancesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The end time of the query range, specified as a UNIX timestamp in milliseconds.</para>
+        /// </summary>
         [NameInMap("endTimeMs")]
         [Validation(Required=false)]
         public long? EndTimeMs { get; set; }
 
+        /// <summary>
+        /// <para>A list of instance IDs to return.</para>
+        /// </summary>
         [NameInMap("instanceIds")]
         [Validation(Required=false)]
         public string InstanceIdsShrink { get; set; }
 
+        /// <summary>
+        /// <para>An array of instance statuses. The operation returns only instances whose status is in this array.</para>
+        /// </summary>
         [NameInMap("instanceStatus")]
         [Validation(Required=false)]
         public string InstanceStatusShrink { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of instances to return.</para>
+        /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public string Limit { get; set; }
@@ -35,16 +47,22 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string Qualifier { get; set; }
 
+        /// <summary>
+        /// <para>The token that specifies where to start the query. It is returned in a truncated response and can be used to retrieve the next page of results.</para>
+        /// </summary>
         [NameInMap("startKey")]
         [Validation(Required=false)]
         public string StartKey { get; set; }
 
+        /// <summary>
+        /// <para>The start time of the query range, specified as a UNIX timestamp in milliseconds.</para>
+        /// </summary>
         [NameInMap("startTimeMs")]
         [Validation(Required=false)]
         public long? StartTimeMs { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to list all instances. Valid values: true and false.</para>
+        /// <para>Specifies whether to list all active instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

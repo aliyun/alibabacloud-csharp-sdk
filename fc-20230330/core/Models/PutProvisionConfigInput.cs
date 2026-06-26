@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutProvisionConfigInput : TeaModel {
         /// <summary>
+        /// <para>是否始终分配CPU，默认为true。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AlwaysAllocateCPU { get; set; }
 
         /// <summary>
+        /// <para>是否始终分配GPU，默认为true。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <remarks>
+        /// <para>Notice: 建议不再使用该参数，请使用 defaultTarget 参数。 </notice>
+        /// 预留的目标资源个数。取值范围为[0,10000]。</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,6 +69,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Obsolete]
         public long? Target { get; set; }
 
+        /// <summary>
+        /// <para>指标追踪伸缩策略配置。</para>
+        /// </summary>
         [NameInMap("targetTrackingPolicies")]
         [Validation(Required=false)]
         public List<TargetTrackingPolicy> TargetTrackingPolicies { get; set; }

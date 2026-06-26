@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class FunctionLockInfo : TeaModel {
         /// <summary>
-        /// <para>锁定时间</para>
+        /// <para>The timestamp when the lock was applied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-04-05T10:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LockedAt { get; set; }
 
         /// <summary>
-        /// <para>锁定方名称</para>
+        /// <para>The name of the entity that applied the lock.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AgentRun</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LockedBy { get; set; }
 
         /// <summary>
-        /// <para>锁定的资源类型列表</para>
+        /// <para>The list of locked resource types. Valid values include <c>function</c>, <c>trigger</c>, <c>version</c>, and <c>alias</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;function&quot;, &quot;trigger&quot;, &quot;version&quot;, &quot;alias&quot;]</para>

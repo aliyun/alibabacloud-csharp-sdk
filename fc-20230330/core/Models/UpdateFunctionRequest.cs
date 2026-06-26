@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateFunctionRequest : TeaModel {
         /// <summary>
-        /// <para>The function information</para>
+        /// <para>The function\&quot;s configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

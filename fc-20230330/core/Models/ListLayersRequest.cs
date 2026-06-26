@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListLayersRequest : TeaModel {
         /// <summary>
-        /// <para>The number of layers that are returned</para>
+        /// <para>The number of layers to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that marks the start of the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the layer is official. Valid values: true and false.</para>
+        /// <para>Specifies whether the layer is an official layer. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Official { get; set; }
 
         /// <summary>
-        /// <para>The name prefix of the layer.</para>
+        /// <para>The prefix of the layer name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-layer</para>

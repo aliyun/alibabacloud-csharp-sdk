@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class UpdateTriggerRequest : TeaModel {
         /// <summary>
-        /// <para>The trigger configurations.</para>
+        /// <para>The trigger configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

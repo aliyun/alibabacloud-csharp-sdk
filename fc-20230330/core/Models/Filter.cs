@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Filter : TeaModel {
         /// <summary>
-        /// <para>The description of the event filtering rule.</para>
+        /// <para>Description of event filter rules.</para>
         /// </summary>
         [NameInMap("key")]
         [Validation(Required=false)]

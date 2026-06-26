@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListCustomDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of custom domain names returned.</para>
+        /// <para>The number of custom domain names to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to start paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The domain name prefix.</para>
+        /// <para>The prefix of the domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>foo</para>

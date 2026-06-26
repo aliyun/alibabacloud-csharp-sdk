@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PutLayerACLRequest : TeaModel {
         /// <summary>
-        /// <para>Specify the access permission of the layer. A value of 1 indicates public and a value of 0 indicates private. The default value is 0.</para>
+        /// <para>The access permissions of the layer. Valid values: 1 (public) and 0 (private). The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specify whether the layer is a public layer. Valid values: true and false.</para>
+        /// <para>Specifies whether to make the layer public. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

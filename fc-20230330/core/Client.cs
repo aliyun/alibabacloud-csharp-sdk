@@ -18,7 +18,36 @@ namespace AlibabaCloud.SDK.FC20230330
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "fcv3.us-west-1.aliyuncs.com"},
+                {"us-east-1", "fcv3.us-east-1.aliyuncs.com"},
+                {"me-central-1", "me-central-1.fc.aliyuncs.com"},
+                {"eu-west-1", "fcv3.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "fcv3.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "fcv3.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "fcv3.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "fcv3.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "cn-shanghai-finance-1.fc.aliyuncs.com"},
+                {"cn-shanghai", "fcv3.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "fcv3.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "fcv3.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "fcv3.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "cn-heyuan-acdr-1.fc.aliyuncs.com"},
+                {"cn-hangzhou-finance", "cn-hangzhou-finance.fc.aliyuncs.com"},
+                {"cn-hangzhou", "fcv3.cn-hangzhou.aliyuncs.com"},
+                {"cn-chengdu", "fcv3.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "fcv3.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "fcv3.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-5", "fcv3.ap-southeast-5.aliyuncs.com	"},
+                {"ap-southeast-3", "fcv3.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "fcv3.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "fcv3.ap-southeast-1.aliyuncs.com"},
+                {"ap-south-1", "fcv3.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2", "fcv3.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "fcv3.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("fc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,12 +68,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group of a Function Compute resource.</para>
+        /// <para>Changes the resource group of a Function Compute resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To update the resource group of a Function Compute resource, you must grant the user the ChangeResourceGroup permission on both the current resource group and the target resource group.</para>
+        /// <para>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -85,12 +114,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group of a Function Compute resource.</para>
+        /// <para>Changes the resource group of a Function Compute resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To update the resource group of a Function Compute resource, you must grant the user the ChangeResourceGroup permission on both the current resource group and the target resource group.</para>
+        /// <para>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -131,12 +160,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group of a Function Compute resource.</para>
+        /// <para>Changes the resource group of a Function Compute resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To update the resource group of a Function Compute resource, you must grant the user the ChangeResourceGroup permission on both the current resource group and the target resource group.</para>
+        /// <para>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -155,12 +184,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the resource group of a Function Compute resource.</para>
+        /// <para>Changes the resource group of a Function Compute resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>To update the resource group of a Function Compute resource, you must grant the user the ChangeResourceGroup permission on both the current resource group and the target resource group.</para>
+        /// <para>To change the resource group of a Function Compute resource, you must have the ChangeResourceGroup permission for both the current and target resource groups.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -304,7 +333,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</para>
+        /// <para>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -350,7 +379,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</para>
+        /// <para>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -396,7 +425,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</para>
+        /// <para>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -420,7 +449,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you want to use a fixed domain name to access an application or function in a production environment of Function Compute, or to resolve the issue of forced downloads when accessing an HTTP trigger, you can bind a custom domain name to the application or function.</para>
+        /// <para>You can attach a custom domain name to an application or function in Function Compute to access it through a fixed domain name in a production environment, or to resolve the forced download behavior when you access an HTTP trigger.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -439,12 +468,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a function.</para>
+        /// <para>Creates a function by calling the CreateFunction operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -485,12 +514,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a function.</para>
+        /// <para>Creates a function by calling the CreateFunction operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -531,12 +560,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a function.</para>
+        /// <para>Creates a function by calling the CreateFunction operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -555,12 +584,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a function.</para>
+        /// <para>Creates a function by calling the CreateFunction operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resources of Function Compute are scheduled and run based on functions. A function usually refers to a code snippet that is written by a user and can be independently executed to respond to events and requests.</para>
+        /// <para>When you create a function by using an OSS code package, if the error &quot;unable to access object xxx in bucket xxx&quot; is reported, grant the current user access permissions on the OSS bucket. For example, you can use the system access policy AliyunOSSReadOnlyAccess or a custom policy with finer granularity of authorization such as oss:GetObject. For details about the policy content, see <a href="https://help.aliyun.com/document_detail/199058.html">Grant a Resource Access Management (RAM) user permissions to read all resources in a bucket</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -579,7 +608,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a layer version.</para>
+        /// <para>This operation publishes a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -620,7 +649,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a layer version.</para>
+        /// <para>This operation publishes a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -661,7 +690,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a layer version.</para>
+        /// <para>This operation publishes a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -680,7 +709,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a layer version.</para>
+        /// <para>This operation publishes a layer version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -699,7 +728,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The CreateSession operation creates an explicit session resource. The system automatically generates a unique session ID, pre-allocates a function instance, and associates it with the session. You can specify values for TTL and idle timeout. This method applies to the HEADER_FIELD and GENERATED_COOKIE affinity types. It handles session preload and configuration initialization. After you call the InvokeFunction API, the session information can be included in the InvokeFunction request to enable request routing.</para>
+        /// <para>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -746,7 +775,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The CreateSession operation creates an explicit session resource. The system automatically generates a unique session ID, pre-allocates a function instance, and associates it with the session. You can specify values for TTL and idle timeout. This method applies to the HEADER_FIELD and GENERATED_COOKIE affinity types. It handles session preload and configuration initialization. After you call the InvokeFunction API, the session information can be included in the InvokeFunction request to enable request routing.</para>
+        /// <para>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -793,7 +822,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The CreateSession operation creates an explicit session resource. The system automatically generates a unique session ID, pre-allocates a function instance, and associates it with the session. You can specify values for TTL and idle timeout. This method applies to the HEADER_FIELD and GENERATED_COOKIE affinity types. It handles session preload and configuration initialization. After you call the InvokeFunction API, the session information can be included in the InvokeFunction request to enable request routing.</para>
+        /// <para>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -812,7 +841,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The CreateSession operation creates an explicit session resource. The system automatically generates a unique session ID, pre-allocates a function instance, and associates it with the session. You can specify values for TTL and idle timeout. This method applies to the HEADER_FIELD and GENERATED_COOKIE affinity types. It handles session preload and configuration initialization. After you call the InvokeFunction API, the session information can be included in the InvokeFunction request to enable request routing.</para>
+        /// <para>Creates an explicit session resource by automatically generating a unique session ID, pre-allocating a function instance, and attaching the session. This operation supports custom Time to Live (TTL) and idle timeout values, applies to HEADER_FIELD or GENERATED_COOKIE affinity types, and is used for session prefetching and configuration initialization. After the session is created, include the session ID in InvokeFunction requests for request routing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2203,7 +2232,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trigger.</para>
+        /// <para>Deletes the specified trigger.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2239,7 +2268,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trigger.</para>
+        /// <para>Deletes the specified trigger.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2275,7 +2304,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trigger.</para>
+        /// <para>Deletes the specified trigger.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2290,7 +2319,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a trigger.</para>
+        /// <para>Deletes the specified trigger.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2305,7 +2334,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified policy group for a VPC firewall.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2341,7 +2370,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified policy group for a VPC firewall.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2377,7 +2406,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified policy group for a VPC firewall.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2392,7 +2421,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an access control policy from a specified policy group for a VPC firewall.</para>
+        /// <para>Deletes an access control policy from a specified VPC firewall policy group.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2537,12 +2566,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</para>
+        /// <para>Disables function invocations. You can also stop all ongoing requests. When a function is disabled, new instances cannot be created and provisioned instances are destroyed. This OpenAPI is in beta.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</para>
+        /// <para>Use caution when calling this API for functions in a production environment because disabling function invocations can disrupt your services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2592,12 +2621,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</para>
+        /// <para>Disables function invocations. You can also stop all ongoing requests. When a function is disabled, new instances cannot be created and provisioned instances are destroyed. This OpenAPI is in beta.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</para>
+        /// <para>Use caution when calling this API for functions in a production environment because disabling function invocations can disrupt your services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2647,12 +2676,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</para>
+        /// <para>Disables function invocations. You can also stop all ongoing requests. When a function is disabled, new instances cannot be created and provisioned instances are destroyed. This OpenAPI is in beta.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</para>
+        /// <para>Use caution when calling this API for functions in a production environment because disabling function invocations can disrupt your services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2671,12 +2700,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The DisableFunctionInvocation operation prevents a function from being invoked and optionally terminates all requests that are being processed. Once a function\&quot;s invocation is disabled, no new instances can be created, and the existing provisioned instances are destroyed. This operation is currently in private preview.</para>
+        /// <para>Disables function invocations. You can also stop all ongoing requests. When a function is disabled, new instances cannot be created and provisioned instances are destroyed. This OpenAPI is in beta.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Exercise caution when you call this operation on a function in a production environment, as improper deactivation may lead to business disruptions.</para>
+        /// <para>Use caution when calling this API for functions in a production environment because disabling function invocations can disrupt your services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2797,7 +2826,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an alias.</para>
+        /// <para>Retrieves information about an alias.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2833,7 +2862,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an alias.</para>
+        /// <para>Retrieves information about an alias.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2869,7 +2898,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an alias.</para>
+        /// <para>Retrieves information about an alias.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2884,7 +2913,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an alias.</para>
+        /// <para>Retrieves information about an alias.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2899,7 +2928,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets asynchronous invocation configurations of a function.</para>
+        /// <para>Retrieves the asynchronous invocation configuration of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2945,7 +2974,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets asynchronous invocation configurations of a function.</para>
+        /// <para>Retrieves the asynchronous invocation configuration of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2991,7 +3020,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets asynchronous invocation configurations of a function.</para>
+        /// <para>Retrieves the asynchronous invocation configuration of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3010,7 +3039,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets asynchronous invocation configurations of a function.</para>
+        /// <para>Retrieves the asynchronous invocation configuration of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +3058,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an asynchronous task.</para>
+        /// <para>Retrieves the details of a specified asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3075,7 +3104,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an asynchronous task.</para>
+        /// <para>Retrieves the details of a specified asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3121,7 +3150,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an asynchronous task.</para>
+        /// <para>Retrieves the details of a specified asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3140,7 +3169,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an asynchronous task.</para>
+        /// <para>Retrieves the details of a specified asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3159,7 +3188,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a concurrency configuration.</para>
+        /// <para>Retrieves the concurrency configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3195,7 +3224,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a concurrency configuration.</para>
+        /// <para>Retrieves the concurrency configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3231,7 +3260,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a concurrency configuration.</para>
+        /// <para>Retrieves the concurrency configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3246,7 +3275,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a concurrency configuration.</para>
+        /// <para>Retrieves the concurrency configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3261,7 +3290,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a custom domain name.</para>
+        /// <para>Retrieves the configuration of a custom domain name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3297,7 +3326,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a custom domain name.</para>
+        /// <para>Retrieves the configuration of a custom domain name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3333,7 +3362,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a custom domain name.</para>
+        /// <para>Retrieves the configuration of a custom domain name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3348,7 +3377,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a custom domain name.</para>
+        /// <para>Retrieves the configuration of a custom domain name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3363,7 +3392,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Retrieves information about a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3409,7 +3438,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Retrieves information about a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3455,7 +3484,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Retrieves information about a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3474,7 +3503,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para><a href="http://pre.hhht/#vpc">http://pre.hhht/#vpc</a></para>
+        /// <para>Retrieves information about a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3493,7 +3522,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a code package of a function.</para>
+        /// <para>Retrieves the details of a function code package.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3539,7 +3568,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a code package of a function.</para>
+        /// <para>Retrieves the details of a function code package.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3585,7 +3614,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a code package of a function.</para>
+        /// <para>Retrieves the details of a function code package.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3604,7 +3633,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a code package of a function.</para>
+        /// <para>Retrieves the details of a function code package.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3623,7 +3652,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a layer.</para>
+        /// <para>Retrieves information about a layer version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3659,7 +3688,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a layer.</para>
+        /// <para>Retrieves information about a layer version.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3695,7 +3724,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a layer.</para>
+        /// <para>Retrieves information about a layer version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3710,7 +3739,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a layer.</para>
+        /// <para>Retrieves information about a layer version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3725,7 +3754,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain version information of a layer by using ARNs.</para>
+        /// <para>Retrieves the version information of a layer by its Alibaba Cloud Resource Name (ARN).</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3761,7 +3790,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain version information of a layer by using ARNs.</para>
+        /// <para>Retrieves the version information of a layer by its Alibaba Cloud Resource Name (ARN).</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3797,7 +3826,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain version information of a layer by using ARNs.</para>
+        /// <para>Retrieves the version information of a layer by its Alibaba Cloud Resource Name (ARN).</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3812,7 +3841,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain version information of a layer by using ARNs.</para>
+        /// <para>Retrieves the version information of a layer by its Alibaba Cloud Resource Name (ARN).</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3827,7 +3856,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries provisioned configurations.</para>
+        /// <para>Retrieves the provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3873,7 +3902,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries provisioned configurations.</para>
+        /// <para>Retrieves the provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3919,7 +3948,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries provisioned configurations.</para>
+        /// <para>Retrieves the provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3938,7 +3967,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries provisioned configurations.</para>
+        /// <para>Retrieves the provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3957,7 +3986,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the scaling settings of a function.</para>
+        /// <para>Retrieves the scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4003,7 +4032,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the scaling settings of a function.</para>
+        /// <para>Retrieves the scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4049,7 +4078,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the scaling settings of a function.</para>
+        /// <para>Retrieves the scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4068,7 +4097,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the scaling settings of a function.</para>
+        /// <para>Retrieves the scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4217,7 +4246,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a trigger.</para>
+        /// <para>Retrieves the details of a specified trigger.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4253,7 +4282,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a trigger.</para>
+        /// <para>Retrieves the details of a specified trigger.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4289,7 +4318,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a trigger.</para>
+        /// <para>Retrieves the details of a specified trigger.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4304,7 +4333,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a trigger.</para>
+        /// <para>Retrieves the details of a specified trigger.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4521,7 +4550,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aliases.</para>
+        /// <para>Lists aliases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4575,7 +4604,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aliases.</para>
+        /// <para>Lists aliases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4629,7 +4658,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aliases.</para>
+        /// <para>Lists aliases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4648,7 +4677,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries aliases.</para>
+        /// <para>Lists aliases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4667,7 +4696,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all asynchronous configurations of a function.</para>
+        /// <para>Lists the asynchronous invocation configurations for one or more functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4721,7 +4750,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all asynchronous configurations of a function.</para>
+        /// <para>Lists the asynchronous invocation configurations for one or more functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4775,7 +4804,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all asynchronous configurations of a function.</para>
+        /// <para>Lists the asynchronous invocation configurations for one or more functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4794,7 +4823,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all asynchronous configurations of a function.</para>
+        /// <para>Lists the asynchronous invocation configurations for one or more functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4813,7 +4842,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists asynchronous tasks.</para>
+        /// <para>Lists the details of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4891,7 +4920,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists asynchronous tasks.</para>
+        /// <para>Lists the details of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4969,7 +4998,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists asynchronous tasks.</para>
+        /// <para>Lists the details of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4988,7 +5017,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists asynchronous tasks.</para>
+        /// <para>Lists the details of asynchronous tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5007,7 +5036,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of concurrency configurations.</para>
+        /// <para>Lists the concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5061,7 +5090,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of concurrency configurations.</para>
+        /// <para>Lists the concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5115,7 +5144,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of concurrency configurations.</para>
+        /// <para>Lists the concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5134,7 +5163,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of concurrency configurations.</para>
+        /// <para>Lists the concurrency configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5153,7 +5182,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom domain names.</para>
+        /// <para>Retrieves a list of custom domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5207,7 +5236,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom domain names.</para>
+        /// <para>Retrieves a list of custom domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5261,7 +5290,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom domain names.</para>
+        /// <para>Retrieves a list of custom domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5280,7 +5309,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries custom domain names.</para>
+        /// <para>Retrieves a list of custom domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5299,7 +5328,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a function.</para>
+        /// <para>Lists the versions of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5353,7 +5382,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a function.</para>
+        /// <para>Lists the versions of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5407,7 +5436,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a function.</para>
+        /// <para>Lists the versions of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5426,7 +5455,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries versions of a function.</para>
+        /// <para>Lists the versions of a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5445,12 +5474,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of functions.</para>
+        /// <para>Retrieves a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5538,12 +5567,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of functions.</para>
+        /// <para>Retrieves a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5631,12 +5660,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of functions.</para>
+        /// <para>Retrieves a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5655,12 +5684,12 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of functions.</para>
+        /// <para>Retrieves a list of functions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ListFunctions returns only a subset of a function\&quot;s attribute fields. To obtain the additional fields, which include state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
+        /// <para>ListFunctions returns only a subset of fields for function properties. To retrieve additional property fields for a specific function, including state, stateReasonCode, stateReason, lastUpdateStatus, lastUpdateStatusReasonCode, and lastUpdateStatusReason, use <a href="https://help.aliyun.com/document_detail/2618610.html">GetFunction</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5679,7 +5708,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of function instances.</para>
+        /// <para>Lists function instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5763,7 +5792,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of function instances.</para>
+        /// <para>Lists function instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5847,7 +5876,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of function instances.</para>
+        /// <para>Lists function instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5866,7 +5895,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of function instances.</para>
+        /// <para>Lists function instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5885,7 +5914,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layer versions.</para>
+        /// <para>Retrieves a list of layer versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5935,7 +5964,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layer versions.</para>
+        /// <para>Retrieves a list of layer versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5985,7 +6014,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layer versions.</para>
+        /// <para>Retrieves a list of layer versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6004,7 +6033,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layer versions.</para>
+        /// <para>Retrieves a list of layer versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6023,7 +6052,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layers.</para>
+        /// <para>Lists layers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6085,7 +6114,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layers.</para>
+        /// <para>Lists layers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6147,7 +6176,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layers.</para>
+        /// <para>Lists layers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6166,7 +6195,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets a list of layers.</para>
+        /// <para>Lists layers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6185,7 +6214,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of provisioned configurations.</para>
+        /// <para>Retrieves a list of provisioned configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6239,7 +6268,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of provisioned configurations.</para>
+        /// <para>Retrieves a list of provisioned configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6293,7 +6322,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of provisioned configurations.</para>
+        /// <para>Retrieves a list of provisioned configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6312,7 +6341,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of provisioned configurations.</para>
+        /// <para>Retrieves a list of provisioned configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6331,7 +6360,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scaling settings of a function.</para>
+        /// <para>Lists the auto scaling configurations for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6385,7 +6414,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scaling settings of a function.</para>
+        /// <para>Lists the auto scaling configurations for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6439,7 +6468,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scaling settings of a function.</para>
+        /// <para>Lists the auto scaling configurations for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6458,7 +6487,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the scaling settings of a function.</para>
+        /// <para>Lists the auto scaling configurations for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6821,7 +6850,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a function.</para>
+        /// <para>Lists the triggers for a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6875,7 +6904,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a function.</para>
+        /// <para>Lists the triggers for a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6929,7 +6958,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a function.</para>
+        /// <para>Lists the triggers for a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6948,7 +6977,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the triggers of a function.</para>
+        /// <para>Lists the triggers for a specified function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6967,7 +6996,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing VPC connections.</para>
+        /// <para>Queries existing VPC attachments.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7003,7 +7032,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing VPC connections.</para>
+        /// <para>Queries existing VPC attachments.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7039,7 +7068,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing VPC connections.</para>
+        /// <para>Queries existing VPC attachments.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7054,7 +7083,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of existing VPC connections.</para>
+        /// <para>Queries existing VPC attachments.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7069,8 +7098,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停/保存会话</para>
+        /// <para>Pauses and saves a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSessionRequest
@@ -7115,8 +7149,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停/保存会话</para>
+        /// <para>Pauses and saves a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSessionRequest
@@ -7161,8 +7200,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停/保存会话</para>
+        /// <para>Pauses and saves a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSessionRequest
@@ -7180,8 +7224,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停/保存会话</para>
+        /// <para>Pauses and saves a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pauses an active session. This operation saves the state of the associated execution environment and then releases the compute resources. After you call this operation, the session state changes to Paused. A paused session does not accept function invocation requests. The operation retains the session configuration, such as the SessionTTL and SessionID. Use this operation to interrupt long-running tasks or save snapshots of a development environment. This helps optimize costs and manage state. This operation applies to custom image functions that use HEADER_FIELD or GENERATED_COOKIE affinity types and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSessionRequest
@@ -7319,7 +7368,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an asynchronous invocation configuration for a function.</para>
+        /// <para>Creates or updates the asynchronous invocation configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7366,7 +7415,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an asynchronous invocation configuration for a function.</para>
+        /// <para>Creates or updates the asynchronous invocation configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7413,7 +7462,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an asynchronous invocation configuration for a function.</para>
+        /// <para>Creates or updates the asynchronous invocation configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7432,7 +7481,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an asynchronous invocation configuration for a function.</para>
+        /// <para>Creates or updates the asynchronous invocation configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7451,7 +7500,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures concurrency of a function.</para>
+        /// <para>Sets the concurrency for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7492,7 +7541,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures concurrency of a function.</para>
+        /// <para>Sets the concurrency for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7533,7 +7582,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures concurrency of a function.</para>
+        /// <para>Sets the concurrency for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7552,7 +7601,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Configures concurrency of a function.</para>
+        /// <para>Sets the concurrency for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7571,7 +7620,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies permissions of a layer.</para>
+        /// <para>Modifies the permissions of a layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7621,7 +7670,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies permissions of a layer.</para>
+        /// <para>Modifies the permissions of a layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7671,7 +7720,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies permissions of a layer.</para>
+        /// <para>Modifies the permissions of a layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7690,7 +7739,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies permissions of a layer.</para>
+        /// <para>Modifies the permissions of a layer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7709,7 +7758,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates provisioned configurations.</para>
+        /// <para>Creates a provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7756,7 +7805,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates provisioned configurations.</para>
+        /// <para>Creates a provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7803,7 +7852,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates provisioned configurations.</para>
+        /// <para>Creates a provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7822,7 +7871,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates provisioned configurations.</para>
+        /// <para>Creates a provisioned configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7841,7 +7890,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scaling settings</para>
+        /// <para>Set the elastic scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7888,7 +7937,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scaling settings</para>
+        /// <para>Set the elastic scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7935,7 +7984,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scaling settings</para>
+        /// <para>Set the elastic scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7954,7 +8003,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scaling settings</para>
+        /// <para>Set the elastic scaling configuration for a function.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7973,8 +8022,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复会话</para>
+        /// <para>Resume a session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSessionRequest
@@ -8023,8 +8077,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复会话</para>
+        /// <para>Resume a session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSessionRequest
@@ -8073,8 +8132,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复会话</para>
+        /// <para>Resume a session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSessionRequest
@@ -8092,8 +8156,13 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复会话</para>
+        /// <para>Resume a session</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resumes a session that is in the Paused state. The system quickly resumes the session in a new execution environment using its previously persisted state. After a successful resume, the session status changes to Active, and the session begins accepting function invocation requests and routing them to the resumed instance. Use this operation with custom image functions that use HEADER_FIELD or GENERATED_COOKIE session affinity and session isolation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSessionRequest
@@ -8241,13 +8310,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to a resource.</para>
+        /// <para>Adds tags to specified resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -8287,13 +8351,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to a resource.</para>
+        /// <para>Adds tags to specified resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -8333,13 +8392,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to a resource.</para>
+        /// <para>Adds tags to specified resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -8357,13 +8411,8 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to a resource.</para>
+        /// <para>Adds tags to specified resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see <a href="https://help.aliyun.com/document_detail/156983.html">Tag overview</a>.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// TagResourcesRequest
@@ -8381,7 +8430,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a resource.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8449,7 +8498,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a resource.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8517,7 +8566,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a resource.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8536,7 +8585,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a resource.</para>
+        /// <para>Removes tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8675,7 +8724,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a custom domain name.</para>
+        /// <para>Updates a custom domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8716,7 +8765,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a custom domain name.</para>
+        /// <para>Updates a custom domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8757,7 +8806,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a custom domain name.</para>
+        /// <para>Updates a custom domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8776,7 +8825,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a custom domain name.</para>
+        /// <para>Updates a custom domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8795,7 +8844,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a function.</para>
+        /// <para>Updates a function\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8836,7 +8885,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a function.</para>
+        /// <para>Updates a function\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8877,7 +8926,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a function.</para>
+        /// <para>Updates a function\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8896,7 +8945,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information about a function.</para>
+        /// <para>Updates a function\&quot;s configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9047,7 +9096,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trigger.</para>
+        /// <para>Updates the information of a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9088,7 +9137,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trigger.</para>
+        /// <para>Updates the information of a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9129,7 +9178,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trigger.</para>
+        /// <para>Updates the information of a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9148,7 +9197,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a trigger.</para>
+        /// <para>Updates the information of a trigger.</para>
         /// </summary>
         /// 
         /// <param name="request">

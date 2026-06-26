@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class GetProvisionConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The function alias.</para>
+        /// <para>The alias of the function.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LATEST</para>
+        /// <para>prod</para>
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

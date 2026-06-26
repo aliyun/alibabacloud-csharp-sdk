@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Resource : TeaModel {
         /// <summary>
-        /// <para>The name of the resource type. Valid values: ALIYUN::FC::FUNCTION and ALIYUN::FC::SERVICE. The former name is used in Function Compute 3.0, and the latter name is used in earlier versions of Function Compute.</para>
+        /// <para>The name of the resource type. For a function in Function Compute 3.0, use ALIYUN::FC::FUNCTION. For a service in an earlier version of Function Compute, use ALIYUN::FC::SERVICE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALIYUN::FC::FUNCTION</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string ResouceType { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the resource.</para>
+        /// <para>The Alibaba Cloud resource descriptor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:fc:cn-shanghai:****:functions/demo</para>

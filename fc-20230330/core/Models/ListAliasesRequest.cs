@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListAliasesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of aliases returned.</para>
+        /// <para>The number of aliases to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that marks the start of the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The alias prefix.</para>
+        /// <para>The prefix of the alias name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-alias</para>

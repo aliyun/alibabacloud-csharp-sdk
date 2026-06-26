@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListConcurrencyConfigsRequest : TeaModel {
         /// <summary>
-        /// <para>The function name. If you leave this parameter empty, the concurrency configurations of all functions are returned.</para>
+        /// <para>The function name. If you do not specify this parameter, the concurrency configurations of all functions are listed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-func</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string FunctionName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>

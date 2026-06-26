@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the resource tag.</para>
+        /// <para>The resource tag configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

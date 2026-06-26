@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class EventBridgeTriggerConfig : TeaModel {
         /// <summary>
-        /// <para>Whether to invoke the function in asynchronous mode. Valid values:</para>
+        /// <para>The method used by the trigger to invoke the function. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: synchronous call.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: asynchronous invocation.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value is <b>false</b>.</para>
+        /// <para>Default value: <b>false</b></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? AsyncInvocationType { get; set; }
 
         /// <summary>
-        /// <para>The event pattern. The value is in the JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/181432.html">Event patterns</a>.</para>
+        /// <para>Event pattern. Use JSON format. For detailed rules, see <a href="https://help.aliyun.com/document_detail/181432.html">event pattern</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -37,21 +39,21 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string EventRuleFilterPattern { get; set; }
 
         /// <summary>
-        /// <para>The event destination configurations.</para>
+        /// <para>Event target configuration</para>
         /// </summary>
         [NameInMap("eventSinkConfig")]
         [Validation(Required=false)]
         public EventSinkConfig EventSinkConfig { get; set; }
 
         /// <summary>
-        /// <para>The event source configurations.</para>
+        /// <para>Event source configuration.</para>
         /// </summary>
         [NameInMap("eventSourceConfig")]
         [Validation(Required=false)]
         public EventSourceConfig EventSourceConfig { get; set; }
 
         /// <summary>
-        /// <para>The runtime configurations.</para>
+        /// <para>Environment parameter configuration</para>
         /// </summary>
         [NameInMap("runOptions")]
         [Validation(Required=false)]
@@ -60,11 +62,13 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <summary>
         /// <para>Whether to enable the trigger. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: enable the trigger.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disable the trigger.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value is <b>true</b>.</para>
+        /// <para>Default value: <b>true</b></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class InvokeFunctionRequest : TeaModel {
         /// <summary>
-        /// <para>The request parameters of function invocation.</para>
+        /// <para>Function invocation parameter</para>
         /// 
         /// <b>Example:</b>
         /// <para>event</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public Stream Body { get; set; }
 
         /// <summary>
-        /// <para>The version or alias of the function.</para>
+        /// <para>Function version or alias</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>

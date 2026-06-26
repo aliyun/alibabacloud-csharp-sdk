@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class LogConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the collection of instance-level metrics. If you enable this feature, you can view core metrics, such as CPU utilization, memory usage, network conditions of instances, and the number of requests that an instance concurrently processes. Valid values: false: disables the collection of instance-level metrics. This is the default value. true: enables the collection of instance-level metrics.</para>
+        /// <para>Specifies whether to enable instance-level metrics. When this feature is enabled, you can view core metrics for each instance, such as CPU usage, memory usage, network conditions, and the number of requests. The default value is \<c>false\\</c>, which disables instance-level metrics. Set the value to \<c>true\\</c> to enable them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? EnableLlmMetrics { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable request-level metrics. If you enable this feature, you can view the amount of time and memory consumed for a specific invocation of each function in the service. Valid values: false: disables request-level metrics. true: enables request-level metrics. This is the default value.</para>
+        /// <para>Specifies whether to enable request-level metrics. When this feature is enabled, you can view the time and memory consumed by each function invocation in the service. The default value is \<c>true\\</c>, which enables request-level metrics. Set the value to \<c>false\\</c> to disable them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public bool? EnableRequestMetrics { get; set; }
 
         /// <summary>
-        /// <para>The log segmentation rule.</para>
+        /// <para>The rule for matching the first line of a log entry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DefaultRegex</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string LogBeginRule { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore of Simple Log Service.</para>
+        /// <para>The name of the Logstore in Simple Log Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-logstore</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The name of the project in Simple Log Service.</para>
+        /// <para>The name of the Project in Simple Log Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-project</para>

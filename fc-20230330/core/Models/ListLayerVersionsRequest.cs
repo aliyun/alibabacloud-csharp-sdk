@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListLayerVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of versions to be returned.</para>
+        /// <para>The number of versions to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The initial version of the layer.</para>
+        /// <para>The version from which to start the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

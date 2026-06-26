@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asynchronous task. You must enable the asynchronous task feature in advance.</para>
+        /// <para>Asynchronous task ID. Enable asynchronous tasks beforehand.</para>
         /// <remarks>
-        /// <para> If you use an SDK to invoke a function, we recommend that you specify a business-related ID to facilitate subsequent operations. For example, a video processing function can use video file names as invocation IDs. This way, you can easily check whether a video is successfully processed or terminated before it is processed. The ID can start only with letters or underscores. An ID can contain <em>letters, digits (0 - 9), underscores</em>, and hyphens (-). It can be up to 128 characters in length. If you do not specify the ID of the asynchronous invocation, the system automatically generates an ID.</para>
+        /// <para>When using the SDK for invocation, set a business-related ID. This helps with subsequent operations on the execution. For example, a video processing function can use the video filename as the invocation ID. Use this ID to check if the video processing is complete or to stop it. The ID naming convention must start with an English letter (uppercase or lowercase) or an underscore (<em>). It can contain English letters (uppercase or lowercase), digits (0-9), underscores (</em>), and hyphens (-). The ID cannot exceed 128 characters. If you do not set an ID for asynchronous invocation, the system automatically generates one.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string XFcAsyncTaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of function invocation. Valid values: Sync and Async.</para>
+        /// <para>Function invocation type. Sync or Async.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Sync</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string XFcInvocationType { get; set; }
 
         /// <summary>
-        /// <para>The log type of function invocation. Valid values: None and Tail.</para>
+        /// <para>Log type returned by function invocation. None or Tail.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tail</para>

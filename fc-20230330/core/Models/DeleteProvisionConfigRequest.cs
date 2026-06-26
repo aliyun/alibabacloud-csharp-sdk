@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         /// <para>The function alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LATEST</para>
+        /// <para>prod</para>
         /// </summary>
         [NameInMap("qualifier")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ListFunctionVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The sorting mode of function versions. Valid values: BACKWARD and FORWARD.</para>
+        /// <para>The order in which to sort the versions. Valid values: BACKWARD and FORWARD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BACKWARD</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The number of function versions that are returned.</para>
+        /// <para>The number of versions to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that marks the start of the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTIzNCNhYmM=</para>

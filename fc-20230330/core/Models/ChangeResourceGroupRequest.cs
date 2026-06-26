@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The request details for updating the resource group.</para>
+        /// <para>The request body to change the resource group.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

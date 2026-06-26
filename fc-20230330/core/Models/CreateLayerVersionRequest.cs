@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class CreateLayerVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The information about layer configurations.</para>
+        /// <para>The configuration of the layer.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
